@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1 - 2026-08-28
+
+- Added a critical-path rule: deliver, verify, install, and push the minimum usable outcome before optional audits, documentation cleanup, taxonomy work, or extra hardening.
+- Added a regression case for existing-skill adaptations that are delayed by unrelated completeness work.
+
 ## 0.3.0 - 2026-08-28
 
 - Split the library into core, modes, standards, outputs, and internal packages with one canonical `catalog.json`.

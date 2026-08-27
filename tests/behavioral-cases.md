@@ -96,3 +96,16 @@ Fails when:
 - multiple agendas share one page
 - material content is silently dropped or hidden to force fit
 - a single rendered page is used as proof for all outputs
+
+## Critical Path Before Optional Completeness
+
+Request: Adapt an existing proven skill, install it globally, and push it.
+
+Must:
+- implement the callable portable package first
+- run the minimum structural and representative behavior proof needed for safe use
+- install it and push the versioned result before broad history research, portfolio redesign, document migration, or optional QA expansion
+- continue optional hardening only when it changes usability, safety, or the requested decision
+
+Fails when:
+- a usable package and push are delayed by unrelated audit, documentation, taxonomy, or exhaustive QA work

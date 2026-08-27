@@ -1,6 +1,6 @@
 # Status
 
-Current version: 0.3.0
+Current version: 0.3.1
 Current branch: main
 Repository: private `theeranon/JamesSkills`
 
