@@ -32,3 +32,15 @@ Update uses fast-forward only, validates the repository, then refreshes links. S
 - `.githooks`: free local validation before every commit and push
 
 Private by default. Review every file before publishing any subset.
+
+## Core vocabulary
+
+- `give-me-solutions`: research real options and preserve the user's decision
+- `done-for-me`: carry authorized work to a verified outcome without micromanagement
+- `zoom-out`: solve the system problem before selecting tools
+- `prove-it`: require recipient-visible evidence before Done
+- `never-again`: convert one bad output into a system correction and regression test
+- `final-it`: produce the finished artifact in the appropriate format
+- `i-have-adhd`: persistent concise, direct, complete communication mode for the conversation
+
+Skill names are phrases people naturally say when they need the capability. Workflow skills complete a bounded job; mode skills remain active for the conversation after one invocation.

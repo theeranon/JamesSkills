@@ -12,6 +12,13 @@ fi
 
 for target in "${targets[@]}"; do
   mkdir -p "$target"
+  while IFS= read -r existing_link; do
+    linked_path="$(readlink "$existing_link")"
+    if [[ "$linked_path" == "$repo_dir/skills/"* && ! -e "$existing_link" ]]; then
+      unlink "$existing_link"
+      echo "PRUNE retired link: $existing_link"
+    fi
+  done < <(find "$target" -mindepth 1 -maxdepth 1 -type l | sort)
   while IFS= read -r skill_dir; do
     name="$(basename "$skill_dir")"
     link="$target/$name"
@@ -22,7 +29,7 @@ for target in "${targets[@]}"; do
     else
       ln -s "$skill_dir" "$link"
     fi
-  done < <(find "$repo_dir/skills" -mindepth 2 -maxdepth 2 -type d | sort)
+  done < <(find "$repo_dir/skills/core" -mindepth 1 -maxdepth 1 -type d | sort)
 done
 
 echo "Installed links from $repo_dir"

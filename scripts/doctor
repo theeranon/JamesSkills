@@ -27,6 +27,6 @@ for target in "$HOME/.agents/skills" "$HOME/.claude/skills" "$HOME/.gemini/confi
     link="$target/$name"
     [[ -L "$link" ]] && linked=$((linked + 1))
     [[ -L "$link" && ! -e "$link" ]] && broken=$((broken + 1))
-  done < <(find "$repo_dir/skills" -mindepth 2 -maxdepth 2 -type d | sort)
+  done < <(find "$repo_dir/skills/core" -mindepth 1 -maxdepth 1 -type d | sort)
   echo "$target linked=$linked broken=$broken"
 done
