@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+git -C "$repo_dir" pull --ff-only
+"$repo_dir/scripts/validate"
+"$repo_dir/scripts/install"
+"$repo_dir/scripts/doctor"

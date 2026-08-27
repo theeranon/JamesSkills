@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+errors=0
+count=0
+
+while IFS= read -r skill_file; do
+  count=$((count + 1))
+  skill_dir="$(dirname "$skill_file")"
+  folder_name="$(basename "$skill_dir")"
+  name="$(awk '/^name: / {sub(/^name: /, ""); print; exit}' "$skill_file")"
+  description="$(awk '/^description: / {sub(/^description: /, ""); print; exit}' "$skill_file")"
+
+  if [[ "$name" != "$folder_name" ]]; then
+    echo "FAIL name mismatch: $skill_file ($name != $folder_name)"
+    errors=$((errors + 1))
+  fi
+  if [[ -z "$description" ]]; then
+    echo "FAIL missing description: $skill_file"
+    errors=$((errors + 1))
+  fi
+  if rg -n '/Users/|api[_-]?key|access[_-]?token|password\s*[:=]' "$skill_dir" >/dev/null; then
+    echo "FAIL non-portable path or possible secret: $skill_dir"
+    errors=$((errors + 1))
+  fi
+done < <(find "$repo_dir/skills" -name SKILL.md -type f | sort)
+
+if [[ "$count" -eq 0 ]]; then
+  echo "FAIL no skills found"
+  exit 1
+fi
+if [[ "$errors" -ne 0 ]]; then
+  echo "Validation failed: $errors issue(s)"
+  exit 1
+fi
+
+echo "PASS $count skill(s), portable structure and secret-pattern gate"

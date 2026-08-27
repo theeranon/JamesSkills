@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+"$repo_dir/scripts/validate"
+
+targets=("$HOME/.agents/skills" "$HOME/.claude/skills")
+if [[ -d "$HOME/.gemini/config" ]]; then
+  targets+=("$HOME/.gemini/config/skills")
+fi
+
+for target in "${targets[@]}"; do
+  mkdir -p "$target"
+  while IFS= read -r skill_dir; do
+    name="$(basename "$skill_dir")"
+    link="$target/$name"
+    if [[ -L "$link" ]]; then
+      ln -sfn "$skill_dir" "$link"
+    elif [[ -e "$link" ]]; then
+      echo "SKIP existing non-link: $link"
+    else
+      ln -s "$skill_dir" "$link"
+    fi
+  done < <(find "$repo_dir/skills" -mindepth 2 -maxdepth 2 -type d | sort)
+done
+
+echo "Installed links from $repo_dir"
