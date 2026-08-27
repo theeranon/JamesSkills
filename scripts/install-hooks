@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+if ! git -C "$repo_dir" rev-parse --git-dir >/dev/null 2>&1; then
+  echo "SKIP Git hooks: $repo_dir is not a Git checkout"
+  exit 0
+fi
+
+git -C "$repo_dir" config core.hooksPath .githooks
+echo "Installed local Git gates: pre-commit, pre-push"

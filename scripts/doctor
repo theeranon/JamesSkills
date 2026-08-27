@@ -11,6 +11,13 @@ fi
 echo "JamesSkills version=$version commit=$commit"
 "$repo_dir/scripts/validate"
 
+hooks_path="$(git -C "$repo_dir" config --get core.hooksPath 2>/dev/null || true)"
+if [[ "$hooks_path" == ".githooks" ]]; then
+  echo "Git gates=pre-commit,pre-push"
+else
+  echo "Git gates=NOT INSTALLED"
+fi
+
 for target in "$HOME/.agents/skills" "$HOME/.claude/skills" "$HOME/.gemini/config/skills"; do
   [[ -d "$target" ]] || continue
   linked=0

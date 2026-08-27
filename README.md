@@ -13,6 +13,7 @@ git clone https://github.com/theeranon/JamesSkills.git "$HOME/.james-skills"
 ```
 
 The installer links the canonical skills into the discovery directories available on the machine. It does not overwrite real directories or files.
+It also activates repository-owned `pre-commit` and `pre-push` gates. Every commit and push runs `scripts/validate` locally, without GitHub Actions or paid runners.
 
 ## Update
 
@@ -28,5 +29,6 @@ Update uses fast-forward only, validates the repository, then refreshes links. S
 - `adapters`: vendor-specific metadata only; never duplicate core instructions
 - `tests`: structural and outcome regression gates
 - `scripts`: idempotent install, update, validation, and diagnosis
+- `.githooks`: free local validation before every commit and push
 
 Private by default. Review every file before publishing any subset.
