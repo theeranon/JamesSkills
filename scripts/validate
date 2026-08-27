@@ -24,7 +24,7 @@ while IFS= read -r skill_file; do
     echo "FAIL non-portable path or possible secret: $skill_dir"
     errors=$((errors + 1))
   fi
-done < <(find "$repo_dir/skills" -name SKILL.md -type f | sort)
+done < <(find "$repo_dir/skills" "$repo_dir/aliases" -name SKILL.md -type f | sort)
 
 if [[ "$count" -eq 0 ]]; then
   echo "FAIL no skills found"
@@ -35,4 +35,70 @@ if [[ "$errors" -ne 0 ]]; then
   exit 1
 fi
 
-echo "PASS $count skill(s), portable structure and secret-pattern gate"
+python3 - "$repo_dir" <<'PY'
+import json
+import pathlib
+import re
+import sys
+
+root = pathlib.Path(sys.argv[1])
+catalog = json.loads((root / "catalog.json").read_text(encoding="utf-8"))
+items = catalog.get("skills", [])
+if catalog.get("schema_version") != 1 or not items:
+    raise SystemExit("FAIL invalid or empty catalog")
+
+names = [item["name"] for item in items]
+if len(names) != len(set(names)):
+    raise SystemExit("FAIL duplicate canonical skill name in catalog")
+
+aliases = [alias for item in items for alias in item.get("aliases", [])]
+if len(aliases) != len(set(aliases)) or set(aliases) & set(names):
+    raise SystemExit("FAIL duplicate alias or alias collides with canonical name")
+
+catalog_paths = set()
+for item in items:
+    path = root / "skills" / item["category"] / item["name"] / "SKILL.md"
+    if not path.is_file():
+        raise SystemExit(f"FAIL catalog target missing: {path}")
+    catalog_paths.add(path.resolve())
+
+disk_paths = {path.resolve() for path in (root / "skills").glob("*/*/SKILL.md")}
+if disk_paths != catalog_paths:
+    missing = sorted(str(path) for path in disk_paths - catalog_paths)
+    stale = sorted(str(path) for path in catalog_paths - disk_paths)
+    raise SystemExit(f"FAIL catalog mismatch unlisted={missing} missing={stale}")
+
+alias_paths = {path.parent.name: path for path in (root / "aliases").glob("*/SKILL.md")}
+if set(alias_paths) != set(aliases):
+    raise SystemExit(
+        f"FAIL alias package mismatch catalog={sorted(aliases)} disk={sorted(alias_paths)}"
+    )
+for alias, path in alias_paths.items():
+    text = path.read_text(encoding="utf-8")
+    if f"name: {alias}" not in text or "Compatibility Alias" not in text:
+        raise SystemExit(f"FAIL malformed alias package: {path}")
+
+for pack in catalog.get("packs", []):
+    path = root / pack["path"]
+    if not path.is_file():
+        raise SystemExit(f"FAIL catalog pack missing: {path}")
+
+print(f"PASS catalog skills={len(items)} aliases={len(aliases)}")
+PY
+
+while IFS= read -r test_file; do
+  python3 "$test_file"
+done < <(find "$repo_dir/skills" -path '*/tests/test_*.py' -type f | sort)
+
+while IFS= read -r test_file; do
+  python3 "$test_file"
+done < <(find "$repo_dir/tests" -maxdepth 1 -name 'test_*.py' -type f | sort)
+
+linter="$repo_dir/skills/standards/make-it-james/scripts/lint_outcome.py"
+if [[ -f "$linter" ]]; then
+  while IFS= read -r asset; do
+    python3 "$linter" --strict "$asset"
+  done < <(find "$repo_dir/skills/outputs" -path '*/assets/*.html' -type f | sort)
+fi
+
+echo "PASS $count package(s), portable structure and secret-pattern gate"

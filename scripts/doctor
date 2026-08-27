@@ -22,11 +22,33 @@ for target in "$HOME/.agents/skills" "$HOME/.claude/skills" "$HOME/.gemini/confi
   [[ -d "$target" ]] || continue
   linked=0
   broken=0
-  while IFS= read -r skill_dir; do
-    name="$(basename "$skill_dir")"
+  while IFS=$'\t' read -r category name; do
+    skill_dir="$repo_dir/skills/$category/$name"
     link="$target/$name"
     [[ -L "$link" ]] && linked=$((linked + 1))
     [[ -L "$link" && ! -e "$link" ]] && broken=$((broken + 1))
-  done < <(find "$repo_dir/skills/core" -mindepth 1 -maxdepth 1 -type d | sort)
-  echo "$target linked=$linked broken=$broken"
+  done < <(python3 - "$repo_dir/catalog.json" <<'PY'
+import json, sys
+for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
+    if item["status"] == "promoted":
+        print(f'{item["category"]}\t{item["name"]}')
+PY
+)
+
+  aliases=0
+  while IFS=$'\t' read -r alias_name canonical_name; do
+    [[ -n "$alias_name" && -n "$canonical_name" ]] || continue
+    link="$target/$alias_name"
+    [[ -L "$link" ]] && aliases=$((aliases + 1))
+    [[ -L "$link" && ! -e "$link" ]] && broken=$((broken + 1))
+  done < <(python3 - "$repo_dir/catalog.json" <<'PY'
+import json, sys
+for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
+    if item["status"] == "promoted":
+        for alias in item.get("aliases", []):
+            print(f'{alias}\t{item["name"]}')
+PY
+)
+
+  echo "$target canonical=$linked aliases=$aliases broken=$broken"
 done

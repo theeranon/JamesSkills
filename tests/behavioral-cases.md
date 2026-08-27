@@ -54,3 +54,45 @@ Must:
 Fails when:
 - every output is forced into a designed visual artifact
 - the dashboard ships without rendered visual inspection
+
+## Make It James
+
+Request: Create a Thai dashboard and a recipient-facing Markdown report.
+
+Must:
+- use IBM Plex Sans Thai, compact density, 6px rectangular radius, restrained color, and plain metadata on the dashboard
+- remove conversation residue and punctuation-built Thai shorthand from both outputs
+- run deterministic lint and inspect the rendered dashboard
+
+Fails when:
+- `Poppins`, a decorative left rail, a gradient, metadata chips, or an oversized radius is reintroduced without failing the gate
+- a CSS font-family declaration is treated as proof that the rendered font loaded
+
+## Sum Meet
+
+Request: Summarize a transcript containing three agendas and a disputed owner into a printable meeting record.
+
+Must:
+- account for the whole transcript and keep all three agendas as separate zones in one A4 portrait HTML file
+- preserve decisions, actions, owners, dates, open loops, exact quotes, contradictions, and source gaps
+- keep the disputed owner unresolved rather than choosing one
+- render and inspect every printed page
+
+Fails when:
+- the agendas become separate full-summary files
+- a quote, owner, deadline, or decision is invented
+- later pages are not inspected
+
+## One Page Please
+
+Request: Turn a source containing three independent agendas into one-page briefs.
+
+Must:
+- produce three separately named, self-contained one-page files
+- preserve each agenda's decisions, actions, risks, and evidence or link material detail explicitly
+- keep each file to one readable A4 landscape page and inspect all three
+
+Fails when:
+- multiple agendas share one page
+- material content is silently dropped or hidden to force fit
+- a single rendered page is used as proof for all outputs

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[[DOCUMENT_TITLE]]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #52606d;
+      --line: #d8dee6;
+      --surface: #f5f7f9;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      background: #e8ebef;
+      color: var(--ink);
+      font-family: "IBM Plex Sans Thai", sans-serif;
+      font-size: 10pt;
+      line-height: 1.4;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 15mm 16mm 17mm;
+    }
+
+    .document {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 16px auto;
+      padding: 15mm 16mm 17mm;
+      background: var(--paper);
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ul,
+    ol,
+    dl,
+    figure,
+    table {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 165mm;
+      margin-bottom: 3mm;
+      font-size: 22pt;
+      font-weight: 600;
+      line-height: 1.18;
+    }
+
+    h2 {
+      margin-bottom: 3mm;
+      font-size: 15pt;
+      font-weight: 600;
+      line-height: 1.25;
+      break-after: avoid-page;
+    }
+
+    h3 {
+      margin: 5mm 0 2mm;
+      font-size: 11pt;
+      font-weight: 600;
+      line-height: 1.3;
+      break-after: avoid-page;
+    }
+
+    p { margin-bottom: 2.5mm; }
+
+    .document-type {
+      margin-bottom: 2mm;
+      color: var(--muted);
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .subtitle {
+      max-width: 165mm;
+      margin-bottom: 5mm;
+      color: var(--muted);
+      font-size: 11pt;
+    }
+
+    .metadata {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin: 0 0 6mm;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .metadata div {
+      display: grid;
+      grid-template-columns: 34mm 1fr;
+      gap: 3mm;
+      padding: 2.5mm 0;
+    }
+
+    .metadata div:nth-child(odd) { padding-right: 5mm; }
+    .metadata div:nth-child(even) { padding-left: 5mm; }
+
+    dt {
+      color: var(--muted);
+      font-size: 8.5pt;
+      font-weight: 500;
+    }
+
+    dd {
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .executive-summary {
+      margin: 0 0 6mm;
+      padding: 4mm;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+    }
+
+    .executive-summary h2 { font-size: 12pt; }
+    .executive-summary p:last-child { margin-bottom: 0; }
+
+    .agenda-map {
+      margin-bottom: 0;
+      padding-left: 5mm;
+      columns: 2;
+      column-gap: 8mm;
+    }
+
+    .agenda-map li {
+      margin-bottom: 1.5mm;
+      break-inside: avoid;
+    }
+
+    .topic-zone {
+      margin-top: 7mm;
+      padding-top: 5mm;
+      border-top: 1px solid var(--line);
+    }
+
+    .topic-zone + .topic-zone { break-before: page; }
+
+    .register-zone {
+      margin-top: 7mm;
+      padding-top: 5mm;
+      border-top: 1px solid var(--line);
+    }
+
+    .topic-number {
+      margin-bottom: 1mm;
+      color: var(--muted);
+      font-size: 8.5pt;
+      font-weight: 600;
+    }
+
+    .topic-lede {
+      margin-bottom: 4mm;
+      color: var(--muted);
+      font-size: 10.5pt;
+    }
+
+    ul,
+    ol {
+      margin-bottom: 3mm;
+      padding-left: 5mm;
+    }
+
+    li { margin-bottom: 1.5mm; }
+
+    .quote {
+      margin: 3mm 0;
+      padding: 3mm 4mm;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      break-inside: avoid;
+    }
+
+    .quote blockquote {
+      margin: 0 0 1.5mm;
+      font-size: 10.5pt;
+      font-weight: 500;
+    }
+
+    .quote figcaption {
+      color: var(--muted);
+      font-size: 8pt;
+    }
+
+    table {
+      width: 100%;
+      margin-bottom: 4mm;
+      border-collapse: collapse;
+      font-size: 9pt;
+    }
+
+    thead { display: table-header-group; }
+
+    th,
+    td {
+      padding: 2.2mm 2.5mm;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--surface);
+      font-weight: 600;
+    }
+
+    tr { break-inside: avoid; }
+
+    .source-notes {
+      margin-top: 6mm;
+      padding-top: 4mm;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 8.5pt;
+    }
+
+    .source-notes p:last-child { margin-bottom: 0; }
+
+    @media print {
+      html,
+      body { background: var(--paper); }
+
+      .document {
+        width: auto;
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    @media screen and (max-width: 820px) {
+      .document {
+        width: 100%;
+        min-height: 0;
+        margin: 0;
+        padding: 24px 20px 32px;
+      }
+
+      .metadata { grid-template-columns: 1fr; }
+      .metadata div:nth-child(n) { padding-right: 0; padding-left: 0; }
+      .agenda-map { columns: 1; }
+    }
+  </style>
+</head>
+<body>
+  <article class="document">
+    <header>
+      <p class="document-type">บันทึกการประชุมฉบับเต็ม</p>
+      <h1>[[DOCUMENT_TITLE]]</h1>
+      <p class="subtitle">[[PURPOSE_AND_CONTEXT]]</p>
+
+      <dl class="metadata">
+        <div><dt>วันที่และเวลา</dt><dd>[[MEETING_DATE_TIME]]</dd></div>
+        <div><dt>ผู้เข้าร่วม</dt><dd>[[ATTENDEES]]</dd></div>
+        <div><dt>แหล่งข้อมูล</dt><dd>[[SOURCE_COVERAGE]]</dd></div>
+        <div><dt>สถานะเอกสาร</dt><dd>[[COMPLETENESS_STATUS]]</dd></div>
+      </dl>
+    </header>
+
+    <section class="executive-summary">
+      <h2>สรุปผลการประชุม</h2>
+      <p>[[EXECUTIVE_OUTCOME_COVERING_EVERY_TOPIC]]</p>
+    </section>
+
+    <section>
+      <h2>หัวข้อที่หารือ</h2>
+      <ol class="agenda-map">
+        <li>[[TOPIC_01_TITLE]]</li>
+        <li>[[TOPIC_02_TITLE]]</li>
+        <!-- เพิ่มหรือลดรายการให้ตรงกับจำนวนหัวข้อจริง -->
+      </ol>
+    </section>
+
+    <!-- ทำซ้ำ topic-zone ภายในไฟล์นี้จนครบทุกหัวข้อ ห้ามแยกเป็นหลายไฟล์ -->
+    <section class="topic-zone">
+      <p class="topic-number">หัวข้อ 01</p>
+      <h2>[[TOPIC_01_TITLE]]</h2>
+      <p class="topic-lede">[[TOPIC_CONTEXT_AND_OUTCOME]]</p>
+
+      <h3>ข้อเท็จจริงและสาระสำคัญ</h3>
+      <p>[[SOURCE_BACKED_DETAIL_WITHOUT_SILENT_OMISSION]]</p>
+
+      <h3>การตัดสินใจ</h3>
+      <ul>
+        <li>[[EXPLICIT_DECISION_AND_SOURCE_LOCATOR]]</li>
+      </ul>
+
+      <h3>งานที่ต้องทำ</h3>
+      <table>
+        <thead>
+          <tr><th>งาน</th><th>ผู้รับผิดชอบ</th><th>กำหนด</th><th>ที่มา</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>[[ACTION]]</td><td>[[OWNER_OR_UNKNOWN]]</td><td>[[DUE_OR_UNKNOWN]]</td><td>[[SOURCE_LOCATOR]]</td></tr>
+        </tbody>
+      </table>
+
+      <h3>เรื่องที่ยังไม่จบ</h3>
+      <ul>
+        <li>[[OPEN_LOOP_NEXT_MOVE_OWNER_CHECKPOINT]]</li>
+      </ul>
+
+      <!-- ใช้เฉพาะเมื่อมีคำพูดตรงที่ตรวจสอบได้ -->
+      <figure class="quote">
+        <blockquote>“[[VERBATIM_QUOTE]]”</blockquote>
+        <figcaption>[[SPEAKER_AND_SOURCE_LOCATOR]]</figcaption>
+      </figure>
+    </section>
+
+    <section class="register-zone">
+      <h2>งานที่ต้องทำทั้งหมด</h2>
+      <table>
+        <thead>
+          <tr><th>หัวข้อ</th><th>งาน</th><th>ผู้รับผิดชอบ</th><th>กำหนด</th><th>สถานะ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>[[TOPIC]]</td><td>[[ACTION]]</td><td>[[OWNER_OR_UNKNOWN]]</td><td>[[DUE_OR_UNKNOWN]]</td><td>[[STATUS]]</td></tr>
+        </tbody>
+      </table>
+
+      <h2>เรื่องที่ยังไม่จบทั้งหมด</h2>
+      <table>
+        <thead>
+          <tr><th>หัวข้อ</th><th>คำถามหรือสิ่งที่ค้าง</th><th>ขั้นตอนถัดไป</th><th>ผู้รับผิดชอบ</th><th>กำหนดหรือจุดตรวจ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>[[TOPIC]]</td><td>[[OPEN_LOOP]]</td><td>[[NEXT_MOVE]]</td><td>[[OWNER_OR_UNKNOWN]]</td><td>[[DUE_OR_CHECKPOINT]]</td></tr>
+        </tbody>
+      </table>
+
+      <div class="source-notes">
+        <p><strong>ความครอบคลุมของแหล่งข้อมูล</strong> [[SOURCE_COVERAGE_DETAIL]]</p>
+        <p><strong>ข้อจำกัดหรือข้อมูลที่ยังไม่ชัด</strong> [[AMBIGUITIES_AND_CONFLICTS]]</p>
+      </div>
+    </section>
+  </article>
+</body>
+</html>

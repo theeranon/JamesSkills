@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.0 - 2026-08-28
+
+- Split the library into core, modes, standards, outputs, and internal packages with one canonical `catalog.json`.
+- Restored the global output authority as `make-it-james`, including a portable deterministic linter and behavior test.
+- Added `sum-meet`: one source-faithful A4 portrait HTML meeting record containing every agenda as a separate zone.
+- Added `one-page-pls`: one independently usable A4 landscape artifact per detected topic or agenda, with a no-silent-loss gate.
+- Rebuilt both HTML templates around IBM Plex Sans Thai, compact density, 6px radius, restrained cards, and all-page visual QA.
+- Added a data-free SolutionsIMPACT output pack so the two generic workflows can apply brand identity without hardcoding it into their semantic logic.
+- Added migration aliases for `james-ui-standard`, `solutionsimpact-meeting-summary-full`, and `solutionsimpact-onepagesummary` without duplicating instructions.
+- Installer, doctor, and validation now operate from the typed catalog rather than assuming every skill belongs in `skills/core`.
+
 ## 0.2.0 - 2026-08-28
 
 - Reframed skill names as natural invocation phrases rather than system modules.

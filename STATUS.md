@@ -1,23 +1,36 @@
 # Status
 
-Current version: 0.2.0  
-Current branch: main  
+Current version: 0.3.0
+Current branch: main
 Repository: private `theeranon/JamesSkills`
 
-## Promoted
+## Promoted core
 
 - `give-me-solutions`
 - `done-for-me`
 - `zoom-out`
 - `prove-it`
 - `never-again`
-- `final-it`
+
+## Promoted mode and standard
+
 - `i-have-adhd`
-- `james-skill-router` pending naming review
+- `make-it-james`
+
+## Promoted outputs
+
+- `final-it`
+- `sum-meet`
+- `one-page-pls`
+
+## Internal
+
+- `james-skill-router` pending public naming review
 
 ## Current evidence
 
-- Structural and secret-pattern validation runs locally before commit and push.
-- Installer targets Codex, Claude Code, and Gemini or Antigravity discovery paths available on the machine.
-- Cross-platform discovery must be rechecked after the 0.2.0 rename.
-- Behavioral outcome tests remain to be created from real requests.
+- `catalog.json` accounts for 11 canonical skills and three migration aliases.
+- Structural, catalog, secret-pattern, standard-linter, and package test gates run locally before commit and push.
+- `sum-meet` passed A4 portrait browser rendering; `one-page-pls` passed 1123 x 794 rendering and one-page A4 landscape PDF verification on this Mac.
+- Installer targets the shared agent directory, Claude Code, and Gemini or Antigravity discovery paths available on the machine.
+- Fresh-session behavioral invocation still requires independent verification on every platform before full behavioral parity is claimed.

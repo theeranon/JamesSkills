@@ -19,8 +19,8 @@ for target in "${targets[@]}"; do
       echo "PRUNE retired link: $existing_link"
     fi
   done < <(find "$target" -mindepth 1 -maxdepth 1 -type l | sort)
-  while IFS= read -r skill_dir; do
-    name="$(basename "$skill_dir")"
+  while IFS=$'\t' read -r category name; do
+    skill_dir="$repo_dir/skills/$category/$name"
     link="$target/$name"
     if [[ -L "$link" ]]; then
       ln -sfn "$skill_dir" "$link"
@@ -29,7 +29,37 @@ for target in "${targets[@]}"; do
     else
       ln -s "$skill_dir" "$link"
     fi
-  done < <(find "$repo_dir/skills/core" -mindepth 1 -maxdepth 1 -type d | sort)
+  done < <(python3 - "$repo_dir/catalog.json" <<'PY'
+import json, sys
+for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
+    if item["status"] == "promoted":
+        print(f'{item["category"]}\t{item["name"]}')
+PY
+)
+
+  while IFS=$'\t' read -r alias_name category canonical_name; do
+    [[ -n "$alias_name" && -n "$canonical_name" ]] || continue
+    alias_dir="$repo_dir/aliases/$alias_name"
+    if [[ ! -f "$alias_dir/SKILL.md" ]]; then
+      echo "FAIL alias target missing: $alias_name -> $canonical_name"
+      exit 1
+    fi
+    alias_link="$target/$alias_name"
+    if [[ -L "$alias_link" ]]; then
+      ln -sfn "$alias_dir" "$alias_link"
+    elif [[ -e "$alias_link" ]]; then
+      echo "SKIP existing non-link alias: $alias_link"
+    else
+      ln -s "$alias_dir" "$alias_link"
+    fi
+  done < <(python3 - "$repo_dir/catalog.json" <<'PY'
+import json, sys
+for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
+    if item["status"] == "promoted":
+        for alias in item.get("aliases", []):
+            print(f'{alias}\t{item["category"]}\t{item["name"]}')
+PY
+)
 done
 
 echo "Installed links from $repo_dir"
