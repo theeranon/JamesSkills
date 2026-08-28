@@ -9,6 +9,9 @@ targets=("$HOME/.agents/skills" "$HOME/.claude/skills")
 if [[ -d "$HOME/.gemini/config" ]]; then
   targets+=("$HOME/.gemini/config/skills")
 fi
+if [[ -d "$HOME/.gemini/antigravity/custom" ]]; then
+  targets+=("$HOME/.gemini/antigravity/custom/skills")
+fi
 
 for target in "${targets[@]}"; do
   mkdir -p "$target"

@@ -18,7 +18,11 @@ else
   echo "Git gates=NOT INSTALLED"
 fi
 
-for target in "$HOME/.agents/skills" "$HOME/.claude/skills" "$HOME/.gemini/config/skills"; do
+for target in \
+  "$HOME/.agents/skills" \
+  "$HOME/.claude/skills" \
+  "$HOME/.gemini/config/skills" \
+  "$HOME/.gemini/antigravity/custom/skills"; do
   [[ -d "$target" ]] || continue
   linked=0
   broken=0

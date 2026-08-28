@@ -8,6 +8,7 @@
     {"name": "zoom-out", "category": "core", "status": "promoted", "aliases": []},
     {"name": "i-have-adhd", "category": "modes", "status": "promoted", "aliases": []},
     {"name": "make-it-james", "category": "standards", "status": "promoted", "aliases": ["james-ui-standard"]},
+    {"name": "project-standard", "category": "standards", "status": "promoted", "aliases": ["project-docs-standard"]},
     {"name": "final-it", "category": "outputs", "status": "promoted", "aliases": []},
     {"name": "sum-meet", "category": "outputs", "status": "promoted", "aliases": ["solutionsimpact-meeting-summary-full"]},
     {"name": "one-page-pls", "category": "outputs", "status": "promoted", "aliases": ["solutionsimpact-onepagesummary"]},

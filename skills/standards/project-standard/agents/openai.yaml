@@ -1,0 +1,6 @@
+interface:
+  display_name: "Project Standard"
+  short_description: "Keep every AI on one project contract"
+  default_prompt: "Use $project-standard to establish or repair this project's canonical contract and verify that a fresh agent can continue from it."
+policy:
+  allow_implicit_invocation: true

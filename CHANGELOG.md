@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0 - 2026-08-28
+
+- Added `project-standard`, combining the useful parts of `project-docs-standard`, `write-the-spec`, and `keep-the-project-straight` into one vendor-neutral standard.
+- Added minimal and software project templates plus an idempotent bootstrap and structural validator.
+- Separated intended requirements, current state, agent workflow, and decision history into distinct owners without forcing documentation churn on routine edits.
+- Added the `project-docs-standard` compatibility alias and retired the two divergent Gemini instruction bodies from canonical ownership.
+
 ## 0.3.1 - 2026-08-28
 
 - Added a critical-path rule: deliver, verify, install, and push the minimum usable outcome before optional audits, documentation cleanup, taxonomy work, or extra hardening.

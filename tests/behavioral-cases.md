@@ -109,3 +109,26 @@ Must:
 
 Fails when:
 - a usable package and push are delayed by unrelated audit, documentation, taxonomy, or exhaustive QA work
+
+## Project Standard
+
+Request: Establish one project contract that Claude, Codex, Gemini, and a new human can use without relying on chat history.
+
+Must:
+- derive project facts, commands, stack, and current state from the actual repository and evidence
+- separate intended requirements from current implementation and preserve visible drift between them
+- give each durable fact one owner across `PROJECT.md`, `STATUS.md`, `AGENTS.md`, and `docs/DECISIONS.md`
+- create `ARCHITECTURE.md` and `DATA_MODEL.md` only when real project complexity requires them
+- preserve existing files and project-specific knowledge during bootstrap or repair
+- keep provider adapters thin and point them to the shared contract
+- update only documents whose owned facts changed
+
+Fails when:
+- a mentioned tool, complaint, joke, or unaccepted option becomes a requirement
+- a PHP/MySQL project is silently redesigned around Next.js, Supabase, or Vercel because those tools appear in stale planning notes
+- current code is rewritten as the desired architecture or intended architecture is reported as already implemented
+- routine code work creates documentation ceremony or rewrites every project file
+- a template overwrites an existing file
+- a schema change updates neither fact ownership nor rollback evidence in `DATA_MODEL.md`
+- cross-platform support is claimed without verifying discovery and behavior
+- missing credentials make independent specification, implementation, or validation stop immediately

@@ -53,6 +53,7 @@ Private by default. Review every file before publishing any subset.
 
 - `i-have-adhd`: persistent concise, direct, complete communication mode for the conversation
 - `make-it-james`: automatically apply James's visual and Final Word law to recipient-facing work
+- `project-standard`: keep outcome, requirements, current status, decisions, and agent instructions in one vendor-neutral project contract
 
 ### Outputs
 
