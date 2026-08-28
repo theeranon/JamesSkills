@@ -44,6 +44,7 @@ Private by default. Review every file before publishing any subset.
 ### Core workflows
 
 - `give-me-solutions`: research real options and preserve the user's decision
+- `think-with-this`: apply cited frameworks, books, or reusable knowledge lenses without turning author claims into facts
 - `done-for-me`: carry authorized work to a verified outcome without micromanagement
 - `zoom-out`: solve the system problem before selecting tools
 - `prove-it`: require recipient-visible evidence before Done
@@ -62,5 +63,18 @@ Private by default. Review every file before publishing any subset.
 - `one-page-pls`: detect topics first and create one self-contained one-page artifact per topic or agenda
 
 `james-skill-router` is internal composition logic. Compatibility aliases keep older calls working during migration without creating another instruction body.
+
+## Knowledge library
+
+`think-with-this` owns the application workflow. Sources and lenses live separately under `packs/knowledge` so a new book does not create another skill or inflate `SKILL.md`.
+
+```bash
+python3 skills/core/think-with-this/scripts/knowledge_library.py list
+python3 skills/core/think-with-this/scripts/knowledge_library.py validate
+```
+
+The first reviewed-private lenses are `wealth-spectrum` and `talent-dynamics`. Their full source PDFs remain outside Git. Source cards keep version, rights posture, SHA-256, and locators; lens files contain original paraphrase, applications, and limitations.
+
+Clone the full repository when moving machines. A detached copy of `think-with-this` alone intentionally has no duplicated knowledge library; set `JAMES_SKILLS_ROOT` to the full clone if a platform cannot use the installer links.
 
 Skill names are phrases people naturally say when they need the capability. Workflow skills complete a bounded job; mode skills remain active for the conversation after one invocation.

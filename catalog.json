@@ -3,6 +3,7 @@
   "skills": [
     {"name": "done-for-me", "category": "core", "status": "promoted", "aliases": []},
     {"name": "give-me-solutions", "category": "core", "status": "promoted", "aliases": []},
+    {"name": "think-with-this", "category": "core", "status": "promoted", "aliases": []},
     {"name": "never-again", "category": "core", "status": "promoted", "aliases": []},
     {"name": "prove-it", "category": "core", "status": "promoted", "aliases": []},
     {"name": "zoom-out", "category": "core", "status": "promoted", "aliases": []},
@@ -15,6 +16,7 @@
     {"name": "james-skill-router", "category": "internal", "status": "promoted", "aliases": []}
   ],
   "packs": [
-    {"name": "solutionsimpact", "status": "promoted", "path": "packs/solutionsimpact/output-brand.md"}
+    {"name": "solutionsimpact", "kind": "brand", "status": "promoted", "path": "packs/solutionsimpact/output-brand.md"},
+    {"name": "knowledge-library", "kind": "knowledge", "status": "promoted", "path": "packs/knowledge/registry.json"}
   ]
 }

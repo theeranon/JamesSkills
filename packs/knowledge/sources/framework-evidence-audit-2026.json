@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "framework-evidence-audit-2026",
+  "title": "Framework Knowledge Source Audit",
+  "creator": "JamesSkills research",
+  "edition_or_version": "2026-08-28",
+  "source_type": "cited-research-audit",
+  "status": "reviewed-private",
+  "source_access": "repository-authored",
+  "provenance": "Repository-authored audit of first-party materials, public evidence, testing standards, and rights boundaries.",
+  "reference_urls": [],
+  "repository_path": "research/2026-08-28-framework-knowledge-source-audit.md",
+  "acquired_at": "2026-08-28",
+  "rights_status": "repo-authored",
+  "rights_basis": "original_synthesis_with_citations",
+  "raw_source_in_repo": false,
+  "content_sha256": "0254409cca36a1548cce87ddcfff6ccf4a24ff7fc6fdfff8eac252d572a33e59",
+  "evidence_label": "independent evidence",
+  "locators": [
+    {
+      "id": "decision",
+      "location": "Decision",
+      "scope": "Safe coaching-lens use and non-goals"
+    },
+    {
+      "id": "evidence-audit",
+      "location": "Claims versus independent evidence",
+      "scope": "Bounded search for validation and technical evidence"
+    },
+    {
+      "id": "rights",
+      "location": "Copyright, trademark, and licensing risk",
+      "scope": "Private-repository and derivative-use boundaries"
+    }
+  ],
+  "scope": [
+    "evidence boundary",
+    "high-stakes exclusions",
+    "rights and licensing guardrails"
+  ],
+  "not_for_use": [
+    "legal opinion",
+    "psychometric certification"
+  ]
+}

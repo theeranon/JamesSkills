@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "talent-dynamics",
+  "title": "Talent Dynamics",
+  "kind": "framework",
+  "version": "1.0.0",
+  "status": "reviewed-private",
+  "entrypoint": "index.md",
+  "source_ids": [
+    "talent-dynamics-genius-guide-2015",
+    "framework-evidence-audit-2026"
+  ],
+  "use_cases": [
+    "generate role-fit hypotheses",
+    "design communication and collaboration experiments",
+    "surface missing team conditions"
+  ],
+  "not_for": [
+    "unofficial profile assignment",
+    "employment decision rule",
+    "fixed personality or capability labels"
+  ],
+  "rights_class": "private-original-synthesis",
+  "raw_source_in_repo": false
+}

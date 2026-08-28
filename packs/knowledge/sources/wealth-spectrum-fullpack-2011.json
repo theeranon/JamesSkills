@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "wealth-spectrum-fullpack-2011",
+  "title": "Wealth Spectrum Reports Full Pack",
+  "creator": "Roger James Hamilton; PDF metadata names Suraj Naik",
+  "edition_or_version": "Full report pack, 2011-02-15",
+  "source_type": "first-party-framework-report-pack",
+  "status": "reviewed-private",
+  "source_access": "external-local",
+  "provenance": "User-provided local PDF reviewed privately. Page 1 identifies it as a pack covering all nine levels, not an individual result.",
+  "reference_urls": [
+    "https://genius-u-attachments.s3.amazonaws.com/uploads/file_vault/file_content/286/Wealth_Spectrum_E-Guide.pdf"
+  ],
+  "acquired_at": "2026-08-28",
+  "rights_status": "user-provided copy; reuse license not located",
+  "rights_basis": "citation_and_original_paraphrase_only",
+  "raw_source_in_repo": false,
+  "content_sha256": "ee6cb73936d8e4f3a060c4e2a02099e36d40426d6c516ab46ee6ea43bf7c841d",
+  "evidence_label": "official claim",
+  "locators": [
+    {
+      "id": "pdf-p1",
+      "location": "PDF page 1",
+      "scope": "Full-pack identity and coverage"
+    },
+    {
+      "id": "pdf-p3-p5",
+      "location": "PDF pages 3-5",
+      "scope": "Three prisms and nine-level overview"
+    },
+    {
+      "id": "pdf-p19-p22",
+      "location": "PDF pages 19-22",
+      "scope": "Yellow summary report"
+    },
+    {
+      "id": "pdf-p71-p77",
+      "location": "PDF pages 71-77",
+      "scope": "Detailed Yellow level report and transition questions"
+    },
+    {
+      "id": "pdf-p78-p79",
+      "location": "PDF pages 78-79",
+      "scope": "Profile-specific Yellow-to-Green strategies"
+    }
+  ],
+  "scope": [
+    "nine-stage wealth and enterprise progression model",
+    "current-constraint prompts",
+    "next-capability prompts"
+  ],
+  "not_for_use": [
+    "proof of James's current level",
+    "official assessment reconstruction",
+    "financial advice without current financial evidence"
+  ]
+}

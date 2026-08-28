@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "wealth-spectrum",
+  "title": "Wealth Spectrum",
+  "kind": "framework",
+  "version": "1.0.0",
+  "status": "reviewed-private",
+  "entrypoint": "index.md",
+  "source_ids": [
+    "wealth-spectrum-fullpack-2011",
+    "framework-evidence-audit-2026"
+  ],
+  "use_cases": [
+    "identify the current wealth or enterprise constraint",
+    "separate owner-dependent income from enterprise capacity",
+    "choose the next capability-building experiment"
+  ],
+  "not_for": [
+    "official level assessment",
+    "permanent identity labels",
+    "financial decisions without current financial evidence"
+  ],
+  "rights_class": "private-original-synthesis",
+  "raw_source_in_repo": false
+}

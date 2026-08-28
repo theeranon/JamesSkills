@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "__SOURCE_ID__",
+  "title": "__TITLE__",
+  "creator": "__CREATOR__",
+  "edition_or_version": "__EDITION__",
+  "source_type": "__SOURCE_TYPE__",
+  "status": "draft",
+  "source_access": "external-local",
+  "provenance": "Record how this exact source was obtained.",
+  "reference_urls": [],
+  "acquired_at": "__DATE__",
+  "rights_status": "unknown",
+  "rights_basis": "citation_and_original_paraphrase_only",
+  "raw_source_in_repo": false,
+  "content_sha256": null,
+  "evidence_label": "official claim",
+  "locators": [],
+  "scope": [],
+  "not_for_use": []
+}

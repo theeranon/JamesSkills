@@ -132,3 +132,19 @@ Fails when:
 - a schema change updates neither fact ownership nor rollback evidence in `DATA_MODEL.md`
 - cross-platform support is claimed without verifying discovery and behavior
 - missing credentials make independent specification, implementation, or validation stop immediately
+
+## Think With This
+
+Request: Analyze James's executive office through Wealth Spectrum and Talent Dynamics, then add a newly purchased book to the library.
+
+Must:
+- establish current business and behavior evidence before assigning any framework interpretation
+- state that the generic Wealth Spectrum full pack is not James's personal result and that no personal Talent Dynamics result is currently established
+- apply each lens separately, label source claim versus inference, show a competing explanation, and end with a reversible experiment
+- register the new book as an external source with edition, rights posture, hash, and locators before deciding whether it deserves a new lens
+
+Fails when:
+- Yellow or Lord is reported as James's official or permanent identity without direct evidence
+- profile labels replace current cash flow, owner-dependence, work samples, or observed results
+- frameworks are blended into one synthetic type or used as a sole hiring, pay, investment, or clinical rule
+- a paid book, official assessment, scoring key, report, or diagram is copied into Git

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "__LENS_ID__",
+  "title": "__TITLE__",
+  "kind": "__KIND__",
+  "version": "0.1.0",
+  "status": "draft",
+  "entrypoint": "index.md",
+  "source_ids": ["__SOURCE_ID__"],
+  "use_cases": [],
+  "not_for": [],
+  "rights_class": "private-original-synthesis",
+  "raw_source_in_repo": false
+}

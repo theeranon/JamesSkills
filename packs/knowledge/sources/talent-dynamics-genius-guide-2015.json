@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "id": "talent-dynamics-genius-guide-2015",
+  "title": "The Genius Guide to Talent Dynamics",
+  "creator": "Roger James Hamilton",
+  "edition_or_version": "PDF created 2015-09-06",
+  "source_type": "first-party-framework-guide",
+  "status": "reviewed-private",
+  "source_access": "external-local",
+  "provenance": "User-provided local PDF reviewed privately. It is a general guide, not James's personal assessment report.",
+  "reference_urls": [
+    "https://talentdynamics.geniusu.com/",
+    "https://s3.amazonaws.com/team-dynamics/The-Leaders-Guide-to-TD.pdf"
+  ],
+  "acquired_at": "2026-08-28",
+  "rights_status": "user-provided copy; reuse license not located",
+  "rights_basis": "citation_and_original_paraphrase_only",
+  "raw_source_in_repo": false,
+  "content_sha256": "e6d3f881a7ec4ba55f4356eb97f7bdd9052844f45121af9b789ac768e558e32a",
+  "evidence_label": "official claim",
+  "locators": [
+    {
+      "id": "pdf-p3-p5",
+      "location": "PDF pages 3-5",
+      "scope": "Framework purpose, flow language, and non-box framing"
+    },
+    {
+      "id": "pdf-p17-p18",
+      "location": "PDF pages 17-18",
+      "scope": "Five frequencies and five trust aspects"
+    },
+    {
+      "id": "pdf-p21-p38",
+      "location": "PDF pages 21-38",
+      "scope": "Eight profile topology and proposed team roles"
+    },
+    {
+      "id": "pdf-p39-p40",
+      "location": "PDF pages 39-40",
+      "scope": "Leadership styles and framework background"
+    }
+  ],
+  "scope": [
+    "role and collaboration reflection",
+    "communication experiments",
+    "team composition hypotheses"
+  ],
+  "not_for_use": [
+    "proof of James's profile",
+    "official assessment reconstruction",
+    "employment decision rule"
+  ]
+}
