@@ -1,6 +1,6 @@
 # Status
 
-Current version: 0.7.1
+Current version: 0.8.0
 Current branch: main
 Repository: private `theeranon/JamesSkills`
 
@@ -12,6 +12,7 @@ Repository: private `theeranon/JamesSkills`
 - `zoom-out`
 - `prove-it`
 - `never-again`
+- `catchup`
 
 ## Pilot candidates pending name and model approval
 
@@ -36,7 +37,7 @@ Repository: private `theeranon/JamesSkills`
 
 ## Current evidence
 
-- `catalog.json` accounts for 15 canonical packages: 13 promoted and two pilots. Eight promoted aliases or lens shortcuts install globally; two pilot aliases remain review-only.
+- `catalog.json` accounts for 16 canonical packages: 14 promoted and two pilots. Eight promoted aliases or lens shortcuts install globally; two pilot aliases remain review-only.
 - Structural, catalog, secret-pattern, standard-linter, and package test gates run locally before commit and push.
 - `sum-meet` passed A4 portrait browser rendering; `one-page-pls` passed 1123 x 794 rendering and one-page A4 landscape PDF verification on this Mac.
 - Installer targets the shared agent directory, Claude Code, and Gemini or Antigravity discovery paths available on the machine.
@@ -49,6 +50,6 @@ Repository: private `theeranon/JamesSkills`
 - Existing workflows now use authority reconciliation, reuse-first research, bounded stop rules, exact target identity, semantic and negative-path proof, and source-fidelity gates where those responsibilities apply.
 - Offline single-file HTML now has a tested IBM Plex Sans Thai embedding path; the stock templates remain editable source assets and are not portability proof by themselves.
 - Updates validate the fetched candidate in a detached worktree before moving the active checkout. Doctor reports source commit, dirty state, broken links, and unexpected links to demoted packages.
-- Cross-history discovery recommends `catchup` as the next uninstalled pilot. `learn-this`, `audit-this`, `systemize-it`, `give-me-choice`, and `make-the-deck` remain Candidate Cards rather than callable claims.
+- `catchup` is promoted after independent clean, dirty, stale-status, scoped-workstream, Git-error, and already-clear tests. `learn-this`, `audit-this`, `systemize-it`, `give-me-choice`, and `make-the-deck` remain Candidate Cards rather than callable claims.
 - Two duplicate Codex-side JamesOS packages were disabled locally. The remaining JamesOS entrypoint now activates only for live cross-channel context, commitments, routing, or explicit JamesOS work rather than generic project tasks.
 - Independent forward testing passed five written behavior contracts. Runtime selection across fresh Claude, Codex, Gemini, and Antigravity sessions, production priority scoring, and asynchronous notification batching remain explicitly unproved.

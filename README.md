@@ -49,6 +49,7 @@ Private by default. Review every file before publishing any subset.
 - `zoom-out`: solve the system problem before selecting tools
 - `prove-it`: require recipient-visible evidence before Done
 - `never-again`: convert one bad output into a system correction and regression test
+- `catchup`: reconstruct one project's verified current state after a continuity gap without turning it into a history dump
 
 ### Pilot candidates
 
@@ -94,4 +95,4 @@ Skill names are phrases people naturally say when they need the capability. Work
 
 Discovery comes before packaging. A new skill remains a pilot until its Candidate Card shows repeated cross-project need, non-duplication, source confidence, representative failures, legitimate counter-cases, and James approves the exact name and scope. General permission to improve this repository does not approve a candidate's name or ontology.
 
-The current cross-history portfolio audit recommends `catchup` as the next pilot, followed by `learn-this`, `audit-this`, and `systemize-it`. These are Candidate Cards, not installed skills. See `research/2026-08-29-skill-portfolio-audit.md`.
+The current cross-history portfolio audit selected and promoted `catchup` after clean, dirty, stale-status, scoped-workstream, Git-error, and already-clear forward tests. `learn-this`, `audit-this`, and `systemize-it` remain Candidate Cards, not installed skills. See `research/2026-08-29-skill-portfolio-audit.md`.

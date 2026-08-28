@@ -50,6 +50,8 @@ def main() -> int:
     assert "`final-it`" not in one_page
     assert "owns recipient readiness" in sum_meet and "owns recipient readiness" in one_page
     assert "write-disjoint" in done_for_me
+    assert "Do not ask the user to repeat it as a magic confirmation word" in done_for_me
+    assert "action-time safety boundary" in done_for_me
     assert "exact target" in done_for_me
     assert "forbidden external effects" in done_for_me + project_standard
     assert "independent verifier" in done_for_me + prove_it

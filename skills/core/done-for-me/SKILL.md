@@ -10,6 +10,8 @@ Own the bounded outcome, not merely the next step.
 1. Find the requirement authority, current state, and proof required for completion.
 2. Define the minimum usable outcome and take the shortest critical path to it. For build work, implement, run the minimum required proof, install or deliver within the authorized target, and create the repository checkpoint permitted by project policy before optional hardening, broad audits, or documentation cleanup. Push, deploy, send, or publish only when the request or accepted project contract authorizes that exact target.
 3. Execute every safe in-scope action that does not need a new business decision or irreversible authority.
+   - Consume an exact approval or accepted decision already present in the current conversation or project authority. Do not ask the user to repeat it as a magic confirmation word.
+   - Ask again only when the target or scope materially changed, the evidence conflicts, or an action-time safety boundary genuinely requires fresh confirmation.
 4. When one path must wait, continue every independent path. Convert missing configuration into a clear settings surface, environment variable, example file, or documented input contract rather than hardcoding a fake value.
 5. Investigate and repair ordinary failures. Do not stop at the first error, tool limitation, missing optional integration, or incomplete subtask.
 6. Verify the real outcome. Report only genuine remaining gates with their exact owner and continue everything else first.

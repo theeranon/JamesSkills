@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.8.0 - 2026-08-29
+
+- Promoted and installed the approved-name `catchup` workflow for reconstructing verified current state without turning a bounded question into a history excavation or audit.
+- Added a read-only project snapshot helper covering target identity, branch, HEAD, upstream divergence, dirty and untracked work, contract-file presence, and optional checkpoint delta.
+- Added clean, dirty, stale-status, missing-upstream, invalid-checkpoint, non-Git, scoped-workstream, Git-error, and already-clear counter-cases before promotion.
+- Made authorized workflows consume prior exact approval instead of asking the user to repeat a magic confirmation word.
+
 ## 0.7.1 - 2026-08-29
 
 - Demoted both learning-design packages to pilot because their names and framework ontology were never approved.

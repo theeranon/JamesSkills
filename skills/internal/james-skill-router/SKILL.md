@@ -32,6 +32,7 @@ Keep the candidate `pilot` and outside global installs until James approves the 
 - `done-for-me`: own authorized implementation through the usable outcome.
 - `prove-it`: verify a claim at the recipient, provider, persistence, or production boundary that matters.
 - `never-again`: convert a rejected result into a scoped system correction and counter-tested guard.
+- `catchup`: reconstruct verified current state after a continuity gap, agent handoff, or suspected stale project status; not ordinary active-task progress or one isolated completion claim.
 - `project-standard`: create or repair the vendor-neutral project contract when project truth is missing or drifting.
 - `sum-meet`: produce one detailed meeting record containing every agenda.
 - `one-page-pls`: produce one self-contained one-page artifact per topic or agenda.
@@ -61,7 +62,7 @@ Do not load a whole chain merely because the names are related. Each added skill
 
 Use `baseon` when the outcome is applying or comparing a named framework, book, or knowledge model. Register a new book as a source first; do not create a new skill or lens merely because its title appears in the request. Treat `wealth-dynamics` and `talent-dynamics` as shortcuts to the same Dynamics lens. Treat `wealth-spectrum` as a separate lens even though it shares the same creator lineage.
 
-The current learning-design packages are pilots. Do not route ordinary work to them as approved James-wide methods until their names, ontology, and scope are accepted. The five-phase reference is verified for the SolutionsIMPACT AI Transformation Journey offer only; do not force it onto a generic transformation program.
+`catchup` is promoted for bounded continuity recovery; do not trigger it for ordinary progress inside an active task or one isolated completion claim. The current learning-design packages are pilots and remain uninstalled. Do not route ordinary work to them as approved James-wide methods until their names, ontology, and scope are accepted. The five-phase reference is verified for the SolutionsIMPACT AI Transformation Journey offer only; do not force it onto a generic transformation program.
 
 Prefer project instructions when they express a more specific accepted decision.
 

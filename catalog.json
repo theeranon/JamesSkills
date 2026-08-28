@@ -7,6 +7,7 @@
     {"name": "never-again", "category": "core", "status": "promoted", "aliases": []},
     {"name": "prove-it", "category": "core", "status": "promoted", "aliases": []},
     {"name": "zoom-out", "category": "core", "status": "promoted", "aliases": []},
+    {"name": "catchup", "category": "core", "status": "promoted", "aliases": []},
     {"name": "design-the-course", "category": "core", "status": "pilot", "aliases": ["learning-experience-design"]},
     {"name": "design-the-journey", "category": "core", "status": "pilot", "aliases": ["transformation-journey"]},
     {"name": "i-have-adhd", "category": "modes", "status": "promoted", "aliases": []},
