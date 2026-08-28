@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.7.0 - 2026-08-29
+
+- Added `design-the-course`, the general Learning Experience Design workflow for one bounded course, workshop, session, or learning day.
+- Added `design-the-journey`, the organization-level five-phase transformation workflow with stable internal phase identities and explicit evidence handoffs.
+- Added `/learning-experience-design` and `/transformation-journey` as direct formal-name aliases.
+- Separated the general LED discipline from the narrower knowledge-transfer e-learning product and from Transformative Productivity System terminology that remains unapproved.
+- Added regression gates for the course-versus-journey boundary, five-phase spine, one-way composition, and obsolete phase-model rejection.
+- Added request and promise traceability so topic compression cannot silently drop requirements or preserve low-value content by habit.
+
 ## 0.6.0 - 2026-08-28
 
 - Renamed the canonical framework workflow from `think-with-this` to `baseon`; retained the old name as a compatibility alias.

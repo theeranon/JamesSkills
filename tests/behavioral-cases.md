@@ -150,3 +150,39 @@ Fails when:
 - frameworks are blended into one synthetic type or used as a sole hiring, pay, investment, or clinical rule
 - Wealth Dynamics and Talent Dynamics are treated as independent sciences, or Wealth Spectrum is merged into the Dynamics model
 - a paid book, official assessment, scoring key, report, or diagram is copied into Git
+
+## Design The Course
+
+Request: Design one workshop day from a client brief containing topics, learner context, and a promised output.
+
+Must:
+- derive the learner and business movement before choosing modules, activities, or artifacts
+- disposition every requested topic as keep, transform, defer, or reject with a causal reason
+- keep one bounded A-to-B evidence chain across Before, During, and After
+- make every time block show intent, learner action, output, evidence, and fallback
+- keep unknown promises and framework labels provisional while completing source-independent design
+- route organization-level five-phase work to `design-the-journey`
+
+Fails when:
+- a topic list becomes an agenda without a learner movement or credible evidence
+- requested topics are silently dropped or retained without a design decision
+- a canvas, deck, or satisfaction score is treated as the transformation outcome
+- one course silently expands into sponsor governance and organization transformation
+
+## Design The Journey
+
+Request: Design a multi-day organization transformation program and the learning days inside it.
+
+Must:
+- lock `pre`, `workshop`, `coaching_consult`, `showcase`, and `after_transformation` before detailing daily agendas
+- connect baseline, phase outputs, owners, handoffs, and the final Transformation Report
+- trace every promised requirement to a phase, output, evidence, owner, and status
+- use `design-the-course` for each bounded learning day only after the macro map is coherent
+- preserve one through-line across instructors, projects, coaching, and sponsor decisions
+
+Fails when:
+- Day 1 to Day 5 is written before the five-phase architecture
+- an older Phase 0 to Phase 4 sample replaces James's current phase model
+- a promised deliverable disappears from the journey or is forced into an unrelated phase without a decision
+- the journey ends at training, attendance, satisfaction, or presentation polish without implementation and organization evidence
+- the course skill changes the macro outcome or governance model

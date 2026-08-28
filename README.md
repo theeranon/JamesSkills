@@ -47,6 +47,8 @@ Private by default. Review every file before publishing any subset.
 - `baseon`: base a decision on cited frameworks, books, or reusable knowledge lenses without turning author claims into facts
 - `done-for-me`: carry authorized work to a verified outcome without micromanagement
 - `zoom-out`: solve the system problem before selecting tools
+- `design-the-course`: design one bounded course, workshop, session, or learning day with James's Learning Experience Design discipline
+- `design-the-journey`: design an organization-level transformation across the five phases, then compose course design for each bounded intervention
 - `prove-it`: require recipient-visible evidence before Done
 - `never-again`: convert one bad output into a system correction and regression test
 
@@ -76,6 +78,8 @@ python3 skills/core/baseon/scripts/knowledge_library.py validate
 The first reviewed-private lenses are `wealth-dynamics` and `wealth-spectrum`. `talent-dynamics` resolves to the same Dynamics lens because it is the team adaptation of the same model. Wealth Spectrum remains a separate model with the same creator lineage. Their full source PDFs remain outside Git. Source cards keep version, rights posture, SHA-256 when applicable, and locators; lens files contain original paraphrase, applications, and limitations.
 
 Direct calls are available as `/baseon`, `/wealth-dynamics`, `/talent-dynamics`, and `/wealth-spectrum`. The framework shortcuts only preselect a lens; they contain no duplicate knowledge or reasoning rules. `/think-with-this` remains a compatibility alias.
+
+Learning-design calls are available as `/design-the-course` or `/learning-experience-design` for one bounded learning experience, and `/design-the-journey` or `/transformation-journey` for the organization-level five-phase program. Journey design owns the macro outcome and invokes course design only after the phase architecture is locked.
 
 Clone the full repository when moving machines. A detached copy of `baseon` alone intentionally has no duplicated knowledge library; set `JAMES_SKILLS_ROOT` to the full clone if a platform cannot use the installer links.
 
