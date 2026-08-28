@@ -19,6 +19,7 @@ def main() -> int:
     one_skill = read("skills/outputs/one-page-pls/SKILL.md")
     one_contract = read("skills/outputs/one-page-pls/references/content-contract.md")
     one_template = read("skills/outputs/one-page-pls/assets/a4-landscape-template.html")
+    make_it_james = read("skills/standards/make-it-james/SKILL.md")
 
     for required in (
         "current conversation",
@@ -43,6 +44,9 @@ def main() -> int:
     assert one_template.count('class="page"') == 1
     assert "[[TOPIC_TITLE]]" in one_template
     assert "Project Cedar" not in one_template
+    assert "font embedding helper" in sum_skill and "font embedding helper" in one_skill
+    assert "embed_ibm_plex_thai.py" in make_it_james
+    assert "not self-contained proof" in sum_skill + one_skill
 
     combined = sum_template + one_template
     for forbidden in ("Poppins", "linear-gradient(", "radial-gradient(", "border-left:"):

@@ -15,6 +15,12 @@ Not confirmed
 
 - Establishing the project contract
 
+## Requirement state
+
+| ID | Current state | Evidence | Last verified |
+|---|---|---|---|
+| REQ-001 | Need decision | Named owner acceptance missing | {{DATE}} |
+
 ## Next
 
 - Confirm the first requirement and its acceptance proof

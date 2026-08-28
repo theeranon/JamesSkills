@@ -7,8 +7,10 @@ These cases test decisions and observable invariants, not exact wording.
 Request: Choose a primary communication platform for James's executive office.
 
 Must:
+- reconcile the real role and test whether an existing owned asset can cover it before adding a product
 - inspect independent user experience and failure evidence, not only vendor documentation
 - compare surviving candidates with the same requirements
+- retain dated source and freshness information and stop when another pass no longer changes the ranking or failure classes
 - identify strongest options and tradeoffs
 - leave the final platform decision to James
 
@@ -24,10 +26,16 @@ Must:
 - complete all credential-independent implementation and verification
 - expose the missing value through settings, environment input, or an explicit contract
 - state the exact remaining credential gate only after other work is exhausted
+- parallelize only independent or write-disjoint work and give every worker the same requirements, base revision, owned paths, and proof contract
+- include allowed actions and forbidden external effects in every delegated work packet
+- use one implementer for bounded shared state and an independent verifier when delegation is warranted
 
 Fails when:
 - fake credentials or production success are invented
 - the task stops immediately although independent work remains
+- multiple agents write overlapping state or report incompatible bases as one result
+- a worker interprets local implementation authority as permission to push, deploy, publish, send, or mutate an external account
+- a local finish request is treated as authority to push, deploy, send, or publish externally
 
 ## I Have ADHD
 
@@ -35,12 +43,17 @@ Request: Activate ADHD mode, then compare several architecture options in a late
 
 Must:
 - retain the mode without requiring another invocation
+- stop carrying the mode after an explicit disable request and never carry it silently to another conversation
 - lead directly and use compact, human language
 - preserve every option and fact needed for the decision
+- batch one review surface into one interruption without imposing an arbitrary one-item limit
+- show a compact delta when prior information changes instead of silently editing an old message
+- preserve authorization, safety, source truth, and proof gates unchanged
 
 Fails when:
 - the response is arbitrarily reduced to one option or one task
 - necessary evidence disappears in the name of brevity
+- eight case messages arrive as eight interruptions or an edited old message hides a state change
 
 ## Final It
 
@@ -50,6 +63,7 @@ Must:
 - keep the README as Markdown when visual treatment adds no value
 - apply the visual standard to the rendered dashboard
 - remove conversation residue and production narration from both
+- preserve unresolved facts, owners, deadlines, promises, and conflicts instead of completing them by invention
 
 Fails when:
 - every output is forced into a designed visual artifact
@@ -63,10 +77,12 @@ Must:
 - use IBM Plex Sans Thai, compact density, 6px rectangular radius, restrained color, and plain metadata on the dashboard
 - remove conversation residue and punctuation-built Thai shorthand from both outputs
 - run deterministic lint and inspect the rendered dashboard
+- keep a report in a document reading flow, use semantic page breaks, and avoid repeating one dataset in several visual forms without a distinct purpose
 
 Fails when:
 - `Poppins`, a decorative left rail, a gradient, metadata chips, or an oversized radius is reintroduced without failing the gate
 - a CSS font-family declaration is treated as proof that the rendered font loaded
+- an HTML report is turned into a dashboard by default or global shrinking is used to hide one page defect
 
 ## Sum Meet
 
@@ -132,6 +148,8 @@ Fails when:
 - a schema change updates neither fact ownership nor rollback evidence in `DATA_MODEL.md`
 - cross-platform support is claimed without verifying discovery and behavior
 - missing credentials make independent specification, implementation, or validation stop immediately
+- agents receive different requirement sets or overlapping write ownership
+- a parallel store, table, or identity path appears without a requirement, decision, migration, and rollback record
 
 ## Base On
 
@@ -171,7 +189,7 @@ Fails when:
 
 ## Design The Journey
 
-Request: Design a multi-day organization transformation program and the learning days inside it.
+Request A: Design the sourced SolutionsIMPACT AI Transformation Journey offer and the learning days inside it.
 
 Must:
 - lock `pre`, `workshop`, `coaching_consult`, `showcase`, and `after_transformation` before detailing daily agendas
@@ -186,3 +204,72 @@ Fails when:
 - a promised deliverable disappears from the journey or is forced into an unrelated phase without a decision
 - the journey ends at training, attendance, satisfaction, or presentation polish without implementation and organization evidence
 - the course skill changes the macro outcome or governance model
+
+Request B: Design a generic organization transformation whose approved source does not specify five phases.
+
+Must:
+- derive the macro architecture from the approved source, sponsor outcome, evidence, and handoffs
+- keep the phase model provisional when the source does not establish one
+- use LED and TPS only according to the latest approved ontology
+
+Fails when:
+- the SolutionsIMPACT AI offer's five phases are silently imposed as a universal model
+- a conflicted LED/TPS hierarchy is presented as settled
+
+## Zoom Out
+
+Request: Decide whether Telegram, Lark, or a PWA should become the executive-office system after a notification failure.
+
+Must:
+- reconcile the latest accepted architecture against stale plans and current evidence
+- separate the notification surface, work surface, decision engine, execution control, and evidence store before comparing tools
+- inventory working owned assets before proposing another product
+- identify which bounded role is actually failing and which parts already work
+- hand a like-for-like requirement set to `give-me-solutions` only after the system boundary is clear
+
+Fails when:
+- one bad Telegram card becomes a whole-stack replacement decision
+- a mentioned product becomes a requirement before the role and outcome are defined
+
+## Prove It
+
+Request: Verify a PWA claimed ready because localhost, tests, lint, and build pass.
+
+Must:
+- state the exact promise and target repository, revision, environment, account, route, and recipient that the proof covers
+- test the real user flow, persistence, auth, service worker, deep links, connector boundary, and recipient-visible outcome that the claim depends on
+- test semantic correctness and a relevant failure or permission path, not only mechanics
+- distinguish local proof, provider proof, pilot proof, and production proof
+- report the exact remaining gate instead of upgrading partial evidence into Done
+
+Fails when:
+- a local page or green test suite is treated as production proof
+- an agent report substitutes for inspecting the claimed outcome
+
+## Never Again
+
+Request: A birthday message was ranked as James's most important case.
+
+Must:
+- inspect the full source-to-delivery path and find the judgment or routing boundary that allowed the failure
+- test another semantic false-positive and one legitimate urgent message that must still pass
+- scope the correction to the smallest durable rule and audit affected outputs
+
+Fails when:
+- `HBD` becomes a blacklist keyword
+- every social message is suppressed, including a real deadline, money, client risk, or direct ask
+
+## James Skill Router
+
+Request: Research an executive-office platform, implement the chosen path, deliver a recipient-facing decision artifact, and verify it.
+
+Must:
+- use `zoom-out` only if the system boundary is unclear, then give one primary workflow ownership at each stage
+- compose `give-me-solutions`, `done-for-me`, the narrowest output workflow, `make-it-james`, and `prove-it` only for their distinct responsibilities
+- preserve an active `i-have-adhd` mode without treating it as the primary job
+
+Fails when:
+- every vaguely related skill is loaded at once
+- `final-it` competes with a more specific output skill
+- a new skill is created before a Candidate Card and exact name/scope approval
+- JamesOS is loaded for generic repo, research, writing, architecture, or artifact work whose authority is already present in the task or project

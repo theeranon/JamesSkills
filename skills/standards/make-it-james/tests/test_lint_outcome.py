@@ -32,6 +32,8 @@ def main() -> int:
 body { font-family: var(--font-ui); line-height: 1.4; }
 .panel { border-radius: 6px; padding: 12px; }
 .avatar { border-radius: 50%; }
+.divider { border-left: 1px solid #ddd; /* james-ui: structural-divider */ }
+.filter-chip { border-radius: 6px; /* james-ui: interactive-filter */ }
 </style><p>ประชุมเวลา 14:30 น.</p>
 """,
             encoding="utf-8",
@@ -42,8 +44,9 @@ body { font-family: var(--font-ui); line-height: 1.4; }
         invalid = root / "invalid.html"
         invalid.write_text(
             """<style>
-body { font-family: 'Poppins', sans-serif; line-height: 1.68; }
-.card { border-left: 4px solid red; border-radius: 12px; background: linear-gradient(red, blue); }
+body { font-family: 'Poppins', sans-serif; line-height: 20px; }
+.card { border-left: 2px solid red; border-radius: 0; background: linear-gradient(red, blue); }
+.card::before { content: ''; position: absolute; left: 0; width: 3px; height: 100%; background: red; }
 .status-chip { padding: 4px; }
 </style><p>ระบบกำลังคิด: พร้อมแล้ว → ส่งต่อ</p>
 """,

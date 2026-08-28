@@ -25,17 +25,22 @@ SKIP_PARTS = {
 THAI = re.compile(r"[\u0E00-\u0E7F]")
 RADIUS_DECL = re.compile(r"border-radius\s*:\s*([^;}]+)", re.I)
 LENGTH = re.compile(r"([0-9]*\.?[0-9]+)\s*(px|rem|em|mm|cm|pt)\b", re.I)
-LEFT_RAIL = re.compile(
-    r"border-left(?:-width)?\s*:\s*([0-9]*\.?[0-9]+)\s*(px|rem|em|mm|cm|pt)\b",
-    re.I,
+NUMBER_WITH_OPTIONAL_UNIT = re.compile(
+    r"(?<![#\w-])([0-9]*\.?[0-9]+)\s*(px|rem|em|mm|cm|pt)?\b", re.I
 )
+LEFT_RAIL = re.compile(r"border-left(?:-width)?\s*:\s*([^;}]+)", re.I)
 FONT = re.compile(r"font-family\s*:\s*([^;}]+)", re.I)
-LINE_HEIGHT = re.compile(r"line-height\s*:\s*([0-9]*\.?[0-9]+)\s*(?:;|}|$)", re.I)
+LINE_HEIGHT = re.compile(r"line-height\s*:\s*([^;}]+)", re.I)
 PILL_OR_CHIP = re.compile(
     r"(?:class\s*=\s*['\"][^'\"]*\b(?:pill|chip)s?\b|[.#][\w-]*(?:pill|chip)[\w-]*)",
     re.I,
 )
 GRADIENT = re.compile(r"(?:linear|radial|conic)-gradient\s*\(", re.I)
+CSS_BLOCK = re.compile(r"([^{}]+)\{([^{}]*)\}", re.S)
+ALLOWED_PILL = re.compile(
+    r"james-ui:\s*(?:interactive-filter|removable-selection|status-scan)", re.I
+)
+STRUCTURAL_DIVIDER = re.compile(r"james-ui:\s*structural-divider", re.I)
 META_COPY = re.compile(
     r"AI prepared|Powered by AI|Artifact Progress|ระบบกำลังคิด|เลขาเตรียม|"
     r"ระบบเตรียม|ตอนนี้มีแล้ว|บทนี้จะเติม|เพราะอะไรต้องเติม|production note|"
@@ -62,6 +67,37 @@ UNIT_TO_PX = {
 
 def to_px(value: str, unit: str) -> float:
     return float(value) * UNIT_TO_PX[unit.lower()]
+
+
+def numeric_css_lengths(value: str) -> list[float]:
+    lengths: list[float] = []
+    for number, unit in NUMBER_WITH_OPTIONAL_UNIT.findall(value):
+        lengths.append(float(number) if not unit else to_px(number, unit))
+    return lengths
+
+
+def pseudo_left_rails(text: str) -> list[tuple[int, str, str]]:
+    findings: list[tuple[int, str, str]] = []
+    for block in CSS_BLOCK.finditer(text):
+        selector, body = block.group(1), block.group(2)
+        combined = selector + "{" + body
+        if "::before" not in selector and "::after" not in selector:
+            continue
+        if STRUCTURAL_DIVIDER.search(combined):
+            continue
+        positioned_left = re.search(r"position\s*:\s*absolute", body, re.I) and re.search(
+            r"left\s*:\s*0(?:\D|$)", body, re.I
+        )
+        painted = re.search(r"(?:background(?:-color)?|border-left)\s*:", body, re.I)
+        narrow = re.search(
+            r"width\s*:\s*(?:[0-9]*\.?[0-9]+)(?:px|rem|em|mm|cm|pt)",
+            body,
+            re.I,
+        )
+        if positioned_left and painted and narrow:
+            line = text.count("\n", 0, block.start()) + 1
+            findings.append((line, "UI001", "positioned pseudo-element left rail"))
+    return findings
 
 
 def iter_files(paths: list[Path], extensions: set[str] = TEXT_EXTENSIONS):
@@ -117,21 +153,28 @@ def lint_file(path: Path) -> list[tuple[int, str, str]]:
         return findings
 
     suffix = path.suffix.lower()
+    if suffix in UI_EXTENSIONS:
+        findings.extend(pseudo_left_rails(text))
     for number, line in enumerate(text.splitlines(), 1):
         if suffix in UI_EXTENSIONS:
             rail = LEFT_RAIL.search(line)
-            if rail and to_px(rail.group(1), rail.group(2)) >= 4:
-                findings.append((number, "UI001", "thick decorative left rail"))
+            if rail and not STRUCTURAL_DIVIDER.search(line):
+                widths = numeric_css_lengths(rail.group(1))
+                if widths and max(widths) > 0:
+                    findings.append((number, "UI001", "left rail lacks structural-divider exemption"))
 
             for declaration in RADIUS_DECL.finditer(line):
-                lengths = [to_px(value, unit) for value, unit in LENGTH.findall(declaration.group(1))]
-                if lengths and max(lengths) > 6:
-                    findings.append((number, "UI002", "rectangle radius above 6px"))
+                raw_radius = declaration.group(1)
+                if re.fullmatch(r"\s*50%\s*", raw_radius):
+                    continue
+                lengths = numeric_css_lengths(raw_radius)
+                if lengths and any(abs(length - 6.0) > 0.01 for length in lengths):
+                    findings.append((number, "UI002", "rectangle radius must be 6px"))
                     break
 
             if GRADIENT.search(line):
                 findings.append((number, "UI003", "decorative gradient"))
-            if PILL_OR_CHIP.search(line):
+            if PILL_OR_CHIP.search(line) and not ALLOWED_PILL.search(line):
                 findings.append((number, "UI004", "pill or chip requires explicit necessity"))
 
             for match in FONT.finditer(line):
@@ -139,8 +182,12 @@ def lint_file(path: Path) -> list[tuple[int, str, str]]:
                     findings.append((number, "UI005", "font is not IBM Plex Sans Thai"))
 
             for match in LINE_HEIGHT.finditer(line):
-                if float(match.group(1)) > 1.5:
-                    findings.append((number, "UI006", "unitless line-height above 1.5"))
+                value = match.group(1).strip()
+                if re.fullmatch(r"[0-9]*\.?[0-9]+", value):
+                    if float(value) > 1.5:
+                        findings.append((number, "UI006", "unitless line-height above 1.5"))
+                elif LENGTH.search(value):
+                    findings.append((number, "UI006", "unit-based line-height bypasses density gate"))
 
         if META_COPY.search(line):
             findings.append((number, "COPY001", "conversation or production residue"))

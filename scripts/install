@@ -13,13 +13,23 @@ if [[ -d "$HOME/.gemini/antigravity/custom" ]]; then
   targets+=("$HOME/.gemini/antigravity/custom/skills")
 fi
 
+promoted_names="$(python3 - "$repo_dir/catalog.json" <<'PY'
+import json, sys
+for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
+    if item["status"] == "promoted":
+        print(item["name"])
+        print(*item.get("aliases", []), sep="\n")
+PY
+)"
+
 for target in "${targets[@]}"; do
   mkdir -p "$target"
   while IFS= read -r existing_link; do
     linked_path="$(readlink "$existing_link")"
-    if [[ "$linked_path" == "$repo_dir/skills/"* && ! -e "$existing_link" ]]; then
+    link_name="$(basename "$existing_link")"
+    if [[ "$linked_path" == "$repo_dir/skills/"* || "$linked_path" == "$repo_dir/aliases/"* ]] && ! grep -Fqx "$link_name" <<<"$promoted_names"; then
       unlink "$existing_link"
-      echo "PRUNE retired link: $existing_link"
+      echo "PRUNE unpromoted link: $existing_link"
     fi
   done < <(find "$target" -mindepth 1 -maxdepth 1 -type l | sort)
   while IFS=$'\t' read -r category name; do

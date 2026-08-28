@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.7.1 - 2026-08-29
+
+- Demoted both learning-design packages to pilot because their names and framework ontology were never approved.
+- Scoped the five-phase model to the sourced SolutionsIMPACT AI Transformation Journey offer instead of presenting it as a universal Learning Experience model.
+- Recorded the conflict between the newest direct TPS-inside-LED correction and older source material rather than choosing a hierarchy silently.
+- Added Candidate Card, cross-case evidence, and legitimate-counter-case gates to prevent premature promotion and one-case overfitting.
+- Updated the installer to prune managed packages and aliases that are no longer promoted.
+- Hardened `give-me-solutions`, `zoom-out`, `prove-it`, `final-it`, and `i-have-adhd` with authority, reuse, freshness, bounded-stop, target-identity, semantic-proof, source-fidelity, and mode-boundary rules.
+- Added shared multi-agent ownership and independent-verification contracts to `done-for-me`, `project-standard`, and `prove-it`.
+- Strengthened `make-it-james` lint and print rules for decorative rails, rectangular radius, pills, line-height, document flow, page grouping, and redundant visuals.
+- Added an idempotent offline font embedder so single-file HTML can carry four IBM Plex Sans Thai weights instead of depending on a Google Fonts link.
+- Made updates fail before changing the active checkout by validating the fetched candidate in a temporary worktree; expanded doctor to report version, commit, dirty state, and stale managed links.
+- Added a cross-history portfolio audit with ranked Candidate Cards and explicit hold, merge, and control-plane boundaries; `catchup` is the recommended next pilot but remains uninstalled.
+- Narrowed the portable live-context boundary so JamesOS is not selected for generic project work, and made delegated action authority explicit down to each worker packet.
+
 ## 0.7.0 - 2026-08-29
 
 - Added `design-the-course`, the general Learning Experience Design workflow for one bounded course, workshop, session, or learning day.

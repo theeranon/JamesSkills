@@ -11,10 +11,60 @@ Route by the requested outcome and responsibility, not by keywords or product na
 2. Identify the actual outcome, evidence required, risk, current authority, and remaining human decision.
 3. Choose the smallest applicable path. Mentioned products are candidates, not requirements.
 4. Compose skills only when their responsibilities are distinct and required. Apply mandatory standards and guardrails automatically.
-5. If no skill fits, handle the work directly. Record a new candidate only after the promotion threshold is met.
+5. If no skill fits, handle the work directly. Treat repeated uncovered work as discovery evidence, not permission to package it immediately.
+
+Before creating or promoting a skill, present one Candidate Card containing:
+
+- two or three natural invocation-name options
+- the bounded job, trigger, exclusions, and output contract
+- overlap with every nearby current skill and why an upgrade or composition is insufficient
+- source map, recurrence, damage or value, cross-project reuse, and confidence
+- representative requests, failure cases, and legitimate counter-cases
+- recommendation to upgrade, merge, create as pilot, or reject
+
+Keep the candidate `pilot` and outside global installs until James approves the exact name and scope. Authorization to improve the repository is not naming or ontology approval.
+
+## Portfolio map
+
+- `zoom-out`: reframe the system and responsibility boundary before solving.
+- `give-me-solutions`: research real external options and prepare comparable decision material.
+- `baseon`: apply or compare a named framework, book, or knowledge lens.
+- `done-for-me`: own authorized implementation through the usable outcome.
+- `prove-it`: verify a claim at the recipient, provider, persistence, or production boundary that matters.
+- `never-again`: convert a rejected result into a scoped system correction and counter-tested guard.
+- `project-standard`: create or repair the vendor-neutral project contract when project truth is missing or drifting.
+- `sum-meet`: produce one detailed meeting record containing every agenda.
+- `one-page-pls`: produce one self-contained one-page artifact per topic or agenda.
+- `final-it`: select and finish the recipient-ready artifact when no more specific output workflow owns it.
+- `i-have-adhd`: persistent communication mode that composes with the primary workflow.
+- `make-it-james`: automatic recipient-facing standard that composes with the selected output.
+
+## Composition order
+
+1. Preserve any active mode.
+2. Use `zoom-out` first only when the problem layer or outcome is wrong or unclear.
+3. Give one primary workflow ownership of the job. Add another workflow only for a distinct responsibility.
+4. Use the most specific output skill; use `final-it` only when no narrower output owns the artifact.
+5. Apply `make-it-james` to every recipient-facing result and `prove-it` at the actual completion boundary.
+
+Common valid compositions:
+
+```text
+zoom-out -> give-me-solutions
+done-for-me -> prove-it
+sum-meet or one-page-pls -> make-it-james -> prove-it
+project-standard -> done-for-me -> prove-it
+never-again -> affected workflow -> regression and counter-case proof
+```
+
+Do not load a whole chain merely because the names are related. Each added skill must own a distinct decision or deliverable.
 
 Use `baseon` when the outcome is applying or comparing a named framework, book, or knowledge model. Register a new book as a source first; do not create a new skill or lens merely because its title appears in the request. Treat `wealth-dynamics` and `talent-dynamics` as shortcuts to the same Dynamics lens. Treat `wealth-spectrum` as a separate lens even though it shares the same creator lineage.
 
-Use `design-the-course` for one bounded course, workshop, session, or learning day. Use `design-the-journey` when the outcome is organization-level transformation across several interventions and five phases. When both apply, lock the macro journey first, then use `design-the-course` for each bounded day or intervention. Never let a child course silently rewrite sponsor outcomes, governance, phase handoffs, or organization-level evidence.
+The current learning-design packages are pilots. Do not route ordinary work to them as approved James-wide methods until their names, ontology, and scope are accepted. The five-phase reference is verified for the SolutionsIMPACT AI Transformation Journey offer only; do not force it onto a generic transformation program.
 
 Prefer project instructions when they express a more specific accepted decision.
+
+## Live-context adapter boundary
+
+Do not load JamesOS or another personal live-context adapter merely because James owns the task or the work is strategic. Activate one only when the outcome genuinely depends on current cross-channel context, commitments, people or owner routing, a secretary queue, personal operating state, or an explicit request for that system. If the current task or project already provides authoritative requirements and evidence, use those sources and keep the context adapter out. A context adapter supplies missing live state; it never becomes the primary workflow by default.

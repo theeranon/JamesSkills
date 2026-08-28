@@ -1,18 +1,20 @@
 ---
 name: design-the-course
-description: Design or repair one bounded learning experience, such as a course, workshop, session, or learning day, from learner and business change through delivery and debrief. Use for course architecture, agendas, workshops, facilitation maps, and trainer-ready designs; route organization-level multi-phase programs to design-the-journey.
+description: Pilot workflow for designing or repairing one bounded learning experience from learner and business change through delivery and debrief. Its working name and framework boundary still require James's approval.
 ---
 
 # Design The Course
 
-Use James's Learning Experience Design discipline, abbreviated LED. Own one bounded learning experience or one day or intervention inside a larger program. The outcome is a credible change in how the learner sees, decides, or acts. An artifact is evidence of that change, not the outcome by itself.
+Pilot only. Do not present the package name or framework map as approved.
+
+Use James's Learning Experience Design discipline, abbreviated LED. The newest direct correction places Transformative Productivity System inside LED. Older source material describes the relationship differently, so preserve that ontology conflict until James locks the canonical model. Own one bounded learning experience or one day or intervention inside a larger program. The outcome is a credible change in how the learner sees, decides, or acts. An artifact is evidence of that change, not the outcome by itself.
 
 Read [references/method.md](references/method.md) before designing or auditing a course.
 
 ## Boundary
 
 - Stay at course, workshop, session, or learning-day level.
-- Route organization transformation spanning sponsors, governance, several interventions, and five phases to `design-the-journey`.
+- Route organization transformation spanning sponsors, governance, and several interventions to the macro-journey workflow. Do not assume a five-phase spine unless the approved offer or source requires it.
 - Duration alone does not decide the route. Decide from who owns the final outcome.
 - Keep the narrower knowledge-transfer course as an optional pattern. It is not the definition of LED.
 

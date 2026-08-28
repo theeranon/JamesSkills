@@ -11,6 +11,9 @@ Authority: James's durable cross-project preference. Apply it across AI vendors,
 - Every rectangular surface uses a `6px` radius. Genuinely circular objects remain circular.
 - Prefer typography, alignment, grouping, rows, tables, and restrained neutral surfaces before decoration.
 - Adapt scale to viewing distance for websites, product UI, slides, PDFs, reports, email, captions, and documents without switching to an airy or decorative visual language.
+- Match the artifact to its reading job. A report should read as a document or report, not default to an app dashboard merely because HTML is available.
+- For print, group page breaks by meaning and reading sequence. Repair overflow within the affected section; do not remove page structure or shrink the entire document to hide one layout defect.
+- Show one dataset in the visual form that best serves the decision. Repeating the same information as cards, chart, table, and callout requires a distinct reading purpose for each form.
 
 ## Banned pattern
 

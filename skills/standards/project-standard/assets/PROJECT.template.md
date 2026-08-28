@@ -27,9 +27,9 @@ Last verified: {{DATE}}
 
 ## Requirements
 
-| ID | Requirement | Boundary | Acceptance | Proof | State |
-|---|---|---|---|---|---|
-| REQ-001 | Not confirmed | Not confirmed | Owner accepts the first requirement | Named owner decision | Need decision |
+| ID | Requirement | Boundary | Acceptance | Proof |
+|---|---|---|---|---|
+| REQ-001 | Not confirmed | Not confirmed | Owner accepts the first requirement | Named owner decision |
 
 ## System boundaries
 

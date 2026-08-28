@@ -37,6 +37,7 @@ REQUIRED_HEADINGS = {
         "## Current outcome",
         "## Done",
         "## In progress",
+        "## Requirement state",
         "## Next",
         "## Blockers",
         "## Need decision",
@@ -83,7 +84,7 @@ def bootstrap(root: Path, project_name: str, profile: str) -> int:
     return 0
 
 
-def check(root: Path) -> int:
+def check(root: Path, ready: bool = False) -> int:
     failures: list[str] = []
     for relative, headings in REQUIRED_HEADINGS.items():
         path = root / relative
@@ -105,13 +106,49 @@ def check(root: Path) -> int:
                 failures.append(f"AGENTS.md does not point to {required_pointer}")
 
     project_path = root / "PROJECT.md"
+    project_requirement_ids: set[str] = set()
     if project_path.is_file():
         project_text = project_path.read_text(encoding="utf-8")
-        if not re.search(r"\bREQ-\d{3,}\b", project_text):
+        project_requirement_ids = set(re.findall(r"\bREQ-\d{3,}\b", project_text))
+        if not project_requirement_ids:
             failures.append("PROJECT.md has no stable requirement ID such as REQ-001")
+        requirement_header = re.search(
+            r"## Requirements\s*\n+([^\n]+)", project_text, flags=re.IGNORECASE
+        )
+        if requirement_header and re.search(
+            r"\|\s*State\s*\|", requirement_header.group(1), flags=re.IGNORECASE
+        ):
+            failures.append("PROJECT.md duplicates mutable requirement State owned by STATUS.md")
         for required_pointer in ("STATUS.md", "docs/DECISIONS.md"):
             if required_pointer not in project_text:
                 failures.append(f"PROJECT.md does not point to {required_pointer}")
+
+    status_path = root / "STATUS.md"
+    if status_path.is_file():
+        status_text = status_path.read_text(encoding="utf-8")
+        status_requirement_ids = set(re.findall(r"\bREQ-\d{3,}\b", status_text))
+        if project_requirement_ids != status_requirement_ids:
+            failures.append(
+                "STATUS.md requirement IDs do not match PROJECT.md "
+                f"project={sorted(project_requirement_ids)} status={sorted(status_requirement_ids)}"
+            )
+        if ready:
+            if re.search(r"## Current outcome\s*\n+\s*Not confirmed\b", status_text):
+                failures.append("STATUS.md current outcome is not ready")
+            if "| REQ-001 | Need decision | Named owner acceptance missing |" in status_text:
+                failures.append("STATUS.md still contains the bootstrap requirement state")
+
+    if ready and project_path.is_file():
+        project_text = project_path.read_text(encoding="utf-8")
+        bootstrap_signals = (
+            "- Primary user: Not confirmed",
+            "- Problem: Not confirmed",
+            "- Successful outcome: Not confirmed",
+            "| REQ-001 | Not confirmed | Not confirmed |",
+        )
+        for signal in bootstrap_signals:
+            if signal in project_text:
+                failures.append(f"PROJECT.md is not ready: {signal}")
 
     for optional, headings in {
         "ARCHITECTURE.md": ("## Components", "## Data and request flow"),
@@ -145,7 +182,8 @@ def check(root: Path) -> int:
             print(f"FAIL {failure}")
         return 1
 
-    print("PASS project-standard structural contract")
+    level = "ready" if ready else "structural"
+    print(f"PASS project-standard {level} contract")
     return 0
 
 
@@ -166,6 +204,11 @@ def parse_args() -> argparse.Namespace:
         "check", help="Validate the structural project contract."
     )
     check_parser.add_argument("root", type=Path)
+    check_parser.add_argument(
+        "--ready",
+        action="store_true",
+        help="Also require owner-resolved outcome and non-bootstrap requirement state.",
+    )
     return parser.parse_args()
 
 
@@ -174,7 +217,7 @@ def main() -> int:
     root = args.root.expanduser().resolve()
     if args.command == "bootstrap":
         return bootstrap(root, args.name, args.profile)
-    return check(root)
+    return check(root, ready=args.ready)
 
 
 if __name__ == "__main__":

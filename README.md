@@ -21,7 +21,7 @@ It also activates repository-owned `pre-commit` and `pre-push` gates. Every comm
 "$HOME/.james-skills/scripts/update"
 ```
 
-Update uses fast-forward only, validates the repository, then refreshes links. Skill behavior never silently changes in the background.
+Update fetches a fast-forward candidate, validates it in a detached temporary worktree before moving the active checkout, then refreshes links. An invalid candidate cannot replace the working version. Skill behavior never silently changes in the background.
 
 ## Boundaries
 
@@ -47,10 +47,15 @@ Private by default. Review every file before publishing any subset.
 - `baseon`: base a decision on cited frameworks, books, or reusable knowledge lenses without turning author claims into facts
 - `done-for-me`: carry authorized work to a verified outcome without micromanagement
 - `zoom-out`: solve the system problem before selecting tools
-- `design-the-course`: design one bounded course, workshop, session, or learning day with James's Learning Experience Design discipline
-- `design-the-journey`: design an organization-level transformation across the five phases, then compose course design for each bounded intervention
 - `prove-it`: require recipient-visible evidence before Done
 - `never-again`: convert one bad output into a system correction and regression test
+
+### Pilot candidates
+
+- `design-the-course`: working package for one bounded learning experience; invocation name and LED/TPS boundary await James's approval
+- `design-the-journey`: working package for macro transformation design; its five-phase reference is scoped to the sourced SolutionsIMPACT AI Transformation Journey offer
+
+Pilot packages remain in the repository for review and testing but are excluded from global installs.
 
 ### Mode and standard
 
@@ -79,8 +84,14 @@ The first reviewed-private lenses are `wealth-dynamics` and `wealth-spectrum`. `
 
 Direct calls are available as `/baseon`, `/wealth-dynamics`, `/talent-dynamics`, and `/wealth-spectrum`. The framework shortcuts only preselect a lens; they contain no duplicate knowledge or reasoning rules. `/think-with-this` remains a compatibility alias.
 
-Learning-design calls are available as `/design-the-course` or `/learning-experience-design` for one bounded learning experience, and `/design-the-journey` or `/transformation-journey` for the organization-level five-phase program. Journey design owns the macro outcome and invokes course design only after the phase architecture is locked.
+The learning-design package names and aliases are working candidates, not approved calls. The current source record also contains an ontology conflict: James's newest correction places TPS inside LED, while older material described LED as one TPS lever. The library preserves the conflict instead of silently choosing a hierarchy.
 
 Clone the full repository when moving machines. A detached copy of `baseon` alone intentionally has no duplicated knowledge library; set `JAMES_SKILLS_ROOT` to the full clone if a platform cannot use the installer links.
 
 Skill names are phrases people naturally say when they need the capability. Workflow skills complete a bounded job; mode skills remain active for the conversation after one invocation.
+
+## Candidate lifecycle
+
+Discovery comes before packaging. A new skill remains a pilot until its Candidate Card shows repeated cross-project need, non-duplication, source confidence, representative failures, legitimate counter-cases, and James approves the exact name and scope. General permission to improve this repository does not approve a candidate's name or ontology.
+
+The current cross-history portfolio audit recommends `catchup` as the next pilot, followed by `learn-this`, `audit-this`, and `systemize-it`. These are Candidate Cards, not installed skills. See `research/2026-08-29-skill-portfolio-audit.md`.

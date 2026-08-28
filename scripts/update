@@ -2,7 +2,39 @@
 set -euo pipefail
 
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-git -C "$repo_dir" pull --ff-only
-"$repo_dir/scripts/validate"
+
+if [[ -n "$(git -C "$repo_dir" status --porcelain)" ]]; then
+  echo "FAIL working tree is dirty; update would mix local and remote changes"
+  exit 1
+fi
+
+upstream="$(git -C "$repo_dir" rev-parse --abbrev-ref --symbolic-full-name '@{upstream}')"
+remote="${upstream%%/*}"
+git -C "$repo_dir" fetch "$remote"
+
+current_commit="$(git -C "$repo_dir" rev-parse HEAD)"
+target_commit="$(git -C "$repo_dir" rev-parse "$upstream")"
+
+if [[ "$current_commit" != "$target_commit" ]]; then
+  if ! git -C "$repo_dir" merge-base --is-ancestor "$current_commit" "$target_commit"; then
+    echo "FAIL update is not fast-forward: $current_commit -> $target_commit"
+    exit 1
+  fi
+
+  candidate_dir="$(mktemp -d "${TMPDIR:-/tmp}/james-skills-update.XXXXXX")"
+  cleanup() {
+    git -C "$repo_dir" worktree remove --force "$candidate_dir" >/dev/null 2>&1 || true
+    rmdir "$candidate_dir" >/dev/null 2>&1 || true
+  }
+  trap cleanup EXIT
+
+  git -C "$repo_dir" worktree add --detach "$candidate_dir" "$target_commit" >/dev/null
+  "$candidate_dir/scripts/validate"
+  cleanup
+  trap - EXIT
+
+  git -C "$repo_dir" merge --ff-only "$target_commit"
+fi
+
 "$repo_dir/scripts/install"
 "$repo_dir/scripts/doctor"

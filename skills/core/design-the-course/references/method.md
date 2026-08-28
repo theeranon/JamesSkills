@@ -1,4 +1,4 @@
-# Learning Experience Design Method
+# Learning Experience Design Pilot Method
 
 This is the portable form of James's general Learning Experience Design operating discipline. It is broader than the SolutionsIMPACT e-learning product about knowledge transfer.
 
@@ -20,7 +20,7 @@ Classify the request before designing:
 - `new course`: no accepted learning spine exists
 - `journey`: organization-level change requires several interventions, sponsor decisions, governance, and phase-to-phase evidence
 
-Use `design-the-journey` for the journey class. Do not disguise an organization transformation as a long agenda.
+Use the macro-journey workflow for the journey class. Do not disguise an organization transformation as a long agenda or import an offer-specific phase model without authority.
 
 ## 2. Reality Snapshot
 
@@ -143,5 +143,7 @@ After delivery, capture room state, what worked, what broke, the observed signal
 
 - Learning Experience Design is `LED` in James's operating vocabulary.
 - The e-learning product called Learning Experience Design focuses on knowledge transfer and organizational assets. Use it as a specialized pattern only when that is the actual job.
-- Transformative Productivity System has six design dimensions, but the approved names are not yet stable. Preserve the source gap rather than inventing labels.
-- Learning Experience Transformation Journey is a separate macro workflow. It may use this method for each day or intervention after its five-phase architecture is locked.
+- James's newest direct correction places Transformative Productivity System inside Learning Experience Design. Treat TPS as an internal design system within LED, not a peer framework.
+- Older material described Learning Experience Design as one TPS lever. This is an explicit ontology conflict, not permission to choose whichever hierarchy is convenient.
+- The approved TPS component names and final hierarchy remain unresolved. Preserve the source gap rather than inventing labels.
+- A macro transformation journey may use LED and TPS for each bounded intervention after its own approved architecture is locked. The SolutionsIMPACT AI Transformation Journey five-phase offer is one reference pattern, not a universal LED law.

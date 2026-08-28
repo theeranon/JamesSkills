@@ -51,6 +51,14 @@ names = [item["name"] for item in items]
 if len(names) != len(set(names)):
     raise SystemExit("FAIL duplicate canonical skill name in catalog")
 
+allowed_statuses = {"pilot", "promoted"}
+invalid_statuses = sorted(
+    {item.get("status") for item in items} - allowed_statuses,
+    key=lambda value: str(value),
+)
+if invalid_statuses:
+    raise SystemExit(f"FAIL invalid lifecycle status: {invalid_statuses}")
+
 aliases = [alias for item in items for alias in item.get("aliases", [])]
 if len(aliases) != len(set(aliases)) or set(aliases) & set(names):
     raise SystemExit("FAIL duplicate alias or alias collides with canonical name")

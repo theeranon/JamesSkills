@@ -17,10 +17,17 @@ This is a cross-format standard and delivery gate. It does not choose the artifa
    python3 scripts/lint_outcome.py --strict <output-path> [<output-path> ...]
    ```
 
-6. Run the artifact's native checks. For visual work, inspect every relevant rendered page, slide, viewport, and state; verify the font actually loaded and Thai marks remain legible.
+6. When an HTML deliverable must be one offline portable file, embed the authorized local font files before delivery:
+
+   ```bash
+   python3 scripts/embed_ibm_plex_thai.py <input.html> --output <portable.html> [--font-dir <font-directory>]
+   ```
+
+   If the font files are unavailable, report that exact portability gate; a Google Fonts link or CSS family declaration is not self-contained proof.
+7. Run the artifact's native checks. For visual work, inspect every relevant rendered page, slide, viewport, and state; verify the font actually loaded and Thai marks remain legible.
 
 ## Completion gate
 
 - Written-only work: final wording contains no conversation residue, AI theatre, or punctuation-built Thai shorthand.
-- Visual work: native checks and strict lint pass, then rendered QA confirms font, density, radius, color discipline, and absence of ornamental rails, excessive cards, unnecessary pills or chips, clipping, and avoidable scrolling.
+- Visual work: native checks and strict lint pass, then rendered QA confirms font, density, radius, color discipline, semantic page flow, artifact-appropriate composition, non-duplicative visuals, and absence of ornamental rails, excessive cards, unnecessary pills or chips, clipping, and avoidable scrolling. A claimed offline single-file HTML contains embedded font data and no remote font dependency.
 - Legacy work: audit first, record `PASS`, `FIX`, or `EXEMPT`, and repair active surfaces by priority. Never bulk-rewrite evidence or archives.

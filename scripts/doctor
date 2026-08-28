@@ -4,12 +4,28 @@ set -euo pipefail
 repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 version="$(tr -d '[:space:]' < "$repo_dir/VERSION")"
 commit="uncommitted"
+dirty="unknown"
 if git -C "$repo_dir" rev-parse --git-dir >/dev/null 2>&1; then
   commit="$(git -C "$repo_dir" rev-parse --short HEAD 2>/dev/null || echo uncommitted)"
+  if [[ -z "$(git -C "$repo_dir" status --porcelain)" ]]; then
+    dirty="no"
+  else
+    dirty="yes"
+  fi
 fi
 
-echo "JamesSkills version=$version commit=$commit"
+echo "JamesSkills version=$version commit=$commit dirty=$dirty source=$repo_dir"
 "$repo_dir/scripts/validate"
+
+promoted_names="$(python3 - "$repo_dir/catalog.json" <<'PY'
+import json, sys
+for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
+    if item["status"] == "promoted":
+        print(item["name"])
+        print(*item.get("aliases", []), sep="\n")
+PY
+)"
+issues=0
 
 hooks_path="$(git -C "$repo_dir" config --get core.hooksPath 2>/dev/null || true)"
 if [[ "$hooks_path" == ".githooks" ]]; then
@@ -54,5 +70,21 @@ for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
 PY
 )
 
-  echo "$target canonical=$linked aliases=$aliases broken=$broken"
+  unexpected=0
+  while IFS= read -r managed_link; do
+    linked_path="$(readlink "$managed_link")"
+    link_name="$(basename "$managed_link")"
+    if [[ "$linked_path" == "$repo_dir/skills/"* || "$linked_path" == "$repo_dir/aliases/"* ]] && ! grep -Fqx "$link_name" <<<"$promoted_names"; then
+      unexpected=$((unexpected + 1))
+      echo "UNEXPECTED unpromoted managed link: $managed_link -> $linked_path"
+    fi
+  done < <(find "$target" -mindepth 1 -maxdepth 1 -type l | sort)
+
+  echo "$target canonical=$linked aliases=$aliases broken=$broken unexpected=$unexpected"
+  issues=$((issues + broken + unexpected))
 done
+
+if [[ "$issues" -ne 0 ]]; then
+  echo "FAIL discovery-link issues=$issues"
+  exit 1
+fi

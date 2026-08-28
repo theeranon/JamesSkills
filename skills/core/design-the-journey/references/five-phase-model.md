@@ -1,6 +1,8 @@
-# Five-Phase Transformation Journey
+# AI Transformation Journey Five-Phase Reference
 
-The internal phase IDs below preserve James's operational model. Marketing labels are display choices and must not become the logic source.
+Status: verified for the SolutionsIMPACT AI Transformation Journey offer from James's direct Lark message dated 2026-08-12 and its later published derivative. This does not prove a universal Learning Experience Transformation Journey model.
+
+The internal phase IDs below preserve that offer's operational pattern. Marketing labels are display choices and must not become the logic source.
 
 ## 1. Phase Contract
 
@@ -22,7 +24,7 @@ Pitching or Present or Meetup
 After Transformation
 ```
 
-Do not replace this spine with an older Phase 0 to Phase 4 sample or a generic learning model.
+Within that offer, do not replace this spine with an older Phase 0 to Phase 4 sample or a generic learning model. Outside that offer, do not import this spine without an approved source.
 
 ## 2. Phase Design Fields
 
@@ -98,8 +100,9 @@ For AI programs, real outputs may include improved work practices, delegated age
 
 ## 6. Authority And Drift Protection
 
-- James's direct five-phase correction is the logic authority.
+- James's direct five-phase correction is the logic authority for the SolutionsIMPACT AI Transformation Journey offer.
 - A later published artifact renamed the display labels to Diagnose, Workshop, Coaching, Showcase, and Transform without changing the responsibilities.
-- Transformative Productivity System is a separate design rubric with six dimensions. It is not the five-phase timeline.
+- James's newest direct correction places Transformative Productivity System inside Learning Experience Design. TPS is not the five-phase delivery timeline.
+- Older material placed Learning Experience Design inside TPS, so the final ontology remains conflicted until James locks the source of truth.
 - The approved names of all six TPS dimensions remain unresolved. Never reconstruct them from memory or generic theory.
 - When a direct correction changes a phase, update this reference and regression cases before changing downstream journey designs.

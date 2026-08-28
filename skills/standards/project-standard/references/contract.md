@@ -47,7 +47,16 @@ Use stable IDs such as `REQ-001` and keep one row per observable requirement:
 | Boundary | explicit non-goal, permission, data, integration, or failure behavior |
 | Acceptance | observable pass condition |
 | Proof | source, test, route, receipt, rendered artifact, or provider state that proves acceptance |
-| State | `Not started`, `In progress`, `Verified`, `Blocked`, or `Need decision` |
+
+Every delegated work packet also carries the same base revision, owned paths, allowed actions, forbidden external effects, and proof contract. Local implementation authority never implies permission to push, deploy, publish, send, or mutate an external account.
+
+Keep mutable state in `STATUS.md`, keyed by the same requirement ID:
+
+| Field | Meaning |
+|---|---|
+| Current state | `Not started`, `In progress`, `Verified`, `Blocked`, or `Need decision` |
+| Evidence | current proof or exact proof gap |
+| Last verified | date or timestamp of the current-state check |
 
 Do not encode implementation tasks as product requirements. Tasks may change while the accepted outcome remains stable.
 
