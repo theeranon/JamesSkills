@@ -1,12 +1,28 @@
-# Talent Dynamics Concepts
+# Wealth Dynamics / Talent Dynamics Concepts
 
-## TD-001 — Flow and trust are the framework's intended outcomes
+## WD-001 — One Dynamics model, two application contexts
+
+- Evidence: `[official claim]`
+- Source: `wealth-dynamics-official-eguide#four-energies-eight-profiles`; `talent-dynamics-genius-guide-2015#pdf-p21-p38`; `framework-evidence-audit-2026#framework-map`
+- Confidence: `supported`
+
+Wealth Dynamics applies the four-energy and eight-profile model to entrepreneurial value creation and leverage. Talent Dynamics adapts the same topology to roles, leadership, communication, trust, and team flow. The application context changes; the underlying profile model does not become a separate science.
+
+## WD-002 — Value and leverage are the entrepreneurial application
+
+- Evidence: `[official claim]`
+- Source: `wealth-dynamics-official-eguide#wealth-equation`
+- Confidence: `source-faithful`
+
+The Wealth Dynamics application asks how a person most naturally creates value and builds leverage. Use that language to generate work-design hypotheses, not to predict wealth or competence.
+
+## TD-001 — Flow and trust are the team application's intended outcomes
 
 - Evidence: `[official claim]`
 - Source: `talent-dynamics-genius-guide-2015#pdf-p3-p5`
 - Confidence: `source-faithful`
 
-The guide presents Talent Dynamics as a way to reflect on natural work patterns, value creation, leverage, leadership, team contribution, trust, and flow. These are framework claims, not independently proven outcomes.
+The guide presents Talent Dynamics as the team and organizational application of the shared Dynamics model, with emphasis on natural work patterns, leadership, team contribution, trust, and flow. These are framework claims, not independently proven outcomes.
 
 ## TD-002 — A profile is described as a path, not a box
 

@@ -1,4 +1,4 @@
-# Talent Dynamics Applications
+# Wealth Dynamics / Talent Dynamics Applications
 
 ## Evidence required first
 
@@ -7,6 +7,7 @@
 - Work the person starts, sustains, completes, avoids, or returns to others.
 - Actual role outcomes, communication failures, energy drains, and support conditions.
 - A competing explanation such as skill gap, unclear authority, overload, incentives, or environment.
+- The application context: entrepreneurial value creation or team and organizational work.
 
 ## Core questions
 

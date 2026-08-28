@@ -10,17 +10,25 @@
       "path": "packs/knowledge/sources/talent-dynamics-genius-guide-2015.json"
     },
     {
+      "id": "wealth-dynamics-official-eguide",
+      "path": "packs/knowledge/sources/wealth-dynamics-official-eguide.json"
+    },
+    {
       "id": "wealth-spectrum-fullpack-2011",
       "path": "packs/knowledge/sources/wealth-spectrum-fullpack-2011.json"
     }
   ],
   "lenses": [
     {
-      "id": "talent-dynamics",
-      "path": "packs/knowledge/lenses/talent-dynamics/manifest.json"
+      "id": "wealth-dynamics",
+      "aliases": [
+        "talent-dynamics"
+      ],
+      "path": "packs/knowledge/lenses/wealth-dynamics/manifest.json"
     },
     {
       "id": "wealth-spectrum",
+      "aliases": [],
       "path": "packs/knowledge/lenses/wealth-spectrum/manifest.json"
     }
   ]

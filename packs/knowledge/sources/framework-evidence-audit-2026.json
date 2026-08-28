@@ -14,13 +14,18 @@
   "rights_status": "repo-authored",
   "rights_basis": "original_synthesis_with_citations",
   "raw_source_in_repo": false,
-  "content_sha256": "0254409cca36a1548cce87ddcfff6ccf4a24ff7fc6fdfff8eac252d572a33e59",
+  "content_sha256": "82534ea21382627551f248bf31e142cebd318d2606137d36e5d97a737aa10cb4",
   "evidence_label": "independent evidence",
   "locators": [
     {
       "id": "decision",
       "location": "Decision",
       "scope": "Safe coaching-lens use and non-goals"
+    },
+    {
+      "id": "framework-map",
+      "location": "What the official models are / Framework map",
+      "scope": "Relationship among Wealth Dynamics, Talent Dynamics, and Wealth Spectrum"
     },
     {
       "id": "evidence-audit",

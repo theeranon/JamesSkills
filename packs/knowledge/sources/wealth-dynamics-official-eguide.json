@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "wealth-dynamics-official-eguide",
+  "title": "Wealth Dynamics E-Guide",
+  "creator": "Roger James Hamilton; Entrepreneurs Institute",
+  "edition_or_version": "Official e-guide accessed 2026-08-28",
+  "source_type": "first-party-framework-guide",
+  "status": "reviewed-private",
+  "source_access": "web",
+  "provenance": "Official Wealth Dynamics e-guide reviewed for the framework map. It is not James's personal assessment report.",
+  "reference_urls": [
+    "https://assessments.geniusu.com/pdf/wealth-dynamics-eguide.pdf",
+    "https://www.wealthdynamics.com/the-wealth-equation"
+  ],
+  "acquired_at": "2026-08-28",
+  "rights_status": "publicly accessible first-party guide; reuse license not located",
+  "rights_basis": "citation_and_original_paraphrase_only",
+  "raw_source_in_repo": false,
+  "content_sha256": null,
+  "evidence_label": "official claim",
+  "locators": [
+    {
+      "id": "four-energies-eight-profiles",
+      "location": "Official e-guide framework overview and profile map",
+      "scope": "Dynamo, Blaze, Tempo, Steel and the eight-profile topology"
+    },
+    {
+      "id": "path-not-box",
+      "location": "Official e-guide explanation of profile as a path",
+      "scope": "Non-fixed interpretation of a profile"
+    },
+    {
+      "id": "wealth-equation",
+      "location": "Official Wealth Equation page",
+      "scope": "Value and leverage as the model's entrepreneurial application"
+    }
+  ],
+  "scope": [
+    "entrepreneurial value-creation reflection",
+    "four-energy and eight-profile model",
+    "role and leverage hypotheses"
+  ],
+  "not_for_use": [
+    "proof of James's profile",
+    "official assessment reconstruction",
+    "employment or investment decision rule"
+  ]
+}

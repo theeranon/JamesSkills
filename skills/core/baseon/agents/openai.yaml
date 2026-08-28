@@ -1,6 +1,6 @@
 interface:
-  display_name: "Think With This"
-  short_description: "Apply cited frameworks without turning them into facts"
-  default_prompt: "Use $think-with-this to apply the smallest relevant knowledge lens to this question, separate source claims from evidence and inference, and end with a testable implication."
+  display_name: "Base On"
+  short_description: "Base decisions on cited frameworks without treating them as facts"
+  default_prompt: "Use $baseon to apply the smallest relevant knowledge lens to this question, separate source claims from evidence and inference, and end with a testable implication."
 policy:
   allow_implicit_invocation: true

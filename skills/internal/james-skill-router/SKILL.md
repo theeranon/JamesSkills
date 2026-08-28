@@ -13,6 +13,6 @@ Route by the requested outcome and responsibility, not by keywords or product na
 4. Compose skills only when their responsibilities are distinct and required. Apply mandatory standards and guardrails automatically.
 5. If no skill fits, handle the work directly. Record a new candidate only after the promotion threshold is met.
 
-Use `think-with-this` when the outcome is applying or comparing a named framework, book, or knowledge model. Register a new book as a source first; do not create a new skill or lens merely because its title appears in the request.
+Use `baseon` when the outcome is applying or comparing a named framework, book, or knowledge model. Register a new book as a source first; do not create a new skill or lens merely because its title appears in the request. Treat `wealth-dynamics` and `talent-dynamics` as shortcuts to the same Dynamics lens. Treat `wealth-spectrum` as a separate lens even though it shares the same creator lineage.
 
 Prefer project instructions when they express a more specific accepted decision.

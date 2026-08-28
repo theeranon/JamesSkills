@@ -1,16 +1,18 @@
 {
   "schema_version": 1,
-  "id": "talent-dynamics",
-  "title": "Talent Dynamics",
+  "id": "wealth-dynamics",
+  "title": "Wealth Dynamics / Talent Dynamics",
   "kind": "framework",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "status": "reviewed-private",
   "entrypoint": "index.md",
   "source_ids": [
+    "wealth-dynamics-official-eguide",
     "talent-dynamics-genius-guide-2015",
     "framework-evidence-audit-2026"
   ],
   "use_cases": [
+    "generate value-creation and leverage hypotheses",
     "generate role-fit hypotheses",
     "design communication and collaboration experiments",
     "surface missing team conditions"
@@ -20,6 +22,8 @@
     "employment decision rule",
     "fixed personality or capability labels"
   ],
+  "creator_family_id": "roger-james-hamilton",
+  "model_family_id": "wealth-dynamics",
   "rights_class": "private-original-synthesis",
   "raw_source_in_repo": false
 }

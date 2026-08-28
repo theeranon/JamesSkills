@@ -1,8 +1,9 @@
-# Talent Dynamics Limitations
+# Wealth Dynamics / Talent Dynamics Limitations
 
 ## Evidence boundary
 
 - No personal Talent Dynamics or Wealth Dynamics report for James was found in the audited local sources. Any James-specific profile, including Lord, remains inferred unless James supplies or confirms an official result.
+- Talent Dynamics and Wealth Dynamics share one underlying model, but their team and entrepreneurial applications must still be named accurately. Wealth Spectrum is a different stage model and must not be merged into this lens.
 - Targeted public research found no independently accessible technical manual or validation study for this exact instrument as of 2026-08-28. This is a bounded search result, not proof that no private evidence exists.
 - The guide's profile, trust, flow, role, and performance associations are first-party claims. Usage volume and similarity to other personality systems do not validate the scoring or outcomes.
 - The guide includes time-sensitive public-figure examples. Those examples are omitted because they age badly and do not prove a profile.

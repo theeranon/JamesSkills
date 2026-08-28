@@ -9,6 +9,8 @@
   "source_ids": ["__SOURCE_ID__"],
   "use_cases": [],
   "not_for": [],
+  "creator_family_id": null,
+  "model_family_id": null,
   "rights_class": "private-original-synthesis",
   "raw_source_in_repo": false
 }

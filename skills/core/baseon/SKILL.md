@@ -1,9 +1,9 @@
 ---
-name: think-with-this
-description: Apply a named framework, book, research source, or reusable knowledge lens to a real decision while separating source claims from case evidence and inference. Use when the user asks to think through a person, team, business, plan, or problem with Wealth Spectrum, Talent Dynamics, or another knowledge pack, compare lenses, or add a new source to the library.
+name: baseon
+description: Base a real decision on a named framework, book, research source, or reusable knowledge lens while separating source claims from case evidence and inference. Use when the user asks to analyze a person, team, business, plan, or problem through Wealth Dynamics, Talent Dynamics, Wealth Spectrum, or another knowledge pack, compare lenses, or add a new source to the library.
 ---
 
-# Think With This
+# Base On
 
 Use knowledge as a lens, not a verdict.
 
@@ -18,6 +18,8 @@ Use knowledge as a lens, not a verdict.
 1. State the real question, desired outcome, decision boundary, and facts already known.
 2. From this skill directory, list the library with `python3 scripts/knowledge_library.py list`. Select the smallest relevant lens set. Do not invoke a lens merely because its name was mentioned.
 3. Resolve every selected pack with `python3 scripts/knowledge_library.py show <lens-id>`, then read its entrypoint, concepts, applications, limitations, manifest, and referenced source cards.
+   - `wealth-dynamics` and `talent-dynamics` resolve to one shared Dynamics lens. Talent Dynamics is the team and organizational adaptation of the same model.
+   - `wealth-spectrum` is a separate stage model. Shared creator lineage does not make it the same science or permit blending the two lenses.
 4. Establish the subject input state:
    - `official_user_declared`: the user supplied or confirmed an official result.
    - `working_hypothesis`: an inference with confidence, alternatives, and disconfirming evidence.
@@ -28,7 +30,7 @@ Use knowledge as a lens, not a verdict.
    - **Source claim:** what the framework author or source says, with source ID and locator.
    - **Inference:** how the lens may explain this case, with confidence and a competing explanation.
    - **Action:** a reversible experiment or decision implication with a success and revision rule.
-6. If lenses disagree, show the disagreement. Never average several frameworks into a synthetic personality label.
+6. If lenses disagree, show the disagreement. Never average several frameworks into a synthetic personality label. When applying Dynamics and Wealth Spectrum together, keep the preferred-path hypothesis separate from the current-stage hypothesis.
 7. Drop a lens when it does not materially change the question, options, or action.
 
 ## Intake new knowledge

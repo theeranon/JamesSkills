@@ -75,7 +75,8 @@ if set(alias_paths) != set(aliases):
     )
 for alias, path in alias_paths.items():
     text = path.read_text(encoding="utf-8")
-    if f"name: {alias}" not in text or "Compatibility Alias" not in text:
+    alias_kind = "Compatibility Alias" in text or "Lens Shortcut" in text
+    if f"name: {alias}" not in text or not alias_kind:
         raise SystemExit(f"FAIL malformed alias package: {path}")
 
 for pack in catalog.get("packs", []):

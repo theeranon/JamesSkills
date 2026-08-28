@@ -44,14 +44,36 @@ def main() -> int:
     with redirect_stdout(output):
         assert MODULE.list_library(ROOT) == 0
     listing = output.getvalue()
-    for required in ("wealth-spectrum", "talent-dynamics", "reviewed-private"):
+    for required in ("wealth-spectrum", "wealth-dynamics", "talent-dynamics", "reviewed-private"):
         assert required in listing, f"library listing missing: {required}"
+
+    wealth_dynamics = ROOT / "packs/knowledge/lenses/wealth-dynamics/manifest.json"
+    wealth_spectrum = ROOT / "packs/knowledge/lenses/wealth-spectrum/manifest.json"
+    assert wealth_dynamics.is_file()
+    assert not (ROOT / "packs/knowledge/lenses/talent-dynamics").exists()
+    dynamics_manifest = MODULE.load_json(wealth_dynamics)
+    spectrum_manifest = MODULE.load_json(wealth_spectrum)
+    assert dynamics_manifest["creator_family_id"] == spectrum_manifest["creator_family_id"]
+    assert dynamics_manifest["model_family_id"] != spectrum_manifest["model_family_id"]
+
+    resolved_paths: dict[str, str] = {}
+    for lens_name in ("wealth-dynamics", "talent-dynamics", "wealth-spectrum"):
+        shown = StringIO()
+        with redirect_stdout(shown):
+            assert MODULE.show_lens(ROOT, lens_name) == 0
+        resolved_paths[lens_name] = next(
+            line.split("\t", 1)[1]
+            for line in shown.getvalue().splitlines()
+            if line.startswith("manifest\t")
+        )
+    assert resolved_paths["wealth-dynamics"] == resolved_paths["talent-dynamics"]
+    assert resolved_paths["wealth-spectrum"] != resolved_paths["wealth-dynamics"]
 
     wealth_index = (ROOT / "packs/knowledge/lenses/wealth-spectrum/index.md").read_text(
         encoding="utf-8"
     )
     talent_limits = (
-        ROOT / "packs/knowledge/lenses/talent-dynamics/references/limitations.md"
+        ROOT / "packs/knowledge/lenses/wealth-dynamics/references/limitations.md"
     ).read_text(encoding="utf-8")
     assert "generic full pack" in wealth_index and "James's personal assessment" in wealth_index
     assert "No personal Talent Dynamics" in talent_limits
@@ -62,8 +84,8 @@ def main() -> int:
             sandbox / "packs/knowledge/registry.json",
             {"schema_version": 1, "sources": [], "lenses": []},
         )
-        assets = sandbox / "skills/core/think-with-this/assets"
-        shutil.copytree(ROOT / "skills/core/think-with-this/assets", assets)
+        assets = sandbox / "skills/core/baseon/assets"
+        shutil.copytree(ROOT / "skills/core/baseon/assets", assets)
 
         source_args = argparse.Namespace(
             source_id="example-book",
@@ -109,6 +131,18 @@ def main() -> int:
         )
         errors = MODULE.validate(sandbox)
         assert any("unknown locator" in error for error in errors), "broken provenance must fail"
+
+    with tempfile.TemporaryDirectory() as temp:
+        sandbox = Path(temp)
+        copy_live_knowledge(sandbox)
+        registry_path = sandbox / "packs/knowledge/registry.json"
+        registry = MODULE.load_json(registry_path)
+        spectrum_entry = next(item for item in registry["lenses"] if item["id"] == "wealth-spectrum")
+        spectrum_entry["aliases"] = ["talent-dynamics", "wealth-dynamics"]
+        write_json(registry_path, registry)
+        errors = MODULE.validate(sandbox)
+        assert any("duplicate lens alias" in error for error in errors)
+        assert any("alias collides with canonical id" in error for error in errors)
 
     with tempfile.TemporaryDirectory() as temp:
         sandbox = Path(temp)
@@ -193,7 +227,7 @@ def main() -> int:
         for required in ("requires SHA-256", "lacks URL", "unresolved rights", "ISO date"):
             assert any(required in error for error in errors), f"source gate missing: {required}"
 
-    skill = (ROOT / "skills/core/think-with-this/SKILL.md").read_text(encoding="utf-8")
+    skill = (ROOT / "skills/core/baseon/SKILL.md").read_text(encoding="utf-8")
     for required in (
         "official_user_declared",
         "working_hypothesis",
@@ -203,10 +237,12 @@ def main() -> int:
         "Source claim",
         "competing explanation",
         "Never reproduce proprietary test items",
+        "`wealth-dynamics` and `talent-dynamics` resolve to one shared Dynamics lens",
+        "`wealth-spectrum` is a separate stage model",
     ):
         assert required in skill, f"workflow contract missing: {required}"
 
-    print("PASS think-with-this intake, provenance, misuse, and library contracts")
+    print("PASS baseon intake, alias, provenance, misuse, and library contracts")
     return 0
 
 

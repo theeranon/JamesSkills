@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.6.0 - 2026-08-28
+
+- Renamed the canonical framework workflow from `think-with-this` to `baseon`; retained the old name as a compatibility alias.
+- Added permanent `/wealth-dynamics`, `/talent-dynamics`, and `/wealth-spectrum` lens shortcuts with no duplicated reasoning body.
+- Unified Wealth Dynamics and Talent Dynamics under one canonical Dynamics lens while keeping Wealth Spectrum as a separate model in the same creator family.
+- Added registry alias resolution and separate creator-family/model-family metadata with collision and behavioral regression gates.
+- Added the official Wealth Dynamics source card and a history-grounded candidate audit for future lenses.
+
+## 0.5.0 - 2026-08-28
+
+- Added the source-first framework knowledge library and its then-current `think-with-this` application workflow.
+- Added reviewed-private Wealth Spectrum and Talent Dynamics lens material with citations, provenance, rights boundaries, and reversible-experiment rules.
+- Added deterministic source, lens, lifecycle, path-containment, duplicate-claim, and prohibited-raw-content validation.
+
 ## 0.4.0 - 2026-08-28
 
 - Added `project-standard`, combining the useful parts of `project-docs-standard`, `write-the-spec`, and `keep-the-project-straight` into one vendor-neutral standard.

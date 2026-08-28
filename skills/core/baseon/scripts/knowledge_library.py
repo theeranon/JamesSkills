@@ -69,6 +69,8 @@ MANIFEST_FIELDS = {
     "source_ids",
     "use_cases",
     "not_for",
+    "creator_family_id",
+    "model_family_id",
     "rights_class",
     "raw_source_in_repo",
 }
@@ -127,6 +129,26 @@ def validate(root: Path) -> list[str]:
     for group_name, items in (("source", source_entries), ("lens", lens_entries)):
         for duplicate in sorted(duplicate_ids(items)):
             errors.append(f"duplicate {group_name} id: {duplicate}")
+
+    lens_ids = {entry.get("id") for entry in lens_entries}
+    lens_aliases: dict[str, str] = {}
+    for entry in lens_entries:
+        lens_id = entry.get("id", "")
+        aliases = entry.get("aliases", [])
+        if not isinstance(aliases, list):
+            errors.append(f"lens {lens_id} aliases must be an array")
+            continue
+        for alias in aliases:
+            if not isinstance(alias, str) or not SLUG.fullmatch(alias):
+                errors.append(f"lens {lens_id} has invalid alias: {alias!r}")
+                continue
+            if alias in lens_ids:
+                errors.append(f"lens alias collides with canonical id: {alias}")
+            if alias in lens_aliases:
+                errors.append(
+                    f"duplicate lens alias: {alias} ({lens_aliases[alias]} and {lens_id})"
+                )
+            lens_aliases[alias] = lens_id
 
     sources: dict[str, dict[str, Any]] = {}
     source_locators: dict[str, set[str]] = {}
@@ -280,6 +302,12 @@ def validate(root: Path) -> list[str]:
             errors.append(f"lens {lens_id} version is not semantic")
         if manifest.get("raw_source_in_repo") is not False:
             errors.append(f"lens {lens_id} must keep raw_source_in_repo false")
+        for field in ("creator_family_id", "model_family_id"):
+            family_id = manifest.get(field)
+            if lens_status != "draft" and (
+                not isinstance(family_id, str) or not SLUG.fullmatch(family_id)
+            ):
+                errors.append(f"lens {lens_id} has invalid {field}")
         entrypoint = manifest.get("entrypoint")
         if entrypoint != "index.md":
             errors.append(f"lens {lens_id} entrypoint must be index.md")
@@ -416,7 +444,8 @@ def list_library(root: Path, include_unready: bool = False) -> int:
             continue
         print(
             f"{manifest['id']}\t{manifest['kind']}\t{manifest['version']}\t"
-            f"{manifest['status']}\tsources={','.join(manifest['source_ids'])}"
+            f"{manifest['status']}\taliases={','.join(entry.get('aliases', []))}\t"
+            f"sources={','.join(manifest['source_ids'])}"
         )
     print("SOURCES")
     for source_id in sorted(source_by_id):
@@ -434,12 +463,21 @@ def show_lens(root: Path, lens_id: str, allow_unready: bool = False) -> int:
             print(f"FAIL {error}", file=sys.stderr)
         return 1
     registry = load_registry(root)
-    entry = next((item for item in registry.get("lenses", []) if item.get("id") == lens_id), None)
+    entry = next(
+        (
+            item
+            for item in registry.get("lenses", [])
+            if item.get("id") == lens_id or lens_id in item.get("aliases", [])
+        ),
+        None,
+    )
     if entry is None:
         print(f"Unknown lens: {lens_id}", file=sys.stderr)
         return 1
     manifest_path = safe_path(root, entry["path"])
     manifest = load_json(manifest_path)
+    if lens_id != manifest["id"]:
+        print(f"resolved\t{lens_id}\t{manifest['id']}")
     if not allow_unready and manifest.get("status") not in SELECTABLE:
         print(
             f"Lens is not runtime-ready: {lens_id} status={manifest.get('status')}",
@@ -521,7 +559,12 @@ def create_lens(root: Path, args: argparse.Namespace) -> int:
     missing = sorted(set(args.source) - source_ids)
     if missing:
         raise ValueError(f"unknown source ids: {', '.join(missing)}")
-    if any(item["id"] == args.lens_id for item in registry.get("lenses", [])):
+    existing_lens_names = {
+        value
+        for item in registry.get("lenses", [])
+        for value in (item["id"], *item.get("aliases", []))
+    }
+    if args.lens_id in existing_lens_names:
         raise ValueError(f"lens already exists: {args.lens_id}")
     relative = f"packs/knowledge/lenses/{args.lens_id}/manifest.json"
     manifest_path = safe_path(root, relative)
@@ -537,6 +580,8 @@ def create_lens(root: Path, args: argparse.Namespace) -> int:
         "source_ids": args.source,
         "use_cases": [],
         "not_for": [],
+        "creator_family_id": None,
+        "model_family_id": None,
         "rights_class": "private-original-synthesis",
         "raw_source_in_repo": False,
     }
@@ -547,7 +592,7 @@ def create_lens(root: Path, args: argparse.Namespace) -> int:
         "__LENS_ID_UPPER__": args.lens_id.upper().replace("-", "_"),
         "__SOURCE_ID__": args.source[0],
     }
-    asset_dir = root / "skills/core/think-with-this/assets"
+    asset_dir = root / "skills/core/baseon/assets"
     templates = {
         "lens-index.template.md": lens_dir / "index.md",
         "lens-concepts.template.md": lens_dir / "references/concepts.md",
@@ -560,7 +605,9 @@ def create_lens(root: Path, args: argparse.Namespace) -> int:
             content = content.replace(old, new)
         destination.parent.mkdir(parents=True, exist_ok=True)
         destination.write_text(content, encoding="utf-8")
-    registry.setdefault("lenses", []).append({"id": args.lens_id, "path": relative})
+    registry.setdefault("lenses", []).append(
+        {"id": args.lens_id, "aliases": [], "path": relative}
+    )
     update_registry(root, registry)
     print(f"Created draft lens: {relative}")
     return 0

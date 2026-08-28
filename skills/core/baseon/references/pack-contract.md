@@ -23,9 +23,10 @@ The complete JamesSkills repository is the distribution unit. The installer link
 
 ## One fact, one owner
 
-- `registry.json`: discoverable source and lens IDs with relative paths.
+- `registry.json`: discoverable source and lens IDs, aliases, and relative paths. Multiple user-facing names may resolve to one canonical lens but may not duplicate its knowledge.
 - Source card: provenance, edition, rights posture, hash, evidence class, and source scope.
 - Lens manifest: lens version, source dependencies, status, use cases, and exclusions.
+- Lens manifest also separates `creator_family_id` from `model_family_id`. A shared creator never proves two models are the same science.
 - `concepts.md`: source-faithful paraphrased claims and locators.
 - `applications.md`: original questions, decision moves, and reversible experiments.
 - `limitations.md`: missing evidence, conflicts, unsafe uses, and expiry rules.
@@ -82,3 +83,9 @@ framework_result:
 ```
 
 An `inferred` result may never be silently promoted to `official_user_declared`.
+
+## Alias rule
+
+- Use a lens alias only when two names refer to the same underlying model. `talent-dynamics` therefore resolves to canonical `wealth-dynamics`.
+- Keep related but distinct models as separate canonical lenses. `wealth-spectrum` shares creator lineage with Dynamics but has its own model family.
+- A slash-command shortcut may preselect a lens, but it must load `baseon` and own no reasoning or framework content.
