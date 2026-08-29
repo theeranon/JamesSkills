@@ -1,27 +1,156 @@
 {
   "schema_version": 1,
   "skills": [
-    {"name": "done-for-me", "category": "core", "status": "promoted", "aliases": []},
-    {"name": "give-me-solutions", "category": "core", "status": "promoted", "aliases": []},
-    {"name": "build-framework", "category": "core", "status": "promoted", "aliases": []},
-    {"name": "baseon", "category": "core", "status": "promoted", "aliases": ["think-with-this", "wealth-dynamics", "talent-dynamics", "wealth-spectrum"]},
-    {"name": "never-again", "category": "core", "status": "promoted", "aliases": []},
-    {"name": "prove-it", "category": "core", "status": "promoted", "aliases": []},
-    {"name": "zoom-out", "category": "core", "status": "promoted", "aliases": []},
-    {"name": "catchup", "category": "core", "status": "promoted", "aliases": []},
-    {"name": "learning-experience-design", "category": "core", "status": "promoted", "aliases": ["design-the-course"]},
-    {"name": "transformation-journey", "category": "core", "status": "promoted", "aliases": ["design-the-journey"]},
-    {"name": "i-have-adhd", "category": "modes", "status": "promoted", "aliases": []},
-    {"name": "make-it-james", "category": "standards", "status": "promoted", "aliases": ["james-ui-standard"]},
-    {"name": "project-standard", "category": "standards", "status": "promoted", "aliases": ["project-docs-standard"]},
-    {"name": "final-it", "category": "outputs", "status": "promoted", "aliases": []},
-    {"name": "sum-meet", "category": "outputs", "status": "promoted", "aliases": ["solutionsimpact-meeting-summary-full"]},
-    {"name": "one-page-pls", "category": "outputs", "status": "promoted", "aliases": ["solutionsimpact-onepagesummary"]},
-    {"name": "james-skill-router", "category": "internal", "status": "promoted", "aliases": []}
+    {
+      "name": "done-for-me",
+      "category": "core",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "give-me-solutions",
+      "category": "core",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "build-framework",
+      "category": "core",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "baseon",
+      "category": "core",
+      "status": "promoted",
+      "aliases": [
+        "think-with-this",
+        "wealth-dynamics",
+        "talent-dynamics",
+        "wealth-spectrum"
+      ]
+    },
+    {
+      "name": "never-again",
+      "category": "core",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "prove-it",
+      "category": "core",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "zoom-out",
+      "category": "core",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "catchup",
+      "category": "core",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "learning-experience-design",
+      "category": "core",
+      "status": "promoted",
+      "aliases": [
+        "design-the-course"
+      ]
+    },
+    {
+      "name": "transformation-journey",
+      "category": "core",
+      "status": "promoted",
+      "aliases": [
+        "design-the-journey"
+      ]
+    },
+    {
+      "name": "i-have-adhd",
+      "category": "modes",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "make-it-james",
+      "category": "standards",
+      "status": "promoted",
+      "aliases": [
+        "james-ui-standard"
+      ]
+    },
+    {
+      "name": "project-standard",
+      "category": "standards",
+      "status": "promoted",
+      "aliases": [
+        "project-docs-standard"
+      ]
+    },
+    {
+      "name": "final-it",
+      "category": "outputs",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "sum-meet",
+      "category": "outputs",
+      "status": "promoted",
+      "aliases": [
+        "solutionsimpact-meeting-summary-full"
+      ]
+    },
+    {
+      "name": "one-page-pls",
+      "category": "outputs",
+      "status": "promoted",
+      "aliases": [
+        "solutionsimpact-onepagesummary"
+      ]
+    },
+    {
+      "name": "james-skill-router",
+      "category": "internal",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "proactive-habits",
+      "category": "modes",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "proactive-dev",
+      "category": "standards",
+      "status": "promoted",
+      "aliases": []
+    }
   ],
   "packs": [
-    {"name": "solutionsimpact", "kind": "brand", "status": "promoted", "path": "packs/solutionsimpact/output-brand.md"},
-    {"name": "knowledge-library", "kind": "knowledge", "status": "promoted", "path": "packs/knowledge/registry.json"},
-    {"name": "framework-library", "kind": "framework", "status": "promoted", "path": "packs/frameworks/registry.json"}
+    {
+      "name": "solutionsimpact",
+      "kind": "brand",
+      "status": "promoted",
+      "path": "packs/solutionsimpact/output-brand.md"
+    },
+    {
+      "name": "knowledge-library",
+      "kind": "knowledge",
+      "status": "promoted",
+      "path": "packs/knowledge/registry.json"
+    },
+    {
+      "name": "framework-library",
+      "kind": "framework",
+      "status": "promoted",
+      "path": "packs/frameworks/registry.json"
+    }
   ]
 }

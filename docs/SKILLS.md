@@ -253,3 +253,25 @@ There are no pilot packages in this release. Candidate Card labels such as `lear
 4. Meeting source: choose `/sum-meet` or `/one-page-pls` -> automatic `make-it-james` -> `/prove-it`.
 5. Framework decision: `/baseon` or one lens shortcut -> owner judgment or the workflow that owns the resulting action.
 6. Transformation design: `/build-framework` only when needed -> `/transformation-journey` -> `/learning-experience-design` -> automatic `make-it-james` -> `/prove-it`.
+
+### `/proactive-habits`
+
+- Canonical package: `proactive-habits`
+- Category: `modes`
+- Lifecycle: `promoted`
+- Use when: you want the AI to act decisively, never wait for orders, never recap, and simply finish the job.
+- Result: sets the communication and behavioral mode to highly autonomous and proactive.
+- Do not use when: you want the AI to act passively and ask for permission at every step.
+- Aliases: none.
+- Canonical instructions: [`skills/modes/proactive-habits/SKILL.md`](../skills/modes/proactive-habits/SKILL.md)
+
+### `/proactive-dev`
+
+- Canonical package: `proactive-dev`
+- Category: `standards`
+- Lifecycle: `promoted`
+- Use when: you are starting a coding session and want strict guarantees on evidence-based diagnosis, blast radius checking, and architecture adherence.
+- Result: enforces strict engineering safety protocols before any code mutation.
+- Do not use when: you are brainstorming ideas and do not need strict code mutation protocols.
+- Aliases: none.
+- Canonical instructions: [`skills/standards/proactive-dev/SKILL.md`](../skills/standards/proactive-dev/SKILL.md)
