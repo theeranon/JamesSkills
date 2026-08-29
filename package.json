@@ -1,0 +1,12 @@
+{
+  "name": "james-skills",
+  "version": "0.9.0",
+  "private": true,
+  "description": "Local validation dependencies for the portable JamesSkills library",
+  "scripts": {
+    "qa:transformation": "node tests/render_transformation_design_examples.cjs .qa-artifacts/v0.9.0 --receipt tests/receipts/transformation-design-v0.9.0.json"
+  },
+  "devDependencies": {
+    "playwright-core": "1.62.1"
+  }
+}

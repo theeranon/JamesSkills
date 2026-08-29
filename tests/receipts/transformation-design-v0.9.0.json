@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "release": "0.9.0",
+  "generated_at": "2026-08-29T09:17:09.345Z",
+  "browser": "Chromium 151.0.7922.175",
+  "pdf_generated": false,
+  "renderer": {
+    "path": "tests/render_transformation_design_examples.cjs",
+    "sha256": "cfb3a23e302dec99bb60b03c529a9a0095ca33fa688b0a427599f2b4ceba0521"
+  },
+  "inputs": [
+    {
+      "path": "package.json",
+      "sha256": "d267e2833ce81fcba775522de5a935c8271ba7774d1aa0df3b61f152f73ab4dd"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "5ac67e8442fc0166f1dbe11fee032eaa772532e19ee9c844d9a13e997e3b4967"
+    },
+    {
+      "path": "skills/standards/make-it-james/scripts/embed_ibm_plex_thai.py",
+      "sha256": "ebee0044e3b93cbf71dc28ae193f0a335edcac1712eba78b58d3445dd53f6c2c"
+    },
+    {
+      "path": "skills/standards/make-it-james/scripts/lint_outcome.py",
+      "sha256": "affec6d134cffe316959d2db82fb2decabd019f29cce9239ee81b10bff9c8d7e"
+    }
+  ],
+  "templates": [
+    {
+      "path": "skills/core/build-framework/assets/framework-decision-report.html",
+      "sha256": "c38fba580f9061068b8b9648062680efdca16cbe6c54c1e130318cfd55497ace"
+    },
+    {
+      "path": "skills/core/transformation-journey/assets/transformation-journey-blueprint.html",
+      "sha256": "4b7fa686e19679cac76eba8be3a7a2e209e070f266655f99c71fe48104b48723"
+    },
+    {
+      "path": "skills/core/learning-experience-design/assets/learning-experience-design-pack.html",
+      "sha256": "a5104dbc05d58a6b44975c6d9351e0e02f97e86b10a0c1bee34e352b863c16f2"
+    }
+  ],
+  "cases": [
+    {
+      "slug": "ai-transformation-framework-decision",
+      "ok": true,
+      "loaded_font_faces": 4,
+      "unresolved_tokens": false,
+      "desktop_overflow_nodes": 0,
+      "desktop_width_fits": true,
+      "mobile_overflow_nodes": 0,
+      "mobile_width_fits": true,
+      "mobile_unlabeled_cells": 0,
+      "mobile_unstacked_cells": 0,
+      "print_overflow_nodes": 0,
+      "print_width_fits": true,
+      "title_visible_in_print": true,
+      "visible_source_ledger": true,
+      "remote_request_count": 0
+    },
+    {
+      "slug": "ai-transformation-journey",
+      "ok": true,
+      "loaded_font_faces": 4,
+      "unresolved_tokens": false,
+      "desktop_overflow_nodes": 0,
+      "desktop_width_fits": true,
+      "mobile_overflow_nodes": 0,
+      "mobile_width_fits": true,
+      "mobile_unlabeled_cells": 0,
+      "mobile_unstacked_cells": 0,
+      "print_overflow_nodes": 0,
+      "print_width_fits": true,
+      "title_visible_in_print": true,
+      "visible_source_ledger": true,
+      "remote_request_count": 0
+    },
+    {
+      "slug": "codex-browser-research-learning-design",
+      "ok": true,
+      "loaded_font_faces": 4,
+      "unresolved_tokens": false,
+      "desktop_overflow_nodes": 0,
+      "desktop_width_fits": true,
+      "mobile_overflow_nodes": 0,
+      "mobile_width_fits": true,
+      "mobile_unlabeled_cells": 0,
+      "mobile_unstacked_cells": 0,
+      "print_overflow_nodes": 0,
+      "print_width_fits": true,
+      "title_visible_in_print": true,
+      "visible_source_ledger": true,
+      "remote_request_count": 0
+    }
+  ]
+}

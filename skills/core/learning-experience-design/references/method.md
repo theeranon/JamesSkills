@@ -1,6 +1,6 @@
-# Learning Experience Design Pilot Method
+# Learning Experience Design Method
 
-This is the portable form of James's general Learning Experience Design operating discipline. It is broader than the SolutionsIMPACT e-learning product about knowledge transfer.
+This is the portable form of James's general Learning Experience Design operating discipline. It is broader than the SolutionsIMPACT e-learning product about knowledge transfer and may use several house frameworks.
 
 ## 1. Authority And Classification
 
@@ -21,6 +21,10 @@ Classify the request before designing:
 - `journey`: organization-level change requires several interventions, sponsor decisions, governance, and phase-to-phase evidence
 
 Use the macro-journey workflow for the journey class. Do not disguise an organization transformation as a long agenda or import an offer-specific phase model without authority.
+
+Duration alone does not decide the route. A multi-day course remains LED when it owns one bounded learner or capability movement; a short session remains a child of a macro journey when the accountable outcome is organization transformation.
+
+Create, audit, repair, and improve are internal execution states. Infer the state from the request and available artifacts; never require the user to name it.
 
 ## 2. Reality Snapshot
 
@@ -67,6 +71,16 @@ real tension
 ```
 
 The artifact is selected after the evidence. A beautiful canvas, deck, or workbook cannot rescue a weak learner transformation.
+
+Trace evidence through three states:
+
+```text
+Produced
+-> Applied
+-> Impact Proven
+```
+
+Satisfaction, confidence, and presentation polish are diagnostic breadcrumbs. They do not replace work application or organizational impact.
 
 Write the promise so it names a useful movement rather than a topic list. State a boundary to prevent the course from promising an organization-wide result it cannot own.
 
@@ -143,7 +157,11 @@ After delivery, capture room state, what worked, what broke, the observed signal
 
 - Learning Experience Design is `LED` in James's operating vocabulary.
 - The e-learning product called Learning Experience Design focuses on knowledge transfer and organizational assets. Use it as a specialized pattern only when that is the actual job.
-- James's newest direct correction places Transformative Productivity System inside Learning Experience Design. Treat TPS as an internal design system within LED, not a peer framework.
-- Older material described Learning Experience Design as one TPS lever. This is an explicit ontology conflict, not permission to choose whichever hierarchy is convenient.
-- The approved TPS component names and final hierarchy remain unresolved. Preserve the source gap rather than inventing labels.
+- Transformative Productivity System is one SolutionsIMPACT house framework available inside Learning Experience Design. It is not LED itself and is not mandatory for every learning experience.
+- Select the smallest fitting house design authority from the maintained library before using outside research. When framework-level logic is required, the primary framework must be house-owned. Research supports or challenges the selected authority; it does not silently become company IP.
+- Preserve registry object types and lifecycle. An approved house principle or pattern may guide a reversible design skeleton without becoming a framework. A candidate or source-gap asset may inform only a clearly labeled provisional skeleton and cannot satisfy the delivery-ready gate.
+- Older material described Learning Experience Design as one TPS lever. The newest owner decision supersedes that hierarchy. Preserve older material as historical evidence, not an active alternative.
+- The exact approved TPS component names remain unresolved. Preserve the source gap rather than inventing labels.
 - A macro transformation journey may use LED and TPS for each bounded intervention after its own approved architecture is locked. The SolutionsIMPACT AI Transformation Journey five-phase offer is one reference pattern, not a universal LED law.
+
+If no approved house framework fits a recurring method gap, route the gap to `build-framework`. Never create a named framework inside one client course.

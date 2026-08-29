@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[[JOURNEY_TITLE]]</title>
+  <style>
+    :root { --ink: #172033; --muted: #5d6677; --line: #d9dee8; --soft: #f4f6f9; --accent: #174a7e; --accent-soft: #eaf1f8; --paper: #ffffff; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: #e9edf2; color: var(--ink); font-family: "IBM Plex Sans Thai", sans-serif; font-size: 10pt; line-height: 1.4; print-color-adjust: exact; }
+    .report { width: 210mm; min-height: 297mm; margin: 16px auto; padding: 14mm 16mm 17mm; background: var(--paper); }
+    h1, h2, h3, p, ul, ol, dl, table { margin-top: 0; }
+    h1 { margin-bottom: 3mm; font-size: 22pt; line-height: 1.18; }
+    h2 { margin-bottom: 3mm; font-size: 15pt; line-height: 1.25; break-after: avoid-page; }
+    h3 { margin: 4mm 0 2mm; font-size: 11pt; line-height: 1.3; }
+    p, li { margin-bottom: 2mm; }
+    .kicker { margin-bottom: 2mm; color: var(--accent); font-size: 8.5pt; font-weight: 600; }
+    .subtitle { max-width: 165mm; margin-bottom: 5mm; color: var(--muted); font-size: 11pt; }
+    .metadata { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0 0 6mm; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .metadata div { display: grid; grid-template-columns: 32mm 1fr; gap: 3mm; padding: 2.5mm 0; }
+    .metadata div:nth-child(odd) { padding-right: 5mm; }
+    dt { color: var(--muted); font-size: 8.5pt; }
+    dd { margin: 0; font-weight: 600; }
+    section { margin-top: 7mm; padding-top: 5mm; border-top: 1px solid var(--line); }
+    .summary { margin-top: 0; padding: 4mm; border: 1px solid #c8d9ea; border-radius: 6px; background: var(--accent-soft); break-inside: avoid; }
+    .impact { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3mm; break-inside: avoid; }
+    .impact div { padding: 3mm; border: 1px solid var(--line); border-radius: 6px; background: var(--soft); }
+    table { width: 100%; margin-bottom: 4mm; border-collapse: collapse; font-size: 9pt; }
+    th, td { padding: 2.2mm 2.5mm; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: var(--soft); font-weight: 600; }
+    tr { break-inside: avoid; }
+    .sources { color: var(--muted); font-size: 8pt; }
+    .source-ledger { margin: 0; }
+    .source-ledger > div { display: grid; grid-template-columns: 32mm 1fr; gap: 3mm; padding: 1.5mm 0; border-bottom: 1px solid var(--line); }
+    .source-ledger dd { font-weight: 400; overflow-wrap: anywhere; }
+    @page { size: A4 portrait; margin: 14mm 16mm 17mm; }
+    @media print { html, body { background: var(--paper); } .report { width: auto; min-height: 0; margin: 0; padding: 0; } }
+    @media screen and (max-width: 820px) { .report { width: 100%; min-height: 0; margin: 0; padding: 24px 20px 32px; } .metadata, .impact { grid-template-columns: 1fr; } .metadata div:nth-child(odd) { padding-right: 0; } .source-ledger > div { grid-template-columns: 1fr; gap: 1px; } .table-scroll table, .table-scroll thead, .table-scroll tbody, .table-scroll tr, .table-scroll th, .table-scroll td { display: block; width: 100%; } .table-scroll thead { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; } .table-scroll tr { padding: 2mm 0; border-bottom: 1px solid var(--line); } .table-scroll td { display: grid; grid-template-columns: minmax(88px, 32%) 1fr; gap: 8px; padding: 1.5mm 0; border: 0; overflow-wrap: anywhere; } .table-scroll td::before { content: attr(data-label); color: var(--muted); font-weight: 600; } }
+  </style>
+</head>
+<body>
+  <article class="report" data-contract="transformation-journey@1">
+    <header>
+      <p class="kicker">Transformation Journey Blueprint</p>
+      <h1>[[JOURNEY_TITLE]]</h1>
+      <p class="subtitle">[[ORGANIZATION_A_TO_B_AND_WHY_NOW]]</p>
+      <dl class="metadata">
+        <div><dt>Journey ID</dt><dd>[[JOURNEY_ID]]</dd></div>
+        <div><dt>Revision</dt><dd>[[JOURNEY_REVISION]]</dd></div>
+        <div><dt>Pattern and lifecycle</dt><dd>[[FRAMEWORK_ID_AND_VERSION]]</dd></div>
+        <div><dt>Sponsor</dt><dd>[[SPONSOR_AND_DECISION_OWNER]]</dd></div>
+      </dl>
+    </header>
+
+    <section class="summary" data-section="executive-summary">
+      <h2>ผลลัพธ์ที่ Journey ต้องสร้าง</h2>
+      <p>[[EXECUTIVE_BUSINESS_OUTCOME_AND_DECISION]]</p>
+    </section>
+
+    <section data-section="authority">
+      <h2>ขอบเขตและ Authority</h2>
+      <p>[[CONTRACT_SOURCE_SCOPE_ASSUMPTIONS_AND_GAPS]]</p>
+    </section>
+
+    <section data-section="impact-chain">
+      <h2>Baseline และ Impact Chain</h2>
+      <div class="impact">
+        <div><strong>Produced</strong><br>[[REAL_WORK_OUTPUT]]</div>
+        <div><strong>Applied</strong><br>[[WORK_APPLICATION_EVIDENCE]]</div>
+        <div><strong>Impact Proven</strong><br>[[ORGANIZATION_OR_BUSINESS_EVIDENCE]]</div>
+      </div>
+      <p>[[SATISFACTION_BREADCRUMB_AND_LIMITATION]]</p>
+    </section>
+
+    <section data-section="macro-map">
+      <h2>Macro Journey</h2>
+      <div class="table-scroll"><table>
+        <thead><tr><th>Phase</th><th>Objective</th><th>Input</th><th>Intervention</th><th>Output and evidence</th><th>Owner and handoff</th></tr></thead>
+        <tbody><tr><td data-label="Phase">[[PHASE_01]]</td><td data-label="Objective">[[PHASE_01_OBJECTIVE]]</td><td data-label="Input">[[PHASE_01_INPUT]]</td><td data-label="Intervention">[[PHASE_01_INTERVENTION]]</td><td data-label="Output and evidence">[[PHASE_01_OUTPUT_EVIDENCE_EXIT]]</td><td data-label="Owner and handoff">[[PHASE_01_OWNER_HANDOFF_FALLBACK]]</td></tr></tbody>
+      </table></div>
+      <p>[[OFFER_REFERENCE_OR_PROVISIONAL_PHASE_GUARD]]</p>
+    </section>
+
+    <section data-section="interventions">
+      <h2>Learning Experience และ Intervention</h2>
+      <div class="table-scroll"><table>
+        <thead><tr><th>Intervention ID</th><th>Parent phase</th><th>LED brief</th><th>Framework reference</th><th>Evidence returned</th></tr></thead>
+        <tbody><tr><td data-label="Intervention ID">[[INTERVENTION_01_ID]]</td><td data-label="Parent phase">[[INTERVENTION_01_PHASE]]</td><td data-label="LED brief">[[INTERVENTION_01_BRIEF]]</td><td data-label="Framework reference">[[INTERVENTION_01_FRAMEWORK_ID_VERSION]]</td><td data-label="Evidence returned">[[INTERVENTION_01_EVIDENCE]]</td></tr></tbody>
+      </table></div>
+    </section>
+
+    <section data-section="evidence">
+      <h2>Operating Plan และ Promise Ledger</h2>
+      <p>[[CADENCE_COACHING_GOVERNANCE_RISK_AND_ADAPTATION]]</p>
+      <div class="table-scroll"><table>
+        <thead><tr><th>Promise</th><th>Source</th><th>Destination</th><th>Evidence</th><th>Owner</th><th>Status</th></tr></thead>
+        <tbody><tr><td data-label="Promise">[[PROMISE_01]]</td><td data-label="Source">[[PROMISE_01_SOURCE]]</td><td data-label="Destination">[[PROMISE_01_DESTINATION]]</td><td data-label="Evidence">[[PROMISE_01_EVIDENCE]]</td><td data-label="Owner">[[PROMISE_01_OWNER]]</td><td data-label="Status">[[PROMISE_01_STATUS]]</td></tr></tbody>
+      </table></div>
+    </section>
+
+    <section data-section="decisions">
+      <h2>Decision และ Next Stage</h2>
+      <p>[[LEADERSHIP_DECISION_AND_NEXT_STAGE]]</p>
+    </section>
+
+    <section class="sources" data-section="source-trace">
+      <h2>Source Appendix</h2>
+      <dl class="source-ledger" data-source-id="[[SOURCE_01_ID]]" data-locator="[[SOURCE_01_LOCATOR]]" data-evidence-class="[[SOURCE_01_CLASS]]" data-confidence="[[SOURCE_01_CONFIDENCE]]">
+        <div><dt>Source ID</dt><dd>[[SOURCE_01_ID]]</dd></div>
+        <div><dt>Identity and citation</dt><dd>[[SOURCE_01_CITATION_AND_SUPPORTED_CLAIM]]</dd></div>
+        <div><dt>Locator</dt><dd>[[SOURCE_01_LOCATOR]]</dd></div>
+        <div><dt>Type</dt><dd>[[SOURCE_01_CLASS]]</dd></div>
+        <div><dt>Claim used</dt><dd>[[SOURCE_01_CLAIM_USED]]</dd></div>
+        <div><dt>Limitation</dt><dd>[[SOURCE_01_LIMITATION]]</dd></div>
+        <div><dt>Rights</dt><dd>[[SOURCE_01_RIGHTS]]</dd></div>
+        <div><dt>Retrieved</dt><dd>[[SOURCE_01_RETRIEVED]]</dd></div>
+        <div><dt>Confidence</dt><dd>[[SOURCE_01_CONFIDENCE]]</dd></div>
+      </dl>
+    </section>
+  </article>
+</body>
+</html>

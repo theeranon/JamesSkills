@@ -29,6 +29,9 @@ def main() -> int:
     for name in (
         "zoom-out",
         "give-me-solutions",
+        "build-framework",
+        "learning-experience-design",
+        "transformation-journey",
         "baseon",
         "done-for-me",
         "prove-it",
@@ -44,6 +47,9 @@ def main() -> int:
 
     assert "Give one primary workflow ownership" in router
     assert "Do not load a whole chain" in router
+    assert "never select it as the primary user workflow" in router
+    assert "This router produces no user deliverable and never owns the work" in router
+    assert "request spanning several responsibilities" in router
     assert "different case with the same mechanism" in never_again
     assert "legitimate counter-case" in never_again
     assert "`final-it`" not in sum_meet

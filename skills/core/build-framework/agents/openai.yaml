@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build Framework"
+  short_description: "Research, reuse, upgrade, or build a cited house framework"
+  default_prompt: "Use $build-framework to check the house library first, then research and prepare the smallest evidence-backed reusable framework decision."

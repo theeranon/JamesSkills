@@ -7,6 +7,12 @@ description: Apply James Theeranon's visual and Final Word law to recipient-faci
 
 This is a cross-format standard and delivery gate. It does not choose the artifact format, invent missing content, or replace the workflow producing the artifact.
 
+## Format boundary
+
+- An HTML request defaults to HTML-only delivery. `Print-ready` means the HTML has working print CSS and passes browser print emulation; it does not authorize PDF export.
+- Create a PDF only when James explicitly requests PDF or an authoritative recipient constraint requiring one fixed print file is directly confirmed. Never infer that constraint from `A4`, `print-ready`, `final`, `shareable`, `client-facing`, or `recipient-ready`.
+- Never generate a PDF merely to prove that HTML renders. Inspect the HTML in screen and print media directly.
+
 1. Read [references/standard.md](references/standard.md) completely before making visual or recipient-facing wording decisions.
 2. Preserve raw evidence and archives. Apply the standard to the recipient-facing result, not its source material.
 3. Inspect the existing brand and component system. Brand rules may add identity, but they cannot weaken the shared typography, density, copy, or banned-pattern rules.

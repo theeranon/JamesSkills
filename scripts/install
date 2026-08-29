@@ -5,7 +5,7 @@ repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 "$repo_dir/scripts/validate"
 "$repo_dir/scripts/install-hooks"
 
-targets=("$HOME/.agents/skills" "$HOME/.claude/skills")
+targets=("$HOME/.agents/skills" "$HOME/.codex/skills" "$HOME/.claude/skills")
 if [[ -d "$HOME/.gemini/config" ]]; then
   targets+=("$HOME/.gemini/config/skills")
 fi
@@ -38,7 +38,9 @@ for target in "${targets[@]}"; do
     if [[ -L "$link" ]]; then
       ln -sfn "$skill_dir" "$link"
     elif [[ -e "$link" ]]; then
-      echo "SKIP existing non-link: $link"
+      echo "FAIL existing non-link blocks canonical skill: $link"
+      echo "Move that legacy package to a backup location, then rerun install."
+      exit 1
     else
       ln -s "$skill_dir" "$link"
     fi
@@ -61,7 +63,9 @@ PY
     if [[ -L "$alias_link" ]]; then
       ln -sfn "$alias_dir" "$alias_link"
     elif [[ -e "$alias_link" ]]; then
-      echo "SKIP existing non-link alias: $alias_link"
+      echo "FAIL existing non-link blocks compatibility alias: $alias_link"
+      echo "Move that legacy package to a backup location, then rerun install."
+      exit 1
     else
       ln -s "$alias_dir" "$alias_link"
     fi

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Transformation Journey"
+  short_description: "Design organization transformation through evidence and impact"
+  default_prompt: "Use $transformation-journey to design the macro transformation, connect each intervention, and deliver a cited executive HTML journey blueprint."

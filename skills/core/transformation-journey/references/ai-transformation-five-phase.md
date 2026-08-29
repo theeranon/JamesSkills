@@ -1,6 +1,6 @@
-# AI Transformation Journey Five-Phase Reference
+# AI Transformation Offer Five-Phase Reference
 
-Status: verified for the SolutionsIMPACT AI Transformation Journey offer from James's direct Lark message dated 2026-08-12 and its later published derivative. This does not prove a universal Learning Experience Transformation Journey model.
+Status: verified for the SolutionsIMPACT AI Transformation Journey offer from James's direct decision dated 2026-08-12 and its later published derivative. This is the strongest current example of the preferred house five-phase candidate, but it does not prove a universal offer model.
 
 The internal phase IDs below preserve that offer's operational pattern. Marketing labels are display choices and must not become the logic source.
 
@@ -64,11 +64,11 @@ organization outcome and sponsor
 -> five-phase macro map
 -> phase outputs and handoffs
 -> workshop or intervention briefs
--> design-the-course for each bounded learning experience
+-> learning-experience-design for each bounded learning experience
 -> evidence returns to the macro journey
 ```
 
-`design-the-course` owns learner movement, modules, practice, facilitation, and delivery readiness inside one bounded experience. It does not change sponsor outcomes, phase order, governance, portfolio measures, or the final organization-level promise.
+`learning-experience-design` owns learner movement, modules, practice, facilitation, and delivery readiness inside one bounded experience. It does not change sponsor outcomes, phase order, governance, portfolio measures, or the final organization-level promise.
 
 The journey owner reviews child designs for duplication, gaps, progression, consistent language, cross-day through-line, and evidence continuity.
 
@@ -102,7 +102,7 @@ For AI programs, real outputs may include improved work practices, delegated age
 
 - James's direct five-phase correction is the logic authority for the SolutionsIMPACT AI Transformation Journey offer.
 - A later published artifact renamed the display labels to Diagnose, Workshop, Coaching, Showcase, and Transform without changing the responsibilities.
-- James's newest direct correction places Transformative Productivity System inside Learning Experience Design. TPS is not the five-phase delivery timeline.
-- Older material placed Learning Experience Design inside TPS, so the final ontology remains conflicted until James locks the source of truth.
+- Transformative Productivity System is one framework inside Learning Experience Design. TPS is not the five-phase delivery timeline.
+- Older material placed Learning Experience Design inside TPS; the newest owner decision supersedes that hierarchy.
 - The approved names of all six TPS dimensions remain unresolved. Never reconstruct them from memory or generic theory.
 - When a direct correction changes a phase, update this reference and regression cases before changing downstream journey designs.

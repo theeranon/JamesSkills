@@ -1,3 +1,5 @@
 .DS_Store
 *.log
 .doctor-cache/
+.qa-artifacts/
+node_modules/

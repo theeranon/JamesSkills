@@ -15,6 +15,12 @@ Authority: James's durable cross-project preference. Apply it across AI vendors,
 - For print, group page breaks by meaning and reading sequence. Repair overflow within the affected section; do not remove page structure or shrink the entire document to hide one layout defect.
 - Show one dataset in the visual form that best serves the decision. Repeating the same information as cards, chart, table, and callout requires a distinct reading purpose for each form.
 
+## Format and export
+
+- Preserve the native editable format. HTML is the default final artifact when HTML was requested.
+- `Print-ready HTML` means correct print CSS and direct browser inspection, not an automatically exported PDF.
+- Export PDF only after an explicit PDF request or an authoritative recipient constraint requiring a fixed print file is directly confirmed. Never infer that constraint from `A4`, `print-ready`, `final`, `shareable`, `client-facing`, or `recipient-ready`. Do not spend a render cycle creating PDF solely as HTML QA.
+
 ## Banned pattern
 
 Never attach a thick or colored vertical stripe to the left edge of a card, panel, alert, list item, or section. This includes decorative `border-left`, positioned bars, and pseudo-elements used as status or category rails.
@@ -42,6 +48,6 @@ Natural Thai sentences are the default. Do not compress Thai thought with emoji 
 - New work starts from this law; it does not invent a new font or spacious card system.
 - Self-host `IBM Plex Sans Thai` for production when available. A CSS family name is not proof; inspect the rendered font.
 - Run deterministic lint plus the artifact's native checks.
-- Inspect desktop and mobile where applicable, and inspect every rendered page or slide rather than a sample.
+- Inspect desktop, mobile, and print media where applicable. Inspect every requested fixed page or slide rather than a sample.
 - Fail delivery when Thai marks clip, important content disappears, generic AI-dashboard styling remains, or unnecessary scrolling is introduced.
 - Audit historical work before repair. Preserve raw sources and record debt rather than claiming bulk remediation.

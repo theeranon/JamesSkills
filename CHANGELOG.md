@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.9.0 - 2026-08-29
+
+- Promoted `build-framework`, `transformation-journey`, and `learning-experience-design` as the three canonical transformation-design responsibilities.
+- Reversed `design-the-course` and `design-the-journey` into compatibility aliases so formal responsibility names remain portable across AI platforms.
+- Added a source-ranked house framework registry and enforced reuse, upgrade, then new-build order before creating SolutionsIMPACT IP.
+- Bound every registry asset to version, permitted scope, source locators, and approval state; unaudited principle and pattern names remain candidates, while the AI five-phase asset remains a pilot pattern rather than being mislabeled a framework.
+- Kept the AI five-phase journey pattern offer-specific, and kept Transformative Productivity System as one framework inside Learning Experience Design rather than the discipline itself.
+- Added purpose-specific, print-ready executive HTML contracts for framework decisions, transformation journeys, and bounded learning experiences.
+- Added provenance, impact-chain, routing, counter-case, alias-target, installation-target, and strict visual regression gates.
+- Tightened the internal router so clear work owners are selected directly; fresh Codex and Claude sessions passed the framework, journey, and bounded-learning routes.
+- Made HTML-only the default for HTML and print-ready work; PDF now requires an explicit request or a directly confirmed authoritative recipient constraint, and browser print emulation replaces PDF generation for visual QA.
+- Added the Codex discovery root to the portable installer and made legacy non-link collisions fail visibly instead of leaving an older duplicate skill active.
+- Pinned the local browser-QA dependency and documented one reproducible command that refreshes the hash-bound HTML render receipt without exporting PDF.
+- Kept V1 skill-first: no application UI, public API, employee portal, client portal, or multi-role approval workflow.
+
 ## 0.8.1 - 2026-08-29
 
 - Applied `project-standard` to JamesSkills itself with canonical outcome, requirement, status, agent, and decision owners.

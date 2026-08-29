@@ -1,13 +1,22 @@
 ---
 name: james-skill-router
-description: Select the smallest James workflow, mode, standard, output skill, adapter, or direct-work path that fits a request. Use when work spans responsibilities or the correct reusable process is unclear.
+description: Internal-only fallback routing reference; never select it as the primary user workflow. Use only after direct matching finds no clear canonical owner. A recurring reusable company method routes directly to build-framework, macro organization transformation to transformation-journey, and a bounded course or workshop to learning-experience-design.
 ---
 
 # James Skill Router
 
 Route by the requested outcome and responsibility, not by keywords or product names.
 
-1. Classify the request as a bounded workflow, persistent mode, shared standard, output workflow, knowledge lens, project context, connector, automation, or direct work.
+This router produces no user deliverable and never owns the work. If one canonical workflow clearly matches, stop using the router and load that owner directly. A request spanning several responsibilities still receives one real primary owner plus distinct supporting skills; it does not make `james-skill-router` the primary skill.
+
+Direct-owner rules take precedence over generic classification:
+
+- recurring cross-project company method, constructs, or decision logic -> `build-framework`
+- macro organization change across interventions, application, evidence, governance, and impact -> `transformation-journey`
+- one bounded course, workshop, learning day, or intervention -> `learning-experience-design`
+- rejected result that must become a scoped system correction -> `never-again`
+
+1. Try every clear direct-owner rule before using fallback classification. Classify the remaining request as a bounded workflow, persistent mode, shared standard, output workflow, knowledge lens, project context, connector, automation, or direct work.
 2. Identify the actual outcome, evidence required, risk, current authority, and remaining human decision.
 3. Choose the smallest applicable path. Mentioned products are candidates, not requirements.
 4. Compose skills only when their responsibilities are distinct and required. Apply mandatory standards and guardrails automatically.
@@ -28,7 +37,10 @@ Keep the candidate `pilot` and outside global installs until James approves the 
 
 - `zoom-out`: reframe the system and responsibility boundary before solving.
 - `give-me-solutions`: research real external options and prepare comparable decision material.
+- `build-framework`: search the house library, then reuse, upgrade, or research a reusable SolutionsIMPACT framework.
 - `baseon`: apply or compare a named framework, book, or knowledge lens.
+- `transformation-journey`: own macro organization transformation across interventions, application, evidence, governance, and impact.
+- `learning-experience-design`: own one bounded course, workshop, session, learning day, or intervention.
 - `done-for-me`: own authorized implementation through the usable outcome.
 - `prove-it`: verify a claim at the recipient, provider, persistence, or production boundary that matters.
 - `never-again`: convert a rejected result into a scoped system correction and counter-tested guard.
@@ -56,13 +68,24 @@ done-for-me -> prove-it
 sum-meet or one-page-pls -> make-it-james -> prove-it
 project-standard -> done-for-me -> prove-it
 never-again -> affected workflow -> regression and counter-case proof
+build-framework -> transformation-journey -> learning-experience-design
 ```
 
 Do not load a whole chain merely because the names are related. Each added skill must own a distinct decision or deliverable.
 
 Use `baseon` when the outcome is applying or comparing a named framework, book, or knowledge model. Register a new book as a source first; do not create a new skill or lens merely because its title appears in the request. Treat `wealth-dynamics` and `talent-dynamics` as shortcuts to the same Dynamics lens. Treat `wealth-spectrum` as a separate lens even though it shares the same creator lineage.
 
-`catchup` is promoted for bounded continuity recovery; do not trigger it for ordinary progress inside an active task or one isolated completion claim. The current learning-design packages are pilots and remain uninstalled. Do not route ordinary work to them as approved James-wide methods until their names, ontology, and scope are accepted. The five-phase reference is verified for the SolutionsIMPACT AI Transformation Journey offer only; do not force it onto a generic transformation program.
+`catchup` is promoted for bounded continuity recovery; do not trigger it for ordinary progress inside an active task or one isolated completion claim.
+
+Keep the transformation-design boundary exact:
+
+- `build-framework` owns reusable house intellectual property. It searches the house library before upgrading or creating anything.
+- `transformation-journey` owns the macro organization outcome and composes several interventions.
+- `learning-experience-design` owns a bounded learning intervention, even when it spans several days.
+
+Route a rejected or absurd output and its failure class to `never-again`. Route a recurring cross-project need for a reusable model, constructs, or decision logic to `build-framework`, even when the user does not say the word framework. A system correction may later expose a framework candidate, but the two jobs are not interchangeable.
+
+Duration does not determine ownership. The final accountable outcome does. The five-phase pattern is the preferred house candidate and its complete contract is verified for the SolutionsIMPACT AI Transformation Journey offer; do not force that offer model onto another domain without approved evidence. Internal create, audit, repair, and improve states are inferred and never become user-required commands.
 
 Prefer project instructions when they express a more specific accepted decision.
 

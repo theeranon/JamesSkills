@@ -79,11 +79,19 @@ if set(alias_paths) != set(aliases):
     raise SystemExit(
         f"FAIL alias package mismatch catalog={sorted(aliases)} disk={sorted(alias_paths)}"
     )
+alias_owners = {
+    alias: item["name"]
+    for item in items
+    for alias in item.get("aliases", [])
+}
 for alias, path in alias_paths.items():
     text = path.read_text(encoding="utf-8")
     alias_kind = "Compatibility Alias" in text or "Lens Shortcut" in text
     if f"name: {alias}" not in text or not alias_kind:
         raise SystemExit(f"FAIL malformed alias package: {path}")
+    owner = alias_owners[alias]
+    if f"`{owner}`" not in text:
+        raise SystemExit(f"FAIL alias does not point to catalog owner: {alias} -> {owner}")
 
 for pack in catalog.get("packs", []):
     path = root / pack["path"]
@@ -108,7 +116,7 @@ linter="$repo_dir/skills/standards/make-it-james/scripts/lint_outcome.py"
 if [[ -f "$linter" ]]; then
   while IFS= read -r asset; do
     python3 "$linter" --strict "$asset"
-  done < <(find "$repo_dir/skills/outputs" -path '*/assets/*.html' -type f | sort)
+  done < <(find "$repo_dir/skills" -path '*/assets/*.html' -type f | sort)
 fi
 
 echo "PASS $count package(s), portable structure and repository boundary gate"

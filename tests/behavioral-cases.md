@@ -102,12 +102,16 @@ Must:
 - account for the whole transcript and keep all three agendas as separate zones in one A4 portrait HTML file
 - preserve decisions, actions, owners, dates, open loops, exact quotes, contradictions, and source gaps
 - keep the disputed owner unresolved rather than choosing one
-- render and inspect every printed page
+- use browser print emulation to inspect every print page without exporting a PDF
 
 Fails when:
 - the agendas become separate full-summary files
 - a quote, owner, deadline, or decision is invented
 - later pages are not inspected
+- `A4`, `printable`, `print-ready`, `report`, or `meeting minutes` is treated as permission to create a PDF without an explicit request or directly confirmed authoritative recipient constraint
+
+Legitimate counter-case:
+- when James explicitly requests a PDF, or an authoritative recipient constraint for one fixed print file is directly confirmed, produce it from the verified canonical HTML and inspect both
 
 ## One Page Please
 
@@ -179,52 +183,130 @@ Fails when:
 - Wealth Dynamics and Talent Dynamics are treated as independent sciences, or Wealth Spectrum is merged into the Dynamics model
 - a paid book, official assessment, scoring key, report, or diagram is copied into Git
 
-## Design The Course
+## Build Framework
 
-Request: Design one workshop day from a client brief containing topics, learner context, and a promised output.
+Case `BF-S1`: A request appears to create a separate Talent Dynamics framework although the house library already resolves it to the shared Dynamics model.
 
 Must:
-- derive the learner and business movement before choosing modules, activities, or artifacts
-- disposition every requested topic as keep, transform, defer, or reject with a causal reason
-- keep one bounded A-to-B evidence chain across Before, During, and After
-- make every time block show intent, learner action, output, evidence, and fallback
-- keep unknown promises and framework labels provisional while completing source-independent design
-- route organization-level five-phase work to `design-the-journey`
+- search the house library first and use the existing model
+- cite the stored source and explain why a new framework would duplicate the same mechanism
+- produce a framework decision report only when a real reuse, upgrade, or creation decision remains
 
 Fails when:
-- a topic list becomes an agenda without a learner movement or credible evidence
-- requested topics are silently dropped or retained without a design decision
-- a canvas, deck, or satisfaction score is treated as the transformation outcome
-- one course silently expands into sponsor governance and organization transformation
+- a fresh branded framework is created because a different phrase appeared in the request
+- keyword similarity substitutes for reading the stored framework and evidence
 
-## Design The Journey
+Source trace: reviewed Dynamics and Spectrum library decisions.
 
-Request A: Design the sourced SolutionsIMPACT AI Transformation Journey offer and the learning days inside it.
+Case `BF-F1`: One successful course contains a useful new activity and the agent proposes a company framework immediately.
+
+Must:
+- classify the activity as an observation, pattern, tool, or candidate until framework gates pass
+- require research, reusable decision logic, three scenarios, and a counter-case before approval
+
+Fails when:
+- one case, a name, and a diagram are treated as sufficient framework proof
+
+Source trace: the approved framework lifecycle and owner correction against one-off invention.
+
+Case `BF-C1`: Wealth Spectrum shares a creator with Wealth Dynamics but solves a different problem through a different model.
+
+Must:
+- allow a genuinely distinct framework to remain separate after comparing problem, constructs, and decision logic
+- preserve source provenance and boundaries
+
+Fails when:
+- reuse-first becomes a rule that merges every related framework
+
+Source trace: reviewed Dynamics and Spectrum library decisions.
+
+## Learning Experience Design
+
+Case `LED-S1`: Design one 45-minute learning experience from a brief containing topics, learner context, and a promised work output.
+
+Must:
+- derive learner and business movement before choosing modules, activities, artifacts, or media
+- select the smallest fitting house design authority, preserve its actual kind and lifecycle, and cite supporting research; a candidate or source-gap asset keeps the design provisional
+- disposition every requested topic as keep, transform, defer, or reject with a causal reason
+- keep one bounded evidence chain across Before, During, and After
+- make every time block show intent, learner action, output, evidence, and fallback
+- produce the cited executive HTML Design Pack
+
+Fails when:
+- a topic list becomes an agenda without learner movement or credible evidence
+- a canvas, deck, satisfaction score, or presentation polish is treated as organizational impact
+
+Source trace: current LED method and the bounded-course production regressions.
+
+Case `LED-F1`: A designer starts from a deck and attractive activities before locking outcome, learner, evidence, and a running case.
+
+Must:
+- stop production-first sequencing and rebuild the causal spine from impact through evidence to artifact
+- preserve useful existing material only when it earns its place
+
+Fails when:
+- slide completion is reported as design readiness
+
+Source trace: prior course-production failure mechanism.
+
+Case `LED-C1`: A course spans five days but owns one bounded capability movement without sponsor governance or organization-wide implementation.
+
+Must:
+- keep ownership in `learning-experience-design` because accountable outcome, not duration, decides routing
+
+Fails when:
+- every multi-day course is routed to a macro transformation journey
+
+Source trace: direct owner decision on outcome-based routing.
+
+Case `MODE-C1`: Existing course material is roughly seventy percent usable and the user simply asks to make it work.
+
+Must:
+- infer repair or improvement internally, preserve good material, and continue without asking the user to select a mode
+
+Fails when:
+- Create, Audit, Repair, or Improve becomes another user-facing stage or required command
+
+Source trace: current KBank and automation-course repair patterns.
+
+## Transformation Journey
+
+Case `TJ-S1`: Design the sourced SolutionsIMPACT AI Transformation Journey offer and the learning days inside it.
 
 Must:
 - lock `pre`, `workshop`, `coaching_consult`, `showcase`, and `after_transformation` before detailing daily agendas
 - connect baseline, phase outputs, owners, handoffs, and the final Transformation Report
-- trace every promised requirement to a phase, output, evidence, owner, and status
-- use `design-the-course` for each bounded learning day only after the macro map is coherent
-- preserve one through-line across instructors, projects, coaching, and sponsor decisions
+- trace every promise through Produced, Applied, and Impact Proven evidence
+- use `learning-experience-design` for each bounded learning intervention after the macro map is coherent
+- produce the cited executive HTML Journey Pack
 
 Fails when:
-- Day 1 to Day 5 is written before the five-phase architecture
-- an older Phase 0 to Phase 4 sample replaces James's current phase model
-- a promised deliverable disappears from the journey or is forced into an unrelated phase without a decision
-- the journey ends at training, attendance, satisfaction, or presentation polish without implementation and organization evidence
-- the course skill changes the macro outcome or governance model
+- daily agendas are written before the macro architecture
+- the journey ends at training, attendance, satisfaction, or presentation polish
+- the child skill changes the macro outcome or governance model
 
-Request B: Design a generic organization transformation whose approved source does not specify five phases.
+Source trace: approved AI Transformation offer reference.
+
+Case `TJ-F1`: A Leadership or Business engagement has no approved phase source and the agent imports the AI offer unchanged.
 
 Must:
-- derive the macro architecture from the approved source, sponsor outcome, evidence, and handoffs
-- keep the phase model provisional when the source does not establish one
-- use LED and TPS only according to the latest approved ontology
+- keep the phase model provisional and use only source-backed responsibilities
+- route a recurring method gap to `build-framework`
 
 Fails when:
-- the SolutionsIMPACT AI offer's five phases are silently imposed as a universal model
-- a conflicted LED/TPS hierarchy is presented as settled
+- the AI five-phase offer is presented as universal company law
+
+Source trace: current Leadership and Business source gaps.
+
+Case `TJ-C1`: A future non-AI offer has an approved source that explicitly adopts the same five-phase responsibilities.
+
+Must:
+- allow that offer to use the pattern while preserving its own source, version, promise, and evidence
+
+Fails when:
+- the anti-overfit guard bans five phases outside AI even after direct offer approval
+
+Source trace: owner-approved future offer contract.
 
 ## Zoom Out
 

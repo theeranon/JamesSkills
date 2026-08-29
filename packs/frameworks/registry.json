@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "solutionsimpact-transformative-productivity-system",
+      "name": "Transformative Productivity System",
+      "owner": "SolutionsIMPACT",
+      "kind": "framework",
+      "level": "learning-experience",
+      "lifecycle": "source-gap",
+      "version": "unverified",
+      "visibility": "private",
+      "fit": ["productivity", "real work output", "business impact", "course", "workshop"],
+      "permitted_scope": "Analysis only until the exact approved component labels and source authority are verified.",
+      "boundary": "One framework available inside Learning Experience Design; exact approved component labels still require source verification.",
+      "source_refs": [
+        {
+          "source_id": "SRC-TPS-BOUNDARY-2026-08",
+          "locator": "skills/core/learning-experience-design/references/method.md#8-protected-boundaries",
+          "claim": "TPS is a house framework inside LED, not LED itself; exact component names remain unresolved.",
+          "limitation": "This repository record preserves an owner correction but does not contain the missing primary TPS source.",
+          "rights": "reviewed-private",
+          "retrieved": "2026-08-29"
+        }
+      ],
+      "approval_record": {
+        "status": "not-approved",
+        "approver": null,
+        "date": null,
+        "locator": "skills/core/learning-experience-design/references/method.md#8-protected-boundaries"
+      }
+    },
+    {
+      "id": "solutionsimpact-impact-lens",
+      "name": "IMPACT",
+      "owner": "SolutionsIMPACT",
+      "kind": "framework",
+      "level": "learning-experience",
+      "lifecycle": "candidate",
+      "version": "candidate-2026-08-29",
+      "visibility": "private",
+      "fit": ["learning outcome", "course critique", "practical application", "transformation"],
+      "permitted_scope": "Candidate comparison and source extraction only; not active company law.",
+      "boundary": "Historical internal evidence exists; applicability and current approved wording remain subject to owner review.",
+      "source_refs": [
+        {
+          "source_id": "SRC-IMPACT-CANDIDATE-AUDIT-2026-08",
+          "locator": "research/2026-08-28-baseon-candidate-audit.md#build-order",
+          "claim": "AI IMPACT recurs across James-authored materials and is ready for source extraction.",
+          "limitation": "The audit is discovery evidence, not a promoted framework contract or effectiveness study.",
+          "rights": "reviewed-private",
+          "retrieved": "2026-08-29"
+        }
+      ],
+      "approval_record": {
+        "status": "not-approved",
+        "approver": null,
+        "date": null,
+        "locator": "research/2026-08-28-baseon-candidate-audit.md#build-order"
+      }
+    },
+    {
+      "id": "solutionsimpact-five-phase-transformation-pattern",
+      "name": "Five-Phase Transformation Pattern",
+      "owner": "SolutionsIMPACT",
+      "kind": "pattern",
+      "level": "transformation-journey",
+      "lifecycle": "pilot",
+      "version": "offer-reference-2026-08-12",
+      "visibility": "private",
+      "fit": ["organization transformation", "diagnosis", "workshop", "coaching", "showcase", "after transformation"],
+      "permitted_scope": "Bounded pilot use for the sourced SolutionsIMPACT AI Transformation offer only.",
+      "boundary": "Preferred house candidate. The complete contract is verified for the AI Transformation offer and is not yet a universal offer law or a full framework.",
+      "source_refs": [
+        {
+          "source_id": "SRC-AITJ-OFFER-2026-08",
+          "locator": "skills/core/transformation-journey/references/ai-transformation-five-phase.md",
+          "claim": "The AI Transformation offer uses five stable responsibilities with evidence handoffs and sizing boundaries.",
+          "limitation": "The source verifies one offer pattern; it does not prove universal applicability or client impact.",
+          "rights": "reviewed-private",
+          "retrieved": "2026-08-29"
+        }
+      ],
+      "approval_record": {
+        "status": "pilot-authorized",
+        "approver": "James Theeranon",
+        "date": "2026-08-12",
+        "locator": "skills/core/transformation-journey/references/ai-transformation-five-phase.md#6-authority-and-drift-protection"
+      }
+    },
+    {
+      "id": "solutionsimpact-outcome-based-learning",
+      "name": "Outcome-Based Learning",
+      "owner": "SolutionsIMPACT",
+      "kind": "principle",
+      "level": "learning-experience",
+      "lifecycle": "candidate",
+      "version": "candidate-2026-08-29",
+      "visibility": "private",
+      "fit": ["learner movement", "A to B", "observable evidence", "work output"],
+      "permitted_scope": "Provisional design hypothesis only; it cannot satisfy the delivery-ready authority gate until reviewed and approved.",
+      "boundary": "A candidate design principle, not a full framework and not yet an approved company rule.",
+      "source_refs": [
+        {
+          "source_id": "SRC-LED-METHOD-2026-08",
+          "locator": "skills/core/learning-experience-design/references/method.md#4-derive-the-learning-spine",
+          "claim": "LED works backward from impact and observable evidence to learner output and experience design.",
+          "limitation": "The working method supports the logic but does not prove approval of this exact branded principle name.",
+          "rights": "reviewed-private",
+          "retrieved": "2026-08-29"
+        }
+      ],
+      "approval_record": {
+        "status": "not-approved",
+        "approver": null,
+        "date": null,
+        "locator": "skills/core/learning-experience-design/references/method.md#4-derive-the-learning-spine"
+      }
+    },
+    {
+      "id": "solutionsimpact-before-during-after",
+      "name": "Before, During, and After",
+      "owner": "SolutionsIMPACT",
+      "kind": "pattern",
+      "level": "learning-experience",
+      "lifecycle": "candidate",
+      "version": "candidate-2026-08-29",
+      "visibility": "private",
+      "fit": ["touchpoint", "transfer", "learning journey", "course design"],
+      "permitted_scope": "Provisional experience-map skeleton only; it cannot satisfy the delivery-ready authority gate until reviewed and approved.",
+      "boundary": "A candidate reusable experience pattern, not a standalone framework and not yet an approved company rule.",
+      "source_refs": [
+        {
+          "source_id": "SRC-LED-METHOD-2026-08",
+          "locator": "skills/core/learning-experience-design/references/method.md#5-design-the-experience",
+          "claim": "LED maps preparation, live experience, transfer, application evidence, and reusable learning across time.",
+          "limitation": "The working method supports the sequence but does not prove approval of this exact branded pattern name.",
+          "rights": "reviewed-private",
+          "retrieved": "2026-08-29"
+        }
+      ],
+      "approval_record": {
+        "status": "not-approved",
+        "approver": null,
+        "date": null,
+        "locator": "skills/core/learning-experience-design/references/method.md#5-design-the-experience"
+      }
+    }
+  ]
+}

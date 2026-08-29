@@ -12,8 +12,17 @@ git clone https://github.com/theeranon/JamesSkills.git "$HOME/.james-skills"
 "$HOME/.james-skills/scripts/doctor"
 ```
 
-The installer links the canonical skills into the discovery directories available on the machine. It does not overwrite real directories or files.
+The installer links the canonical skills into the discovery directories available on the machine, including `~/.codex/skills`, `~/.agents/skills`, `~/.claude/skills`, and configured Gemini or Antigravity roots. It never overwrites a real directory or file; a legacy name collision fails visibly so an outdated duplicate cannot stay active unnoticed.
 It also activates repository-owned `pre-commit` and `pre-push` gates. Every commit and push runs `scripts/validate` locally, without GitHub Actions or paid runners.
+
+The tracked browser-render receipt is reproducible without PDF export:
+
+```bash
+npm ci
+npm run qa:transformation
+```
+
+The QA command uses an installed Chrome or Chromium browser. Set `CHROME_PATH` only when it is not in a standard platform location.
 
 ## Update
 
@@ -48,10 +57,11 @@ The short rule:
 - use `/project-standard` to establish or repair project truth;
 - use `/catchup` to return after a continuity gap;
 - use `/give-me-solutions` to research choices and `/done-for-me` after the owner decides;
+- use `/build-framework`, `/transformation-journey`, and `/learning-experience-design` for reusable method, macro transformation, and bounded learning respectively;
 - use `/prove-it` before accepting a completion claim;
 - use `/sum-meet`, `/one-page-pls`, or `/final-it` for recipient-facing outcomes; `make-it-james` applies automatically.
 
-Pilot packages remain in the repository for review and testing but are excluded from global installs. Compatibility aliases keep older calls working without creating another instruction body. `james-skill-router` is installed internal support, not a recommended human command.
+This release has no pilot packages. Compatibility aliases keep older calls working without creating another instruction body. `james-skill-router` is installed internal support, not a recommended human command.
 
 ## Knowledge library
 
@@ -66,7 +76,9 @@ The first reviewed-private lenses are `wealth-dynamics` and `wealth-spectrum`. `
 
 Direct calls are available as `/baseon`, `/wealth-dynamics`, `/talent-dynamics`, and `/wealth-spectrum`. The framework shortcuts only preselect a lens; they contain no duplicate knowledge or reasoning rules. `/think-with-this` remains a compatibility alias.
 
-The learning-design package names and aliases are working candidates, not approved calls. The current source record also contains an ontology conflict: James's newest correction places TPS inside LED, while older material described LED as one TPS lever. The library preserves the conflict instead of silently choosing a hierarchy.
+The transformation-design portfolio has three approved calls. `/build-framework` searches the house library before upgrading or creating reusable company IP. `/transformation-journey` owns macro organization transformation. `/learning-experience-design` owns a bounded learning intervention. TPS is one house framework available inside LED; it is not LED itself or the macro journey timeline.
+
+The framework registry lives at `packs/frameworks/registry.json`. Lifecycle and source gaps remain visible so an agent cannot turn an incomplete internal model or one successful activity into approved company law.
 
 Clone the full repository when moving machines. A detached copy of `baseon` alone intentionally has no duplicated knowledge library; set `JAMES_SKILLS_ROOT` to the full clone if a platform cannot use the installer links.
 

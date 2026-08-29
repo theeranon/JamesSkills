@@ -60,14 +60,15 @@ For a visual deliverable, copy [assets/meeting-record.html](assets/meeting-recor
 - Keep all topics in that HTML file. Preserve the source template's semantic structure while adapting the number and length of topic zones to the meeting.
 - Use IBM Plex Sans Thai for Thai, English, and numbers. The shipped template is a source asset, not proof of final portability. For a genuinely portable single file, run the `make-it-james` [font embedding helper](../../standards/make-it-james/scripts/embed_ibm_plex_thai.py), confirm the remote font links are gone, and verify the rendered font. If the font files are unavailable, report that exact remaining gate instead of calling the HTML self-contained.
 - Apply the active project brand only when the project provides one. Brand tokens may change color or logo; they may not weaken the compact typography, plain metadata, 6px rectangular radius, or restrained component rules.
-- Export one matching PDF when the user requests PDF or the recipient needs a fixed print file. The HTML remains the canonical editable record.
+- Export one matching PDF only when James explicitly requests PDF or an authoritative recipient constraint requiring one fixed print file is directly confirmed. Never infer PDF need from `A4`, `print-ready`, `report`, `meeting minutes`, or `recipient-facing`. The HTML remains the canonical editable record.
+- Do not create a PDF merely to perform visual QA; inspect the HTML in browser screen and print media.
 
 Completion criterion: one HTML contains every topic and prints at A4 portrait without requiring content edits.
 
 ## 5. Verify before delivery
 
 - Reconcile the final record against the evidence ledger. Confirm topic, fact, decision, action, owner, due-date, quote, and open-loop coverage.
-- Render the HTML in a real browser. For a PDF, render from the same HTML.
+- Render the HTML in a real browser and inspect screen and print media. For a requested PDF, render from the same HTML.
 - Inspect every rendered page, not only the first: loaded Thai font, unclipped marks, no overlap or overflow, readable tables, intentional page breaks, and no nearly empty page caused by layout rules.
 - Compare HTML and PDF content when both exist. A successful command or file creation is not visual proof.
 - Deliver the HTML, the PDF when created, and a short statement of source coverage or material gaps outside the artifact.

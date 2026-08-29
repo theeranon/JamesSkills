@@ -5,9 +5,11 @@ Run these checks on every topic file, not only the first artifact.
 ## Render target
 
 - A4 landscape, `297mm x 210mm`
-- one PDF page or one viewport-height HTML page
+- one viewport-height HTML page
 - print background enabled
-- IBM Plex Sans Thai loaded before capture or PDF export
+- IBM Plex Sans Thai loaded before capture
+
+Use browser print emulation to inspect print CSS without exporting a PDF. If PDF was explicitly requested, verify that separate fixed file after the HTML passes.
 
 Use an available browser renderer such as Playwright, Chromium, or Chrome. Wait for `document.fonts.ready` before measuring or capturing.
 

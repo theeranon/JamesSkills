@@ -16,7 +16,6 @@ Mode and standard behavior differs from a normal workflow:
 
 - `/i-have-adhd` remains active for the current conversation until explicitly disabled.
 - `make-it-james` applies automatically to recipient-facing outcomes; invoking it directly is useful for a visual or Final Word audit.
-- Pilot packages stay review-only and are not installed globally.
 - `james-skill-router` is installed agent support, not a recommended human command.
 
 ## Start or return to work
@@ -185,35 +184,45 @@ Mode and standard behavior differs from a normal workflow:
 - Aliases: `james-ui-standard` is a legacy compatibility call.
 - Canonical instructions: [`skills/standards/make-it-james/SKILL.md`](../skills/standards/make-it-james/SKILL.md)
 
-## Lab and internal support
+## Design transformation
 
-These packages remain in the repository because their contracts need review or because agents use them internally. They are not normal recommended slash commands.
+### `/build-framework`
 
-### `design-the-course`
-
-- Canonical package: `design-the-course`
+- Canonical package: `build-framework`
 - Category: `core`
-- Lifecycle: `pilot`
-- Availability: Not installed; working name and LED/TPS boundary require owner approval.
-- Use when: reviewing the candidate workflow for one bounded course, workshop, session, or learning day.
-- Result: a reviewable course-design contract, not an approved James-wide method.
-- Do not use when: presenting the working name or ontology as settled, or designing a macro organizational journey.
-- Common composition: none until promotion.
-- Aliases: `learning-experience-design` is a pilot alias and is not installed.
-- Canonical instructions: [`skills/core/design-the-course/SKILL.md`](../skills/core/design-the-course/SKILL.md)
+- Lifecycle: `promoted`
+- Use when: a recurring method gap may require reusing, upgrading, or researching a SolutionsIMPACT house framework.
+- Result: one cited executive HTML framework decision report, a branded reusable model when justified, scenarios, counter-case, source trace, and an owner decision.
+- Do not use when: applying an existing named framework to one decision, designing one client course, or inventing a framework for a one-off activity.
+- Common composition: `/build-framework` may supply an approved framework to `/transformation-journey` or `/learning-experience-design`.
+- Aliases: none.
+- Canonical instructions: [`skills/core/build-framework/SKILL.md`](../skills/core/build-framework/SKILL.md)
 
-### `design-the-journey`
+### `/transformation-journey`
 
-- Canonical package: `design-the-journey`
+- Canonical package: `transformation-journey`
 - Category: `core`
-- Lifecycle: `pilot`
-- Availability: Not installed; working name and universal model require owner approval.
-- Use when: reviewing the candidate workflow for an organization-level transformation across several interventions.
-- Result: a reviewable journey contract; its five-phase reference applies only to the sourced SolutionsIMPACT AI Transformation Journey offer.
-- Do not use when: imposing that offer-specific five-phase spine on a generic transformation or claiming the ontology is approved.
-- Common composition: none until promotion.
-- Aliases: `transformation-journey` is a pilot alias and is not installed.
-- Canonical instructions: [`skills/core/design-the-journey/SKILL.md`](../skills/core/design-the-journey/SKILL.md)
+- Lifecycle: `promoted`
+- Use when: designing, auditing, repairing, or improving organization transformation across several interventions, application, evidence, governance, and business impact.
+- Result: one cited executive HTML Journey Pack with macro phases, owners, handoffs, intervention briefs, evidence chain, and next-stage decision.
+- Do not use when: the accountable outcome is one bounded course or learning intervention, or when an offer-specific phase model lacks authority.
+- Common composition: `/transformation-journey` -> `/learning-experience-design` for every bounded learning intervention; use `/build-framework` only for a real recurring method gap.
+- Aliases: `design-the-journey` is a legacy compatibility call.
+- Canonical instructions: [`skills/core/transformation-journey/SKILL.md`](../skills/core/transformation-journey/SKILL.md)
+
+### `/learning-experience-design`
+
+- Canonical package: `learning-experience-design`
+- Category: `core`
+- Lifecycle: `promoted`
+- Use when: designing, auditing, repairing, or improving one bounded course, workshop, session, learning day, or intervention.
+- Result: one cited executive HTML Design Pack connecting learner movement, the smallest fitting house design authority and lifecycle, experience, facilitation, work evidence, and impact; delivery-ready only when every gate passes.
+- Do not use when: the assignment owns sponsor governance and organization transformation across several interventions.
+- Common composition: receives a child brief from `/transformation-journey`; routes a recurring framework gap to `/build-framework`.
+- Aliases: `design-the-course` is a legacy compatibility call.
+- Canonical instructions: [`skills/core/learning-experience-design/SKILL.md`](../skills/core/learning-experience-design/SKILL.md)
+
+## Internal support
 
 ### `james-skill-router`
 
@@ -221,20 +230,20 @@ These packages remain in the repository because their contracts need review or b
 - Category: `internal`
 - Lifecycle: `promoted`
 - Availability: Internal support is installed for agent discovery; it is not a recommended human command and its public name remains unapproved.
-- Use when: an agent must select the smallest workflow, mode, standard, output, adapter, or direct-work path for a mixed request.
-- Result: one primary owner per stage and only the additional skills with distinct responsibilities.
-- Do not use when: a human already invoked the exact skill or direct work is clearly sufficient.
+- Use when: direct matching finds no clear canonical owner and the agent needs a fallback routing reference.
+- Result: one real primary workflow per stage and only the additional skills with distinct responsibilities; the router itself never owns or produces the work.
+- Do not use when: a human already invoked the exact skill, one canonical workflow clearly matches, or direct work is clearly sufficient. A mixed request alone is not a reason to make the router primary.
 - Common composition: internal routing precedes, but does not compete with, the selected workflow.
 - Aliases: none.
 - Canonical instructions: [`skills/internal/james-skill-router/SKILL.md`](../skills/internal/james-skill-router/SKILL.md)
 
 ## Recommended calls and compatibility names
 
-Recommended canonical calls are the 13 promoted non-internal packages above. Recommended lens shortcuts are `/wealth-dynamics`, `/talent-dynamics`, and `/wealth-spectrum`.
+Recommended canonical calls are the 16 promoted non-internal packages above. Recommended lens shortcuts are `/wealth-dynamics`, `/talent-dynamics`, and `/wealth-spectrum`.
 
-Legacy calls remain functional for migration but should not be taught for new work: `/think-with-this`, `/james-ui-standard`, `/project-docs-standard`, `/solutionsimpact-meeting-summary-full`, and `/solutionsimpact-onepagesummary`.
+Legacy calls remain functional for migration but should not be taught for new work: `/think-with-this`, `/james-ui-standard`, `/project-docs-standard`, `/solutionsimpact-meeting-summary-full`, `/solutionsimpact-onepagesummary`, `/design-the-course`, and `/design-the-journey`.
 
-Pilot names and aliases are not installed: `design-the-course`, `learning-experience-design`, `design-the-journey`, and `transformation-journey`. Candidate Card labels such as `learn-this`, `audit-this`, `systemize-it`, `give-me-choice`, and `make-the-deck` are not existing skills.
+There are no pilot packages in this release. Candidate Card labels such as `learn-this`, `audit-this`, `systemize-it`, `give-me-choice`, and `make-the-deck` are not existing skills.
 
 ## Common flows
 
@@ -243,3 +252,4 @@ Pilot names and aliases are not installed: `design-the-course`, `learning-experi
 3. Return after a gap: `/catchup` -> the smallest workflow that owns the verified remaining work.
 4. Meeting source: choose `/sum-meet` or `/one-page-pls` -> automatic `make-it-james` -> `/prove-it`.
 5. Framework decision: `/baseon` or one lens shortcut -> owner judgment or the workflow that owns the resulting action.
+6. Transformation design: `/build-framework` only when needed -> `/transformation-journey` -> `/learning-experience-design` -> automatic `make-it-james` -> `/prove-it`.

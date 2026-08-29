@@ -1,0 +1,4 @@
+interface:
+  display_name: "Learning Experience Design"
+  short_description: "Design bounded learning for real work and impact"
+  default_prompt: "Use $learning-experience-design to turn this source into a cited learning experience and executive HTML design pack. Claim delivery-ready only when every gate passes; otherwise preserve the exact provisional gates."
