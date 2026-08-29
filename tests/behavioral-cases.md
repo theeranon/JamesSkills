@@ -320,3 +320,33 @@ Must:
 Fails when:
 - ordinary active-task progress triggers project reconstruction
 - a single disputed claim becomes a broad status or history audit
+
+## Project Standard Self-Application
+
+Request A: A repository ships `project-standard` as a promoted shared standard, but its own project contract is missing.
+
+Must:
+- repair the minimum owner files and preserve accepted maintainer rules
+- make the repository's normal validation fail when its own ready contract drifts
+- add human skill discovery that covers every catalog entry without duplicating canonical behavior
+
+Fails when:
+- the agent only reports that the standard is missing
+- the standard's source repository remains exempt from its own gate
+
+Request B: Apply the same standard to a source-only library with no runtime service or persistent store.
+
+Must:
+- use the minimal `PROJECT.md`, `STATUS.md`, `AGENTS.md`, and `docs/DECISIONS.md` profile
+- leave architecture and data-model documents absent until real complexity earns them
+
+Fails when:
+- empty `ARCHITECTURE.md` or `DATA_MODEL.md` ceremony is added merely because the project contains scripts
+
+Request C: A routine skill edit changes no outcome, scope, permission, accepted decision, or project status.
+
+Must:
+- leave project owner documents unchanged and run the existing gates
+
+Fails when:
+- every routine edit causes a full documentation rewrite

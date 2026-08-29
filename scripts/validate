@@ -20,10 +20,6 @@ while IFS= read -r skill_file; do
     echo "FAIL missing description: $skill_file"
     errors=$((errors + 1))
   fi
-  if rg -n '/Users/|api[_-]?key|access[_-]?token|password\s*[:=]' "$skill_dir" >/dev/null; then
-    echo "FAIL non-portable path or possible secret: $skill_dir"
-    errors=$((errors + 1))
-  fi
 done < <(find "$repo_dir/skills" "$repo_dir/aliases" -name SKILL.md -type f | sort)
 
 if [[ "$count" -eq 0 ]]; then
@@ -34,6 +30,8 @@ if [[ "$errors" -ne 0 ]]; then
   echo "Validation failed: $errors issue(s)"
   exit 1
 fi
+
+python3 "$repo_dir/scripts/check_repository_boundary.py" "$repo_dir"
 
 python3 - "$repo_dir" <<'PY'
 import json
@@ -95,6 +93,9 @@ for pack in catalog.get("packs", []):
 print(f"PASS catalog skills={len(items)} aliases={len(aliases)}")
 PY
 
+python3 "$repo_dir/skills/standards/project-standard/scripts/project_standard.py" \
+  check "$repo_dir" --ready
+
 while IFS= read -r test_file; do
   python3 "$test_file"
 done < <(find "$repo_dir/skills" -path '*/tests/test_*.py' -type f | sort)
@@ -110,4 +111,4 @@ if [[ -f "$linter" ]]; then
   done < <(find "$repo_dir/skills/outputs" -path '*/assets/*.html' -type f | sort)
 fi
 
-echo "PASS $count package(s), portable structure and secret-pattern gate"
+echo "PASS $count package(s), portable structure and repository boundary gate"

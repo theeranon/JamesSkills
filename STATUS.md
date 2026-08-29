@@ -1,55 +1,59 @@
 # Status
 
-Current version: 0.8.0
+Last verified: 2026-08-29
+Authority: `PROJECT.md`
+Current version: 0.8.1
 Current branch: main
 Repository: private `theeranon/JamesSkills`
 
-## Promoted core
+## Current outcome
 
-- `give-me-solutions`
-- `baseon`
-- `done-for-me`
-- `zoom-out`
-- `prove-it`
-- `never-again`
-- `catchup`
+JamesSkills has 16 canonical packages: 14 promoted with managed links in four configured local discovery roots, plus two uninstalled learning-design pilots. The repository now passes its own project-standard contract and provides one catalog-complete human skill handbook. Link presence is verified; fresh runtime loading and automatic selection are not verified on every platform.
 
-## Pilot candidates pending name and model approval
+## Done
 
-- `design-the-course`
-- `design-the-journey`
+- `catalog.json` owns 16 canonical packages: 14 promoted and two uninstalled pilots.
+- `docs/SKILLS.md` covers every canonical package and alias; the coverage gate passed.
+- The four minimum project owner files exist, agree on REQ-001 through REQ-008, and pass the ready gate.
+- Full validation passed for project readiness, catalog, handbook, packages, behavior contracts, source provenance, secrets, update safety, and strict output lint.
+- Doctor passed on this Mac for all four configured discovery roots with 14 canonical and eight alias links each; broken and unexpected links are zero.
 
-## Promoted mode and standard
+## In progress
 
-- `i-have-adhd`
-- `make-it-james`
-- `project-standard`
+- None in the current repair scope.
 
-## Promoted outputs
+## Requirement state
 
-- `final-it`
-- `sum-meet`
-- `one-page-pls`
+| ID | Current state | Evidence | Last verified |
+|---|---|---|---|
+| REQ-001 | Verified | Catalog, canonical path, alias, composition, and portable-structure gates passed in the full 0.8.1 validation. | 2026-08-29 |
+| REQ-002 | Verified | Doctor reported 14 canonical and eight alias links with zero broken or unexpected links in all four configured discovery roots; runtime loading is not claimed. | 2026-08-29 |
+| REQ-003 | Verified | Handbook coverage test passed for 16 canonical packages and 10 aliases. | 2026-08-29 |
+| REQ-004 | Verified | Candidate lifecycle and anti-overfit regression suite passed in the full 0.8.1 validation. | 2026-08-29 |
+| REQ-005 | Verified | Detached-candidate update test passed; doctor confirmed local pre-commit and pre-push gates are installed. | 2026-08-29 |
+| REQ-006 | Verified | Minimum owner files and the self-standard regression passed; `scripts/validate` runs `check --ready`. | 2026-08-29 |
+| REQ-007 | Verified | Repository-wide candidate text scan, knowledge provenance, source misuse gates, and release diff review passed. Pattern detection remains a guard, not an impossibility proof. | 2026-08-29 |
+| REQ-008 | Verified | Package and portfolio behavior contracts, rejected cases, same-mechanism cases, and legitimate counter-cases passed; universal platform parity remains unclaimed. | 2026-08-29 |
 
-## Internal
+## Next
 
-- `james-skill-router` pending public naming review
+- No action is required for this completed repair. A future candidate starts from an approved Candidate Card, not from this status file.
 
-## Current evidence
+## Blockers
 
-- `catalog.json` accounts for 16 canonical packages: 14 promoted and two pilots. Eight promoted aliases or lens shortcuts install globally; two pilot aliases remain review-only.
-- Structural, catalog, secret-pattern, standard-linter, and package test gates run locally before commit and push.
-- `sum-meet` passed A4 portrait browser rendering; `one-page-pls` passed 1123 x 794 rendering and one-page A4 landscape PDF verification on this Mac.
-- Installer targets the shared agent directory, Claude Code, and Gemini or Antigravity discovery paths available on the machine.
-- Fresh-session behavioral invocation still requires independent verification on every platform before full behavioral parity is claimed.
-- `project-standard` combines project documentation ownership, executable requirements, cross-agent handoff, and drift repair; its bootstrap and structural validator preserve existing files instead of overwriting them.
-- `baseon` owns the source-first knowledge workflow. Wealth Dynamics and Talent Dynamics resolve to one canonical Dynamics lens; Wealth Spectrum remains a separate lens with only creator lineage in common.
-- Alias resolution, creator/model-family separation, source provenance, rights posture, and misuse gates are covered by deterministic regression tests.
-- Learning-design working packages are demoted to pilot. The five-phase evidence is valid for the SolutionsIMPACT AI Transformation Journey offer, not established as a universal LED transformation model. The newest direct correction places TPS inside LED, while older source material conflicts; the final ontology remains unapproved.
-- New skill names, boundaries, aliases, and framework hierarchies require an approved Candidate Card before promotion or global install.
-- Existing workflows now use authority reconciliation, reuse-first research, bounded stop rules, exact target identity, semantic and negative-path proof, and source-fidelity gates where those responsibilities apply.
-- Offline single-file HTML now has a tested IBM Plex Sans Thai embedding path; the stock templates remain editable source assets and are not portability proof by themselves.
-- Updates validate the fetched candidate in a detached worktree before moving the active checkout. Doctor reports source commit, dirty state, broken links, and unexpected links to demoted packages.
-- `catchup` is promoted after independent clean, dirty, stale-status, scoped-workstream, Git-error, and already-clear tests. `learn-this`, `audit-this`, `systemize-it`, `give-me-choice`, and `make-the-deck` remain Candidate Cards rather than callable claims.
-- Two duplicate Codex-side JamesOS packages were disabled locally. The remaining JamesOS entrypoint now activates only for live cross-channel context, commitments, routing, or explicit JamesOS work rather than generic project tasks.
-- Independent forward testing passed five written behavior contracts. Runtime selection across fresh Claude, Codex, Gemini, and Antigravity sessions, production priority scoring, and asynchronous notification batching remain explicitly unproved.
+- None.
+
+## Need decision
+
+- Learning-design final names and the LED/TPS ontology remain unapproved.
+- A public name for `james-skill-router` remains unapproved; it stays internal support.
+- Fresh-session behavioral parity on every supported AI platform remains unproved.
+- Public hosting or release of any repository subset remains unapproved.
+
+## Verification
+
+- Baseline commit before this repair: `7edcb0c0dd718bd84fb72628e164e2a7a2ebc115`.
+- Current contract owner files: `PROJECT.md`, `STATUS.md`, `AGENTS.md`, and `docs/DECISIONS.md`.
+- Full 0.8.1 validation passed, including the ready contract, handbook coverage, self-standard regression, package tests, strict lint, and update safety.
+- Doctor passed with Git gates installed and 14 canonical plus eight alias links in each configured discovery root; broken and unexpected links are zero.
+- Commit and push evidence are recorded by Git after this status snapshot rather than predicted here.

@@ -39,38 +39,19 @@ Update fetches a fast-forward candidate, validates it in a detached temporary wo
 
 Private by default. Review every file before publishing any subset.
 
-## Vocabulary
+## Skill handbook
 
-### Core workflows
+Open [`docs/SKILLS.md`](docs/SKILLS.md) to choose a skill by the moment you need it. The handbook covers every canonical package, slash command, lifecycle state, alias, bounded result, do-not-use case, and common composition in one place.
 
-- `give-me-solutions`: research real options and preserve the user's decision
-- `baseon`: base a decision on cited frameworks, books, or reusable knowledge lenses without turning author claims into facts
-- `done-for-me`: carry authorized work to a verified outcome without micromanagement
-- `zoom-out`: solve the system problem before selecting tools
-- `prove-it`: require recipient-visible evidence before Done
-- `never-again`: convert one bad output into a system correction and regression test
-- `catchup`: reconstruct one project's verified current state after a continuity gap without turning it into a history dump
+The short rule:
 
-### Pilot candidates
+- use `/project-standard` to establish or repair project truth;
+- use `/catchup` to return after a continuity gap;
+- use `/give-me-solutions` to research choices and `/done-for-me` after the owner decides;
+- use `/prove-it` before accepting a completion claim;
+- use `/sum-meet`, `/one-page-pls`, or `/final-it` for recipient-facing outcomes; `make-it-james` applies automatically.
 
-- `design-the-course`: working package for one bounded learning experience; invocation name and LED/TPS boundary await James's approval
-- `design-the-journey`: working package for macro transformation design; its five-phase reference is scoped to the sourced SolutionsIMPACT AI Transformation Journey offer
-
-Pilot packages remain in the repository for review and testing but are excluded from global installs.
-
-### Mode and standard
-
-- `i-have-adhd`: persistent concise, direct, complete communication mode for the conversation
-- `make-it-james`: automatically apply James's visual and Final Word law to recipient-facing work
-- `project-standard`: keep outcome, requirements, current status, decisions, and agent instructions in one vendor-neutral project contract
-
-### Outputs
-
-- `final-it`: produce the finished artifact in the appropriate format
-- `sum-meet`: turn transcripts, notes, files, or the current conversation into one print-ready portrait HTML meeting record containing every agenda as a separate zone
-- `one-page-pls`: detect topics first and create one self-contained one-page artifact per topic or agenda
-
-`james-skill-router` is internal composition logic. Compatibility aliases keep older calls working during migration without creating another instruction body.
+Pilot packages remain in the repository for review and testing but are excluded from global installs. Compatibility aliases keep older calls working without creating another instruction body. `james-skill-router` is installed internal support, not a recommended human command.
 
 ## Knowledge library
 

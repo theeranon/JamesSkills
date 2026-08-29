@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.1 - 2026-08-29
+
+- Applied `project-standard` to JamesSkills itself with canonical outcome, requirement, status, agent, and decision owners.
+- Added one human skill handbook organized by when to reach for each workflow, including lifecycle, aliases, boundaries, and common compositions.
+- Added catalog-complete handbook and self-standard regression gates.
+- Made every validate, install, update, commit, and push fail when the repository's own project contract is not ready.
+- Expanded portability and secret-pattern checks from skill folders to every tracked or non-ignored candidate text file.
+
 ## 0.8.0 - 2026-08-29
 
 - Promoted and installed the approved-name `catchup` workflow for reconstructing verified current state without turning a bounded question into a history excavation or audit.
