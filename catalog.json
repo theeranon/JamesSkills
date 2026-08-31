@@ -131,6 +131,12 @@
       "category": "standards",
       "status": "promoted",
       "aliases": []
+    },
+    {
+      "name": "grill-me",
+      "category": "core",
+      "status": "promoted",
+      "aliases": []
     }
   ],
   "packs": [

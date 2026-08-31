@@ -1,0 +1,7 @@
+interface:
+  display_name: "Grill Me — James Edition"
+  short_description: "กดตอบเพื่อเจาะแผนและการตัดสินใจ"
+  brand_color: "#2563EB"
+  default_prompt: "ใช้ $grill-me เจาะแผนนี้แบบกดตอบต่อเนื่อง พร้อมคำแนะนำของคุณในทุกข้อ"
+policy:
+  allow_implicit_invocation: false

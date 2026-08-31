@@ -82,6 +82,18 @@ Mode and standard behavior differs from a normal workflow:
 - Aliases: `wealth-dynamics`, `talent-dynamics`, and `wealth-spectrum` are recommended lens shortcuts; `think-with-this` is a legacy compatibility call.
 - Canonical instructions: [`skills/core/baseon/SKILL.md`](../skills/core/baseon/SKILL.md)
 
+### `/grill-me`
+
+- Canonical package: `grill-me`
+- Category: `core`
+- Lifecycle: `promoted`
+- Use when: you have a plan, decision, or idea and want the AI to stress-test it through a branching interview to expose risks and dependencies.
+- Result: a clarified decision tree, resolved conflicts, and a concrete action plan, gathered via an interactive UI or Text-Chat fallback.
+- Do not use when: you just want a quick opinion without a structured interview.
+- Common composition: `/grill-me` -> owner decision -> `/done-for-me`.
+- Aliases: none.
+- Canonical instructions: [`skills/core/grill-me/SKILL.md`](../skills/core/grill-me/SKILL.md)
+
 ## Execute, verify, and learn
 
 ### `/done-for-me`
