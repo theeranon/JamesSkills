@@ -29,15 +29,19 @@ Use the host's structured user-input control when available. Make every option c
 - Keep 2–3 mutually exclusive choices per inline question.
 - Never ask James to reply with `1`, `2`, `A/B`, question IDs, or comma-separated choices when clickable controls exist.
 
-### Text-Chat Fallback — when inline controls are unavailable
+### Interactive UI — Default for Claude Desktop & Codex
 
-If native interactive popup tools (like `request_user_input` or `ask_question`) are unavailable on the current platform (e.g., Claude), **DO NOT generate HTML forms or artifacts**. 
+When running on modern agent platforms, do not rely on standard text chat if an interactive UI is available.
+- **Claude Desktop (2026+):** Use the `interactive_grill_me` MCP tool. This tool leverages the MCP Apps specification to render a beautiful native iframe UI (via `server.py`) for decision-tree inputs. Do not generate HTML artifacts manually.
+- **Codex:** Use `request_user_input` (Plan mode) to render clickable choices natively.
 
-Fallback to Text-Chat mode:
+### Text-Chat Fallback — strictly when tools are offline
+
+If neither `interactive_grill_me` nor `request_user_input` are available in your environment context, fallback to Text-Chat mode:
 - Ask ONE concise question at a time directly in the chat.
 - Provide clear, numbered, or bulleted options.
-- Wait for James's text reply before proceeding to the next question.
-- Do not output large JSON or HTML files. Keep the interview flowing naturally in the chat window.
+- Wait for James's text reply before proceeding.
+- Never output large JSON or HTML files to the chat.
 
 ## Response handling
 

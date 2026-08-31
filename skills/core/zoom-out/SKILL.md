@@ -15,3 +15,8 @@ Find the problem behind the presented symptom.
 6. Produce a like-for-like requirement set and return to the immediate decision. If external candidates still need comparison, hand that bounded brief to `give-me-solutions`; otherwise name the direct next action.
 
 Mentioned tools are candidates, not requirements. Separate a role, a capability, a product, and the whole system. Do not solve a bounded replacement question by comparing one component with the entire system, and do not redesign working layers merely because one surface failed.
+
+## Interactive UI & Output Optimization
+
+- **Native Controls:** When running on Claude (via MCP Apps) or Codex (via `request_user_input`), prompt the user with clickable UI forms to map the failure containment layer before selecting products.
+- **Chat Fallback:** If interactive UI tools are unavailable, default to concise text-chat questions one at a time.

@@ -67,3 +67,9 @@ Give the useful conclusion first, then enough traceability to challenge it:
 5. Lens version, source IDs, locators, and confidence when the result will be reused.
 
 For a short conversational request, compress the structure but preserve all five meanings.
+
+## Interactive UI & Output Optimization
+
+- **MCP Integration:** When running in Claude Desktop (2026+), utilize the `interactive_baseon` MCP tool to render a native UI for selecting frameworks and displaying layer separation.
+- **Codex Native:** Use `request_user_input` if Plan Mode is active to query options from the user instead of typing text.
+- **Chat Fallback:** If native UI tools are unavailable, enforce structured text chat. Do not output massive markdown files unless requested.
