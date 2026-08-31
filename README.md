@@ -1,10 +1,51 @@
-# JamesSkills
 
-Portable, versioned working practices for James Theeranon across Claude Code, Codex, Gemini, and Google Antigravity.
+# 🚀 JamesSkills (AI Hero Edition)
 
-This repository contains reusable process knowledge, not JamesOS data, client records, credentials, or live project state.
+Welcome to **JamesSkills**! A curated collection of powerful, production-ready AI skills and prompts used by James Theeranon. Designed to supercharge your workflow on Claude, ChatGPT, Cursor, and Gemini. 
 
-## Install
+ยินดีต้อนรับสู่ **JamesSkills**! คลังคำสั่ง (Skills) และ Prompt ระดับมืออาชีพที่ออกแบบมาเพื่อช่วยให้คุณทำงานกับ AI (Claude, ChatGPT, Cursor) ได้เหมือนมีผู้เชี่ยวชาญส่วนตัวนั่งอยู่ข้างๆ ครับ
+
+---
+
+## 🌟 Highlight Skills (สกิลยอดฮิตที่แนะนำให้ลอง)
+
+### 1. 🎯 `/grill-me` (Stress-Test & Decision Maker)
+* **🇬🇧 EN:** Have an idea or a plan? Use this skill to let the AI "grill" you. It acts as an interviewer, asking you sharp, step-by-step questions to expose flaws and refine your plan before execution.
+* **🇹🇭 TH:** มีไอเดียหรือแผนงานในหัว? ใช้สกิลนี้สั่งให้ AI "สัมภาษณ์และต้อนคุณให้มุม" มันจะถามคำถามเจาะลึกทีละข้อ เพื่ออุดรอยรั่วและทำให้แผนของคุณเฉียบคมที่สุดก่อนลงมือทำจริง
+
+### 2. 💡 `/give-me-solutions` (Options & Trade-offs Researcher)
+* **🇬🇧 EN:** Stop getting generic lists. This skill forces the AI to research real tools, compare them against your constraints, and present the strongest options with pros/cons without making the final choice for you.
+* **🇹🇭 TH:** เลิกให้ AI สุ่มรายชื่อแอปมาให้! สกิลนี้จะสั่งให้ AI วิเคราะห์หา "ทางเลือกที่ดีที่สุด" มาเทียบข้อดีข้อเสียให้คุณดูอย่างละเอียด โดยเว้นช่องว่างให้คุณเป็นคนตัดสินใจขั้นตอนสุดท้ายเอง
+
+### 3. 🔍 `/zoom-out` (System-Level Problem Solver)
+* **🇬🇧 EN:** When you're stuck in the weeds, use this to step back. The AI will reframe the problem at a macro level, helping you see the big picture before you waste time fixing the wrong symptom.
+* **🇹🇭 TH:** เวลาแก้ปัญหาแล้วรู้สึกหลงทาง ให้ใช้สกิลนี้ AI จะช่วย "ถอยหลังออกมามองภาพรวม" เพื่อหาต้นตอของปัญหาจริงๆ ก่อนที่คุณจะเสียเวลาไปแก้ผิดจุด
+
+### 4. 📝 `/one-page-pls` (Executive One-Pager)
+* **🇬🇧 EN:** Turn chaotic meeting notes, transcripts, or scattered files into a pristine, actionable one-page executive summary.
+* **🇹🇭 TH:** สกิลสำหรับยุบรวมไฟล์บันทึกการประชุม หรือแชทที่คุยกันยืดยาว ให้กลายเป็นสรุป One-page สั้นๆ กระชับๆ ที่พร้อมส่งให้ผู้บริหารอ่านทันที
+
+---
+
+## 🚀 How to Install (วิธีติดตั้ง)
+
+**For Mac/Linux Users (ติดตั้งแบบบรรทัดเดียวจบ):**
+Open your terminal and run:
+```bash
+git clone https://github.com/theeranon/JamesSkills.git "$HOME/.james-skills"
+"$HOME/.james-skills/scripts/install"
+```
+*This will safely link the skills to your local AI environments.*
+*(คำสั่งนี้จะติดตั้งและผูกสกิลเข้ากับ Claude/Cursor ในเครื่องคุณให้แบบอัตโนมัติ)*
+
+> **No terminal? No problem! (สำหรับคนไม่อยากลงโค้ด):**
+> Simply browse the `skills/` folder in this repository, open the `SKILL.md` of the skill you want, and copy-paste the text into your ChatGPT's "Custom Instructions" or Claude's "Projects"!
+> (ใครไม่อยากยุ่งกับ Terminal แค่กดเข้าไปดูในโฟลเดอร์ `skills/` ก๊อปปี้ข้อความในไฟล์ `SKILL.md` ไปแปะในแชท AI ก็ใช้งานได้เลยครับ!)
+
+---
+
+## 🛠 For Developers & Maintainers (ส่วนจัดการระบบ)
+*(The following sections are technical architecture notes for maintainers)*
 
 ```bash
 git clone https://github.com/theeranon/JamesSkills.git "$HOME/.james-skills"
