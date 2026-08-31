@@ -80,9 +80,7 @@
       "name": "make-it-james",
       "category": "standards",
       "status": "promoted",
-      "aliases": [
-        "james-ui-standard"
-      ]
+      "aliases": []
     },
     {
       "name": "project-standard",
@@ -115,7 +113,7 @@
       ]
     },
     {
-      "name": "james-skill-router",
+      "name": "skill-router",
       "category": "internal",
       "status": "promoted",
       "aliases": []
@@ -135,6 +133,12 @@
     {
       "name": "grill-me",
       "category": "core",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "make-it-james-ux",
+      "category": "standards",
       "status": "promoted",
       "aliases": []
     }

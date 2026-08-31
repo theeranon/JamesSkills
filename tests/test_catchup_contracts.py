@@ -14,7 +14,7 @@ def read(relative: str) -> str:
 
 def main() -> int:
     skill = read("skills/core/catchup/SKILL.md")
-    router = read("skills/internal/james-skill-router/SKILL.md")
+    router = read("skills/internal/skill-router/SKILL.md")
     cases = read("tests/behavioral-cases.md")
     catalog = json.loads(read("catalog.json"))
     item = next(entry for entry in catalog["skills"] if entry["name"] == "catchup")

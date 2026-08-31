@@ -28,7 +28,7 @@ def main() -> int:
     ai_offer = read(
         "skills/core/transformation-journey/references/ai-transformation-five-phase.md"
     )
-    router = read("skills/internal/james-skill-router/SKILL.md")
+    router = read("skills/internal/skill-router/SKILL.md")
     renderer = read("tests/render_transformation_design_examples.cjs")
     cases = read("tests/behavioral-cases.md")
     catalog = json.loads(read("catalog.json"))

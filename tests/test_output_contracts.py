@@ -22,7 +22,8 @@ def main() -> int:
     one_render_qa = read("skills/outputs/one-page-pls/references/render-qa.md")
     one_template = read("skills/outputs/one-page-pls/assets/a4-landscape-template.html")
     make_it_james = read("skills/standards/make-it-james/SKILL.md")
-    make_it_james_standard = read("skills/standards/make-it-james/references/standard.md")
+    make_it_james_ux = read("skills/standards/make-it-james-ux/SKILL.md")
+    make_it_james_standard = read("skills/standards/make-it-james-ux/references/standard.md")
     final_it = read("skills/outputs/final-it/SKILL.md")
     behavior_cases = read("tests/behavioral-cases.md")
 
@@ -50,16 +51,16 @@ def main() -> int:
     assert "[[TOPIC_TITLE]]" in one_template
     assert "Project Cedar" not in one_template
     assert "font embedding helper" in sum_skill and "font embedding helper" in one_skill
-    assert "embed_ibm_plex_thai.py" in make_it_james
+    assert "embed_ibm_plex_thai.py" in make_it_james_ux
     assert "not self-contained proof" in sum_skill + one_skill
-    assert "HTML-only delivery" in make_it_james
-    assert "Never generate a PDF merely to prove" in make_it_james
+    assert "HTML-only delivery" in make_it_james_ux
+    assert "Never generate a PDF merely to prove" in make_it_james_ux
     assert "stays HTML-only" in final_it
     assert "HTML only by default" in one_skill
     assert "Do not create a PDF merely" in sum_skill
     assert "Never infer PDF need" in sum_skill
-    assert "directly confirmed" in make_it_james + make_it_james_standard + final_it + sum_skill
-    assert "Never infer that constraint" in make_it_james + make_it_james_standard
+    assert "directly confirmed" in make_it_james + make_it_james_ux + make_it_james_standard + final_it + sum_skill
+    assert "Never infer that constraint" in make_it_james_ux + make_it_james_standard
     assert "without exporting a PDF" in one_render_qa
     assert "If PDF was explicitly requested" in one_render_qa
     assert "browser print emulation" in behavior_cases

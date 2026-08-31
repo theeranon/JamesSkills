@@ -12,7 +12,7 @@ def read(relative: str) -> str:
 
 
 def main() -> int:
-    router = read("skills/internal/james-skill-router/SKILL.md")
+    router = read("skills/internal/skill-router/SKILL.md")
     never_again = read("skills/core/never-again/SKILL.md")
     cases = read("tests/behavioral-cases.md")
     sum_meet = read("skills/outputs/sum-meet/SKILL.md")

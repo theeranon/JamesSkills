@@ -102,7 +102,7 @@ The short rule:
 - use `/prove-it` before accepting a completion claim;
 - use `/sum-meet`, `/one-page-pls`, or `/final-it` for recipient-facing outcomes; `make-it-james` applies automatically.
 
-This release has no pilot packages. Compatibility aliases keep older calls working without creating another instruction body. `james-skill-router` is installed internal support, not a recommended human command.
+This release has no pilot packages. Compatibility aliases keep older calls working without creating another instruction body. `skill-router` is installed internal support, not a recommended human command.
 
 ## Knowledge library
 

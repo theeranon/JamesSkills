@@ -13,7 +13,7 @@ def read(relative: str) -> str:
 
 def main() -> int:
     maintainer = read("AGENTS.md")
-    router = read("skills/internal/james-skill-router/SKILL.md")
+    router = read("skills/internal/skill-router/SKILL.md")
     never_again = read("skills/core/never-again/SKILL.md")
 
     assert "Authorization to build the library is not approval" in maintainer

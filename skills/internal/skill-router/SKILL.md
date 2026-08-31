@@ -1,13 +1,13 @@
 ---
-name: james-skill-router
+name: skill-router
 description: Internal-only fallback routing reference; never select it as the primary user workflow. Use only after direct matching finds no clear canonical owner. A recurring reusable company method routes directly to build-framework, macro organization transformation to transformation-journey, and a bounded course or workshop to learning-experience-design.
 ---
 
-# James Skill Router
+# Skill Router
 
 Route by the requested outcome and responsibility, not by keywords or product names.
 
-This router produces no user deliverable and never owns the work. If one canonical workflow clearly matches, stop using the router and load that owner directly. A request spanning several responsibilities still receives one real primary owner plus distinct supporting skills; it does not make `james-skill-router` the primary skill.
+This router produces no user deliverable and never owns the work. If one canonical workflow clearly matches, stop using the router and load that owner directly. A request spanning several responsibilities still receives one real primary owner plus distinct supporting skills; it does not make `skill-router` the primary skill.
 
 Direct-owner rules take precedence over generic classification:
 

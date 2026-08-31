@@ -16,7 +16,7 @@ Mode and standard behavior differs from a normal workflow:
 
 - `/i-have-adhd` remains active for the current conversation until explicitly disabled.
 - `make-it-james` applies automatically to recipient-facing outcomes; invoking it directly is useful for a visual or Final Word audit.
-- `james-skill-router` is installed agent support, not a recommended human command.
+- `skill-router` is installed agent support, not a recommended human command.
 
 ## Start or return to work
 
@@ -189,11 +189,11 @@ Mode and standard behavior differs from a normal workflow:
 - Canonical package: `make-it-james`
 - Category: `standards`
 - Lifecycle: `promoted`
-- Use when: creating or auditing recipient-facing UI, websites, PWA, dashboards, slides, PDF, reports, documents, email, captions, or prototypes. It should activate automatically.
-- Result: James's Final Word and visual discipline, including IBM Plex Sans Thai, compact density, restrained color, 6px rectangular radius, minimal pills, and rendered QA where visual output exists.
-- Do not use when: handling raw evidence, transcripts, source archives, or private scratch notes that are not recipient-facing outcomes.
+- Use when: creating, editing, reviewing, or writing recipient-facing documents, emails, captions, and reports. It should activate automatically.
+- Result: Enforces James's Final Word law, natural Thai sentences without AI theatre, and removes conversation residue.
+- Do not use when: handling raw evidence, transcripts, source archives, or private scratch notes.
 - Common composition: any output skill -> `make-it-james` -> `/prove-it`.
-- Aliases: `james-ui-standard` is a legacy compatibility call.
+- Aliases: none.
 - Canonical instructions: [`skills/standards/make-it-james/SKILL.md`](../skills/standards/make-it-james/SKILL.md)
 
 ## Design transformation
@@ -236,9 +236,9 @@ Mode and standard behavior differs from a normal workflow:
 
 ## Internal support
 
-### `james-skill-router`
+### `skill-router`
 
-- Canonical package: `james-skill-router`
+- Canonical package: `skill-router`
 - Category: `internal`
 - Lifecycle: `promoted`
 - Availability: Internal support is installed for agent discovery; it is not a recommended human command and its public name remains unapproved.
@@ -247,7 +247,7 @@ Mode and standard behavior differs from a normal workflow:
 - Do not use when: a human already invoked the exact skill, one canonical workflow clearly matches, or direct work is clearly sufficient. A mixed request alone is not a reason to make the router primary.
 - Common composition: internal routing precedes, but does not compete with, the selected workflow.
 - Aliases: none.
-- Canonical instructions: [`skills/internal/james-skill-router/SKILL.md`](../skills/internal/james-skill-router/SKILL.md)
+- Canonical instructions: [`skills/internal/skill-router/SKILL.md`](../skills/internal/skill-router/SKILL.md)
 
 ## Recommended calls and compatibility names
 
@@ -287,3 +287,17 @@ There are no pilot packages in this release. Candidate Card labels such as `lear
 - Do not use when: you are brainstorming ideas and do not need strict code mutation protocols.
 - Aliases: none.
 - Canonical instructions: [`skills/standards/proactive-dev/SKILL.md`](../skills/standards/proactive-dev/SKILL.md)
+
+### `/make-it-james-ux`
+
+- Canonical package: `make-it-james-ux`
+- Category: `standards`
+- Lifecycle: `promoted`
+- Source: [../skills/standards/make-it-james-ux/SKILL.md](../skills/standards/make-it-james-ux/SKILL.md)
+
+Apply the visual and UX standard to recipient-facing work.
+
+- Use when: Creating, editing, or auditing visual work, UI, websites, apps, or slides.
+- Result: A visually consistent, compliant artifact following IBM Plex Thai and radius rules.
+- Do not use when: The output is plain text only, or when producing internal raw evidence.
+
