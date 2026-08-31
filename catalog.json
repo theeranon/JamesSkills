@@ -14,12 +14,6 @@
       "aliases": []
     },
     {
-      "name": "build-framework",
-      "category": "core",
-      "status": "promoted",
-      "aliases": []
-    },
-    {
       "name": "baseon",
       "category": "core",
       "status": "promoted",
@@ -53,22 +47,6 @@
       "category": "core",
       "status": "promoted",
       "aliases": []
-    },
-    {
-      "name": "learning-experience-design",
-      "category": "core",
-      "status": "promoted",
-      "aliases": [
-        "design-the-course"
-      ]
-    },
-    {
-      "name": "transformation-journey",
-      "category": "core",
-      "status": "promoted",
-      "aliases": [
-        "design-the-journey"
-      ]
     },
     {
       "name": "i-have-adhd",
@@ -144,12 +122,6 @@
     }
   ],
   "packs": [
-    {
-      "name": "solutionsimpact",
-      "kind": "brand",
-      "status": "promoted",
-      "path": "packs/solutionsimpact/output-brand.md"
-    },
     {
       "name": "knowledge-library",
       "kind": "knowledge",

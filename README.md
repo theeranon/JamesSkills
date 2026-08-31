@@ -98,7 +98,6 @@ The short rule:
 - use `/project-standard` to establish or repair project truth;
 - use `/catchup` to return after a continuity gap;
 - use `/give-me-solutions` to research choices and `/done-for-me` after the owner decides;
-- use `/build-framework`, `/transformation-journey`, and `/learning-experience-design` for reusable method, macro transformation, and bounded learning respectively;
 - use `/prove-it` before accepting a completion claim;
 - use `/sum-meet`, `/one-page-pls`, or `/final-it` for recipient-facing outcomes; `make-it-james` and `make-it-james-ux` apply automatically.
 

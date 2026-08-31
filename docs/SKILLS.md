@@ -196,76 +196,6 @@ Mode and standard behavior differs from a normal workflow:
 - Aliases: none.
 - Canonical instructions: [`skills/standards/make-it-james/SKILL.md`](../skills/standards/make-it-james/SKILL.md)
 
-## Design transformation
-
-### `/build-framework`
-
-- Canonical package: `build-framework`
-- Category: `core`
-- Lifecycle: `promoted`
-- Use when: a recurring method gap may require reusing, upgrading, or researching a SolutionsIMPACT house framework.
-- Result: one cited executive HTML framework decision report, a branded reusable model when justified, scenarios, counter-case, source trace, and an owner decision.
-- Do not use when: applying an existing named framework to one decision, designing one client course, or inventing a framework for a one-off activity.
-- Common composition: `/build-framework` may supply an approved framework to `/transformation-journey` or `/learning-experience-design`.
-- Aliases: none.
-- Canonical instructions: [`skills/core/build-framework/SKILL.md`](../skills/core/build-framework/SKILL.md)
-
-### `/transformation-journey`
-
-- Canonical package: `transformation-journey`
-- Category: `core`
-- Lifecycle: `promoted`
-- Use when: designing, auditing, repairing, or improving organization transformation across several interventions, application, evidence, governance, and business impact.
-- Result: one cited executive HTML Journey Pack with macro phases, owners, handoffs, intervention briefs, evidence chain, and next-stage decision.
-- Do not use when: the accountable outcome is one bounded course or learning intervention, or when an offer-specific phase model lacks authority.
-- Common composition: `/transformation-journey` -> `/learning-experience-design` for every bounded learning intervention; use `/build-framework` only for a real recurring method gap.
-- Aliases: `design-the-journey` is a legacy compatibility call.
-- Canonical instructions: [`skills/core/transformation-journey/SKILL.md`](../skills/core/transformation-journey/SKILL.md)
-
-### `/learning-experience-design`
-
-- Canonical package: `learning-experience-design`
-- Category: `core`
-- Lifecycle: `promoted`
-- Use when: designing, auditing, repairing, or improving one bounded course, workshop, session, learning day, or intervention.
-- Result: one cited executive HTML Design Pack connecting learner movement, the smallest fitting house design authority and lifecycle, experience, facilitation, work evidence, and impact; delivery-ready only when every gate passes.
-- Do not use when: the assignment owns sponsor governance and organization transformation across several interventions.
-- Common composition: receives a child brief from `/transformation-journey`; routes a recurring framework gap to `/build-framework`.
-- Aliases: `design-the-course` is a legacy compatibility call.
-- Canonical instructions: [`skills/core/learning-experience-design/SKILL.md`](../skills/core/learning-experience-design/SKILL.md)
-
-## Internal support
-
-### `skill-router`
-
-- Canonical package: `skill-router`
-- Category: `internal`
-- Lifecycle: `promoted`
-- Availability: Internal support is installed for agent discovery; it is not a recommended human command and its public name remains unapproved.
-- Use when: direct matching finds no clear canonical owner and the agent needs a fallback routing reference.
-- Result: one real primary workflow per stage and only the additional skills with distinct responsibilities; the router itself never owns or produces the work.
-- Do not use when: a human already invoked the exact skill, one canonical workflow clearly matches, or direct work is clearly sufficient. A mixed request alone is not a reason to make the router primary.
-- Common composition: internal routing precedes, but does not compete with, the selected workflow.
-- Aliases: none.
-- Canonical instructions: [`skills/internal/skill-router/SKILL.md`](../skills/internal/skill-router/SKILL.md)
-
-## Recommended calls and compatibility names
-
-Recommended canonical calls are the 16 promoted non-internal packages above. Recommended lens shortcuts are `/wealth-dynamics`, `/talent-dynamics`, and `/wealth-spectrum`.
-
-Legacy calls remain functional for migration but should not be taught for new work: `/think-with-this`, `/james-ui-standard`, `/project-docs-standard`, `/solutionsimpact-meeting-summary-full`, `/solutionsimpact-onepagesummary`, `/design-the-course`, and `/design-the-journey`.
-
-There are no pilot packages in this release. Candidate Card labels such as `learn-this`, `audit-this`, `systemize-it`, `give-me-choice`, and `make-the-deck` are not existing skills.
-
-## Common flows
-
-1. Unclear system: `/zoom-out` -> `/give-me-solutions` -> owner decision -> `/done-for-me` -> `/prove-it`.
-2. New or drifting project: `/project-standard` -> `/done-for-me` -> `/prove-it`.
-3. Return after a gap: `/catchup` -> the smallest workflow that owns the verified remaining work.
-4. Meeting source: choose `/sum-meet` or `/one-page-pls` -> automatic `make-it-james` and `make-it-james-ux` -> `/prove-it`.
-5. Framework decision: `/baseon` or one lens shortcut -> owner judgment or the workflow that owns the resulting action.
-6. Transformation design: `/build-framework` only when needed -> `/transformation-journey` -> `/learning-experience-design` -> automatic `make-it-james` and `make-it-james-ux` -> `/prove-it`.
-
 ### `/proactive-habits`
 
 - Canonical package: `proactive-habits`
@@ -300,4 +230,18 @@ Apply the visual and UX standard to recipient-facing work.
 - Use when: Creating, editing, or auditing visual work, UI, websites, apps, or slides.
 - Result: A visually consistent, compliant artifact following IBM Plex Thai and radius rules.
 - Do not use when: The output is plain text only, or when producing internal raw evidence.
+
+
+### `skill-router`
+
+- Canonical package: `skill-router`
+- Category: `internal`
+- Lifecycle: `promoted`
+- Source: [../skills/internal/skill-router/SKILL.md](../skills/internal/skill-router/SKILL.md)
+
+Internal support routing matrix.
+
+- Use when: AI agent routing decision.
+- Result: System workflow direction.
+- Do not use when: Not a human command.
 
