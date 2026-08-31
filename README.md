@@ -100,7 +100,7 @@ The short rule:
 - use `/give-me-solutions` to research choices and `/done-for-me` after the owner decides;
 - use `/build-framework`, `/transformation-journey`, and `/learning-experience-design` for reusable method, macro transformation, and bounded learning respectively;
 - use `/prove-it` before accepting a completion claim;
-- use `/sum-meet`, `/one-page-pls`, or `/final-it` for recipient-facing outcomes; `make-it-james` applies automatically.
+- use `/sum-meet`, `/one-page-pls`, or `/final-it` for recipient-facing outcomes; `make-it-james` and `make-it-james-ux` apply automatically.
 
 This release has no pilot packages. Compatibility aliases keep older calls working without creating another instruction body. `skill-router` is installed internal support, not a recommended human command.
 

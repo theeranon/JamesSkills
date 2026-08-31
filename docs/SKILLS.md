@@ -10,12 +10,12 @@ This handbook is the human navigation layer. `catalog.json` owns category, lifec
 2. Return after a gap with `/catchup`.
 3. Research choices with `/give-me-solutions`; decide as the human owner.
 4. Finish authorized work with `/done-for-me`, then verify the real outcome with `/prove-it`.
-5. Ask for `/sum-meet`, `/one-page-pls`, or `/final-it` when the outcome is a recipient-facing artifact; `make-it-james` applies automatically.
+5. Ask for `/sum-meet`, `/one-page-pls`, or `/final-it` when the outcome is a recipient-facing artifact; `make-it-james` and `make-it-james-ux` apply automatically.
 
 Mode and standard behavior differs from a normal workflow:
 
 - `/i-have-adhd` remains active for the current conversation until explicitly disabled.
-- `make-it-james` applies automatically to recipient-facing outcomes; invoking it directly is useful for a visual or Final Word audit.
+- `make-it-james` and `make-it-james-ux` apply automatically to recipient-facing outcomes; invoking it directly is useful for a visual or Final Word audit.
 - `skill-router` is installed agent support, not a recommended human command.
 
 ## Start or return to work
@@ -142,7 +142,7 @@ Mode and standard behavior differs from a normal workflow:
 - Use when: a requested result must become the finished recipient-ready artifact in the format that best fits the job.
 - Result: one clean final artifact with source truth preserved and production residue removed.
 - Do not use when: a more specific output skill such as meeting summary or one-page owns the semantics.
-- Common composition: `/final-it` -> automatic `make-it-james` -> `/prove-it`.
+- Common composition: `/final-it` -> automatic `make-it-james` and `make-it-james-ux` -> `/prove-it`.
 - Aliases: none.
 - Canonical instructions: [`skills/outputs/final-it/SKILL.md`](../skills/outputs/final-it/SKILL.md)
 
@@ -154,7 +154,7 @@ Mode and standard behavior differs from a normal workflow:
 - Use when: transcripts, notes, files, or the current conversation must become one complete meeting record containing every agenda.
 - Result: one detailed, source-faithful, print-ready A4 portrait HTML with separate agenda zones.
 - Do not use when: the user wants one independent page per topic rather than one full record.
-- Common composition: `/sum-meet` -> automatic `make-it-james` -> `/prove-it`.
+- Common composition: `/sum-meet` -> automatic `make-it-james` and `make-it-james-ux` -> `/prove-it`.
 - Aliases: `solutionsimpact-meeting-summary-full` is a legacy compatibility call.
 - Canonical instructions: [`skills/outputs/sum-meet/SKILL.md`](../skills/outputs/sum-meet/SKILL.md)
 
@@ -166,7 +166,7 @@ Mode and standard behavior differs from a normal workflow:
 - Use when: source material must become one self-contained executive page per topic or agenda.
 - Result: separate concise one-page artifacts without silently blending unrelated agendas or losing decisions, actions, risks, and evidence.
 - Do not use when: one detailed multi-agenda meeting record is required.
-- Common composition: `/one-page-pls` -> automatic `make-it-james` -> `/prove-it`.
+- Common composition: `/one-page-pls` -> automatic `make-it-james` and `make-it-james-ux` -> `/prove-it`.
 - Aliases: `solutionsimpact-onepagesummary` is a legacy compatibility call.
 - Canonical instructions: [`skills/outputs/one-page-pls/SKILL.md`](../skills/outputs/one-page-pls/SKILL.md)
 
@@ -262,9 +262,9 @@ There are no pilot packages in this release. Candidate Card labels such as `lear
 1. Unclear system: `/zoom-out` -> `/give-me-solutions` -> owner decision -> `/done-for-me` -> `/prove-it`.
 2. New or drifting project: `/project-standard` -> `/done-for-me` -> `/prove-it`.
 3. Return after a gap: `/catchup` -> the smallest workflow that owns the verified remaining work.
-4. Meeting source: choose `/sum-meet` or `/one-page-pls` -> automatic `make-it-james` -> `/prove-it`.
+4. Meeting source: choose `/sum-meet` or `/one-page-pls` -> automatic `make-it-james` and `make-it-james-ux` -> `/prove-it`.
 5. Framework decision: `/baseon` or one lens shortcut -> owner judgment or the workflow that owns the resulting action.
-6. Transformation design: `/build-framework` only when needed -> `/transformation-journey` -> `/learning-experience-design` -> automatic `make-it-james` -> `/prove-it`.
+6. Transformation design: `/build-framework` only when needed -> `/transformation-journey` -> `/learning-experience-design` -> automatic `make-it-james` and `make-it-james-ux` -> `/prove-it`.
 
 ### `/proactive-habits`
 
