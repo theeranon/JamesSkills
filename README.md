@@ -20,7 +20,7 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 - **EN:** Turn source material into one self-contained executive page per topic.
 - **TH:** สรุปเนื้อหาทั้งหมดให้อยู่ในหน้าเดียวแบบ One-Pager แยกตามวาระการประชุม
 
-## Full Skill Directory
+## 📚 Full Skill Directory (รายการสกิลทั้งหมด)
 
 ### Context & Setup (การเริ่มต้นและรวบรวมบริบท)
 
@@ -29,18 +29,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>Sure! I've updated the code for your dashboard. Here is the React component...</blockquote>
+<blockquote>แน่นอนครับ! เดี๋ยวผมจะช่วยคิดแคมเปญการตลาดให้นะครับ สำหรับแคมเปญนี้เราน่าจะเริ่มจากการทำ Facebook Ads แล้วก็ยิงกลุ่มเป้าหมายอายุ 20-30 ปีนะครับ บลาๆๆๆ... (AI มโนไปเองโดยไม่มีการตกลง Scope งานที่ชัดเจน)</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>Generated <code>SRS.html</code> and updated <code>PROJECT.md</code>. The permission matrix is now documented. Proceeding to update the React component.</blockquote>
+<blockquote>Generated <code>PROJECT.md</code>. กําหนดสิทธิ์ (Permission Matrix), งบประมาณ (NFR), และเป้าหมายทางธุรกิจ (Business Objectives) เรียบร้อยแล้วครับ โปรเจกต์พร้อมสำหรับการรันแคมเปญจริง</blockquote>
 
 </td>
 </tr>
@@ -51,18 +51,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>What would you like me to do today? Please provide the code or explain where we left off.</blockquote>
+<blockquote>สวัสดีครับ! วันนี้มีอะไรให้ผมช่วยไหมครับ? รบกวนคุณเจมส์สรุปให้ฟังหน่อยครับว่าเมื่อสัปดาห์ที่แล้วเราทำโปรเจกต์ไหนค้างไว้บ้าง และอยากให้ผมทำอะไรต่อครับ?</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>Read <code>STATUS.md</code>. The last task was fixing the auth middleware. I've located the failing test in <code>src/auth.spec.ts</code>. Ready to patch it.</blockquote>
+<blockquote>Read <code>STATUS.md</code>. งานล่าสุดที่เราทำค้างไว้คือ 'การคัดเลือก Vendor สำหรับทำระบบ CRM' ตอนนี้ติดอยู่ที่รอใบเสนอราคาจากเจ้าที่ 2 ครับ คุณเจมส์ต้องการให้ผมร่างอีเมลไปตามงานไหมครับ?</blockquote>
 
 </td>
 </tr>
@@ -75,18 +75,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>Here is the CSS to hide the overlapping error button:<br><code>display: none;</code></blockquote>
+<blockquote>ได้เลยครับ นี่คือเทมเพลตสำหรับเขียนใบเตือนพนักงานที่มาสายนะครับ คุณเจมส์สามารถนำไปปรินต์และให้พนักงานเซ็นรับทราบได้เลยครับ...</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>Wait. Hiding the button patches a symptom. The root cause is the duplicate API call in <code>UserContext</code> causing a race condition. Let's fix the data flow instead.</blockquote>
+<blockquote>Wait. การแจกใบเตือนเป็นแค่การแก้ปลายเหตุ (Symptom) จากข้อมูลที่ผ่านมา ปัญหาที่แท้จริงคือโครงสร้าง Incentive ของบริษัทไม่ได้ผูกกับเวลาเข้างาน (Root Cause) เรามาแก้ที่ระบบประเมินผลกันก่อนดีไหมครับ?</blockquote>
 
 </td>
 </tr>
@@ -97,18 +97,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>You should use Next.js! It's very popular, has great SEO, and is easy to learn.</blockquote>
+<blockquote>จากคำถามของคุณเจมส์ ผมขอแนะนำให้ใช้ HubSpot ครับ! เพราะมันเป็นเครื่องมือระดับโลกที่มีคนใช้เยอะมาก แถมยังฟรีในฟีเจอร์พื้นฐานด้วย เหมาะกับธุรกิจทุกขนาดเลยครับ</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote><table><tr><th>Framework</th><th>Cost</th><th>Verdict</th></tr><tr><td>Next.js</td><td>High</td><td>Best for SEO</td></tr><tr><td>Vite</td><td>Low</td><td>Best for Admin UI</td></tr></table><br><i>*Does not make the final choice for you.</i></blockquote>
+<blockquote><table><tr><th>CRM Option</th><th>Annual Cost</th><th>Pros/Cons for our Scale</th></tr><tr><td>HubSpot</td><td>$10,000</td><td>Best ecosystem, but over-budget.</td></tr><tr><td>Zoho</td><td>$2,500</td><td>Fits budget, steep learning curve.</td></tr></table><br><i>(ตารางเปรียบเทียบข้อดีข้อเสีย เพื่อให้คุณตัดสินใจขั้นสุดท้ายด้วยตัวเอง)</i></blockquote>
 
 </td>
 </tr>
@@ -119,18 +119,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>To improve your team, you should communicate better and hold more weekly meetings.</blockquote>
+<blockquote>เพื่อเพิ่มยอดขาย ทีมของคุณควรจะสื่อสารกันให้มากขึ้น จัดประชุมสัปดาห์ละ 2 ครั้ง และต้องตั้งเป้าหมาย OKR ให้ชัดเจนครับ...</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>As a <b>Creator</b> profile, your bottleneck is operations. Delegate the system-building to a <b>Mechanic</b> so you can stay in your flow state.</blockquote>
+<blockquote>เมื่อวิเคราะห์ผ่านเลนส์ <b>Wealth Dynamics</b> ปัญหาคือคุณ (Creator) ลงมาทำงาน Operation มากเกินไป คุณต้องหา <b>Mechanic</b> มาคุมระบบหลังบ้าน เพื่อให้คุณกลับไปอยู่ใน Flow ของการสร้างสรรค์ครับ</blockquote>
 
 </td>
 </tr>
@@ -141,18 +141,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>That's a brilliant business idea! Let's start coding it right away. What is the first feature?</blockquote>
+<blockquote>ไอเดียการเปิดสาขาใหม่ที่ทองหล่อเป็นไอเดียที่ยอดเยี่ยมมากครับ! ผมเห็นด้วย 100% เลย เรามาเริ่มร่างแผนธุรกิจและหาผู้รับเหมาตกแต่งร้านกันเลยดีไหมครับ?</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>If user retention drops by 20%, what is your fallback for monetization?<br><br><i>(Waiting for your response before proceeding)</i></blockquote>
+<blockquote>If rent at Thong Lo increases by 15% next year, your margin drops to negative. What is your fallback plan if sales don't hit the target in Q1?<br><br><i>(รอคุณตอบคำถามนี้เพื่ออุดรอยรั่วของแผน ก่อนจะคุยเรื่องอื่นต่อ)</i></blockquote>
 
 </td>
 </tr>
@@ -165,18 +165,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>I wrote the first function. Let me know if you want me to write the tests next!</blockquote>
+<blockquote>ผมร่างหัวข้อ Agenda สำหรับงานสัมมนาเสร็จแล้ว 1 หัวข้อครับ คุณเจมส์อยากให้ผมทำหัวข้อที่ 2 ต่อเลยไหมครับ? หรืออยากแก้ไขหัวข้อแรกก่อน?</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>Implemented the function, updated the tests, and verified the build passes. The feature is complete and ready to use.</blockquote>
+<blockquote>ร่าง Agenda งานสัมมนาครบทั้ง 5 หัวข้อ, ทำ Slide Deck Outline, และเขียนอีเมลเชิญวิทยากรเสร็จสมบูรณ์เรียบร้อยแล้วครับ เอกสารทั้งหมดพร้อมส่ง.</blockquote>
 
 </td>
 </tr>
@@ -187,18 +187,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>I fixed the bug. The code looks correct and it should work now!</blockquote>
+<blockquote>ผมตั้งค่าสูตร Excel สำหรับคำนวณโบนัสปลายปีให้เรียบร้อยแล้วครับ! น่าจะทำงานได้ถูกต้อง 100% ลองเอาไปใช้ดูนะครับ</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>Run <code>npm test -- auth.spec.ts</code> ➔ <b>PASS</b>. The bug is verified fixed.</blockquote>
+<blockquote>Run verification scripts ➔ <b>PASS</b>. ทดสอบใส่ตัวเลขสมมติ 5 เคส (Edge cases) สูตรคำนวณโบนัสทำงานได้ถูกต้องและไม่มี Error ครับ พิสูจน์แล้วว่าใช้งานได้จริง.</blockquote>
 
 </td>
 </tr>
@@ -209,18 +209,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>Sorry about that! I will remember to use UTC next time.<br><i>(Proceeds to forget it next time)</i></blockquote>
+<blockquote>ผมขออภัยอย่างสูงครับที่ใช้คำว่า 'เรียนผู้มีอุปการะคุณ' อีกแล้ว คราวหน้าผมจะระวังไม่ให้เกิดขึ้นอีกครับ! (แล้วรอบหน้ามันก็พิมพ์ผิดอีก)</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>Added rule to <code>DECISIONS.md</code>: <i>'All timestamps must be stored in UTC'</i>. This is now a permanent constraint for this project.</blockquote>
+<blockquote>Added to <code>DECISIONS.md</code>: <i>'Forbidden word: ห้ามใช้คำว่า ผู้มีอุปการะคุณ ให้ใช้คำว่า สวัสดีลูกค้าคนสำคัญ เสมอ'</i> นี่คือกฎเหล็กถาวรสำหรับโปรเจกต์นี้ครับ</blockquote>
 
 </td>
 </tr>
@@ -231,18 +231,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>In today's fast-paced digital world, leveraging AI is key to success...</blockquote>
+<blockquote>ในยุคดิจิทัลที่เปลี่ยนแปลงอย่างรวดเร็ว การปรับตัวของธุรกิจคือสิ่งสำคัญที่สุด ดังนั้นเราจึงต้องใช้ AI เข้ามาช่วยลดต้นทุน... (ประโยคน้ำท่วมทุ่งแบบหุ่นยนต์)</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote><ul><li><b>Weakness:</b> The previous draft used generic buzzwords.</li><li><b>Rewrite:</b> Here is the specific, data-backed strategy for your Q3 integration...</li></ul></blockquote>
+<blockquote><ul><li><b>The Shortfall:</b> ประโยคเมื่อกี้กว้างเกินไปและเป็นคำคลิเช่ (Cliché) ไม่มี Actionable insight</li><li><b>The Masterpiece:</b> "ตัดงบการตลาดฝั่ง Traditional ลง 20% แล้วโยกไปลง AI Automation สำหรับ Customer Support ภายใน Q3 เพื่อลด SLA ลง 50%"</li></ul></blockquote>
 
 </td>
 </tr>
@@ -255,18 +255,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote><ul><li>Discussed the new UI.</li><li>Bob will do the design.</li><li>Meeting ended at 3 PM.</li></ul></blockquote>
+<blockquote><ul><li>ที่ประชุมคุยเรื่องงบการตลาดปีหน้า</li><li>คุณ A จะไปทำแผนมาเสนอ</li><li>จบการประชุมเวลา 14.00 น.</li></ul><br><i>(สรุปแบบเด็กจดรายงานการประชุม เนื้อหาสำคัญหายหมด)</i></blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote><b>Decision:</b> Move to Tailwind CSS.<br><b>Action:</b> @Bob to deliver Figma mockups by Friday.<br><br><i>(Complete A4 HTML record generated)</i></blockquote>
+<blockquote><b>Decision:</b> อนุมัติงบการตลาด Q1 ที่ 2 ล้านบาท โดยเน้นที่ช่องทาง TikTok เป็นหลัก<br><b>Action:</b> @Khun A ต้องส่ง Media Plan ภายในวันศุกร์นี้<br><br><i>(พร้อมแนบรายงาน HTML ระดับ Executive ที่จัดหน้ามาอย่างสวยงาม)</i></blockquote>
 
 </td>
 </tr>
@@ -277,18 +277,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote><i>(A massive 10-page wall of text summarizing everything said in a 2-hour meeting)</i></blockquote>
+<blockquote><i>(AI พ่นสรุปการรีวิวเอกสารกฎหมายยาวเหยียด 8 หน้ากระดาษ ที่ผู้บริหารไม่มีเวลาอ่าน)</i></blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote><i>(A dense, highly structured 1-page executive brief containing only the core decisions and financial impact)</i></blockquote>
+<blockquote><i>(One-Pager สรุปสั้นๆ หน้าเดียวจบ ที่ชี้เป้าเฉพาะ 'ความเสี่ยง 3 ข้อ' และ 'สิ่งที่ผู้บริหารต้องเซ็นอนุมัติวันนี้')</i></blockquote>
 
 </td>
 </tr>
@@ -299,18 +299,22 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>Sure! Here is the email you requested:<br><br>Subject: Update<br>Hello...</blockquote>
+<blockquote>แน่นอนครับคุณเจมส์! นี่คืออีเมลสำหรับแจ้งขอเลื่อนนัดลูกค้านะครับ: <br><br>Subject: ขอเลื่อนการประชุม...<br><br>ถ้ามีอะไรอยากให้ปรับแก้บอกผมได้ตลอดเลยนะครับ!</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>Subject: Q3 System Update<br><br>Team,<br><br>The new deployment pipeline is live...</blockquote>
+<blockquote>Subject: ขอเลื่อนการประชุมเพื่อเตรียมข้อมูลให้สมบูรณ์ขึ้น
+
+สวัสดีครับ [ชื่อลูกค้า],
+
+ผมขอเลื่อนนัด...</blockquote>
 
 </td>
 </tr>
@@ -323,18 +327,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>HTML stands for HyperText Markup Language. To center a div, you can use flexbox, which is a layout model...</blockquote>
+<blockquote>OKR (Objective and Key Results) คือเครื่องมือในการตั้งเป้าหมายที่ถูกคิดค้นโดย Andy Grove ที่ Intel ซึ่งช่วยให้องค์กร... (เกริ่นประวัติศาสตร์ยาว 2 หน้า)</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>Add <code>className="flex items-center justify-center"</code> to the parent div.</blockquote>
+<blockquote>- <b>Objective:</b> ขยายฐานลูกค้า B2B<br>- <b>KR 1:</b> ปิดดีลลูกค้า Enterprise 5 เจ้าภายใน Q2</blockquote>
 
 </td>
 </tr>
@@ -345,18 +349,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>As an AI, I suggest we might want to consider perhaps optimizing the database if possible.</blockquote>
+<blockquote>ในฐานะโมเดลภาษา AI ผมขอแนะนำให้คุณพิจารณาถึงความท้าทายในโลกธุรกิจยุคใหม่ที่เต็มไปด้วยความผันผวน...</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>The database is the bottleneck. Optimize the schema before adding new features.</blockquote>
+<blockquote>ตลาดกำลังผันผวน สิ่งที่เราต้องทำตอนนี้คือการรักษากระแสเงินสด (Cash Flow) ให้ยาวที่สุด</blockquote>
 
 </td>
 </tr>
@@ -367,18 +371,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote><i>(An ugly HTML table with default Times New Roman font and zero padding)</i></blockquote>
+<blockquote><i>(ตารางรายงานยอดขายตีเส้นขอบดำๆ ฟอนต์มาตรฐาน อ่านยาก ลายตา ไม่มีความสวยงาม)</i></blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote><i>(A modern, responsive HTML component using IBM Plex Sans Thai with proper whitespace and contrast)</i></blockquote>
+<blockquote><div style='border-radius: 8px; border: 1px solid #e2e8f0; padding: 16px; background-color: #f8fafc; font-family: "IBM Plex Sans Thai", sans-serif;'><h4 style='margin-top:0; color: #0f172a;'>รายงานสรุปยอดขาย (Q1)</h4><p style='color: #475569;'>ยอดขายเติบโต <b>+15%</b> เมื่อเทียบกับไตรมาสก่อน</p></div><br><i>(UI Component ที่สวยงามแบบ Production-ready ใช้ฟอนต์ IBM Plex Sans Thai พร้อม Spacing ที่อ่านง่าย)</i></blockquote>
 
 </td>
 </tr>
@@ -389,40 +393,40 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>I have updated the file. What should I do next?</blockquote>
+<blockquote>ผมร่างสัญญาร่วมทุนเสร็จแล้วครับ มีอะไรให้ผมช่วยอีกไหมครับ?</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>Updated <code>src/api.ts</code>. The next logical step is to update the frontend types. I'll do that now.</blockquote>
+<blockquote>ร่างสัญญาร่วมทุนเสร็จแล้ว ผมสังเกตเห็นว่ายังขาดระบุเงื่อนไขการ Exit ผมจึงเพิ่ม Clause 4.2 (Exit Strategy) เข้าไปให้พิจารณาด้วยครับ ลองอ่านดูนะครับ.</blockquote>
 
 </td>
 </tr>
 </table>
 
 #### ⚡️ `/proactive-dev`
-*Enforce blast-radius checks before mutating code.*
+*Enforce blast-radius checks before mutating code (For Software Tasks).*
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote><i>(Overwrites the entire file, accidentally deleting your custom logic)</i></blockquote>
+<blockquote><i>(แก้โค้ดทับไฟล์เดิมทั้งหมดจนระบบส่วนอื่นพัง)</i></blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>Checked dependencies. Modifying <code>auth.ts</code> will break <code>user.spec.ts</code>. I will update both files simultaneously to prevent a broken build.</blockquote>
+<blockquote>Checked dependencies. การแก้ <code>auth.ts</code> จะส่งผลกระทบต่อระบบ Login เก่า ผมจะสร้าง Branch ใหม่และเขียน Test ดักไว้ก่อนแก้นะครับ</blockquote>
 
 </td>
 </tr>
@@ -433,18 +437,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI Output)</th>
-<th width="50%">✅ After (JamesSkills Output)</th>
+<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
+<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>Here are 5 tips to stop procrastinating: 1. Use the Pomodoro technique...</blockquote>
+<blockquote>นี่คือ 5 เทคนิคแก้ปัญหาผัดวันประกันพรุ่งครับ: 1. ปิดแจ้งเตือนมือถือ 2. ดื่มน้ำเยอะๆ 3. ทำสมาธิ...</blockquote>
 
 </td>
 <td valign="top">
 
-<blockquote>You're avoiding this task because you're afraid of looking disorganized. Let's do the backend heavy-lifting right now so you have nothing to fear.</blockquote>
+<blockquote>คุณไม่ได้แค่ 'ยุ่ง' หรอกครับ คุณแค่กำลังเลี่ยงงานที่ต้องเผชิญหน้ากับคำวิจารณ์ มาครับ... เดี๋ยวผมร่างโครงสร้างแผนงานที่ยากที่สุดให้คุณเอง คุณจะได้เลิกหลบหน้ามันสักที.</blockquote>
 
 </td>
 </tr>
