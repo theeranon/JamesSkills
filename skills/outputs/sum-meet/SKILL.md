@@ -7,7 +7,7 @@ description: Create a detailed, source-faithful meeting record from transcripts,
 
 Produce one canonical meeting record that a recipient can act on and audit. Preserve the full substance of every agenda while separating evidence from interpretation.
 
-This skill owns recipient readiness for meeting records. Apply `make-it-james` for shared output law. When the artifact is explicitly for SolutionsIMPACT or a related brand, read [the SolutionsIMPACT output pack](../../../packs/solutionsimpact/output-brand.md); the pack may add identity but never replace this skill's semantic contract.
+This skill owns recipient readiness for meeting records. Apply `make-it-james` (for wording) and `make-it-james-ux` (for UI) for shared output law. When the artifact is explicitly for SolutionsIMPACT or a related brand, read [the SolutionsIMPACT output pack](../../../packs/solutionsimpact/output-brand.md); the pack may add identity but never replace this skill's semantic contract.
 
 ## 1. Establish source coverage
 
@@ -58,7 +58,7 @@ Completion criterion: the record stands alone, all agenda names match their zone
 For a visual deliverable, copy [assets/meeting-record.html](assets/meeting-record.html) and replace its placeholders. The canonical output is one self-contained A4 portrait HTML file ready for browser printing.
 
 - Keep all topics in that HTML file. Preserve the source template's semantic structure while adapting the number and length of topic zones to the meeting.
-- Use IBM Plex Sans Thai for Thai, English, and numbers. The shipped template is a source asset, not proof of final portability. For a genuinely portable single file, run the `make-it-james` [font embedding helper](../../standards/make-it-james/scripts/embed_ibm_plex_thai.py), confirm the remote font links are gone, and verify the rendered font. If the font files are unavailable, report that exact remaining gate instead of calling the HTML self-contained.
+- Use IBM Plex Sans Thai for Thai, English, and numbers. The shipped template is a source asset, not proof of final portability. For a genuinely portable single file, run the `make-it-james-ux` [font embedding helper](../../standards/make-it-james-ux/scripts/embed_ibm_plex_thai.py), confirm the remote font links are gone, and verify the rendered font. If the font files are unavailable, report that exact remaining gate instead of calling the HTML self-contained.
 - Apply the active project brand only when the project provides one. Brand tokens may change color or logo; they may not weaken the compact typography, plain metadata, 6px rectangular radius, or restrained component rules.
 - Export one matching PDF only when James explicitly requests PDF or an authoritative recipient constraint requiring one fixed print file is directly confirmed. Never infer PDF need from `A4`, `print-ready`, `report`, `meeting minutes`, or `recipient-facing`. The HTML remains the canonical editable record.
 - Do not create a PDF merely to perform visual QA; inspect the HTML in browser screen and print media.

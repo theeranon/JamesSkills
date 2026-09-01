@@ -1,6 +1,6 @@
 ---
 name: skill-router
-description: Internal-only fallback routing reference; never select it as the primary user workflow. Use only after direct matching finds no clear canonical owner. A recurring reusable company method routes directly to build-framework, macro organization transformation to transformation-journey, and a bounded course or workshop to learning-experience-design.
+description: Internal-only fallback routing reference; never select it as the primary user workflow. Use only after direct matching finds no clear canonical owner.
 ---
 
 # Skill Router
@@ -11,9 +11,6 @@ This router produces no user deliverable and never owns the work. If one canonic
 
 Direct-owner rules take precedence over generic classification:
 
-- recurring cross-project company method, constructs, or decision logic -> `build-framework`
-- macro organization change across interventions, application, evidence, governance, and impact -> `transformation-journey`
-- one bounded course, workshop, learning day, or intervention -> `learning-experience-design`
 - rejected result that must become a scoped system correction -> `never-again`
 
 1. Try every clear direct-owner rule before using fallback classification. Classify the remaining request as a bounded workflow, persistent mode, shared standard, output workflow, knowledge lens, project context, connector, automation, or direct work.
@@ -37,10 +34,7 @@ Keep the candidate `pilot` and outside global installs until James approves the 
 
 - `zoom-out`: reframe the system and responsibility boundary before solving.
 - `give-me-solutions`: research real external options and prepare comparable decision material.
-- `build-framework`: search the house library, then reuse, upgrade, or research a reusable SolutionsIMPACT framework.
 - `baseon`: apply or compare a named framework, book, or knowledge lens.
-- `transformation-journey`: own macro organization transformation across interventions, application, evidence, governance, and impact.
-- `learning-experience-design`: own one bounded course, workshop, session, learning day, or intervention.
 - `done-for-me`: own authorized implementation through the usable outcome.
 - `prove-it`: verify a claim at the recipient, provider, persistence, or production boundary that matters.
 - `never-again`: convert a rejected result into a scoped system correction and counter-tested guard.
@@ -50,7 +44,8 @@ Keep the candidate `pilot` and outside global installs until James approves the 
 - `one-page-pls`: produce one self-contained one-page artifact per topic or agenda.
 - `final-it`: select and finish the recipient-ready artifact when no more specific output workflow owns it.
 - `i-have-adhd`: persistent communication mode that composes with the primary workflow.
-- `make-it-james`: automatic recipient-facing standard that composes with the selected output.
+- `make-it-james`: automatic recipient-facing standard that composes with the selected output for wording and tone.
+- `make-it-james-ux`: automatic visual/UI standard for recipient-facing outputs.
 
 ## Composition order
 
@@ -58,17 +53,16 @@ Keep the candidate `pilot` and outside global installs until James approves the 
 2. Use `zoom-out` first only when the problem layer or outcome is wrong or unclear.
 3. Give one primary workflow ownership of the job. Add another workflow only for a distinct responsibility.
 4. Use the most specific output skill; use `final-it` only when no narrower output owns the artifact.
-5. Apply `make-it-james` to every recipient-facing result and `prove-it` at the actual completion boundary.
+5. Apply `make-it-james` and `make-it-james-ux` to every recipient-facing result and `prove-it` at the actual completion boundary.
 
 Common valid compositions:
 
 ```text
 zoom-out -> give-me-solutions
 done-for-me -> prove-it
-sum-meet or one-page-pls -> make-it-james -> prove-it
+sum-meet or one-page-pls -> make-it-james + make-it-james-ux -> prove-it
 project-standard -> done-for-me -> prove-it
 never-again -> affected workflow -> regression and counter-case proof
-build-framework -> transformation-journey -> learning-experience-design
 ```
 
 Do not load a whole chain merely because the names are related. Each added skill must own a distinct decision or deliverable.
@@ -77,15 +71,9 @@ Use `baseon` when the outcome is applying or comparing a named framework, book, 
 
 `catchup` is promoted for bounded continuity recovery; do not trigger it for ordinary progress inside an active task or one isolated completion claim.
 
-Keep the transformation-design boundary exact:
+Route a rejected or absurd output and its failure class to `never-again`. A system correction may later expose a reusable candidate, but the two jobs are not interchangeable.
 
-- `build-framework` owns reusable house intellectual property. It searches the house library before upgrading or creating anything.
-- `transformation-journey` owns the macro organization outcome and composes several interventions.
-- `learning-experience-design` owns a bounded learning intervention, even when it spans several days.
-
-Route a rejected or absurd output and its failure class to `never-again`. Route a recurring cross-project need for a reusable model, constructs, or decision logic to `build-framework`, even when the user does not say the word framework. A system correction may later expose a framework candidate, but the two jobs are not interchangeable.
-
-Duration does not determine ownership. The final accountable outcome does. The five-phase pattern is the preferred house candidate and its complete contract is verified for the SolutionsIMPACT AI Transformation Journey offer; do not force that offer model onto another domain without approved evidence. Internal create, audit, repair, and improve states are inferred and never become user-required commands.
+Duration does not determine ownership. The final accountable outcome does. Internal create, audit, repair, and improve states are inferred and never become user-required commands.
 
 Prefer project instructions when they express a more specific accepted decision.
 

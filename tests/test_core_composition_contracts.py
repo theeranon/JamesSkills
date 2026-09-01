@@ -29,9 +29,6 @@ def main() -> int:
     for name in (
         "zoom-out",
         "give-me-solutions",
-        "build-framework",
-        "learning-experience-design",
-        "transformation-journey",
         "baseon",
         "done-for-me",
         "prove-it",

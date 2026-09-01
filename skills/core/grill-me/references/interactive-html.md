@@ -31,4 +31,4 @@ Use HTML when the frontier needs multi-select, Select All, more than three indep
 
 Generate into the current task workspace or a temporary output folder, never inside the skill. Open it in the app. The page is offline and sends nothing remotely. James clicks `คัดลอกคำตอบ` and pastes once into chat, or attaches the downloaded JSON.
 
-Apply `make-it-james`: IBM Plex Sans Thai, dense hierarchy, 6px radius, one blue accent, semantic colors only, no decorative rails, gradients, or card soup.
+Apply `make-it-james-ux`: IBM Plex Sans Thai, dense hierarchy, 6px radius, one blue accent, semantic colors only, no decorative rails, gradients, or card soup.
