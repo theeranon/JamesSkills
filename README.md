@@ -57,6 +57,7 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 | `/make-it-james` | Recipient-facing wording standard | AI boilerplate | Direct, professional tone |
 | `/make-it-james-ux` | Visual and UI standards (IBM Plex Thai) | Default generic styles | Production-ready UI |
 | `/proactive-habits` | Prevent subordinate waiting behavior | Waiting for permission | Proactive momentum |
+| `/coach-me` | Sparring partner and root-cause behavioral coach | Procrastination and perfectionism | High-agency execution and unblocked mindset |
 | `/proactive-dev` | Enforce blast-radius checks before code | Broken dependencies | Safe execution |
 ## Installation
 

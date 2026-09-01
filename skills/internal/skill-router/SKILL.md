@@ -45,6 +45,7 @@ Keep the candidate `pilot` and outside global installs until James approves the 
 - `one-page-pls`: produce one self-contained one-page artifact per topic or agenda.
 - `final-it`: select and finish the recipient-ready artifact when no more specific output workflow owns it.
 - `i-have-adhd`: persistent communication mode that composes with the primary workflow.
+- `coach-me`: sparring partner and root-cause behavioral/mindset coach.
 - `make-it-james`: automatic recipient-facing standard that composes with the selected output for wording and tone.
 - `make-it-james-ux`: automatic visual/UI standard for recipient-facing outputs.
 

@@ -125,6 +125,12 @@
       "category": "core",
       "status": "promoted",
       "aliases": []
+    },
+    {
+      "name": "coach-me",
+      "category": "modes",
+      "status": "promoted",
+      "aliases": []
     }
   ],
   "packs": [

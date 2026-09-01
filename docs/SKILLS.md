@@ -219,6 +219,18 @@ Mode and standard behavior differs from a normal workflow:
 - Aliases: none.
 - Canonical instructions: [`skills/modes/proactive-habits/SKILL.md`](../skills/modes/proactive-habits/SKILL.md)
 
+### `/coach-me`
+
+- Canonical package: `coach-me`
+- Category: `modes`
+- Lifecycle: `promoted`
+- Use when: you need a sparring partner and root-cause behavioral/mindset coach to unblock procrastination or perfectionism.
+- Result: AI acts as a high-agency coach, exposes psychological friction, grounds decisions in operational truth, and executes backend heavy lifting.
+- Do not use when: you just need a standard task done without behavioral coaching.
+- Common composition: `/coach-me` -> (AI diagnoses and executes) -> `/prove-it`.
+- Aliases: none.
+- Canonical instructions: [`skills/modes/coach-me/SKILL.md`](../skills/modes/coach-me/SKILL.md)
+
 ### `/proactive-dev`
 
 - Canonical package: `proactive-dev`

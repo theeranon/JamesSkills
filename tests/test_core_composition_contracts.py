@@ -39,6 +39,7 @@ def main() -> int:
         "one-page-pls",
         "final-it",
         "i-have-adhd",
+        "coach-me",
         "make-it-james",
     ):
         assert f"`{name}`" in router, f"router missing promoted package: {name}"
