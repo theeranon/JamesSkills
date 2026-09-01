@@ -414,7 +414,7 @@ User drop-off is highest at Day 1. Simplify the onboarding flow to 3 steps to fi
 </td>
 <td valign="top">
 
-<i>(A responsive, modern UI component using IBM Plex Sans Thai, soft shadows, rounded borders, and perfectly balanced whitespace.)</i><br><br><img src='https://raw.githubusercontent.com/theeranon/JamesSkills/main/assets/make-it-james-ux-preview.png' alt='UI Example' width='100%' style='border-radius: 8px; border: 1px solid #e2e8f0;'>
+<i>(A responsive, modern UI component using IBM Plex Sans Thai, soft shadows, rounded borders, and perfectly balanced whitespace.)</i><br><br><img src='assets/ux-preview.png' alt='UI Example' width='100%' style='border-radius: 8px; border: 1px solid #e2e8f0;'>
 
 </td>
 </tr>
