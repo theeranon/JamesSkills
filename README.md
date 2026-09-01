@@ -2,457 +2,497 @@
 
 Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatGPT, Cursor, and Gemini.
 
-## Highlights
+## 🚀 Highlights
 
-### `/grill-me`
+### 🎯 `/grill-me` (Interactive Stress-Test)
 - **EN:** Challenge an idea. The AI asks sequential questions to expose flaws and resolve dependencies before execution.
 - **TH:** สั่งให้ AI ต้อนและซักถามจุดอ่อนในแผนงานทีละข้อ เพื่ออุดรอยรั่วก่อนลงมือทำ
 
-### `/give-me-solutions`
+### 💡 `/give-me-solutions` (Options & Trade-offs)
 - **EN:** Research external options. Present tradeoffs without making the final choice.
 - **TH:** วิเคราะห์และเปรียบเทียบข้อดีข้อเสียของแต่ละทางเลือก เพื่อประกอบการตัดสินใจ
 
-### `/zoom-out`
+### 🔍 `/zoom-out` (System-Level Problem Solver)
 - **EN:** Reframe a problem at the system level before patching symptoms.
 - **TH:** ถอยมามองภาพรวม เพื่อหาต้นตอของปัญหาระดับโครงสร้าง
 
-### `/one-page-pls`
+### 📝 `/one-page-pls` (Executive One-Pager)
 - **EN:** Turn source material into one self-contained executive page per topic.
 - **TH:** สรุปเนื้อหาทั้งหมดให้อยู่ในหน้าเดียวแบบ One-Pager แยกตามวาระการประชุม
 
-## 📚 Full Skill Directory (รายการสกิลทั้งหมด)
+---
+
+## 📚 Full Skill Directory (Before vs After)
 
 ### Context & Setup (การเริ่มต้นและรวบรวมบริบท)
 
 #### ⚡️ `/project-standard`
 *Create or repair project truth (SRS, NFR, Permissions).*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>แน่นอนครับ! เดี๋ยวผมจะช่วยคิดแคมเปญการตลาดให้นะครับ สำหรับแคมเปญนี้เราน่าจะเริ่มจากการทำ Facebook Ads แล้วก็ยิงกลุ่มเป้าหมายอายุ 20-30 ปีนะครับ บลาๆๆๆ... (AI มโนไปเองโดยไม่มีการตกลง Scope งานที่ชัดเจน)</blockquote>
+Of course! I'd love to help you build a new Marketing Dashboard. First, we should probably set up a React project. You can do that by running `npx create-react-app`. After that, we need to think about the design. Should we use Tailwind CSS? Also, for the database, maybe we can use Firebase...<br><br><i>(AI starts coding or guessing tools blindly without setting business rules, permissions, or requirements.)</i>
 
 </td>
 <td valign="top">
 
-<blockquote>Generated <code>PROJECT.md</code>. กําหนดสิทธิ์ (Permission Matrix), งบประมาณ (NFR), และเป้าหมายทางธุรกิจ (Business Objectives) เรียบร้อยแล้วครับ โปรเจกต์พร้อมสำหรับการรันแคมเปญจริง</blockquote>
+<b>[Generated <code>PROJECT.md</code> and <code>SRS.html</code>]</b><br><br>• <b>Business Goal:</b> Reduce ad-spend reporting time by 50%.<br>• <b>Permission Matrix:</b> Admins can edit, Viewers are read-only.<br>• <b>NFR:</b> Must load under 2 seconds.<br><br><i>All constraints are documented. Ready for execution.</i>
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/catchup`
 *Reconstruct current state after a continuity gap.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>สวัสดีครับ! วันนี้มีอะไรให้ผมช่วยไหมครับ? รบกวนคุณเจมส์สรุปให้ฟังหน่อยครับว่าเมื่อสัปดาห์ที่แล้วเราทำโปรเจกต์ไหนค้างไว้บ้าง และอยากให้ผมทำอะไรต่อครับ?</blockquote>
+Hello! I am ready to help you today. Could you please remind me what we were working on yesterday? If you have any code snippets, meeting notes, or specific instructions, please paste them here so I can get up to speed!
 
 </td>
 <td valign="top">
 
-<blockquote>Read <code>STATUS.md</code>. งานล่าสุดที่เราทำค้างไว้คือ 'การคัดเลือก Vendor สำหรับทำระบบ CRM' ตอนนี้ติดอยู่ที่รอใบเสนอราคาจากเจ้าที่ 2 ครับ คุณเจมส์ต้องการให้ผมร่างอีเมลไปตามงานไหมครับ?</blockquote>
+<b>[Scanned <code>STATUS.md</code> and recent commits]</b><br><br>You left off at drafting the Q3 Investor Update email. The financial projections for Q4 were missing from the draft. I have loaded the latest Excel sheet. Shall I generate the missing paragraph?
 
 </td>
 </tr>
 </table>
+
+<br>
 
 ### Analyze & Decide (การวิเคราะห์และตัดสินใจ)
 
 #### ⚡️ `/zoom-out`
 *Reframe the problem at the system level before patching symptoms.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>ได้เลยครับ นี่คือเทมเพลตสำหรับเขียนใบเตือนพนักงานที่มาสายนะครับ คุณเจมส์สามารถนำไปปรินต์และให้พนักงานเซ็นรับทราบได้เลยครับ...</blockquote>
+Great question! To fix the issue where your employees are clocking in late, you can implement a strict penalty system. Here is a template for a warning letter you can print out and make them sign: 'Dear [Employee Name], this is an official warning...'
 
 </td>
 <td valign="top">
 
-<blockquote>Wait. การแจกใบเตือนเป็นแค่การแก้ปลายเหตุ (Symptom) จากข้อมูลที่ผ่านมา ปัญหาที่แท้จริงคือโครงสร้าง Incentive ของบริษัทไม่ได้ผูกกับเวลาเข้างาน (Root Cause) เรามาแก้ที่ระบบประเมินผลกันก่อนดีไหมครับ?</blockquote>
+<b>Wait.</b> Issuing warning letters patches a symptom. <br><br>The root cause is structural: your Sales team's incentive structure is tied solely to closed deals, not office hours. Before writing warning letters, let's realign their KPIs or switch them to a flexible schedule.
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/give-me-solutions`
 *Research external options and present objective tradeoffs.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>จากคำถามของคุณเจมส์ ผมขอแนะนำให้ใช้ HubSpot ครับ! เพราะมันเป็นเครื่องมือระดับโลกที่มีคนใช้เยอะมาก แถมยังฟรีในฟีเจอร์พื้นฐานด้วย เหมาะกับธุรกิจทุกขนาดเลยครับ</blockquote>
+Based on your needs for a CRM, I highly recommend HubSpot! It is an industry leader, very user-friendly, and has a great free tier. Many businesses love it, and it integrates well with almost everything. You should definitely go with HubSpot.
 
 </td>
 <td valign="top">
 
-<blockquote><table><tr><th>CRM Option</th><th>Annual Cost</th><th>Pros/Cons for our Scale</th></tr><tr><td>HubSpot</td><td>$10,000</td><td>Best ecosystem, but over-budget.</td></tr><tr><td>Zoho</td><td>$2,500</td><td>Fits budget, steep learning curve.</td></tr></table><br><i>(ตารางเปรียบเทียบข้อดีข้อเสีย เพื่อให้คุณตัดสินใจขั้นสุดท้ายด้วยตัวเอง)</i></blockquote>
+<b>Decision Matrix (Constraint: < 50-person team, B2B SaaS)</b><br><br><table><tr><th>Option</th><th>Annual Cost</th><th>Pros/Cons</th></tr><tr><td>HubSpot</td><td>$10,000+</td><td>Best ecosystem / High cost at scale</td></tr><tr><td>Pipedrive</td><td>$3,000</td><td>Great for sales / Weak marketing tools</td></tr></table><br><i>*I do not make the final choice. Please select the path.</i>
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/baseon`
 *Apply a named knowledge lens (e.g., Wealth Dynamics).*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>เพื่อเพิ่มยอดขาย ทีมของคุณควรจะสื่อสารกันให้มากขึ้น จัดประชุมสัปดาห์ละ 2 ครั้ง และต้องตั้งเป้าหมาย OKR ให้ชัดเจนครับ...</blockquote>
+To scale your business, you need to communicate better with your co-founder. Make sure to hold weekly sync meetings, set clear OKRs, and foster a culture of transparency and continuous feedback.
 
 </td>
 <td valign="top">
 
-<blockquote>เมื่อวิเคราะห์ผ่านเลนส์ <b>Wealth Dynamics</b> ปัญหาคือคุณ (Creator) ลงมาทำงาน Operation มากเกินไป คุณต้องหา <b>Mechanic</b> มาคุมระบบหลังบ้าน เพื่อให้คุณกลับไปอยู่ใน Flow ของการสร้างสรรค์ครับ</blockquote>
+<b>Lens Applied: Wealth Dynamics</b><br><br>You are a <b>Creator</b>. Your co-founder is a <b>Lord</b>. The friction isn't 'communication'—it's mechanics. You need a <b>Mechanic</b> in the middle to translate your big-picture ideas into the analytical systems your co-founder needs.
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/grill-me`
 *Interactive stress-test to expose flaws in your plan.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>ไอเดียการเปิดสาขาใหม่ที่ทองหล่อเป็นไอเดียที่ยอดเยี่ยมมากครับ! ผมเห็นด้วย 100% เลย เรามาเริ่มร่างแผนธุรกิจและหาผู้รับเหมาตกแต่งร้านกันเลยดีไหมครับ?</blockquote>
+Opening a new coffee shop in Thong Lo sounds like an amazing and highly profitable idea! Thong Lo has great foot traffic and high purchasing power. Let me help you write a business plan and a menu right away!
 
 </td>
 <td valign="top">
 
-<blockquote>If rent at Thong Lo increases by 15% next year, your margin drops to negative. What is your fallback plan if sales don't hit the target in Q1?<br><br><i>(รอคุณตอบคำถามนี้เพื่ออุดรอยรั่วของแผน ก่อนจะคุยเรื่องอื่นต่อ)</i></blockquote>
+<b>Stress Test: Q1</b><br><br>Commercial rents in Thong Lo average 150k THB/month. To maintain a 20% margin, you need to sell 300 cups a day. If a new competitor opens next door, what is your unfair advantage to retain foot traffic?<br><br><i>(Waiting for your response before proceeding to Q2)</i>
 
 </td>
 </tr>
 </table>
+
+<br>
 
 ### Execute & Verify (การลงมือทำและตรวจสอบ)
 
 #### ⚡️ `/done-for-me`
 *End-to-end authorized implementation without waiting for permission.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>ผมร่างหัวข้อ Agenda สำหรับงานสัมมนาเสร็จแล้ว 1 หัวข้อครับ คุณเจมส์อยากให้ผมทำหัวข้อที่ 2 ต่อเลยไหมครับ? หรืออยากแก้ไขหัวข้อแรกก่อน?</blockquote>
+I have drafted the first slide for your pitch deck regarding the market size. Would you like me to continue and draft the second slide about the business model? Let me know if you need any adjustments!
 
 </td>
 <td valign="top">
 
-<blockquote>ร่าง Agenda งานสัมมนาครบทั้ง 5 หัวข้อ, ทำ Slide Deck Outline, และเขียนอีเมลเชิญวิทยากรเสร็จสมบูรณ์เรียบร้อยแล้วครับ เอกสารทั้งหมดพร้อมส่ง.</blockquote>
+<b>[Execution Complete]</b><br><br>1. Drafted all 12 slides of the Pitch Deck.<br>2. Formatted the financial projections into a markdown table.<br>3. Wrote the speaker notes for each slide.<br><br><i>The artifact is ready for delivery.</i>
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/prove-it`
 *Verify completion claim at the boundary.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>ผมตั้งค่าสูตร Excel สำหรับคำนวณโบนัสปลายปีให้เรียบร้อยแล้วครับ! น่าจะทำงานได้ถูกต้อง 100% ลองเอาไปใช้ดูนะครับ</blockquote>
+I have updated the Excel formula for the commission calculation. It should now correctly handle the tiered percentages. You can copy and paste it into your sheet. Let me know if it works!
 
 </td>
 <td valign="top">
 
-<blockquote>Run verification scripts ➔ <b>PASS</b>. ทดสอบใส่ตัวเลขสมมติ 5 เคส (Edge cases) สูตรคำนวณโบนัสทำงานได้ถูกต้องและไม่มี Error ครับ พิสูจน์แล้วว่าใช้งานได้จริง.</blockquote>
+<b>[Verification Passed]</b><br><br>Tested against 3 edge cases:<br>• Sales = $5k ➔ Commission: $500 (10%)<br>• Sales = $15k ➔ Commission: $2,250 (15%)<br>• Sales = $50k ➔ Commission: $10,000 (20%)<br><br><i>Math is verified correct.</i>
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/never-again`
 *Convert a rejected result into a permanent regression guard.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>ผมขออภัยอย่างสูงครับที่ใช้คำว่า 'เรียนผู้มีอุปการะคุณ' อีกแล้ว คราวหน้าผมจะระวังไม่ให้เกิดขึ้นอีกครับ! (แล้วรอบหน้ามันก็พิมพ์ผิดอีก)</blockquote>
+I apologize profusely for using the term 'Dear Valued Customer' again. You are right, it sounds very corporate and robotic. I will make sure to remember to use 'Hi [Name]' in all future interactions!
 
 </td>
 <td valign="top">
 
-<blockquote>Added to <code>DECISIONS.md</code>: <i>'Forbidden word: ห้ามใช้คำว่า ผู้มีอุปการะคุณ ให้ใช้คำว่า สวัสดีลูกค้าคนสำคัญ เสมอ'</i> นี่คือกฎเหล็กถาวรสำหรับโปรเจกต์นี้ครับ</blockquote>
+<b>[System Rule Updated]</b><br><br>Appended to <code>DECISIONS.md</code>:<br><i>'Forbidden word constraint: Never use "Dear Valued Customer". Always default to "Hi [First Name]".'</i><br><br>This regression guard is now permanent for all agents.
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/is-that-the-best-you-can-do`
 *Force the AI to aggressively self-critique and rewrite to the absolute limit.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>ในยุคดิจิทัลที่เปลี่ยนแปลงอย่างรวดเร็ว การปรับตัวของธุรกิจคือสิ่งสำคัญที่สุด ดังนั้นเราจึงต้องใช้ AI เข้ามาช่วยลดต้นทุน... (ประโยคน้ำท่วมทุ่งแบบหุ่นยนต์)</blockquote>
+In today's fast-paced digital era, leveraging artificial intelligence is absolutely crucial for modern businesses aiming to stay ahead of the curve and maximize their operational efficiency...
 
 </td>
 <td valign="top">
 
-<blockquote><ul><li><b>The Shortfall:</b> ประโยคเมื่อกี้กว้างเกินไปและเป็นคำคลิเช่ (Cliché) ไม่มี Actionable insight</li><li><b>The Masterpiece:</b> "ตัดงบการตลาดฝั่ง Traditional ลง 20% แล้วโยกไปลง AI Automation สำหรับ Customer Support ภายใน Q3 เพื่อลด SLA ลง 50%"</li></ul></blockquote>
+<b>[Self-Critique & Rewrite]</b><br>• <b>Weakness:</b> The previous draft relied on generic, meaningless buzzwords.<br>• <b>Elevated Rewrite:</b> <i>"Automating your Level 1 Customer Support via AI will cut SLA response times from 4 hours to 3 seconds, saving $40k annually in headcount scale."</i>
 
 </td>
 </tr>
 </table>
+
+<br>
 
 ### Outputs & Deliverables (การสร้างผลลัพธ์สุดท้าย)
 
 #### ⚡️ `/sum-meet`
 *Source-faithful meeting record with complete agenda and actions.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote><ul><li>ที่ประชุมคุยเรื่องงบการตลาดปีหน้า</li><li>คุณ A จะไปทำแผนมาเสนอ</li><li>จบการประชุมเวลา 14.00 น.</li></ul><br><i>(สรุปแบบเด็กจดรายงานการประชุม เนื้อหาสำคัญหายหมด)</i></blockquote>
+Here is the summary of your meeting:<br>- We talked about the Q3 budget.<br>- The marketing team needs to spend less on ads.<br>- Sarah will send the report later.<br>- Meeting adjourned at 4:00 PM.
 
 </td>
 <td valign="top">
 
-<blockquote><b>Decision:</b> อนุมัติงบการตลาด Q1 ที่ 2 ล้านบาท โดยเน้นที่ช่องทาง TikTok เป็นหลัก<br><b>Action:</b> @Khun A ต้องส่ง Media Plan ภายในวันศุกร์นี้<br><br><i>(พร้อมแนบรายงาน HTML ระดับ Executive ที่จัดหน้ามาอย่างสวยงาม)</i></blockquote>
+<b>[Meeting Record: Executive Summary]</b><br><br><b>Decision:</b> Q3 Ad Spend capped at 500k THB. Reallocating 200k THB to SEO.<br><b>Action:</b> @Sarah to deliver revised SEO media plan by Friday EOD.<br><br><i>(Full HTML A4 transcript generated)</i>
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/one-page-pls`
 *Self-contained executive brief.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote><i>(AI พ่นสรุปการรีวิวเอกสารกฎหมายยาวเหยียด 8 หน้ากระดาษ ที่ผู้บริหารไม่มีเวลาอ่าน)</i></blockquote>
+<i>(A massive 15-page wall of text summarizing every single word, joke, and tangent spoken during a 3-hour strategic planning workshop.)</i>
 
 </td>
 <td valign="top">
 
-<blockquote><i>(One-Pager สรุปสั้นๆ หน้าเดียวจบ ที่ชี้เป้าเฉพาะ 'ความเสี่ยง 3 ข้อ' และ 'สิ่งที่ผู้บริหารต้องเซ็นอนุมัติวันนี้')</i></blockquote>
+<i>(A highly structured 1-page executive brief containing only the Core Decisions, Financial Impact, Risk Matrix, and Next Steps. Ready for CEO sign-off.)</i>
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/final-it`
 *Select and finish recipient-ready artifact.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>แน่นอนครับคุณเจมส์! นี่คืออีเมลสำหรับแจ้งขอเลื่อนนัดลูกค้านะครับ: <br><br>Subject: ขอเลื่อนการประชุม...<br><br>ถ้ามีอะไรอยากให้ปรับแก้บอกผมได้ตลอดเลยนะครับ!</blockquote>
+Certainly! I'd be happy to help you draft that email to your investors. Here is the text you requested:<br><br>Subject: Q3 Update...<br><br>I hope this helps! Please let me know if you need any revisions.
 
 </td>
 <td valign="top">
 
-<blockquote>Subject: ขอเลื่อนการประชุมเพื่อเตรียมข้อมูลให้สมบูรณ์ขึ้น
+Subject: Q3 Revenue Update & Q4 Projections
 
-สวัสดีครับ [ชื่อลูกค้า],
+Investors,
 
-ผมขอเลื่อนนัด...</blockquote>
+We closed Q3 at $1.2M ARR (20% QoQ growth)...
 
 </td>
 </tr>
 </table>
+
+<br>
 
 ### Persistent Behaviors (กฎประจำตัวของ AI)
 
 #### ⚡️ `/i-have-adhd`
 *Concise, direct, low-friction communication mode.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>OKR (Objective and Key Results) คือเครื่องมือในการตั้งเป้าหมายที่ถูกคิดค้นโดย Andy Grove ที่ Intel ซึ่งช่วยให้องค์กร... (เกริ่นประวัติศาสตร์ยาว 2 หน้า)</blockquote>
+The VLOOKUP function in Excel stands for 'Vertical Lookup'. It is a very powerful tool used to search for a certain value in a column in order to return a value from a different column in the same row. To use it, you...
 
 </td>
 <td valign="top">
 
-<blockquote>- <b>Objective:</b> ขยายฐานลูกค้า B2B<br>- <b>KR 1:</b> ปิดดีลลูกค้า Enterprise 5 เจ้าภายใน Q2</blockquote>
+`=VLOOKUP(A2, Sheet2!A:C, 3, FALSE)`
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/make-it-james`
 *Strict recipient-facing wording standard (No AI Theatre).*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>ในฐานะโมเดลภาษา AI ผมขอแนะนำให้คุณพิจารณาถึงความท้าทายในโลกธุรกิจยุคใหม่ที่เต็มไปด้วยความผันผวน...</blockquote>
+As an AI language model, I suggest that we might want to carefully consider optimizing the onboarding process, as it could potentially lead to better retention rates.
 
 </td>
 <td valign="top">
 
-<blockquote>ตลาดกำลังผันผวน สิ่งที่เราต้องทำตอนนี้คือการรักษากระแสเงินสด (Cash Flow) ให้ยาวที่สุด</blockquote>
+User drop-off is highest at Day 1. Simplify the onboarding flow to 3 steps to fix retention.
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/make-it-james-ux`
 *Visual and UI standards (IBM Plex Thai, modern layouts).*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote><i>(ตารางรายงานยอดขายตีเส้นขอบดำๆ ฟอนต์มาตรฐาน อ่านยาก ลายตา ไม่มีความสวยงาม)</i></blockquote>
+<i>(An ugly HTML table with default Times New Roman font, rigid borders, and zero padding.)</i>
 
 </td>
 <td valign="top">
 
-<blockquote><div style='border-radius: 8px; border: 1px solid #e2e8f0; padding: 16px; background-color: #f8fafc; font-family: "IBM Plex Sans Thai", sans-serif;'><h4 style='margin-top:0; color: #0f172a;'>รายงานสรุปยอดขาย (Q1)</h4><p style='color: #475569;'>ยอดขายเติบโต <b>+15%</b> เมื่อเทียบกับไตรมาสก่อน</p></div><br><i>(UI Component ที่สวยงามแบบ Production-ready ใช้ฟอนต์ IBM Plex Sans Thai พร้อม Spacing ที่อ่านง่าย)</i></blockquote>
+<i>(A responsive, modern UI component using IBM Plex Sans Thai, soft shadows, rounded borders, and perfectly balanced whitespace.)</i><br><br><img src='https://raw.githubusercontent.com/theeranon/JamesSkills/main/assets/make-it-james-ux-preview.png' alt='UI Example' width='100%' style='border-radius: 8px; border: 1px solid #e2e8f0;'>
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/proactive-habits`
 *Prevent passive subordinate waiting behavior.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>ผมร่างสัญญาร่วมทุนเสร็จแล้วครับ มีอะไรให้ผมช่วยอีกไหมครับ?</blockquote>
+I have finished analyzing the competitor's pricing model. What would you like me to do next?
 
 </td>
 <td valign="top">
 
-<blockquote>ร่างสัญญาร่วมทุนเสร็จแล้ว ผมสังเกตเห็นว่ายังขาดระบุเงื่อนไขการ Exit ผมจึงเพิ่ม Clause 4.2 (Exit Strategy) เข้าไปให้พิจารณาด้วยครับ ลองอ่านดูนะครับ.</blockquote>
+Competitor pricing analyzed. I noticed their premium tier lacks API access. I have preemptively drafted a new landing page copy highlighting our open API as a competitive advantage. Review it below.
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/proactive-dev`
-*Enforce blast-radius checks before mutating code (For Software Tasks).*
+*Enforce blast-radius checks before mutating code.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote><i>(แก้โค้ดทับไฟล์เดิมทั้งหมดจนระบบส่วนอื่นพัง)</i></blockquote>
+<i>(AI overwrites your core `auth.ts` file without checking dependencies, breaking the entire login flow and crashing the app.)</i>
 
 </td>
 <td valign="top">
 
-<blockquote>Checked dependencies. การแก้ <code>auth.ts</code> จะส่งผลกระทบต่อระบบ Login เก่า ผมจะสร้าง Branch ใหม่และเขียน Test ดักไว้ก่อนแก้นะครับ</blockquote>
+<b>[Blast-Radius Check]</b><br>Modifying `auth.ts` will break 3 downstream services (`billing`, `profile`, `api_keys`). I will execute the refactor across all 4 files simultaneously to maintain a green build.
 
 </td>
 </tr>
 </table>
+
+<br>
 
 #### ⚡️ `/coach-me`
 *Sparring partner and root-cause behavioral coach.*
 
-<table>
+<table width="100%">
 <tr>
-<th width="50%">❌ Before (ปกติ AI จะตอบแบบนี้)</th>
-<th width="50%">✅ After (ผลลัพธ์จาก JamesSkills)</th>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<blockquote>นี่คือ 5 เทคนิคแก้ปัญหาผัดวันประกันพรุ่งครับ: 1. ปิดแจ้งเตือนมือถือ 2. ดื่มน้ำเยอะๆ 3. ทำสมาธิ...</blockquote>
+Here are 5 generic tips to stop procrastinating: 1. Use the Pomodoro technique. 2. Break tasks into smaller steps. 3. Remove distractions. 4. Drink water. 5. Get enough sleep.
 
 </td>
 <td valign="top">
 
-<blockquote>คุณไม่ได้แค่ 'ยุ่ง' หรอกครับ คุณแค่กำลังเลี่ยงงานที่ต้องเผชิญหน้ากับคำวิจารณ์ มาครับ... เดี๋ยวผมร่างโครงสร้างแผนงานที่ยากที่สุดให้คุณเอง คุณจะได้เลิกหลบหน้ามันสักที.</blockquote>
+You are not 'too busy'—you are avoiding this launch because you fear public criticism. I am doing the backend heavy-lifting right now. I've deployed the staging server. You have no excuses left. Press launch.
 
 </td>
 </tr>
 </table>
+
+<br>
 
 ## Installation
 
