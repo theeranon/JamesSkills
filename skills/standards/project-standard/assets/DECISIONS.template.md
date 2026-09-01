@@ -11,5 +11,5 @@ Record accepted or superseded project decisions. Keep raw discussion in its sour
 - Decision: Not confirmed
 - Why: Not confirmed
 - Source: Not confirmed
-- Affects: `PROJECT.md`, `STATUS.md`, `AGENTS.md`
+- Affects: `ai-context/PROJECT.md`, `ai-context/STATUS.md`, `AGENTS.md`
 - Supersedes: None

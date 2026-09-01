@@ -1,8 +1,9 @@
 # Status
 
-Last verified: 2026-08-29
-Authority: `PROJECT.md`
-Current version: 0.9.0
+Last verified: 2026-09-01
+Authority: `ai-context/PROJECT.md`
+Spec lock: Open
+Current version: 0.9.1
 Current branch: main
 Repository: private `theeranon/JamesSkills`
 
@@ -56,7 +57,8 @@ JamesSkills has 17 promoted canonical packages and 10 compatibility aliases inst
 ## Verification
 
 - Baseline commit before this repair: `7edcb0c0dd718bd84fb72628e164e2a7a2ebc115`.
-- Current contract owner files: `PROJECT.md`, `STATUS.md`, `AGENTS.md`, and `docs/DECISIONS.md`.
+- Current contract owner files: `ai-context/PROJECT.md`, `ai-context/STATUS.md`, `AGENTS.md`, and `ai-context/DECISIONS.md`.
+- `project-standard` (v2): every contract file except `AGENTS.md`/`CLAUDE.md`/`GEMINI.md`/`README.md` now lives under `ai-context/`; this repository's own layout was migrated in the same change so `scripts/validate` keeps passing against the skill it ships.
 - Full 0.9.0 validation passed for 27 packages, including repository boundaries, project readiness, framework registry, routing, behavior, source provenance, update safety, and strict output lint.
 - Forward rendering passed for three reports across two real project cases: four embedded IBM Plex Sans Thai weights, zero unresolved tokens, zero remote requests, zero horizontal overflow, desktop and 390px mobile fit, and browser print-media fit. No PDF was generated.
 - Doctor passed with Git gates installed and 17 canonical plus 10 alias links in each configured discovery root; missing, collision, broken, wrong-target, and unexpected links are zero.

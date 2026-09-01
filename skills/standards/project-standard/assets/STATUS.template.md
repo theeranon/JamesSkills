@@ -1,7 +1,8 @@
 # Status
 
 Last verified: {{DATE}}
-Authority: `PROJECT.md`
+Authority: `ai-context/PROJECT.md`
+Spec lock: Open
 
 ## Current outcome
 

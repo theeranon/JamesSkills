@@ -2,10 +2,10 @@
 
 ## Required context
 
-1. Read `PROJECT.md` for outcome, scope, requirements, boundaries, and acceptance proof.
+1. Read `ai-context/PROJECT.md` for outcome, scope, requirements, boundaries, and acceptance proof.
 2. Read `CONTEXT.md` when framework, journey, learning-experience, evidence, or offer terminology matters.
-3. Read `STATUS.md` for current verified state, blockers, and the next move.
-4. Read `docs/DECISIONS.md` when a prior choice, lifecycle decision, or superseded rule matters.
+3. Read `ai-context/STATUS.md` for current verified state, blockers, and the next move.
+4. Read `ai-context/DECISIONS.md` when a prior choice, lifecycle decision, or superseded rule matters.
 5. Read `docs/SKILLS.md` when selecting or explaining a skill; load the selected `SKILL.md` completely before acting.
 6. Read `README.md` for human installation and repository usage.
 
@@ -47,9 +47,9 @@
 
 ## Completion
 
-- Satisfy the named `PROJECT.md` requirement and its acceptance proof.
+- Satisfy the named `ai-context/PROJECT.md` requirement and its acceptance proof.
 - Run `scripts/validate`; it includes the project-standard ready gate.
 - Run `scripts/doctor` when install, aliases, lifecycle, or discovery links changed.
-- Update `STATUS.md` only when current verified state, blocker, or next move changed.
-- Record durable outcome, scope, lifecycle, distribution, or authority changes in `docs/DECISIONS.md`.
+- Update `ai-context/STATUS.md` only when current verified state, blocker, or next move changed.
+- Record durable outcome, scope, lifecycle, distribution, or authority changes in `ai-context/DECISIONS.md`.
 - Do not claim cross-platform behavior, installation, delivery, publication, or external action without evidence for the exact target.

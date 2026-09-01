@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# project-standard pre-commit gate.
+# Install: cp this file to .git/hooks/pre-commit and chmod +x it
+# (do not overwrite an existing hook blindly — merge the check call into it instead).
+set -euo pipefail
+
+ROOT="$(git rev-parse --show-toplevel)"
+SCRIPT="$HOME/.agents/skills/project-standard/scripts/project_standard.py"
+
+if [ ! -f "$SCRIPT" ]; then
+  exit 0
+fi
+
+if ! python3 "$SCRIPT" check "$ROOT"; then
+  echo "" >&2
+  echo "project-standard check failed — commit blocked." >&2
+  echo "If ai-context/SRS.html is stale, run:" >&2
+  echo "  python3 \"$SCRIPT\" render-srs \"$ROOT\"" >&2
+  echo "If STATUS.md's Spec lock is Locked and PROJECT.md/DATA_MODEL.md changed on purpose, run:" >&2
+  echo "  python3 \"$SCRIPT\" lock-spec \"$ROOT\"" >&2
+  echo "and paste the printed line over the Spec lock line in ai-context/STATUS.md." >&2
+  exit 1
+fi

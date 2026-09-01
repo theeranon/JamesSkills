@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.9.1 - 2026-09-01
+
+- Upgraded `project-standard` to v2: moved every contract file except `AGENTS.md`/`CLAUDE.md`/`GEMINI.md`/`README.md` into an `ai-context/` folder so project truth stops scattering across the repository root.
+- Added a generated `ai-context/SRS.html` view (`render-srs` command), rendered from `PROJECT.md` and `DATA_MODEL.md`, as a read-only human-readable spec — never hand-edited, regenerated on demand.
+- Added a `Spec lock` field in `STATUS.md` (`Open` or `Locked (date, hash)`, set via the new `lock-spec` command) that `check` enforces: Open requires `SRS.html` to stay in sync before commit, Locked fails the check if `PROJECT.md`/`DATA_MODEL.md` drift from the recorded hash.
+- Added an optional `assets/git-hooks/pre-commit` template so the freshness and lock checks can run automatically before every commit instead of depending on an agent remembering.
+- Added a reverse-SRS/cross-model audit workflow step, a structured permission (role × action) matrix in `DATA_MODEL.md`, a non-functional-requirements table in `PROJECT.md`, and an opt-in per-module requirement breakdown (`ai-context/modules/<module>.md`) — all distilled from a SolutionsIMPACT "AI Systemize Business" class transcript and evaluated against the prior skill version for genuine gaps only.
+- Migrated JamesSkills' own root-level `PROJECT.md`/`STATUS.md`/`docs/DECISIONS.md` into `ai-context/` in the same change so `scripts/validate`'s project-standard ready gate keeps passing against the skill this repository ships.
+- Recorded the full decision as `DEC-010` in `ai-context/DECISIONS.md`; migration steps for other v1 (flat-layout) projects are documented in `project-standard`'s `references/contract.md`.
+- State-tested the upgrade against every real project under `AI Workspace/` (read-only) and found `render-srs` silently dropped any section whose heading carried a trailing annotation or didn't match the template verbatim — confirmed on 0/6 real documents, including the closest real match to the template. Fixed the regex bug causing it, made a genuinely-missing heading print a `WARN` and render a flagged banner instead of a silent `Not confirmed`, and recorded the finding as `DEC-011`.
+- Added `project_standard.py migrate <root>`, a single command that bootstraps a project with no existing contract, auto-moves a v1 project's legacy root files into `ai-context/` and repoints every known cross-reference once the headings already match the template, and otherwise reports (exit 2) exactly which headings are missing per file it leaves in place rather than guessing at a content rewrite — recorded alongside the parser fix in `DEC-011`.
+
 ## 0.9.0 - 2026-08-29
 
 - Promoted `build-framework`, `transformation-journey`, and `learning-experience-design` as the three canonical transformation-design responsibilities.
