@@ -20,7 +20,7 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 - **EN:** Turn source material into one self-contained executive page per topic.
 - **TH:** สรุปเนื้อหาทั้งหมดให้อยู่ในหน้าเดียวแบบ One-Pager แยกตามวาระการประชุม
 
-## 📚 Full Skill Directory (รายการสกิลทั้งหมด)
+## Full Skill Directory
 
 ### Context & Setup (การเริ่มต้นและรวบรวมบริบท)
 
@@ -29,18 +29,18 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-AI starts coding blindly based on a 2-line prompt. The project breaks when you hand it over to another AI because there's no central truth.
+<blockquote>Sure! I've updated the code for your dashboard. Here is the React component...</blockquote>
 
 </td>
 <td valign="top">
 
-AI generates strict `PROJECT.md` and `SRS.html` files. Every rule, permission, and constraint is documented before a single line of code is written.
+<blockquote>Generated <code>SRS.html</code> and updated <code>PROJECT.md</code>. The permission matrix is now documented. Proceeding to update the React component.</blockquote>
 
 </td>
 </tr>
@@ -51,18 +51,18 @@ AI generates strict `PROJECT.md` and `SRS.html` files. Every rule, permission, a
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-"Hi AI, here is a 5-page explanation of what we did yesterday and what you need to do next..."
+<blockquote>What would you like me to do today? Please provide the code or explain where we left off.</blockquote>
 
 </td>
 <td valign="top">
 
-<b><i>User:</i></b> <code>/catchup</code><br><br><b><i>AI:</i></b> Scans the Git tree and instantly outputs: "You left off at fixing the Auth bug. Here is the exact file and the next step."
+<blockquote>Read <code>STATUS.md</code>. The last task was fixing the auth middleware. I've located the failing test in <code>src/auth.spec.ts</code>. Ready to patch it.</blockquote>
 
 </td>
 </tr>
@@ -75,18 +75,18 @@ AI generates strict `PROJECT.md` and `SRS.html` files. Every rule, permission, a
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<b><i>AI:</i></b> "Here is the CSS fix to hide the error button on the dashboard."
+<blockquote>Here is the CSS to hide the overlapping error button:<br><code>display: none;</code></blockquote>
 
 </td>
 <td valign="top">
 
-<b><i>AI:</i></b> "Wait. Hiding the button doesn't fix the API failure. The root cause is your database architecture. Let's fix the schema first."
+<blockquote>Wait. Hiding the button patches a symptom. The root cause is the duplicate API call in <code>UserContext</code> causing a race condition. Let's fix the data flow instead.</blockquote>
 
 </td>
 </tr>
@@ -97,18 +97,18 @@ AI generates strict `PROJECT.md` and `SRS.html` files. Every rule, permission, a
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<b><i>AI:</i></b> "You should use React. It is very popular and good."
+<blockquote>You should use Next.js! It's very popular, has great SEO, and is easy to learn.</blockquote>
 
 </td>
 <td valign="top">
 
-<b><i>AI:</i></b> Presents a strict 3-column table comparing React, Vue, and Svelte based on your exact server cost constraints and team size, without making the decision for you.
+<blockquote><table><tr><th>Framework</th><th>Cost</th><th>Verdict</th></tr><tr><td>Next.js</td><td>High</td><td>Best for SEO</td></tr><tr><td>Vite</td><td>Low</td><td>Best for Admin UI</td></tr></table><br><i>*Does not make the final choice for you.</i></blockquote>
 
 </td>
 </tr>
@@ -119,18 +119,18 @@ AI generates strict `PROJECT.md` and `SRS.html` files. Every rule, permission, a
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-AI gives generic, fortune-cookie business advice using broad MBA buzzwords.
+<blockquote>To improve your team, you should communicate better and hold more weekly meetings.</blockquote>
 
 </td>
 <td valign="top">
 
-AI analyzes your specific situation using the exact vocabulary, constraints, and mechanics of the requested framework.
+<blockquote>As a <b>Creator</b> profile, your bottleneck is operations. Delegate the system-building to a <b>Mechanic</b> so you can stay in your flow state.</blockquote>
 
 </td>
 </tr>
@@ -141,18 +141,18 @@ AI analyzes your specific situation using the exact vocabulary, constraints, and
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<b><i>AI:</i></b> "That is a brilliant idea! I agree completely. Let's do it!"
+<blockquote>That's a brilliant business idea! Let's start coding it right away. What is the first feature?</blockquote>
 
 </td>
 <td valign="top">
 
-<b><i>AI:</i></b> "I see a massive flaw in your payment gateway logic. What happens if the webhook fails? <i>(I will wait for your answer before continuing)</i>"
+<blockquote>If user retention drops by 20%, what is your fallback for monetization?<br><br><i>(Waiting for your response before proceeding)</i></blockquote>
 
 </td>
 </tr>
@@ -165,18 +165,18 @@ AI analyzes your specific situation using the exact vocabulary, constraints, and
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<b><i>AI:</i></b> "I wrote the first function. Should I write the second one? Let me know!"
+<blockquote>I wrote the first function. Let me know if you want me to write the tests next!</blockquote>
 
 </td>
 <td valign="top">
 
-<b><i>AI:</i></b> Writes all 10 functions, updates the tests, runs the build, and says: "Done. It's deployed."
+<blockquote>Implemented the function, updated the tests, and verified the build passes. The feature is complete and ready to use.</blockquote>
 
 </td>
 </tr>
@@ -187,18 +187,18 @@ AI analyzes your specific situation using the exact vocabulary, constraints, and
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<b><i>AI:</i></b> "I fixed the bug. The code looks correct now."
+<blockquote>I fixed the bug. The code looks correct and it should work now!</blockquote>
 
 </td>
 <td valign="top">
 
-<b><i>AI:</i></b> "Here is the screenshot of the passing test suite and the cURL command output proving the API returns 200 OK."
+<blockquote>Run <code>npm test -- auth.spec.ts</code> ➔ <b>PASS</b>. The bug is verified fixed.</blockquote>
 
 </td>
 </tr>
@@ -209,18 +209,18 @@ AI analyzes your specific situation using the exact vocabulary, constraints, and
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-You have to tell the AI <i>'Stop using var!'</i> every single day.
+<blockquote>Sorry about that! I will remember to use UTC next time.<br><i>(Proceeds to forget it next time)</i></blockquote>
 
 </td>
 <td valign="top">
 
-The AI writes a permanent system rule so that it, and every future AI, will never make that specific mistake in this project again.
+<blockquote>Added rule to <code>DECISIONS.md</code>: <i>'All timestamps must be stored in UTC'</i>. This is now a permanent constraint for this project.</blockquote>
 
 </td>
 </tr>
@@ -231,18 +231,18 @@ The AI writes a permanent system rule so that it, and every future AI, will neve
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-AI outputs a generic, safe, boilerplate response. You have to manually point out every weak paragraph.
+<blockquote>In today's fast-paced digital world, leveraging AI is key to success...</blockquote>
 
 </td>
 <td valign="top">
 
-AI roasts its own previous draft, performs deep research, and produces a highly-polished, boundary-pushing masterpiece.
+<blockquote><ul><li><b>Weakness:</b> The previous draft used generic buzzwords.</li><li><b>Rewrite:</b> Here is the specific, data-backed strategy for your Q3 integration...</li></ul></blockquote>
 
 </td>
 </tr>
@@ -255,18 +255,18 @@ AI roasts its own previous draft, performs deep research, and produces a highly-
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-A short, bulleted list that misses half the context and forgets who was assigned what task.
+<blockquote><ul><li>Discussed the new UI.</li><li>Bob will do the design.</li><li>Meeting ended at 3 PM.</li></ul></blockquote>
 
 </td>
 <td valign="top">
 
-A pristine A4 HTML document with full context, exact decisions made, and a tracked action register.
+<blockquote><b>Decision:</b> Move to Tailwind CSS.<br><b>Action:</b> @Bob to deliver Figma mockups by Friday.<br><br><i>(Complete A4 HTML record generated)</i></blockquote>
 
 </td>
 </tr>
@@ -277,18 +277,18 @@ A pristine A4 HTML document with full context, exact decisions made, and a track
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-A 10-page wall of text that no executive will ever read.
+<blockquote><i>(A massive 10-page wall of text summarizing everything said in a 2-hour meeting)</i></blockquote>
 
 </td>
 <td valign="top">
 
-One single, perfectly formatted page containing only the absolute core decisions, risks, and next steps.
+<blockquote><i>(A dense, highly structured 1-page executive brief containing only the core decisions and financial impact)</i></blockquote>
 
 </td>
 </tr>
@@ -299,18 +299,18 @@ One single, perfectly formatted page containing only the absolute core decisions
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<b><i>AI:</i></b> "Sure, here is the email you asked for: <br> Subject: Hello..."
+<blockquote>Sure! Here is the email you requested:<br><br>Subject: Update<br>Hello...</blockquote>
 
 </td>
 <td valign="top">
 
-Outputs ONLY the raw email text. No 'Sure!', no 'Let me know if you need changes!', no conversational filler.
+<blockquote>Subject: Q3 System Update<br><br>Team,<br><br>The new deployment pipeline is live...</blockquote>
 
 </td>
 </tr>
@@ -323,18 +323,18 @@ Outputs ONLY the raw email text. No 'Sure!', no 'Let me know if you need changes
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-Huge paragraphs explaining the history of HTML before giving you a <div> tag.
+<blockquote>HTML stands for HyperText Markup Language. To center a div, you can use flexbox, which is a layout model...</blockquote>
 
 </td>
 <td valign="top">
 
-No fluff. Bullet points. Just the exact code and where to put it.
+<blockquote>Add <code>className="flex items-center justify-center"</code> to the parent div.</blockquote>
 
 </td>
 </tr>
@@ -345,18 +345,18 @@ No fluff. Bullet points. Just the exact code and where to put it.
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-"As an AI language model, I recommend..." or "In today's fast-paced digital world..."
+<blockquote>As an AI, I suggest we might want to consider perhaps optimizing the database if possible.</blockquote>
 
 </td>
 <td valign="top">
 
-Sharp, decisive, professional human tone. Sounds exactly like an expert consultant.
+<blockquote>The database is the bottleneck. Optimize the schema before adding new features.</blockquote>
 
 </td>
 </tr>
@@ -367,18 +367,18 @@ Sharp, decisive, professional human tone. Sounds exactly like an expert consulta
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-Ugly, generic HTML with Times New Roman and zero padding.
+<blockquote><i>(An ugly HTML table with default Times New Roman font and zero padding)</i></blockquote>
 
 </td>
 <td valign="top">
 
-Production-ready, beautiful UI components with proper fonts, spacing, and accessible contrast.
+<blockquote><i>(A modern, responsive HTML component using IBM Plex Sans Thai with proper whitespace and contrast)</i></blockquote>
 
 </td>
 </tr>
@@ -389,18 +389,18 @@ Production-ready, beautiful UI components with proper fonts, spacing, and access
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-AI acts like an intern waiting for explicit step-by-step orders.
+<blockquote>I have updated the file. What should I do next?</blockquote>
 
 </td>
 <td valign="top">
 
-AI acts like a senior partner: it predicts the next step, warns you of edge cases, and moves the project forward automatically.
+<blockquote>Updated <code>src/api.ts</code>. The next logical step is to update the frontend types. I'll do that now.</blockquote>
 
 </td>
 </tr>
@@ -411,18 +411,18 @@ AI acts like a senior partner: it predicts the next step, warns you of edge case
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-AI overwrites your entire file and accidentally deletes your custom logic.
+<blockquote><i>(Overwrites the entire file, accidentally deleting your custom logic)</i></blockquote>
 
 </td>
 <td valign="top">
 
-AI checks dependencies, isolates the change, and guarantees no collateral damage before editing.
+<blockquote>Checked dependencies. Modifying <code>auth.ts</code> will break <code>user.spec.ts</code>. I will update both files simultaneously to prevent a broken build.</blockquote>
 
 </td>
 </tr>
@@ -433,18 +433,18 @@ AI checks dependencies, isolates the change, and guarantees no collateral damage
 
 <table>
 <tr>
-<th width="50%">❌ Before (Normal AI)</th>
-<th width="50%">✅ After (With JamesSkills)</th>
+<th width="50%">❌ Before (Normal AI Output)</th>
+<th width="50%">✅ After (JamesSkills Output)</th>
 </tr>
 <tr>
 <td valign="top">
 
-<b><i>AI:</i></b> "Here is a 30-day generic roadmap to stop procrastinating."
+<blockquote>Here are 5 tips to stop procrastinating: 1. Use the Pomodoro technique...</blockquote>
 
 </td>
 <td valign="top">
 
-<b><i>AI:</i></b> "You're avoiding this task because you're afraid of looking stupid. Let's do the backend heavy-lifting right now so you have nothing to fear."
+<blockquote>You're avoiding this task because you're afraid of looking disorganized. Let's do the backend heavy-lifting right now so you have nothing to fear.</blockquote>
 
 </td>
 </tr>
