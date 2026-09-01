@@ -3,3 +3,4 @@
 .doctor-cache/
 .qa-artifacts/
 node_modules/
+scratch/
