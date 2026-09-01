@@ -120,6 +120,18 @@ Mode and standard behavior differs from a normal workflow:
 - Aliases: none.
 - Canonical instructions: [`skills/core/prove-it/SKILL.md`](../skills/core/prove-it/SKILL.md)
 
+### `/is-that-the-best-you-can-do`
+
+- Canonical package: `is-that-the-best-you-can-do`
+- Category: `core`
+- Lifecycle: `promoted`
+- Use when: the current draft feels lazy or safe, and you want to squeeze out maximum performance.
+- Result: a single report containing a critique of the previous draft, a Before/After table, and the elevated masterpiece.
+- Do not use when: making simple factual corrections or completely changing the project scope (use `/zoom-out`).
+- Common composition: `/is-that-the-best-you-can-do` -> automatic `make-it-james` and `make-it-james-ux` -> `/prove-it`.
+- Aliases: none.
+- Canonical instructions: [`skills/core/is-that-the-best-you-can-do/SKILL.md`](../skills/core/is-that-the-best-you-can-do/SKILL.md)
+
 ### `/never-again`
 
 - Canonical package: `never-again`

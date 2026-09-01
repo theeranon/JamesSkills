@@ -38,6 +38,7 @@ Keep the candidate `pilot` and outside global installs until James approves the 
 - `done-for-me`: own authorized implementation through the usable outcome.
 - `prove-it`: verify a claim at the recipient, provider, persistence, or production boundary that matters.
 - `never-again`: convert a rejected result into a scoped system correction and counter-tested guard.
+- `is-that-the-best-you-can-do`: aggressively self-critique and elevate a mediocre draft to its absolute limit.
 - `catchup`: reconstruct verified current state after a continuity gap, agent handoff, or suspected stale project status; not ordinary active-task progress or one isolated completion claim.
 - `project-standard`: create or repair the vendor-neutral project contract when project truth is missing or drifting.
 - `sum-meet`: produce one detailed meeting record containing every agenda.

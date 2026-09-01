@@ -1,33 +1,64 @@
+# JamesSkills
 
-# 🚀 JamesSkills (AI Hero Edition)
+Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatGPT, Cursor, and Gemini.
 
-Welcome to **JamesSkills**! A curated collection of powerful, production-ready AI skills and prompts used by James Theeranon. Designed to supercharge your workflow on Claude, ChatGPT, Cursor, and Gemini. 
+## Highlights
 
-ยินดีต้อนรับสู่ **JamesSkills**! คลังคำสั่ง (Skills) และ Prompt ระดับมืออาชีพที่ออกแบบมาเพื่อช่วยให้คุณทำงานกับ AI (Claude, ChatGPT, Cursor) ได้เหมือนมีผู้เชี่ยวชาญส่วนตัวนั่งอยู่ข้างๆ ครับ
+### `/grill-me`
+- **EN:** Challenge an idea. The AI asks sequential questions to expose flaws and resolve dependencies before execution.
+- **TH:** สั่งให้ AI ต้อนและซักถามจุดอ่อนในแผนงานทีละข้อ เพื่ออุดรอยรั่วก่อนลงมือทำ
 
----
+### `/give-me-solutions`
+- **EN:** Research external options. Present tradeoffs without making the final choice.
+- **TH:** วิเคราะห์และเปรียบเทียบข้อดีข้อเสียของแต่ละทางเลือก เพื่อประกอบการตัดสินใจ
 
-## 🌟 Highlight Skills (สกิลยอดฮิตที่แนะนำให้ลอง)
+### `/zoom-out`
+- **EN:** Reframe a problem at the system level before patching symptoms.
+- **TH:** ถอยมามองภาพรวม เพื่อหาต้นตอของปัญหาระดับโครงสร้าง
 
-### 1. 🎯 `/grill-me` (Stress-Test & Decision Maker)
-* **🇬🇧 EN:** Have an idea or a plan? Use this skill to let the AI "grill" you. It acts as an interviewer, asking you sharp, step-by-step questions to expose flaws and refine your plan before execution.
-* **🇹🇭 TH:** มีไอเดียหรือแผนงานในหัว? ใช้สกิลนี้สั่งให้ AI "สัมภาษณ์และต้อนคุณให้มุม" มันจะถามคำถามเจาะลึกทีละข้อ เพื่ออุดรอยรั่วและทำให้แผนของคุณเฉียบคมที่สุดก่อนลงมือทำจริง
+### `/one-page-pls`
+- **EN:** Turn source material into one self-contained executive page per topic.
+- **TH:** สรุปเนื้อหาทั้งหมดให้อยู่ในหน้าเดียวแบบ One-Pager แยกตามวาระการประชุม
 
-### 2. 💡 `/give-me-solutions` (Options & Trade-offs Researcher)
-* **🇬🇧 EN:** Stop getting generic lists. This skill forces the AI to research real tools, compare them against your constraints, and present the strongest options with pros/cons without making the final choice for you.
-* **🇹🇭 TH:** เลิกให้ AI สุ่มรายชื่อแอปมาให้! สกิลนี้จะสั่งให้ AI วิเคราะห์หา "ทางเลือกที่ดีที่สุด" มาเทียบข้อดีข้อเสียให้คุณดูอย่างละเอียด โดยเว้นช่องว่างให้คุณเป็นคนตัดสินใจขั้นตอนสุดท้ายเอง
+## Full Skill Directory
 
-### 3. 🔍 `/zoom-out` (System-Level Problem Solver)
-* **🇬🇧 EN:** When you're stuck in the weeds, use this to step back. The AI will reframe the problem at a macro level, helping you see the big picture before you waste time fixing the wrong symptom.
-* **🇹🇭 TH:** เวลาแก้ปัญหาแล้วรู้สึกหลงทาง ให้ใช้สกิลนี้ AI จะช่วย "ถอยหลังออกมามองภาพรวม" เพื่อหาต้นตอของปัญหาจริงๆ ก่อนที่คุณจะเสียเวลาไปแก้ผิดจุด
+### Context & Setup
+| Skill | Function | Without | With |
+|---|---|---|---|
+| `/project-standard` | Create or repair project truth (SRS, NFR, Permissions) | Scattered logic, lost context | Documented boundaries, AI continuity |
+| `/catchup` | Reconstruct current state after a continuity gap | Repetitive context briefing | Immediate execution baseline |
 
-### 4. 📝 `/one-page-pls` (Executive One-Pager)
-* **🇬🇧 EN:** Turn chaotic meeting notes, transcripts, or scattered files into a pristine, actionable one-page executive summary.
-* **🇹🇭 TH:** สกิลสำหรับยุบรวมไฟล์บันทึกการประชุม หรือแชทที่คุยกันยืดยาว ให้กลายเป็นสรุป One-page สั้นๆ กระชับๆ ที่พร้อมส่งให้ผู้บริหารอ่านทันที
+### Analyze & Decide
+| Skill | Function | Without | With |
+|---|---|---|---|
+| `/zoom-out` | Reframe the system boundary | Fixing the wrong symptom | Structural root cause identified |
+| `/give-me-solutions` | Research options and present tradeoffs | AI picks randomly | Objective comparison matrix |
+| `/baseon` | Apply a named knowledge lens | Generic assumptions | Specific vocabulary and analysis |
+| `/grill-me` | Interactive stress-test | Unchallenged logic flaws | Bulletproof execution plan |
 
----
+### Execute & Verify
+| Skill | Function | Without | With |
+|---|---|---|---|
+| `/done-for-me` | End-to-end authorized implementation | Piecemeal execution and waiting | Finished, usable outcome |
+| `/prove-it` | Verify completion claim at the boundary | Trusting AI hallucinations | Hard proof of correctness |
+| `/never-again` | Convert rejected result to regression guard | Recurring identical mistakes | Permanent system correction |
 
-## 🚀 How to Install (วิธีติดตั้ง)
+### Outputs
+| Skill | Function | Without | With |
+|---|---|---|---|
+| `/sum-meet` | Source-faithful meeting record | Missing decisions and actions | Complete A4 HTML agenda |
+| `/one-page-pls` | Self-contained executive brief | Bloated, mixed topics | Concise single-page topic |
+| `/final-it` | Select and finish recipient-ready artifact | Meta-copy and AI theatre | Clean delivery format |
+
+### Persistent Standards
+| Skill | Function | Without | With |
+|---|---|---|---|
+| `/i-have-adhd` | Concise, direct communication mode | Wordy prose | Bullet points |
+| `/make-it-james` | Recipient-facing wording standard | AI boilerplate | Direct, professional tone |
+| `/make-it-james-ux` | Visual and UI standards (IBM Plex Thai) | Default generic styles | Production-ready UI |
+| `/proactive-habits` | Prevent subordinate waiting behavior | Waiting for permission | Proactive momentum |
+| `/proactive-dev` | Enforce blast-radius checks before code | Broken dependencies | Safe execution |
+## Installation
 
 **For Mac/Linux Users (ติดตั้งแบบบรรทัดเดียวจบ):**
 Open your terminal and run:
@@ -44,7 +75,7 @@ git clone https://github.com/theeranon/JamesSkills.git "$HOME/.james-skills"
 
 ---
 
-## 🛠 For Developers & Maintainers (ส่วนจัดการระบบ)
+## Developers
 *(The following sections are technical architecture notes for maintainers)*
 
 ```bash

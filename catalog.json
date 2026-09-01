@@ -119,6 +119,12 @@
       "category": "standards",
       "status": "promoted",
       "aliases": []
+    },
+    {
+      "name": "is-that-the-best-you-can-do",
+      "category": "core",
+      "status": "promoted",
+      "aliases": []
     }
   ],
   "packs": [

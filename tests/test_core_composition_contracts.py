@@ -29,6 +29,7 @@ def main() -> int:
     for name in (
         "zoom-out",
         "give-me-solutions",
+        "is-that-the-best-you-can-do",
         "baseon",
         "done-for-me",
         "prove-it",
