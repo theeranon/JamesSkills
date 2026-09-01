@@ -20,45 +20,436 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 - **EN:** Turn source material into one self-contained executive page per topic.
 - **TH:** สรุปเนื้อหาทั้งหมดให้อยู่ในหน้าเดียวแบบ One-Pager แยกตามวาระการประชุม
 
-## Full Skill Directory
+## 📚 Full Skill Directory (รายการสกิลทั้งหมด)
 
-### Context & Setup
-| Skill | Function | Without | With |
-|---|---|---|---|
-| `/project-standard` | Create or repair project truth (SRS, NFR, Permissions) | Scattered logic, lost context | Documented boundaries, AI continuity |
-| `/catchup` | Reconstruct current state after a continuity gap | Repetitive context briefing | Immediate execution baseline |
+### Context & Setup (การเริ่มต้นและรวบรวมบริบท)
 
-### Analyze & Decide
-| Skill | Function | Without | With |
-|---|---|---|---|
-| `/zoom-out` | Reframe the system boundary | Fixing the wrong symptom | Structural root cause identified |
-| `/give-me-solutions` | Research options and present tradeoffs | AI picks randomly | Objective comparison matrix |
-| `/baseon` | Apply a named knowledge lens | Generic assumptions | Specific vocabulary and analysis |
-| `/grill-me` | Interactive stress-test | Unchallenged logic flaws | Bulletproof execution plan |
+#### ⚡️ `/project-standard`
+*Create or repair project truth (SRS, NFR, Permissions).*
 
-### Execute & Verify
-| Skill | Function | Without | With |
-|---|---|---|---|
-| `/done-for-me` | End-to-end authorized implementation | Piecemeal execution and waiting | Finished, usable outcome |
-| `/prove-it` | Verify completion claim at the boundary | Trusting AI hallucinations | Hard proof of correctness |
-| `/never-again` | Convert rejected result to regression guard | Recurring identical mistakes | Permanent system correction |
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
 
-### Outputs
-| Skill | Function | Without | With |
-|---|---|---|---|
-| `/sum-meet` | Source-faithful meeting record | Missing decisions and actions | Complete A4 HTML agenda |
-| `/one-page-pls` | Self-contained executive brief | Bloated, mixed topics | Concise single-page topic |
-| `/final-it` | Select and finish recipient-ready artifact | Meta-copy and AI theatre | Clean delivery format |
+AI starts coding blindly based on a 2-line prompt. The project breaks when you hand it over to another AI because there's no central truth.
 
-### Persistent Standards
-| Skill | Function | Without | With |
-|---|---|---|---|
-| `/i-have-adhd` | Concise, direct communication mode | Wordy prose | Bullet points |
-| `/make-it-james` | Recipient-facing wording standard | AI boilerplate | Direct, professional tone |
-| `/make-it-james-ux` | Visual and UI standards (IBM Plex Thai) | Default generic styles | Production-ready UI |
-| `/proactive-habits` | Prevent subordinate waiting behavior | Waiting for permission | Proactive momentum |
-| `/coach-me` | Sparring partner and root-cause behavioral coach | Procrastination and perfectionism | High-agency execution and unblocked mindset |
-| `/proactive-dev` | Enforce blast-radius checks before code | Broken dependencies | Safe execution |
+</td>
+<td valign="top">
+
+AI generates strict `PROJECT.md` and `SRS.html` files. Every rule, permission, and constraint is documented before a single line of code is written.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/catchup`
+*Reconstruct current state after a continuity gap.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+"Hi AI, here is a 5-page explanation of what we did yesterday and what you need to do next..."
+
+</td>
+<td valign="top">
+
+<b><i>User:</i></b> <code>/catchup</code><br><br><b><i>AI:</i></b> Scans the Git tree and instantly outputs: "You left off at fixing the Auth bug. Here is the exact file and the next step."
+
+</td>
+</tr>
+</table>
+
+### Analyze & Decide (การวิเคราะห์และตัดสินใจ)
+
+#### ⚡️ `/zoom-out`
+*Reframe the problem at the system level before patching symptoms.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+<b><i>AI:</i></b> "Here is the CSS fix to hide the error button on the dashboard."
+
+</td>
+<td valign="top">
+
+<b><i>AI:</i></b> "Wait. Hiding the button doesn't fix the API failure. The root cause is your database architecture. Let's fix the schema first."
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/give-me-solutions`
+*Research external options and present objective tradeoffs.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+<b><i>AI:</i></b> "You should use React. It is very popular and good."
+
+</td>
+<td valign="top">
+
+<b><i>AI:</i></b> Presents a strict 3-column table comparing React, Vue, and Svelte based on your exact server cost constraints and team size, without making the decision for you.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/baseon`
+*Apply a named knowledge lens (e.g., Wealth Dynamics).*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+AI gives generic, fortune-cookie business advice using broad MBA buzzwords.
+
+</td>
+<td valign="top">
+
+AI analyzes your specific situation using the exact vocabulary, constraints, and mechanics of the requested framework.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/grill-me`
+*Interactive stress-test to expose flaws in your plan.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+<b><i>AI:</i></b> "That is a brilliant idea! I agree completely. Let's do it!"
+
+</td>
+<td valign="top">
+
+<b><i>AI:</i></b> "I see a massive flaw in your payment gateway logic. What happens if the webhook fails? <i>(I will wait for your answer before continuing)</i>"
+
+</td>
+</tr>
+</table>
+
+### Execute & Verify (การลงมือทำและตรวจสอบ)
+
+#### ⚡️ `/done-for-me`
+*End-to-end authorized implementation without waiting for permission.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+<b><i>AI:</i></b> "I wrote the first function. Should I write the second one? Let me know!"
+
+</td>
+<td valign="top">
+
+<b><i>AI:</i></b> Writes all 10 functions, updates the tests, runs the build, and says: "Done. It's deployed."
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/prove-it`
+*Verify completion claim at the boundary.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+<b><i>AI:</i></b> "I fixed the bug. The code looks correct now."
+
+</td>
+<td valign="top">
+
+<b><i>AI:</i></b> "Here is the screenshot of the passing test suite and the cURL command output proving the API returns 200 OK."
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/never-again`
+*Convert a rejected result into a permanent regression guard.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+You have to tell the AI <i>'Stop using var!'</i> every single day.
+
+</td>
+<td valign="top">
+
+The AI writes a permanent system rule so that it, and every future AI, will never make that specific mistake in this project again.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/is-that-the-best-you-can-do`
+*Force the AI to aggressively self-critique and rewrite to the absolute limit.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+AI outputs a generic, safe, boilerplate response. You have to manually point out every weak paragraph.
+
+</td>
+<td valign="top">
+
+AI roasts its own previous draft, performs deep research, and produces a highly-polished, boundary-pushing masterpiece.
+
+</td>
+</tr>
+</table>
+
+### Outputs & Deliverables (การสร้างผลลัพธ์สุดท้าย)
+
+#### ⚡️ `/sum-meet`
+*Source-faithful meeting record with complete agenda and actions.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+A short, bulleted list that misses half the context and forgets who was assigned what task.
+
+</td>
+<td valign="top">
+
+A pristine A4 HTML document with full context, exact decisions made, and a tracked action register.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/one-page-pls`
+*Self-contained executive brief.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+A 10-page wall of text that no executive will ever read.
+
+</td>
+<td valign="top">
+
+One single, perfectly formatted page containing only the absolute core decisions, risks, and next steps.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/final-it`
+*Select and finish recipient-ready artifact.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+<b><i>AI:</i></b> "Sure, here is the email you asked for: <br> Subject: Hello..."
+
+</td>
+<td valign="top">
+
+Outputs ONLY the raw email text. No 'Sure!', no 'Let me know if you need changes!', no conversational filler.
+
+</td>
+</tr>
+</table>
+
+### Persistent Behaviors (กฎประจำตัวของ AI)
+
+#### ⚡️ `/i-have-adhd`
+*Concise, direct, low-friction communication mode.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+Huge paragraphs explaining the history of HTML before giving you a <div> tag.
+
+</td>
+<td valign="top">
+
+No fluff. Bullet points. Just the exact code and where to put it.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/make-it-james`
+*Strict recipient-facing wording standard (No AI Theatre).*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+"As an AI language model, I recommend..." or "In today's fast-paced digital world..."
+
+</td>
+<td valign="top">
+
+Sharp, decisive, professional human tone. Sounds exactly like an expert consultant.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/make-it-james-ux`
+*Visual and UI standards (IBM Plex Thai, modern layouts).*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+Ugly, generic HTML with Times New Roman and zero padding.
+
+</td>
+<td valign="top">
+
+Production-ready, beautiful UI components with proper fonts, spacing, and accessible contrast.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/proactive-habits`
+*Prevent passive subordinate waiting behavior.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+AI acts like an intern waiting for explicit step-by-step orders.
+
+</td>
+<td valign="top">
+
+AI acts like a senior partner: it predicts the next step, warns you of edge cases, and moves the project forward automatically.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/proactive-dev`
+*Enforce blast-radius checks before mutating code.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+AI overwrites your entire file and accidentally deletes your custom logic.
+
+</td>
+<td valign="top">
+
+AI checks dependencies, isolates the change, and guarantees no collateral damage before editing.
+
+</td>
+</tr>
+</table>
+
+#### ⚡️ `/coach-me`
+*Sparring partner and root-cause behavioral coach.*
+
+<table>
+<tr>
+<th width="50%">❌ Before (Normal AI)</th>
+<th width="50%">✅ After (With JamesSkills)</th>
+</tr>
+<tr>
+<td valign="top">
+
+<b><i>AI:</i></b> "Here is a 30-day generic roadmap to stop procrastinating."
+
+</td>
+<td valign="top">
+
+<b><i>AI:</i></b> "You're avoiding this task because you're afraid of looking stupid. Let's do the backend heavy-lifting right now so you have nothing to fear."
+
+</td>
+</tr>
+</table>
+
 ## Installation
 
 **For Mac/Linux Users (ติดตั้งแบบบรรทัดเดียวจบ):**
