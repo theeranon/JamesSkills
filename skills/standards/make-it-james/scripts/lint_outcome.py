@@ -51,8 +51,13 @@ FORBIDDEN_THAI_SYMBOL = re.compile(r"[:—–→/+|]|[\U0001F300-\U0001FAFF]")
 QUOTED = re.compile(r"(['\"])(.*?)(?<!\\)\1")
 MARKUP_TEXT = re.compile(r">([^<>]+)<")
 EXACT_DATA = re.compile(
-    r"https?://\S+|(?:^|\s)\d{1,2}:\d{2}(?:\s|$)|"
-    r"(?:^|\s)\d+(?:\.\d+)?:\d+(?:\.\d+)?(?:\s|$)"
+    r"https?://\S+|"
+    r"\b\d{1,2}:\d{2}(?:\s|$)|"
+    r"\b\d+(?:\.\d+)?:\d+(?:\.\d+)?\b|"
+    r"\d{1,2}/\d{1,2}/\d{2,4}|"
+    r"[\u0E00-\u0E7Fa-zA-Z0-9.]+/(?:[\u0E00-\u0E7Fa-zA-Z0-9.]+|(?=[,\s\)]|$))|"
+    r"(?:^|\s)\+\s*[\u0E00-\u0E7Fa-zA-Z0-9%]+|"
+    r"\+\d{1,4}(?:[\s-]?\d+)+"
 )
 
 UNIT_TO_PX = {
