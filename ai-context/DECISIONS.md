@@ -111,3 +111,13 @@ Record accepted or superseded project decisions. Raw discussion remains in its s
 - Source: read-only workspace audit (background agent, this session) covering Infra, InvestNow, James, Library, Shared, SoloCFO, SolutionsIMPACT; confirmed no project outside `Library/JamesSkills` had migrated to the `ai-context/` layout at the time of the audit.
 - Affects: `skills/standards/project-standard/scripts/project_standard.py` (`extract_section`, `section_prose_or_table`, `render_srs`, `render_srs_command`, new `migrate`/`heading_present`/`repoint_text`/`LEGACY_CANONICAL_HEADINGS`/`LEGACY_OPTIONAL_HEADINGS`/`REPOINT`), `skills/standards/project-standard/tests/test_project_standard.py`, `skills/standards/project-standard/references/contract.md`, `skills/standards/project-standard/SKILL.md`, `skills/standards/project-standard/assets/AGENTS.template.md`.
 - Supersedes: DEC-010's implicit claim that `render-srs` works against any project once files are moved into `ai-context/`, and that migration was "additive... no rename" with no automated command behind it. `render-srs` now works once a project's `PROJECT.md`/`DATA_MODEL.md` use the canonical template headings (trailing annotations tolerated) and loudly flags what it can't parse; migration for a canonical-headed v1 project is now a single automated command, and migration for a foreign-headed pre-existing document is explicitly still a human/agent judgment call, reported precisely rather than silently attempted.
+
+## DEC-012 — README Architecture & Anti-Bloat Standard
+
+- Date: 2026-09-03
+- Status: Accepted
+- Decision: Adopt `ai-context/README_STANDARD.md` as the enforceable law for `README.md`. The root README is strictly the human onboarding and public entry point ("Front Door"). It must feature an iconic 3-4 skill Before/After showcase and a single, scannable catalog table covering all canonical skills, while routing exhaustive technical deep dives to `docs/SKILLS.md` per DEC-006. Embedding 20+ full HTML tables and decorative AI-generated images on the root landing page is formally prohibited.
+- Why: Teamwork subagents bloated `README.md` to 46KB and 800+ lines with 30 auto-generated PNG diagrams and juvenile "AI วิ่งเล่นทุ่งลาเวนเดอร์" tables. This destroyed GitHub scannability, slowed page render times, and violated open-source readability standards benchmarked against top AI repos (Fabric, Anthropic Skills, vLLM).
+- Source: direct owner correction on README standards and industry benchmark comparison.
+- Affects: `README.md`, `ai-context/README_STANDARD.md`, `tests/test_readme_verification.py`.
+- Supersedes: the bloated multi-table README layout authored by the teamwork subagents.
