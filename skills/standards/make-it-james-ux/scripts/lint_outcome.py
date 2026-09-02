@@ -139,7 +139,9 @@ def thai_fragments(line: str, suffix: str) -> list[str]:
 
 def valid_font(value: str) -> bool:
     normalized = value.strip().lower()
-    if "var(--font-ui)" in normalized:
+    if "var(--font" in normalized:
+        return True
+    if any(token in normalized for token in ("project-font", "brand-font", "design-system")):
         return True
     first_family = normalized.split(",", 1)[0].strip(" '\"")
     if first_family == "ibm plex sans thai":
@@ -183,7 +185,7 @@ def lint_file(path: Path) -> list[tuple[int, str, str]]:
                 findings.append((number, "UI004", "pill or chip requires explicit necessity"))
 
             for match in FONT.finditer(line):
-                if not valid_font(match.group(1)):
+                if not valid_font(match.group(1)) and not re.search(r"james-ui:\s*(?:project-font|brand-font|design-system)", line, re.I):
                     findings.append((number, "UI005", "font is not IBM Plex Sans Thai"))
 
             for match in LINE_HEIGHT.finditer(line):

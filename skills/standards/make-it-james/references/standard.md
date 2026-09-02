@@ -4,7 +4,7 @@ Authority: James's durable cross-project preference. Apply it across AI vendors,
 
 ## Visual direction
 
-- Use `IBM Plex Sans Thai` as the default typeface for Thai, English, and numbers. Do not introduce a separate Latin display font.
+- Use `IBM Plex Sans Thai` as the default and fallback typeface for Thai, English, and numbers. Do not introduce an arbitrary Latin display font. However, when a project, client spec sheet, or existing Design System locks a specific typeface (e.g., Sarabun, Inter, Roboto, SF Pro, or custom corporate fonts), strictly adhere to the project's Design System. Never overwrite or force IBM Plex Sans Thai over a locked project standard.
 - Prefer compact, calm, information-dense composition. Preserve Thai readability; compact must not become cramped or clipped.
 - Default body line-height: `1.35` to `1.45`. Dense metadata and table rows may use `1.2` to `1.3`. Values above `1.5` require a content or accessibility reason.
 - Default control height: `32px` to `38px`; panel padding: `12px` to `16px`; section gap: `12px` to `20px`.

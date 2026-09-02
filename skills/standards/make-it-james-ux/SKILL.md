@@ -20,7 +20,7 @@ This is a visual standard and delivery gate.
    `python3 scripts/embed_ibm_plex_thai.py <input.html> --output <portable.html>`
 
 ## Visual Direction
-- Use `IBM Plex Sans Thai` as the default typeface.
+- Use `IBM Plex Sans Thai` as the default and fallback typeface. When a project spec sheet, brand guide, or existing Design System locks a specific font, honor and adhere to the project's standard.
 - Prefer compact, calm, information-dense composition.
 - Default body line-height: `1.35` to `1.45`.
 - Every rectangular surface uses a `6px` radius. Genuinely circular objects remain circular.
