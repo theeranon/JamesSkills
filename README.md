@@ -457,29 +457,9 @@ James Theeranon
 *Turn complex source material into self-contained 1-page A4 landscape HTML executive briefs per topic (1 topic = 1 file).*
 
 
-<table width="100%">
-<tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
-<th width="50%">✅ After (JamesSkills Outcome)</th>
-</tr>
-<tr>
-<td valign="top">
 
-<i>(AI สรุปรายงานกลยุทธ์ 30 หน้า ออกมาเป็น Bullet points ยาว 8 หน้า ตัดตัวเลขงบประมาณและชื่อผู้รับผิดชอบทิ้งจนหมด แล้วสรุปแบบคลุมเครือว่า "ที่ประชุมเห็นชอบให้ศึกษาตลาดเพิ่มเติม")</i>
+<p align="center"><img src="assets/one-page-pls-preview.png" width="100%" alt="one-page-pls UI Preview" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1px solid #313244;"></p>
 
-</td>
-<td valign="top">
-
-<b>[Generated <code>vietnam-expansion-onepage.html</code> — 1 Page A4 Landscape]</b><br><br>
-• <b>Strategic Goal:</b> เปิด Pilot Branch แรกที่ Ho Chi Minh City ภายใน Q1/2027 ด้วยงบ 15M THB<br>
-• <b>Key Target:</b> Break-even ภายใน 14 เดือน (Traffic &gt; 450 pax/day, Margin 22%)<br>
-• <b>Critical Risk:</b> กฎหมายนิติบุคคลต่างด้าว (Mitigation: จัดตั้ง Local JV 49/51)<br>
-• <b>Action:</b> @Preecha ส่งร่างสัญญา JV ให้ Legal ภายใน 15 ก.ย. 2026<br><br>
-<i>เอกสาร A4 แนวนอนหน้าเดียวความหนาแน่นสูง อ่านจบตัดสินใจได้ทันที</i>
-
-</td>
-</tr>
-</table>
 
 <br>
 
@@ -487,34 +467,9 @@ James Theeranon
 *Produce a comprehensive, source-faithful meeting record as one print-ready A4 portrait HTML document with complete evidence ledger.*
 
 
-<table width="100%">
-<tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
-<th width="50%">✅ After (JamesSkills Outcome)</th>
-</tr>
-<tr>
-<td valign="top">
 
-สรุปการประชุมประจำสัปดาห์:<br>
-- มีการพูดคุยเรื่องการปรับงบประมาณไตรมาส 3<br>
-- ทีม Marketing จะไปทำการบ้านเรื่องลดค่าแอด<br>
-- คุณส้มจะส่งรีพอร์ตเพิ่มเติมทีหลัง<br>
-- ปิดประชุมเวลา 16.00 น.<br><br>
-<i>(AI สรุปแบบผิวเผิน ละเลยประเด็นถกเถียงสำคัญ และไม่มีกำหนดส่งงานที่ชัดเจน)</i>
+<p align="center"><img src="assets/sum-meet-preview.png" width="100%" alt="sum-meet UI Preview" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1px solid #313244;"></p>
 
-</td>
-<td valign="top">
-
-<b>[Generated <code>meeting-record-2026-09-01.html</code> — A4 Portrait]</b><br><br>
-• <b>Decisions:</b> อนุมัติย้ายงบ 200k THB จาก Facebook Ads ไปลง SEO & Content Moat<br>
-• <b>Chronological Actions:</b><br>
-&nbsp;&nbsp;1. @Som ส่ง Revised Media Plan ภายในวันศุกร์ที่ 5 ก.ย. 17:00 น.<br>
-&nbsp;&nbsp;2. @Bank ตรวจสอบ Conversion Tracking Code ภายใน 8 ก.ย.<br>
-• <b>Open Loops:</b> ยังรอคำตอบจาก Legal เรื่องเงื่อนไขสัญญา Influencer เจ้าใหม่
-
-</td>
-</tr>
-</table>
 
 <br>
 
@@ -523,56 +478,22 @@ James Theeranon
 #### ⚡️ `/make-it-james`
 *Strict recipient-facing wording standard enforcing the Final Word law; removes AI conversation residue and punctuation-built Thai shorthand.*
 
-<p align="center"><img src="assets/make-it-james-preview.png" width="100%" alt="make-it-james preview"></p>
 
-<table width="100%">
-<tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
-<th width="50%">✅ After (JamesSkills Outcome)</th>
-</tr>
-<tr>
-<td valign="top">
 
-สวัสดีครับ! ในฐานะ AI ผู้ช่วย ผมขอแนะนำว่า: งาน: ปรับ Base 10% -&gt; ทำเกินเป้าได้ +5% | เริ่ม 1 ต.ค. หวังว่าอีเมลนี้จะมีประโยชน์นะครับ!<br><br><i>(AI ใส่คำพูดหุ่นยนต์และใช้เครื่องหมายวรรคตอนย่อความแบบผิดธรรมชาติ <code>-&gt; + |</code>)</i>
 
-</td>
-<td valign="top">
+<p align="center"><img src="assets/make-it-james-preview.png" width="100%" alt="make-it-james UI Preview" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1px solid #313244;"></p>
 
-<b>Subject: สรุปโครงสร้างค่าคอมมิชชันใหม่สำหรับไตรมาส 4/2026</b><br><br>
-ทีม Sales ทุกท่าน,<br><br>
-บริษัทขอแจ้งปรับโครงสร้างค่าคอมมิชชันใหม่โดยมีผลบังคับใช้ตั้งแต่วันที่ 1 ตุลาคม 2026 เป็นต้นไป เพื่อมุ่งเน้นการขยายฐานลูกค้าระดับ Enterprise:<br>
-1. ยอดขายตามเป้าหมายปกติ: อัตราค่าคอมมิชชัน 10% ของยอดปิดดีล<br>
-2. ยอดขายส่วนที่เกิน Target: ปรับเพิ่มเป็น 15% ทันทีโดยไม่มีเพดานจำกัด
-
-</td>
-</tr>
-</table>
 
 <br>
 
 #### ⚡️ `/make-it-james-ux`
 *Visual & UI standard mandating IBM Plex Sans Thai, 6px radius, compact density, semantic status badges, and strictly banning decorative left borders.*
 
-<p align="center"><img src="assets/ux-preview.png" width="100%" alt="make-it-james-ux preview"></p>
 
-<table width="100%">
-<tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
-<th width="50%">✅ After (JamesSkills Outcome)</th>
-</tr>
-<tr>
-<td valign="top">
 
-<i>(AI สร้าง HTML Card ที่ใช้ฟอนต์ Default แบบ Times New Roman, ตีกรอบหนาสีรุ้ง, ใส่แถบสีด้านซ้าย <code>border-l-8 border-blue-500</code> แบบการ์ดราคาถูก และ Padding บวมเทอะทะ)</i>
 
-</td>
-<td valign="top">
+<p align="center"><img src="assets/make-it-james-ux-preview.png" width="100%" alt="make-it-james-ux UI Preview" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1px solid #313244;"></p>
 
-<i>(UI Component สะอาดตา ใช้ฟอนต์ IBM Plex Sans Thai, ขอบมน 6px, พื้นหลังสะอาดตา, แสดงสถานะด้วย Semantic Badge และความหนาแน่นของข้อมูลกระชับพอดีตามหลัก Typography)</i>
-
-</td>
-</tr>
-</table>
 
 <br>
 
