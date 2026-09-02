@@ -9,17 +9,19 @@ Status: Enforced
 It is **not** the exhaustive technical reference manual (which is strictly governed by `docs/SKILLS.md` and individual `SKILL.md` files under `DEC-006`).
 
 ## Benchmarks & Principles
-Benchmarked against top-tier open-source agent frameworks (Anthropic Skills, Fabric, vLLM, shadcn/ui):
-1. **Scannable in 30 Seconds:** A developer or operator must grasp the core value proposition, scan all available capabilities, and find install commands without endless scrolling.
-2. **Anti-Bloat Law:** Prohibit 40KB+ walls of repetitive HTML tables and auto-generated decorative images on the landing page.
-3. **No AI Theater:** Strictly eliminate meta-copy, conversational residue, and juvenile tags (e.g. `❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)`). Maintain a sharp, direct operator tone (`make-it-james`).
-4. **Iconic Showcase:** Use 3–4 high-impact Before/After showcases to provide immediate proof of agency, then direct full reference lookups to the Scannable Catalog Table and `docs/SKILLS.md`.
+Benchmarked against user requirements and preferences:
+1. **Visual and Engaging:** The user explicitly prefers the README to be visual ("เบื้องหลังการทำงานมันเป็นประมาณไหน"), showing background processes and flow diagrams.
+2. **Before/After Outcomes for ALL Skills:** Every skill must have a concrete, literal Before/After table in both English and Thai. Do not just describe concepts; show literal outcomes.
+3. **No AI Theater:** Strictly eliminate meta-copy, conversational residue, and juvenile tags. Maintain a sharp, direct operator tone (`make-it-james`).
+4. **Curated Illustrations:** Provide image illustrations (PNGs) for the most complex or impactful skills (e.g., `/done-for-me`, `/grill-me`, `/are-you-sure`, `/make-it-james-ux`, `/project-standard`, `/proactive-dev`, etc.) while keeping the rest as Before/After tables to balance visual flair and file size.
 
 ## Required Section Hierarchy
 1. **Hero Header:** Title, one-sentence value proposition, and verification badges.
 2. **Operating Philosophy ("Why This Exists"):** Sharp contrast between passive chat prompts and executable agentic skills.
 3. **60-Second Quickstart:** One-line install command for terminal users + zero-terminal instructions.
-4. **Iconic Showcase:** 3–4 representative Before/After comparisons demonstrating core breakthroughs (`/grill-me`, `/are-you-sure`, `/make-it-james-ux`, `/done-for-me`).
-5. **Full Skill Directory (Scannable Matrix):** A single, compact table covering all canonical skills with commands, bilingual summaries, categories, and direct links to their handbook entries.
-6. **Architecture & Boundaries:** Progressive disclosure model, category taxonomy, and local validation gates.
-7. **Complete Handbook Pointer:** Direct link to `docs/SKILLS.md` for deep composition and lifecycle rules.
+4. **Full Skill Directory (Before vs After):** A complete section covering all canonical skills grouped by category. Each skill MUST include:
+   - Command and brief description
+   - A curated flow diagram or illustration (for selected complex skills)
+   - A Before/After comparison table with concrete, literal examples in both English and Thai.
+5. **Architecture & Boundaries:** Progressive disclosure model, category taxonomy, and local validation gates.
+6. **Complete Handbook Pointer:** Direct link to `docs/SKILLS.md` for deep composition and lifecycle rules.
