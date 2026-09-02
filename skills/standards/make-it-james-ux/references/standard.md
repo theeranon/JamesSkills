@@ -35,6 +35,27 @@ Use a compact text label, icon plus label, status column, restrained whole-surfa
 - Use one primary accent per page. Red, amber, and green carry semantic status only.
 - Reject decorative gradients, rainbow cards, color-per-section palettes, and ornamental status color.
 
+## Behavioral UX and cognitive friction gate
+
+When designing, reviewing, or auditing any user flow or interface, eliminate cognitive friction and avoidable user hesitation across five core axes:
+
+1. **Premature asking (Why ask now?):** Never demand non-essential user data or upfront commitment before delivering tangible value. Defer phone numbers, birthdays, addresses, and full registration to post-onboarding or point-of-need. Use smart defaults and auto-detection instead of forcing choices.
+2. **Contextual relevance (Why is this here?):** Align visible elements with the user's single dominant intention in the current view. Ensure primary actions stand out alone; tuck secondary controls, settings, or administrative actions into dropdowns, overflow menus, or lower hierarchy.
+3. **Interruption discipline (Why did this pop up?):** Eliminate modal overload. Ban blocking confirmation dialogs for safe, easily reversible actions; execute optimistically and provide an inline status or temporary "Undo" notification. Reserve modals strictly for catastrophic, irreversible destructive actions.
+4. **Information density and form fatigue (Tuck or defer?):** Prevent form intimidation. Group inputs logically; show P0 essentials immediately and tuck specialized or advanced inputs (P1/P2) inside accordions or expandable disclosures. Split multi-step workflows with clear, visible progress steps.
+5. **Effort economy and hesitation reduction:** Eliminate ambiguous labels, cryptic icons without text, and uncommunicated consequences. Micro-copy must explicitly state the outcome (e.g., "Confirm Order — $29" rather than "Continue"). Every clickable control must carry clear affordance (`cursor: pointer`, hover feedback). Never leave the user in a dead end.
+
+## Interaction and accessibility gate (Pro Max engineering)
+
+Adopt deterministic UI engineering and accessibility standards across every platform:
+
+- **Contrast ratio (WCAG 2.1 AA):** Ensure text contrast against its immediate background achieves at least `4.5:1` for normal text and `3:1` for large text or graphical control borders.
+- **Visible focus indicator:** All interactive controls must provide an unambiguous, high-contrast focus ring during keyboard navigation (`:focus-visible` with a minimum 2px outline and 2px offset). Never suppress focus outlines (`outline: none`) without an accessible visible replacement.
+- **Mobile touch ergonomics:** On coarse pointer devices (`@media (pointer: coarse)`), interactive tap targets must measure at least `44×44px` to prevent misclicks, while desktop preserves the compact `32px` to `38px` control height.
+- **Motion discipline:** Strictly respect `prefers-reduced-motion: reduce`. When active, disable decorative translations, scale shifts, and disorienting parallax. Keep standard transition durations between `150ms` and `250ms` with ease-out curves.
+- **Icon affordance and accessibility:** Never use emoji as functional UI icons; use standard SVG icon sets (Lucide or Heroicons). Every icon-only button must include an explicit `aria-label` or accessible screen-reader text.
+- **Defensive layout and reflow:** Test views across four explicit breakpoints: `375px` (Mobile), `768px` (Tablet), `1024px` (Desktop), and `1440px` (Wide). Prevent horizontal viewport overflow (`overflow-x: hidden`). Ensure tags, chips, badges, and Thai vowel/tone marks reflow cleanly without clipping or breaking mid-word.
+
 ## Final Word law
 
 Every outcome must read as finished material intentionally written for its real recipient. Transform James's intent into final wording.

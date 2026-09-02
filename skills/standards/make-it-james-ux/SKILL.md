@@ -29,3 +29,18 @@ This is a visual standard and delivery gate.
 
 ## Completion gate
 - Visual work: native checks and strict lint pass, then rendered QA confirms font, density, radius, color discipline, semantic page flow, artifact-appropriate composition, non-duplicative visuals, and absence of ornamental rails, clipping, and avoidable scrolling.
+
+## Behavioral UX & Cognitive Friction Audit Protocol
+When tasked with auditing a page, interaction flow, or product UI, evaluate against five core friction tests:
+
+1. **Premature asking:** Identify fields or steps asking for data before the user gets value. Recommend deferring to profile/settings or using smart defaults.
+2. **Contextual relevance:** Identify buttons, admin controls, or links irrelevant to the immediate user intent. Recommend tucking into menus.
+3. **Interruption discipline:** Identify unnecessary confirmation modals and blocking popups. Recommend optimistic execution with inline status and "Undo".
+4. **Information density:** Identify intimidating walls of forms. Recommend progressive disclosure via accordions or wizard steps.
+5. **Effort economy:** Identify ambiguous button copy, icon-only buttons without accessible labels, and dead ends. Recommend explicit copy and visible affordances.
+
+### Audit Output Matrix Format
+When delivering an audit, structure findings into this clean actionable table:
+| Step / Component | Friction Detected | Psychological / UX Root Cause | Action (Cut / Tuck / Defer / Simplify) |
+| :--- | :--- | :--- | :--- |
+
