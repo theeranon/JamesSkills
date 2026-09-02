@@ -144,6 +144,19 @@ Mode and standard behavior differs from a normal workflow:
 - Aliases: none.
 - Canonical instructions: [`skills/core/never-again/SKILL.md`](../skills/core/never-again/SKILL.md)
 
+### `/are-you-sure`
+
+- Canonical package: `are-you-sure`
+- Category: `core`
+- Lifecycle: `promoted`
+- Use when: you think work is done and want the ultimate zero-tolerance OCD QA to clean it.
+- Result: a ruthlessly audited and automatically fixed codebase/artifact across 5 layers.
+- Do not use when: you are just brainstorming.
+- Common composition: `/done-for-me` -> `/are-you-sure` -> `/prove-it`.
+- Aliases: none.
+- Canonical instructions: [`skills/core/are-you-sure/SKILL.md`](../skills/core/are-you-sure/SKILL.md)
+
+
 ## Produce the outcome
 
 ### `/final-it`

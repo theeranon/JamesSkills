@@ -131,6 +131,12 @@
       "category": "modes",
       "status": "promoted",
       "aliases": []
+    },
+    {
+      "name": "are-you-sure",
+      "category": "core",
+      "status": "promoted",
+      "aliases": []
     }
   ],
   "packs": [

@@ -305,6 +305,35 @@ Our revolutionary AI-powered Human Capital Management solution seamlessly empowe
 
 <br>
 
+#### ⚡️ `/are-you-sure`
+*The Zero-Tolerance OCD QA gate. Apply the 5-Layer verification framework to eliminate bugs, hardcoding, legacy junk, and UI quirks.*
+
+<table width="100%">
+<tr>
+<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
+</tr>
+<tr>
+<td valign="top">
+
+I've finished building the new Profile page! It looks great and the tests pass. Here's the code. Let me know what you want to do next.<br><br><i>(AI บอกว่างานเสร็จแล้ว แต่ซ่อน Hardcode ไว้ จัดหน้าเบี้ยว และปล่อยไฟล์ temp_test.js ทิ้งไว้รกโปรเจกต์)</i>
+
+</td>
+<td valign="top">
+
+<b>[OCD QA 5-Layer Audit]</b><br><br>
+• <b>Layer 1 (Integrity):</b> พบช่องโหว่ Token Expire -> <b>[Fixed]</b><br>
+• <b>Layer 2 (Anti-Laziness):</b> เจอสี Hardcode `#333` -> เปลื่ยนใช้ตัวแปร <code>var(--primary-text)</code> <b>[Fixed]</b><br>
+• <b>Layer 3 (Hygiene):</b> ลบ <code>temp_button.tsx</code> และ <code>console.log</code> ออกหมดแล้ว <b>[Fixed]</b><br>
+• <b>Layer 4 (Sensory):</b> ปุ่ม Submit เบี้ยวไป 2px -> <b>[Fixed]</b><br><br>
+<i>"I have ruthlessly cleaned the work. Zero defects remain. It is now genuinely Done."</i>
+
+</td>
+</tr>
+</table>
+
+<br>
+
 ### 💬 Persistent Interaction Modes (โหมดพฤติกรรมและการสื่อสารประจำตัว)
 
 #### ⚡️ `/coach-me`

@@ -3,7 +3,7 @@
 
 Acceptance Criteria Verified:
 - AC 1 (Content Completeness):
-    * Exactly 20 canonical skills from catalog.json are documented in README.md
+    * Exactly 21 canonical skills from catalog.json are documented in README.md
       under the "Full Skill Directory" section.
     * Every documented skill has a structured Before/After HTML table (<table>).
     * Every Before/After block contains Thai Unicode characters ([\u0E00-\u0E7F]).
@@ -112,16 +112,16 @@ class TestReadmeContentCompleteness(unittest.TestCase):
         cls.directory_text = extract_skill_directory_slice(cls.readme_text)
         cls.skill_blocks = parse_skill_blocks(cls.directory_text, cls.canonical_skills)
 
-    def test_catalog_has_exactly_20_canonical_skills(self) -> None:
-        """Verify catalog.json contains exactly 20 canonical skills."""
+    def test_catalog_has_exactly_21_canonical_skills(self) -> None:
+        """Verify catalog.json contains exactly 21 canonical skills."""
         self.assertEqual(
             len(self.canonical_skills),
-            20,
-            f"Expected 20 canonical skills in catalog.json, found {len(self.canonical_skills)}: {self.canonical_skills}",
+            21,
+            f"Expected 21 canonical skills in catalog.json, found {len(self.canonical_skills)}: {self.canonical_skills}",
         )
 
-    def test_all_20_canonical_skills_documented_in_readme(self) -> None:
-        """Verify all 20 canonical skills from catalog.json are documented in README directory."""
+    def test_all_21_canonical_skills_documented_in_readme(self) -> None:
+        """Verify all 21 canonical skills from catalog.json are documented in README directory."""
         found_skills = set(self.skill_blocks.keys())
         expected_skills = set(self.canonical_skills)
         missing_skills = sorted(expected_skills - found_skills)
@@ -137,8 +137,8 @@ class TestReadmeContentCompleteness(unittest.TestCase):
         )
         self.assertEqual(
             len(found_skills),
-            20,
-            f"Expected exactly 20 documented skills in README, found {len(found_skills)}",
+            21,
+            f"Expected exactly 21 documented skills in README, found {len(found_skills)}",
         )
 
     def test_every_skill_has_before_after_table(self) -> None:
