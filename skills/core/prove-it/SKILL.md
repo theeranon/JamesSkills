@@ -5,7 +5,9 @@ description: Verify whether a claimed result actually works for its recipient. U
 
 # Prove It
 
-Agent reports, green health checks, screenshots of setup, and generated files are routing evidence, not completion proof.
+**Static code review is INVALID evidence.** Claiming "I read the code and found no vulnerabilities" is immediately rejected. Omission bugs (missing logic, stale state across UI transitions) cannot be caught by staring at code.
+
+Agent reports, green health checks, screenshots of setup, static reviews, and generated files are routing evidence, not completion proof.
 
 First write the exact promise being tested and identify the target: repository, branch, commit or version, environment, account or tenant, route, data set, and recipient when relevant. A proof from another target does not transfer silently.
 
