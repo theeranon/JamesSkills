@@ -669,17 +669,32 @@ git clone https://github.com/theeranon/JamesSkills.git
 ```
 Then double-click **`install.bat`** inside the folder. It runs `scripts/install.py`, uses directory junctions so no administrator rights are needed, and falls back to copying if junctions are unavailable.
 
-### Pick one route per machine
+### The installer keeps the two routes from colliding
 
-Running both on the same machine installs every skill twice, once bare and once namespaced, and the duplicate entries degrade how reliably the right skill is chosen. Verified on macOS: with both routes active, a skill's description stops rendering in the picker.
+Running both routes into Claude Code would install every skill twice, once bare and once namespaced, and duplicate entries degrade how reliably the right skill is chosen.
 
-Use Route A on a machine where you only consume the skills. Use Route B on a machine where you edit them. To switch from A to B, run `claude plugin uninstall james-core@james-skills` for each pillar; the marketplace stays registered, so you can reinstall at any time.
+`scripts/install` handles this. If it finds the pillars registered in Claude Code's `installed_plugins.json`, it writes only aliases into `~/.claude/skills` and removes any canonical link it previously owned there, so the plugins are the single source. If the plugins are not installed, it links every skill as before. Nothing else changes: Cursor, Codex, and the shared `.agents` root always get live links.
 
-### What lands where
+`scripts/doctor` reports the mode it finds and fails on any canonical link left shadowing an installed plugin.
+
+**After editing a skill, Claude Code needs the plugin refreshed** — the installed plugin is a copy, not a link:
+
+```bash
+claude plugin marketplace update james-skills && claude plugin update james-core@james-skills
+```
+
+To go back to live links for Claude, uninstall the pillars and run the installer again:
+
+```bash
+for p in james-core james-productivity james-software; do claude plugin uninstall "$p@james-skills"; done
+./scripts/install
+```
+
+### What lands where### What lands where
 
 | Platform | Mechanism | Status |
 |---|---|---|
-| Claude Code | plugin marketplace, or `~/.claude/skills` links | Plugin install and skill loading both verified on macOS |
+| Claude Code | plugin marketplace by default, `~/.claude/skills` links when the plugins are absent | Marketplace add from a private GitHub repo, install, and skill loading all verified on macOS |
 | Cursor | `~/.cursor/skills` links | Files installed; Cursor's own loading not verified here |
 | Codex (ChatGPT) | `~/.codex/skills` links | Files installed; loading not verified here |
 | Gemini and Antigravity | whole plugins in `~/.gemini/*/plugins` | Files installed; loading not verified here |

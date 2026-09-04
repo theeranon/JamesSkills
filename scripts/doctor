@@ -17,6 +17,12 @@ fi
 echo "JamesSkills version=$version commit=$commit dirty=$dirty source=$repo_dir"
 "$repo_dir/scripts/validate"
 
+claude_uses_plugins=0
+if [[ -f "$HOME/.claude/plugins/installed_plugins.json" ]] \
+  && grep -q '@james-skills' "$HOME/.claude/plugins/installed_plugins.json"; then
+  claude_uses_plugins=1
+fi
+
 promoted_names="$(python3 - "$repo_dir/catalog.json" <<'PY'
 import json, sys
 for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
@@ -43,6 +49,28 @@ for target in \
   "$HOME/.gemini/antigravity/custom/skills"; do
   [[ -d "$target" ]] || continue
   base_dir="$(dirname "$target")"
+
+  if [[ "$target" == "$HOME/.claude/skills" && "$claude_uses_plugins" -eq 1 ]]; then
+    plugin_count=0
+    for plugin in "$repo_dir/plugins/"*; do
+      [[ -d "$plugin" ]] || continue
+      grep -q "$(basename "$plugin")@james-skills" "$HOME/.claude/plugins/installed_plugins.json" \
+        && plugin_count=$((plugin_count + 1))
+    done
+    stray=0
+    while IFS= read -r managed_link; do
+      [[ "$(readlink "$managed_link")" == "$repo_dir/plugins/"* ]] && stray=$((stray + 1)) \
+        && echo "DUPLICATE canonical link shadows an installed plugin: $managed_link"
+    done < <(find "$target" -mindepth 1 -maxdepth 1 -type l | sort)
+    alias_count=0
+    for alias_dir in "$repo_dir/aliases/"*; do
+      [[ -d "$alias_dir" ]] || continue
+      [[ -L "$target/$(basename "$alias_dir")" ]] && alias_count=$((alias_count + 1))
+    done
+    echo "$target via plugins=$plugin_count aliases=$alias_count duplicates=$stray"
+    issues=$((issues + stray))
+    continue
+  fi
 
   if [[ "$base_dir" == *".gemini"* ]]; then
     plugin_missing=0

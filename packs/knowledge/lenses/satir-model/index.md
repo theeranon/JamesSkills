@@ -21,7 +21,7 @@ Enter at the visible behaviour the person already said they want to change, ask 
 
 ## Naming
 
-The umbrella term is **Satir Model** or **Satir Growth Model**. `STST`, Satir Transformational Systemic Therapy, is the name of the clinical application only and must not be used for coaching work. **Satya** is a misspelling: it is an unrelated Sanskrit word meaning truth, the second of Patanjali's yamas. The correct romanisation is **Satir**.
+The umbrella term is **Satir Model** or **Satir Growth Model**. `STST`, Satir Transformational Systemic Therapy, is the name of the clinical application only and must not be used for coaching work. The correct romanisation is **Satir**.
 
 ## Read order
 
