@@ -6,7 +6,7 @@ Last verified: 2026-08-29
 
 - Primary user: James Theeranon and the AI agents working for him across Codex, Claude Code, Gemini, and Google Antigravity.
 - Problem: reusable working practices drift, duplicate, and become hard to discover when they are scattered across agents, projects, and chat history.
-- Successful outcome: one private, portable repository lets a human choose the right workflow, lets an agent load one canonical instruction body, installs only approved packages, validates every change before release, and exposes current project truth without relying on prior chat.
+- Successful outcome: one portable repository lets a human choose the right workflow, lets an agent load one canonical instruction body, installs only approved packages, validates every change before release, and exposes current project truth without relying on prior chat.
 
 ## Authority
 
@@ -60,7 +60,7 @@ Last verified: 2026-08-29
 
 - Data: Git-tracked Markdown, JSON, scripts, tests, templates, reviewed packs, and local discovery symlinks. There is no application database.
 - Permissions: repository-local edits and tests are ordinary work; install changes managed discovery links and this checkout's local Git hook configuration; external publication follows the accepted repository release authority.
-- Integrations: private GitHub origin plus local skill discovery directories for Codex, Claude Code, Gemini, and Google Antigravity.
+- Integrations: public GitHub origin, the Claude Code plugin marketplace declared at `.claude-plugin/marketplace.json`, and local skill discovery directories for Codex, Claude Code, Cursor, Gemini, and Google Antigravity.
 - External actions: the installer may create or refresh managed symlinks and local Git hooks; it must not overwrite unrelated real files or directories.
 - Failure behavior: dirty work, non-fast-forward ancestry, or failed candidate validation stops update before the checkout moves. Validation failures stop install before managed links change. Doctor reports post-install link failures but does not roll back the checkout or links automatically.
 

@@ -25,7 +25,7 @@
 - Added a generated `ai-context/SRS.html` view (`render-srs` command), rendered from `PROJECT.md` and `DATA_MODEL.md`, as a read-only human-readable spec — never hand-edited, regenerated on demand.
 - Added a `Spec lock` field in `STATUS.md` (`Open` or `Locked (date, hash)`, set via the new `lock-spec` command) that `check` enforces: Open requires `SRS.html` to stay in sync before commit, Locked fails the check if `PROJECT.md`/`DATA_MODEL.md` drift from the recorded hash.
 - Added an optional `assets/git-hooks/pre-commit` template so the freshness and lock checks can run automatically before every commit instead of depending on an agent remembering.
-- Added a reverse-SRS/cross-model audit workflow step, a structured permission (role × action) matrix in `DATA_MODEL.md`, a non-functional-requirements table in `PROJECT.md`, and an opt-in per-module requirement breakdown (`ai-context/modules/<module>.md`) — all distilled from a SolutionsIMPACT "AI Systemize Business" class transcript and evaluated against the prior skill version for genuine gaps only.
+- Added a reverse-SRS/cross-model audit workflow step, a structured permission (role × action) matrix in `DATA_MODEL.md`, a non-functional-requirements table in `PROJECT.md`, and an opt-in per-module requirement breakdown (`ai-context/modules/<module>.md`) — derived from a private training transcript and evaluated against the prior skill version for genuine gaps only.
 - Migrated JamesSkills' own root-level `PROJECT.md`/`STATUS.md`/`docs/DECISIONS.md` into `ai-context/` in the same change so `scripts/validate`'s project-standard ready gate keeps passing against the skill this repository ships.
 - Recorded the full decision as `DEC-010` in `ai-context/DECISIONS.md`; migration steps for other v1 (flat-layout) projects are documented in `project-standard`'s `references/contract.md`.
 - State-tested the upgrade against every real project under `AI Workspace/` (read-only) and found `render-srs` silently dropped any section whose heading carried a trailing annotation or didn't match the template verbatim — confirmed on 0/6 real documents, including the closest real match to the template. Fixed the regex bug causing it, made a genuinely-missing heading print a `WARN` and render a flagged banner instead of a silent `Not confirmed`, and recorded the finding as `DEC-011`.
@@ -35,7 +35,7 @@
 
 - Promoted `build-framework`, `transformation-journey`, and `learning-experience-design` as the three canonical transformation-design responsibilities.
 - Reversed `design-the-course` and `design-the-journey` into compatibility aliases so formal responsibility names remain portable across AI platforms.
-- Added a source-ranked house framework registry and enforced reuse, upgrade, then new-build order before creating SolutionsIMPACT IP.
+- Added a source-ranked house framework registry and enforced reuse, upgrade, then new-build order before creating new house intellectual property.
 - Bound every registry asset to version, permitted scope, source locators, and approval state; unaudited principle and pattern names remain candidates, while the AI five-phase asset remains a pilot pattern rather than being mislabeled a framework.
 - Kept the AI five-phase journey pattern offer-specific, and kept Transformative Productivity System as one framework inside Learning Experience Design rather than the discipline itself.
 - Added purpose-specific, print-ready executive HTML contracts for framework decisions, transformation journeys, and bounded learning experiences.
@@ -64,7 +64,7 @@
 ## 0.7.1 - 2026-08-29
 
 - Demoted both learning-design packages to pilot because their names and framework ontology were never approved.
-- Scoped the five-phase model to the sourced SolutionsIMPACT AI Transformation Journey offer instead of presenting it as a universal Learning Experience model.
+- Scoped the five-phase model to one sourced transformation offer instead of presenting it as a universal Learning Experience model.
 - Recorded the conflict between the newest direct TPS-inside-LED correction and older source material rather than choosing a hierarchy silently.
 - Added Candidate Card, cross-case evidence, and legitimate-counter-case gates to prevent premature promotion and one-case overfitting.
 - Updated the installer to prune managed packages and aliases that are no longer promoted.
@@ -118,7 +118,7 @@
 - Added `sum-meet`: one source-faithful A4 portrait HTML meeting record containing every agenda as a separate zone.
 - Added `one-page-pls`: one independently usable A4 landscape artifact per detected topic or agenda, with a no-silent-loss gate.
 - Rebuilt both HTML templates around IBM Plex Sans Thai, compact density, 6px radius, restrained cards, and all-page visual QA.
-- Added a data-free SolutionsIMPACT output pack so the two generic workflows can apply brand identity without hardcoding it into their semantic logic.
+- Added a data-free brand output pack so the two generic workflows can apply brand identity without hardcoding it into their semantic logic.
 - Added migration aliases for `james-ui-standard`, `solutionsimpact-meeting-summary-full`, and `solutionsimpact-onepagesummary` without duplicating instructions.
 - Installer, doctor, and validation now operate from the typed catalog rather than assuming every skill belongs in `skills/core`.
 

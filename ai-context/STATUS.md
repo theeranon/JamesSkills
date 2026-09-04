@@ -5,7 +5,7 @@ Authority: `ai-context/PROJECT.md`
 Spec lock: Open
 Current version: 2.0.0
 Current branch: main
-Repository: private `theeranon/JamesSkills`
+Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
 

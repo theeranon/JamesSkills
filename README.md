@@ -652,7 +652,7 @@ Skills arrive namespaced, so `/james-core:are-you-sure` always resolves to this 
 claude plugin marketplace update james-skills && claude plugin update james-core@james-skills
 ```
 
-The repository is private, so Claude Code uses your existing git credentials. If background updates fail, run `gh auth setup-git` once.
+The repository is public, so no authentication is needed to add the marketplace or install.
 
 ### Route B — local install (recommended if you edit the skills)
 
@@ -696,7 +696,7 @@ for p in james-core james-productivity james-software; do claude plugin uninstal
 
 | Platform | Mechanism | Status |
 |---|---|---|
-| Claude Code | plugin marketplace by default, `~/.claude/skills` links when the plugins are absent | Marketplace add from a private GitHub repo, install, and skill loading all verified on macOS |
+| Claude Code | plugin marketplace by default, `~/.claude/skills` links when the plugins are absent | Marketplace add from GitHub, install, and namespaced skill loading all verified on macOS |
 | Cursor | `~/.cursor/skills` links | Files installed; Cursor's own loading not verified here |
 | Codex (ChatGPT) | `~/.codex/skills` links | Files installed; loading not verified here |
 | Gemini and Antigravity | whole plugins in `~/.gemini/*/plugins` | Files installed; loading not verified here |
