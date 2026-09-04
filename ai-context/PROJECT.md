@@ -49,6 +49,14 @@ Last verified: 2026-08-29
 | REQ-008 | Promoted skill behavior and every durable correction have representative success, same-mechanism failure, and legitimate counter-case evidence. | Deterministic contracts do not prove that every model vendor will select and follow a skill in a fresh session. Cross-platform parity is claimed only with exact platform receipts. | Package and portfolio behavior tests pass; stronger platform claims name the target and its fresh evidence. | `tests/behavioral-cases.md`; `tests/test_core_composition_contracts.py`; `scripts/validate` |
 | REQ-009 | The transformation-design portfolio exposes three stable responsibilities: reusable house frameworks, macro transformation journeys, and bounded learning experiences. | V1 excludes an organization application, employee rollout, client portal, public API, and multi-role approval workflow. External research supports house frameworks and every material claim remains cited. | All three canonical skills are promoted, installed, source-bounded, connected through stable contracts, and produce purpose-specific HTML templates that pass behavior and visual gates. | `skills/core/build-framework`; `skills/core/transformation-journey`; `skills/core/learning-experience-design`; `packs/frameworks/registry.json`; `tests/test_learning_design_contracts.py`; `tests/test_learning_design_output_contracts.py` |
 
+## Non-functional requirements
+
+- Install and update never overwrite an existing real file or directory; only managed links are created or refreshed.
+- `scripts/validate` gates every release and fails before the active system changes.
+- No credential, client record, live state, or unreviewed copyrighted original is ever committed.
+- Every canonical skill satisfies `docs/SKILL-SCHEMA.md`, enforced by `tests/test_skill_schema.py`.
+- Skills stay vendor-neutral: no product name, machine path, or platform assumption is hardcoded as a requirement.
+
 ## System boundaries
 
 - Data: Git-tracked Markdown, JSON, scripts, tests, templates, reviewed packs, and local discovery symlinks. There is no application database.

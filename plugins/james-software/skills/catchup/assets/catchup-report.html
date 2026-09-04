@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[[PROJECT_NAME]] — Catchup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5d6677;
+      --line: #d9dee8;
+      --soft: #f4f6f9;
+      --accent: #174a7e;
+      --accent-soft: #eaf1f8;
+      --warning-soft: #fff4d8;
+      --paper: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; width: 100%; height: 100%; overflow: hidden;
+      background: #e9edf2; color: var(--ink);
+      font-family: "IBM Plex Sans Thai", sans-serif;
+      font-size: 10pt; line-height: 1.4;
+      -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    body { display: flex; justify-content: center; }
+    .page {
+      width: 297mm; height: 210mm; padding: 11mm 12mm 9mm;
+      overflow: hidden; background: var(--paper); border-radius: 6px;
+      box-shadow: 0 12px 32px rgba(23, 32, 51, 0.14);
+      display: grid; grid-template-rows: auto auto 1fr auto; gap: 5mm;
+    }
+    header { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 6mm;
+      border-bottom: 1px solid var(--line); padding-bottom: 3mm; }
+    h1 { margin: 0; font-size: 17pt; font-weight: 600; letter-spacing: -0.01em; }
+    .subject { margin: 1mm 0 0; color: var(--muted); font-size: 9.5pt; }
+    .target { text-align: right; color: var(--muted); font-size: 8.5pt; line-height: 1.5; }
+    .target b { color: var(--ink); font-weight: 500; }
+    .now { background: var(--accent-soft); border: 1px solid var(--line); border-radius: 6px;
+      padding: 4mm 5mm; }
+    .now h2 { margin: 0 0 2mm; font-size: 9pt; font-weight: 600; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 0.06em; }
+    .now p { margin: 0; font-size: 11pt; line-height: 1.45; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5mm; min-height: 0; }
+    section { display: flex; flex-direction: column; min-height: 0; }
+    section h2 { margin: 0 0 2mm; font-size: 9pt; font-weight: 600; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--line); padding-bottom: 1.5mm; }
+    ul { margin: 0; padding-left: 4.5mm; overflow: hidden; }
+    li { margin-bottom: 1.8mm; }
+    li b { font-weight: 500; }
+    .state { display: inline-block; min-width: 15mm; font-size: 8pt; font-weight: 600;
+      padding: 0.4mm 1.6mm; border-radius: 6px; margin-right: 1.5mm;
+      background: var(--soft); color: var(--muted); }
+    .state.done { background: #e6f4ea; color: #17632c; }
+    .state.open { background: var(--warning-soft); color: #8a5b0a; }
+    .state.blocked { background: #fbe9e7; color: #92301f; }
+    .unknown { background: var(--warning-soft); border: 1px solid #f0d79a; border-radius: 6px;
+      padding: 3mm 4mm; font-size: 9pt; }
+    .unknown h2 { color: #8a5b0a; border: 0; padding: 0; }
+    footer { display: grid; grid-template-columns: 1fr auto; gap: 6mm; align-items: center;
+      border-top: 1px solid var(--line); padding-top: 2.5mm;
+      color: var(--muted); font-size: 8.5pt; }
+    footer b { color: var(--ink); font-weight: 500; }
+    @page { size: A4 landscape; margin: 0; }
+    @media print {
+      html, body { background: var(--paper); height: auto; }
+      .page { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <h1>[[PROJECT_NAME]]</h1>
+        <p class="subject">[[WORKSTREAM]]</p>
+      </div>
+      <div class="target">
+        <div><b>[[REPO_OR_ROOT]]</b></div>
+        <div>[[BRANCH_AND_REVISION]]</div>
+        <div>ตรวจเมื่อ [[VERIFIED_AT]] เทียบจาก [[COMPARISON_POINT]]</div>
+      </div>
+    </header>
+
+    <div class="now">
+      <h2>สถานการณ์ปัจจุบัน</h2>
+      <p>[[CURRENT_SITUATION]]</p>
+    </div>
+
+    <div class="grid">
+      <section>
+        <h2>ล่าสุดทำอะไรไป</h2>
+        <ul>[[RECENT_HISTORY_ITEMS]]</ul>
+      </section>
+      <section>
+        <h2>เช็คลิสต์ปัจจุบัน</h2>
+        <ul>[[CHECKLIST_ITEMS]]</ul>
+      </section>
+      <section>
+        <h2>ค้างอยู่ และต้องทำต่อ</h2>
+        <ul>[[OPEN_AND_NEXT_ITEMS]]</ul>
+      </section>
+    </div>
+
+    <div class="unknown">
+      <h2>ขัดกันหรือยังไม่รู้</h2>
+      [[CONFLICTS_AND_UNKNOWNS]]
+    </div>
+
+    <footer>
+      <div>งานล่าสุดของห้องนี้คือ <b>[[LAST_TASK]]</b> ตอนนี้ [[LAST_TASK_STATE]]</div>
+      <div>สิ่งที่ต้องทำถัดไปคือ <b>[[NEXT_ACTION]]</b></div>
+    </footer>
+  </div>
+</body>
+</html>

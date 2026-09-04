@@ -1,56 +1,59 @@
 ---
 name: grill-me
-description: Stress-test James's plan, decision, or idea through a branching interview with mouse-first inline controls or a text-chat fallback. Use when James says grill me, asks to sharpen thinking, or wants a decision tree challenged.
+kind: workflow
+description: Interrogate the user through a branching interview until their own goal and requirement are sharp, then recap and confirm. Use to sharpen a plan before building; not to coach the person and not to research the answer.
 ---
 
-# Grill Me — James Edition
+# Grill Me
 
-Reach shared understanding before implementation. Keep the decision-tree rigor of `grilling`; replace its type-a-number interaction with the fastest available mouse-first UI.
+Keep asking until the requirement is sharp enough to build from.
 
-## Interview logic
+## Scope
 
-1. Build a private design tree. A decision may unlock later decisions.
-2. Ask only the current **frontier**: unresolved decisions whose prerequisites are settled.
-3. Find facts yourself. Never ask James for information available from files or tools.
-4. Every question contains a specific recommendation and its reason.
-5. After each response, update the tree, expose conflicts or trade-offs, and continue with the newly unlocked frontier.
-6. Finish only when no meaningful branch remains. Show the resolved decision map and ask for final confirmation before acting.
+- Kind: workflow
+- Owns: extracting and sharpening what the user actually wants — the goal, the requirement, and whatever is nagging at them — through a branching interview that ends in a confirmed decision map.
+- Boundary: asks questions and records decisions. Finds every fact available from files and tools itself. Does not implement anything until the final confirmation is given.
 
-Do not use a fixed question count. Do not ask dependent questions in the same round. Do not turn the interview into a generic survey.
+## Do not use this when
 
-## Choose the interaction
+- The block is the person's own hesitation rather than an unclear requirement -> `coach-me`
+- The requirement is clear and options must now be compared -> `give-me-solutions`
+- The requirement is clear and the answer lies in outside evidence -> `research-it`
+- The requirement is clear and the job is to build it -> `done-for-me`
+- The problem is that the work is aimed at the wrong layer entirely -> `zoom-out`
 
-### Inline controls — default for 1–3 independent questions
+## Procedure
 
-Use the host's structured user-input control when available. Make every option clickable, place the recommendation first and label it `(แนะนำ)`, and use the control's free-form `Other` field for detailed answers.
+1. Build a private decision tree. Some decisions unlock others; most do not matter yet.
+2. Find every fact yourself first. Never ask for something a file, a repository, or a tool already answers.
+3. Ask only the current frontier: unresolved decisions whose prerequisites are already settled. Ask one at a time when the answer changes the next question; ask up to three together only when they are genuinely independent.
+4. Put a specific recommendation and its reason inside every question. A question without a recommendation transfers work to the user instead of removing it.
+5. Use the host's structured input control whenever one exists, so answers are chosen rather than typed, with the recommendation placed first and a free-text field available for anything the options miss. When no such control exists, ask in plain chat with lettered options and wait for the reply. Never ask for numeric replies to questions that could have been clickable.
+6. After each answer, update the tree, state any conflict with an earlier decision explicitly, and continue with whatever is newly unlocked. Preserve unanswered branches; never fill one from the recommendation.
+7. Report progress each round as rounds taken, decisions settled, and branches remaining.
 
-- Ask one question at a time when its answer changes the next question.
-- Ask up to three together only when genuinely independent.
-- Keep 2–3 mutually exclusive choices per inline question.
-- Never ask James to reply with `1`, `2`, `A/B`, question IDs, or comma-separated choices when clickable controls exist.
+There is no fixed number of questions and no fixed number of rounds. Continue for as long as the user is still discovering what they want.
 
-### Interactive UI — Default for Claude Desktop & Codex
+## Stop when
 
-When running on modern agent platforms, do not rely on standard text chat if an interactive UI is available.
-- **Claude Desktop (2026+):** Use the `interactive_grill_me` MCP tool. This tool leverages the MCP Apps specification to render a beautiful native iframe UI (via `server.py`) for decision-tree inputs. Do not generate HTML artifacts manually.
-- **Codex:** Use `request_user_input` (Plan mode) to render clickable choices natively.
+The user signals that it is now clear. Then recap the whole decision map — every decision, the answer chosen, the reason, the consequence, and any unresolved risk — and ask one final question: is this complete, correct, on target, and satisfying? If any part is not, keep asking. The interview ends only on that confirmation.
 
-### Text-Chat Fallback — strictly when tools are offline
+## Principles
 
-If neither `interactive_grill_me` nor `request_user_input` are available in your environment context, fallback to Text-Chat mode:
-- Ask ONE concise question at a time directly in the chat.
-- Provide clear, numbered, or bulleted options.
-- Wait for James's text reply before proceeding.
-- Never output large JSON or HTML files to the chat.
+**Socratic elicitation** — Draw the requirement out of the person through questions rather than proposing it, because a requirement they articulated is one they will recognise as wrong when it is. Source: Socratic method, as recorded by Plato
+**Recognition over recall** — Offer choices to select from rather than asking the person to compose an answer from nothing; recognising is far cheaper than retrieving. Source: Jakob Nielsen, usability heuristics, 1994
+**Value of information** — Ask next whatever answer would change the most downstream decisions, and skip anything whose answer changes nothing. Source: Ronald A. Howard, Information Value Theory, 1966
+**Never fill a silence with an assumption** — An unanswered branch stays open and visible; quietly adopting the recommendation converts a question into a fabricated decision. Source: standing rule in this library
 
-## Response handling
+## Counter-case
 
-- Treat `detail` as an override or qualification.
-- Distinguish `all selected intentionally` from `no selection`.
-- If an answer conflicts with an earlier decision, show the exact conflict and ask only what resolves it.
-- Preserve unanswered branches; never silently fill them from the recommendation.
-- Report progress as `รอบ N · ตัดสินใจแล้ว X · เหลือ Y สาขา`.
+- The user says they know exactly what they want but cannot start. The requirement is already sharp and the obstacle is personal, so `coach-me` owns it.
+- The user asks to be challenged on whether a claimed best practice is real. That needs outside evidence rather than their own preferences, so `research-it` owns it.
 
-## Completion output
+## Hand back
 
-Return a compact decision map: decision, chosen answer, reason/detail, downstream consequence, and unresolved risk. Then ask: `ยืนยันแผนนี้และให้เริ่มทำเลยไหม?`
+The resolved decision map with every decision, chosen answer, reason, downstream consequence, and unresolved risk, plus the user's explicit confirmation that it is complete, correct, on target, and satisfying.
+
+## Sources
+
+Plato, Socratic dialogues. Nielsen 1994, Ten Usability Heuristics. Howard 1966, Information Value Theory.

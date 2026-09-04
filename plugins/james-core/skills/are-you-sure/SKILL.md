@@ -1,52 +1,60 @@
 ---
 name: are-you-sure
-description: The Zero-Tolerance OCD QA gate. Run the 5-Layer verification framework to ruthlessly eliminate bugs, hardcoded values, legacy junk, and UI quirks before accepting work as done.
+kind: workflow
+description: Re-inspect a business or productivity deliverable across five layers and repair what it finds inside a declared surface. Use when work looks finished but the diligence behind it is in doubt; not for code, and not for making good work better.
 ---
 
-# `are-you-sure` (Zero-Tolerance OCD QA)
+# Are You Sure
 
-Activate this skill when the user thinks a task is "done", but wants to subject it to the ultimate ruthless quality gate.
+Go back over what was just delivered and find what nobody would ever fail it on.
 
-Your role is to act as an extremely meticulous, zero-tolerance Senior QA Engineer and Architect. You will not accept lazy work, hardcoded strings, sloppy UI, or hidden technical debt.
+## Scope
 
-## The 5-Layer OCD QA Framework
+- Kind: workflow
+- Owns: one delivered business or productivity artifact — a plan, proposal, model, analysis, document, deck, budget, process, or decision — swept across five layers and repaired in place.
+- Boundary: declare the inspection surface before starting and name it in the output. Repair only inside that surface. Anything outside it is reported, never edited.
 
-When invoked, you MUST aggressively audit the recent work or target files against these 5 layers, and **automatically fix** any violations you find.
+## Do not use this when
 
-### Layer 1: Functional & Edge Cases (The Integrity Layer)
-- **Anti-Static Bias**: Do not rely on static code reading. Omission bugs (e.g., missing state resets during sequential user actions) are invisible to static review.
-- **Mental Lifecycle Simulation**: Mentally simulate sequential user interactions (e.g., Navigate A → B → Back to A). Does the state/cache reset properly? Identify exactly *which line* clears the stale state. If it doesn't exist, it's a bug.
-- Are there hidden side-effects that will break adjacent systems?
-- Are edge cases (null inputs, simultaneous users, timeouts) handled?
-- If the plan involves business strategy, what is the fatal cascading failure?
-- **Action:** Patch the logic. Close the loopholes and insert explicit state reset logic.
+- The artifact is code, schema, data, or a deployment -> `dev-are-you-sure`
+- The doubt is about an outside claim rather than work produced here -> `research-it`
+- The work is correct and clean but unambitious, and needs a higher ceiling -> `is-that-the-best-you-can-do`
+- One rejected output must become a permanent guard against a whole failure class -> `never-again`
+- The work is simply unfinished and must be carried to a usable outcome -> `done-for-me`
+- The artifact is clean but answers the wrong question at the wrong level -> `zoom-out`
 
-### Layer 2: Anti-Laziness (The Architecture Layer)
-- Are there any hardcoded values, secrets, or magic numbers?
-- Is the logic shoved into the wrong layer (e.g., business logic in the UI)?
-- Did the previous execution take a shortcut?
-- **Action:** Refactor the lazy code into the correct structural pattern.
+## Procedure
 
-### Layer 3: Code Hygiene (The Cleanliness Layer)
-- Are there any leftover `console.log`, `print`, or commented-out blocks of dead code?
-- Are there unused imports or orphaned variables?
-- Are temporary filenames (`test2.js`, `temp_final`) still lingering?
-- **Action:** Delete the junk. Rename the files properly. Clean the workspace.
+Declare the surface first: the exact artifact or set of artifacts under inspection. Then sweep all five layers in order. Repair each finding immediately, or escalate it when repair needs a decision you do not hold.
 
-### Layer 4: OCD UI/UX (The Sensory Layer)
-- Is the UI pixel-perfect? Are padding and margins mathematically consistent?
-- Are there any annoying visual quirks (e.g., text jumping on hover, misaligned icons)?
-- Does it strictly adhere to the `make-it-james-ux` standards (e.g., IBM Plex Sans Thai)?
-- **Action:** Adjust the CSS/layout until it is visually flawless and satisfying.
+1. **Integrity.** Trace the logic end to end. Reconcile every number to a named source. Name the assumption that, if wrong, collapses the rest, and state what happens then. Find the cascading failure, not the typo.
+2. **Structure.** Find what is one-off that should be repeatable, what sits at the wrong altitude, what commitment has no owner, and what decision is being made by a document instead of a person.
+3. **Residue.** Remove placeholders, stale dates, draft figures, unresolved TBDs, copied requirement language, and contradictions between two sections that were written at different times.
+4. **Recipient.** Read it as the person who receives it. Every question they would have to ask before acting is a defect. Apply the installed wording standard rather than restating it here.
+5. **Longevity.** State what makes this expire, who owns it after handover, and what event should trigger a review.
 
-### Layer 5: Longevity (The Future-Proof Layer)
-- Will this break on the next minor update?
-- Is the code self-documenting? Are variable names highly descriptive?
-- **Action:** Rename variables for ultimate clarity. Add architecture constraints to `DECISIONS.md` if necessary to prevent future regressions.
+Report every layer as repaired, escalated, or clean. Never report a layer you did not run.
 
-## Output Format
+## Stop when
 
-After you have scanned and fixed the issues across all 5 layers, output a **Threat & Polish Report**:
-1. State clearly what lazy/sloppy things you caught and eliminated.
-2. Present the cleaned-up, rock-solid outcome.
-3. End with a confident declaration that the work is now genuinely "Done".
+All five layers have been run against the declared surface, every finding is repaired or escalated with a named owner, and the report states the surface inspected. A layer with nothing to fix is reported as clean, which is a result, not a skip.
+
+## Principles
+
+**Premortem** — Assume the deliverable has already failed badly, then work backwards to the cause; this surfaces defects that forward review consistently misses. Source: Gary Klein, Performing a Project Premortem, Harvard Business Review, 2007
+**Swiss cheese model** — Treat every layer as porous and run all five, because defects survive precisely where one layer's blind spot lines up with another's. Source: James Reason, Human Error, 1990
+**Chesterton's fence** — Do not remove anything whose purpose you cannot explain; ask why it is there before deleting it as residue. Source: G. K. Chesterton, The Thing, 1929
+**Goodhart's law** — Distrust any number in the artifact that is also a target someone is measured on, and trace it to the behaviour it now rewards. Source: Charles Goodhart, 1975, as generalised by Marilyn Strathern, 1997
+
+## Counter-case
+
+- The user asks to sweep a React dashboard for leftover debug output and hardcoded values. The mental move is identical but the layers are software layers, so `dev-are-you-sure` owns it.
+- The user asks whether a competitor's pricing claim is true. Nothing produced here is in doubt, so `research-it` owns it.
+
+## Hand back
+
+The declared inspection surface, each of the five layers marked repaired, escalated, or clean, the repaired artifact itself, and any escalation with the decision it needs and who holds it.
+
+## Sources
+
+Klein 2007, Performing a Project Premortem. Reason 1990, Human Error. Chesterton 1929, The Thing. Goodhart 1975, Monetary Relationships; Strathern 1997, Improving Ratings.

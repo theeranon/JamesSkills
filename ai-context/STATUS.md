@@ -1,26 +1,26 @@
 # Status
 
-Last verified: 2026-09-01
+Last verified: 2026-09-05
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 0.9.1
+Current version: 2.0.0
 Current branch: main
 Repository: private `theeranon/JamesSkills`
 
 ## Current outcome
 
-JamesSkills has 17 promoted canonical packages and 10 compatibility aliases installed in five configured local discovery roots. The transformation-design portfolio now has three stable responsibilities: reusable house frameworks, macro transformation journeys, and bounded learning experiences. Static contracts, two-project forward rendering, and fresh Codex plus Claude routing are verified; automatic selection is not claimed on untested platforms.
+JamesSkills v2 carries 22 promoted canonical packages and 8 compatibility aliases, every one rewritten against a single structural contract in `docs/SKILL-SCHEMA.md` and enforced by `tests/test_skill_schema.py`. Each skill declares its kind, its bounded job, the siblings that own its excluded cases, its stop condition, its named principles with attribution, and at least one counter-case. The boundary graph passes with in-degree at least one for every skill, meaning no skill's job is left unclaimed by the exclusions of its peers. Discovery links are healthy in all five configured roots.
 
 ## Done
 
-- `catalog.json` owns 17 canonical packages; all 17 are promoted.
-- `docs/SKILLS.md` covers every canonical package and alias; the coverage gate passed.
-- The four minimum project owner files exist and agree on REQ-001 through REQ-009.
-- `build-framework`, `transformation-journey`, and `learning-experience-design` have canonical packages, behavior contracts, purpose-specific HTML output contracts, and stable composition boundaries.
-- `design-the-course` and `design-the-journey` remain compatibility aliases; the formal responsibility names are canonical.
-- Two-project forward tests produced three cited HTML reports covering framework reuse, the AI Transformation macro journey, and the Codex Browser Research bounded learning experience.
-- Desktop, 390px mobile, browser print emulation, offline font, overflow, unresolved-token, and remote-resource checks passed for all three reports without generating PDFs.
-- Fresh read-only Codex and Claude sessions both routed the three implicit transformation-design cases correctly; explicit `build-framework` used house-library search and reuse-first behavior.
+- `docs/SKILL-SCHEMA.md` defines the mandatory shape for every `SKILL.md`; `tests/test_skill_schema.py` enforces it inside `scripts/validate`.
+- All 22 canonical skills were rewritten to the owner's own definitions, captured in a decision interview on 2026-09-05.
+- `are-you-sure` split into a business track and `dev-are-you-sure` for software; `prove-it` was renamed `research-it` with `prove-it` kept as an alias.
+- `tests/behavioral-cases.md` now covers all 22 packages; the seven skills that previously had no case have one.
+- `scripts/validate` was scanning the empty `skills/` directory after the plugin migration, so 7 per-skill test files and 3 HTML asset lints had not run. Paths corrected; a real failure in `test_baseon.py` surfaced and was fixed.
+- `scripts/doctor` was checking pre-migration link paths and did not understand the plugin layout used for Gemini and Antigravity. Corrected; all five roots now report zero issues.
+- `project_standard.py` stamps `project-standard/1.0` into every generated SRS and into `check` output, so a project states which standard version it follows.
+- `catchup` gained a fixed A4 landscape report template so every project's catchup page looks identical.
 
 ## In progress
 
@@ -42,7 +42,8 @@ JamesSkills has 17 promoted canonical packages and 10 compatibility aliases inst
 
 ## Next
 
-- No implementation action remains after the verified 0.9.0 commit is published to canonical `main`.
+- Decide whether the schema contract earns its own numbered requirement in `PROJECT.md`; it is currently recorded as a non-functional requirement.
+- Decide what happens to REQ-009, which names `skills/core/build-framework`, `skills/core/transformation-journey`, and `skills/core/learning-experience-design`; those packages live in the SecondBrain repository, not here, and `skills/` in this repository is empty.
 
 ## Blockers
 
@@ -50,7 +51,8 @@ JamesSkills has 17 promoted canonical packages and 10 compatibility aliases inst
 
 ## Need decision
 
-- A public name for `james-skill-router` remains unapproved; it stays internal support.
+- A public name for `skill-router` remains unapproved; it stays internal support.
+- `Satir Model` is recorded as `coach-me`'s coaching lens with `Satya` kept as an alternate spelling in the locator; its provenance card is not yet registered in `packs/knowledge`.
 - Fresh-session behavioral parity on every supported AI platform remains unproved.
 - Public hosting or release of any repository subset remains unapproved.
 

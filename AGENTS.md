@@ -12,6 +12,8 @@
 ## Working rules
 
 - One canonical instruction body per skill. Vendor adapters may add metadata, never duplicate behavior.
+- Every canonical `SKILL.md` satisfies `docs/SKILL-SCHEMA.md`. It declares its kind, its bounded job, its authority boundary, the sibling that owns each excluded case, its stop condition, its named principles as original paraphrase with attribution, and at least one counter-case.
+- A skill no sibling ever excludes toward does not have a distinct job. The boundary graph in `tests/test_skill_schema.py` fails on in-degree zero.
 - Keep every promoted package in `catalog.json`. Category determines responsibility; aliases provide migration only.
 - Name skills from the natural phrase a person uses at the moment they need the capability. Name the mental move, not an internal department.
 - A workflow skill completes one bounded job. A mode skill changes behavior for the remainder of the conversation after one activation.

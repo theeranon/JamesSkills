@@ -1,86 +1,92 @@
 ---
 name: skill-router
-description: Internal-only fallback routing reference; never select it as the primary user workflow. Use only after direct matching finds no clear canonical owner.
+kind: internal-routing
+description: Internal fallback that assigns one primary owner when no skill obviously matches. Never select it as the primary workflow, never let it produce a deliverable, and never use it when a direct owner is already clear.
 ---
 
 # Skill Router
 
-Route by the requested outcome and responsibility, not by keywords or product names.
+Find the one owner, hand over, and get out of the way.
 
-This router produces no user deliverable and never owns the work. If one canonical workflow clearly matches, stop using the router and load that owner directly. A request spanning several responsibilities still receives one real primary owner plus distinct supporting skills; it does not make `skill-router` the primary skill.
+## Scope
 
-Direct-owner rules take precedence over generic classification:
+- Kind: internal-routing
+- Owns: choosing the primary owner for a request when direct matching failed, and holding the Candidate Card gate for anything new.
+- Boundary: routes only. Produces no user deliverable, never owns the work, never creates or promotes a skill.
 
-- rejected result that must become a scoped system correction -> `never-again`
+## Do not use this when
 
-1. Try every clear direct-owner rule before using fallback classification. Classify the remaining request as a bounded workflow, persistent mode, shared standard, output workflow, knowledge lens, project context, connector, automation, or direct work.
-2. Identify the actual outcome, evidence required, risk, current authority, and remaining human decision.
-3. Choose the smallest applicable path. Mentioned products are candidates, not requirements.
-4. Compose skills only when their responsibilities are distinct and required. Apply mandatory standards and guardrails automatically.
-5. If no skill fits, handle the work directly. Treat repeated uncovered work as discovery evidence, not permission to package it immediately.
+- One canonical owner already clearly matches -> load that owner, for example `done-for-me`
+- The request spans several responsibilities but one outcome is accountable -> give that owner the job, for example `project-standard`
+- The user asked to be interrogated rather than routed -> `grill-me`
+- The problem layer itself is unclear -> `zoom-out`
 
-Before creating or promoting a skill, present one Candidate Card containing:
+## Procedure
 
-- two or three natural invocation-name options
-- the bounded job, trigger, exclusions, and output contract
-- overlap with every nearby current skill and why an upgrade or composition is insufficient
-- source map, recurrence, damage or value, cross-project reuse, and confidence
-- representative requests, failure cases, and legitimate counter-cases
-- recommendation to upgrade, merge, create as pilot, or reject
+Route by accountable outcome, never by keyword or product name. Give exactly one skill the job, add another only for a genuinely distinct responsibility, and apply standards automatically.
 
-Keep the candidate `pilot` and outside global installs until James approves the exact name and scope. Authorization to improve the repository is not naming or ontology approval.
+### The 22
 
-## Portfolio map
+- `proactive-habits` — mode: decide what is yours, batch the rest to one question.
+- `proactive-dev` — mode: plan engineering rigorously across analyst, product, architect, build, and quality roles before code.
+- `i-have-adhd` — mode: shape replies so they can be acted on without holding state.
+- `make-it-james` — standard: wording law on anything a person reads.
+- `make-it-james-ux` — standard: visual law, following the project's existing design system first.
+- `done-for-me` — finish an already-agreed task to a verified outcome.
+- `are-you-sure` — five-layer sweep and repair of a business or productivity artifact.
+- `dev-are-you-sure` — five-layer sweep plus deployment boundary chain for software.
+- `is-that-the-best-you-can-do` — measure the gap to the ceiling and spend effort closing it.
+- `research-it` — settle one claim with outside evidence, official and real-user.
+- `never-again` — write one rejected result into a force-loaded lesson with regressions.
+- `zoom-out` — climb to strategy and hold action until the direction is agreed.
+- `give-me-solutions` — compare candidates in this context and name the best.
+- `grill-me` — interrogate until the requirement is sharp, then recap and confirm.
+- `coach-me` — move a person with questions only, always positive.
+- `baseon` — apply or compare registered lenses against a real case.
+- `catchup` — reconstruct verified current state onto the standard catchup page; not ordinary active-task progress.
+- `sum-meet` — one auditable meeting record holding every agenda.
+- `one-page-pls` — one self-contained page per independent topic.
+- `final-it` — choose the serving format and finish it, when nothing narrower owns it.
+- `project-standard` — create or repair the versioned project contract.
+- `skill-router` — this fallback.
 
-- `zoom-out`: reframe the system and responsibility boundary before solving.
-- `give-me-solutions`: research real external options and prepare comparable decision material.
-- `baseon`: apply or compare a named framework, book, or knowledge lens.
-- `done-for-me`: own authorized implementation through the usable outcome.
-- `prove-it`: verify a claim at the recipient, provider, persistence, or production boundary that matters.
-- `never-again`: convert a rejected result into a scoped system correction and counter-tested guard.
-- `is-that-the-best-you-can-do`: aggressively self-critique and elevate a mediocre draft to its absolute limit.
-- `are-you-sure`: apply the zero-tolerance OCD QA framework to eliminate bugs, hardcoding, legacy junk, and UI quirks before accepting work.
+### Choosing
 
-- `catchup`: reconstruct verified current state after a continuity gap, agent handoff, or suspected stale project status; not ordinary active-task progress or one isolated completion claim.
-- `project-standard`: create or repair the vendor-neutral project contract when project truth is missing or drifting.
-- `sum-meet`: produce one detailed meeting record containing every agenda.
-- `one-page-pls`: produce one self-contained one-page artifact per topic or agenda.
-- `final-it`: select and finish the recipient-ready artifact when no more specific output workflow owns it.
-- `i-have-adhd`: persistent communication mode that composes with the primary workflow.
-- `coach-me`: sparring partner and root-cause behavioral/mindset coach.
-- `make-it-james`: automatic recipient-facing standard that composes with the selected output for wording and tone.
-- `make-it-james-ux`: automatic visual/UI standard for recipient-facing outputs.
+1. Match the accountable outcome, then the evidence it requires, then the authority it needs. A skill that only reports is never chosen for work that must change something.
+2. Prefer the most specific owner. `final-it` is chosen only when no narrower output skill owns the artifact.
+3. Preserve any active mode rather than treating it as the primary job.
+4. Apply `make-it-james` and `make-it-james-ux` automatically to recipient-facing results.
+5. Use `zoom-out` first only when the problem layer or the outcome is genuinely unclear.
+6. When nothing fits, do the work directly. Repeated uncovered work is discovery evidence, not permission to package.
 
-## Composition order
+Common valid chains: `zoom-out` then `give-me-solutions`; `research-it` then `give-me-solutions`; `proactive-dev` then `done-for-me` then `dev-are-you-sure`; `sum-meet` or `one-page-pls` then the standards; `never-again` then the affected workflow.
 
-1. Preserve any active mode.
-2. Use `zoom-out` first only when the problem layer or outcome is wrong or unclear.
-3. Give one primary workflow ownership of the job. Add another workflow only for a distinct responsibility.
-4. Use the most specific output skill; use `final-it` only when no narrower output owns the artifact.
-5. Apply `make-it-james` and `make-it-james-ux` to every recipient-facing result and `prove-it` at the actual completion boundary.
+### Candidate Card
 
-Common valid compositions:
+Before any new skill, name, alias, or promotion, present one card: two or three natural name options; the bounded job, trigger, exclusions, and output contract; overlap with every nearby skill and why an upgrade or composition is insufficient; source map, recurrence, and confidence; representative requests, failure cases, and a legitimate counter-case; and a recommendation to upgrade, merge, create as pilot, or reject. Keep the candidate at pilot and outside global installs until the owner approves the exact name and scope. Authority to improve the repository is never naming approval.
 
-```text
-zoom-out -> give-me-solutions
-done-for-me -> prove-it
-sum-meet or one-page-pls -> make-it-james + make-it-james-ux -> prove-it
-project-standard -> done-for-me -> prove-it
-never-again -> affected workflow -> regression and counter-case proof
-```
+Do not load a live personal-context adapter merely because the owner is personal or the work is strategic. Activate one only when the outcome genuinely depends on current cross-channel state, and never let it become the primary workflow.
 
-Do not load a whole chain merely because the names are related. Each added skill must own a distinct decision or deliverable.
+## Stop when
 
-Use `baseon` when the outcome is applying or comparing a named framework, book, or knowledge model. Register a new book as a source first; do not create a new skill or lens merely because its title appears in the request. Treat `wealth-dynamics` and `talent-dynamics` as shortcuts to the same Dynamics lens. Treat `wealth-spectrum` as a separate lens even though it shares the same creator lineage.
+One primary owner is named and loaded, any additional skill present owns a genuinely distinct responsibility, and this router has produced nothing else.
 
-`catchup` is promoted for bounded continuity recovery; do not trigger it for ordinary progress inside an active task or one isolated completion claim.
+## Principles
 
-Route a rejected or absurd output and its failure class to `never-again`. A system correction may later expose a reusable candidate, but the two jobs are not interchangeable.
+**Route by outcome, not vocabulary** — Assign the owner from what must become true, because a product name in the request is a candidate rather than a requirement. Source: standing rule in this library
+**Most specific owner wins** — Prefer the narrowest skill that fully covers the job, so the general fallback never competes with a specialist. Source: standard dispatch principle; specific attribution uncertain
+**One accountable owner** — Exactly one skill is answerable for the outcome; shared ownership produces work nobody finishes. Source: single responsible individual practice; specific attribution uncertain
+**Naming is an owner decision** — Never create, rename, or promote a skill without an approved Candidate Card, because a name silently reshapes the whole portfolio. Source: standing rule in this library
 
-Duration does not determine ownership. The final accountable outcome does. Internal create, audit, repair, and improve states are inferred and never become user-required commands.
+## Counter-case
 
-Prefer project instructions when they express a more specific accepted decision.
+- The user asks to finish a task whose plan is already agreed. A direct owner is obvious, so `done-for-me` loads immediately and this router is never selected.
+- A request touches research, building, and delivery. It still gets one primary owner per stage rather than making this router the primary skill.
 
-## Live-context adapter boundary
+## Hand back
 
-Do not load JamesOS or another personal live-context adapter merely because James owns the task or the work is strategic. Activate one only when the outcome genuinely depends on current cross-channel context, commitments, people or owner routing, a secretary queue, personal operating state, or an explicit request for that system. If the current task or project already provides authoritative requirements and evidence, use those sources and keep the context adapter out. A context adapter supplies missing live state; it never becomes the primary workflow by default.
+The named primary owner, any supporting skill with the distinct responsibility it holds, and nothing else. This router never returns a deliverable.
+
+## Sources
+
+No external work is paraphrased above; the principles are standing rules of this library except where marked uncertain.

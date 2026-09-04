@@ -13,7 +13,7 @@ from io import StringIO
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[5]
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "knowledge_library.py"
 SPEC = importlib.util.spec_from_file_location("knowledge_library", SCRIPT)
 assert SPEC and SPEC.loader

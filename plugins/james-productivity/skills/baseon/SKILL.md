@@ -1,75 +1,60 @@
 ---
 name: baseon
-description: Base a real decision on a named framework, book, research source, or reusable knowledge lens while separating source claims from case evidence and inference. Use when the user asks to analyze a person, team, business, plan, or problem through Wealth Dynamics, Talent Dynamics, Wealth Spectrum, or another knowledge pack, compare lenses, or add a new source to the library.
+kind: knowledge-lens
+description: Apply or compare registered frameworks, books, and models against a real case while keeping source claims separate from evidence and inference. Use to interpret a situation through named knowledge; not to research new sources and not to decide.
 ---
 
 # Base On
 
-Use knowledge as a lens, not a verdict.
+Use the model as a lens on the evidence, never as a verdict about the person.
 
-## Choose the mode
+## Scope
 
-- **Apply:** use one or more existing lenses on a real question.
-- **Compare:** run the same evidence through multiple lenses without blending their labels.
-- **Intake:** register a framework, book, paper, course, or James-owned model for later use.
+- Kind: knowledge-lens
+- Owns: applying or comparing registered lenses against a real question, and registering new sources into the library.
+- Boundary: reads registered packs and case evidence, and writes source and lens records. Never promotes an inference to an official result, never blends two frameworks into one label, and never becomes a sole hiring, pay, investment, or clinical rule.
 
-## Apply or compare
+## Do not use this when
 
-1. State the real question, desired outcome, decision boundary, and facts already known.
-2. From this skill directory, list the library with `python3 scripts/knowledge_library.py list`. Select the smallest relevant lens set. Do not invoke a lens merely because its name was mentioned.
-3. Resolve every selected pack with `python3 scripts/knowledge_library.py show <lens-id>`, then read its entrypoint, concepts, applications, limitations, manifest, and referenced source cards.
-   - `wealth-dynamics` and `talent-dynamics` resolve to one shared Dynamics lens. Talent Dynamics is the team and organizational adaptation of the same model.
-   - `wealth-spectrum` is a separate stage model. Shared creator lineage does not make it the same science or permit blending the two lenses.
-4. Establish the subject input state:
-   - `official_user_declared`: the user supplied or confirmed an official result.
-   - `working_hypothesis`: an inference with confidence, alternatives, and disconfirming evidence.
-   - `unknown`: evidence is insufficient; discuss observable behavior or operating conditions instead.
-   - A stored profile label without a user-confirmed official report remains a prior interpretation. Downgrade it to `working_hypothesis` with `as_of`, confidence, alternatives, and review triggers even when an older profile file states it as fact.
-5. Keep four layers visibly separate:
-   - **Case fact:** verified observation, result, constraint, or current metric.
-   - **Source claim:** what the framework author or source says, with source ID and locator.
-   - **Inference:** how the lens may explain this case, with confidence and a competing explanation.
-   - **Action:** a reversible experiment or decision implication with a success and revision rule.
-6. If lenses disagree, show the disagreement. Never average several frameworks into a synthetic personality label. When applying Dynamics and Wealth Spectrum together, keep the preferred-path hypothesis separate from the current-stage hypothesis.
-7. Drop a lens when it does not materially change the question, options, or action.
+- The source is not registered yet and the need is outside evidence about a claim -> `research-it`
+- Options must be compared and one recommended -> `give-me-solutions`
+- The problem layer itself is unclear -> `zoom-out`
+- A person is stuck and needs to be moved rather than analysed -> `coach-me`
+- A reusable model must be built rather than applied -> `skill-router` for a Candidate Card
 
-## Intake new knowledge
+## Procedure
 
-Treat a book as a source first. It becomes a lens only when it has a reusable model and a recurring use case.
+1. State the real question, the decision it serves, and the case facts already established. Evidence comes before any framework label.
+2. List the library with `python3 scripts/knowledge_library.py list` from this skill directory and select the smallest relevant lens set. A lens is not invoked merely because its name appeared in the request. Never select a `draft` or `retired` pack for a real decision.
+3. Resolve each selected pack with `python3 scripts/knowledge_library.py show <lens-id>` and read its entrypoint, concepts, applications, limitations, manifest, and source cards. Read [references/pack-contract.md](references/pack-contract.md) before changing any pack. `wealth-dynamics` and `talent-dynamics` resolve to one shared Dynamics lens, Talent Dynamics being its team adaptation; `wealth-spectrum` is a separate stage model whose shared creator lineage never permits blending the two.
+4. Establish the subject input state honestly as `official_user_declared` when the user supplied or confirmed an official result, `working_hypothesis` when it is an inference carrying confidence, alternatives, and disconfirming evidence, or `unknown` when the evidence is insufficient. A stored profile label without a user-confirmed official report remains a prior interpretation: downgrade it to `working_hypothesis` with its date, confidence, alternatives, and review triggers, even when an older profile file states it as fact.
+5. Keep four layers visibly separate throughout. **Case fact** is a verified observation, result, constraint, or current metric. **Source claim** is what the framework or author says, with its source identifier and locator. **Inference** is how the lens may explain this case, with confidence and a competing explanation. **Action** is a reversible experiment or decision implication with a success and a revision rule.
+6. When lenses disagree, show the disagreement. Never average several frameworks into one synthetic type.
+7. End with a reversible experiment carrying a success rule and a revision rule. Drop any lens that did not change the question, the options, or the action.
 
-1. Register exact provenance: creator, edition, date, URL or ISBN, lawful-access context, rights status, and SHA-256 when a local file exists.
-2. Keep full books, paid reports, assessments, diagrams, and training assets outside Git unless redistribution rights are explicit.
-3. Create original paraphrased knowledge cards with stable claim IDs and page, chapter, or URL locators.
-4. Add counterevidence, limitations, version differences, outdated examples, and prohibited uses.
-5. Define questions, reversible experiments, and behavioral fixtures that prove how the knowledge changes work.
-6. Validate before promotion with `python3 scripts/knowledge_library.py validate`.
+To register new knowledge, treat the work as a source first. Record creator, edition, date, locator or identifier, lawful-access context, rights posture, and a hash when a local file exists. It becomes a lens only when it has a reusable model and a recurring use case. Copyrighted originals stay outside the repository. Never reproduce proprietary test items, scoring keys, official reports, or diagrams in Git.
 
-Use `new-source` to register a source without inventing a new lens. Use `new-lens` only when the model deserves an independent application surface. See [pack contract](references/pack-contract.md).
+## Stop when
 
-## Hard boundaries
+Each selected lens has been applied separately with its four layers kept apart, disagreements are visible, and one reversible experiment is defined. A lens that changes nothing is dropped rather than reported.
 
-- Never infer an official assessment result from chat, tone, job title, or a short quiz.
-- Never select a `draft` or `retired` source or lens for Apply or Compare. Only `reviewed-private` and `promoted` material is runtime-ready.
-- Never reproduce proprietary test items, scoring logic, official reports, certification language, or branded visual systems.
-- Never use a framework as the sole rule for hiring, firing, pay, credit, investment, medical, or clinical decisions.
-- Never turn a current stage into a permanent identity. Time-sensitive hypotheses require an `as_of` date and review trigger.
-- Never move private subject data into a portable knowledge pack. Keep it in the subject's profile or project context and join it only at runtime.
-- Name the framework when attribution matters, but never imply affiliation, accreditation, or endorsement.
+## Principles
 
-## Output contract
+**A lens explains, it does not decide** — Report what the model illuminates about the evidence and never let a label replace observed results, cash flow, or work samples. Source: standing rule in this library
+**Do not blend frameworks** — Keep each model's constructs inside its own boundary, because averaging two models produces a label neither source supports. Source: standing rule in this library
+**Barnum effect** — Treat any reading that would feel true to almost anyone as evidence of nothing, and require a claim the case could have failed. Source: Bertram R. Forer, 1949
+**Falsifiability of a profile** — State what evidence would disconfirm the interpretation before offering it, or present it as unknown. Source: Karl Popper, The Logic of Scientific Discovery, 1934
 
-Give the useful conclusion first, then enough traceability to challenge it:
+## Counter-case
 
-1. What the evidence says now.
-2. What the selected lens adds and why it fits.
-3. What does not fit, remains unknown, or has a competing explanation.
-4. What changes in the decision or next experiment.
-5. Lens version, source IDs, locators, and confidence when the result will be reused.
+- The user asks which personality or productivity framework the team should adopt. That is a choice between candidates rather than an application of one, so `give-me-solutions` owns it.
+- A newly purchased book is mentioned by title. It is registered as a source with its provenance; it does not become a lens or a skill because its name appeared.
+- Two frameworks share a creator but solve different problems. They stay separate lenses; shared lineage is not shared science.
 
-For a short conversational request, compress the structure but preserve all five meanings.
+## Hand back
 
-## Interactive UI & Output Optimization
+The question, the lenses selected and why, the four layers kept separate, any disagreement between lenses shown rather than resolved, and one reversible experiment with its success and revision rules.
 
-- **MCP Integration:** When running in Claude Desktop (2026+), utilize the `interactive_baseon` MCP tool to render a native UI for selecting frameworks and displaying layer separation.
-- **Codex Native:** Use `request_user_input` if Plan Mode is active to query options from the user instead of typing text.
-- **Chat Fallback:** If native UI tools are unavailable, enforce structured text chat. Do not output massive markdown files unless requested.
+## Sources
+
+Forer 1949, The Fallacy of Personal Validation. Popper 1934, The Logic of Scientific Discovery. Registered packs at `packs/knowledge/`.

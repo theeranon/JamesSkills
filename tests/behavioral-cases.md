@@ -2,7 +2,7 @@
 
 These cases test decisions and observable invariants, not exact wording.
 
-## Give Me Solutions
+## Give Me Solutions — `give-me-solutions`
 
 Request: Choose a primary communication platform for James's executive office.
 
@@ -18,7 +18,7 @@ Fails when:
 - one product is declared the answer without comparison
 - official marketing is treated as real-world reliability proof
 
-## Done For Me
+## Done For Me — `done-for-me`
 
 Request A: Finish an application whose production credential is not available yet.
 
@@ -47,7 +47,7 @@ Fails when:
 - the agent performs half the work and manufactures `พิมพ์เคาะ` as the next action
 - a routine checkpoint is presented as a new user decision
 
-## I Have ADHD
+## I Have ADHD — `i-have-adhd`
 
 Request: Activate ADHD mode, then compare several architecture options in a later turn.
 
@@ -65,7 +65,7 @@ Fails when:
 - necessary evidence disappears in the name of brevity
 - eight case messages arrive as eight interruptions or an edited old message hides a state change
 
-## Final It
+## Final It — `final-it`
 
 Request: Finalize a README, then finalize an HTML dashboard.
 
@@ -79,7 +79,7 @@ Fails when:
 - every output is forced into a designed visual artifact
 - the dashboard ships without rendered visual inspection
 
-## Make It James
+## Make It James — `make-it-james`
 
 Request: Create a Thai dashboard and a recipient-facing Markdown report.
 
@@ -94,7 +94,7 @@ Fails when:
 - a CSS font-family declaration is treated as proof that the rendered font loaded
 - an HTML report is turned into a dashboard by default or global shrinking is used to hide one page defect
 
-## Sum Meet
+## Sum Meet — `sum-meet`
 
 Request: Summarize a transcript containing three agendas and a disputed owner into a printable meeting record.
 
@@ -113,7 +113,7 @@ Fails when:
 Legitimate counter-case:
 - when James explicitly requests a PDF, or an authoritative recipient constraint for one fixed print file is directly confirmed, produce it from the verified canonical HTML and inspect both
 
-## One Page Please
+## One Page Please — `one-page-pls`
 
 Request: Turn a source containing three independent agendas into one-page briefs.
 
@@ -127,7 +127,7 @@ Fails when:
 - material content is silently dropped or hidden to force fit
 - a single rendered page is used as proof for all outputs
 
-## Critical Path Before Optional Completeness
+## Critical Path Before Optional Completeness — `done-for-me`
 
 Request: Adapt an existing proven skill, install it globally, and push it.
 
@@ -140,7 +140,7 @@ Must:
 Fails when:
 - a usable package and push are delayed by unrelated audit, documentation, taxonomy, or exhaustive QA work
 
-## Project Standard
+## Project Standard — `project-standard`
 
 Request: Establish one project contract that Claude, Codex, Gemini, and a new human can use without relying on chat history.
 
@@ -165,7 +165,7 @@ Fails when:
 - agents receive different requirement sets or overlapping write ownership
 - a parallel store, table, or identity path appears without a requirement, decision, migration, and rollback record
 
-## Base On
+## Base On — `baseon`
 
 Request: Use `/baseon` to analyze James's executive office through Talent Dynamics and Wealth Spectrum, then add a newly purchased book to the library.
 
@@ -308,7 +308,7 @@ Fails when:
 
 Source trace: owner-approved future offer contract.
 
-## Zoom Out
+## Zoom Out — `zoom-out`
 
 Request: Decide whether Telegram, Lark, or a PWA should become the executive-office system after a notification failure.
 
@@ -323,9 +323,9 @@ Fails when:
 - one bad Telegram card becomes a whole-stack replacement decision
 - a mentioned product becomes a requirement before the role and outcome are defined
 
-## Prove It
+## Dev Are You Sure — `dev-are-you-sure`
 
-Request: Verify a PWA claimed ready because localhost, tests, lint, and build pass.
+Request: A PWA is claimed ready because localhost, tests, lint, and build all pass.
 
 Must:
 - state the exact promise and target repository, revision, environment, account, route, and recipient that the proof covers
@@ -338,7 +338,7 @@ Fails when:
 - a local page or green test suite is treated as production proof
 - an agent report substitutes for inspecting the claimed outcome
 
-## Never Again
+## Never Again — `never-again`
 
 Request: A birthday message was ranked as James's most important case.
 
@@ -351,7 +351,7 @@ Fails when:
 - `HBD` becomes a blacklist keyword
 - every social message is suppressed, including a real deadline, money, client risk, or direct ask
 
-## James Skill Router
+## Skill Router — `skill-router`
 
 Request: Research an executive-office platform, implement the chosen path, deliver a recipient-facing decision artifact, and verify it.
 
@@ -366,7 +366,7 @@ Fails when:
 - a new skill is created before a Candidate Card and exact name/scope approval
 - JamesOS is loaded for generic repo, research, writing, architecture, or artifact work whose authority is already present in the task or project
 
-## Catchup
+## Catchup — `catchup`
 
 Request A: Return to an existing repository whose `STATUS.md` says clean and ready, but Git contains a newer commit, dirty user work, and no configured upstream.
 
@@ -403,7 +403,7 @@ Fails when:
 - ordinary active-task progress triggers project reconstruction
 - a single disputed claim becomes a broad status or history audit
 
-## Project Standard Self-Application
+## Project Standard Self-Application — `project-standard`
 
 Request A: A repository ships `project-standard` as a promoted shared standard, but its own project contract is missing.
 
@@ -432,3 +432,181 @@ Must:
 
 Fails when:
 - every routine edit causes a full documentation rewrite
+
+## Proactive Habits — `proactive-habits`
+
+Request: Activate the mode, then hand over a task containing six reversible implementation choices and one irreversible external send.
+
+Must:
+- settle all six reversible choices without asking, and say what was decided
+- continue every path that does not depend on the send
+- collect the irreversible send and present it once, at the end, with a recommendation and its reason
+- never end a turn awaiting instructions, asking whether to continue, or recapping the request back
+
+Fails when:
+- any reversible choice is escalated as a question
+- the irreversible send is performed because the answer seemed obvious
+- six separate questions arrive as six interruptions
+- work stops entirely while one item waits
+
+Legitimate counter-case:
+- the user explicitly asks to be shown options rather than have the choice made; `give-me-solutions` owns it and deciding for them is the failure
+
+## Proactive Dev — `proactive-dev`
+
+Request: Build a new billing service in a project whose `ARCHITECTURE.md` records a single Postgres source of truth.
+
+Must:
+- restate the actual requirement separately from what was said, and fix done-criteria before design
+- read `ARCHITECTURE.md` and the project contract before proposing structure
+- verify that each fact has one source of truth and that no parallel store or duplicated identity path is introduced
+- split roles into sub-agents when the work is large enough to check independently, giving each the same requirement IDs, base revision, owned paths, allowed actions, forbidden external effects, and acceptance evidence
+- state failure mode, rollback, and blast radius before any mutating action
+- report what is finished, running, and blocked without being asked
+
+Fails when:
+- code is written before done-criteria exist
+- a second store or identity path appears without a recorded decision and rollback
+- one product name such as a specific backend-as-a-service is treated as the architecture for every project
+- the quality check is performed by the same reasoning that wrote the code on high-risk work
+
+Legitimate counter-case:
+- a plan was already accepted last week and only execution remains; `done-for-me` owns it and adding a planning gate is the failure
+
+## Are You Sure — `are-you-sure`
+
+Request: A five-year business plan is declared finished; sweep it.
+
+Must:
+- declare the inspection surface before starting and name it in the output
+- run all five layers and mark each repaired, escalated, or clean
+- reconcile every number to a named source and name the assumption whose failure collapses the rest
+- repair only inside the declared surface, and report anything outside it without editing
+- escalate any finding whose repair needs a decision the agent does not hold
+
+Fails when:
+- the surface is left as recent work and edits reach files this task never touched
+- a layer is skipped silently rather than reported clean
+- the sweep expands into questioning the business strategy itself
+- a number is corrected to something plausible rather than traced to its source
+
+Legitimate counter-case:
+- an element exists whose purpose is not understood; it is questioned rather than deleted as residue
+
+## Dev Are You Sure additional case — `dev-are-you-sure`
+
+Request: A React dashboard is declared done after tests, lint, and build pass locally.
+
+Must:
+- declare the changed-files surface and inspect only it
+- simulate sequential use and name the exact line that resets state on each transition, or record its absence as the defect
+- mark each of the four boundary links passed, failed, not tested, or not applicable
+- defer interface rules to the installed visual standard rather than restating them
+- report untested as untested
+
+Fails when:
+- a green local suite is presented as production evidence
+- evidence from a different branch, environment, or account is treated as transferable
+- files outside the declared surface are renamed or deleted
+
+## Is That The Best You Can Do — `is-that-the-best-you-can-do`
+
+Request: A correct but shallow market analysis is returned and the user asks whether that is the best available.
+
+Must:
+- state the ceiling for this artifact and this recipient before touching the work
+- measure concretely where the current result sits and which dimension is furthest behind
+- scale effort to the gap, giving each parallel agent a distinct angle rather than the same instruction
+- gather real evidence when the gap is evidence rather than writing more confidently around the hole
+- keep and name what already earned its place in the original
+
+Fails when:
+- new requirements, features, or scope the user never asked for are invented
+- the result is longer, denser, or more elaborately worded without added substance
+- effort continues past the point where another pass changes nothing
+- the ceiling is never stated, so improvement cannot be checked
+
+Legitimate counter-case:
+- inspection reveals the numbers do not reconcile; that is a defect and `are-you-sure` owns it
+
+## Research It — `research-it`
+
+Request: The user is unsure whether a claimed best practice actually holds for a team of their size.
+
+Must:
+- restate the claim as one falsifiable sentence and name what would prove it wrong
+- record the official position first, then deliberately search for practitioners who ran it long enough to be disappointed
+- mark each source with its date and whether its author had a commercial stake
+- keep verified fact, source claim, independent corroboration, and inference visibly separate
+- return a verdict of supported, contradicted, conditional, or unsettled with the condition that would change it
+
+Fails when:
+- vendor documentation is treated as outcome evidence
+- the disconfirming search is skipped, or is performed and not reported when it found nothing
+- one dramatic failure story is presented as a rate
+- an undated source is used as current
+- the skill picks a winner among several candidates instead of settling one claim
+
+Legitimate counter-case:
+- the official source is the only one that exists for a brand-new specification; that is reported as a stated limitation rather than padded with unrelated accounts
+
+## Coach Me — `coach-me`
+
+Request: The user says they know what to do about a stalled client conversation but cannot make themselves do it.
+
+Must:
+- ask questions only, and keep every question positive and forward-facing
+- work beneath the behavior through feeling, assumption, expectation, and what they actually want
+- reflect back in the user's own words before asking the next question
+- size the next step to where the person actually is
+- end with the user naming their own next action, in their own words, with a time
+
+Fails when:
+- advice, a plan, a template, or a message to copy is produced
+- backend work, research, or artifacts are delivered in place of coaching
+- a question is really a criticism in question form
+- the agent supplies the next action and the user merely agrees
+
+Legitimate counter-case:
+- a fact is genuinely missing that the person cannot supply from inside themselves; it is answered or handed to `research-it`, then coaching resumes
+
+## Grill Me — `grill-me`
+
+Request: The user asks to be grilled on a half-formed plan across several rounds.
+
+Must:
+- find every available fact from files and tools before asking anything
+- ask only the current frontier, one at a time when the answer changes the next question
+- put a specific recommendation and its reason inside every question
+- use the host's structured input control when one exists, with the recommendation first, and fall back to lettered options in chat when none exists
+- state any conflict with an earlier decision explicitly rather than overwriting it
+- continue for as many rounds as the user needs, with no fixed question or round count
+- on the user's signal that it is clear, recap the full decision map and ask whether it is complete, correct, on target, and satisfying
+- keep asking when that final answer is not yes
+
+Fails when:
+- the user is asked for something a file or tool already answers
+- an unanswered branch is quietly filled from the recommendation
+- the interview ends because the agent decided no branches remained
+- the recap is skipped, or the closing question is replaced with a bare request to start
+- numeric replies are requested where clickable options were available
+
+## Make It James UX — `make-it-james-ux`
+
+Request: Style a dashboard inside a project that already uses a component library with its own typeface and 4px radii, then style a second one in a project with no design system.
+
+Must:
+- inspect the project for an existing design system before any visual decision, and follow it in the first case including its typeface and radii
+- apply the house fallback only in the second case: IBM Plex Sans Thai, minimal and white, compact density, 6px radius
+- keep interface copy free of meta copy, progress narration, and machine-authorship labels
+- run strict lint and confirm the rendered typeface actually loaded
+- deliver HTML for a print-ready request and create a PDF only on explicit request
+
+Fails when:
+- the house typeface or radius overrides an existing design system
+- a CSS font declaration is accepted as proof the font loaded
+- a decorative left rail, gradient, or oversized radius is introduced
+- a PDF is produced from words such as A4, print-ready, final, shareable, or client-facing
+
+Legitimate counter-case:
+- the phrase describing machine authorship appears as the subject of a data label rather than as a byline; it stays

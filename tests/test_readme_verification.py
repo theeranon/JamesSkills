@@ -2,7 +2,7 @@
 """Automated verification harness for JamesSkills README.md and visual assets.
 
 Enforces standards from ai-context/README_STANDARD.md and DEC-012:
-- Exactly 21 canonical skills from catalog.json are documented in the Scannable Directory Table.
+- Every canonical skill in catalog.json is documented in the Scannable Directory Table.
 - The Iconic Showcase features valid Before/After comparison tables.
 - Natural coexistence of English and Thai across the documentation.
 - All image links resolve to non-empty assets on disk.
@@ -15,6 +15,9 @@ import re
 import subprocess
 import sys
 import unittest
+
+# Single place the roster size is asserted. Update when the catalog roster changes.
+EXPECTED_CANONICAL = 22
 
 ROOT = Path(__file__).resolve().parents[1]
 README_PATH = ROOT / "README.md"
@@ -41,15 +44,15 @@ class TestReadmeContentCompleteness(unittest.TestCase):
         ]
 
     def test_catalog_has_exactly_21_canonical_skills(self) -> None:
-        """Verify catalog.json contains exactly 21 canonical skills."""
+        """Verify catalog.json canonical skill count matches the documented roster."""
         self.assertEqual(
-            21,
+            EXPECTED_CANONICAL,
             len(self.canonical_skills),
-            f"Expected 21 canonical skills in catalog.json, found {len(self.canonical_skills)}: {self.canonical_skills}",
+            f"Expected {EXPECTED_CANONICAL} canonical skills in catalog.json, found {len(self.canonical_skills)}: {self.canonical_skills}",
         )
 
     def test_all_21_canonical_skills_documented_in_readme(self) -> None:
-        """Verify all 21 canonical skills from catalog.json are documented in README directory."""
+        """Verify every canonical skill from catalog.json is documented in the README directory."""
         missing = []
         for skill_name in self.canonical_skills:
             pattern = re.compile(rf"[`/]{re.escape(skill_name)}[`/]", re.IGNORECASE)

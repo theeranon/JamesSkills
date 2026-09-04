@@ -20,7 +20,7 @@ while IFS= read -r skill_file; do
     echo "FAIL missing description: $skill_file"
     errors=$((errors + 1))
   fi
-done < <(find "$repo_dir/skills" "$repo_dir/aliases" -name SKILL.md -type f | sort)
+done < <(find "$repo_dir/plugins" "$repo_dir/aliases" -name SKILL.md -type f | sort)
 
 if [[ "$count" -eq 0 ]]; then
   echo "FAIL no skills found"
@@ -42,7 +42,7 @@ import sys
 root = pathlib.Path(sys.argv[1])
 catalog = json.loads((root / "catalog.json").read_text(encoding="utf-8"))
 items = catalog.get("skills", [])
-if catalog.get("schema_version") != 1 or not items:
+if catalog.get("schema_version") != 2 or not items:
     raise SystemExit("FAIL invalid or empty catalog")
 
 names = [item["name"] for item in items]
@@ -106,7 +106,7 @@ python3 "$repo_dir/plugins/james-software/skills/project-standard/scripts/projec
 
 while IFS= read -r test_file; do
   python3 "$test_file"
-done < <(find "$repo_dir/skills" -path '*/tests/test_*.py' -type f | sort)
+done < <(find "$repo_dir/plugins" -path '*/tests/test_*.py' -type f | sort)
 
 while IFS= read -r test_file; do
   python3 "$test_file"
@@ -116,7 +116,7 @@ linter="$repo_dir/plugins/james-core/skills/make-it-james/scripts/lint_outcome.p
 if [[ -f "$linter" ]]; then
   while IFS= read -r asset; do
     python3 "$linter" --strict "$asset"
-  done < <(find "$repo_dir/skills" -path '*/assets/*.html' -type f | sort)
+  done < <(find "$repo_dir/plugins" -path '*/assets/*.html' -type f | sort)
 fi
 
 echo "PASS $count package(s), portable structure and repository boundary gate"

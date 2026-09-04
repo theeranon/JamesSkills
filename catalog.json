@@ -1,21 +1,75 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "skills": [
     {
-      "name": "done-for-me",
+      "name": "proactive-habits",
       "category": "james-core",
+      "kind": "mode",
       "status": "promoted",
       "aliases": []
     },
     {
-      "name": "give-me-solutions",
-      "category": "james-productivity",
+      "name": "done-for-me",
+      "category": "james-core",
+      "kind": "workflow",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "i-have-adhd",
+      "category": "james-core",
+      "kind": "mode",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "is-that-the-best-you-can-do",
+      "category": "james-core",
+      "kind": "workflow",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "make-it-james",
+      "category": "james-core",
+      "kind": "shared-standard",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "never-again",
+      "category": "james-core",
+      "kind": "workflow",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "research-it",
+      "category": "james-core",
+      "kind": "workflow",
+      "status": "promoted",
+      "aliases": [
+        "prove-it"
+      ]
+    },
+    {
+      "name": "are-you-sure",
+      "category": "james-core",
+      "kind": "workflow",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "skill-router",
+      "category": "james-core",
+      "kind": "internal-routing",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "baseon",
       "category": "james-productivity",
+      "kind": "knowledge-lens",
       "status": "promoted",
       "aliases": [
         "think-with-this",
@@ -25,118 +79,94 @@
       ]
     },
     {
-      "name": "never-again",
-      "category": "james-core",
-      "status": "promoted",
-      "aliases": []
-    },
-    {
-      "name": "prove-it",
-      "category": "james-core",
-      "status": "promoted",
-      "aliases": []
-    },
-    {
-      "name": "zoom-out",
+      "name": "coach-me",
       "category": "james-productivity",
+      "kind": "workflow",
       "status": "promoted",
       "aliases": []
-    },
-    {
-      "name": "catchup",
-      "category": "james-software",
-      "status": "promoted",
-      "aliases": []
-    },
-    {
-      "name": "i-have-adhd",
-      "category": "james-core",
-      "status": "promoted",
-      "aliases": []
-    },
-    {
-      "name": "make-it-james",
-      "category": "james-core",
-      "status": "promoted",
-      "aliases": []
-    },
-    {
-      "name": "project-standard",
-      "category": "james-software",
-      "status": "promoted",
-      "aliases": [
-        "project-docs-standard"
-      ]
     },
     {
       "name": "final-it",
       "category": "james-productivity",
+      "kind": "output",
       "status": "promoted",
       "aliases": []
     },
     {
-      "name": "sum-meet",
+      "name": "give-me-solutions",
       "category": "james-productivity",
-      "status": "promoted",
-      "aliases": [
-        "solutionsimpact-meeting-summary-full"
-      ]
-    },
-    {
-      "name": "one-page-pls",
-      "category": "james-productivity",
-      "status": "promoted",
-      "aliases": [
-        "solutionsimpact-onepagesummary"
-      ]
-    },
-    {
-      "name": "skill-router",
-      "category": "james-core",
-      "status": "promoted",
-      "aliases": []
-    },
-    {
-      "name": "proactive-habits",
-      "category": "james-core",
-      "status": "promoted",
-      "aliases": []
-    },
-    {
-      "name": "proactive-dev",
-      "category": "james-software",
+      "kind": "workflow",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "grill-me",
       "category": "james-productivity",
+      "kind": "workflow",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "one-page-pls",
+      "category": "james-productivity",
+      "kind": "output",
+      "status": "promoted",
+      "aliases": [
+        "solutionsimpact-onepagesummary"
+      ]
+    },
+    {
+      "name": "sum-meet",
+      "category": "james-productivity",
+      "kind": "output",
+      "status": "promoted",
+      "aliases": [
+        "solutionsimpact-meeting-summary-full"
+      ]
+    },
+    {
+      "name": "zoom-out",
+      "category": "james-productivity",
+      "kind": "workflow",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "catchup",
+      "category": "james-software",
+      "kind": "workflow",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
+      "name": "dev-are-you-sure",
+      "category": "james-software",
+      "kind": "workflow",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "make-it-james-ux",
       "category": "james-software",
+      "kind": "shared-standard",
       "status": "promoted",
       "aliases": []
     },
     {
-      "name": "is-that-the-best-you-can-do",
-      "category": "james-core",
+      "name": "proactive-dev",
+      "category": "james-software",
+      "kind": "mode",
       "status": "promoted",
       "aliases": []
     },
     {
-      "name": "coach-me",
-      "category": "james-productivity",
+      "name": "project-standard",
+      "category": "james-software",
+      "kind": "workflow",
       "status": "promoted",
-      "aliases": []
-    },
-    {
-      "name": "are-you-sure",
-      "category": "james-core",
-      "status": "promoted",
-      "aliases": []
+      "aliases": [
+        "project-docs-standard"
+      ]
     }
   ],
   "packs": [

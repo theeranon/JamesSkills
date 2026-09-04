@@ -27,7 +27,7 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 JamesSkills uses a **Hybrid Plugin Architecture** to ensure compatibility across Antigravity, Claude, ChatGPT, and Cursor. The repository is divided into three distinct modules:
 
-1. ⚙️ **`james-core`**: The foundational reasoning engine, behavioral rules (`proactive-habits`, `make-it-james`), and strict QA gates (`/are-you-sure`, `/prove-it`). *(Always On)*
+1. ⚙️ **`james-core`**: The foundational reasoning engine, behavioral rules (`proactive-habits`, `make-it-james`), and strict QA gates (`/are-you-sure`, `/dev-are-you-sure`) and outside-evidence research (`/research-it`). *(Always On)*
 2. 📊 **`james-productivity`**: Business strategy, frameworks, and executive document outputs (`/baseon`, `/one-page-pls`, `/sum-meet`). *(Toggle when doing business)*
 3. 💻 **`james-software`**: Development standards, UI/UX psychological mindset (`/make-it-james-ux`), and strict coding protocols (`/proactive-dev`). *(Toggle when coding)*
 
@@ -165,10 +165,10 @@ To improve communication with your co-founder, you should practice active listen
 
 <br>
 
-#### ⚡️ `/prove-it`
-*Verify completion claims across 4 execution layers: Source, Provider Boundary, User Journey, and Persistence.*
+#### ⚡️ `/dev-are-you-sure`
+*Sweep delivered software across five layers, then walk the boundary chain: Source, Provider, User Journey, and Production. Its business-side twin is `/are-you-sure`, and `/research-it` settles claims that live outside the code.*
 
-<p align="center"><img src="assets/prove-it-preview.png" width="100%" alt="prove-it 4-layer verification"></p>
+<p align="center"><img src="assets/prove-it-preview.png" width="100%" alt="dev-are-you-sure 4-layer boundary chain"></p>
 
 <table width="100%">
 <tr>
@@ -592,7 +592,7 @@ James Theeranon
 <b>[Skill Router: Single Accountable Outcome]</b><br><br>
 • <b>Phase 1:</b> <code>/sum-meet</code> ➔ บันทึกข้อตกลงและวาระการประชุมลงใน A4 HTML<br>
 • <b>Phase 2:</b> <code>/project-standard</code> ➔ สกัดข้อกำหนดลง <code>ai-context/</code> พร้อมล็อก Spec<br>
-• <b>Phase 3:</b> <code>/done-for-me</code> + <code>/proactive-dev</code> ➔ พัฒนาระบบและทดสอบผ่าน <code>/prove-it</code><br><br>
+• <b>Phase 3:</b> <code>/proactive-dev</code> + <code>/done-for-me</code> ➔ พัฒนาระบบและตรวจผ่าน <code>/dev-are-you-sure</code><br><br>
 <i>*มาตรฐาน <code>make-it-james</code> และ <code>make-it-james-ux</code> ถูกบังคับใช้อัตโนมัติในทุกขั้นตอน</i>
 
 </td>
@@ -675,7 +675,7 @@ The short rule:
 - use `/project-standard` to establish or repair project truth;
 - use `/catchup` to return after a continuity gap;
 - use `/give-me-solutions` to research choices and `/done-for-me` after the owner decides;
-- use `/prove-it` before accepting a completion claim;
+- use `/dev-are-you-sure` before accepting a completion claim, and `/research-it` when the doubt is about an outside claim;
 - use `/sum-meet`, `/one-page-pls`, or `/final-it` for recipient-facing outcomes; `make-it-james` and `make-it-james-ux` apply automatically.
 
 This release has no pilot packages. Compatibility aliases keep older calls working without creating another instruction body. `skill-router` is installed internal support, not a recommended human command.

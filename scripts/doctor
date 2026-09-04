@@ -41,13 +41,43 @@ for target in \
   "$HOME/.gemini/config/skills" \
   "$HOME/.gemini/antigravity/custom/skills"; do
   [[ -d "$target" ]] || continue
+  base_dir="$(dirname "$target")"
+
+  if [[ "$base_dir" == *".gemini"* ]]; then
+    plugin_missing=0
+    plugin_wrong=0
+    plugin_linked=0
+    for plugin in "$repo_dir/plugins/"*; do
+      [[ -d "$plugin" ]] || continue
+      plugin_name="$(basename "$plugin")"
+      plugin_link="$base_dir/plugins/$plugin_name"
+      if [[ ! -L "$plugin_link" ]]; then
+        plugin_missing=$((plugin_missing + 1))
+        echo "MISSING plugin link: $plugin_link"
+      elif [[ "$(readlink "$plugin_link")" != "$plugin" ]]; then
+        plugin_wrong=$((plugin_wrong + 1))
+        echo "WRONG TARGET plugin link: $plugin_link -> $(readlink "$plugin_link")"
+      else
+        plugin_linked=$((plugin_linked + 1))
+      fi
+    done
+    alias_count=0
+    for alias_dir in "$repo_dir/aliases/"*; do
+      [[ -d "$alias_dir" ]] || continue
+      [[ -L "$target/$(basename "$alias_dir")" ]] && alias_count=$((alias_count + 1))
+    done
+    echo "$base_dir/plugins plugins=$plugin_linked aliases=$alias_count missing=$plugin_missing wrong_target=$plugin_wrong"
+    issues=$((issues + plugin_missing + plugin_wrong))
+    continue
+  fi
+
   linked=0
   broken=0
   wrong_target=0
   missing=0
   collisions=0
   while IFS=$'\t' read -r category name; do
-    skill_dir="$repo_dir/skills/$category/$name"
+    skill_dir="$repo_dir/plugins/$category/skills/$name"
     link="$target/$name"
     [[ -L "$link" ]] && linked=$((linked + 1))
     [[ -L "$link" && ! -e "$link" ]] && broken=$((broken + 1))
@@ -101,7 +131,7 @@ PY
   while IFS= read -r managed_link; do
     linked_path="$(readlink "$managed_link")"
     link_name="$(basename "$managed_link")"
-    if [[ "$linked_path" == "$repo_dir/skills/"* || "$linked_path" == "$repo_dir/aliases/"* ]] && ! grep -Fqx "$link_name" <<<"$promoted_names"; then
+    if [[ "$linked_path" == "$repo_dir/plugins/"* || "$linked_path" == "$repo_dir/aliases/"* ]] && ! grep -Fqx "$link_name" <<<"$promoted_names"; then
       unexpected=$((unexpected + 1))
       echo "UNEXPECTED unpromoted managed link: $managed_link -> $linked_path"
     fi
