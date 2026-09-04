@@ -23,18 +23,15 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 ---
 
 
-## 🏛️ Architecture: The 3 Universal Pillars (Plugins)
+## 🏛️ Architecture: 3 Pillars, 22 Skills
 
-JamesSkills uses a **Hybrid Plugin Architecture** to ensure compatibility across Antigravity, Claude, ChatGPT, and Cursor. The repository is divided into three distinct modules:
+Every skill satisfies one structural contract, [`docs/SKILL-SCHEMA.md`](docs/SKILL-SCHEMA.md), enforced on every commit. Each file declares what it owns, what it is allowed to change, the sibling that owns each case it refuses, when it stops, and the named principles it operates on.
 
-1. ⚙️ **`james-core`**: The foundational reasoning engine, behavioral rules (`proactive-habits`, `make-it-james`), and strict QA gates (`/are-you-sure`, `/dev-are-you-sure`) and outside-evidence research (`/research-it`). *(Always On)*
-2. 📊 **`james-productivity`**: Business strategy, frameworks, and executive document outputs (`/baseon`, `/one-page-pls`, `/sum-meet`). *(Toggle when doing business)*
-3. 💻 **`james-software`**: Development standards, UI/UX psychological mindset (`/make-it-james-ux`), and strict coding protocols (`/proactive-dev`). *(Toggle when coding)*
+1. ⚙️ **`james-core`** (9) — decision posture, execution, and the quality gates. `proactive-habits`, `done-for-me`, `are-you-sure`, `research-it`, `never-again`, `is-that-the-best-you-can-do`, `make-it-james`, `i-have-adhd`, `skill-router`.
+2. 📊 **`james-productivity`** (8) — thinking, research, and executive deliverables. `zoom-out`, `grill-me`, `coach-me`, `give-me-solutions`, `baseon`, `sum-meet`, `one-page-pls`, `final-it`.
+3. 💻 **`james-software`** (5) — engineering method and interface law. `proactive-dev`, `dev-are-you-sure`, `catchup`, `project-standard`, `make-it-james-ux`.
 
-**Universal Deployment:**
-- **Antigravity**: Automatically mounts as 3 independent plugins via `plugin.json`, separating `rules/` (Always-On) from `skills/` (On-Demand).
-- **Claude/ChatGPT**: Upload the markdown files in `skills/` to Project Knowledge, and paste `rules/` into Custom Instructions.
-- **Cursor**: Reference `rules/` via `.cursorrules` and use `@` for skills on-demand.
+**The anti-overfit gate.** Every skill lists the cases it refuses and names the sibling that owns each one. The validator builds a graph from those refusals and fails when any skill has nobody pointing at it, because a skill no sibling ever excludes toward does not have a distinct job. The current roster passes with 109 refusal edges across 22 skills.
 
 ## 📚 Full Skill Directory (Before vs After)
 
@@ -47,7 +44,7 @@ JamesSkills uses a **Hybrid Plugin Architecture** to ensure compatibility across
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -77,7 +74,7 @@ I have created the initial `user.model.ts` file for your registration API. Would
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -111,7 +108,7 @@ AWS SQS is definitely the best option for your notification system! It is fully 
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -140,7 +137,7 @@ To improve communication with your co-founder, you should practice active listen
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -172,7 +169,7 @@ To improve communication with your co-founder, you should practice active listen
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -197,6 +194,36 @@ To improve communication with your co-founder, you should practice active listen
 
 <br>
 
+#### ⚡️ `/research-it`
+*Settle a doubt about one claim with outside evidence. Reads the official position first, then deliberately hunts for practitioners who ran it long enough to be disappointed.*
+
+<table width="100%">
+<tr>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
+</tr>
+<tr>
+<td valign="top">
+
+ใช่ครับ Serverless เหมาะกับงานนี้มาก เพราะ scale อัตโนมัติ จ่ายตามการใช้งานจริง และไม่ต้องดูแลเซิร์ฟเวอร์เลยครับ<br><br><i>(ตอบจากเอกสารการตลาดของผู้ให้บริการ ไม่มีวันที่ ไม่มีใครที่ใช้จริงจนเจอปัญหา ไม่มีเงื่อนไขว่าเมื่อไหร่ถึงไม่ควรใช้)</i>
+
+</td>
+<td valign="top">
+
+<b>[Claim] Serverless ถูกกว่าและดูแลง่ายกว่าสำหรับทีม 3 คน ที่มีทราฟฟิกคงที่</b><br><br>
+<b>Verdict: Conditional</b><br><br>
+1. <b>Official (AWS, 2026-06):</b> จ่ายตามการเรียกใช้ ไม่มีค่าเครื่องตอนไม่มีทราฟฟิก <i>[ผู้ให้บริการมีส่วนได้เสีย]</i><br>
+2. <b>Independent (Prime Video engineering, 2023):</b> ย้ายกลับมาเป็น monolith ลดค่าใช้จ่าย 90% เมื่อทราฟฟิกคงที่และสูง<br>
+3. <b>Practitioner reports (2024 to 2026):</b> cold start และค่า debug กินเวลาทีมเล็กมากกว่าที่ประหยัดได้<br><br>
+<b>เงื่อนไขที่จะเปลี่ยนคำตอบ:</b> ถ้าทราฟฟิกเป็นแบบพุ่งเป็นช่วง ไม่ใช่คงที่ คำตอบกลับด้านทันที<br>
+<b>ยังไม่รู้:</b> ไม่พบรายงานจากทีมขนาด 3 คนในบริบทไทยโดยตรง
+
+</td>
+</tr>
+</table>
+
+<br>
+
 #### ⚡️ `/zoom-out`
 *Reframe messy or fragmented problems at the structural system level before picking tools or patching symptoms.*
 
@@ -204,7 +231,7 @@ To improve communication with your co-founder, you should practice active listen
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -232,7 +259,7 @@ To improve communication with your co-founder, you should practice active listen
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -262,7 +289,7 @@ To improve communication with your co-founder, you should practice active listen
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -293,7 +320,7 @@ To improve communication with your co-founder, you should practice active listen
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -354,7 +381,7 @@ Our revolutionary AI-powered Human Capital Management solution seamlessly empowe
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -382,7 +409,7 @@ Our revolutionary AI-powered Human Capital Management solution seamlessly empowe
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -412,7 +439,7 @@ FROM orders GROUP BY customer_id;
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -444,7 +471,7 @@ FROM orders GROUP BY customer_id;
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -518,7 +545,7 @@ James Theeranon
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -547,7 +574,7 @@ James Theeranon
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -578,7 +605,7 @@ James Theeranon
 
 <table width="100%">
 <tr>
-<th width="50%">❌ Before (AI วิ่งเล่นทุ่งลาเวนเดอร์)</th>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
 <th width="50%">✅ After (JamesSkills Outcome)</th>
 </tr>
 <tr>
@@ -604,65 +631,96 @@ James Theeranon
 ---
 
 
-## 📦 Installation (Universal)
+## 📦 Installation
 
-JamesSkills now fully supports **Mac, Linux, and Windows** natively with a Universal Python Installer.
+Two routes. Pick by whether you want the skills to track this repository live.
 
-### Mac & Linux (One-liner)
-Open your Terminal and paste:
-```bash
-git clone https://github.com/theeranon/JamesSkills.git && cd JamesSkills && python3 scripts/install.py
-```
+### Route A — Claude Code plugin (recommended for a clean machine)
 
-### Windows (Easy Install)
-1. Download or clone this repository (`git clone https://github.com/theeranon/JamesSkills.git`).
-2. Double-click the **`install.bat`** file inside the folder.
-3. Done! It will automatically install to Cursor, Claude, and Codex without requiring Admin privileges.
-
-> **Note for Non-Tech Users:** Do not paste these commands into the AI Chat interface! You must open your computer's "Terminal" (Mac) or "Command Prompt / PowerShell" (Windows) to run them.
-
-## 🛠️ Developers
-*(The following sections are technical architecture notes for maintainers)*
+Claude Code loads this repository as three real plugins. Works on macOS and Windows, in the CLI, the desktop apps, and the VS Code and JetBrains extensions.
 
 ```bash
-git clone https://github.com/theeranon/JamesSkills.git "$HOME/.james-skills"
-"$HOME/.james-skills/scripts/install"
-"$HOME/.james-skills/scripts/doctor"
+claude plugin marketplace add theeranon/JamesSkills
+claude plugin install james-core@james-skills
+claude plugin install james-productivity@james-skills
+claude plugin install james-software@james-skills
 ```
 
-The installer links the canonical skills into the discovery directories available on the machine, including `~/.codex/skills`, `~/.agents/skills`, `~/.claude/skills`, and configured Gemini or Antigravity roots. It never overwrites a real directory or file; a legacy name collision fails visibly so an outdated duplicate cannot stay active unnoticed.
-It also activates repository-owned `pre-commit` and `pre-push` gates. Every commit and push runs `scripts/validate` locally, without GitHub Actions or paid runners.
-
-The tracked browser-render receipt is reproducible without PDF export:
+Skills arrive namespaced, so `/james-core:are-you-sure` always resolves to this library even if another source defines the same name. The installed copy is a **snapshot**, not a link — pull new versions with:
 
 ```bash
-npm ci
-npm run qa:transformation
+claude plugin marketplace update james-skills && claude plugin update james-core@james-skills
 ```
 
-The QA command uses an installed Chrome or Chromium browser. Set `CHROME_PATH` only when it is not in a standard platform location.
+The repository is private, so Claude Code uses your existing git credentials. If background updates fail, run `gh auth setup-git` once.
+
+### Route B — local install (recommended if you edit the skills)
+
+Links every skill straight into each platform's discovery directory, so an edit in this repository takes effect immediately with no update step.
+
+**macOS and Linux**
+```bash
+git clone https://github.com/theeranon/JamesSkills.git && cd JamesSkills && ./scripts/install
+```
+
+**Windows**
+```
+git clone https://github.com/theeranon/JamesSkills.git
+```
+Then double-click **`install.bat`** inside the folder. It runs `scripts/install.py`, uses directory junctions so no administrator rights are needed, and falls back to copying if junctions are unavailable.
+
+### What lands where
+
+| Platform | Mechanism | Status |
+|---|---|---|
+| Claude Code | plugin marketplace, or `~/.claude/skills` links | Plugin install and skill loading both verified on macOS |
+| Cursor | `~/.cursor/skills` links | Files installed; Cursor's own loading not verified here |
+| Codex (ChatGPT) | `~/.codex/skills` links | Files installed; loading not verified here |
+| Gemini and Antigravity | whole plugins in `~/.gemini/*/plugins` | Files installed; loading not verified here |
+| Any agent reading `.agents` | `~/.agents/skills` links | Files installed |
+
+Only the Claude Code row is a verified runtime claim. The others say what the installer writes to disk, which is not by itself proof that the host loads it.
+
+Do not run either route inside an AI chat box. Use Terminal on macOS, or Command Prompt or PowerShell on Windows.
+
+**Windows note:** four skills call a Python helper. They invoke `python3`; where that is not on PATH, use `python`. Each of those skills says so in its own file.
+
+Check any machine at any time:
+
+```bash
+./scripts/doctor
+```
 
 ## 🔄 Update
 
+**Plugin route**
 ```bash
-"$HOME/.james-skills/scripts/update"
+claude plugin marketplace update james-skills
+claude plugin update james-core@james-skills
 ```
 
-Update fetches a fast-forward candidate, validates it in a detached temporary worktree before moving the active checkout, then refreshes links. An invalid candidate cannot replace the working version. Skill behavior never silently changes in the background.
+**Local route** — run from wherever you cloned the repository:
+```bash
+./scripts/update
+```
+
+Update fetches a fast-forward candidate, validates it in a detached temporary worktree before the active checkout moves, then refreshes links. An invalid candidate cannot replace a working version, and skill behavior never changes silently in the background.
 
 ## 🏛️ Boundaries
 
-- `catalog.json`: canonical package category, promotion state, and compatibility aliases
-- `skills/core`: bounded reasoning and execution workflows
-- `skills/modes`: persistent conversation behavior
-- `skills/standards`: automatically applied James-wide output law
-- `skills/outputs`: reusable recipient-facing artifact workflows
-- `skills/internal`: routing and composition mechanics
-- `packs`: optional brand or domain references with no live state or client data
-- `adapters`: vendor-specific metadata only; never duplicate core instructions
-- `tests`: structural and outcome regression gates
-- `scripts`: idempotent install, update, validation, and diagnosis
-- `.githooks`: free local validation before every commit and push
+| Path | Holds |
+|---|---|
+| `catalog.json` | canonical package, category, kind, promotion state, aliases |
+| `plugins/<pillar>/skills/<name>/SKILL.md` | the one canonical instruction body per skill |
+| `plugins/<pillar>/.claude-plugin/plugin.json` | plugin manifest |
+| `.claude-plugin/marketplace.json` | the three plugins offered to Claude Code |
+| `aliases/` | compatibility names that point at a canonical skill and hold no behavior |
+| `packs/knowledge` | reviewed sources and lenses, no live state or client data |
+| `adapters/` | vendor metadata only, never a duplicate instruction body |
+| `docs/SKILL-SCHEMA.md` | the structural contract every skill satisfies |
+| `tests/` | structural, behavioral, and anti-overfit regression gates |
+| `scripts/` | idempotent install, update, validation, and diagnosis |
+| `.githooks/` | local validation before every commit and push, no paid runners |
 
 Private by default. Review every file before publishing any subset.
 
@@ -692,10 +750,6 @@ python3 plugins/james-productivity/skills/baseon/scripts/knowledge_library.py va
 The first reviewed-private lenses are `wealth-dynamics` and `wealth-spectrum`. `talent-dynamics` resolves to the same Dynamics lens because it is the team adaptation of the same model. Wealth Spectrum remains a separate model with the same creator lineage. Their full source PDFs remain outside Git. Source cards keep version, rights posture, SHA-256 when applicable, and locators; lens files contain original paraphrase, applications, and limitations.
 
 Direct calls are available as `/baseon`, `/wealth-dynamics`, `/talent-dynamics`, and `/wealth-spectrum`. The framework shortcuts only preselect a lens; they contain no duplicate knowledge or reasoning rules. `/think-with-this` remains a compatibility alias.
-
-The transformation-design portfolio has three approved calls. `/build-framework` searches the house library before upgrading or creating reusable company IP. `/transformation-journey` owns macro organization transformation. `/learning-experience-design` owns a bounded learning intervention. TPS is one house framework available inside LED; it is not LED itself or the macro journey timeline.
-
-The framework registry lives at `packs/frameworks/registry.json`. Lifecycle and source gaps remain visible so an agent cannot turn an incomplete internal model or one successful activity into approved company law.
 
 Clone the full repository when moving machines. A detached copy of `baseon` alone intentionally has no duplicated knowledge library; set `JAMES_SKILLS_ROOT` to the full clone if a platform cannot use the installer links.
 

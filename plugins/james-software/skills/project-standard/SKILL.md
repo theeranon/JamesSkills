@@ -41,6 +41,8 @@ Run every command from this skill directory as `python3 scripts/project_standard
 
 Each durable fact has exactly one owner, requirements carry identifiers with acceptance and proof, the generated SRS matches its sources, and `check --ready` passes with its version stated. Routine work that changed no durable fact leaves the contract untouched, which is a pass rather than a skip.
 
+On Windows invoke the same helper with `python` when `python3` is not on PATH.
+
 ## Principles
 
 **Single source of truth** — Each fact lives in exactly one document and everywhere else points at it, because duplicated truth diverges silently. Source: standard information-architecture principle; specific attribution uncertain

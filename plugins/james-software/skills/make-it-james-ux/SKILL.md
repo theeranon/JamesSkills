@@ -39,6 +39,8 @@ Follow the system that is already there, and where there is none, be compact and
 
 Every rendered artifact a person will see: interfaces, sites, applications, dashboards, decks, and print-ready documents. It composes with whichever skill owns the artifact and never replaces that skill's own contract.
 
+On Windows invoke the same helper with `python` when `python3` is not on PATH.
+
 ## Principles
 
 **Do not make the reader think** — Every element must be self-evident on first sight; anything needing explanation is a defect in the design, not in the reader. Source: Steve Krug, Don't Make Me Think, 2000

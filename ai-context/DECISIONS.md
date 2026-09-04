@@ -142,3 +142,13 @@ Record accepted or superseded project decisions. Raw discussion remains in its s
 - Source: gate audit performed while implementing DEC-013.
 - Affects: `scripts/validate`, `scripts/doctor`, `plugins/james-productivity/skills/baseon/tests/test_baseon.py`, `plugins/james-software/skills/project-standard/scripts/project_standard.py`, `ai-context/PROJECT.md`.
 - Supersedes: the post-migration assumption in `ai-context/STATUS.md` that REQ-002 and REQ-008 were verified; the evidence behind both claims had stopped running.
+
+## DEC-015 — The transformation-design portfolio left this repository for SecondBrain
+
+- Date: 2026-09-05
+- Status: Accepted
+- Decision: `build-framework`, `transformation-journey`, and `learning-experience-design` are owned by the SecondBrain repository and are no longer part of JamesSkills. Removed from this repository: REQ-009 in `ai-context/PROJECT.md` and its status row, the three behavioral-case sections, the `framework-library` pack and `packs/frameworks/`, the transformation-design release receipt and its example renderer, the transformation-design paragraphs in `README.md`, and the AGENTS rules governing house frameworks, journey-versus-experience routing, and transformation-design output readiness. `CONTEXT.md` was reduced to the vocabulary this repository still uses: framework, source, lens, and the four evidence layers.
+- Why: the owner confirmed the two repositories are separated. The stale references were not cosmetic. REQ-009 named `skills/core/build-framework` and two sibling paths that do not exist here, `skills/` in this repository is empty, and `ai-context/STATUS.md` still reported REQ-009 as Verified, so the contract asserted evidence for packages it does not contain. `packs/frameworks/registry.json` held one entry whose only source locator pointed into `skills/core/learning-experience-design/`, and no skill remaining in this repository read it.
+- Boundary: dated historical records were deliberately left intact — `CHANGELOG.md`, `research/2026-08-29-transformation-design-candidate-cards.md`, `tests/receipts/runtime-routing-v0.9.0.md`, and earlier entries in this file describe what was true on their dates. Editing them would falsify the record rather than remove drift. Only current-state and executable references were removed.
+- Affects: `ai-context/PROJECT.md`, `ai-context/STATUS.md`, `catalog.json`, `CONTEXT.md`, `AGENTS.md`, `README.md`, `tests/behavioral-cases.md`, `packs/frameworks/` (deleted), `tests/receipts/transformation-design-v0.9.0.json` (deleted), `tests/render_transformation_design_examples.cjs` (deleted).
+- Supersedes: DEC-009's placement of the transformation-design portfolio in this repository, and REQ-009 in full.

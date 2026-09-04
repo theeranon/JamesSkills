@@ -38,6 +38,7 @@ for target in \
   "$HOME/.agents/skills" \
   "$HOME/.codex/skills" \
   "$HOME/.claude/skills" \
+  "$HOME/.cursor/skills" \
   "$HOME/.gemini/config/skills" \
   "$HOME/.gemini/antigravity/custom/skills"; do
   [[ -d "$target" ]] || continue

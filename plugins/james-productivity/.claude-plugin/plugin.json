@@ -1,0 +1,16 @@
+{
+  "name": "james-productivity",
+  "displayName": "James Productivity",
+  "version": "2.0.0",
+  "description": "Thinking, research, coaching, and executive deliverables.",
+  "author": {
+    "name": "James Theeranon"
+  },
+  "repository": "https://github.com/theeranon/JamesSkills",
+  "keywords": [
+    "skills",
+    "agent",
+    "workflow",
+    "quality-gate"
+  ]
+}

@@ -38,12 +38,10 @@ JamesSkills v2 carries 22 promoted canonical packages and 8 compatibility aliase
 | REQ-006 | Verified | Minimum owner files and the self-standard regression passed; `scripts/validate` runs `check --ready`. | 2026-08-29 |
 | REQ-007 | Verified | Repository-wide candidate text scan, knowledge provenance, source misuse gates, and release diff review passed. Pattern detection remains a guard, not an impossibility proof. | 2026-08-29 |
 | REQ-008 | Verified | Package and portfolio behavior contracts, rejected cases, same-mechanism cases, and legitimate counter-cases passed; universal platform parity remains unclaimed. | 2026-08-29 |
-| REQ-009 | Verified | Three promoted packages, framework registry, behavior and HTML contracts, two-project forward rendering, strict visual lint, and local installation proof all passed. | 2026-08-29 |
 
 ## Next
 
 - Decide whether the schema contract earns its own numbered requirement in `PROJECT.md`; it is currently recorded as a non-functional requirement.
-- Decide what happens to REQ-009, which names `skills/core/build-framework`, `skills/core/transformation-journey`, and `skills/core/learning-experience-design`; those packages live in the SecondBrain repository, not here, and `skills/` in this repository is empty.
 
 ## Blockers
 

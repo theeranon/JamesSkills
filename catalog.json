@@ -175,12 +175,6 @@
       "kind": "knowledge",
       "status": "promoted",
       "path": "packs/knowledge/registry.json"
-    },
-    {
-      "name": "framework-library",
-      "kind": "framework",
-      "status": "promoted",
-      "path": "packs/frameworks/registry.json"
     }
   ]
 }

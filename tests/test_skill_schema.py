@@ -201,6 +201,33 @@ def main() -> int:
         if f"`{skill}`" not in cases and not re.search(rf"^## .*{re.escape(title)}", cases, re.M | re.I):
             fail(errors, skill, "no entry in tests/behavioral-cases.md")
 
+    # --- plugin packaging: marketplace, manifests, and catalog must agree ---
+    version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+    marketplace = json.loads((ROOT / ".claude-plugin" / "marketplace.json").read_text(encoding="utf-8"))
+    listed = {entry["name"] for entry in marketplace["plugins"]}
+    on_disk = {path.name for path in (ROOT / "plugins").iterdir() if path.is_dir()}
+    if listed != on_disk:
+        errors.append(f"marketplace.json lists {sorted(listed)} but plugins/ holds {sorted(on_disk)}")
+    if marketplace.get("version") != version:
+        errors.append(f"marketplace.json version {marketplace.get('version')!r} != VERSION {version!r}")
+    for entry in marketplace["plugins"]:
+        name = entry["name"]
+        if entry.get("source") != f"./plugins/{name}":
+            errors.append(f"{name}: marketplace source is {entry.get('source')!r}")
+        canonical = ROOT / "plugins" / name / ".claude-plugin" / "plugin.json"
+        if not canonical.is_file():
+            errors.append(f"{name}: missing .claude-plugin/plugin.json")
+            continue
+        manifest = json.loads(canonical.read_text(encoding="utf-8"))
+        if manifest.get("name") != name or manifest.get("version") != version:
+            errors.append(f"{name}: plugin manifest name/version disagrees with the marketplace")
+        # A bare plugin.json is kept for hosts that read it; it must never drift.
+        bare_path = ROOT / "plugins" / name / "plugin.json"
+        if bare_path.is_file():
+            bare = json.loads(bare_path.read_text(encoding="utf-8"))
+            if bare.get("name") != manifest["name"] or bare.get("version") != manifest["version"]:
+                errors.append(f"{name}: plugin.json has drifted from .claude-plugin/plugin.json")
+
     # --- boundary graph: every skill must be excluded toward by a sibling ---
     for name in sorted(names):
         if excluded_toward[name] == 0:

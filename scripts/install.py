@@ -65,6 +65,9 @@ def main():
         home / ".codex" / "skills",
         home / ".claude" / "skills"
     ]
+
+    if (home / ".cursor").is_dir():
+        targets.append(home / ".cursor" / "skills")
     
     if (home / ".gemini" / "config").is_dir():
         targets.append(home / ".gemini" / "config" / "skills")
@@ -94,7 +97,10 @@ def main():
             # Cleanup old skills
             if skills_target.exists():
                 for item in skills_target.iterdir():
-                    if item.is_symlink() or item.is_junction():
+                    # Path.is_junction() only exists on Python 3.12+. A junction on
+                    # Windows resolves like a link, so treat either as managed.
+                    is_junction = getattr(item, "is_junction", lambda: False)()
+                    if item.is_symlink() or is_junction:
                         try:
                             # basic check if it belongs to this repo
                             target_path = str(item.resolve())

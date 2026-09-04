@@ -40,6 +40,8 @@ Work out what is actually true right now, and hand back one page that says so.
 
 The report names the exact target, states current truth against a named comparison point or says none is established, lists what is open with its blocker and owner, keeps conflicts and unknowns visible, and ends in one safe next action or an explicit verdict that nothing remains in scope. Return `ไม่มี action เพิ่มใน scope นี้` when the bounded work is genuinely closed, rather than inventing a follow-up.
 
+On Windows invoke the same helper with `python` when `python3` is not on PATH.
+
 ## Principles
 
 **Evidence outranks the status document** — Trust git, runtime, and provider receipts over any file claiming readiness, because a stale label is the failure mode this skill exists to catch. Source: standing rule in this library

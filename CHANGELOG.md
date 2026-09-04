@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.0.0 - 2026-09-05
+
+- Rewrote all skills against one structural contract, `docs/SKILL-SCHEMA.md`, enforced by `tests/test_skill_schema.py` inside `scripts/validate`. Every skill now declares its kind, bounded job, authority boundary, the sibling that owns each case it refuses, its stop condition, its named principles as original paraphrase with attribution, and at least one counter-case.
+- Added the anti-overfit boundary graph: the validator builds a directed graph from every refusal and fails when any skill has in-degree zero, because a skill no sibling ever excludes toward does not have a distinct job. The roster passes with 109 refusal edges.
+- Split `are-you-sure` into a business and productivity track plus a new `dev-are-you-sure` for software, which also absorbed the deployment boundary chain. Roster is now 22 canonical packages.
+- Renamed `prove-it` to `research-it` and rewrote it to its real job of settling one claim with outside evidence, official first and then independent practitioner accounts. `prove-it` is kept as a compatibility alias. The old file described deployment verification, which belongs to `dev-are-you-sure`.
+- Recorded the owner's own definition for every skill; `tests/behavioral-cases.md` now covers all 22, closing the seven packages that previously had no case and had drifted furthest.
+- Packaged the three pillars as real Claude Code plugins: `.claude-plugin/marketplace.json` plus a manifest per plugin. Verified end to end on macOS with `claude plugin marketplace add` and `claude plugin install`.
+- Added Cursor as a discovery target. Six roots now install: `.agents`, `.codex`, `.claude`, `.cursor`, and both Gemini roots.
+- Repaired release gates that had been inert since the plugin migration. `scripts/validate` was scanning the empty `skills/` directory, finding 7 files instead of 28 and running none of the 7 per-skill suites or 3 asset lints while still printing PASS. Re-enabling them surfaced and fixed a real failure in `test_baseon.py`. `scripts/doctor` was checking pre-migration paths and did not know the plugin layout, reporting 110 false issues.
+- Fixed a Windows crash in `scripts/install.py`: it called `Path.is_junction()`, which exists only on Python 3.12 and above.
+- Stamped `project-standard/1.0` into every generated SRS and into `check` output so a project states which contract version it follows.
+- Gave `catchup` a fixed A4 landscape report template so every project's catchup page looks identical.
+- Removed the transformation-design portfolio, which now lives in the SecondBrain repository: REQ-009 and its status row, three behavioral-case sections, the `framework-library` pack, the release receipt and its renderer, and the AGENTS rules that governed it. Dated historical records were left intact.
+- Rewrote the README architecture, installation, update, and boundaries sections against verified facts, and removed a prohibited AI-theatre tag that `DEC-012` had banned but which had survived in 16 tables.
+- Recorded as `DEC-013`, `DEC-014`, and `DEC-015`.
+
 ## 0.9.1 - 2026-09-01
 
 - Upgraded `project-standard` to v2: moved every contract file except `AGENTS.md`/`CLAUDE.md`/`GEMINI.md`/`README.md` into an `ai-context/` folder so project truth stops scattering across the repository root.

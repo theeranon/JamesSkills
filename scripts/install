@@ -6,6 +6,9 @@ repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 "$repo_dir/scripts/install-hooks"
 
 targets=("$HOME/.agents/skills" "$HOME/.codex/skills" "$HOME/.claude/skills")
+if [[ -d "$HOME/.cursor" ]]; then
+  targets+=("$HOME/.cursor/skills")
+fi
 if [[ -d "$HOME/.gemini/config" ]]; then
   targets+=("$HOME/.gemini/config/skills")
 fi

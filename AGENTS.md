@@ -3,7 +3,7 @@
 ## Required context
 
 1. Read `ai-context/PROJECT.md` for outcome, scope, requirements, boundaries, and acceptance proof.
-2. Read `CONTEXT.md` when framework, journey, learning-experience, evidence, or offer terminology matters.
+2. Read `CONTEXT.md` when framework, source, lens, or evidence-layer terminology matters.
 3. Read `ai-context/STATUS.md` for current verified state, blockers, and the next move.
 4. Read `ai-context/DECISIONS.md` when a prior choice, lifecycle decision, or superseded rule matters.
 5. Read `docs/SKILLS.md` when selecting or explaining a skill; load the selected `SKILL.md` completely before acting.
@@ -21,8 +21,6 @@
 - Follow the `make-it-james` format boundary: HTML and print-ready requests remain HTML-only; PDF requires an explicit request or a directly confirmed authoritative fixed-file constraint.
 - Skills contain reusable process knowledge. Never commit credentials, client data, chat exports, live status, or JamesOS databases.
 - Treat a book, paper, course, or proprietary report as a source before considering a new lens. Do not create one skill per source.
-- Search the house framework library before proposing reusable intellectual property. Use an existing framework, upgrade it, or create a new candidate in that order; external research is supporting evidence rather than the primary house framework.
-- Keep framework, transformation journey, and learning experience separate. Route by accountable outcome rather than duration, topic, or product name.
 - Keep copyrighted originals outside Git by default. Commit source identity, rights posture, hash, locators, original paraphrase, applications, and limitations.
 - Separate source claims, independent evidence, James rules, and inference. Never promote an inferred profile to an official result.
 - A direct correction from James is evidence to investigate. Promote it to a global rule only when the intended scope is durable.
@@ -32,7 +30,6 @@
 - Every behavioral correction requires a rejected-case regression, another case with the same mechanism, and a legitimate counter-case.
 - Release on the shortest critical path: usable package, minimum required proof, authorized install or delivery, then a local repository checkpoint. Push, deploy, publish, or send only when the request or accepted project contract authorizes that exact external target. Optional audits, documentation cleanup, and extra hardening must not delay the first usable outcome.
 - Run `scripts/validate` and `scripts/doctor` before declaring a release usable.
-- A transformation-design skill is not ready without its cited purpose-specific HTML output contract and strict visual lint.
 - Do not claim cross-platform support without discovery and outcome evidence on that platform.
 - Treat managed-link presence as filesystem proof only. Do not call it runtime loading, automatic routing, or behavioral parity without platform evidence.
 - Preserve unrelated dirty work. Never treat local implementation authority as permission to deploy, publish, send, or mutate an unrelated external account.

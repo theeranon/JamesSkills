@@ -38,6 +38,8 @@ To register new knowledge, treat the work as a source first. Record creator, edi
 
 Each selected lens has been applied separately with its four layers kept apart, disagreements are visible, and one reversible experiment is defined. A lens that changes nothing is dropped rather than reported.
 
+On Windows invoke the same helper with `python` when `python3` is not on PATH.
+
 ## Principles
 
 **A lens explains, it does not decide** — Report what the model illuminates about the evidence and never let a label replace observed results, cash flow, or work samples. Source: standing rule in this library

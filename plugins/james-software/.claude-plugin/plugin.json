@@ -1,0 +1,16 @@
+{
+  "name": "james-software",
+  "displayName": "James Software",
+  "version": "2.0.0",
+  "description": "Engineering method, project contracts, and interface law.",
+  "author": {
+    "name": "James Theeranon"
+  },
+  "repository": "https://github.com/theeranon/JamesSkills",
+  "keywords": [
+    "skills",
+    "agent",
+    "workflow",
+    "quality-gate"
+  ]
+}
