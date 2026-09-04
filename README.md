@@ -680,8 +680,10 @@ Running both routes into Claude Code would install every skill twice, once bare 
 **After editing a skill, Claude Code needs the plugin refreshed** — the installed plugin is a copy, not a link:
 
 ```bash
-claude plugin marketplace update james-skills && claude plugin update james-core@james-skills
+./scripts/refresh-claude-plugins
 ```
+
+Do not reach for `claude plugin update`. It compares version numbers rather than content, so after an ordinary edit it reports that the plugin is already at the latest version and copies nothing. The script reinstalls each pillar, which is what actually re-copies the files, and it is a no-op on a machine using live links.
 
 To go back to live links for Claude, uninstall the pillars and run the installer again:
 

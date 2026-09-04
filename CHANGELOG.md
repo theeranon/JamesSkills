@@ -16,7 +16,8 @@
 - Removed the transformation-design portfolio, which now lives in the SecondBrain repository: REQ-009 and its status row, three behavioral-case sections, the `framework-library` pack, the release receipt and its renderer, and the AGENTS rules that governed it. Dated historical records were left intact.
 - Rewrote the README architecture, installation, update, and boundaries sections against verified facts, and removed a prohibited AI-theatre tag that `DEC-012` had banned but which had survived in 16 tables.
 - Registered the `satir-model` lens with three source cards and rewrote `coach-me` on it: stance-matched entry points, a stress-test step, a rehearsed close, and a referral rule the skill previously lacked entirely. The lens records that the model is not evidence-based in any setting, that the agile change curve is not Satir's, and that one widely repeated turnover statistic is untraceable.
-- Recorded as `DEC-013` through `DEC-016`.
+- Claude Code loads the library as three plugins; `scripts/install` writes only aliases into `~/.claude/skills` when it finds them registered, so nothing is loaded twice, and `scripts/doctor` fails on any canonical link left shadowing a plugin. Added `scripts/refresh-claude-plugins`, because `claude plugin update` compares version numbers rather than content and copies nothing after an ordinary edit.
+- Recorded as `DEC-013` through `DEC-017`.
 
 ## 0.9.1 - 2026-09-01
 

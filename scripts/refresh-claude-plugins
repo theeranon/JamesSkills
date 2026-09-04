@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Refresh Claude Code's copy of this library from the current working tree.
+#
+# `claude plugin update` compares version numbers, not content, so it reports
+# "already at the latest version" and does nothing after an ordinary edit.
+# Reinstalling is what actually re-copies the files.
+set -euo pipefail
+
+repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+manifest="$HOME/.claude/plugins/installed_plugins.json"
+
+if [[ ! -f "$manifest" ]] || ! grep -q '@james-skills' "$manifest"; then
+  echo "Claude Code has no james-skills plugin installed; nothing to refresh."
+  echo "This machine is using live skill links, so edits already take effect."
+  exit 0
+fi
+
+"$repo_dir/scripts/validate"
+
+claude plugin marketplace update james-skills
+
+for plugin in "$repo_dir/plugins/"*; do
+  [[ -d "$plugin" ]] || continue
+  name="$(basename "$plugin")"
+  grep -q "$name@james-skills" "$manifest" || continue
+  claude plugin uninstall "$name@james-skills" >/dev/null
+  claude plugin install "$name@james-skills" --scope user >/dev/null
+  echo "Refreshed $name"
+done
+
+echo "Claude Code now has the current working tree. Start a new session to load it."
