@@ -42,7 +42,7 @@ def main() -> int:
         assert f"- Category: `{item['category']}`" in card
         assert f"- Lifecycle: `{item['status']}`" in card
         assert "- Use when:" in card and "- Result:" in card and "- Do not use when:" in card
-        assert f"../plugins/{item['category']}/skills/{name}/SKILL.md" if item.get("type") != "rule" else f"../plugins/{item['category']}/rules/{name}/{name}.md" in card
+        assert f"../plugins/{item['category']}/skills/{name}/SKILL.md" in card
         for alias in item.get("aliases", []):
             assert f"`{alias}`" in card, f"{name} card missing alias {alias}"
 

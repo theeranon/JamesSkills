@@ -63,10 +63,7 @@ if len(aliases) != len(set(aliases)) or set(aliases) & set(names):
 
 catalog_paths = set()
 for item in items:
-    type_ = item.get("type", "skill")
-    folder = "rules" if type_ == "rule" else "skills"
-    filename = item["name"] + ".md" if type_ == "rule" else "SKILL.md"
-    path = root / "plugins" / item["category"] / folder / item["name"] / filename
+    path = root / "plugins" / item["category"] / "skills" / item["name"] / "SKILL.md"
     if not path.is_file():
         raise SystemExit(f"FAIL catalog target missing: {path}")
     catalog_paths.add(path.resolve())
@@ -115,7 +112,7 @@ while IFS= read -r test_file; do
   python3 "$test_file"
 done < <(find "$repo_dir/tests" -maxdepth 1 -name 'test_*.py' -type f | sort)
 
-linter="$repo_dir/plugins/james-core/rules/make-it-james/scripts/lint_outcome.py"
+linter="$repo_dir/plugins/james-core/skills/make-it-james/scripts/lint_outcome.py"
 if [[ -f "$linter" ]]; then
   while IFS= read -r asset; do
     python3 "$linter" --strict "$asset"

@@ -40,8 +40,8 @@ const chrome = chromeCandidates.find((candidate) => fs.existsSync(candidate));
 if (!chrome) {
   throw new Error("Chrome or Chromium not found; set CHROME_PATH to its executable");
 }
-const embedder = path.join(repo, "plugins/james-core/rules/make-it-james/scripts/embed_ibm_plex_thai.py");
-const linter = path.join(repo, "plugins/james-core/rules/make-it-james/scripts/lint_outcome.py");
+const embedder = path.join(repo, "plugins/james-core/skills/make-it-james/scripts/embed_ibm_plex_thai.py");
+const linter = path.join(repo, "plugins/james-core/skills/make-it-james/scripts/lint_outcome.py");
 const receiptInputs = [
   "package.json",
   "package-lock.json",

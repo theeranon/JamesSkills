@@ -22,9 +22,9 @@ def main() -> int:
     solutions = read("plugins/james-productivity/skills/give-me-solutions/SKILL.md")
     zoom_out = read("plugins/james-productivity/skills/zoom-out/SKILL.md")
     final_it = read("plugins/james-productivity/skills/final-it/SKILL.md")
-    adhd = read("plugins/james-core/rules/i-have-adhd/i-have-adhd.md")
+    adhd = read("plugins/james-core/skills/i-have-adhd/SKILL.md")
     project_standard = read("plugins/james-software/skills/project-standard/SKILL.md")
-    visual_standard = read("plugins/james-core/rules/make-it-james/references/standard.md")
+    visual_standard = read("plugins/james-core/skills/make-it-james/references/standard.md")
 
     for name in (
         "zoom-out",

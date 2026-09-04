@@ -207,7 +207,7 @@ Mode and standard behavior differs from a normal workflow:
 - Do not use when: brevity would be mistaken for deleting necessary information or limiting the user to one arbitrary option.
 - Common composition: wraps any workflow until explicitly disabled.
 - Aliases: none.
-- Canonical instructions: [`plugins/james-core/rules/i-have-adhd/i-have-adhd.md`](../plugins/james-core/rules/i-have-adhd/i-have-adhd.md)
+- Canonical instructions: [`plugins/james-core/skills/i-have-adhd/SKILL.md`](../plugins/james-core/skills/i-have-adhd/SKILL.md)
 
 ### `/make-it-james`
 
@@ -219,7 +219,7 @@ Mode and standard behavior differs from a normal workflow:
 - Do not use when: handling raw evidence, transcripts, source archives, or private scratch notes.
 - Common composition: any output skill -> `make-it-james` -> `/prove-it`.
 - Aliases: none.
-- Canonical instructions: [`plugins/james-core/rules/make-it-james/make-it-james.md`](../plugins/james-core/rules/make-it-james/make-it-james.md)
+- Canonical instructions: [`plugins/james-core/skills/make-it-james/SKILL.md`](../plugins/james-core/skills/make-it-james/SKILL.md)
 
 ### `/proactive-habits`
 
@@ -230,7 +230,7 @@ Mode and standard behavior differs from a normal workflow:
 - Result: sets the communication and behavioral mode to highly autonomous and proactive.
 - Do not use when: you want the AI to act passively and ask for permission at every step.
 - Aliases: none.
-- Canonical instructions: [`plugins/james-core/rules/proactive-habits/proactive-habits.md`](../plugins/james-core/rules/proactive-habits/proactive-habits.md)
+- Canonical instructions: [`plugins/james-core/skills/proactive-habits/SKILL.md`](../plugins/james-core/skills/proactive-habits/SKILL.md)
 
 ### `/coach-me`
 

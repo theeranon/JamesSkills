@@ -21,7 +21,7 @@ def main() -> int:
     one_contract = read("plugins/james-productivity/skills/one-page-pls/references/content-contract.md")
     one_render_qa = read("plugins/james-productivity/skills/one-page-pls/references/render-qa.md")
     one_template = read("plugins/james-productivity/skills/one-page-pls/assets/a4-landscape-template.html")
-    make_it_james = read("plugins/james-core/rules/make-it-james/make-it-james.md")
+    make_it_james = read("plugins/james-core/skills/make-it-james/SKILL.md")
     make_it_james_ux = read("plugins/james-software/skills/make-it-james-ux/SKILL.md")
     make_it_james_standard = read("plugins/james-software/skills/make-it-james-ux/references/standard.md")
     final_it = read("plugins/james-productivity/skills/final-it/SKILL.md")

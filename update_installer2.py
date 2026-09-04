@@ -1,27 +1,9 @@
-#!/usr/bin/env bash
-set -euo pipefail
+import re
 
-repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-"$repo_dir/scripts/validate"
-"$repo_dir/scripts/install-hooks"
+with open("scripts/install", "r") as f:
+    content = f.read()
 
-targets=("$HOME/.agents/skills" "$HOME/.codex/skills" "$HOME/.claude/skills")
-if [[ -d "$HOME/.gemini/config" ]]; then
-  targets+=("$HOME/.gemini/config/skills")
-fi
-if [[ -d "$HOME/.gemini/antigravity/custom" ]]; then
-  targets+=("$HOME/.gemini/antigravity/custom/skills")
-fi
-
-promoted_names="$(python3 - "$repo_dir/catalog.json" <<'PY'
-import json, sys
-for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
-    if item["status"] == "promoted":
-        print(item["name"])
-        print(*item.get("aliases", []), sep="\n")
-PY
-)"
-
+new_logic = """
 for target in "${targets[@]}"; do
   base_dir="$(dirname "$target")"
   skills_target="$base_dir/skills"
@@ -66,7 +48,7 @@ for target in "${targets[@]}"; do
   fi
 
   # ALIASES: Aliases always go to the skills/ folder for everyone
-  while IFS=$'	' read -r alias_name category canonical_name; do
+  while IFS=$'\t' read -r alias_name category canonical_name; do
     [[ -n "$alias_name" && -n "$canonical_name" ]] || continue
     alias_dir="$repo_dir/aliases/$alias_name"
     if [[ ! -f "$alias_dir/SKILL.md" ]]; then
@@ -80,9 +62,16 @@ import json, sys
 for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
     if item["status"] == "promoted":
         for alias in item.get("aliases", []):
-            print(f'{alias}	{item["category"]}	{item["name"]}')
+            print(f'{alias}\t{item["category"]}\t{item["name"]}')
 PY
 )
 done
 
 echo "Installed successfully to all platforms (Antigravity Plugins + Legacy Skills) from $repo_dir"
+"""
+
+# Replace the old loop
+content = re.sub(r'for target in "\$\{targets\[@\]\}"; do.*done\n\necho "Installed 3 plugins and aliases from \$repo_dir"', new_logic.strip(), content, flags=re.DOTALL)
+
+with open("scripts/install", "w") as f:
+    f.write(content)

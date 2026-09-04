@@ -18,11 +18,11 @@
       "sha256": "5ac67e8442fc0166f1dbe11fee032eaa772532e19ee9c844d9a13e997e3b4967"
     },
     {
-      "path": "plugins/james-core/rules/make-it-james/scripts/embed_ibm_plex_thai.py",
+      "path": "plugins/james-core/skills/make-it-james/scripts/embed_ibm_plex_thai.py",
       "sha256": "ebee0044e3b93cbf71dc28ae193f0a335edcac1712eba78b58d3445dd53f6c2c"
     },
     {
-      "path": "plugins/james-core/rules/make-it-james/scripts/lint_outcome.py",
+      "path": "plugins/james-core/skills/make-it-james/scripts/lint_outcome.py",
       "sha256": "affec6d134cffe316959d2db82fb2decabd019f29cce9239ee81b10bff9c8d7e"
     }
   ],
