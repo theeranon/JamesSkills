@@ -63,12 +63,15 @@ if len(aliases) != len(set(aliases)) or set(aliases) & set(names):
 
 catalog_paths = set()
 for item in items:
-    path = root / "skills" / item["category"] / item["name"] / "SKILL.md"
+    type_ = item.get("type", "skill")
+    folder = "rules" if type_ == "rule" else "skills"
+    filename = item["name"] + ".md" if type_ == "rule" else "SKILL.md"
+    path = root / "plugins" / item["category"] / folder / item["name"] / filename
     if not path.is_file():
         raise SystemExit(f"FAIL catalog target missing: {path}")
     catalog_paths.add(path.resolve())
 
-disk_paths = {path.resolve() for path in (root / "skills").glob("*/*/SKILL.md")}
+disk_paths = {path.resolve() for path in list((root / "plugins").glob("*/skills/*/SKILL.md")) + list((root / "plugins").glob("*/rules/*/*.md"))}
 if disk_paths != catalog_paths:
     missing = sorted(str(path) for path in disk_paths - catalog_paths)
     stale = sorted(str(path) for path in catalog_paths - disk_paths)
@@ -101,7 +104,7 @@ for pack in catalog.get("packs", []):
 print(f"PASS catalog skills={len(items)} aliases={len(aliases)}")
 PY
 
-python3 "$repo_dir/skills/standards/project-standard/scripts/project_standard.py" \
+python3 "$repo_dir/plugins/james-software/skills/project-standard/scripts/project_standard.py" \
   check "$repo_dir" --ready
 
 while IFS= read -r test_file; do
@@ -112,7 +115,7 @@ while IFS= read -r test_file; do
   python3 "$test_file"
 done < <(find "$repo_dir/tests" -maxdepth 1 -name 'test_*.py' -type f | sort)
 
-linter="$repo_dir/skills/standards/make-it-james/scripts/lint_outcome.py"
+linter="$repo_dir/plugins/james-core/rules/make-it-james/scripts/lint_outcome.py"
 if [[ -f "$linter" ]]; then
   while IFS= read -r asset; do
     python3 "$linter" --strict "$asset"

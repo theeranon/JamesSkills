@@ -42,14 +42,14 @@ def main() -> int:
         assert f"- Category: `{item['category']}`" in card
         assert f"- Lifecycle: `{item['status']}`" in card
         assert "- Use when:" in card and "- Result:" in card and "- Do not use when:" in card
-        assert f"../skills/{item['category']}/{name}/SKILL.md" in card
+        assert f"../plugins/{item['category']}/skills/{name}/SKILL.md" if item.get("type") != "rule" else f"../plugins/{item['category']}/rules/{name}/{name}.md" in card
         for alias in item.get("aliases", []):
             assert f"`{alias}`" in card, f"{name} card missing alias {alias}"
 
         if item["status"] == "pilot":
             assert not raw_heading.startswith("/"), f"pilot shown as slash call: {name}"
             assert "Not installed" in card, f"pilot availability unclear: {name}"
-        elif item["category"] == "internal":
+        elif item["name"] == "skill-router":
             assert not raw_heading.startswith("/"), f"internal shown as human call: {name}"
             assert "Internal support" in card, f"internal boundary unclear: {name}"
         else:

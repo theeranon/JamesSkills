@@ -12,19 +12,19 @@ def read(relative: str) -> str:
 
 
 def main() -> int:
-    router = read("skills/internal/skill-router/SKILL.md")
-    never_again = read("skills/core/never-again/SKILL.md")
+    router = read("plugins/james-core/skills/skill-router/SKILL.md")
+    never_again = read("plugins/james-core/skills/never-again/SKILL.md")
     cases = read("tests/behavioral-cases.md")
-    sum_meet = read("skills/outputs/sum-meet/SKILL.md")
-    one_page = read("skills/outputs/one-page-pls/SKILL.md")
-    done_for_me = read("skills/core/done-for-me/SKILL.md")
-    prove_it = read("skills/core/prove-it/SKILL.md")
-    solutions = read("skills/core/give-me-solutions/SKILL.md")
-    zoom_out = read("skills/core/zoom-out/SKILL.md")
-    final_it = read("skills/outputs/final-it/SKILL.md")
-    adhd = read("skills/modes/i-have-adhd/SKILL.md")
-    project_standard = read("skills/standards/project-standard/SKILL.md")
-    visual_standard = read("skills/standards/make-it-james/references/standard.md")
+    sum_meet = read("plugins/james-productivity/skills/sum-meet/SKILL.md")
+    one_page = read("plugins/james-productivity/skills/one-page-pls/SKILL.md")
+    done_for_me = read("plugins/james-core/skills/done-for-me/SKILL.md")
+    prove_it = read("plugins/james-core/skills/prove-it/SKILL.md")
+    solutions = read("plugins/james-productivity/skills/give-me-solutions/SKILL.md")
+    zoom_out = read("plugins/james-productivity/skills/zoom-out/SKILL.md")
+    final_it = read("plugins/james-productivity/skills/final-it/SKILL.md")
+    adhd = read("plugins/james-core/rules/i-have-adhd/i-have-adhd.md")
+    project_standard = read("plugins/james-software/skills/project-standard/SKILL.md")
+    visual_standard = read("plugins/james-core/rules/make-it-james/references/standard.md")
 
     for name in (
         "zoom-out",

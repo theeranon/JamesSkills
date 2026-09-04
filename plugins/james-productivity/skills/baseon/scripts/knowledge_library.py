@@ -592,7 +592,7 @@ def create_lens(root: Path, args: argparse.Namespace) -> int:
         "__LENS_ID_UPPER__": args.lens_id.upper().replace("-", "_"),
         "__SOURCE_ID__": args.source[0],
     }
-    asset_dir = root / "skills/core/baseon/assets"
+    asset_dir = root / "plugins/james-productivity/skills/baseon/assets"
     templates = {
         "lens-index.template.md": lens_dir / "index.md",
         "lens-concepts.template.md": lens_dir / "references/concepts.md",

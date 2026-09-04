@@ -42,7 +42,7 @@
 - Update: `./scripts/update`
 - Test: `./scripts/validate`
 - Diagnose: `./scripts/doctor`
-- Contract: `python3 skills/standards/project-standard/scripts/project_standard.py check . --ready`
+- Contract: `python3 plugins/james-software/skills/project-standard/scripts/project_standard.py check . --ready`
 - Build: none; this repository distributes source files and managed symlinks directly.
 
 ## Completion

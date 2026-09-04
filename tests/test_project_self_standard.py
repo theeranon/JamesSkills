@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CHECKER = ROOT / "skills/standards/project-standard/scripts/project_standard.py"
+CHECKER = ROOT / "plugins/james-software/skills/project-standard/scripts/project_standard.py"
 
 
 def main() -> int:

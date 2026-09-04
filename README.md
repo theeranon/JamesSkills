@@ -22,6 +22,20 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 ---
 
+
+## 🏛️ Architecture: The 3 Universal Pillars (Plugins)
+
+JamesSkills uses a **Hybrid Plugin Architecture** to ensure compatibility across Antigravity, Claude, ChatGPT, and Cursor. The repository is divided into three distinct modules:
+
+1. ⚙️ **`james-core`**: The foundational reasoning engine, behavioral rules (`proactive-habits`, `make-it-james`), and strict QA gates (`/are-you-sure`, `/prove-it`). *(Always On)*
+2. 📊 **`james-productivity`**: Business strategy, frameworks, and executive document outputs (`/baseon`, `/one-page-pls`, `/sum-meet`). *(Toggle when doing business)*
+3. 💻 **`james-software`**: Development standards, UI/UX psychological mindset (`/make-it-james-ux`), and strict coding protocols (`/proactive-dev`). *(Toggle when coding)*
+
+**Universal Deployment:**
+- **Antigravity**: Automatically mounts as 3 independent plugins via `plugin.json`, separating `rules/` (Always-On) from `skills/` (On-Demand).
+- **Claude/ChatGPT**: Upload the markdown files in `skills/` to Project Knowledge, and paste `rules/` into Custom Instructions.
+- **Cursor**: Reference `rules/` via `.cursorrules` and use `@` for skills on-demand.
+
 ## 📚 Full Skill Directory (Before vs After)
 
 ### 🎯 Core Execution & Reasoning Workflows (สกิลการคิด วิเคราะห์ และลงมือทำ)
@@ -670,8 +684,8 @@ This release has no pilot packages. Compatibility aliases keep older calls worki
 `baseon` owns the application workflow. Sources and lenses live separately under `packs/knowledge` so a new book does not create another skill or inflate `SKILL.md`.
 
 ```bash
-python3 skills/core/baseon/scripts/knowledge_library.py list
-python3 skills/core/baseon/scripts/knowledge_library.py validate
+python3 plugins/james-productivity/skills/baseon/scripts/knowledge_library.py list
+python3 plugins/james-productivity/skills/baseon/scripts/knowledge_library.py validate
 ```
 
 The first reviewed-private lenses are `wealth-dynamics` and `wealth-spectrum`. `talent-dynamics` resolves to the same Dynamics lens because it is the team adaptation of the same model. Wealth Spectrum remains a separate model with the same creator lineage. Their full source PDFs remain outside Git. Source cards keep version, rights posture, SHA-256 when applicable, and locators; lens files contain original paraphrase, applications, and limitations.

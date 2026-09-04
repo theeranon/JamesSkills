@@ -3,19 +3,19 @@
   "skills": [
     {
       "name": "done-for-me",
-      "category": "core",
+      "category": "james-core",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "give-me-solutions",
-      "category": "core",
+      "category": "james-productivity",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "baseon",
-      "category": "core",
+      "category": "james-productivity",
       "status": "promoted",
       "aliases": [
         "think-with-this",
@@ -26,43 +26,45 @@
     },
     {
       "name": "never-again",
-      "category": "core",
+      "category": "james-core",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "prove-it",
-      "category": "core",
+      "category": "james-core",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "zoom-out",
-      "category": "core",
+      "category": "james-productivity",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "catchup",
-      "category": "core",
+      "category": "james-software",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "i-have-adhd",
-      "category": "modes",
+      "category": "james-core",
       "status": "promoted",
-      "aliases": []
+      "aliases": [],
+      "type": "rule"
     },
     {
       "name": "make-it-james",
-      "category": "standards",
+      "category": "james-core",
       "status": "promoted",
-      "aliases": []
+      "aliases": [],
+      "type": "rule"
     },
     {
       "name": "project-standard",
-      "category": "standards",
+      "category": "james-software",
       "status": "promoted",
       "aliases": [
         "project-docs-standard"
@@ -70,13 +72,13 @@
     },
     {
       "name": "final-it",
-      "category": "outputs",
+      "category": "james-productivity",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "sum-meet",
-      "category": "outputs",
+      "category": "james-productivity",
       "status": "promoted",
       "aliases": [
         "solutionsimpact-meeting-summary-full"
@@ -84,7 +86,7 @@
     },
     {
       "name": "one-page-pls",
-      "category": "outputs",
+      "category": "james-productivity",
       "status": "promoted",
       "aliases": [
         "solutionsimpact-onepagesummary"
@@ -92,49 +94,50 @@
     },
     {
       "name": "skill-router",
-      "category": "internal",
+      "category": "james-core",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "proactive-habits",
-      "category": "modes",
+      "category": "james-core",
       "status": "promoted",
-      "aliases": []
+      "aliases": [],
+      "type": "rule"
     },
     {
       "name": "proactive-dev",
-      "category": "standards",
+      "category": "james-software",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "grill-me",
-      "category": "core",
+      "category": "james-productivity",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "make-it-james-ux",
-      "category": "standards",
+      "category": "james-software",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "is-that-the-best-you-can-do",
-      "category": "core",
+      "category": "james-core",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "coach-me",
-      "category": "modes",
+      "category": "james-productivity",
       "status": "promoted",
       "aliases": []
     },
     {
       "name": "are-you-sure",
-      "category": "core",
+      "category": "james-core",
       "status": "promoted",
       "aliases": []
     }

@@ -84,8 +84,8 @@ def main() -> int:
             sandbox / "packs/knowledge/registry.json",
             {"schema_version": 1, "sources": [], "lenses": []},
         )
-        assets = sandbox / "skills/core/baseon/assets"
-        shutil.copytree(ROOT / "skills/core/baseon/assets", assets)
+        assets = sandbox / "plugins/james-productivity/skills/baseon/assets"
+        shutil.copytree(ROOT / "plugins/james-productivity/skills/baseon/assets", assets)
 
         source_args = argparse.Namespace(
             source_id="example-book",
@@ -227,7 +227,7 @@ def main() -> int:
         for required in ("requires SHA-256", "lacks URL", "unresolved rights", "ISO date"):
             assert any(required in error for error in errors), f"source gate missing: {required}"
 
-    skill = (ROOT / "skills/core/baseon/SKILL.md").read_text(encoding="utf-8")
+    skill = (ROOT / "plugins/james-productivity/skills/baseon/SKILL.md").read_text(encoding="utf-8")
     for required in (
         "official_user_declared",
         "working_hypothesis",

@@ -15,16 +15,16 @@ def read(relative: str) -> str:
 
 
 def main() -> int:
-    sum_skill = read("skills/outputs/sum-meet/SKILL.md")
-    sum_template = read("skills/outputs/sum-meet/assets/meeting-record.html")
-    one_skill = read("skills/outputs/one-page-pls/SKILL.md")
-    one_contract = read("skills/outputs/one-page-pls/references/content-contract.md")
-    one_render_qa = read("skills/outputs/one-page-pls/references/render-qa.md")
-    one_template = read("skills/outputs/one-page-pls/assets/a4-landscape-template.html")
-    make_it_james = read("skills/standards/make-it-james/SKILL.md")
-    make_it_james_ux = read("skills/standards/make-it-james-ux/SKILL.md")
-    make_it_james_standard = read("skills/standards/make-it-james-ux/references/standard.md")
-    final_it = read("skills/outputs/final-it/SKILL.md")
+    sum_skill = read("plugins/james-productivity/skills/sum-meet/SKILL.md")
+    sum_template = read("plugins/james-productivity/skills/sum-meet/assets/meeting-record.html")
+    one_skill = read("plugins/james-productivity/skills/one-page-pls/SKILL.md")
+    one_contract = read("plugins/james-productivity/skills/one-page-pls/references/content-contract.md")
+    one_render_qa = read("plugins/james-productivity/skills/one-page-pls/references/render-qa.md")
+    one_template = read("plugins/james-productivity/skills/one-page-pls/assets/a4-landscape-template.html")
+    make_it_james = read("plugins/james-core/rules/make-it-james/make-it-james.md")
+    make_it_james_ux = read("plugins/james-software/skills/make-it-james-ux/SKILL.md")
+    make_it_james_standard = read("plugins/james-software/skills/make-it-james-ux/references/standard.md")
+    final_it = read("plugins/james-productivity/skills/final-it/SKILL.md")
     behavior_cases = read("tests/behavioral-cases.md")
 
     for required in (
