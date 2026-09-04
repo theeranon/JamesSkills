@@ -603,22 +603,23 @@ James Theeranon
 
 ---
 
-## 📦 Installation
 
-**For Mac/Linux Users (ติดตั้งแบบบรรทัดเดียวจบ):**
-Open your terminal and run:
+## 📦 Installation (Universal)
+
+JamesSkills now fully supports **Mac, Linux, and Windows** natively with a Universal Python Installer.
+
+### Mac & Linux (One-liner)
+Open your Terminal and paste:
 ```bash
-git clone https://github.com/theeranon/JamesSkills.git "$HOME/.james-skills"
-"$HOME/.james-skills/scripts/install"
+git clone https://github.com/theeranon/JamesSkills.git && cd JamesSkills && python3 scripts/install.py
 ```
-*This will safely link the skills to your local AI environments.*
-*(คำสั่งนี้จะติดตั้งและผูกสกิลเข้ากับ Claude/Cursor ในเครื่องคุณให้แบบอัตโนมัติ)*
 
-> **No terminal? No problem! (สำหรับคนไม่อยากลงโค้ด):**
-> Simply browse the `skills/` folder in this repository, open the `SKILL.md` of the skill you want, and copy-paste the text into your ChatGPT's "Custom Instructions" or Claude's "Projects"!
-> (ใครไม่อยากยุ่งกับ Terminal แค่กดเข้าไปดูในโฟลเดอร์ `skills/` ก๊อปปี้ข้อความในไฟล์ `SKILL.md` ไปแปะในแชท AI ก็ใช้งานได้เลยครับ!)
+### Windows (Easy Install)
+1. Download or clone this repository (`git clone https://github.com/theeranon/JamesSkills.git`).
+2. Double-click the **`install.bat`** file inside the folder.
+3. Done! It will automatically install to Cursor, Claude, and Codex without requiring Admin privileges.
 
----
+> **Note for Non-Tech Users:** Do not paste these commands into the AI Chat interface! You must open your computer's "Terminal" (Mac) or "Command Prompt / PowerShell" (Windows) to run them.
 
 ## 🛠️ Developers
 *(The following sections are technical architecture notes for maintainers)*
