@@ -43,7 +43,7 @@ class TestReadmeContentCompleteness(unittest.TestCase):
             if item.get("status") == "promoted"
         ]
 
-    def test_catalog_has_exactly_21_canonical_skills(self) -> None:
+    def test_catalog_matches_expected_canonical_count(self) -> None:
         """Verify catalog.json canonical skill count matches the documented roster."""
         self.assertEqual(
             EXPECTED_CANONICAL,
@@ -51,7 +51,7 @@ class TestReadmeContentCompleteness(unittest.TestCase):
             f"Expected {EXPECTED_CANONICAL} canonical skills in catalog.json, found {len(self.canonical_skills)}: {self.canonical_skills}",
         )
 
-    def test_all_21_canonical_skills_documented_in_readme(self) -> None:
+    def test_every_canonical_skill_documented_in_readme(self) -> None:
         """Verify every canonical skill from catalog.json is documented in the README directory."""
         missing = []
         for skill_name in self.canonical_skills:
