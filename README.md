@@ -669,6 +669,12 @@ git clone https://github.com/theeranon/JamesSkills.git
 ```
 Then double-click **`install.bat`** inside the folder. It runs `scripts/install.py`, uses directory junctions so no administrator rights are needed, and falls back to copying if junctions are unavailable.
 
+### Pick one route per machine
+
+Running both on the same machine installs every skill twice, once bare and once namespaced, and the duplicate entries degrade how reliably the right skill is chosen. Verified on macOS: with both routes active, a skill's description stops rendering in the picker.
+
+Use Route A on a machine where you only consume the skills. Use Route B on a machine where you edit them. To switch from A to B, run `claude plugin uninstall james-core@james-skills` for each pillar; the marketplace stays registered, so you can reinstall at any time.
+
 ### What lands where
 
 | Platform | Mechanism | Status |

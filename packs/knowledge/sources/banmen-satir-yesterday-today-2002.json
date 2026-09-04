@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "banmen-satir-yesterday-today-2002",
+  "title": "The Satir Model: Yesterday and Today",
+  "creator": "John Banmen",
+  "edition_or_version": "Contemporary Family Therapy 24(1), March 2002, pages 7 to 22",
+  "source_type": "peer-reviewed-paper",
+  "status": "reviewed-private",
+  "source_access": "web",
+  "provenance": "Openly hosted PDF read during research on 2026-09-05. The single best primary description of the model by its principal codifier.",
+  "reference_urls": [
+    "https://opencourses.emu.edu.tr/pluginfile.php/60192/mod_resource/content/0/Satir.pdf"
+  ],
+  "acquired_at": "2026-09-05",
+  "rights_status": "in copyright, Springer; an open copy is hosted by a university course site",
+  "rights_basis": "citation_and_original_paraphrase_only",
+  "raw_source_in_repo": false,
+  "content_sha256": null,
+  "evidence_label": "official claim",
+  "locators": [
+    {
+      "id": "p17-18",
+      "location": "pages 17 to 18",
+      "scope": "The four coping stances named, and the explicit statement that they are modes of surviving under stress and not personality categories"
+    },
+    {
+      "id": "fig1",
+      "location": "Figure 1",
+      "scope": "Eight-level iceberg diagram. Banmen's running prose gives a shorter five-item list, so prose and diagram differ."
+    },
+    {
+      "id": "session",
+      "location": "session process section",
+      "scope": "Nine-step session sequence, including the criticism that most practitioners ask content questions instead of process questions"
+    },
+    {
+      "id": "entry",
+      "location": "stance discussion",
+      "scope": "Preferred entry point per stance"
+    }
+  ],
+  "scope": [
+    "iceberg levels",
+    "coping stances",
+    "three areas of intervention",
+    "session process"
+  ],
+  "not_for_use": [
+    "evidence of effectiveness",
+    "coaching scope without separate boundary guidance"
+  ]
+}

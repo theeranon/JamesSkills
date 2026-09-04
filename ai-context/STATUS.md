@@ -50,7 +50,6 @@ JamesSkills v2 carries 22 promoted canonical packages and 8 compatibility aliase
 ## Need decision
 
 - A public name for `skill-router` remains unapproved; it stays internal support.
-- `Satir Model` is recorded as `coach-me`'s coaching lens with `Satya` kept as an alternate spelling in the locator; its provenance card is not yet registered in `packs/knowledge`.
 - Fresh-session behavioral parity on every supported AI platform remains unproved.
 - Public hosting or release of any repository subset remains unapproved.
 

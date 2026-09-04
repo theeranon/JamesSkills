@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "id": "icf-referring-client-to-therapy-2018",
+  "title": "Referring a Client to Therapy: A Set of Guidelines",
+  "creator": "Angela M. Hullinger and Joel A. DiGirolamo, International Coaching Federation",
+  "edition_or_version": "2018 research guide",
+  "source_type": "professional-body-guidance",
+  "status": "reviewed-private",
+  "source_access": "web",
+  "provenance": "Public PDF on the ICF site, read 2026-09-05.",
+  "reference_urls": [
+    "https://coachingfederation.org/wp-content/uploads/2024/12/icf-research-guide-referring-client-to-therapy.pdf"
+  ],
+  "acquired_at": "2026-09-05",
+  "rights_status": "published guidance, International Coaching Federation",
+  "rights_basis": "citation_and_original_paraphrase_only",
+  "raw_source_in_repo": false,
+  "content_sha256": null,
+  "evidence_label": "official claim",
+  "locators": [
+    {
+      "id": "explore-past",
+      "location": "scope of coaching section",
+      "scope": "A coach may explore the past in service of understanding the story told about the present, but does not linger there"
+    },
+    {
+      "id": "four-conditions",
+      "location": "referral conditions",
+      "scope": "Four referral triggers, with level of daily functioning as the primary indicator"
+    },
+    {
+      "id": "parallel",
+      "location": "worked case on Standard 3.7",
+      "scope": "Announce the role change, explain the distinction, ask permission, refer, resume coaching"
+    }
+  ],
+  "scope": [
+    "coaching versus therapy boundary",
+    "referral triggers",
+    "parallel working procedure"
+  ],
+  "not_for_use": [
+    "clinical diagnosis",
+    "substitute for licensure"
+  ]
+}

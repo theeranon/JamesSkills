@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "satir-model",
+  "title": "Satir Model",
+  "kind": "framework",
+  "version": "1.0.0",
+  "status": "reviewed-private",
+  "entrypoint": "index.md",
+  "source_ids": [
+    "satir-model-1991",
+    "banmen-satir-yesterday-today-2002",
+    "icf-referring-client-to-therapy-2018"
+  ],
+  "use_cases": [
+    "work beneath a stuck behaviour to what is driving it",
+    "read a communication stance under stress and choose where to make contact",
+    "hold a coaching conversation that ends in the person's own committed action"
+  ],
+  "not_for": [
+    "personality typing or hiring",
+    "clinical work, trauma processing, or any diagnosis",
+    "any claim that the model is evidence-based or validated",
+    "organisational performance claims, for which no outcome study exists"
+  ],
+  "creator_family_id": "virginia-satir",
+  "model_family_id": "satir-model",
+  "rights_class": "private-original-synthesis",
+  "raw_source_in_repo": false
+}

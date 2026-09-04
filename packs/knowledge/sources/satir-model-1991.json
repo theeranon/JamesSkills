@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "id": "satir-model-1991",
+  "title": "The Satir Model: Family Therapy and Beyond",
+  "creator": "Virginia Satir, John Banmen, Jane Gerber, Maria Gomori",
+  "edition_or_version": "Science and Behavior Books, 1991, ISBN 0831400781",
+  "source_type": "primary-book",
+  "status": "reviewed-private",
+  "source_access": "web",
+  "provenance": "Not held locally. Recorded from secondary citation across Satir-lineage primary sources and the Satir Institute of the Pacific annotated bibliography, 2024 edition.",
+  "reference_urls": [
+    "https://satirpacific.org/evolution-of-the-satir-model/"
+  ],
+  "acquired_at": "2026-09-05",
+  "rights_status": "in copyright, Science and Behavior Books",
+  "rights_basis": "citation_and_original_paraphrase_only",
+  "raw_source_in_repo": false,
+  "content_sha256": null,
+  "evidence_label": "official claim",
+  "locators": [
+    {
+      "id": "ch5",
+      "location": "Chapter 5, The Process of Change",
+      "scope": "Change Process Model. The exact stage names and count as printed are NOT CONFIRMED; the copy is lending-restricted."
+    },
+    {
+      "id": "p121ff",
+      "location": "page 121 onward",
+      "scope": "Ingredients of an Interaction"
+    },
+    {
+      "id": "fig-iceberg",
+      "location": "Personal Iceberg Metaphor figure",
+      "scope": "Eight-level iceberg. Co-created by John Banmen from observing Satir's work, with Gerber and Gomori. Not a diagram Satir herself published."
+    }
+  ],
+  "scope": [
+    "personal iceberg metaphor",
+    "four survival stances and congruence",
+    "ingredients of an interaction",
+    "change process"
+  ],
+  "not_for_use": [
+    "personality typing",
+    "clinical practice by a non-clinician",
+    "any claim that the model is evidence-based",
+    "reproduction of its diagrams or extended text"
+  ]
+}

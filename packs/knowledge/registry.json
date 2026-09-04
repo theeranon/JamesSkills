@@ -2,8 +2,20 @@
   "schema_version": 1,
   "sources": [
     {
+      "id": "banmen-satir-yesterday-today-2002",
+      "path": "packs/knowledge/sources/banmen-satir-yesterday-today-2002.json"
+    },
+    {
       "id": "framework-evidence-audit-2026",
       "path": "packs/knowledge/sources/framework-evidence-audit-2026.json"
+    },
+    {
+      "id": "icf-referring-client-to-therapy-2018",
+      "path": "packs/knowledge/sources/icf-referring-client-to-therapy-2018.json"
+    },
+    {
+      "id": "satir-model-1991",
+      "path": "packs/knowledge/sources/satir-model-1991.json"
     },
     {
       "id": "talent-dynamics-genius-guide-2015",
@@ -19,6 +31,11 @@
     }
   ],
   "lenses": [
+    {
+      "id": "satir-model",
+      "aliases": [],
+      "path": "packs/knowledge/lenses/satir-model/manifest.json"
+    },
     {
       "id": "wealth-dynamics",
       "aliases": [
