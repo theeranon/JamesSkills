@@ -165,7 +165,7 @@ To improve communication with your co-founder, you should practice active listen
 #### ⚡️ `/dev-are-you-sure`
 *Sweep delivered software across five layers, then walk the boundary chain: Source, Provider, User Journey, and Production. Its business-side twin is `/are-you-sure`, and `/research-it` settles claims that live outside the code.*
 
-<p align="center"><img src="assets/prove-it-preview.png" width="100%" alt="dev-are-you-sure 4-layer boundary chain"></p>
+<p align="center"><img src="assets/dev-are-you-sure-preview.png" width="100%" alt="dev-are-you-sure 4-layer boundary chain"></p>
 
 <table width="100%">
 <tr>
@@ -601,7 +601,7 @@ James Theeranon
 #### ⚡️ `/hand-it-off`
 *Internal responsibility-based routing matrix directing incoming tasks to their single accountable primary workflow, automatic standards, and verification boundary.*
 
-<p align="center"><img src="assets/skill-router-architecture.png" width="100%" alt="hand-it-off architecture"></p>
+<p align="center"><img src="assets/hand-it-off-architecture.png" width="100%" alt="hand-it-off architecture"></p>
 
 <table width="100%">
 <tr>
