@@ -24,7 +24,7 @@ skills with no repeated names. Desktop picker confirmation remains open.
 
 ## In progress
 
-- Local candidate awaits publication authorization. Published baseline remains `51c776e97eb6bf8ce4a2e6a9b49d59931c431197` as checked during this repair.
+- Installer repair `f8dbccc` was authorized by the owner and pushed to GitHub `main`; the pre-push validation gate passed.
 - Codex Desktop picker must be checked after reopening/restart; Computer Use cannot access this app.
 
 ## Requirement state
@@ -43,7 +43,7 @@ skills with no repeated names. Desktop picker confirmation remains open.
 ## Next
 
 - Owner: confirm the Codex Desktop picker no longer repeats the two reported names.
-- Owner: authorize publishing the reviewed installer repair to the existing GitHub main target.
+- New installations from GitHub `main` now receive the installer repair.
 
 ## Blockers
 
@@ -52,7 +52,7 @@ skills with no repeated names. Desktop picker confirmation remains open.
 
 ## Need decision
 
-- Publication of this local installer repair; vendor-run store listing remains a separate decision.
+- Vendor-run store listing remains a separate decision.
 - Whether the schema contract needs a numbered requirement beyond its existing non-functional requirement.
 
 ## Verification

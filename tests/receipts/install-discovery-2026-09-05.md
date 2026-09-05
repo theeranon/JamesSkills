@@ -66,8 +66,9 @@ Antigravity and Claude Desktop runtime compatibility remain unproved here.
 The Gemini/Antigravity plugin-directory layout is retained as filesystem state,
 not promoted to a verified integration.
 
-The local candidate must be published before other users receive this installer
-repair. Native marketplace-only installation from the baseline already passed.
+The owner subsequently authorized publication to `main`. Installer repair
+`f8dbccc` was pushed successfully after its pre-push validation gate passed.
+Native marketplace-only installation from the baseline already passed.
 
 ## Sources checked
 
