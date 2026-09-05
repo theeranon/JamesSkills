@@ -1,145 +1,128 @@
 #!/usr/bin/env python3
-"""Cross-platform installer. Mirrors scripts/install (bash) exactly so Windows
-gets the same, evidence-based behavior as macOS and Linux — no fabricated CLI
-surface, no invented config file.
+"""Validated local installation, preserving unrelated paths and host-specific loading.
 
-Claude Code registers plugins in ~/.claude/plugins/installed_plugins.json;
-Codex CLI registers them as [plugins."<name>@james-skills"] in
-~/.codex/config.toml. When the three pillars are installed that way on
-either, loose skill links would duplicate every skill in that app's own
-command list, so this installer writes only aliases there. Aliases have no
-plugin counterpart, so they never collide. See scripts/install for the
-canonical logic and ai-context/DECISIONS.md DEC-017 and DEC-024 for why.
+Claude installed_plugins.json is read per pillar. Codex is reconciled through
+its app-server; config.toml text is never treated as proof of a working plugin.
 """
+from __future__ import annotations
+import argparse
 import json
 import os
-import platform
 import shutil
 import subprocess
 import sys
+import uuid
 from pathlib import Path
+from codex_skills import reconcile
 
 
-def print_step(msg):
-    print(f"[*] {msg}")
+def owned(path, root):
+    if not path.is_symlink(): return False
+    target = path.resolve()
+    return any(base in target.parents for base in (root/'plugins', root/'aliases', root/'skills'))
 
 
-def print_success(msg):
-    print(f"[SUCCESS] {msg}")
-
-
-def print_error(msg):
-    print(f"[ERROR] {msg}")
-
-
-def link(src: Path, dst: Path) -> None:
-    """Create a link from dst to src: a symlink on macOS/Linux, a directory
-    junction on Windows (needs no administrator rights), falling back to a
-    plain copy only if the junction call itself fails."""
+def check_link(src, dst, root):
+    if not src.is_dir(): raise RuntimeError(f'Missing source: {src}')
+    if dst.is_symlink() and dst.resolve() == src.resolve(): return
     if dst.exists() or dst.is_symlink():
-        try:
-            if dst.is_symlink() or dst.is_file():
-                dst.unlink()
-            else:
-                shutil.rmtree(dst)
-        except OSError:
-            pass
-    if platform.system() == "Windows":
-        try:
-            import _winapi
+        if not owned(dst, root): raise RuntimeError(f'Collision; preserved existing path: {dst}')
 
-            _winapi.CreateJunction(str(src), str(dst))
-            return
-        except OSError:
-            pass
+
+def link(src, dst, root):
+    check_link(src, dst, root)
+    if dst.is_symlink() and dst.resolve() == src.resolve(): return
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    # Create first, replace second: failed symlink creation preserves the old link.
+    temporary = dst.with_name('.'+dst.name+'.'+uuid.uuid4().hex)
     try:
-        os.symlink(src, dst, target_is_directory=src.is_dir())
-    except OSError:
-        shutil.copytree(src, dst)
+        temporary.symlink_to(src, target_is_directory=True)
+        check_link(src, dst, root)
+        temporary.replace(dst)
+    finally:
+        if temporary.is_symlink(): temporary.unlink()
 
 
-def unlink_if_owned(link_path: Path, repo_dir: Path, prefix: str) -> None:
-    """Remove link_path only if it is a symlink/junction this repository
-    created, resolving under repo_dir/prefix."""
-    if not link_path.is_symlink():
-        return
-    try:
-        target = str(link_path.resolve())
-    except OSError:
-        return
-    if target.startswith(str((repo_dir / prefix).resolve())):
-        link_path.unlink()
+def claude_pillars(home):
+    claude_home = Path(os.environ.get('CLAUDE_CONFIG_DIR', str(home/'.claude')))
+    manifest = claude_home/'plugins/installed_plugins.json'
+    if not manifest.exists(): return {}
+    config = claude_home/'settings.json'
+    enabled = json.loads(config.read_text()).get('enabledPlugins', {}) if config.exists() else {}
+    plugins = json.loads(manifest.read_text()).get('plugins', {})
+    result = {}
+    for key, installs in plugins.items():
+        if not key.endswith('@james-skills') or enabled.get(key) is False: continue
+        for entry in installs:
+            path = Path(entry.get('installPath', ''))
+            if entry.get('scope') == 'user' and (path/'.claude-plugin/plugin.json').is_file() and (path/'skills').is_dir():
+                result[key.split('@')[0]] = path
+    return result
 
 
-def main() -> int:
-    repo_dir = Path(__file__).resolve().parent.parent
-    home = Path.home()
-
-    print_step("Validating repository...")
-    if platform.system() != "Windows":
-        result = subprocess.run([str(repo_dir / "scripts" / "validate")])
-        if result.returncode != 0:
-            print_error("Repository validation failed. Aborting installation.")
-            return 1
-        subprocess.run([str(repo_dir / "scripts" / "install-hooks")], check=False)
-
-    catalog = json.loads((repo_dir / "catalog.json").read_text(encoding="utf-8"))
-    promoted = [item for item in catalog.get("skills", []) if item.get("status") == "promoted"]
-
-    claude_manifest = home / ".claude" / "plugins" / "installed_plugins.json"
-    claude_uses_plugins = claude_manifest.is_file() and "@james-skills" in claude_manifest.read_text(encoding="utf-8")
-    if claude_uses_plugins:
-        print_step("Claude Code has the james-skills plugins installed; writing aliases only to ~/.claude/skills")
-
-    codex_manifest = home / ".codex" / "config.toml"
-    codex_uses_plugins = codex_manifest.is_file() and "@james-skills" in codex_manifest.read_text(encoding="utf-8")
-    if codex_uses_plugins:
-        print_step("Codex CLI has the james-skills plugins installed; writing aliases only to ~/.codex/skills")
-
-    targets = [home / ".agents", home / ".codex", home / ".claude"]
-    if (home / ".cursor").is_dir():
-        targets.append(home / ".cursor")
-    if (home / ".gemini" / "config").is_dir():
-        targets.append(home / ".gemini" / "config")
-    if (home / ".gemini" / "antigravity" / "custom").is_dir():
-        targets.append(home / ".gemini" / "antigravity" / "custom")
-
-    plugin_dirs = sorted(p for p in (repo_dir / "plugins").iterdir() if p.is_dir())
-
-    for base_dir in targets:
-        skills_target = base_dir / "skills"
-        skills_target.mkdir(parents=True, exist_ok=True)
-
-        if ".gemini" in str(base_dir):
-            plugins_target = base_dir / "plugins"
-            plugins_target.mkdir(parents=True, exist_ok=True)
-            for existing in skills_target.iterdir():
-                unlink_if_owned(existing, repo_dir, "skills")
-                unlink_if_owned(existing, repo_dir, "plugins")
-            for plugin_dir in plugin_dirs:
-                link(plugin_dir, plugins_target / plugin_dir.name)
-        elif (base_dir == home / ".claude" and claude_uses_plugins) or (
-            base_dir == home / ".codex" and codex_uses_plugins
-        ):
-            for existing in skills_target.iterdir():
-                unlink_if_owned(existing, repo_dir, "plugins")
-        else:
-            for plugin_dir in plugin_dirs:
-                for skill_dir in (plugin_dir / "skills").iterdir():
-                    if skill_dir.is_dir():
-                        link(skill_dir, skills_target / skill_dir.name)
-
+def plan(root, home, catalog):
+    claude_target = Path(os.environ.get('CLAUDE_CONFIG_DIR', str(home/'.claude')))/'skills'
+    targets = [home/'.agents/skills', Path(os.environ.get('CODEX_HOME', str(home/'.codex')))/'skills', claude_target]
+    for base in (home/'.cursor', home/'.gemini/config', home/'.gemini/antigravity/custom'):
+        if base.is_dir(): targets.append(base/'skills')
+    pillars = claude_pillars(home)
+    links, removals = {}, set()
+    promoted = [s for s in catalog['skills'] if s['status']=='promoted']
+    for target in targets:
+        gemini = target in (home/'.gemini/config/skills', home/'.gemini/antigravity/custom/skills')
+        if gemini and any(s['status'] != 'promoted' for s in catalog['skills']):
+            raise RuntimeError('Cannot expose whole Gemini plugin links containing pilot skills')
+        if gemini:
+            for category in sorted({s['category'] for s in promoted}):
+                links[target.parent/'plugins'/category] = root/'plugins'/category
         for item in promoted:
-            for alias in item.get("aliases", []):
-                alias_dir = repo_dir / "aliases" / alias
-                if not (alias_dir / "SKILL.md").is_file():
-                    print_error(f"alias target missing: {alias} -> {item['name']}")
-                    return 1
-                link(alias_dir, skills_target / alias)
+            source = root/'plugins'/item['category']/'skills'/item['name']
+            destination = target/item['name']
+            if gemini:
+                if owned(destination, root): removals.add(destination)
+            elif target == claude_target and item['category'] in pillars and (pillars[item['category']]/'skills'/item['name']/'SKILL.md').is_file():
+                if owned(destination, root): removals.add(destination)
+                elif destination.exists() or destination.is_symlink():
+                    raise RuntimeError(f'Collision with native plugin; preserved: {destination}')
+            else:
+                # Codex canonical paths are deduplicated by its own configuration below.
+                links[destination] = source
+            for alias in item.get('aliases', []): links[target/alias] = root/'aliases'/alias
+        if target.is_dir():
+            for existing in target.iterdir():
+                if owned(existing, root) and existing not in links: removals.add(existing)
+    for dst, src in links.items(): check_link(src, dst, root)
+    return links, removals
 
-    print_success(f"Installed successfully to all platforms from {repo_dir}")
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--check', action='store_true')
+    args = parser.parse_args()
+    root = Path(__file__).resolve().parent.parent
+    home = Path.home()
+    bash = shutil.which('bash')
+    if not bash: raise RuntimeError('Bash is required for the full validator (Windows: Git Bash); nothing installed')
+    subprocess.run([bash, str(root/'scripts/validate')], check=True)
+    catalog = json.loads((root/'catalog.json').read_text())
+    links, removals = plan(root, home, catalog)
+    if args.check:
+        wrong = [str(dst) for dst, src in links.items() if not dst.is_symlink() or dst.resolve()!=src.resolve()]
+        if wrong or removals: raise RuntimeError(f'Discovery mismatch: missing/wrong={len(wrong)} stale={len(removals)}')
+    else:
+        for dst, src in links.items(): link(src, dst, root)
+        for dst in sorted(removals): dst.unlink()
+        subprocess.run([bash, str(root/'scripts/install-hooks')], check=True)
+    if args.check and (root/'.git').exists():
+        hooks = subprocess.run(['git', '-C', str(root), 'config', '--get', 'core.hooksPath'], capture_output=True, text=True)
+        if hooks.stdout.strip() != '.githooks': raise RuntimeError('Git validation hooks are not installed')
+    reconcile(root, home, catalog, repair=not args.check)
+    print(f'PASS managed links={len(links)}; filesystem proof only for hosts not runtime-tested')
     return 0
 
 
-if __name__ == "__main__":
-    sys.exit(main())
+if __name__ == '__main__':
+    try: raise SystemExit(main())
+    except (RuntimeError, OSError, ValueError, subprocess.CalledProcessError) as error:
+        print(f'FAIL {error}', file=sys.stderr)
+        raise SystemExit(1)

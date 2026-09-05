@@ -41,3 +41,24 @@ source code is not a behavioral test; it must be named and reviewed as a
 "source contains X" check, never mistaken for a "the behavior works" check.
 
 **Date:** 2026-09-05. Reference: `ai-context/DECISIONS.md` DEC-023.
+
+## LESSON-002 — Inspect the combined runtime inventory, not one discovery directory
+
+**What happened:** The first Codex duplicate fix removed links from its own skill
+root and doctor reported zero issues, but the shared `.agents` root still supplied
+the same 22 skills beside native plugins. A user screenshot showed the duplicates
+persisting. Fresh app-server inventory and a clean GitHub installation reproduced
+44 enabled entries for 22 names.
+
+**Mechanism:** The check encoded the installer's incomplete model of discovery.
+It never asked the runtime which paths were actually loaded.
+
+**Rule:** A duplicate-loading fix requires a combined runtime inventory and one
+explicit invocation. Keep UI evidence separate when the app cannot be inspected.
+Preserve shared files used by other hosts; scope overrides to the affected host
+and exact local path. Test a second package plus the legitimate no-plugin case.
+
+**Date:** 2026-09-05. DEC-025 and
+`tests/receipts/install-discovery-2026-09-05.md`. LESSON-001's historical claim that
+Codex lacks a marketplace command was itself corrected by DEC-024; its requirement
+for direct evidence remains in force.

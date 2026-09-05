@@ -675,21 +675,30 @@ Links every skill straight into each platform's discovery directory, so an edit 
 git clone https://github.com/theeranon/JamesSkills.git && cd JamesSkills && ./scripts/install
 ```
 
-**Windows**
-```
-git clone https://github.com/theeranon/JamesSkills.git
-```
-Then double-click **`install.bat`** inside the folder, or run `python scripts\install.py` yourself. It uses directory junctions so no administrator rights are needed, and falls back to copying if junctions are unavailable.
+**Windows (not runtime-verified)**
 
-Do not ask an AI agent to clone this repository and run the installer for you inside a chat box. Both commands above make real filesystem changes on your machine; run them yourself in a terminal, where you can see exactly what executed.
+The local installer requires Git Bash and Python 3 available as `python3` inside Bash, plus permission to create directory symlinks (Developer Mode or equivalent). Run `./scripts/install` from Git Bash, or `install.bat` from the downloaded folder. Full validation runs before links change. A failed symlink is an error; the installer never deletes an existing directory or silently substitutes a copy. Windows installation has not been exercised on a Windows host in this release; do not treat the launcher as proof of support.
+
+### Codex native plugin route
+
+Verified with Codex CLI 0.153.4 on macOS. These are commands exposed by that installed CLI's own help:
+
+```bash
+codex plugin marketplace add https://github.com/theeranon/JamesSkills.git
+codex plugin add james-core@james-skills
+codex plugin add james-productivity@james-skills
+codex plugin add james-software@james-skills
+```
 
 ### The installer keeps the two routes from colliding
 
-Running both routes into Claude Code would install every skill twice, once bare and once namespaced, and duplicate entries degrade how reliably the right skill is chosen.
+Codex reads both its own skill directory and the shared `~/.agents/skills` directory. Removing links only from `~/.codex/skills` leaves a second copy beside each native plugin skill.
 
-`scripts/install` handles this. If it finds the pillars registered in Claude Code's `installed_plugins.json`, it writes only aliases into `~/.claude/skills` and removes any canonical link it previously owned there, so the plugins are the single source. If the plugins are not installed, it links every skill as before. Nothing else changes: Cursor, Codex, and the shared `.agents` root always get live links.
+The installer asks the installed Codex app-server for its actual skill inventory. For each enabled native JamesSkills skill, it disables only the corresponding local `SKILL.md` path through `skills/config/write`. Shared links stay available to other agents. A missing, disabled, or partially installed native plugin does not hide the remaining local skills. When a native plugin is removed, rerun the installer to restore overrides it owns. It preserves pre-existing user disables and backs up Codex configuration before changing it. If Codex is not on PATH, the result explicitly excludes Codex runtime verification.
 
-`scripts/doctor` reports the mode it finds and fails on any canonical link left shadowing an installed plugin.
+Claude Code is checked per pillar against its installed manifest, cache paths, and disabled-plugin settings. An unrelated real file, directory, or foreign link stops installation before managed links change. Only promoted catalog entries are installed. Both launchers use the same Python implementation.
+
+`./scripts/doctor` runs full validation, checks expected managed links, and asks Codex for its native/shared skill inventory. It fails if an enabled duplicate remains. This is an app-server result; the Desktop picker still needs a UI check if it retains cached entries.
 
 **After editing a skill, Claude Code needs the plugin refreshed** — the installed plugin is a copy, not a link:
 
@@ -708,19 +717,16 @@ for p in james-core james-productivity james-software; do claude plugin uninstal
 
 ### What lands where
 
-| Platform | Mechanism | Status |
+| Platform | Mechanism | Evidence boundary |
 |---|---|---|
-| Claude Code | plugin marketplace by default, `~/.claude/skills` links when the plugins are absent | Marketplace add from GitHub, install, and namespaced skill loading all verified on macOS |
-| Cursor | `~/.cursor/skills` links | Files installed; Cursor's own loading not verified here |
-| Codex (ChatGPT) | `~/.codex/skills` links | Files installed; loading not verified here |
-| Gemini and Antigravity | whole plugins in `~/.gemini/*/plugins` | Files installed; loading not verified here |
-| Any agent reading `.agents` | `~/.agents/skills` links | Files installed |
+| Codex CLI | native plugins; local/shared copies disabled by exact path when native skill is enabled | macOS app-server inventory tested; Desktop UI confirmation separate |
+| Claude Code | native plugins; per-pillar local fallback | Previous macOS runtime receipt; fresh distribution checks are recorded separately |
+| Cursor | `~/.cursor/skills` links | Filesystem only; runtime unverified |
+| Gemini / Antigravity | existing whole-plugin links and alias links | Filesystem only; loader and invocation unverified |
+| Shared agents | `~/.agents/skills` links | Filesystem only outside the tested Codex runtime |
+| Windows | same local installer, full Bash validation, symlinks | Not tested on a Windows host; no universal-install guarantee |
 
-Only the Claude Code row is a verified runtime claim. The others say what the installer writes to disk, which is not by itself proof that the host loads it. Neither Codex CLI nor Gemini/Antigravity have a documented plugin-marketplace command this installer could call, so none is called; both platforms load plugins by reading the filesystem directly.
-
-Do not run either route inside an AI chat box. Use Terminal on macOS, or Command Prompt or PowerShell on Windows.
-
-**Windows note:** four skills call a Python helper. They invoke `python3`; where that is not on PATH, use `python`. Each of those skills says so in its own file.
+Evidence and remaining limits: [installation receipt](tests/receipts/install-discovery-2026-09-05.md). Successful manifest registration or a clean doctor result alone does not prove every skill follows its instructions on every model.
 
 Check any machine at any time:
 

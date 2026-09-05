@@ -1,35 +1,33 @@
 @echo off
+setlocal
 echo [*] Installing JamesSkills...
-
-set PYTHON_CMD=
-
+set "PYTHON_CMD="
 where python3 >nul 2>nul
 if not errorlevel 1 (
-    set PYTHON_CMD=python3
-    goto :run_installer
+    set "PYTHON_CMD=python3"
+    goto run_installer
 )
-
 where python >nul 2>nul
 if not errorlevel 1 (
-    set PYTHON_CMD=python
-    goto :run_installer
+    set "PYTHON_CMD=python"
+    goto run_installer
 )
-
 where py >nul 2>nul
 if not errorlevel 1 (
-    set PYTHON_CMD=py
-    goto :run_installer
+    set "PYTHON_CMD=py"
+    goto run_installer
 )
-
 echo [ERROR] Python not found. Please install Python 3.
 pause
 exit /b 1
 
 :run_installer
-%PYTHON_CMD% scripts\install.py
-if not errorlevel 1 (
+%PYTHON_CMD% "%~dp0scripts\install.py"
+set "INSTALL_EXIT_CODE=%ERRORLEVEL%"
+if "%INSTALL_EXIT_CODE%"=="0" (
     echo [*] Installation Complete.
 ) else (
     echo [ERROR] Installation failed.
 )
 pause
+exit /b %INSTALL_EXIT_CODE%
