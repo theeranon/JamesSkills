@@ -90,7 +90,10 @@ def main():
     
     print_step("Validating repository...")
     if platform.system() != "Windows":
-        run_command([str(repo_dir / "scripts" / "validate")], ignore_error=True)
+        val_res = run_command([str(repo_dir / "scripts" / "validate")], ignore_error=False)
+        if val_res is None:
+            print_error("Repository validation failed. Aborting installation.")
+            sys.exit(1)
         run_command([str(repo_dir / "scripts" / "install-hooks")], ignore_error=True)
         
     dynamic_plugins = get_dynamic_plugins(repo_dir)
@@ -106,7 +109,8 @@ def main():
     targets = [
         home / ".agents",
         home / ".codex",
-        home / ".claude"
+        home / ".claude",
+        home / ".cursor"
     ]
     
     if (home / ".gemini" / "config").is_dir():

@@ -1,28 +1,33 @@
 @echo off
 echo [*] Installing JamesSkills...
 
-:: Check for python3 first, fallback to python, then py
+set PYTHON_CMD=
+
 where python3 >nul 2>nul
-if %ERRORLEVEL% equ 0 (
+if not errorlevel 1 (
     set PYTHON_CMD=python3
-) else (
-    where python >nul 2>nul
-    if %ERRORLEVEL% equ 0 (
-        set PYTHON_CMD=python
-    ) else (
-        where py >nul 2>nul
-        if %ERRORLEVEL% equ 0 (
-            set PYTHON_CMD=py
-        ) else (
-            echo [ERROR] Python not found. Please install Python 3.
-            pause
-            exit /b 1
-        )
-    )
+    goto :run_installer
 )
 
+where python >nul 2>nul
+if not errorlevel 1 (
+    set PYTHON_CMD=python
+    goto :run_installer
+)
+
+where py >nul 2>nul
+if not errorlevel 1 (
+    set PYTHON_CMD=py
+    goto :run_installer
+)
+
+echo [ERROR] Python not found. Please install Python 3.
+pause
+exit /b 1
+
+:run_installer
 %PYTHON_CMD% scripts\install.py
-if %ERRORLEVEL% equ 0 (
+if not errorlevel 1 (
     echo [*] Installation Complete.
 ) else (
     echo [ERROR] Installation failed.
