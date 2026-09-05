@@ -616,7 +616,7 @@ James Theeranon
 </td>
 <td valign="top">
 
-<b>[Skill Router: Single Accountable Outcome]</b><br><br>
+<b>[Hand It Off: Single Accountable Outcome]</b><br><br>
 • <b>Phase 1:</b> <code>/sum-meet</code> ➔ บันทึกข้อตกลงและวาระการประชุมลงใน A4 HTML<br>
 • <b>Phase 2:</b> <code>/project-standard</code> ➔ สกัดข้อกำหนดลง <code>ai-context/</code> พร้อมล็อก Spec<br>
 • <b>Phase 3:</b> <code>/proactive-dev</code> + <code>/done-for-me</code> ➔ พัฒนาระบบและตรวจผ่าน <code>/dev-are-you-sure</code><br><br>
@@ -637,7 +637,7 @@ Two routes. Pick by whether you want the skills to track this repository live.
 
 ### Route A — Claude Code plugin (recommended for a clean machine)
 
-Claude Code loads this repository as three real plugins. Works on macOS and Windows, in the CLI, the desktop apps, and the VS Code and JetBrains extensions.
+Claude Code loads this repository as three real plugins. Claude Code itself runs on macOS and Windows, in the CLI, the desktop apps, and the VS Code and JetBrains extensions — this specific install path is runtime-verified on macOS only; see the platform table below.
 
 ```bash
 claude plugin marketplace add theeranon/JamesSkills
