@@ -1,5 +1,6 @@
 ---
 name: solutionsimpact-meeting-summary-full
+license: CC-BY-NC-4.0
 description: Compatibility name for sum-meet. Use only when an older instruction explicitly requests solutionsimpact-meeting-summary-full; new work uses sum-meet.
 ---
 

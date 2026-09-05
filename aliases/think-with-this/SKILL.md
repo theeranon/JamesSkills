@@ -1,5 +1,6 @@
 ---
 name: think-with-this
+license: CC-BY-NC-4.0
 description: Compatibility name for baseon. Use when an older instruction explicitly requests think-with-this; new work uses baseon.
 ---
 

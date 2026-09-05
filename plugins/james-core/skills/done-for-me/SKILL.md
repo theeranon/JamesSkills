@@ -1,6 +1,7 @@
 ---
 name: done-for-me
 kind: workflow
+license: CC-BY-NC-4.0
 description: Carry an already-agreed task all the way to a finished, verified outcome without stopping to ask. Use when the plan is settled and only execution remains; not when the plan still needs work and not for inspecting finished work.
 ---
 

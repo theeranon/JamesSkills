@@ -1,6 +1,7 @@
 ---
 name: coach-me
 kind: workflow
+license: CC-BY-NC-4.0
 description: Move a person toward their own goal using questions only, always positively, working beneath the behavior to what is driving it. Use when someone is stuck in themselves; never to give advice and never to do the work for them.
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: never-again
 kind: workflow
+license: CC-BY-NC-4.0
 description: Turn one rejected output into a written lesson that every future agent is forced to read before working in this repository. Use when a mistake should never recur; not for fixing the one bad output and not for routine quality sweeps.
 ---
 

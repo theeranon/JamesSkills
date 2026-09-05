@@ -1,6 +1,7 @@
 ---
 name: proactive-habits
 kind: mode
+license: CC-BY-NC-4.0
 description: Work as an effective professional who decides what is theirs to decide and batches the rest into one question at the end. Use to stop subordinate behavior; not for finishing one named task and not for how replies are formatted.
 ---
 

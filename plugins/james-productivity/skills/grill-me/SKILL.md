@@ -1,6 +1,7 @@
 ---
 name: grill-me
 kind: workflow
+license: CC-BY-NC-4.0
 description: Interrogate the user through a branching interview until their own goal and requirement are sharp, then recap and confirm. Use to sharpen a plan before building; not to coach the person and not to research the answer.
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: baseon
 kind: knowledge-lens
+license: CC-BY-NC-4.0
 description: Apply or compare registered frameworks, books, and models against a real case while keeping source claims separate from evidence and inference. Use to interpret a situation through named knowledge; not to research new sources and not to decide.
 ---
 

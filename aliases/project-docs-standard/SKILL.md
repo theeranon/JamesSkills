@@ -1,5 +1,6 @@
 ---
 name: project-docs-standard
+license: CC-BY-NC-4.0
 description: Compatibility name for project-standard. Use when an older instruction explicitly requests project-docs-standard; new work uses project-standard.
 ---
 

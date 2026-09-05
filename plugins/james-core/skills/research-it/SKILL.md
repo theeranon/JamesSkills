@@ -1,6 +1,7 @@
 ---
 name: research-it
 kind: workflow
+license: CC-BY-NC-4.0
 description: Settle a doubt about one claim, approach, or requirement with outside evidence from official sources and real users. Use when confidence is missing, not when choosing between options or checking your own work.
 ---
 

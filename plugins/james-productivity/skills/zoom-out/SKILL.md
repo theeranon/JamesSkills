@@ -1,6 +1,7 @@
 ---
 name: zoom-out
 kind: workflow
+license: CC-BY-NC-4.0
 description: Step back at least three levels from the detail to the strategy, then agree the direction before any action resumes. Use when work has gone too deep too early; strategy only, never for interface or visual questions.
 ---
 

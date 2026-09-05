@@ -1,6 +1,7 @@
 ---
 name: one-page-pls
 kind: output
+license: CC-BY-NC-4.0
 description: Turn each independent topic into its own self-contained single-page brief. Use when material must stay on one page per topic; not for meeting records that must hold every agenda in one file.
 ---
 

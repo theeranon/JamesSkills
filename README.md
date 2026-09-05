@@ -745,6 +745,27 @@ Update fetches a fast-forward candidate, validates it in a detached temporary wo
 | `scripts/` | idempotent install, update, validation, and diagnosis |
 | `.githooks/` | local validation before every commit and push, no paid runners |
 
+## 📮 Submitting to a store
+
+Build one submission-ready archive per pillar:
+
+```bash
+./scripts/package-plugins
+```
+
+Each archive's root carries `.claude-plugin/plugin.json`, `skills/<name>/SKILL.md`, the licence and the notice. That is the shape the OpenAI plugin submission portal accepts as a skills-only plugin and converts to `.codex-plugin/plugin.json`, and it is a valid Claude Code plugin directory as it stands.
+
+| Channel | Route | Gate |
+|---|---|---|
+| Claude community marketplace | submission form in the Console or claude.ai | automated validation plus safety screening |
+| Claude official marketplace | none — curated at Anthropic's discretion | no application process exists |
+| OpenAI Plugins Directory, shared by ChatGPT and Codex | submission portal, skills-only plugin | verified developer or business identity, plus listing materials |
+| Gemini CLI extension gallery | add the `gemini-cli-extension` topic to a public repo carrying `gemini-extension.json` at its root | daily crawl, automatic, no form |
+| Cursor public marketplace | publish form | manual review, and listings must be open source |
+| Google Antigravity | none | Google publishes no third-party submission process |
+
+Two structural notes. The Gemini gallery expects one extension per repository with `skills/` at the repository root, which does not match this three-pillar layout. And Cursor's public marketplace requires an open-source licence, which `CC-BY-NC-4.0` is not; Cursor team marketplaces have no such requirement.
+
 ## 📄 Licence
 
 Creative Commons Attribution-NonCommercial 4.0 International (`CC-BY-NC-4.0`). Use it, adapt it, redistribute it, including inside work you are paid for. Do not sell the library itself or repackage it into a paid product. Credit as *JamesSkills by James Theeranon*, and say if you changed anything.

@@ -1,6 +1,7 @@
 ---
 name: is-that-the-best-you-can-do
 kind: workflow
+license: CC-BY-NC-4.0
 description: Measure how far a correct but unambitious result sits below its ceiling, then spend parallel effort closing that gap. Use when the work is not wrong but not good enough; not for defects and not for unfinished work.
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: sum-meet
 kind: output
+license: CC-BY-NC-4.0
 description: Build one auditable meeting record holding every agenda in a single file, with evidence kept separate from interpretation. Use for minutes and detailed meeting records; not when each topic must become its own page.
 ---
 

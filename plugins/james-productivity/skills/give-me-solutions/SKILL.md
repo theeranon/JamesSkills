@@ -1,6 +1,7 @@
 ---
 name: give-me-solutions
 kind: workflow
+license: CC-BY-NC-4.0
 description: Compare real options against this project's actual context and name the best one with its reasoning. Use when a choice must be made between candidates; not for settling a single claim and not for making the decision happen.
 ---
 

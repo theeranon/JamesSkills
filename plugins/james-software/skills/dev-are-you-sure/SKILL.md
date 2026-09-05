@@ -1,6 +1,7 @@
 ---
 name: dev-are-you-sure
 kind: workflow
+license: CC-BY-NC-4.0
 description: Re-inspect delivered software across five layers plus the deployment boundary and repair what it finds inside a declared surface. Use when code looks done but the diligence is in doubt; not for business artifacts and not for external claims.
 ---
 

@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# Build one submission-ready archive per pillar.
+#
+# Each archive's root holds .claude-plugin/plugin.json plus skills/<name>/SKILL.md,
+# which is the shape the OpenAI plugin submission portal accepts for a skills-only
+# plugin and converts into .codex-plugin/plugin.json. The same archive is a valid
+# Claude Code plugin directory.
+set -euo pipefail
+
+repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+out_dir="${1:-$repo_dir/dist}"
+version="$(tr -d '[:space:]' < "$repo_dir/VERSION")"
+
+"$repo_dir/scripts/validate" >/dev/null
+rm -rf "$out_dir"
+mkdir -p "$out_dir"
+
+for plugin in "$repo_dir/plugins/"*; do
+  [[ -d "$plugin/skills" ]] || continue
+  name="$(basename "$plugin")"
+  stage="$out_dir/.stage/$name"
+  mkdir -p "$stage"
+
+  cp -R "$plugin/.claude-plugin" "$stage/"
+  cp -R "$plugin/skills" "$stage/"
+  cp "$repo_dir/LICENSE" "$repo_dir/NOTICE" "$stage/"
+
+  # Every archive carries its own terms and a pointer home.
+  {
+    echo "# $name $version"
+    echo
+    echo "Part of JamesSkills. https://github.com/theeranon/JamesSkills"
+    echo
+    echo "Licensed CC BY-NC 4.0. See LICENSE and NOTICE."
+  } > "$stage/README.md"
+
+  ( cd "$out_dir/.stage" && zip -qr "$out_dir/$name-$version.zip" "$name" )
+  skills="$(find "$stage/skills" -maxdepth 1 -mindepth 1 -type d | wc -l | tr -d ' ')"
+  echo "PACKAGED $name-$version.zip  skills=$skills"
+done
+
+rm -rf "$out_dir/.stage"
+echo "Archives in $out_dir"

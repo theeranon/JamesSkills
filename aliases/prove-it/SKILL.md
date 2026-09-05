@@ -1,5 +1,6 @@
 ---
 name: prove-it
+license: CC-BY-NC-4.0
 description: Compatibility name for research-it. Use when an older instruction explicitly requests prove-it; new work uses research-it.
 ---
 

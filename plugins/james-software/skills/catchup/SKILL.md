@@ -1,6 +1,7 @@
 ---
 name: catchup
 kind: workflow
+license: CC-BY-NC-4.0
 description: Reconstruct one project's verified current state after a gap and deliver it as the standard catchup page. Use for where-are-we-now after a handoff or stale status; not for progress inside active work and not for repairing anything.
 ---
 

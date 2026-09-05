@@ -1,6 +1,7 @@
 ---
 name: are-you-sure
 kind: workflow
+license: CC-BY-NC-4.0
 description: Re-inspect a business or productivity deliverable across five layers and repair what it finds inside a declared surface. Use when work looks finished but the diligence behind it is in doubt; not for code, and not for making good work better.
 ---
 

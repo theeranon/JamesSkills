@@ -4,3 +4,5 @@
 .qa-artifacts/
 node_modules/
 scratch/
+
+dist/

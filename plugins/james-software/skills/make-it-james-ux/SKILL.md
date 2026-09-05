@@ -1,6 +1,7 @@
 ---
 name: make-it-james-ux
 kind: shared-standard
+license: CC-BY-NC-4.0
 description: Enforce visual and interaction law on anything rendered, following the project's existing design system first and this house style only as fallback. Applies automatically to visual work; it does not choose the format or write the content.
 ---
 

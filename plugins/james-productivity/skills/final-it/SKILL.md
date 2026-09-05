@@ -1,6 +1,7 @@
 ---
 name: final-it
 kind: output
+license: CC-BY-NC-4.0
 description: Choose the format that actually serves the recipient and finish the work in it. Use when no narrower output skill owns the artifact; not for meeting records, not for one-page briefs, and not for supplying missing content.
 ---
 

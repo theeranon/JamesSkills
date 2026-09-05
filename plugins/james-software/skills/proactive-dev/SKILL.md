@@ -1,6 +1,7 @@
 ---
 name: proactive-dev
 kind: mode
+license: CC-BY-NC-4.0
 description: Work as one person holding the analyst, product, architect, build, and quality roles, planning rigorously before writing code and splitting the work across sub-agents. Use when the plan is not good enough yet; not for executing an accepted plan.
 ---
 

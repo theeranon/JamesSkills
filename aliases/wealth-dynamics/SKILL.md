@@ -1,5 +1,6 @@
 ---
 name: wealth-dynamics
+license: CC-BY-NC-4.0
 description: Shortcut to baseon with the shared Wealth Dynamics and Talent Dynamics lens selected. Use for value-creation style, role, team, communication, trust, or flow analysis through this model.
 ---
 

@@ -1,6 +1,7 @@
 ---
 name: i-have-adhd
 kind: mode
+license: CC-BY-NC-4.0
 description: Shape every reply so it can be acted on immediately without holding state in memory. Use to change how answers are presented; not to change what the agent is allowed to decide and not to shorten by removing needed information.
 ---
 

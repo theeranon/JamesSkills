@@ -112,6 +112,10 @@ def main() -> int:
             continue
         if entry.get("kind") != kind:
             fail(errors, skill, f"catalog kind {entry.get('kind')!r} != file kind {kind!r}")
+        # `license` is part of the portable Agent Skills frontmatter vocabulary and
+        # must match the repository licence, so any redistributed copy carries terms.
+        if meta.get("license") != "CC-BY-NC-4.0":
+            fail(errors, skill, f"license is {meta.get('license')!r}, expected 'CC-BY-NC-4.0'")
         description = meta.get("description", "")
         if not DESCRIPTION_MIN <= len(description) <= DESCRIPTION_MAX:
             fail(errors, skill, f"description is {len(description)} chars, budget {DESCRIPTION_MIN}-{DESCRIPTION_MAX}")
