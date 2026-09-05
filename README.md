@@ -745,7 +745,11 @@ Update fetches a fast-forward candidate, validates it in a detached temporary wo
 | `scripts/` | idempotent install, update, validation, and diagnosis |
 | `.githooks/` | local validation before every commit and push, no paid runners |
 
-Private by default. Review every file before publishing any subset.
+## 📄 Licence
+
+Creative Commons Attribution-NonCommercial 4.0 International (`CC-BY-NC-4.0`). Use it, adapt it, redistribute it, including inside work you are paid for. Do not sell the library itself or repackage it into a paid product. Credit as *JamesSkills by James Theeranon*, and say if you changed anything.
+
+Full terms in [`LICENSE`](LICENSE); scope, attribution wording, and third-party notices in [`NOTICE`](NOTICE). The frameworks described in `packs/knowledge/` belong to their own owners and are not licensed here.
 
 ## 📖 Skill Handbook
 

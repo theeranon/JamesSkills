@@ -15,7 +15,8 @@
       "version": "2.0.0",
       "author": {
         "name": "James Theeranon"
-      }
+      },
+      "license": "CC-BY-NC-4.0"
     },
     {
       "name": "james-productivity",
@@ -25,7 +26,8 @@
       "version": "2.0.0",
       "author": {
         "name": "James Theeranon"
-      }
+      },
+      "license": "CC-BY-NC-4.0"
     },
     {
       "name": "james-software",
@@ -35,7 +37,9 @@
       "version": "2.0.0",
       "author": {
         "name": "James Theeranon"
-      }
+      },
+      "license": "CC-BY-NC-4.0"
     }
-  ]
+  ],
+  "license": "CC-BY-NC-4.0"
 }

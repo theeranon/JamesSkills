@@ -17,7 +17,9 @@
 - Rewrote the README architecture, installation, update, and boundaries sections against verified facts, and removed a prohibited AI-theatre tag that `DEC-012` had banned but which had survived in 16 tables.
 - Registered the `satir-model` lens with three source cards and rewrote `coach-me` on it: stance-matched entry points, a stress-test step, a rehearsed close, and a referral rule the skill previously lacked entirely. The lens records that the model is not evidence-based in any setting, that the agile change curve is not Satir's, and that one widely repeated turnover statistic is untraceable.
 - Claude Code loads the library as three plugins; `scripts/install` writes only aliases into `~/.claude/skills` when it finds them registered, so nothing is loaded twice, and `scripts/doctor` fails on any canonical link left shadowing a plugin. Added `scripts/refresh-claude-plugins`, because `claude plugin update` compares version numbers rather than content and copies nothing after an ordinary edit.
-- Recorded as `DEC-013` through `DEC-017`.
+- Relicensed under Creative Commons Attribution-NonCommercial 4.0 International. The repository was already public while `LICENSE` and the project contract described it as private, and the previous all-rights-reserved terms made any marketplace distribution a breach. `NOTICE` states scope, attribution, what NonCommercial means in practice, and the third-party material that is not licensed here.
+- Removed internal material from the working tree: four operating audits under `research/`, thirteen throwaway migration scripts, and private references in `DECISIONS.md` and this changelog. Six commits touching `research/` remain in public history; that was not rewritten.
+- Recorded as `DEC-013` through `DEC-018`.
 
 ## 0.9.1 - 2026-09-01
 

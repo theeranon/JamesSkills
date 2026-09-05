@@ -12,5 +12,6 @@
     "agent",
     "workflow",
     "quality-gate"
-  ]
+  ],
+  "license": "CC-BY-NC-4.0"
 }

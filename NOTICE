@@ -1,0 +1,52 @@
+# NOTICE
+
+JamesSkills
+Copyright (c) 2026 James Theeranon
+
+Licensed under the Creative Commons Attribution-NonCommercial 4.0
+International License (SPDX: CC-BY-NC-4.0). The full legal code is in
+`LICENSE`. A plain-language summary is at
+https://creativecommons.org/licenses/by-nc/4.0/
+
+## What this covers
+
+Everything in this repository: the skill instruction bodies under
+`plugins/`, the compatibility aliases, the documentation, the templates and
+HTML assets, the scripts, and the tests.
+
+## What you may do
+
+Use, copy, adapt, and redistribute this material, including as part of your
+own agent setup, provided you credit the source and do not use it
+commercially.
+
+## What NonCommercial means here
+
+You may not use this material, or anything derived from it, primarily for
+commercial advantage or monetary compensation. In practice that means: do
+not sell it, do not bundle it into a paid product or paid course, and do not
+resell services whose substance is this library. Using it inside your own
+work, including work you are paid for, is fine. Selling the library itself,
+or a repackaging of it, is not.
+
+If you want a commercial licence, ask.
+
+## How to attribute
+
+Credit as: JamesSkills by James Theeranon, https://github.com/theeranon/JamesSkills,
+licensed CC BY-NC 4.0. Keep this notice with any substantial copy or
+adaptation, and state whether you changed anything.
+
+## Third-party material
+
+The knowledge packs under `packs/knowledge/` describe external frameworks in
+original paraphrase with citation. Those frameworks, their names, diagrams,
+assessment instruments, and published texts remain the property of their
+respective owners and are not licensed by this notice. No affiliation,
+endorsement, or certification by any of them is claimed. Named principles
+cited inside skill files are attributed to their authors and are likewise not
+licensed here.
+
+`VIRGINIA SATIR` is a registered service mark of the Virginia Satir Global
+Network. `IBM Plex Sans Thai` is licensed under the SIL Open Font License by
+IBM. Other product and company names are the marks of their owners.

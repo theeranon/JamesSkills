@@ -33,7 +33,7 @@ Last verified: 2026-08-29
 - Vendor-specific copies of canonical skill behavior.
 - Global installation of pilot or unapproved packages.
 - Claims of universal model-routing parity without fresh evidence from that platform.
-- A public marketing website is not required for this repair; any future public release remains an owner decision.
+- A public marketing website is out of scope. The repository itself is public under CC BY-NC 4.0; listing it in any vendor-run store is a separate owner decision.
 
 ## Requirements
 
@@ -66,4 +66,4 @@ Last verified: 2026-08-29
 
 ## Need decision
 
-- Future public hosting or publication of any repository subset remains an owner decision.
+- Whether to seek a listing in any vendor-run plugin store, once the submission routes are known.
