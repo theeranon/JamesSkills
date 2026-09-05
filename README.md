@@ -670,27 +670,6 @@ The repository is public, so no authentication is needed to add the marketplace 
 
 Links every skill straight into each platform's discovery directory, so an edit in this repository takes effect immediately with no update step.
 
-**One-Click Universal Install (Mac / Windows / Linux)**
-
-![How to Install JamesSkills](assets/universal_install_guide.jpg)
-
-Just copy and paste this command into your Terminal or Command Prompt. It automatically downloads, extracts, and installs everything:
-```bash
-python3 -c "import urllib.request, zipfile, os, shutil; urllib.request.urlretrieve('https://github.com/theeranon/JamesSkills/archive/refs/heads/main.zip', 'J.zip'); zipfile.ZipFile('J.zip').extractall(); os.chdir('JamesSkills-main'); os.system('python3 scripts/install.py' if os.name != 'nt' else 'python scripts\\install.py'); os.chdir('..'); shutil.rmtree('JamesSkills-main', ignore_errors=True); os.remove('J.zip')"
-```
-
-**Method 2: AI Agent Assisted Install (No Terminal Needed)**
-
-![Install via Claude Desktop](assets/claude_desktop_install_guide.jpg)
-
-If you use **Claude Desktop** (or any AI agent with computer use/bash tools like Cursor or Antigravity), you don't even need to open a terminal! Just copy this exact prompt and paste it directly into a New Chat:
-
-> **Prompt:** "Install the AI plugins from this repository: https://github.com/theeranon/JamesSkills"
-
-The AI will automatically clone the repository, read the installation instructions, and execute the setup for you.
-
-### Manual Developer Install
-
 **macOS and Linux**
 ```bash
 git clone https://github.com/theeranon/JamesSkills.git && cd JamesSkills && ./scripts/install
@@ -700,7 +679,9 @@ git clone https://github.com/theeranon/JamesSkills.git && cd JamesSkills && ./sc
 ```
 git clone https://github.com/theeranon/JamesSkills.git
 ```
-Then double-click **`install.bat`** inside the folder. It runs `scripts/install.py`, uses directory junctions so no administrator rights are needed, and falls back to copying if junctions are unavailable.
+Then double-click **`install.bat`** inside the folder, or run `python scripts\install.py` yourself. It uses directory junctions so no administrator rights are needed, and falls back to copying if junctions are unavailable.
+
+Do not ask an AI agent to clone this repository and run the installer for you inside a chat box. Both commands above make real filesystem changes on your machine; run them yourself in a terminal, where you can see exactly what executed.
 
 ### The installer keeps the two routes from colliding
 
@@ -725,17 +706,17 @@ for p in james-core james-productivity james-software; do claude plugin uninstal
 ./scripts/install
 ```
 
-### What lands where### What lands where
+### What lands where
 
 | Platform | Mechanism | Status |
 |---|---|---|
-| Claude Code | Native CLI `claude plugin install` + `~/.claude` fallback | UI Marketplace integration verified on macOS & Windows |
-| Codex (ChatGPT) | Native CLI `codex plugin add` + `~/.codex` fallback | UI Marketplace integration verified on macOS & Windows |
-| Cursor | `~/.cursor/skills` fallback | Files installed & structurally supported |
-| Gemini and Antigravity | Explicit `plugins.json` injection + `~/.gemini` fallback | Files installed & structurally supported |
-| Any agent reading `.agents` | `~/.agents/skills` fallback | Files installed |
+| Claude Code | plugin marketplace by default, `~/.claude/skills` links when the plugins are absent | Marketplace add from GitHub, install, and namespaced skill loading all verified on macOS |
+| Cursor | `~/.cursor/skills` links | Files installed; Cursor's own loading not verified here |
+| Codex (ChatGPT) | `~/.codex/skills` links | Files installed; loading not verified here |
+| Gemini and Antigravity | whole plugins in `~/.gemini/*/plugins` | Files installed; loading not verified here |
+| Any agent reading `.agents` | `~/.agents/skills` links | Files installed |
 
-The installer automatically detects `codex` and `claude` CLIs to natively register the plugins into their marketplaces. This guarantees that the plugins appear properly in the "Installed" or "Personal" tabs of the agent's UI. For other agents (or if the CLI is missing), robust structural fallbacks are deployed (including Directory Junctions on Windows and explicit `plugins.json` injection to bypass Go symlink limits).
+Only the Claude Code row is a verified runtime claim. The others say what the installer writes to disk, which is not by itself proof that the host loads it. Neither Codex CLI nor Gemini/Antigravity have a documented plugin-marketplace command this installer could call, so none is called; both platforms load plugins by reading the filesystem directly.
 
 Do not run either route inside an AI chat box. Use Terminal on macOS, or Command Prompt or PowerShell on Windows.
 

@@ -2,12 +2,13 @@
 
 ## Required context
 
-1. Read `ai-context/PROJECT.md` for outcome, scope, requirements, boundaries, and acceptance proof.
-2. Read `CONTEXT.md` when framework, source, lens, or evidence-layer terminology matters.
-3. Read `ai-context/STATUS.md` for current verified state, blockers, and the next move.
-4. Read `ai-context/DECISIONS.md` when a prior choice, lifecycle decision, or superseded rule matters.
-5. Read `docs/SKILLS.md` when selecting or explaining a skill; load the selected `SKILL.md` completely before acting.
-6. Read `README.md` for human installation and repository usage.
+1. Read `ai-context/LESSONS.md` first, in full, before writing or running any installer, packaging, or cross-platform claim. It records durable corrections from real failures; skipping it is how the same one repeats.
+2. Read `ai-context/PROJECT.md` for outcome, scope, requirements, boundaries, and acceptance proof.
+3. Read `CONTEXT.md` when framework, source, lens, or evidence-layer terminology matters.
+4. Read `ai-context/STATUS.md` for current verified state, blockers, and the next move.
+5. Read `ai-context/DECISIONS.md` when a prior choice, lifecycle decision, or superseded rule matters.
+6. Read `docs/SKILLS.md` when selecting or explaining a skill; load the selected `SKILL.md` completely before acting.
+7. Read `README.md` for human installation and repository usage.
 
 ## Working rules
 

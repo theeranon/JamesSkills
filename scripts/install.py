@@ -1,204 +1,136 @@
 #!/usr/bin/env python3
-import os
-import sys
+"""Cross-platform installer. Mirrors scripts/install (bash) exactly so Windows
+gets the same, evidence-based behavior as macOS and Linux — no fabricated CLI
+surface, no invented config file.
+
+Claude Code registers plugins through installed_plugins.json. When the three
+pillars are installed that way, loose skill links would duplicate every skill,
+so this installer writes only aliases into ~/.claude/skills. Aliases have no
+plugin counterpart, so they never collide. See scripts/install for the
+canonical logic and ai-context/DECISIONS.md DEC-017 for why.
+"""
 import json
-import shutil
+import os
 import platform
+import shutil
 import subprocess
+import sys
 from pathlib import Path
+
 
 def print_step(msg):
     print(f"[*] {msg}")
 
+
 def print_success(msg):
     print(f"[SUCCESS] {msg}")
 
-def print_warning(msg):
-    print(f"[WARNING] {msg}")
 
 def print_error(msg):
     print(f"[ERROR] {msg}")
 
-def run_command(cmd, ignore_error=False):
-    """Runs a shell command and optionally captures/warns on errors."""
-    try:
-        result = subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        return result.stdout
-    except subprocess.CalledProcessError as e:
-        if not ignore_error:
-            print_warning(f"Command failed: {' '.join(cmd)}\n{e.stderr.strip()}")
-        return None
 
-def safe_remove(dst):
-    if os.path.exists(dst) or os.path.islink(dst):
+def link(src: Path, dst: Path) -> None:
+    """Create a link from dst to src: a symlink on macOS/Linux, a directory
+    junction on Windows (needs no administrator rights), falling back to a
+    plain copy only if the junction call itself fails."""
+    if dst.exists() or dst.is_symlink():
         try:
-            if os.path.islink(dst) or os.path.isfile(dst):
-                os.unlink(dst)
+            if dst.is_symlink() or dst.is_file():
+                dst.unlink()
             else:
                 shutil.rmtree(dst)
-        except Exception:
+        except OSError:
             pass
-    return True
+    if platform.system() == "Windows":
+        try:
+            import _winapi
 
-def get_dynamic_plugins(repo_dir):
-    """Dynamically scan the plugins/ directory for valid plugins."""
-    plugins_dir = repo_dir / "plugins"
-    if not plugins_dir.exists():
-        return []
-    
-    valid_plugins = []
-    for plugin in plugins_dir.iterdir():
-        if plugin.is_dir() and (plugin / "plugin.json").exists():
-            valid_plugins.append(plugin.name)
-    return sorted(valid_plugins)
+            _winapi.CreateJunction(str(src), str(dst))
+            return
+        except OSError:
+            pass
+    try:
+        os.symlink(src, dst, target_is_directory=src.is_dir())
+    except OSError:
+        shutil.copytree(src, dst)
 
-def register_via_cli(repo_dir, plugins):
-    """Registers plugins properly using native CLIs so they appear in agent UI."""
-    if not plugins:
+
+def unlink_if_owned(link_path: Path, repo_dir: Path, prefix: str) -> None:
+    """Remove link_path only if it is a symlink/junction this repository
+    created, resolving under repo_dir/prefix."""
+    if not link_path.is_symlink():
         return
+    try:
+        target = str(link_path.resolve())
+    except OSError:
+        return
+    if target.startswith(str((repo_dir / prefix).resolve())):
+        link_path.unlink()
 
-    # 1. Codex CLI Registration
-    if shutil.which("codex"):
-        print_step("Registering plugins natively via Codex CLI...")
-        # Ignore errors on remove in case it's not added yet
-        run_command(["codex", "plugin", "marketplace", "remove", "james-skills"], ignore_error=True)
-        
-        # Add the local marketplace
-        success = run_command(["codex", "plugin", "marketplace", "add", str(repo_dir)])
-        if success is not None:
-            # Install each plugin natively
-            for plugin in plugins:
-                run_command(["codex", "plugin", "add", f"{plugin}@james-skills"])
-        else:
-            print_warning("Failed to add Codex marketplace. UI integration may be incomplete.")
 
-    # 2. Claude CLI Registration
-    if shutil.which("claude"):
-        print_step("Registering plugins natively via Claude CLI...")
-        run_command(["claude", "plugin", "marketplace", "remove", "james-skills"], ignore_error=True)
-        
-        success = run_command(["claude", "plugin", "marketplace", "add", str(repo_dir)])
-        if success is not None:
-            for plugin in plugins:
-                run_command(["claude", "plugin", "install", f"{plugin}@james-skills"])
-        else:
-            print_warning("Failed to add Claude marketplace. UI integration may be incomplete.")
-
-def main():
-    repo_dir = Path(__file__).parent.parent.absolute()
+def main() -> int:
+    repo_dir = Path(__file__).resolve().parent.parent
     home = Path.home()
-    
+
     print_step("Validating repository...")
     if platform.system() != "Windows":
-        val_res = run_command([str(repo_dir / "scripts" / "validate")], ignore_error=False)
-        if val_res is None:
+        result = subprocess.run([str(repo_dir / "scripts" / "validate")])
+        if result.returncode != 0:
             print_error("Repository validation failed. Aborting installation.")
-            sys.exit(1)
-        run_command([str(repo_dir / "scripts" / "install-hooks")], ignore_error=True)
-        
-    dynamic_plugins = get_dynamic_plugins(repo_dir)
-    if not dynamic_plugins:
-        print_error("No valid plugins found in the plugins/ directory.")
-        sys.exit(1)
+            return 1
+        subprocess.run([str(repo_dir / "scripts" / "install-hooks")], check=False)
 
-    print_step(f"Discovered plugins to install: {', '.join(dynamic_plugins)}")
-        
-    # Attempt native CLI registration first (best UX)
-    register_via_cli(repo_dir, dynamic_plugins)
+    catalog = json.loads((repo_dir / "catalog.json").read_text(encoding="utf-8"))
+    promoted = [item for item in catalog.get("skills", []) if item.get("status") == "promoted"]
 
-    targets = [
-        home / ".agents",
-        home / ".codex",
-        home / ".claude",
-        home / ".cursor"
-    ]
-    
+    claude_manifest = home / ".claude" / "plugins" / "installed_plugins.json"
+    claude_uses_plugins = claude_manifest.is_file() and "@james-skills" in claude_manifest.read_text(encoding="utf-8")
+    if claude_uses_plugins:
+        print_step("Claude Code has the james-skills plugins installed; writing aliases only to ~/.claude/skills")
+
+    targets = [home / ".agents", home / ".codex", home / ".claude"]
+    if (home / ".cursor").is_dir():
+        targets.append(home / ".cursor")
     if (home / ".gemini" / "config").is_dir():
         targets.append(home / ".gemini" / "config")
     if (home / ".gemini" / "antigravity" / "custom").is_dir():
         targets.append(home / ".gemini" / "antigravity" / "custom")
-        
-    catalog_path = repo_dir / "catalog.json"
-    if not catalog_path.exists():
-        print_error("catalog.json not found!")
-        sys.exit(1)
-        
-    with open(catalog_path, "r", encoding="utf-8") as f:
-        catalog = json.load(f)
-        
-    promoted_skills = [s for s in catalog.get("skills", []) if s.get("status") == "promoted"]
+
+    plugin_dirs = sorted(p for p in (repo_dir / "plugins").iterdir() if p.is_dir())
 
     for base_dir in targets:
         skills_target = base_dir / "skills"
-        plugins_target = base_dir / "plugins"
-        
         skills_target.mkdir(parents=True, exist_ok=True)
-        plugins_target.mkdir(parents=True, exist_ok=True)
 
-        print_step(f"Installing structural fallbacks to {base_dir}...")
-        
-        # Cleanup legacy standalone skills and old plugin folders
-        if skills_target.exists():
-            for item in skills_target.iterdir():
-                if item.is_symlink():
-                    try:
-                        if str(repo_dir) in str(item.resolve()):
-                            item.unlink()
-                    except Exception:
-                        pass
-                elif item.name in dynamic_plugins or item.name in ["make-it-james", "proactive-habits", "i-have-adhd"]:
-                    safe_remove(str(item))
-        
-        # Hard copy fallback for plugins (bypasses Go symlink limit)
-        for plugin_name in dynamic_plugins:
-            src = repo_dir / "plugins" / plugin_name
-            dst = plugins_target / plugin_name
-            safe_remove(str(dst))
-            if platform.system() == "Windows":
-                try:
-                    import _winapi
-                    _winapi.CreateJunction(str(src), str(dst))
-                except OSError:
-                    shutil.copytree(str(src), str(dst))
-            else:
-                shutil.copytree(str(src), str(dst))
+        if ".gemini" in str(base_dir):
+            plugins_target = base_dir / "plugins"
+            plugins_target.mkdir(parents=True, exist_ok=True)
+            for existing in skills_target.iterdir():
+                unlink_if_owned(existing, repo_dir, "skills")
+                unlink_if_owned(existing, repo_dir, "plugins")
+            for plugin_dir in plugin_dirs:
+                link(plugin_dir, plugins_target / plugin_dir.name)
+        elif base_dir == home / ".claude" and claude_uses_plugins:
+            for existing in skills_target.iterdir():
+                unlink_if_owned(existing, repo_dir, "plugins")
+        else:
+            for plugin_dir in plugin_dirs:
+                for skill_dir in (plugin_dir / "skills").iterdir():
+                    if skill_dir.is_dir():
+                        link(skill_dir, skills_target / skill_dir.name)
 
-        # Write plugins.json explicitly for strict agents
-        plugins_json_path = base_dir / "plugins.json"
-        plugins_config = {"entries": []}
-        if plugins_json_path.exists():
-            try:
-                with open(plugins_json_path, "r") as f:
-                    plugins_config = json.load(f)
-            except Exception:
-                pass
-                
-        repo_plugins_path = str(repo_dir / "plugins")
-        has_entry = any(entry.get("path") == repo_plugins_path for entry in plugins_config.get("entries", []))
-        if not has_entry:
-            if "entries" not in plugins_config:
-                plugins_config["entries"] = []
-            plugins_config["entries"].append({"path": repo_plugins_path})
-            with open(plugins_json_path, "w") as f:
-                json.dump(plugins_config, f, indent=2)
-
-        # Aliases fallback
-        for item in promoted_skills:
+        for item in promoted:
             for alias in item.get("aliases", []):
                 alias_dir = repo_dir / "aliases" / alias
-                if (alias_dir / "SKILL.md").exists():
-                    dst = skills_target / alias
-                    safe_remove(str(dst))
-                    if platform.system() == "Windows":
-                        try:
-                            import _winapi
-                            _winapi.CreateJunction(str(alias_dir), str(dst))
-                        except OSError:
-                            shutil.copytree(str(alias_dir), str(dst))
-                    else:
-                        shutil.copytree(str(alias_dir), str(dst))
-                    
-    print_success(f"Installed natively & structural fallbacks updated across platforms from {repo_dir}")
+                if not (alias_dir / "SKILL.md").is_file():
+                    print_error(f"alias target missing: {alias} -> {item['name']}")
+                    return 1
+                link(alias_dir, skills_target / alias)
+
+    print_success(f"Installed successfully to all platforms from {repo_dir}")
+    return 0
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
