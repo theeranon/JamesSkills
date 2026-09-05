@@ -205,3 +205,14 @@ Record accepted or superseded project decisions. Raw discussion remains in its s
 - Behavioral guard changed rather than removed: `test_baseon.py` previously asserted the personal phrasing of the limitation. It now asserts the rule — a generic pack is never anyone's personal assessment, and a stored label stays a working hypothesis until its subject confirms an official report — and additionally fails if the limitations file names a person.
 - Remaining owner decision: rewriting public git history. A class transcript, a brand specification, and internal operating audits are still retrievable from published commits, and a working-tree deletion does not remove them from a public host.
 - Affects: `NOTICE`, `plugins/james-productivity/packs/knowledge/lenses/wealth-dynamics/`, `.../wealth-spectrum/`, `plugins/james-productivity/skills/baseon/references/pack-contract.md`, `plugins/james-productivity/skills/grill-me/references/interactive-html.md`, `tests/behavioral-cases.md`, `plugins/james-productivity/skills/baseon/tests/test_baseon.py`.
+
+## DEC-021 — Rewrote public git history to remove material that a file deletion could not
+
+- Date: 2026-09-05
+- Status: Accepted
+- Decision: Purged `scratch/`, the root `research/`, and `packs/solutionsimpact/` from every commit with `git filter-repo`, then force-pushed. Removed from public reach: a full private-class transcript, a brand specification, and internal operating audits naming eight background daemons, an advertising spend deadline, and the owner's own error rates over seven months. Sixty-two commits of development history remain intact. The one cited research document survives at its new path inside `plugins/james-productivity/research/`.
+- Why: the owner instructed that internal material be removed. On a public host a working-tree deletion is not a removal, and the content was still retrievable with `git show`. The window was unusually clean: the repository had zero forks and zero stars, so no third party held a copy to keep the old objects alive.
+- Verified: a fresh `git clone` from GitHub contains zero matches for the purged paths, `git log --all` finds no commit touching any of them, and `scripts/validate` passes from that clean clone.
+- Recovery: a full `git bundle --all` of the pre-rewrite repository was taken first and a `backup-before-history-rewrite` branch was created. Both are local only and are not published.
+- Known limit: GitHub can continue to serve an orphaned commit by its exact SHA until it garbage-collects, and cached views may persist. Anyone wanting that content would need a SHA they could only have obtained before the rewrite. Ask GitHub Support to purge the cache if that residual matters.
+- Affects: every commit in the repository. All hashes changed.

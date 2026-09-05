@@ -42,6 +42,7 @@ JamesSkills v2 carries 22 promoted canonical packages and 8 compatibility aliase
 ## Next
 
 - Decide whether the schema contract earns its own numbered requirement in `PROJECT.md`; it is currently recorded as a non-functional requirement.
+- Submit to the Claude Code community marketplace at https://platform.claude.com/plugins/submit when ready; no repository blocker remains.
 
 ## Blockers
 
