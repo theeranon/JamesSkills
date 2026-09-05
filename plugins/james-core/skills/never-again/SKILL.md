@@ -21,7 +21,7 @@ Write the lesson where the next agent cannot avoid reading it.
 - The defect is in delivered code and the sweep is what is wanted -> `dev-are-you-sure`
 - The project has no contract yet and truth is scattered rather than wrong -> `project-standard`
 - The output is merely mediocre rather than wrong -> `is-that-the-best-you-can-do`
-- The correction suggests a whole new capability -> `skill-router` for a Candidate Card
+- The correction suggests a whole new capability -> `hand-it-off` for a Candidate Card
 
 ## Procedure
 
@@ -46,7 +46,7 @@ The lesson entry exists, at least one automatically loaded contract file points 
 ## Counter-case
 
 - The user rejects one paragraph's tone in a single document. No failure class is implied and no rule should outlive the fix, so `are-you-sure` repairs it.
-- The rejection reveals a capability the library does not have at all. Writing a rule would not supply it, so `skill-router` opens a Candidate Card instead. Approval to repair the failure is not approval of a new name, ontology, or global package.
+- The rejection reveals a capability the library does not have at all. Writing a rule would not supply it, so `hand-it-off` opens a Candidate Card instead. Approval to repair the failure is not approval of a new name, ontology, or global package.
 
 ## Hand back
 

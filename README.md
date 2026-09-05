@@ -27,7 +27,7 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 Every skill satisfies one structural contract, [`docs/SKILL-SCHEMA.md`](docs/SKILL-SCHEMA.md), enforced on every commit. Each file declares what it owns, what it is allowed to change, the sibling that owns each case it refuses, when it stops, and the named principles it operates on.
 
-1. ⚙️ **`james-core`** (9) — decision posture, execution, and the quality gates. `proactive-habits`, `done-for-me`, `are-you-sure`, `research-it`, `never-again`, `is-that-the-best-you-can-do`, `make-it-james`, `i-have-adhd`, `skill-router`.
+1. ⚙️ **`james-core`** (9) — decision posture, execution, and the quality gates. `proactive-habits`, `done-for-me`, `are-you-sure`, `research-it`, `never-again`, `is-that-the-best-you-can-do`, `make-it-james`, `i-have-adhd`, `hand-it-off`.
 2. 📊 **`james-productivity`** (8) — thinking, research, and executive deliverables. `zoom-out`, `grill-me`, `coach-me`, `give-me-solutions`, `baseon`, `sum-meet`, `one-page-pls`, `final-it`.
 3. 💻 **`james-software`** (5) — engineering method and interface law. `proactive-dev`, `dev-are-you-sure`, `catchup`, `project-standard`, `make-it-james-ux`.
 
@@ -598,10 +598,10 @@ James Theeranon
 
 ### ⚙️ Internal & Architecture (ระบบประมวลผลและการจัดเส้นทางภายใน)
 
-#### ⚡️ `/skill-router`
+#### ⚡️ `/hand-it-off`
 *Internal responsibility-based routing matrix directing incoming tasks to their single accountable primary workflow, automatic standards, and verification boundary.*
 
-<p align="center"><img src="assets/skill-router-architecture.png" width="100%" alt="skill-router architecture"></p>
+<p align="center"><img src="assets/skill-router-architecture.png" width="100%" alt="hand-it-off architecture"></p>
 
 <table width="100%">
 <tr>
@@ -784,7 +784,7 @@ The short rule:
 - use `/dev-are-you-sure` before accepting a completion claim, and `/research-it` when the doubt is about an outside claim;
 - use `/sum-meet`, `/one-page-pls`, or `/final-it` for recipient-facing outcomes; `make-it-james` and `make-it-james-ux` apply automatically.
 
-This release has no pilot packages. Compatibility aliases keep older calls working without creating another instruction body. `skill-router` is installed internal support, not a recommended human command.
+This release has no pilot packages. Compatibility aliases keep older calls working without creating another instruction body. `hand-it-off` is installed internal support, not a recommended human command. `skill-router` remains a compatibility alias.
 
 ## 🧠 Knowledge Library
 

@@ -226,7 +226,7 @@ Fails when:
 - `HBD` becomes a blacklist keyword
 - every social message is suppressed, including a real deadline, money, client risk, or direct ask
 
-## Skill Router — `skill-router`
+## Skill Router — `hand-it-off`
 
 Request: Research an executive-office platform, implement the chosen path, deliver a recipient-facing decision artifact, and verify it.
 

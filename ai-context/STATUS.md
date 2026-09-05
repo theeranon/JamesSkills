@@ -50,8 +50,8 @@ JamesSkills v2 carries 22 promoted canonical packages and 8 compatibility aliase
 
 ## Need decision
 
-- A public name for `skill-router` remains unapproved; it stays internal support.
 - Fresh-session behavioral parity on every supported AI platform remains unproved.
+- `hand-it-off` (formerly `skill-router`) is now publicly named; `skill-router` stays as a compatibility alias.
 - Whether to seek a listing in a vendor-run plugin store. The repository is public under CC BY-NC 4.0 and installable as a Claude Code plugin marketplace today.
 
 ## Verification

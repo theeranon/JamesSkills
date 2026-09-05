@@ -21,7 +21,7 @@ Use the model as a lens on the evidence, never as a verdict about the person.
 - Options must be compared and one recommended -> `give-me-solutions`
 - The problem layer itself is unclear -> `zoom-out`
 - A person is stuck and needs to be moved rather than analysed -> `coach-me`
-- A reusable model must be built rather than applied -> `skill-router` for a Candidate Card
+- A reusable model must be built rather than applied -> `hand-it-off` for a Candidate Card
 
 ## Procedure
 

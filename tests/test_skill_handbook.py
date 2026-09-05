@@ -49,7 +49,7 @@ def main() -> int:
         if item["status"] == "pilot":
             assert not raw_heading.startswith("/"), f"pilot shown as slash call: {name}"
             assert "Not installed" in card, f"pilot availability unclear: {name}"
-        elif item["name"] == "skill-router":
+        elif item["name"] == "hand-it-off":
             assert not raw_heading.startswith("/"), f"internal shown as human call: {name}"
             assert "Internal support" in card, f"internal boundary unclear: {name}"
         else:

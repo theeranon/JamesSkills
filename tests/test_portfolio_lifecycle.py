@@ -13,7 +13,7 @@ def read(relative: str) -> str:
 
 def main() -> int:
     maintainer = read("AGENTS.md")
-    router = read("plugins/james-core/skills/skill-router/SKILL.md")
+    router = read("plugins/james-core/skills/hand-it-off/SKILL.md")
     never_again = read("plugins/james-core/skills/never-again/SKILL.md")
 
     assert "Authorization to build the library is not approval" in maintainer

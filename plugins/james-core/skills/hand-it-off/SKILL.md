@@ -1,5 +1,5 @@
 ---
-name: skill-router
+name: hand-it-off
 kind: internal-routing
 license: CC-BY-NC-4.0
 description: Internal fallback that assigns one primary owner when no skill obviously matches. Never select it as the primary workflow, never let it produce a deliverable, and never use it when a direct owner is already clear.
@@ -49,7 +49,7 @@ Route by accountable outcome, never by keyword or product name. Give exactly one
 - `one-page-pls` — one self-contained page per independent topic.
 - `final-it` — choose the serving format and finish it, when nothing narrower owns it.
 - `project-standard` — create or repair the versioned project contract.
-- `skill-router` — this fallback.
+- `hand-it-off` — this fallback (compatibility alias: `skill-router`).
 
 ### Choosing
 

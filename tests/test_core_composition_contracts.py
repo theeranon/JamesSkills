@@ -25,7 +25,7 @@ def main() -> int:
     catalog = json.loads(read("catalog.json"))
     names = [item["name"] for item in catalog["skills"]]
 
-    router = skill("skill-router", catalog)
+    router = skill("hand-it-off", catalog)
     never_again = skill("never-again", catalog)
     sum_meet = skill("sum-meet", catalog)
     one_page = skill("one-page-pls", catalog)

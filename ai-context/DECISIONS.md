@@ -216,3 +216,12 @@ Record accepted or superseded project decisions. Raw discussion remains in its s
 - Recovery: a full `git bundle --all` of the pre-rewrite repository was taken first and a `backup-before-history-rewrite` branch was created. Both are local only and are not published.
 - Known limit: GitHub can continue to serve an orphaned commit by its exact SHA until it garbage-collects, and cached views may persist. Anyone wanting that content would need a SHA they could only have obtained before the rewrite. Ask GitHub Support to purge the cache if that residual matters.
 - Affects: every commit in the repository. All hashes changed.
+
+## DEC-022 — `skill-router` renamed to `hand-it-off`, its public name resolved
+
+- Date: 2026-09-05
+- Status: Accepted
+- Decision: The internal-routing skill previously named `skill-router` is now canonically `hand-it-off`, taken from its own opening line ("Find the one owner, hand over, and get out of the way"). `skill-router` remains as a compatibility alias resolving to `hand-it-off`, following the same pattern as `prove-it` -> `research-it`. Every canonical reference — catalog.json, docs/SKILLS.md, README.md, the four tests that read the router file, and the two sibling skills (`baseon`, `never-again`) that route a Candidate Card to it — now uses the new name.
+- Why: STATUS.md had carried "a public name for skill-router remains unapproved" as an open item since the v2 rewrite. The owner asked directly for a public name. `hand-it-off` was chosen over generic alternatives (dispatcher, router, traffic-control) because it names the mental move in the same imperative-phrase family as the rest of the roster (`done-for-me`, `research-it`, `final-it`) rather than reading as internal jargon, while still being unlikely to be typed as a direct command — its own file and docs/SKILLS.md both still state it is agent support, not a recommended human slash command.
+- Affects: `plugins/james-core/skills/hand-it-off/` (renamed from `skill-router`), `aliases/skill-router/` (new), `catalog.json`, `docs/SKILLS.md`, `README.md`, `tests/test_catchup_contracts.py`, `tests/test_portfolio_lifecycle.py`, `tests/test_core_composition_contracts.py`, `tests/test_skill_handbook.py`, `plugins/james-productivity/skills/baseon/SKILL.md`, `plugins/james-core/skills/never-again/SKILL.md`, `ai-context/STATUS.md`.
+- Supersedes: the unresolved naming item in `ai-context/STATUS.md`'s Need decision section.

@@ -60,11 +60,13 @@
       "aliases": []
     },
     {
-      "name": "skill-router",
+      "name": "hand-it-off",
       "category": "james-core",
       "kind": "internal-routing",
       "status": "promoted",
-      "aliases": []
+      "aliases": [
+        "skill-router"
+      ]
     },
     {
       "name": "baseon",

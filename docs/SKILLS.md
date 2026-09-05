@@ -16,7 +16,7 @@ Mode and standard behavior differs from a normal workflow:
 
 - `/i-have-adhd` and `/proactive-habits` stay active for the current conversation until explicitly disabled.
 - `make-it-james` and `make-it-james-ux` apply automatically to recipient-facing outcomes; invoking one directly is useful for a wording or visual audit.
-- `skill-router` is installed agent support, not a recommended human command.
+- `hand-it-off` is installed agent support, not a recommended human command.
 
 
 ## Start or return to work
@@ -317,10 +317,10 @@ Mode and standard behavior differs from a normal workflow:
 
 ## Agent support
 
-### `skill-router`
+### `hand-it-off`
 
 - Internal support: installed for agents, never a human slash command.
-- Canonical package: `skill-router`
+- Canonical package: `hand-it-off`
 - Category: `james-core`
 - Kind: `internal-routing`
 - Lifecycle: `promoted`
@@ -328,5 +328,6 @@ Mode and standard behavior differs from a normal workflow:
 - Result: The named primary owner, any supporting skill with the distinct responsibility it holds, and nothing else. This router never returns a deliverable.
 - Do not use when: One canonical owner already clearly matches -> load that owner, for example `done-for-me`
   - The request spans several responsibilities but one outcome is accountable -> give that owner the job, for example `project-standard`
+- Aliases: `skill-router` (legacy compatibility call).
   - The user asked to be interrogated rather than routed -> `grill-me`
-- Canonical instructions: [`plugins/james-core/skills/skill-router/SKILL.md`](../plugins/james-core/skills/skill-router/SKILL.md)
+- Canonical instructions: [`plugins/james-core/skills/hand-it-off/SKILL.md`](../plugins/james-core/skills/hand-it-off/SKILL.md)

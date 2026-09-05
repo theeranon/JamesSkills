@@ -14,7 +14,7 @@ def read(relative: str) -> str:
 
 def main() -> int:
     skill = read("plugins/james-software/skills/catchup/SKILL.md")
-    router = read("plugins/james-core/skills/skill-router/SKILL.md")
+    router = read("plugins/james-core/skills/hand-it-off/SKILL.md")
     cases = read("tests/behavioral-cases.md")
     catalog = json.loads(read("catalog.json"))
     item = next(entry for entry in catalog["skills"] if entry["name"] == "catchup")
