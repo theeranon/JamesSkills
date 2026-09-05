@@ -13,15 +13,21 @@ def print_step(msg):
 def print_success(msg):
     print(f"[SUCCESS] {msg}")
 
+def print_warning(msg):
+    print(f"[WARNING] {msg}")
+
 def print_error(msg):
     print(f"[ERROR] {msg}")
 
 def run_command(cmd, ignore_error=False):
+    """Runs a shell command and optionally captures/warns on errors."""
     try:
-        subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    except Exception as e:
+        result = subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        return result.stdout
+    except subprocess.CalledProcessError as e:
         if not ignore_error:
-            print_error(f"Command failed: {' '.join(cmd)}")
+            print_warning(f"Command failed: {' '.join(cmd)}\n{e.stderr.strip()}")
+        return None
 
 def safe_remove(dst):
     if os.path.exists(dst) or os.path.islink(dst):
@@ -34,25 +40,49 @@ def safe_remove(dst):
             pass
     return True
 
-def register_via_cli(repo_dir):
-    """Registers plugins properly using the native CLI (if installed) so they appear in the UI."""
-    plugins = ["james-core", "james-productivity", "james-software"]
+def get_dynamic_plugins(repo_dir):
+    """Dynamically scan the plugins/ directory for valid plugins."""
+    plugins_dir = repo_dir / "plugins"
+    if not plugins_dir.exists():
+        return []
     
-    # Codex CLI
-    if shutil.which("codex"):
-        print_step("Registering plugins natively in Codex CLI...")
-        run_command(["codex", "plugin", "marketplace", "remove", "james-skills"], ignore_error=True)
-        run_command(["codex", "plugin", "marketplace", "add", str(repo_dir)])
-        for plugin in plugins:
-            run_command(["codex", "plugin", "add", f"{plugin}@james-skills"], ignore_error=True)
+    valid_plugins = []
+    for plugin in plugins_dir.iterdir():
+        if plugin.is_dir() and (plugin / "plugin.json").exists():
+            valid_plugins.append(plugin.name)
+    return sorted(valid_plugins)
 
-    # Claude CLI
+def register_via_cli(repo_dir, plugins):
+    """Registers plugins properly using native CLIs so they appear in agent UI."""
+    if not plugins:
+        return
+
+    # 1. Codex CLI Registration
+    if shutil.which("codex"):
+        print_step("Registering plugins natively via Codex CLI...")
+        # Ignore errors on remove in case it's not added yet
+        run_command(["codex", "plugin", "marketplace", "remove", "james-skills"], ignore_error=True)
+        
+        # Add the local marketplace
+        success = run_command(["codex", "plugin", "marketplace", "add", str(repo_dir)])
+        if success is not None:
+            # Install each plugin natively
+            for plugin in plugins:
+                run_command(["codex", "plugin", "add", f"{plugin}@james-skills"])
+        else:
+            print_warning("Failed to add Codex marketplace. UI integration may be incomplete.")
+
+    # 2. Claude CLI Registration
     if shutil.which("claude"):
-        print_step("Registering plugins natively in Claude CLI...")
+        print_step("Registering plugins natively via Claude CLI...")
         run_command(["claude", "plugin", "marketplace", "remove", "james-skills"], ignore_error=True)
-        run_command(["claude", "plugin", "marketplace", "add", str(repo_dir)])
-        for plugin in plugins:
-            run_command(["claude", "plugin", "install", f"{plugin}@james-skills"], ignore_error=True)
+        
+        success = run_command(["claude", "plugin", "marketplace", "add", str(repo_dir)])
+        if success is not None:
+            for plugin in plugins:
+                run_command(["claude", "plugin", "install", f"{plugin}@james-skills"])
+        else:
+            print_warning("Failed to add Claude marketplace. UI integration may be incomplete.")
 
 def main():
     repo_dir = Path(__file__).parent.parent.absolute()
@@ -60,11 +90,18 @@ def main():
     
     print_step("Validating repository...")
     if platform.system() != "Windows":
-        os.system(f'"{repo_dir}/scripts/validate"')
-        os.system(f'"{repo_dir}/scripts/install-hooks"')
+        run_command([str(repo_dir / "scripts" / "validate")], ignore_error=True)
+        run_command([str(repo_dir / "scripts" / "install-hooks")], ignore_error=True)
         
-    # Attempt native CLI registration
-    register_via_cli(repo_dir)
+    dynamic_plugins = get_dynamic_plugins(repo_dir)
+    if not dynamic_plugins:
+        print_error("No valid plugins found in the plugins/ directory.")
+        sys.exit(1)
+
+    print_step(f"Discovered plugins to install: {', '.join(dynamic_plugins)}")
+        
+    # Attempt native CLI registration first (best UX)
+    register_via_cli(repo_dir, dynamic_plugins)
 
     targets = [
         home / ".agents",
@@ -96,7 +133,7 @@ def main():
 
         print_step(f"Installing structural fallbacks to {base_dir}...")
         
-        # Cleanup legacy standalone skills to prevent double-loading
+        # Cleanup legacy standalone skills and old plugin folders
         if skills_target.exists():
             for item in skills_target.iterdir():
                 if item.is_symlink():
@@ -105,24 +142,24 @@ def main():
                             item.unlink()
                     except Exception:
                         pass
-                elif item.name in ["james-core", "james-productivity", "james-software", "make-it-james", "proactive-habits", "i-have-adhd"]:
+                elif item.name in dynamic_plugins or item.name in ["make-it-james", "proactive-habits", "i-have-adhd"]:
                     safe_remove(str(item))
         
-        # Hard copy fallback for plugins
-        for plugin in (repo_dir / "plugins").iterdir():
-            if plugin.is_dir() and (plugin / "plugin.json").exists():
-                dst = plugins_target / plugin.name
-                safe_remove(str(dst))
-                if platform.system() == "Windows":
-                    try:
-                        import _winapi
-                        _winapi.CreateJunction(str(plugin), str(dst))
-                    except OSError:
-                        shutil.copytree(str(plugin), str(dst))
-                else:
-                    shutil.copytree(str(plugin), str(dst))
+        # Hard copy fallback for plugins (bypasses Go symlink limit)
+        for plugin_name in dynamic_plugins:
+            src = repo_dir / "plugins" / plugin_name
+            dst = plugins_target / plugin_name
+            safe_remove(str(dst))
+            if platform.system() == "Windows":
+                try:
+                    import _winapi
+                    _winapi.CreateJunction(str(src), str(dst))
+                except OSError:
+                    shutil.copytree(str(src), str(dst))
+            else:
+                shutil.copytree(str(src), str(dst))
 
-        # Write plugins.json explicitly
+        # Write plugins.json explicitly for strict agents
         plugins_json_path = base_dir / "plugins.json"
         plugins_config = {"entries": []}
         if plugins_json_path.exists():
@@ -157,7 +194,7 @@ def main():
                     else:
                         shutil.copytree(str(alias_dir), str(dst))
                     
-    print_success(f"Installed successfully natively across platforms from {repo_dir}")
+    print_success(f"Installed natively & structural fallbacks updated across platforms from {repo_dir}")
 
 if __name__ == "__main__":
     main()
