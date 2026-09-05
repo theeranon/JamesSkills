@@ -671,6 +671,9 @@ The repository is public, so no authentication is needed to add the marketplace 
 Links every skill straight into each platform's discovery directory, so an edit in this repository takes effect immediately with no update step.
 
 **One-Click Universal Install (Mac / Windows / Linux)**
+
+![How to Install JamesSkills](assets/universal_install_guide.jpg)
+
 Just copy and paste this command into your Terminal or Command Prompt. It automatically downloads, extracts, and installs everything:
 ```bash
 python3 -c "import urllib.request, zipfile, os, shutil; urllib.request.urlretrieve('https://github.com/theeranon/JamesSkills/archive/refs/heads/main.zip', 'J.zip'); zipfile.ZipFile('J.zip').extractall(); os.chdir('JamesSkills-main'); os.system('python3 scripts/install.py' if os.name != 'nt' else 'python scripts\\install.py'); os.chdir('..'); shutil.rmtree('JamesSkills-main', ignore_errors=True); os.remove('J.zip')"
