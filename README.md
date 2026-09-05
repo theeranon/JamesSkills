@@ -683,11 +683,11 @@ python3 -c "import urllib.request, zipfile, os, shutil; urllib.request.urlretrie
 
 ![Install via Claude Desktop](assets/claude_desktop_install_guide.jpg)
 
-If you use **Claude Desktop** (or any AI agent with computer use/bash tools like Cursor or Antigravity), you don't even need to open a terminal! Just copy this exact prompt and paste it directly into the AI chat:
+If you use **Claude Desktop** (or any AI agent with computer use/bash tools like Cursor or Antigravity), you don't even need to open a terminal! Just copy this exact prompt and paste it directly into a New Chat:
 
-> **Prompt:** "Please install JamesSkills for me by running this command in the terminal: `python3 -c \"import urllib.request, zipfile, os, shutil; urllib.request.urlretrieve('https://github.com/theeranon/JamesSkills/archive/refs/heads/main.zip', 'J.zip'); zipfile.ZipFile('J.zip').extractall(); os.chdir('JamesSkills-main'); os.system('python3 scripts/install.py' if os.name != 'nt' else 'python scripts\\\\install.py'); os.chdir('..'); shutil.rmtree('JamesSkills-main', ignore_errors=True); os.remove('J.zip')\"`"
+> **Prompt:** "Install the AI plugins from this repository: https://github.com/theeranon/JamesSkills"
 
-The AI will execute the installation for you automatically.
+The AI will automatically clone the repository, read the installation instructions, and execute the setup for you.
 
 ### Manual Developer Install
 
