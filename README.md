@@ -25,11 +25,23 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 ## 🏛️ Architecture: 3 Pillars, 22 Skills
 
-Every skill satisfies one structural contract, [`docs/SKILL-SCHEMA.md`](docs/SKILL-SCHEMA.md), enforced on every commit. Each file declares what it owns, what it is allowed to change, the sibling that owns each case it refuses, when it stops, and the named principles it operates on.
+The library ships as three Claude Code plugins, one per pillar. Each pillar owns one responsibility; no skill crosses pillar lines.
 
-1. ⚙️ **`james-core`** (9) — decision posture, execution, and the quality gates. `proactive-habits`, `done-for-me`, `are-you-sure`, `research-it`, `never-again`, `is-that-the-best-you-can-do`, `make-it-james`, `i-have-adhd`, `hand-it-off`.
-2. 📊 **`james-productivity`** (8) — thinking, research, and executive deliverables. `zoom-out`, `grill-me`, `coach-me`, `give-me-solutions`, `baseon`, `sum-meet`, `one-page-pls`, `final-it`.
-3. 💻 **`james-software`** (5) — engineering method and interface law. `proactive-dev`, `dev-are-you-sure`, `catchup`, `project-standard`, `make-it-james-ux`.
+```mermaid
+graph TD
+    Root["JamesSkills"]
+    Root --> Core["⚙️ james-core — 9 skills<br/>Decision posture, execution ownership,<br/>and the quality gates work must pass"]
+    Root --> Prod["📊 james-productivity — 8 skills<br/>Thinking, research, coaching,<br/>and executive deliverables"]
+    Root --> Soft["💻 james-software — 5 skills<br/>Engineering method, project contracts,<br/>and interface law"]
+```
+
+**⚙️ `james-core`** decides what to do and whether it was done right. It holds the mode that sets decision posture for a conversation (`proactive-habits`, `i-have-adhd`), the workflow that carries an agreed task to a finished outcome (`done-for-me`), the wording standard every recipient-facing output passes through (`make-it-james`), and the gates nothing ships without: `are-you-sure`, `research-it`, `is-that-the-best-you-can-do`, `never-again`, `hand-it-off`.
+
+**📊 `james-productivity`** thinks before it builds. It sharpens a vague requirement (`grill-me`), reframes a problem at the system level (`zoom-out`), applies a registered knowledge lens (`baseon`), settles an open question against outside evidence combined with a candidate comparison (`give-me-solutions`), coaches a person through their own stuck point (`coach-me`), and produces the two recipient-facing formats this library ships (`sum-meet`, `one-page-pls`, `final-it`).
+
+**💻 `james-software`** is engineering-specific: it plans and builds with role discipline (`proactive-dev`), sweeps delivered code across five layers and the deployment boundary (`dev-are-you-sure`), recovers verified project state after a gap (`catchup`), keeps one project contract instead of scattered chat history (`project-standard`), and enforces the visual and interaction law every rendered surface follows (`make-it-james-ux`).
+
+Every skill in every pillar satisfies one structural contract, [`docs/SKILL-SCHEMA.md`](docs/SKILL-SCHEMA.md), enforced on every commit: what it owns, what it may change, the sibling that owns each case it refuses, when it stops, and the named principles it operates on.
 
 **The anti-overfit gate.** Every skill lists the cases it refuses and names the sibling that owns each one. The validator builds a graph from those refusals and fails when any skill has nobody pointing at it, because a skill no sibling ever excludes toward does not have a distinct job. The current roster passes with 109 refusal edges across 22 skills.
 
