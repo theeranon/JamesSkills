@@ -31,13 +31,16 @@ class TestInstallerHonesty(unittest.TestCase):
                 "Claude Code will not read it and it only invites confusion",
             )
 
-    def test_installer_never_invents_a_codex_marketplace_cli(self):
-        """Dedicated research this repository ran found no official Codex CLI
-        plugin or marketplace subcommand. Calling one is calling a command
-        that does not exist. Referencing the real ~/.codex directory is fine;
-        invoking a "codex plugin ..." subprocess is not."""
+    def test_installer_never_shells_out_to_a_cli_marketplace_command(self):
+        """Codex CLI does have a real `codex plugin marketplace` command
+        (confirmed live: `codex plugin list` shows james-core@james-skills as
+        installed, enabled, reading this repo's own marketplace.json) — but
+        this installer must never invoke it as a subprocess. It only reads
+        Codex's and Claude's own state files to decide whether to skip
+        writing loose skill links; it never calls out to either CLI."""
         self.assertNotIn('"codex", "plugin"', self.installer)
         self.assertNotIn("codex plugin", self.installer.lower())
+        self.assertNotIn('"claude", "plugin"', self.installer)
 
     def test_installer_never_invents_a_plugins_json_config(self):
         """No real product reads a hand-rolled plugins.json with an 'entries'
@@ -54,6 +57,15 @@ class TestInstallerHonesty(unittest.TestCase):
         installed."""
         self.assertIn("installed_plugins.json", self.installer)
         self.assertIn("@james-skills", self.installer)
+
+    def test_installer_checks_the_real_codex_manifest_before_deferring_to_it(self):
+        """The same rule for Codex: Codex CLI records installed plugins as
+        [plugins."<name>@james-skills"] in ~/.codex/config.toml, confirmed
+        live on this machine. Skip linking full skills into ~/.codex/skills
+        only when that file actually shows them installed, or every skill
+        appears twice in Codex's own command list."""
+        self.assertIn("config.toml", self.installer)
+        self.assertIn(".codex", self.installer)
 
 
 if __name__ == "__main__":

@@ -23,6 +23,12 @@ if [[ -f "$HOME/.claude/plugins/installed_plugins.json" ]] \
   claude_uses_plugins=1
 fi
 
+codex_uses_plugins=0
+if [[ -f "$HOME/.codex/config.toml" ]] \
+  && grep -q '@james-skills' "$HOME/.codex/config.toml"; then
+  codex_uses_plugins=1
+fi
+
 promoted_names="$(python3 - "$repo_dir/catalog.json" <<'PY'
 import json, sys
 for item in json.load(open(sys.argv[1], encoding="utf-8"))["skills"]:
@@ -50,11 +56,17 @@ for target in \
   [[ -d "$target" ]] || continue
   base_dir="$(dirname "$target")"
 
-  if [[ "$target" == "$HOME/.claude/skills" && "$claude_uses_plugins" -eq 1 ]]; then
+  if [[ "$target" == "$HOME/.claude/skills" && "$claude_uses_plugins" -eq 1 ]] \
+    || [[ "$target" == "$HOME/.codex/skills" && "$codex_uses_plugins" -eq 1 ]]; then
+    if [[ "$target" == "$HOME/.claude/skills" ]]; then
+      manifest="$HOME/.claude/plugins/installed_plugins.json"
+    else
+      manifest="$HOME/.codex/config.toml"
+    fi
     plugin_count=0
     for plugin in "$repo_dir/plugins/"*; do
       [[ -d "$plugin" ]] || continue
-      grep -q "$(basename "$plugin")@james-skills" "$HOME/.claude/plugins/installed_plugins.json" \
+      grep -q "$(basename "$plugin")@james-skills" "$manifest" \
         && plugin_count=$((plugin_count + 1))
     done
     stray=0

@@ -3,11 +3,13 @@
 gets the same, evidence-based behavior as macOS and Linux — no fabricated CLI
 surface, no invented config file.
 
-Claude Code registers plugins through installed_plugins.json. When the three
-pillars are installed that way, loose skill links would duplicate every skill,
-so this installer writes only aliases into ~/.claude/skills. Aliases have no
+Claude Code registers plugins in ~/.claude/plugins/installed_plugins.json;
+Codex CLI registers them as [plugins."<name>@james-skills"] in
+~/.codex/config.toml. When the three pillars are installed that way on
+either, loose skill links would duplicate every skill in that app's own
+command list, so this installer writes only aliases there. Aliases have no
 plugin counterpart, so they never collide. See scripts/install for the
-canonical logic and ai-context/DECISIONS.md DEC-017 for why.
+canonical logic and ai-context/DECISIONS.md DEC-017 and DEC-024 for why.
 """
 import json
 import os
@@ -89,6 +91,11 @@ def main() -> int:
     if claude_uses_plugins:
         print_step("Claude Code has the james-skills plugins installed; writing aliases only to ~/.claude/skills")
 
+    codex_manifest = home / ".codex" / "config.toml"
+    codex_uses_plugins = codex_manifest.is_file() and "@james-skills" in codex_manifest.read_text(encoding="utf-8")
+    if codex_uses_plugins:
+        print_step("Codex CLI has the james-skills plugins installed; writing aliases only to ~/.codex/skills")
+
     targets = [home / ".agents", home / ".codex", home / ".claude"]
     if (home / ".cursor").is_dir():
         targets.append(home / ".cursor")
@@ -111,7 +118,9 @@ def main() -> int:
                 unlink_if_owned(existing, repo_dir, "plugins")
             for plugin_dir in plugin_dirs:
                 link(plugin_dir, plugins_target / plugin_dir.name)
-        elif base_dir == home / ".claude" and claude_uses_plugins:
+        elif (base_dir == home / ".claude" and claude_uses_plugins) or (
+            base_dir == home / ".codex" and codex_uses_plugins
+        ):
             for existing in skills_target.iterdir():
                 unlink_if_owned(existing, repo_dir, "plugins")
         else:

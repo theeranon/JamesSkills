@@ -5,15 +5,23 @@ repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 "$repo_dir/scripts/validate"
 "$repo_dir/scripts/install-hooks"
 
-# Claude Code registers plugins through installed_plugins.json. When the three
-# pillars are installed that way, loose skill links would duplicate every skill,
-# so this installer writes only aliases into ~/.claude/skills. Aliases have no
+# Claude Code registers plugins through installed_plugins.json, and Codex CLI
+# registers them in config.toml as [plugins."<name>@james-skills"]. When the
+# three pillars are installed that way, loose skill links would duplicate
+# every skill, so this installer writes only aliases there. Aliases have no
 # plugin counterpart, so they never collide.
 claude_uses_plugins=0
 if [[ -f "$HOME/.claude/plugins/installed_plugins.json" ]] \
   && grep -q '@james-skills' "$HOME/.claude/plugins/installed_plugins.json"; then
   claude_uses_plugins=1
   echo "Claude Code has the james-skills plugins installed; writing aliases only to ~/.claude/skills"
+fi
+
+codex_uses_plugins=0
+if [[ -f "$HOME/.codex/config.toml" ]] \
+  && grep -q '@james-skills' "$HOME/.codex/config.toml"; then
+  codex_uses_plugins=1
+  echo "Codex CLI has the james-skills plugins installed; writing aliases only to ~/.codex/skills"
 fi
 
 targets=("$HOME/.agents/skills" "$HOME/.codex/skills" "$HOME/.claude/skills")
@@ -63,7 +71,8 @@ for target in "${targets[@]}"; do
         ln -sfn "$plugin" "$link"
       fi
     done
-  elif [[ "$skills_target" == "$HOME/.claude/skills" && "$claude_uses_plugins" -eq 1 ]]; then
+  elif [[ "$skills_target" == "$HOME/.claude/skills" && "$claude_uses_plugins" -eq 1 ]] \
+    || [[ "$skills_target" == "$HOME/.codex/skills" && "$codex_uses_plugins" -eq 1 ]]; then
     # Plugins already provide every canonical skill here. Remove any stale
     # canonical link this repository owns so nothing is loaded twice.
     while IFS= read -r existing_link; do
