@@ -679,6 +679,16 @@ Just copy and paste this command into your Terminal or Command Prompt. It automa
 python3 -c "import urllib.request, zipfile, os, shutil; urllib.request.urlretrieve('https://github.com/theeranon/JamesSkills/archive/refs/heads/main.zip', 'J.zip'); zipfile.ZipFile('J.zip').extractall(); os.chdir('JamesSkills-main'); os.system('python3 scripts/install.py' if os.name != 'nt' else 'python scripts\\install.py'); os.chdir('..'); shutil.rmtree('JamesSkills-main', ignore_errors=True); os.remove('J.zip')"
 ```
 
+**Method 2: AI Agent Assisted Install (No Terminal Needed)**
+
+![Install via Claude Desktop](assets/claude_desktop_install_guide.jpg)
+
+If you use **Claude Desktop** (or any AI agent with computer use/bash tools like Cursor or Antigravity), you don't even need to open a terminal! Just copy this exact prompt and paste it directly into the AI chat:
+
+> **Prompt:** "Please install JamesSkills for me by running this command in the terminal: `python3 -c \"import urllib.request, zipfile, os, shutil; urllib.request.urlretrieve('https://github.com/theeranon/JamesSkills/archive/refs/heads/main.zip', 'J.zip'); zipfile.ZipFile('J.zip').extractall(); os.chdir('JamesSkills-main'); os.system('python3 scripts/install.py' if os.name != 'nt' else 'python scripts\\\\install.py'); os.chdir('..'); shutil.rmtree('JamesSkills-main', ignore_errors=True); os.remove('J.zip')\"`"
+
+The AI will execute the installation for you automatically.
+
 ### Manual Developer Install
 
 **macOS and Linux**
