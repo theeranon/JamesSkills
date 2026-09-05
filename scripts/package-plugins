@@ -23,6 +23,10 @@ for plugin in "$repo_dir/plugins/"*; do
 
   cp -R "$plugin/.claude-plugin" "$stage/"
   cp -R "$plugin/skills" "$stage/"
+  # Knowledge packs and their cited sources must travel, or /baseon and its
+  # lens aliases fail at runtime with "registry missing".
+  [[ -d "$plugin/packs" ]] && cp -R "$plugin/packs" "$stage/"
+  [[ -d "$plugin/research" ]] && cp -R "$plugin/research" "$stage/"
   cp "$repo_dir/LICENSE" "$repo_dir/NOTICE" "$stage/"
 
   # Every archive carries its own terms and a pointer home.

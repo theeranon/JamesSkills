@@ -13,7 +13,10 @@ from io import StringIO
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
+# The knowledge library's root is the plugin, so packs/ travels with the plugin
+# when it is packaged or installed. SKILL_DIR locates this skill's own files.
+ROOT = Path(__file__).resolve().parents[3]
+SKILL_DIR = Path(__file__).resolve().parents[1]
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "knowledge_library.py"
 SPEC = importlib.util.spec_from_file_location("knowledge_library", SCRIPT)
 assert SPEC and SPEC.loader
@@ -85,7 +88,7 @@ def main() -> int:
             {"schema_version": 1, "sources": [], "lenses": []},
         )
         assets = sandbox / "plugins/james-productivity/skills/baseon/assets"
-        shutil.copytree(ROOT / "plugins/james-productivity/skills/baseon/assets", assets)
+        shutil.copytree(SKILL_DIR / "assets", assets)
 
         source_args = argparse.Namespace(
             source_id="example-book",
@@ -203,7 +206,7 @@ def main() -> int:
         copy_live_knowledge(sandbox)
         manifest_path = sandbox / "packs/knowledge/lenses/wealth-spectrum/manifest.json"
         manifest = MODULE.load_json(manifest_path)
-        manifest["entrypoint"] = "../../../../research/2026-08-28-framework-knowledge-source-audit.md"
+        manifest["entrypoint"] = "../../../research/2026-08-28-framework-knowledge-source-audit.md"
         write_json(manifest_path, manifest)
         assert any("entrypoint must be index.md" in error for error in MODULE.validate(sandbox))
 
@@ -227,7 +230,7 @@ def main() -> int:
         for required in ("requires SHA-256", "lacks URL", "unresolved rights", "ISO date"):
             assert any(required in error for error in errors), f"source gate missing: {required}"
 
-    skill = (ROOT / "plugins/james-productivity/skills/baseon/SKILL.md").read_text(encoding="utf-8")
+    skill = (SKILL_DIR / "SKILL.md").read_text(encoding="utf-8")
     for required in (
         "official_user_declared",
         "working_hypothesis",

@@ -185,3 +185,13 @@ Record accepted or superseded project decisions. Raw discussion remains in its s
 - Known limit: removal affects the working tree only. Six commits touching `research/` remain readable in public history. Rewriting that requires a force-push over published history and was not done.
 - Affects: `LICENSE`, `NOTICE`, `README.md`, `.claude-plugin/marketplace.json`, all three plugin manifests, `ai-context/PROJECT.md`, `ai-context/STATUS.md`, `CHANGELOG.md`, `research/`.
 - Supersedes: the all-rights-reserved licence, and every statement in this repository that it is private.
+
+## DEC-019 — Knowledge packs travel inside the plugin that uses them
+
+- Date: 2026-09-05
+- Status: Accepted
+- Decision: `packs/` and the one cited research document moved from the repository root into `plugins/james-productivity/`, beside the skills that read them. `scripts/package-plugins` copies both into the archive. The knowledge library's discovered root is now the plugin rather than the repository.
+- Why: a publishability audit found `/baseon` and its four lens aliases non-functional in every distributable artifact. `discover_repo_root` walks ancestors for `packs/knowledge/registry.json`; with `packs/` at the repository root it was absent from both the built archive and the installed Claude plugin, so every library read failed. Reproduced before the fix as `FAIL registry missing`, and verified after it by unpacking the archive outside any clone and running `list` and `validate` successfully. Six of twenty-two skills were broken in exactly the route the README recommends.
+- Second defect closed by the same move: `coach-me` carries the Satir-derived question sequence in its own body while pointing at `packs/knowledge/lenses/satir-model` for the limitations and the trademark disclaimer. That directory was not in the shipped plugin, so the paraphrase travelled and the rights posture and the mandatory "not evidence-based in any setting" caveat did not. Both now ship together.
+- Also corrected: `.claude-plugin/marketplace.json` still described the library as private, which is the first string a browsing installer reads, and `README.md` pointed at a research file that had been deleted as internal material and was reachable only through public history.
+- Affects: `plugins/james-productivity/packs/`, `plugins/james-productivity/research/`, `catalog.json`, `scripts/package-plugins`, `.claude-plugin/marketplace.json`, `README.md`, the baseon test's root resolution.

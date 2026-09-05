@@ -174,7 +174,7 @@
       "name": "knowledge-library",
       "kind": "knowledge",
       "status": "promoted",
-      "path": "packs/knowledge/registry.json"
+      "path": "plugins/james-productivity/packs/knowledge/registry.json"
     }
   ]
 }

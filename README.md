@@ -738,7 +738,7 @@ Update fetches a fast-forward candidate, validates it in a detached temporary wo
 | `plugins/<pillar>/.claude-plugin/plugin.json` | plugin manifest |
 | `.claude-plugin/marketplace.json` | the three plugins offered to Claude Code |
 | `aliases/` | compatibility names that point at a canonical skill and hold no behavior |
-| `packs/knowledge` | reviewed sources and lenses, no live state or client data |
+| `plugins/james-productivity/packs/knowledge` | reviewed sources and lenses, no live state or client data |
 | `adapters/` | vendor metadata only, never a duplicate instruction body |
 | `docs/SKILL-SCHEMA.md` | the structural contract every skill satisfies |
 | `tests/` | structural, behavioral, and anti-overfit regression gates |
@@ -788,7 +788,7 @@ This release has no pilot packages. Compatibility aliases keep older calls worki
 
 ## 🧠 Knowledge Library
 
-`baseon` owns the application workflow. Sources and lenses live separately under `packs/knowledge` so a new book does not create another skill or inflate `SKILL.md`.
+`baseon` owns the application workflow. Sources and lenses live separately under `plugins/james-productivity/packs/knowledge` so a new book does not create another skill or inflate `SKILL.md`.
 
 ```bash
 python3 plugins/james-productivity/skills/baseon/scripts/knowledge_library.py list
@@ -807,4 +807,4 @@ Skill names are phrases people naturally say when they need the capability. Work
 
 Discovery comes before packaging. A new skill remains a pilot until its Candidate Card shows repeated cross-project need, non-duplication, source confidence, representative failures, legitimate counter-cases, and James approves the exact name and scope. General permission to improve this repository does not approve a candidate's name or ontology.
 
-The current cross-history portfolio audit selected and promoted `catchup` after clean, dirty, stale-status, scoped-workstream, Git-error, and already-clear forward tests. `learn-this`, `audit-this`, and `systemize-it` remain Candidate Cards, not installed skills. See `research/2026-08-29-skill-portfolio-audit.md`.
+The current cross-history portfolio audit selected and promoted `catchup` after clean, dirty, stale-status, scoped-workstream, Git-error, and already-clear forward tests. `learn-this`, `audit-this`, and `systemize-it` remain Candidate Cards, not installed skills.

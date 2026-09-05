@@ -4,7 +4,7 @@
     "name": "James Theeranon",
     "url": "https://github.com/theeranon"
   },
-  "description": "Private agent skill library. 22 skills across three pillars, each satisfying one enforced structural contract.",
+  "description": "Agent skill library. 22 skills across three pillars, each satisfying one enforced structural contract with named principles and declared exclusions.",
   "version": "2.0.0",
   "plugins": [
     {
