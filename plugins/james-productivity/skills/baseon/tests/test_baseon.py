@@ -78,8 +78,12 @@ def main() -> int:
     talent_limits = (
         ROOT / "packs/knowledge/lenses/wealth-dynamics/references/limitations.md"
     ).read_text(encoding="utf-8")
-    assert "generic full pack" in wealth_index and "James's personal assessment" in wealth_index
-    assert "No personal Talent Dynamics" in talent_limits
+    # Guard the rule, not the phrasing: a generic pack is never a personal result,
+    # and a stored label is a hypothesis until its subject confirms an official report.
+    assert "generic full pack" in wealth_index
+    assert "not James's personal assessment" not in wealth_index, "limitations must not name a person"
+    assert "never anyone's personal assessment" in wealth_index or "is not the subject" in wealth_index
+    assert "not an official result" in talent_limits and "working hypothesis" in talent_limits
 
     with tempfile.TemporaryDirectory() as temp:
         sandbox = Path(temp)

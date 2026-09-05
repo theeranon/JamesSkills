@@ -19,7 +19,7 @@ packs/knowledge/
             └── limitations.md
 ```
 
-The complete JamesSkills repository is the distribution unit. The installer links the skill directory back to that clone, so the sibling knowledge library stays canonical. A detached copy of only this skill directory must set `JAMES_SKILLS_ROOT` to a complete clone; it must not carry a silent duplicate of the packs.
+The `james-productivity` plugin is the distribution unit. The installer links the skill directory back to that clone, so the sibling knowledge library stays canonical. The knowledge library lives beside the skills inside this plugin, so it travels with any packaged or installed copy. A detached copy of only this skill directory must set `JAMES_SKILLS_ROOT` to a complete clone.
 
 ## One fact, one owner
 
@@ -39,7 +39,7 @@ Every durable knowledge claim needs:
 ```text
 ## CLAIM-ID — Short label
 
-- Evidence: [official claim] | [independent evidence] | [James rule] | [inference]
+- Evidence: [official claim] | [independent evidence] | [owner rule] | [inference]
 - Source: `source-id#locator-id`
 - Confidence: source-faithful | supported | mixed | tentative
 

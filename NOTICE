@@ -10,9 +10,18 @@ https://creativecommons.org/licenses/by-nc/4.0/
 
 ## What this covers
 
-Everything in this repository: the skill instruction bodies under
-`plugins/`, the compatibility aliases, the documentation, the templates and
-HTML assets, the scripts, and the tests.
+**CC BY-NC 4.0** covers the substance: the skill instruction bodies under
+`plugins/`, the compatibility aliases, the knowledge packs, the
+documentation, and the HTML templates.
+
+**Apache License 2.0** additionally covers the utility code, at your option:
+`scripts/`, `tests/`, `mcp-server/`, `adapters/`, and any `scripts/`
+directory inside a skill. Creative Commons advises against applying its
+licences to software, so the tooling is offered under a licence built for
+it. You may use that code under either licence. The full Apache text is at
+https://www.apache.org/licenses/LICENSE-2.0
+
+Neither licence grants rights in the third-party material described below.
 
 ## What you may do
 

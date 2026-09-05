@@ -10,7 +10,7 @@ Independent private synthesis. Not affiliated with, endorsed by, or a substitute
 
 ## Do not use for
 
-- Treat the generic full pack as James's personal assessment; it covers every level and profile.
+- Treat the generic full pack as anyone's personal assessment; it covers every level and profile and is never anyone's personal assessment.
 - Assign a level from lifestyle, confidence, revenue alone, or a generic report pack.
 - Treat a dated level hypothesis as a permanent identity.
 - Replace cash-flow, liquidity, debt, margin, owner-dependence, and execution evidence.

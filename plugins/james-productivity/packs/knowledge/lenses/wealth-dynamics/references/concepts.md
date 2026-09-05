@@ -46,7 +46,7 @@ The model uses Dynamo for initiation and innovation, Blaze for people and commun
 - Source: `talent-dynamics-genius-guide-2015#pdf-p21-p38`
 - Confidence: `source-faithful`
 
-The guide places Creator at Dynamo, Star between Dynamo and Blaze, Supporter at Blaze, Deal Maker between Blaze and Tempo, Trader at Tempo, Accumulator between Tempo and Steel, Lord at Steel, and Mechanic between Steel and Dynamo.
+The guide arranges eight named profiles around the four frequencies, alternating a profile centred on each frequency with one sitting between two of them. The specific placement is the source's own expression and is not reproduced here. Read it from the official guide before applying it, and cite the page.
 
 ## TD-005 — Profile roles are hypotheses about contribution
 

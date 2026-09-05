@@ -4,7 +4,7 @@
 
 - Targeted public research found no independently accessible technical manual or validation study for this exact framework as of 2026-08-28. This is a bounded search result, not proof that no private evidence exists.
 - The source is first-party framework material. Its nine-stage structure is an author model, not verified financial law.
-- The 2011 full pack covers all levels and profiles. It is not James's personal assessment and cannot prove that James is Yellow, Lord, or any other label.
+- The full pack covers every level and profile. A generic pack is never anyone's personal assessment and cannot establish that a given person sits at any particular level.
 - A level inferred from business facts remains a dated working hypothesis. Cash flow, liquidity, debt, market conditions, and owner dependence can change it.
 - Differences between older wealth-creation language and newer financial-literacy wording must remain versioned rather than silently merged.
 
