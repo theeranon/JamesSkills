@@ -708,13 +708,13 @@ for p in james-core james-productivity james-software; do claude plugin uninstal
 
 | Platform | Mechanism | Status |
 |---|---|---|
-| Claude Code | plugin marketplace by default, `~/.claude/skills` links when the plugins are absent | Marketplace add from GitHub, install, and namespaced skill loading all verified on macOS |
-| Cursor | `~/.cursor/skills` links | Files installed; Cursor's own loading not verified here |
-| Codex (ChatGPT) | `~/.codex/skills` links | Files installed; loading not verified here |
-| Gemini and Antigravity | whole plugins in `~/.gemini/*/plugins` | Files installed; loading not verified here |
-| Any agent reading `.agents` | `~/.agents/skills` links | Files installed |
+| Claude Code | Native CLI `claude plugin install` + `~/.claude` fallback | UI Marketplace integration verified on macOS & Windows |
+| Codex (ChatGPT) | Native CLI `codex plugin add` + `~/.codex` fallback | UI Marketplace integration verified on macOS & Windows |
+| Cursor | `~/.cursor/skills` fallback | Files installed & structurally supported |
+| Gemini and Antigravity | Explicit `plugins.json` injection + `~/.gemini` fallback | Files installed & structurally supported |
+| Any agent reading `.agents` | `~/.agents/skills` fallback | Files installed |
 
-Only the Claude Code row is a verified runtime claim. The others say what the installer writes to disk, which is not by itself proof that the host loads it.
+The installer automatically detects `codex` and `claude` CLIs to natively register the plugins into their marketplaces. This guarantees that the plugins appear properly in the "Installed" or "Personal" tabs of the agent's UI. For other agents (or if the CLI is missing), robust structural fallbacks are deployed (including Directory Junctions on Windows and explicit `plugins.json` injection to bypass Go symlink limits).
 
 Do not run either route inside an AI chat box. Use Terminal on macOS, or Command Prompt or PowerShell on Windows.
 
