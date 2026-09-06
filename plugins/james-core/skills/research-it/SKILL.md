@@ -13,7 +13,7 @@ Resolve one outside claim with evidence the reader can audit.
 
 - Kind: workflow
 - Owns: one open question whose answer lives outside this conversation, returned as evidence with a verdict the reader can audit.
-- Boundary: reads external sources and the current project for context. Writes a findings record only. Never edits the thing under question and never acts on the verdict.
+- Boundary: reads external sources and the current project for context. Writes a findings record only. A research-only request does not authorize edits or external action. When research is a step in an already-authorized job, return its finding to that job and continue within its authority.
 
 ## Do not use this when
 
@@ -50,7 +50,7 @@ The question is answered as far as the available evidence permits and another so
 
 ## Hand back
 
-The claim and verdict, the decisive source evidence with locators when available, and the material limits. Keep fact, source assertion and inference clear without requiring separate sections for empty categories. The reader decides what to do about it.
+The claim and verdict, the decisive source evidence with locators when available, and the material limits. Keep fact, source assertion and inference clear without requiring separate sections for empty categories. For a research-only request, stop at the verdict. For an authorized larger task, use the finding to continue that task.
 
 ## Sources
 

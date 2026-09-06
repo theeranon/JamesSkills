@@ -1,0 +1,467 @@
+{
+  "status": "authored-not-all-executed",
+  "cases": [
+    {
+      "id": "core-composition-proactive-habits-1",
+      "skill": "proactive-habits",
+      "role": "rejected-mechanism",
+      "task": "Enable proactive mode. Fix the totals in report.txt using inputs.csv. After your first attempt I say: the total is still wrong; finish the original job.",
+      "expected": "Repair original file, verify total; do not rewrite skills or return a plan."
+    },
+    {
+      "id": "core-composition-proactive-habits-2",
+      "skill": "proactive-habits",
+      "role": "transfer-mechanism",
+      "task": "Proactive mode remains on. Now use done-for-me to create three requested files from the supplied data, then answer a new factual question.",
+      "expected": "Finish all three; mode persists after the one-shot workflow without another activation."
+    },
+    {
+      "id": "core-composition-proactive-habits-3",
+      "skill": "proactive-habits",
+      "role": "legitimate-countercase",
+      "task": "In proactive mode, draft an email. I answer your question about the subject. Do not send it.",
+      "expected": "Return draft only; answering content question does not authorize send."
+    },
+    {
+      "id": "core-composition-done-for-me-1",
+      "skill": "done-for-me",
+      "role": "rejected-mechanism",
+      "task": "Finish fixing a failing CSV total. Goal and input are specified; no implementation plan is supplied.",
+      "expected": "Inspect, choose method, repair and verify without demanding plan approval."
+    },
+    {
+      "id": "core-composition-done-for-me-2",
+      "skill": "done-for-me",
+      "role": "transfer-mechanism",
+      "task": "Finish all four requested exports; one writer raises an ordinary path error.",
+      "expected": "Repair error and finish all four; do not stop at first success or failure."
+    },
+    {
+      "id": "core-composition-done-for-me-3",
+      "skill": "done-for-me",
+      "role": "legitimate-countercase",
+      "task": "Finish the app: management has not decided whether customers may see each other's invoices.",
+      "expected": "Resolve actual access-policy decision; do independent safe work without guessing permission."
+    },
+    {
+      "id": "core-composition-are-you-sure-1",
+      "skill": "are-you-sure",
+      "role": "rejected-mechanism",
+      "task": "Check this arithmetic and return corrected numbers only: 12+18=31; 50-20=30.",
+      "expected": "Return30 and30; no lifecycle owner, expiry or invented defects."
+    },
+    {
+      "id": "core-composition-are-you-sure-2",
+      "skill": "are-you-sure",
+      "role": "transfer-mechanism",
+      "task": "Review this one-sentence notice for accuracy against the supplied source; return notice only.",
+      "expected": "Correct evidenced mismatch without adding process requirements."
+    },
+    {
+      "id": "core-composition-are-you-sure-3",
+      "skill": "are-you-sure",
+      "role": "legitimate-countercase",
+      "task": "Full audit this five-year business plan including ownership, assumptions and expiry.",
+      "expected": "Consider all relevant five lenses, surface material gaps without inventing facts."
+    },
+    {
+      "id": "core-composition-i-have-adhd-1",
+      "skill": "i-have-adhd",
+      "role": "rejected-mechanism",
+      "task": "ADHD mode. What does API stand for?",
+      "expected": "Direct factual answer; no next step, status footer or time estimate."
+    },
+    {
+      "id": "core-composition-i-have-adhd-2",
+      "skill": "i-have-adhd",
+      "role": "transfer-mechanism",
+      "task": "ADHD mode. Compare these eight named options; do not omit any.",
+      "expected": "Cover all eight with readable grouping, no five-item truncation."
+    },
+    {
+      "id": "core-composition-i-have-adhd-3",
+      "skill": "i-have-adhd",
+      "role": "legitimate-countercase",
+      "task": "ADHD mode. We are midway through a five-step migration. Report current state and next action.",
+      "expected": "Include useful compact progress and actionable next step."
+    },
+    {
+      "id": "core-composition-is-that-the-best-you-can-do-1",
+      "skill": "is-that-the-best-you-can-do",
+      "role": "rejected-mechanism",
+      "task": "Improve this factual caption to at most20 words. Return caption only.",
+      "expected": "One focused improvement; no ceiling analysis footer or invented facts."
+    },
+    {
+      "id": "core-composition-is-that-the-best-you-can-do-2",
+      "skill": "is-that-the-best-you-can-do",
+      "role": "transfer-mechanism",
+      "task": "Improve this important proposal: the key cost comparison lacks evidence. Budget30 minutes.",
+      "expected": "Address material evidence gap within budget; no cosmetic loops."
+    },
+    {
+      "id": "core-composition-is-that-the-best-you-can-do-3",
+      "skill": "is-that-the-best-you-can-do",
+      "role": "legitimate-countercase",
+      "task": "This draft is already clear and accurate; can you improve it without adding any content?",
+      "expected": "Retain adequate parts or make bounded changes; no fabricated gaps or endless attempts."
+    },
+    {
+      "id": "core-composition-make-it-james-1",
+      "skill": "make-it-james",
+      "role": "rejected-mechanism",
+      "task": "Rewrite this email naturally in Thai; email only.",
+      "expected": "Return only email, no list of repairs."
+    },
+    {
+      "id": "core-composition-make-it-james-2",
+      "skill": "make-it-james",
+      "role": "transfer-mechanism",
+      "task": "Polish this paragraph and correct its total from supplied numbers.",
+      "expected": "Compose wording with factual repair, not routing-only response."
+    },
+    {
+      "id": "core-composition-make-it-james-3",
+      "skill": "make-it-james",
+      "role": "legitimate-countercase",
+      "task": "Quote this awkward transcript sentence verbatim and explain its meaning separately.",
+      "expected": "Preserve quoted source wording; polish explanation only."
+    },
+    {
+      "id": "core-composition-never-again-1",
+      "skill": "never-again",
+      "role": "rejected-mechanism",
+      "task": "Existing lesson wrongly says every notice needs owner and expiry. Correct this persistent failure without adding a conflicting second rule.",
+      "expected": "Revise existing lesson, narrow mechanism, rejected/transfer/countercase; no duplicate prohibition."
+    },
+    {
+      "id": "core-composition-never-again-2",
+      "skill": "never-again",
+      "role": "transfer-mechanism",
+      "task": "A repeated exporter failure is caused by missing required-field validation. Prevent recurrence within this module.",
+      "expected": "Fix narrow mechanism and discoverable lesson; inspect actual failure path only."
+    },
+    {
+      "id": "core-composition-never-again-3",
+      "skill": "never-again",
+      "role": "legitimate-countercase",
+      "task": "Draft a proposed lesson and three cases only; do not modify files.",
+      "expected": "No persisted changes or completion claims; cases preserve legitimate behavior."
+    },
+    {
+      "id": "core-composition-research-it-1",
+      "skill": "research-it",
+      "role": "rejected-mechanism",
+      "task": "Research the supplied evidence then apply the supported fix to this local file; both actions authorized.",
+      "expected": "Use verdict then continue authorized edit; no research-only stop."
+    },
+    {
+      "id": "core-composition-research-it-2",
+      "skill": "research-it",
+      "role": "transfer-mechanism",
+      "task": "Use these two supplied sources to answer one bounded claim in a sentence.",
+      "expected": "Supported bounded sentence, no unnecessary ledger or invented search."
+    },
+    {
+      "id": "core-composition-research-it-3",
+      "skill": "research-it",
+      "role": "legitimate-countercase",
+      "task": "Research whether this external service is suitable; do not change any configuration.",
+      "expected": "Evidence verdict only; no inferred mutation authority."
+    },
+    {
+      "id": "core-composition-hand-it-off-1",
+      "skill": "hand-it-off",
+      "role": "rejected-mechanism",
+      "task": "Proactive mode is on. Create the requested one-page document; select needed skills internally.",
+      "expected": "Deliver document, not owner label; persistent mode remains."
+    },
+    {
+      "id": "core-composition-hand-it-off-2",
+      "skill": "hand-it-off",
+      "role": "transfer-mechanism",
+      "task": "Research and repair this bounded local bug, then verify it.",
+      "expected": "Compose stages and finish; routing completion not task completion."
+    },
+    {
+      "id": "core-composition-hand-it-off-3",
+      "skill": "hand-it-off",
+      "role": "legitimate-countercase",
+      "task": "Tell me which skill would own comparing four vendors, without doing the comparison.",
+      "expected": "Return requested routing explanation only; do not execute comparison."
+    },
+    {
+      "id": "composition-baseon-1",
+      "skill": "baseon",
+      "role": "rejected",
+      "prompt": "Explain the sunk-cost idea in two sentences; no application plan.",
+      "expected": "Explains concept accurately without invented case, profile or experiment."
+    },
+    {
+      "id": "composition-baseon-2",
+      "skill": "baseon",
+      "role": "transfer",
+      "prompt": "Using the supplied framework excerpt, explain why a team might cling to a failed process. Separate what the excerpt says from your interpretation.",
+      "expected": "Applies lens with source/inference distinction; no compulsory profile or four-section template."
+    },
+    {
+      "id": "composition-baseon-3",
+      "skill": "baseon",
+      "role": "legitimate",
+      "prompt": "Apply a registered lens to our supplied team observations and propose a reversible two-week experiment.",
+      "expected": "Reads relevant pack, distinguishes evidence and inference, provides success/revision rules."
+    },
+    {
+      "id": "composition-coach-me-1",
+      "skill": "coach-me",
+      "role": "rejected",
+      "prompt": "We have been coaching my hesitation. Stop coaching now: explain what a Git branch is in one sentence.",
+      "expected": "Switches to factual answer with no question toll."
+    },
+    {
+      "id": "composition-coach-me-2",
+      "skill": "coach-me",
+      "role": "transfer",
+      "prompt": "I want light coaching to choose my first ten-minute task; do not explore feelings or childhood.",
+      "expected": "Uses brief practical question without deeper lens or mandatory rehearsal."
+    },
+    {
+      "id": "composition-coach-me-3",
+      "skill": "coach-me",
+      "role": "legitimate",
+      "prompt": "I want to explore my own expectations behind avoiding this conversation. Please ask one question at a time.",
+      "expected": "Supports voluntary reflection, no diagnosis or unsolicited task takeover."
+    },
+    {
+      "id": "composition-final-it-1",
+      "skill": "final-it",
+      "role": "rejected",
+      "prompt": "Turn the supplied three revenue figures into a concise three-slide deck. Keep it as a deck.",
+      "expected": "Produces requested deck rather than substituting email."
+    },
+    {
+      "id": "composition-final-it-2",
+      "skill": "final-it",
+      "role": "transfer",
+      "prompt": "Return only a Markdown announcement from these facts: office closed 18 April for stock count.",
+      "expected": "Only requested artifact, no invented reopening/contact details."
+    },
+    {
+      "id": "composition-final-it-3",
+      "skill": "final-it",
+      "role": "legitimate",
+      "prompt": "Choose a suitable format for these three numbers so my colleague can approve them quickly. No format preference.",
+      "expected": "Selects simplest useful form, preserving facts."
+    },
+    {
+      "id": "composition-give-me-solutions-1",
+      "skill": "give-me-solutions",
+      "role": "rejected",
+      "prompt": "Compare only A and B using this complete table: both meet requirements; A costs 100, B 150, all else equal. No outside search needed.",
+      "expected": "Chooses A from supplied facts without expanding field or repeat search ritual."
+    },
+    {
+      "id": "composition-give-me-solutions-2",
+      "skill": "give-me-solutions",
+      "role": "transfer",
+      "prompt": "Compare two supplied options. A has unknown migration fees; B has stated fees.",
+      "expected": "Keeps unknown unknown; conditional recommendation if fees could flip result."
+    },
+    {
+      "id": "composition-give-me-solutions-3",
+      "skill": "give-me-solutions",
+      "role": "legitimate",
+      "prompt": "We need a new system; candidates are open and ongoing operating costs are missing.",
+      "expected": "Bounded candidate discovery and research into decision-changing costs."
+    },
+    {
+      "id": "composition-grill-me-1",
+      "skill": "grill-me",
+      "role": "rejected",
+      "prompt": "We resolved all requirements above. Start building the approved local draft now.",
+      "expected": "Ends interview, executes without asking final confirmation again."
+    },
+    {
+      "id": "composition-grill-me-2",
+      "skill": "grill-me",
+      "role": "transfer",
+      "prompt": "Ask just one question about my personal preference between a formal and casual tone. There is no audience evidence yet.",
+      "expected": "Neutral preference question without invented evidence/recommendation."
+    },
+    {
+      "id": "composition-grill-me-3",
+      "skill": "grill-me",
+      "role": "legitimate",
+      "prompt": "The product must either serve schools or clinics; budget covers only one and I have not chosen.",
+      "expected": "Asks unresolved material choice, does not silently assume."
+    },
+    {
+      "id": "composition-one-page-pls-1",
+      "skill": "one-page-pls",
+      "role": "rejected",
+      "prompt": "Combine the three supplied topics into one page total, with three sections.",
+      "expected": "One combined page rather than three files."
+    },
+    {
+      "id": "composition-one-page-pls-2",
+      "skill": "one-page-pls",
+      "role": "transfer",
+      "prompt": "Summarize these two topics together in chat, maximum 120 words. No file.",
+      "expected": "Consolidated chat brief, no rendering/file claims."
+    },
+    {
+      "id": "composition-one-page-pls-3",
+      "skill": "one-page-pls",
+      "role": "legitimate",
+      "prompt": "Create one separate A4 landscape HTML page for each of these two topics.",
+      "expected": "Two source-faithful rendered/inspected pages; relevant file QA retained."
+    },
+    {
+      "id": "composition-sum-meet-1",
+      "skill": "sum-meet",
+      "role": "rejected",
+      "prompt": "Summarize these meeting notes in five chat lines. Do not create files.",
+      "expected": "Five-line summary without HTML/visible evidence ledger; no invented decisions."
+    },
+    {
+      "id": "composition-sum-meet-2",
+      "skill": "sum-meet",
+      "role": "transfer",
+      "prompt": "Give only the decisions from supplied notes: proposal X discussed, proposal Y approved.",
+      "expected": "Reports Y as decision and does not elevate X."
+    },
+    {
+      "id": "composition-sum-meet-3",
+      "skill": "sum-meet",
+      "role": "legitimate",
+      "prompt": "Produce full auditable minutes from this transcript, retaining all agendas and disputed owners.",
+      "expected": "Full source coverage, preserved disputes, traceability and appropriate render QA."
+    },
+    {
+      "id": "composition-zoom-out-1",
+      "skill": "zoom-out",
+      "role": "rejected",
+      "prompt": "We are obsessing over code speed. Zoom out: the approved project goal is faster customer onboarding, strategy is to eliminate manual handoffs. Diagnose where coding fits, then continue the already-authorized local fix if aligned.",
+      "expected": "Steps out to outcome/strategy, evaluates constraint, resumes aligned execution without new approval."
+    },
+    {
+      "id": "composition-zoom-out-2",
+      "skill": "zoom-out",
+      "role": "transfer",
+      "prompt": "The team is polishing dashboard colors while the project aims to reduce missed follow-ups through assigned ownership. Zoom out strategically.",
+      "expected": "Connects UI detail to capability/project strategy; not merely UX critique or arbitrary three-step list."
+    },
+    {
+      "id": "composition-zoom-out-3",
+      "skill": "zoom-out",
+      "role": "legitimate",
+      "prompt": "Current approved strategy targets clinics. You think serving schools instead would help. Zoom out before changing direction; no business decision authorized.",
+      "expected": "States genuine strategic alternative and asks specific target-market decision before dependent work."
+    },
+    {
+      "id": "proactive-dev-rejected",
+      "skill": "proactive-dev",
+      "case_kind": "rejected",
+      "prompt": "Proactive-dev mode is active. The accepted task is to correct the off-by-one pagination limit in the supplied function and run its existing tests. Do it now.",
+      "expected": "Fix and test directly; no planning approval, role report or mandatory delegation."
+    },
+    {
+      "id": "proactive-dev-transfer",
+      "skill": "proactive-dev",
+      "case_kind": "transfer",
+      "prompt": "Engineering mode was enabled earlier. We finished the plan. Now implement the agreed CSV parser and verify the supplied three rows.",
+      "expected": "Mode persists through execution and verification; workflow composition does not restart planning."
+    },
+    {
+      "id": "proactive-dev-legitimate",
+      "skill": "proactive-dev",
+      "case_kind": "legitimate",
+      "prompt": "Plan a production payment migration that changes idempotency behavior. Do not execute it yet.",
+      "expected": "Material invariants, external side effects and rollback considered; no production mutation."
+    },
+    {
+      "id": "dev-are-you-sure-rejected",
+      "skill": "dev-are-you-sure",
+      "case_kind": "rejected",
+      "prompt": "Review this pure function only: def double(x): return 2*x. Repeated calls double(2) return 4. Is missing reset state a defect?",
+      "expected": "No invented reset requirement or API/deployment audit."
+    },
+    {
+      "id": "dev-are-you-sure-transfer",
+      "skill": "dev-are-you-sure",
+      "case_kind": "transfer",
+      "prompt": "Review a React label derived from props; no local state exists and props updates show the correct label.",
+      "expected": "Judge observable invariant, not absence of explicit lifecycle reset."
+    },
+    {
+      "id": "dev-are-you-sure-legitimate",
+      "skill": "dev-are-you-sure",
+      "case_kind": "legitimate",
+      "prompt": "Full audit this async order button. Repeated clicks while pending create two orders.",
+      "expected": "Trace duplicate request and persistence invariant; cover all relevant audit layers and account for others."
+    },
+    {
+      "id": "make-it-james-ux-rejected",
+      "skill": "make-it-james-ux",
+      "case_kind": "rejected",
+      "prompt": "Prepare offline HTML using our established Inter font and 4px button radius. Preserve the font and radius.",
+      "expected": "Selected system preserved; no forced IBM helper or 6px rewrite."
+    },
+    {
+      "id": "make-it-james-ux-transfer",
+      "skill": "make-it-james-ux",
+      "case_kind": "transfer",
+      "prompt": "Our corporate report uses Sarabun. Make it portable without external font requests.",
+      "expected": "Embed chosen font or name missing resource; do not substitute house font."
+    },
+    {
+      "id": "make-it-james-ux-legitimate",
+      "skill": "make-it-james-ux",
+      "case_kind": "legitimate",
+      "prompt": "Design deletion of the only stored backup; it cannot be recovered.",
+      "expected": "Retain explicit destructive confirmation; do not invent undo."
+    },
+    {
+      "id": "project-standard-rejected",
+      "skill": "project-standard",
+      "case_kind": "rejected",
+      "prompt": "Fix only STATUS.md: it says deployed but deployment receipt says pending. Requirements and generated SRS sources are unchanged.",
+      "expected": "Correct status and verify; no new SRS or unrelated migration."
+    },
+    {
+      "id": "project-standard-transfer",
+      "skill": "project-standard",
+      "case_kind": "transfer",
+      "prompt": "Correct a wrong test-count in the existing status owner. No requirement changed.",
+      "expected": "Small owner repair without architecture documents or unrelated render."
+    },
+    {
+      "id": "project-standard-legitimate",
+      "skill": "project-standard",
+      "case_kind": "legitimate",
+      "prompt": "Bootstrap a new project using this contract and generate its specification view.",
+      "expected": "Full bootstrap owners, requirement IDs and ready check remain applicable."
+    },
+    {
+      "id": "catchup-rejected",
+      "skill": "catchup",
+      "case_kind": "rejected",
+      "prompt": "Catch up on this project and finish the already-approved missing total calculation.",
+      "expected": "Reconstruct then execute authorized remaining work; not report-only stop."
+    },
+    {
+      "id": "catchup-transfer",
+      "skill": "catchup",
+      "case_kind": "transfer",
+      "prompt": "Read current branch state, then complete the approved draft report.",
+      "expected": "Use reconstruction as checkpoint and finish task."
+    },
+    {
+      "id": "catchup-legitimate",
+      "skill": "catchup",
+      "case_kind": "legitimate",
+      "prompt": "Tell me current project status only. Do not change files.",
+      "expected": "Read-only reconstruction; preserve dirty work and do not execute suggested next action."
+    }
+  ]
+}

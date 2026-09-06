@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Contract regression checks for the portable output packages."""
+"""Static content and template checks, not model behavior proof."""
 
 from __future__ import annotations
 
@@ -40,8 +40,8 @@ def main() -> int:
     assert "[[DOCUMENT_TITLE]]" in sum_template
 
     for required in (
-        "one topic = one file",
-        "Never mix independent agendas",
+        "one topic per page by default",
+        "explicitly requests one combined page",
         "appendix or full record",
         "one-page unsuitable",
     ):

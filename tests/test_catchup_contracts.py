@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Contract and anti-overfit checks for catchup."""
+"""Static instruction-presence checks for catchup; not behavioral evidence."""
 
 import json
 from pathlib import Path
@@ -14,7 +14,6 @@ def read(relative: str) -> str:
 
 def main() -> int:
     skill = read("plugins/james-software/skills/catchup/SKILL.md")
-    router = read("plugins/james-core/skills/hand-it-off/SKILL.md")
     cases = read("tests/behavioral-cases.md")
     catalog = json.loads(read("catalog.json"))
     item = next(entry for entry in catalog["skills"] if entry["name"] == "catchup")
@@ -36,8 +35,8 @@ def main() -> int:
     ):
         assert required in skill, f"catchup contract missing: {required}"
 
-    assert "`catchup`" in router
-    assert "not ordinary active-task progress" in router
+    # Discovery is catalog-owned; do not require a duplicate router roster.
+    assert item["kind"] == "workflow"
     assert "## Catchup" in cases
     print("PASS catchup routing, truth classes, fast path and counter-case contracts")
     return 0

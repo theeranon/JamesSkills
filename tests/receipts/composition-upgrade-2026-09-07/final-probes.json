@@ -1,0 +1,641 @@
+[
+  {
+    "id": "core-forward-is-that-the-best-you-can-do-2",
+    "skill": "is-that-the-best-you-can-do",
+    "body_hash": "325a008b566209fd69257ba0387f3296558c51dc30d0f5f4f0b87491d26803eb",
+    "response": "Draft is stored in handoff.md and awaiting Lin's review, with a decision needed by 4 May. Please do not publish until Lin has approved it.",
+    "metadata": {
+      "host_version": "2.1.220 (Claude Code)",
+      "help_hash": "fcd5b45507c7c602d54d85a300eab288a8a3c6770c6def696ca19a3100725de4",
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 594,
+          "outputTokens": 17,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000679,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 52,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 1724,
+          "webSearchRequests": 0,
+          "costUSD": 0.011130000000000001,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1724,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 52,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1724,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 52,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 1724,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1724
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "cost_usd": 0.011809000000000002,
+      "duration_ms": 1699,
+      "num_turns": 1,
+      "isolation": "safe-mode + no tools + skills disabled",
+      "limitation": "Admin policy still applies; forced text injection, not native discovery."
+    }
+  },
+  {
+    "id": "core-forward-is-that-the-best-you-can-do-1",
+    "skill": "is-that-the-best-you-can-do",
+    "body_hash": "325a008b566209fd69257ba0387f3296558c51dc30d0f5f4f0b87491d26803eb",
+    "response": "Free 45-minute online class Wednesday at 18:00 \u2014 learn 3 essential spreadsheet shortcuts to work faster. No cost. Sign up now to save your spot!",
+    "metadata": {
+      "host_version": "2.1.220 (Claude Code)",
+      "help_hash": "fcd5b45507c7c602d54d85a300eab288a8a3c6770c6def696ca19a3100725de4",
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 585,
+          "outputTokens": 16,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000665,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 61,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 1722,
+          "webSearchRequests": 0,
+          "costUSD": 0.011253,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1722,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 61,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1722,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 61,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 1722,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1722
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "cost_usd": 0.011918000000000002,
+      "duration_ms": 5295,
+      "num_turns": 1,
+      "isolation": "safe-mode + no tools + skills disabled",
+      "limitation": "Admin policy still applies; forced text injection, not native discovery."
+    }
+  },
+  {
+    "id": "core-forward-are-you-sure-3",
+    "skill": "are-you-sure",
+    "body_hash": "5dff2f97038682e39075b43d48b280ff3a958c07dd811efa3c6140c52c3a1f34",
+    "response": "CLEAN",
+    "metadata": {
+      "host_version": "2.1.220 (Claude Code)",
+      "help_hash": "fcd5b45507c7c602d54d85a300eab288a8a3c6770c6def696ca19a3100725de4",
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 581,
+          "outputTokens": 14,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000651,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 7,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 2145,
+          "webSearchRequests": 0,
+          "costUSD": 0.012981000000000001,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 2145,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 7,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 2145,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 7,
+            "cache_read_input_tokens": 0,
+            "cache_creation_input_tokens": 2145,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 2145
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "cost_usd": 0.013632000000000002,
+      "duration_ms": 2311,
+      "num_turns": 1,
+      "isolation": "safe-mode + no tools + skills disabled",
+      "limitation": "Admin policy still applies; forced text injection, not native discovery."
+    }
+  },
+  {
+    "id": "core-forward-is-that-the-best-you-can-do-3",
+    "skill": "is-that-the-best-you-can-do",
+    "body_hash": "325a008b566209fd69257ba0387f3296558c51dc30d0f5f4f0b87491d26803eb",
+    "response": "OK",
+    "metadata": {
+      "host_version": "2.1.220 (Claude Code)",
+      "help_hash": "fcd5b45507c7c602d54d85a300eab288a8a3c6770c6def696ca19a3100725de4",
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 560,
+          "outputTokens": 12,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.00062,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 4,
+          "cacheReadInputTokens": 1454,
+          "cacheCreationInputTokens": 234,
+          "webSearchRequests": 0,
+          "costUSD": 0.0019061999999999998,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 234,
+        "cache_read_input_tokens": 1454,
+        "output_tokens": 4,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 234,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 4,
+            "cache_read_input_tokens": 1454,
+            "cache_creation_input_tokens": 234,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 234
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "cost_usd": 0.0025261999999999997,
+      "duration_ms": 1969,
+      "num_turns": 1,
+      "isolation": "safe-mode + no tools + skills disabled",
+      "limitation": "Admin policy still applies; forced text injection, not native discovery."
+    }
+  },
+  {
+    "id": "core-forward-are-you-sure-2",
+    "skill": "are-you-sure",
+    "body_hash": "5dff2f97038682e39075b43d48b280ff3a958c07dd811efa3c6140c52c3a1f34",
+    "response": "Workshop 7 October, 13:00\u201315:00, room Cedar.",
+    "metadata": {
+      "host_version": "2.1.220 (Claude Code)",
+      "help_hash": "fcd5b45507c7c602d54d85a300eab288a8a3c6770c6def696ca19a3100725de4",
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 587,
+          "outputTokens": 15,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.0006619999999999999,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 26,
+          "cacheReadInputTokens": 1888,
+          "cacheCreationInputTokens": 266,
+          "webSearchRequests": 0,
+          "costUSD": 0.0025584,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 266,
+        "cache_read_input_tokens": 1888,
+        "output_tokens": 26,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 266,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 26,
+            "cache_read_input_tokens": 1888,
+            "cache_creation_input_tokens": 266,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 266
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "cost_usd": 0.0032204,
+      "duration_ms": 2076,
+      "num_turns": 1,
+      "isolation": "safe-mode + no tools + skills disabled",
+      "limitation": "Admin policy still applies; forced text injection, not native discovery."
+    }
+  },
+  {
+    "id": "core-forward-hand-it-off-3",
+    "skill": "hand-it-off",
+    "body_hash": "5837439cd780e17b776dcdcd05e4e54ba8ecc9fabeddec0ee9967ba0f1bed537",
+    "response": "done-for-me",
+    "metadata": {
+      "host_version": "2.1.220 (Claude Code)",
+      "help_hash": "fcd5b45507c7c602d54d85a300eab288a8a3c6770c6def696ca19a3100725de4",
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 1761,
+          "outputTokens": 15,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.001836,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 7,
+          "cacheReadInputTokens": 1703,
+          "cacheCreationInputTokens": 1934,
+          "webSearchRequests": 0,
+          "costUSD": 0.0122259,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1934,
+        "cache_read_input_tokens": 1703,
+        "output_tokens": 7,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1934,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 7,
+            "cache_read_input_tokens": 1703,
+            "cache_creation_input_tokens": 1934,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1934
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "cost_usd": 0.014061899999999999,
+      "duration_ms": 6273,
+      "num_turns": 1,
+      "isolation": "safe-mode + no tools + skills disabled",
+      "limitation": "Admin policy still applies; forced text injection, not native discovery."
+    }
+  },
+  {
+    "id": "core-forward-hand-it-off-1",
+    "skill": "hand-it-off",
+    "body_hash": "5837439cd780e17b776dcdcd05e4e54ba8ecc9fabeddec0ee9967ba0f1bed537",
+    "response": "is-that-the-best-you-can-do",
+    "metadata": {
+      "host_version": "2.1.220 (Claude Code)",
+      "help_hash": "fcd5b45507c7c602d54d85a300eab288a8a3c6770c6def696ca19a3100725de4",
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 1755,
+          "outputTokens": 14,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.001825,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 15,
+          "cacheReadInputTokens": 1703,
+          "cacheCreationInputTokens": 1934,
+          "webSearchRequests": 0,
+          "costUSD": 0.0123459,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1934,
+        "cache_read_input_tokens": 1703,
+        "output_tokens": 15,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1934,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 15,
+            "cache_read_input_tokens": 1703,
+            "cache_creation_input_tokens": 1934,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1934
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "cost_usd": 0.0141709,
+      "duration_ms": 3227,
+      "num_turns": 1,
+      "isolation": "safe-mode + no tools + skills disabled",
+      "limitation": "Admin policy still applies; forced text injection, not native discovery."
+    }
+  },
+  {
+    "id": "core-forward-hand-it-off-2",
+    "skill": "hand-it-off",
+    "body_hash": "5837439cd780e17b776dcdcd05e4e54ba8ecc9fabeddec0ee9967ba0f1bed537",
+    "response": "dev-are-you-sure",
+    "metadata": {
+      "host_version": "2.1.220 (Claude Code)",
+      "help_hash": "fcd5b45507c7c602d54d85a300eab288a8a3c6770c6def696ca19a3100725de4",
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 1753,
+          "outputTokens": 18,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.001843,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 11,
+          "cacheReadInputTokens": 1703,
+          "cacheCreationInputTokens": 1931,
+          "webSearchRequests": 0,
+          "costUSD": 0.012267899999999998,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 1931,
+        "cache_read_input_tokens": 1703,
+        "output_tokens": 11,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 1931,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 11,
+            "cache_read_input_tokens": 1703,
+            "cache_creation_input_tokens": 1931,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 1931
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "cost_usd": 0.0141109,
+      "duration_ms": 5647,
+      "num_turns": 1,
+      "isolation": "safe-mode + no tools + skills disabled",
+      "limitation": "Admin policy still applies; forced text injection, not native discovery."
+    }
+  },
+  {
+    "id": "core-forward-are-you-sure-1",
+    "skill": "are-you-sure",
+    "body_hash": "5dff2f97038682e39075b43d48b280ff3a958c07dd811efa3c6140c52c3a1f34",
+    "response": "Corrected Summary:\n\n- Total invoiced (A+B): 400\n- Paid: 150\n- Outstanding: 250",
+    "metadata": {
+      "host_version": "2.1.220 (Claude Code)",
+      "help_hash": "fcd5b45507c7c602d54d85a300eab288a8a3c6770c6def696ca19a3100725de4",
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 576,
+          "outputTokens": 17,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000661,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 43,
+          "cacheReadInputTokens": 1888,
+          "cacheCreationInputTokens": 253,
+          "webSearchRequests": 0,
+          "costUSD": 0.0027354000000000002,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "usage": {
+        "input_tokens": 2,
+        "cache_creation_input_tokens": 253,
+        "cache_read_input_tokens": 1888,
+        "output_tokens": 43,
+        "server_tool_use": {
+          "web_search_requests": 0,
+          "web_fetch_requests": 0
+        },
+        "service_tier": "standard",
+        "cache_creation": {
+          "ephemeral_1h_input_tokens": 253,
+          "ephemeral_5m_input_tokens": 0
+        },
+        "inference_geo": "not_available",
+        "iterations": [
+          {
+            "input_tokens": 2,
+            "output_tokens": 43,
+            "cache_read_input_tokens": 1888,
+            "cache_creation_input_tokens": 253,
+            "cache_creation": {
+              "ephemeral_5m_input_tokens": 0,
+              "ephemeral_1h_input_tokens": 253
+            },
+            "type": "message"
+          }
+        ],
+        "speed": "standard"
+      },
+      "cost_usd": 0.0033964000000000004,
+      "duration_ms": 5349,
+      "num_turns": 1,
+      "isolation": "safe-mode + no tools + skills disabled",
+      "limitation": "Admin policy still applies; forced text injection, not native discovery."
+    }
+  }
+]

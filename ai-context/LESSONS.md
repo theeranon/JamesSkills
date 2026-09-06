@@ -72,3 +72,14 @@ for direct evidence remains in force.
 **Rule:** Every behavioral benchmark names the user outcome and separately reviews goal alignment and proportionality. A primary-task failure cannot be rescued by formatting scores. More detail is justified when it resolves a real dependency or risk. Each correction needs a rejected case, a transfer case and a counter-case where complexity is necessary. Do not turn this into a rule to always produce less.
 
 **Date:** 2026-09-06. Public development cases in `tests/benchmarks/development.json`; measured improvement remains unproven.
+
+
+## LESSON-004 — Composition is not exclusion
+
+**What happened:** Mode/workflow exclusions and mandatory reports displaced completion of the requested task.
+
+**Mechanism:** Structural routing quotas were mistaken for distinct useful responsibilities; new exceptions were added without reconciling descriptions, principles and stop conditions.
+
+**Rule:** Keep persistent modes active while workflows execute. Test the combined instructions through user corrections and real artifact changes. Reconcile the whole instruction contract when changing a rule; a structural pass is not behavioral proof.
+
+**Date:** 2026-09-07. Owner clarification and DEC-032.

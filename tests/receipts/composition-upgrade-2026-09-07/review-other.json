@@ -1,0 +1,319 @@
+{
+  "reviewer": "software_fix",
+  "independence": "Independent of productivity implementation; authored software changes, so software review is not independent design review. No blind baseline comparison.",
+  "proof_limit": "Single response-only probes; code-generation success is not execution or runtime proof. All supplied prompts request responses/plans rather than actual file mutation.",
+  "cases": [
+    {
+      "id": "productivity-final-it-1",
+      "skill": "final-it",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Correct closure and no invented date; missing reopening information is unnecessarily visible but still brief."
+    },
+    {
+      "id": "productivity-coach-me-1",
+      "skill": "coach-me",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "productivity-zoom-out-1",
+      "skill": "zoom-out",
+      "goal_alignment": "pass",
+      "truth_and_authority": "uncertain",
+      "proportionality": "fail",
+      "rationale": "Reframes ownership and asks requested agreement. Labels inferred strategy accepted before confirmation; long restatement exceeds needed strategic explanation."
+    },
+    {
+      "id": "productivity-baseon-3",
+      "skill": "baseon",
+      "goal_alignment": "pass",
+      "truth_and_authority": "uncertain",
+      "proportionality": "fail",
+      "rationale": "Keeps disagreement, but treats monthly report redesign as confirmed monthly layout rotation and adds an experiment beyond the requested application."
+    },
+    {
+      "id": "productivity-sum-meet-2",
+      "skill": "sum-meet",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "productivity-one-page-pls-1",
+      "skill": "one-page-pls",
+      "goal_alignment": "fail",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Decision: Replace turbine promotes proposed replacement to decision; long production caveat instead of preserving proposed status in brief."
+    },
+    {
+      "id": "make-it-james-ux-upgrade-countercase",
+      "skill": "make-it-james-ux",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "productivity-grill-me-2",
+      "skill": "grill-me",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "productivity-coach-me-2",
+      "skill": "coach-me",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "productivity-zoom-out-3",
+      "skill": "zoom-out",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "make-it-james-ux-upgrade-transfer",
+      "skill": "make-it-james-ux",
+      "goal_alignment": "fail",
+      "truth_and_authority": "pass",
+      "proportionality": "fail",
+      "rationale": "Requested CSS/markup supplied correctly but extra verification report violates code-only surface; no false executed proof."
+    },
+    {
+      "id": "productivity-sum-meet-3",
+      "skill": "sum-meet",
+      "goal_alignment": "fail",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Adds not yet started status, infers review object before labeling dependency inference; repeated limitations despite request for detailed action content."
+    },
+    {
+      "id": "proactive-dev-upgrade-transfer",
+      "skill": "proactive-dev",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "productivity-baseon-1",
+      "skill": "baseon",
+      "goal_alignment": "fail",
+      "truth_and_authority": "fail",
+      "proportionality": "pass",
+      "rationale": "Expands fictional consistency lens into same-format rule and trust claims labeled source claims. Test itself remains reversible."
+    },
+    {
+      "id": "dev-are-you-sure-upgrade-countercase",
+      "skill": "dev-are-you-sure",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "fail",
+      "rationale": "Correct finally preserves rejection and execution caveat honest. Optional error-state confirmation and long explanation unnecessary to requested correction."
+    },
+    {
+      "id": "dev-are-you-sure-upgrade-regression",
+      "skill": "dev-are-you-sure",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "fail",
+      "rationale": "Correct bounded clean verdict with honest no-execution limit, but five-layer inventory still appears for trivial function."
+    },
+    {
+      "id": "project-standard-upgrade-transfer",
+      "skill": "project-standard",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "fail",
+      "rationale": "Correct proposed owner/acceptance/proof separation; repeated draft/no-edits caveats and unchanged scope create excess ceremony."
+    },
+    {
+      "id": "catchup-upgrade-transfer",
+      "skill": "catchup",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "catchup-upgrade-countercase",
+      "skill": "catchup",
+      "goal_alignment": "fail",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Reports8/10 running correctly then appends no action remains in scope although2still running; closed-scope phrase inappropriate."
+    },
+    {
+      "id": "proactive-dev-upgrade-countercase",
+      "skill": "proactive-dev",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "proactive-dev-upgrade-regression",
+      "skill": "proactive-dev",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "productivity-baseon-2",
+      "skill": "baseon",
+      "goal_alignment": "pass",
+      "truth_and_authority": "uncertain",
+      "proportionality": "fail",
+      "rationale": "Main bottleneck answer and throughput measurement correct. Unrequested refutation conditions conflate actual capacity shortfall with a different bottleneck; substantial extra framework ceremony."
+    },
+    {
+      "id": "productivity-sum-meet-1",
+      "skill": "sum-meet",
+      "goal_alignment": "fail",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Invents not started/pending execution status and claims no inferred facts; expands short source into repetitive sections."
+    },
+    {
+      "id": "productivity-one-page-pls-2",
+      "skill": "one-page-pls",
+      "goal_alignment": "fail",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Invents meeting date 2026-09-07 then claims facts-only; adds redundant process note."
+    },
+    {
+      "id": "productivity-give-me-solutions-3",
+      "skill": "give-me-solutions",
+      "goal_alignment": "pass",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Chooses A correctly, invents dollar currency, repeats dominance across multiple sections for two complete facts."
+    },
+    {
+      "id": "productivity-final-it-2",
+      "skill": "final-it",
+      "goal_alignment": "fail",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Invented sender James, supplier placeholder and follow-up commitment; facts-only finished message not delivered."
+    },
+    {
+      "id": "productivity-give-me-solutions-2",
+      "skill": "give-me-solutions",
+      "goal_alignment": "pass",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Core totals16/6 and platform exclusion correct, but alternative falsely says platform saves10h over script (actually2h recurring, more total). Extra analysis introduces error."
+    },
+    {
+      "id": "productivity-grill-me-3",
+      "skill": "grill-me",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "productivity-grill-me-1",
+      "skill": "grill-me",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "productivity-give-me-solutions-1",
+      "skill": "give-me-solutions",
+      "goal_alignment": "pass",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Provisional B selection valid, but invents dollar currency and nonsensical remaining-$3 flip condition; duplicated criteria and excessive conditions."
+    },
+    {
+      "id": "productivity-one-page-pls-3",
+      "skill": "one-page-pls",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "fail",
+      "rationale": "Both requested briefs correct but repeated missing-material and completeness notes add ceremony."
+    },
+    {
+      "id": "productivity-coach-me-3",
+      "skill": "coach-me",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "dev-are-you-sure-upgrade-transfer",
+      "skill": "dev-are-you-sure",
+      "goal_alignment": "fail",
+      "truth_and_authority": "fail",
+      "proportionality": "pass",
+      "rationale": "Correctly rejects k3 production proof but labels untested journey Failed / Not tested, and treats login screen as proof authenticating access. Uncertainty not kept distinct from failure."
+    },
+    {
+      "id": "catchup-upgrade-regression",
+      "skill": "catchup",
+      "goal_alignment": "fail",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Invents export added and absent in production, expands dirty into untracked, then suggests production deploy as status next action."
+    },
+    {
+      "id": "productivity-zoom-out-2",
+      "skill": "zoom-out",
+      "goal_alignment": "pass",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Retains catalog direction, but claims replacement never approved/not adopted from current supersession only. Asserts current strategy implies tool fit and existing execution authority beyond reframe-only request."
+    },
+    {
+      "id": "project-standard-upgrade-regression",
+      "skill": "project-standard",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Minimal STATUS correction, preserved existing requirements/rules, caveat honest; unchanged owner notes minor overhead."
+    },
+    {
+      "id": "make-it-james-ux-upgrade-regression",
+      "skill": "make-it-james-ux",
+      "goal_alignment": "fail",
+      "truth_and_authority": "fail",
+      "proportionality": "fail",
+      "rationale": "Adds unsupported notice body and verification prose despite code-only; no design system found implies inspection though prompt only says none exists. Correct font/radius/label."
+    },
+    {
+      "id": "project-standard-upgrade-countercase",
+      "skill": "project-standard",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    },
+    {
+      "id": "productivity-final-it-3",
+      "skill": "final-it",
+      "goal_alignment": "pass",
+      "truth_and_authority": "pass",
+      "proportionality": "pass",
+      "rationale": "Matches requested bounded response and supplied facts; no unsupported execution claim."
+    }
+  ]
+}

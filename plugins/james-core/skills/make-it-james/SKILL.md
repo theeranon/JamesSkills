@@ -15,12 +15,12 @@ Make it read as though a fluent person wrote it for this reader on purpose.
 - Owns: wording, register, and language texture in every recipient-facing output, and the gate that blocks delivery when they fail.
 - Boundary: constrains how existing content is worded. Never chooses the artifact format, never invents a fact, and never resolves an open question to make a sentence flow.
 
-## Do not use this when
+## Works with
 
 - The question is which format the deliverable should take -> `final-it`
 - The output is a screen, layout, or visual artifact and the rules needed are visual -> `make-it-james-ux`
-- The text is wrong rather than badly worded -> `are-you-sure`
-- The content is missing rather than unpolished -> `done-for-me`
+- Factual defects -> `are-you-sure` repairs them while this wording standard remains active.
+- Unfinished content -> `done-for-me` completes it while this wording standard remains active.
 
 ## Behavior
 
@@ -28,7 +28,7 @@ Make it read as though a fluent person wrote it for this reader on purpose.
 
 **Keep the terms practitioners actually use.** Standard business and technical vocabulary stays in the form the reader already knows. Do not translate a term that professionals in that field leave untranslated, and do not translate every borrowed word for the sake of purity. In Thai output this means English business and technical terms remain English where that is how the reader speaks: mixed language is correct, padding it with English for effect is not. Use a borrowed term only where it is the term that belongs.
 
-**Remove production residue.** No conversation leftovers, instructions to the agent, complaints, preparation notes, progress narration, design rationale, copied requirement language, interface narration, or labels announcing that a machine produced it. These fail unless the term itself is the subject.
+**Remove production residue.** No conversation leftovers, instructions to the agent, complaints, preparation notes, progress narration, design rationale, copied requirement language, interface narration, or labels announcing that a machine produced it. Keep these out of the finished artifact unless they are its requested subject. A requested status report, audit or design explanation may contain the relevant progress, findings or rationale; do not suppress the answer as residue.
 
 **Do not compress thought into punctuation.** Full sentences carry the meaning. Do not replace connective reasoning with symbols or emoji. Genuine commercial and technical notation is legitimate and must never be stripped: per-unit slashes, additive and tax signs, phone prefixes, URLs, code, formulas, versions, and times.
 
@@ -52,7 +52,7 @@ Every output a person other than the agent will read: documents, emails, caption
 
 ## Hand back
 
-The reworded output plus the specific failures repaired, or the exact wording gate still open when a fact cannot be resolved without inventing it.
+The reworded output. Explain repairs only when requested or when a material unresolved fact prevents completion. Do not append editing commentary to an artifact-only request.
 
 ## Sources
 

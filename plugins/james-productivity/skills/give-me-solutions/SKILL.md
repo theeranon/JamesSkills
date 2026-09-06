@@ -27,7 +27,7 @@ Find the real options, judge them against this situation, and say which one wins
 
 1. Establish the real job: the bounded role that must be filled, the hard requirements, the disqualifiers, the budget, and the operating capacity available to run whatever is chosen.
 2. Test whether something already owned can fill the role. Reuse is a candidate, not an automatic winner, and it competes on the same requirements as everything else.
-3. Cover the candidate field in one bounded pass across genuinely different classes of answer, not several versions of the same one.
+3. Use the requested candidate set. If the field is open, cover genuinely different classes of answer in one bounded pass; do not expand a closed comparison without a material reason.
 4. Gather evidence the way `research-it` does, using supplied sources first and outside research where needed. Keep a ledger when it helps the choice; never invent dates, commercial independence or missing observations to fill it. Delegate that pass to `research-it` when the evidence load is heavy.
 5. Eliminate anything that fails a hard requirement, and say why rather than leaving it in the table as filler.
 6. Compare every survivor against the same relevant requirements, including setup cost, recurring cost, migration effort, lock-in, reliability, security, and operating burden where they affect this choice. Missing cost, setup time or capability is unknown, never zero or satisfied; do not add a guessed value in parentheses or use it later to rank the options. Existing ownership does not prove readiness or team competence. Compute total effort over the stated horizon; keep unknown fees separate from time savings and make recommendations conditional on material gaps.
@@ -36,13 +36,13 @@ Find the real options, judge them against this situation, and say which one wins
 
 ## Stop when
 
-Every relevant class of candidate is covered, each survivor is compared on the same requirements, a front-runner is named with its reasoning, and another search pass no longer changes the ranking or reveals a new failure class. Unknowns are stated, not filled.
+The requested candidates are compared on relevant requirements and the recommendation is supported or conditional on a named material unknown. Search again only to resolve a specific gap that could change the choice; do not run extra passes merely to prove the ranking stays unchanged. Unknowns are stated, not filled.
 
 ## Principles
 
-**Widen the frame** — Refuse a one-option yes-or-no comparison and force at least one genuinely different class of answer into the set. Source: Chip Heath and Dan Heath, Decisive, 2013
+**Widen the frame** — When the choice is open, consider a genuinely different class of answer to avoid a false binary; respect an explicitly bounded candidate set. Source: Chip Heath and Dan Heath, Decisive, 2013
 **Dominance filtering** — Remove any option beaten by another on every dimension before spending analysis on it, so effort goes to real trade-offs. Source: standard multi-criteria decision analysis
-**Total cost of ownership** — Compare lifetime cost including migration, operation, and exit, never the entry price. Source: Gartner, total cost of ownership method, 1987
+**Total cost of ownership** — Compare costs over the relevant decision horizon, including migration, operation and exit where material; a one-time choice may need only its stated price. Source: Gartner, total cost of ownership method, 1987
 **Reference class forecasting** — Estimate from what actually happened to comparable adopters rather than from the plan for this one. Source: Daniel Kahneman and Amos Tversky, outside view, 1979; developed by Bent Flyvbjerg
 
 ## Counter-case

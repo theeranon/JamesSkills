@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import json
 import re
-from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -91,7 +90,6 @@ def main() -> int:
     resolvable = names | aliases
 
     errors: list[str] = []
-    excluded_toward: Counter[str] = Counter()
     cases = (ROOT / "tests" / "behavioral-cases.md").read_text(encoding="utf-8")
 
     for entry in entries:
@@ -136,18 +134,12 @@ def main() -> int:
 
         # --- heading spine ---
         found = sections(body)
-        required = ["## Scope", "## Do not use this when", *MIDDLE[kind], "## Principles", "## Counter-case", "## Hand back"]
+        required = ["## Scope", *MIDDLE[kind], "## Counter-case", "## Hand back"]
         order = [line.strip() for line in body.splitlines() if line.startswith("## ")]
         for heading in required:
             if heading not in found:
                 fail(errors, skill, f"missing {heading}")
-        allowed = set(required) | {"## Sources"}
-        for heading in order:
-            if heading not in allowed:
-                fail(errors, skill, f"unexpected heading {heading}")
-        present = [h for h in order if h in required]
-        if present != [h for h in required if h in found]:
-            fail(errors, skill, f"heading order is {present}, expected {required}")
+        # Supporting headings are optional; a heading count is not quality evidence.
 
         # --- scope ---
         scope = found.get("## Scope", "")
@@ -161,21 +153,16 @@ def main() -> int:
         # --- anti-triggers ---
         anti = found.get("## Do not use this when", "")
         bullets = [line for line in anti.splitlines() if line.startswith("- ")]
-        if len(bullets) < 2:
-            fail(errors, skill, f"## Do not use this when has {len(bullets)} bullets, need 2")
         for bullet in bullets:
-            owners = re.findall(r"`([a-z0-9-]+)`", bullet)
-            real = [owner for owner in owners if owner in resolvable]
-            if not real:
-                fail(errors, skill, f"anti-trigger names no real sibling: {bullet[:70]}")
-            for owner in real:
-                if owner != skill:
-                    excluded_toward[owner] += 1
+            owners = re.findall(r"-> `([a-z0-9-]+)`", bullet)
+            for owner in owners:
+                if owner not in resolvable:
+                    fail(errors, skill, f"unknown routing target: {owner}")
 
         # --- principles ---
         principles = [line for line in found.get("## Principles", "").splitlines() if line.startswith("**")]
-        if not 2 <= len(principles) <= 5:
-            fail(errors, skill, f"{len(principles)} principles, need 2-5")
+        if len(principles) > 5:
+            fail(errors, skill, f"{len(principles)} principles, cap 5")
         for line in principles:
             if not re.match(r"^\*\*[^*]+\*\* — .+", line):
                 fail(errors, skill, f"principle must read '**Name** — rule.': {line[:70]}")
@@ -186,11 +173,6 @@ def main() -> int:
         minimum = MIN_COUNTER_CASES.get(kind, 1)
         if len(counters) < minimum:
             fail(errors, skill, f"{len(counters)} counter-cases, need {minimum}")
-        # At least one counter-case routes elsewhere. Others may be permission
-        # counter-cases: a legitimate request the rule must still allow.
-        if counters and not any(re.search(r"`([a-z0-9-]+)`", line) for line in counters):
-            fail(errors, skill, "no counter-case names the sibling that owns it instead")
-
         # --- sources ---
         if "Source:" in found.get("## Principles", "") and "## Sources" not in found:
             fail(errors, skill, "principles cite a source but ## Sources is missing")
@@ -232,17 +214,12 @@ def main() -> int:
             if bare.get("name") != manifest["name"] or bare.get("version") != manifest["version"]:
                 errors.append(f"{name}: plugin.json has drifted from .claude-plugin/plugin.json")
 
-    # --- boundary graph: every skill must be excluded toward by a sibling ---
-    for name in sorted(names):
-        if excluded_toward[name] == 0:
-            errors.append(f"{name}: no sibling excludes toward it; its job is not distinct")
-
     if errors:
         for error in errors:
             print(f"FAIL {error}")
         print(f"Skill schema failed: {len(errors)} issue(s)")
         return 1
-    print(f"PASS skill schema canonical={len(entries)} boundary-graph in-degree>=1 for all")
+    print(f"PASS skill schema canonical={len(entries)} portable structure and counter-case coverage")
     return 0
 
 

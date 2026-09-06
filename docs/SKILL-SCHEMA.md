@@ -1,4 +1,4 @@
-# SKILL.md Contract v1
+# SKILL.md Contract v2
 
 Every canonical `SKILL.md` in this repository satisfies this contract. `scripts/validate`
 enforces the machine-checkable parts through `tests/test_skill_schema.py`.
@@ -13,14 +13,14 @@ and authority a skill's job does not require.
 ---
 name: <matches the directory name and the catalog entry>
 kind: workflow | mode | shared-standard | output | knowledge-lens | internal-routing
-description: <capability> <trigger occasion> <at least one exclusion>
+description: <capability> <trigger occasion> <optional meaningful exclusion>
 ---
 ```
 
 `description` is the trigger surface. It is resident on every turn for every installed
-skill whether or not the skill fires, so it carries three clauses and nothing else:
-what the skill does, the occasion a person reaches for it, and at least one case it
-refuses. Budget: 25 to 320 characters.
+skill whether or not the skill fires, so keep it focused on:
+what the skill does and the occasion a person reaches for it. Add an exclusion only
+when it prevents likely misrouting; modes do not exclude workflows they accompany. Budget: 25 to 320 characters.
 
 ## Kinds
 
@@ -35,7 +35,7 @@ refuses. Budget: 25 to 320 characters.
 
 ## Body spine
 
-Headings appear in this order. `##` headings not listed here are rejected.
+Keep scope, kind-specific behavior and completion, counter-cases, and handback discoverable. Other headings are optional; fixed order is not a quality gate.
 
 ### 1. `# Title` then the stance line
 
@@ -56,20 +56,19 @@ Three bullets, exactly these keys:
 `Boundary` is the authority declaration. A skill that only reports says so here, and
 the rest of the file may not then instruct it to repair.
 
-### 3. `## Do not use this when` — universal
+### 3. `## Do not use this when` — optional
 
-At least two bullets. Every bullet names the sibling that owns the excluded case, in
-backticks, and that name resolves to a real catalog entry or alias.
+Include real exclusions only. Named routing targets must resolve to a catalog entry or alias. Do not turn composition into exclusion.
 
 ```
 - <case> -> `<owning-skill>`
 ```
 
-This is the anti-overfit lever. A skill nobody ever excludes toward has no distinct job.
+An exclusion can prevent misuse, but an incoming routing link does not prove a distinct job. Modes persist while task workflows execute; standards constrain outputs without replacing their owner.
 
 ### 4. Middle section — by kind
 
-| kind | required headings, in order |
+| kind | required headings |
 |---|---|
 | `workflow`, `output`, `knowledge-lens`, `internal-routing` | `## Procedure` then `## Stop when` |
 | `mode` | `## Behavior` then `## Stays active until` |
@@ -79,9 +78,9 @@ This is the anti-overfit lever. A skill nobody ever excludes toward has no disti
 `## Stop when` states the condition that ends the work, in terms an outside reader can
 check. "When the job is done" is rejected.
 
-### 5. `## Principles` — universal
+### 5. `## Principles` — optional
 
-At least two, at most five. Each is one line:
+At most five when useful. Do not pad a skill to meet a minimum. Each is one line:
 
 ```
 **<Principle name>** — <one imperative sentence>. <Source: author, work, year>
@@ -94,14 +93,14 @@ says `uncertain attribution` and the rule stands on its own merit.
 
 ### 6. `## Counter-case` — universal
 
-A realistic request that looks like a trigger for this skill and must not activate it.
+A realistic request showing an exclusion, legitimate composition, or a case where the rule must yield to the user’s explicit task.
 At least one; at least two for `mode`, `shared-standard`, and `internal-routing`, because
-those activate without being asked for.
+those can compose with other active instructions.
 
 Two kinds are valid. A **routing** counter-case names the sibling that owns the case
 instead, in backticks. A **permission** counter-case is a legitimate request the rule
 must still allow rather than suppress, which is how a standard is shown not to be
-overfitted. At least one counter-case per skill must be the routing kind.
+overfitted. A counter-case may demonstrate legitimate composition or proportional work; no routing counter-case is required.
 
 ### 7. `## Hand back` — universal
 
@@ -135,5 +134,4 @@ Lines are counted after the frontmatter fence, excluding blank lines.
 
 The validator asserts structure, not judgment. It cannot tell whether a bounded job is
 genuinely distinct, whether a principle is correctly attributed, whether a counter-case
-is realistic, or whether a procedure works. Those are settled by
-`tests/behavioral-cases.md`, which every canonical skill must appear in.
+is realistic, or whether a procedure works. Written cases describe intended behavior; only executed evaluations supply behavioral evidence. Include multi-turn composition, actual artifacts, and legitimate cases requiring depth, not just response formatting.

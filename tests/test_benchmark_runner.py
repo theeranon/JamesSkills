@@ -65,7 +65,9 @@ class BenchmarkTests(unittest.TestCase):
                                 ([sys.executable, '-c', 'print("[]")'], 'adapter_protocol_failure'),
                                 ([sys.executable, '-c', 'raise SystemExit(3)'], 'adapter_failure'),
                                 ([sys.executable, '-c', 'import time; time.sleep(3)'], 'timeout')]:
-            self.assertEqual(b.invoke(command, {}, .1)['status'], status)
+            # Protocol checks allow interpreter startup under load; only the sleep case tests a short deadline.
+            timeout = .1 if status == 'timeout' else 2
+            self.assertEqual(b.invoke(command, {}, timeout)['status'], status)
 
     def test_dry_run_has_no_score_and_fixed_pairs(self):
         with tempfile.TemporaryDirectory() as temp:

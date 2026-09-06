@@ -24,32 +24,9 @@ Find the one owner, hand over, and get out of the way.
 
 ## Procedure
 
-Route by accountable outcome, never by keyword or product name. Give exactly one skill the job, add another only for a genuinely distinct responsibility, and apply standards automatically.
+Route by accountable outcome, never by keyword or product name. Choose the workflow that serves the current outcome; compose relevant modes and standards without routing them away.
 
-### The 22
-
-- `proactive-habits` — mode: act on relevant authorized work and ask only for necessary unresolved decisions.
-- `proactive-dev` — mode: plan engineering rigorously across analyst, product, architect, build, and quality roles before code.
-- `i-have-adhd` — mode: shape replies so they can be acted on without holding state.
-- `make-it-james` — standard: wording law on anything a person reads.
-- `make-it-james-ux` — standard: visual law, following the project's existing design system first.
-- `done-for-me` — finish an already-agreed task to a verified outcome.
-- `are-you-sure` — five-layer sweep and repair of a business or productivity artifact.
-- `dev-are-you-sure` — five-layer sweep plus deployment boundary chain for software.
-- `is-that-the-best-you-can-do` — measure the gap to the ceiling and spend effort closing it.
-- `research-it` — settle one claim with outside evidence, official and real-user.
-- `never-again` — write one rejected result into a force-loaded lesson with regressions.
-- `zoom-out` — climb to strategy and hold action until the direction is agreed.
-- `give-me-solutions` — compare candidates in this context and name the best.
-- `grill-me` — interrogate until the requirement is sharp, then recap and confirm.
-- `coach-me` — move a person with questions only, always positive.
-- `baseon` — apply or compare registered lenses against a real case.
-- `catchup` — reconstruct verified current state onto the standard catchup page; not ordinary active-task progress.
-- `sum-meet` — one auditable meeting record holding every agenda.
-- `one-page-pls` — one self-contained page per independent topic.
-- `final-it` — choose the serving format and finish it, when nothing narrower owns it.
-- `project-standard` — create or repair the versioned project contract.
-- `hand-it-off` — this fallback (compatibility alias: `skill-router`).
+Use the available skill descriptions and load the matching canonical body. Do not maintain a second behavior catalog here. Modes stay active across workflows; standards constrain outputs without competing to own the task.
 
 ### Choosing
 
@@ -60,7 +37,7 @@ Route by accountable outcome, never by keyword or product name. Give exactly one
 5. Use `zoom-out` first only when the problem layer or the outcome is genuinely unclear.
 6. Routing is internal coordination, not a reason to return only a skill name when the user requested an outcome. Continue the requested work with the selected owner; when an unavailable sibling cannot be loaded, complete the bounded task directly where possible and disclose any actual capability limit. When nothing fits, do the work directly. Repeated uncovered work is discovery evidence, not permission to package.
 
-Common valid chains: `zoom-out` then `give-me-solutions`; `research-it` then `give-me-solutions`; `proactive-dev` then `done-for-me` then `dev-are-you-sure`; `sum-meet` or `one-page-pls` then the standards; `never-again` then the affected workflow.
+Common valid chains: `zoom-out` then `give-me-solutions`; `research-it` then `give-me-solutions`; `done-for-me` with persistent `proactive-dev`, using `dev-are-you-sure` for an appropriate review; `sum-meet` or `one-page-pls` then the standards; `never-again` then the affected workflow.
 
 ### Candidate Card
 
@@ -70,13 +47,13 @@ Do not load a live personal-context adapter merely because the owner is personal
 
 ## Stop when
 
-One primary owner is named and loaded, any additional skill present owns a genuinely distinct responsibility, and this router has produced nothing else.
+Internal selection is complete. Resume the user's task immediately with the selected workflow and active modes; completing routing is not completing the task.
 
 ## Principles
 
 **Route by outcome, not vocabulary** — Assign the owner from what must become true, because a product name in the request is a candidate rather than a requirement. Source: standing rule in this library
 **Most specific owner wins** — Prefer the narrowest skill that fully covers the job, so the general fallback never competes with a specialist. Source: standard dispatch principle; specific attribution uncertain
-**One accountable owner** — Exactly one skill is answerable for the outcome; shared ownership produces work nobody finishes. Source: single responsible individual practice; specific attribution uncertain
+**One accountable owner** — Keep responsibility for completing the user outcome clear; modes and standards support the workflow rather than displace it. Source: single responsible individual practice; specific attribution uncertain
 **Naming is an owner decision** — Never create, rename, or promote a skill without an approved Candidate Card, because a name silently reshapes the whole portfolio. Source: standing rule in this library
 
 ## Counter-case
@@ -86,7 +63,7 @@ One primary owner is named and loaded, any additional skill present owns a genui
 
 ## Hand back
 
-The named primary owner, any supporting skill with the distinct responsibility it holds, and nothing else. This router never returns a deliverable.
+No separate user-facing routing report. The selected workflow delivers the requested outcome; name skills only if the user asked about routing.
 
 ## Sources
 

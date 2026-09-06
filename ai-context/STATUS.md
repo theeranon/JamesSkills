@@ -3,36 +3,27 @@
 Last verified: 2026-09-07
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.0.3
+Current version: 2.0.4 candidate
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
 
-The whole 22-skill upgrade pass is complete and release 2.0.3 is published and installed locally.
-Compared with 98433f6, 13 instruction bodies were updated; 9 were retained,
-including 4 candidates rejected after comparison. Every skill has three new
-responsibility/transfer/countercase probes and a recorded disposition. Retained
-does not mean every response is flawless; improvements are bounded by evidence.
-
-All 44 local Claude/Codex native bodies match the selected canonical bodies.
-All three native packages on both hosts report version 2.0.3. Three Mac
-CLIs returned all nine package smoke requests; one Claude code-only response
-still appends a short verification note. No universal formatting parity is claimed.
+Version 2.0.4 corrects composition and proportionality across all 22 skill bodies.
+Proactive modes persist through one-task workflows. Zoom-out climbs from detail
+through roughly two or three abstraction layers to project outcome and strategy.
+No new skill names or lifecycle changes.
 
 ## Done
 
-- Published release commit 195eb67 to the existing GitHub main branch; refreshed Claude from its marketplace and Codex from its configured local marketplace. All 44 native bodies match canonical version 2.0.3; receipt: `tests/receipts/portfolio-upgrade-2026-09-07/release-install.json`.
-
-- 66 new probes across all 22 skills; 117 primary calls, 116 responses and 1 timeout retained. The declared paired recovery returned 2/2.
-- Independent cross-group blinded review of all primary responses; per-skill acceptance/rejection decisions retained. No overall efficacy percentage.
-- Six real filesystem forward cases plus two targeted retries: done-for-me created/repaired all requested files and preserved unrelated work; never-again executed lesson/pointer repairs and kept draft-only requests non-mutating. A generated draft example still has a semantic limit.
-- Four rejected candidates restored after concurrent d6f12c2 publication installed them. Native target changes were detected before writes; owned bodies restored with backups.
-- Benchmark CLI supports replaying the new suite with --case-file. Original fixtures and failures remain intact.
+- All 22 audit findings addressed in their instruction contracts; schema no longer requires routing in-degree or minimum principle counts.
+- Real two-turn artifact scenarios executed with baseline, candidate and no-skill arms. Completion and draft boundaries verified; no measured completion uplift claimed.
+- 66 response-only forward probes reviewed, plus strategic and output followups. Residual factual/formatting failures retained, not labeled passes.
+- Evidence: `tests/receipts/composition-upgrade-2026-09-07/REVIEW.md`.
 
 ## In progress
 
-- No release implementation work remains. Existing long-running Claude sessions need restart to load the updated package.
+- Final release validation, publication and native package refresh for 2.0.4.
 
 ## Requirement state
 
@@ -49,7 +40,7 @@ still appends a short verification note. No universal formatting parity is claim
 
 ## Next
 
-- Use version 2.0.3; retain recorded behavioral limitations when interpreting benchmark results.
+- Finish 2.0.4 publication and verify native package versions/body hashes.
 
 ## Blockers
 

@@ -7,7 +7,7 @@ description: Shape every reply so it can be acted on immediately without holding
 
 # I Have ADHD
 
-Lead with the action, keep the state on screen, and never make the reader hold it.
+Lead with the answer or action and make relevant state easy to see.
 
 ## Scope
 
@@ -15,23 +15,23 @@ Lead with the action, keep the state on screen, and never make the reader hold i
 - Owns: presentation and interruption shape for the remainder of the conversation — ordering, density, batching, and how progress is restated.
 - Boundary: changes how things are said. Never widens authorization, weakens a safety or proof gate, alters source truth, or removes an option the reader needs to decide.
 
-## Do not use this when
+## Works with
 
-- What needs to change is decision authority rather than presentation -> `proactive-habits`
+- For decision posture as well as presentation -> `proactive-habits`
 - The user is blocked by hesitation rather than by information shape -> `coach-me`
 - The user wants to be questioned until their own requirement is sharp -> `grill-me`
-- The output is a recipient-facing artifact whose wording law applies -> `make-it-james`
-- The reply is long because the work is unfinished -> `done-for-me`
+- For recipient-facing wording alongside this presentation mode -> `make-it-james`
+- To finish the underlying work while keeping this mode active -> `done-for-me`
 
 ## Behavior
 
-- Lead with the next action. The first line is something the reader can do, not context and not a plan.
+- Lead with the answer for a question, the result for completed work, or the next action for instructions.
 - Number multi-step work. One bounded action per step, fewest steps that still work.
-- Restate state every turn. The reader cannot carry step three of five between messages, so the message carries it.
-- Give time estimates in concrete units, not in vague size.
+- For ongoing multi-step work, show a compact progress update when state changes or is needed to orient the reader. A simple answer needs no progress ritual.
+- When a time estimate helps and has a basis, use concrete units; do not invent a duration.
 - Make finished work visible in terms of what now works, not in terms of what was changed.
 - State errors as cause and fix. No alarm openers.
-- Cap a list at five and rank it. Five ranked beats ten unranked.
+- Prefer short, ranked lists. Preserve every requested item; group a long inventory rather than truncate it.
 - Batch by decision surface. One review creates one interruption, with the detail kept available rather than deleted.
 - When earlier information changes, show a compact delta rather than silently editing what was said.
 - Finish the current issue before raising the next one.
@@ -45,8 +45,8 @@ The user turns it off or asks for normal communication. It does not carry into a
 
 ## Principles
 
-**Working memory is the constraint** — Put on screen everything the reader must hold, because anything off screen is gone. Source: George A. Miller, The Magical Number Seven, 1956
-**Intention-action gap** — Knowing the answer is not doing it; name the first concrete action so the reply ends in movement rather than understanding. Source: Peter Gollwitzer, implementation intentions, 1999
+**Working memory is the constraint** — Keep information needed for the current action visible rather than requiring the reader to reconstruct it. Source: George A. Miller, The Magical Number Seven, 1956
+**Intention-action gap** — Knowing the answer is not doing it; when action is requested, make its first step concrete; a factual question can end with its answer. Source: Peter Gollwitzer, implementation intentions, 1999
 **Interruption cost** — Batch by decision surface, because reacquiring a task after an interruption costs far more than the interruption itself. Source: research on task resumption cost; specific attribution uncertain
 **Progress must be visible** — State what now works in concrete terms, because unreported progress does not register as progress. Source: Teresa Amabile and Steven Kramer, The Progress Principle, 2011
 
@@ -57,7 +57,7 @@ The user turns it off or asks for normal communication. It does not carry into a
 
 ## Hand back
 
-Every reply for the rest of the conversation, shaped so the first line says what to do and the last line says where things stand.
+A reply that is easy to understand and act on, with progress only when relevant. Preserve the requested artifact format; no mandatory action or status footer.
 
 ## Sources
 

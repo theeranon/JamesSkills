@@ -2,7 +2,7 @@
 name: grill-me
 kind: workflow
 license: CC-BY-NC-4.0
-description: Interrogate the user through a branching interview until their own goal and requirement are sharp, then recap and confirm. Use to sharpen a plan before building; not to coach the person and not to research the answer.
+description: Interrogate the user through a branching interview until their own goal and requirement are sharp, then proceed when the necessary decisions are clear. Use to sharpen a plan before building; not to coach the person and not to research the answer.
 ---
 
 # Grill Me
@@ -12,8 +12,8 @@ Keep asking until the requirement is sharp enough to build from.
 ## Scope
 
 - Kind: workflow
-- Owns: extracting and sharpening what the user actually wants — the goal, the requirement, and whatever is nagging at them — through a branching interview that ends in a confirmed decision map.
-- Boundary: asks questions and records decisions. Finds every fact available from files and tools itself. Does not implement anything until the final confirmation is given.
+- Owns: extracting and sharpening what the user actually wants — the goal, the requirement, and whatever is nagging at them — through a focused interview that resolves the decisions needed to proceed.
+- Boundary: asks questions and records decisions. Finds every fact available from files and tools itself. Uses existing implementation authorization; an instruction to start ends the interview when no material decision remains.
 
 ## Do not use this when
 
@@ -28,16 +28,16 @@ Keep asking until the requirement is sharp enough to build from.
 1. Build a private decision tree. Some decisions unlock others; most do not matter yet.
 2. Find every fact yourself first. Never ask for something a file, a repository, or a tool already answers.
 3. Ask only the current frontier: unresolved decisions whose prerequisites are already settled. Ask one at a time when the answer changes the next question; ask up to three together only when they are genuinely independent.
-4. Put a specific recommendation and its evidence-based reason inside every question. Do not infer implementation complexity, cost or expected impact solely from frequency or urgency. When the evidence supports only a provisional preference, name the material uncertainty rather than inventing a stronger rationale. A question without a recommendation transfers work to the user instead of removing it.
+4. Offer a specific recommendation and reason when evidence supports one. For goals or preferences only the user can choose, ask neutrally. Do not infer implementation complexity, cost or expected impact solely from frequency or urgency. When the evidence supports only a provisional preference, name the material uncertainty rather than inventing a stronger rationale. Never invent a recommendation to satisfy the question format.
 5. Use the host's structured input control whenever one exists, so answers are chosen rather than typed, with the recommendation placed first and a free-text field available for anything the options miss. When no such control exists, ask in plain chat with lettered options and wait for the reply. Never ask for numeric replies to questions that could have been clickable.
 6. After each answer, update the tree, state any conflict with an earlier decision explicitly, and continue with whatever is newly unlocked. Preserve unanswered branches; never fill one from the recommendation.
-7. Report progress when it helps the ongoing interview, using only decisions and rounds actually established. If the user asks for the next question only, return that question with its recommendation and reason; keep the dependency tree private.
+7. Report progress when it helps the ongoing interview, using only decisions and rounds actually established. If the user asks for the next question only, return only that question, with a recommendation if supported; keep the dependency tree private.
 
 There is no fixed number of questions and no fixed number of rounds. Continue for as long as the user is still discovering what they want.
 
 ## Stop when
 
-The user signals that it is now clear. Then recap the whole decision map — every decision, the answer chosen, the reason, the consequence, and any unresolved risk — and ask one final question: is this complete, correct, on target, and satisfying? If any part is not, keep asking. The interview ends only on that confirmation.
+The decisions needed for the requested work are clear, or the user tells you to stop or start. A request to start is authorization already given, not a reason to ask for a confirmation word. Summarize material decisions only when useful; proceed with authorized work. Ask further only for an unresolved decision that materially changes the outcome, authority or commitment.
 
 ## Principles
 
@@ -53,7 +53,7 @@ The user signals that it is now clear. Then recap the whole decision map — eve
 
 ## Hand back
 
-The resolved decision map with every decision, chosen answer, reason, downstream consequence, and unresolved risk, plus the user's explicit confirmation that it is complete, correct, on target, and satisfying.
+The useful decisions and remaining material questions, or the requested work when the user has instructed you to proceed. Keep routine interview bookkeeping internal.
 
 ## Sources
 

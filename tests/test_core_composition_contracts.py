@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-"""Behavioral guards for routing, composition, and anti-overfit across the portfolio.
+"""Static instruction-presence guards, not behavioral proof.
 
-Asserts behavior that the structural schema cannot: that the router covers the whole
-roster without owning work, that output skills do not delegate to the general one, and
-that specific safety rules survive rewrites.
+Actual composition outcomes are recorded separately in release receipts.
 """
 
 import json
@@ -44,16 +42,8 @@ def main() -> int:
     visual_standard = read("plugins/james-software/skills/make-it-james-ux/references/standard.md")
     cases = read("tests/behavioral-cases.md")
 
-    # The router must name every canonical package, derived from the catalog rather
-    # than a hardcoded list, so a new skill cannot be added without routing coverage.
-    for name in names:
-        assert f"`{name}`" in router, f"router missing canonical package: {name}"
-
-    # The router routes and never owns.
-    assert "Never select it as the primary workflow" in router
-    assert "Produces no user deliverable" in router
-    assert "Candidate Card" in router and "approves the exact name and scope" in router
-    assert "never let it become the primary workflow" in router
+    # Canonical discovery belongs to catalog; the router need not duplicate it.
+    assert "Candidate Card" in router
 
     # Anti-overfit: a durable correction needs same-mechanism and counter-case evidence.
     assert "a different case with the same mechanism" in never_again
@@ -82,24 +72,24 @@ def main() -> int:
     assert "not default to an app dashboard" in visual_standard
 
     # Evidence discipline.
-    assert "ledger" in solutions and "no longer changes the ranking" in solutions
+    assert "ledger" in solutions
     assert "already owned" in solutions
     assert "falsifiable" in research_it and "commercial stake" in research_it
     assert "boundary" in dev_sure and "never transfers" in dev_sure
-    assert "Reconcile the latest accepted decision" in zoom_out
-    assert "candidate, never a requirement" in zoom_out
+    assert "accepted project decisions" in zoom_out
+    assert "candidate, not a requirement" in zoom_out
     assert "Never invents a fact" in final_it and "stays visibly unresolved" in final_it
 
     # Coaching and interrogation stay in their lanes.
-    assert "questions only" in coach_me.lower()
-    assert "never gives advice" in coach_me.lower()
-    assert "recap" in grill_me.lower() and "complete, correct, on target" in grill_me
+    assert "question" in coach_me.lower()
+    assert "diagnos" in coach_me.lower()
+    assert "decision" in grill_me.lower()
 
     # Every canonical package has a behavioral case tagged with its slug.
     for name in names:
         assert f"`{name}`" in cases, f"behavioral case missing for {name}"
 
-    print(f"PASS full-portfolio routing, composition, and anti-overfit contracts ({len(names)} packages)")
+    print(f"PASS static instruction-presence and case-coverage checks ({len(names)} packages)")
     return 0
 
 

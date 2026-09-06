@@ -24,7 +24,7 @@ Follow the system that is already there, and where there is none, be compact and
 
 ## Behavior
 
-**Follow the existing system first.** Inspect the project for a design system, component library, framework convention, brand guide, or spec sheet before making any visual decision. Where one exists, follow it, including its typeface, spacing scale, radii, and component patterns. One consistent system across the whole product outranks this house style. Read [references/standard.md](references/standard.md) completely before deciding.
+**Follow the existing system first.** Inspect the project for a design system, component library, framework convention, brand guide, or spec sheet before making any visual decision. Where one exists, follow it, including its typeface, spacing scale, radii, and component patterns. One consistent system across the whole product outranks this house style. Read [references/standard.md](references/standard.md) completely before deciding. Its house defaults and helper checks remain subordinate to explicit user requirements and the selected project system.
 
 **House fallback, only where no system exists.** `IBM Plex Sans Thai` as the typeface for Thai, Latin, and numerals. Minimal, white, quiet. Compact and information-dense composition with restrained padding. Body line-height between 1.35 and 1.45. A 6px radius on every rectangular surface; genuinely circular objects stay circular. Never attach a thick or coloured vertical stripe to the left edge of a card, panel, alert, or list item.
 
@@ -32,11 +32,11 @@ Follow the system that is already there, and where there is none, be compact and
 
 **Interface copy carries no production residue.** No meta copy, no progress narration, no labels announcing that a machine produced this, no placeholder text shipped as content. Nothing that belongs to the making of the artifact appears inside the artifact.
 
-**Reduce friction before adding explanation.** Ask for nothing before the user has received value. Remove controls irrelevant to the immediate intent. Replace blocking confirmations with optimistic execution plus undo. Break intimidating forms into disclosed steps. Give every control explicit copy rather than an unlabelled icon.
+**Reduce friction before adding explanation.** Defer nonessential questions until they are useful; required authorization and inputs stay at the point they are needed. Remove controls irrelevant to the immediate intent. Use optimistic execution plus undo for safe actions only when reversal really works. Preserve required confirmation for destructive or externally binding actions. Break intimidating forms into disclosed steps. Give every control explicit copy rather than an unlabelled icon.
 
 **Format boundary.** An HTML request defaults to HTML-only delivery. Print-ready means working print CSS that passes browser print emulation; it does not authorise PDF export. Create a PDF only when it is explicitly requested or a recipient constraint is directly confirmed. Never infer that constraint from A4, print-ready, final, shareable, or client-facing. Never generate a PDF merely to prove that HTML renders.
 
-**Verify by rendering.** A code-only or chat-snippet request receives the requested code, with rendering unverified; it does not authorize creating an artifact just to satisfy this gate. For a rendered deliverable, run `python3 scripts/lint_outcome.py --strict <output-path>` from this skill directory for supported outputs. For an offline portable single file, run `python3 scripts/embed_ibm_plex_thai.py <input.html> --output <portable.html>` and confirm no remote font links remain. A CSS font declaration is never proof that the font loaded.
+**Verify by rendering.** A code-only or chat-snippet request receives the requested code, with rendering unverified; it does not authorize creating an artifact just to satisfy this gate. For a rendered deliverable, run `python3 scripts/lint_outcome.py --strict <output-path>` from this skill directory for supported outputs. For an offline portable single file, embed the selected typeface and confirm no remote font links remain. Use `python3 scripts/embed_ibm_plex_thai.py <input.html> --output <portable.html>` only when IBM Plex Sans Thai is the selected font; do not replace a project font merely to use this helper. Evaluate lint findings against the chosen system rather than changing valid user-specified styling to satisfy a house default. A CSS font declaration is never proof that the font loaded.
 
 ## Applies to
 

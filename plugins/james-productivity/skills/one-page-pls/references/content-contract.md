@@ -4,11 +4,11 @@
 
 A topic is a bounded subject with its own outcome, decision, owner, action path, or timeline. Use explicit agenda labels when the source provides them. Otherwise detect natural boundaries from changes in those elements.
 
-- One topic produces one file.
-- Two or more topics produce the same number of separately named files.
+- One topic per page is the default. Explicit requests for a combined page take precedence.
+- Keep independent topics distinguishable as sections on a requested combined page, or separate files when requested.
 - A file must make sense without opening another topic's file.
 - Shared meeting context may be repeated briefly where needed for self-containment.
-- Closely related supporting points may stay together; independent decisions may not.
+- Closely related supporting points may stay together; independent decisions remain clearly separated.
 
 ## Lossless compression gate
 
@@ -35,7 +35,7 @@ Compress wording and remove repetition before removing substance. If all materia
 - keep the decision surface on one page and link a companion appendix or full record; or
 - state that the topic is unsuitable for a truthful one-page artifact.
 
-Never solve overflow by mixing topics, silently dropping a material item, hiding content, clipping it, or reducing type below the QA minimum.
+Never solve overflow by obscuring topic boundaries, silently dropping a material item, hiding content, clipping it, or reducing type below the QA minimum.
 
 ## Recommended information order
 

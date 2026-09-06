@@ -1,0 +1,29 @@
+{
+  "cases_source": "tests/receipts/portfolio-upgrade-2026-09-07/cases.json",
+  "planned": 66,
+  "body_hashes": {
+    "proactive-habits": "79d7ed0b89d095c6353519fd032c868b1141c9656a48363078d7b89f5545c75b",
+    "done-for-me": "a084a43dd568f5c48b23db524572cd77052992454a8e4ad24806707315f4593e",
+    "i-have-adhd": "9f47cdf1f8ea6899a3aa437a682e7e7851464f4257da0438900d5e191cc9dcd4",
+    "is-that-the-best-you-can-do": "919f5d59b3c47bd3b101c1869cf4c74dfaaef5e71d61bc551adda67556a2ec14",
+    "make-it-james": "a1c492b7534c4fe3e785bd9bc524fa6e119b494bb5d8749fdced81a15483aacb",
+    "never-again": "e15b679b643c24892797323ee9eb4cb302ab76fdedf3ab46b5d671a8353ee3a6",
+    "research-it": "97b9d7a0ae73017aad4190b98c95c2a7cf89622355a036c3a3b35e8c30539663",
+    "are-you-sure": "7328897a67d25dd985b3dea4abd82062aeb4e01d76b1f5835277e289fa0a5556",
+    "hand-it-off": "5837439cd780e17b776dcdcd05e4e54ba8ecc9fabeddec0ee9967ba0f1bed537",
+    "baseon": "d1efbb4f471e6666adf2c4c902d26ffcd7f7c06f3942b84464d0aa79d86e10a8",
+    "coach-me": "0d9953dfcd06f403bc1e838e1c680a421673f4b516cc79f994695d4800a82905",
+    "final-it": "784eaa2adaa9cd363145127de89bdd00c465cce3d3fc39a94c6e80e8d8394352",
+    "give-me-solutions": "b532e0e7d2599e9168664f1f5798816b64e7616c0e03e41bba40710b04541762",
+    "grill-me": "f0ac0cf8de7a2e6a06d2a8c5466dfe0418dea7fa8c9700c2033ac485d214c341",
+    "one-page-pls": "bd3ec26bef9b01f6cd70d0dc25d85cabd7d99fb6a2be977c7864b40251edb3d0",
+    "sum-meet": "e8188500fe466e84168f5765321f71758ccd77b89765796eeac8c0325a321d78",
+    "zoom-out": "655cc1c8e7240001e6c58a3ef54c0effec5bf785193da9cfcfb2c4171d64fffe",
+    "catchup": "0e9810bb55163d575c994658e3b5f9d01c555dad378786e7ee687cc18676d294",
+    "dev-are-you-sure": "e0a75eed8367a3af3b086cd7a89e02233a77a353f0e781cc678a2c392837ffb0",
+    "make-it-james-ux": "0f0d09901cb97f4477947e315406afe0a5f0c0a369b590b8ac5c75bfae12a8b8",
+    "proactive-dev": "0d9de77d248974b3db17b40057ccd123d4f78491102b3df1ba38b1379d439836",
+    "project-standard": "d0451221107fabcc71e89b5f17ebe9b41b96016b3761f4a12f896ba1f4c058d1"
+  },
+  "limit": "Existing public development suite, candidate forward only; no causal uplift claim."
+}

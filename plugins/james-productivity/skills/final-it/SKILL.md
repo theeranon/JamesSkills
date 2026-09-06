@@ -25,28 +25,28 @@ Pick the simplest form that serves the reader, then finish it properly.
 
 ## Procedure
 
-1. Identify the real recipient and what they will do with this. The format follows that, not the impressiveness of the request.
-2. Choose the simplest form that serves the use. Plain Markdown is correct whenever visual design adds nothing. A request for HTML stays HTML-only; never infer authorisation for a fixed print file from words like final, A4, print-ready, shareable, or client-facing.
+1. Identify the real recipient and what they will do with this. Honor an explicitly requested format; choose a format from the recipient’s use only when it is unspecified.
+2. Within the requested format, choose the simplest form that serves the use. Plain Markdown is correct whenever visual design adds nothing. A request for HTML stays HTML-only; never infer authorisation for a fixed print file from words like final, A4, print-ready, shareable, or client-facing.
 3. Transform instructions, complaints, drafts, and discussion into finished wording. Remove production narration, design rationale, progress notes, and copied requirement language.
 4. Preserve source truth exactly while changing presentation. Check every factual clause against the supplied source: do not add an author, contact, reopening date, response promise, workflow or technical implication merely because it sounds conventional. Preserve temporal scope too: a closure on one date does not establish an ongoing closure starting that date. Missing details remain unknown; omit nonessential fields instead of shipping placeholders. Anything unresolved stays visibly unresolved, or comes back as the one remaining content gate.
 5. Apply the installed wording and visual standards. Do not force visual treatment onto an artifact that is not visual.
-6. Run the native checks the format has, and inspect every rendered page, slide, viewport, or state when rendering exists. When only source or chat text is requested, deliver that surface without claiming rendering or adding an unrequested conversion workflow.
+6. Run the native checks the format has, and inspect the delivered pages or slides and the relevant viewports or interaction states for its intended use. When only source or chat text is requested, deliver that surface without claiming rendering or adding an unrequested conversion workflow.
 
 ## Stop when
 
-The artifact exists in its chosen format, its native checks pass, every rendered state has been inspected, and the only thing returned alongside it is uncertainty the recipient genuinely needs to know about.
+The artifact exists in its chosen format, its native checks pass, the relevant rendered output has been inspected, and the only thing returned alongside it is uncertainty the recipient genuinely needs to know about.
 
 ## Principles
 
-**Form follows function** — Let the use decide the format; a shape chosen before the purpose produces decoration rather than a deliverable. Source: Louis Sullivan, 1896
+**Form follows function** — Let the use guide presentation within the explicitly requested format; choose the format yourself only when it is unspecified. Source: Louis Sullivan, 1896
 **Answer first** — Lead with the conclusion the reader needs and support it afterwards, rather than reconstructing the path that produced it. Source: Barbara Minto, The Pyramid Principle, 1987
 **Preserve the gap** — Never close an open fact to make the artifact feel finished; an invented resolution is worse than a visible hole. Source: standing rule in this library
-**Rendering is not delivery** — A file that exists is not a file that renders correctly; inspect every state before calling it done. Source: standing rule in this library
+**Rendering is not delivery** — A file that exists is not a file that renders correctly; inspect the output in its intended use before calling it done. Source: standing rule in this library
 
 ## Counter-case
 
 - The user asks for a polished summary of yesterday's call. That is a meeting record with its own semantic contract, so `sum-meet` owns it.
-- The user asks for a beautiful deck when the decision needs three numbers in an email. The simplest serving form wins, and this skill delivers the email.
+- The user explicitly asks for a deck containing three numbers. Deliver a concise deck; do not substitute an email. If no format was specified, a short email may serve best.
 
 ## Hand back
 

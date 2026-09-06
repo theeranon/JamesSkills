@@ -2,18 +2,18 @@
 name: never-again
 kind: workflow
 license: CC-BY-NC-4.0
-description: Turn one rejected output into a written lesson that every future agent is forced to read before working in this repository. Use when a mistake should never recur; not for fixing the one bad output and not for routine quality sweeps.
+description: Repair a recurring failure mechanism with a narrow, discoverable lesson or an update to an existing rule. Use when a mistake should never recur; not for fixing the one bad output and not for routine quality sweeps.
 ---
 
 # Never Again
 
-Write the lesson where the next agent cannot avoid reading it.
+Repair the mechanism and make the lesson discoverable at the right scope.
 
 ## Scope
 
 - Kind: workflow
-- Owns: converting one rejected result into a durable, force-loaded rule plus the regressions that prove it holds.
-- Boundary: writes to the lesson ledger and to the highest-authority rule file at the chosen scope. Repairs outputs already affected by the rule. Never rewrites unrelated project requirements.
+- Owns: preventing an evidenced recurring failure at the narrowest durable scope, with cases that check the correction.
+- Boundary: updates the relevant lesson or rule at the chosen scope and its required-reading pointer when needed. Repairs outputs already affected by the rule. Never rewrites unrelated project requirements.
 
 ## Do not use this when
 
@@ -25,16 +25,16 @@ Write the lesson where the next agent cannot avoid reading it.
 
 ## Procedure
 
-1. Reconstruct the path from source and ingestion through interpretation, state, policy, delivery, and the recipient's experience. Find the boundary that allowed the class, not the final bad phrase.
+1. Trace the actual failure path far enough to identify its mechanism. Inspect existing rules before changing them; revise, merge or remove a conflicting rule before adding another. Do not analyze nonexistent system layers.
 2. Choose the narrowest durable scope the evidence supports: this output, this project, this workflow, or the shared library. Generalise no further: do not add affected statuses, domains or prohibitions merely because they sound related. Preserve any transfer scenario explicitly requested by the user; demonstrate the mechanism within it rather than substitute an easier example.
-3. Follow the requested action boundary: if asked for a draft or if writing tools are unavailable, return the proposed lesson and regressions and state that nothing was persisted. Never claim a pointer, test or repair was created without executing and verifying it. Otherwise write the lesson to `ai-context/LESSONS.md` in the project at that scope, as one entry: what happened, the mechanism that allowed it, the rule now in force, and the date.
+3. Follow the requested action boundary: if asked for a draft or if writing tools are unavailable, return the proposed lesson and regressions and state that nothing was persisted. Never claim a pointer, test or repair was created without executing and verifying it. Otherwise update a relevant existing lesson or, if none covers the mechanism, write the lesson to `ai-context/LESSONS.md` in the project at that scope, as one entry: what happened, the mechanism that allowed it, the rule now in force, and the date.
 4. Make it discoverable through the existing automatically loaded contract. Reuse a valid required-reading pointer when present; add the missing pointer only to the actual host contract, without creating unrelated vendor files. A pointer requests reading; it does not prove every runtime read or obeyed it.
 5. Add three regressions to the behavioral cases: the rejected case, a different case with the same mechanism, and a legitimate counter-case the rule must still allow.
 6. Audit outputs already affected by the new rule and repair them inside scope.
 
 ## Stop when
 
-For an execution request, the lesson entry exists, at least one automatically loaded contract file points at it, all three regressions are written, and affected outputs are repaired. For a draft-only request, the proposed entry and three cases are complete and explicitly not persisted. A rule with no counter-case is not finished, because it cannot be shown to be narrow enough.
+For an execution request, the corrected lesson or rule exists, at least one automatically loaded contract file points at it, all three regressions are written, and affected outputs are repaired. For a draft-only request, the proposed entry and three cases are complete and explicitly not persisted. A rule with no counter-case is not finished, because it cannot be shown to be narrow enough.
 
 ## Principles
 

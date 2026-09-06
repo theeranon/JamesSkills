@@ -9,12 +9,12 @@ This handbook is the human navigation layer. `catalog.json` owns category, kind,
 1. Start or repair a project contract with `/project-standard`; return after a gap with `/catchup`.
 2. Sharpen a half-formed idea with `/grill-me`; climb to strategy with `/zoom-out`.
 3. Settle one doubt with `/research-it`; choose between candidates with `/give-me-solutions`.
-4. Plan engineering properly with `/proactive-dev`; finish an agreed task with `/done-for-me`.
+4. Use `/proactive-dev` throughout engineering; `/done-for-me` finishes one task within that mode.
 5. Check business work with `/are-you-sure` and software with `/dev-are-you-sure`; raise a mediocre result with `/is-that-the-best-you-can-do`.
 
 Mode and standard behavior differs from a normal workflow:
 
-- `/i-have-adhd` and `/proactive-habits` stay active for the current conversation until explicitly disabled.
+- `/i-have-adhd`, `/proactive-dev` and `/proactive-habits` stay active for the current conversation until explicitly disabled.
 - `make-it-james` and `make-it-james-ux` apply automatically to recipient-facing outcomes; invoking one directly is useful for a wording or visual audit.
 - `hand-it-off` is installed agent support, not a recommended human command.
 
@@ -41,7 +41,7 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-software`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Reconstruct one project's verified current state after a gap and deliver it as the standard catchup page. Use for where-are-we-now after a handoff or stale status; not for progress inside active work and not for repairing anything.
+- Use when: Reconstruct one project's verified current state after a gap and deliver it as the standard catchup page. Use for where-are-we-now after a handoff or stale status; not for ordinary progress inside active work. A request to continue work uses this reconstruction as its starting point.
 - Result: The requested chat report or rendered page: target and comparison point, current evidence, material conflict or blocker, and one safe next action. Include history, checklist and last-task state only where established and useful; do not repeat current facts under multiple headings.
 - Do not use when: Ordinary progress inside an active task is being reported; let the primary workflow report it -> `done-for-me`
   - The dispute is one isolated completion claim needing verification at its boundary -> `dev-are-you-sure`
@@ -54,9 +54,9 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-productivity`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Step back at least three levels from the detail to the strategy, then agree the direction before any action resumes. Use when work has gone too deep too early; strategy only, never for interface or visual questions.
-- Result: For reframing: the outcome in human terms, the failing responsibility, what already works, the strategy and its exclusions, and the direction awaiting or holding actual agreement. For an excluded bounded task, its owning workflow returns the requested result.
-- Do not use when: The question is about layout, interaction, or visual design -> `make-it-james-ux`
+- Use when: Step out from implementation detail through the project goal to the strategy that should achieve it. Use when work is optimizing the wrong layer or losing its purpose; not for an isolated implementation or visual fix.
+- Result: The strategic reframe: project outcome, approach, how the current work contributes or distracts, and the next aligned move. Name only a genuinely new decision requiring the user. When execution was requested and authorized, carry that work forward rather than stopping at the reframe.
+- Do not use when: Only layout, interaction, or visual design needs repair and the project strategy is not in question -> `make-it-james-ux`
   - The direction is settled and options must now be compared -> `give-me-solutions`
   - The direction is settled and the job is to build it -> `done-for-me`
 - Canonical instructions: [`plugins/james-productivity/skills/zoom-out/SKILL.md`](../plugins/james-productivity/skills/zoom-out/SKILL.md)
@@ -67,8 +67,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-productivity`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Interrogate the user through a branching interview until their own goal and requirement are sharp, then recap and confirm. Use to sharpen a plan before building; not to coach the person and not to research the answer.
-- Result: The resolved decision map with every decision, chosen answer, reason, downstream consequence, and unresolved risk, plus the user's explicit confirmation that it is complete, correct, on target, and satisfying.
+- Use when: Interrogate the user through a branching interview until their own goal and requirement are sharp, then proceed when the necessary decisions are clear. Use to sharpen a plan before building; not to coach the person and not to research the answer.
+- Result: The useful decisions and remaining material questions, or the requested work when the user has instructed you to proceed. Keep routine interview bookkeeping internal.
 - Do not use when: The block is the person's own hesitation rather than an unclear requirement -> `coach-me`
   - The requirement is clear and options must now be compared -> `give-me-solutions`
   - The requirement is clear and the answer lies in outside evidence -> `research-it`
@@ -84,7 +84,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Settle a doubt about one claim, approach, or requirement with outside evidence from official sources and real users. Use when confidence is missing, not when choosing between options or checking your own work.
-- Result: The claim and verdict, the decisive source evidence with locators when available, and the material limits. Keep fact, source assertion and inference clear without requiring separate sections for empty categories. The reader decides what to do about it.
+- Result: The claim and verdict, the decisive source evidence with locators when available, and the material limits. Keep fact, source assertion and inference clear without requiring separate sections for empty categories. For a research-only request, stop at the verdict. For an authorized larger task, use the finding to continue that task.
 - Do not use when: Several candidates must be compared and one recommended -> `give-me-solutions`
   - The doubt is about work produced in this conversation rather than an outside claim -> `are-you-sure`
   - The doubt is about whether shipped code, data, or a deployment behaves correctly -> `dev-are-you-sure`
@@ -110,8 +110,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-productivity`
 - Kind: `knowledge-lens`
 - Lifecycle: `promoted`
-- Use when: Apply or compare registered frameworks, books, and models against a real case while keeping source claims separate from evidence and inference. Use to interpret a situation through named knowledge; not to research new sources and not to decide.
-- Result: The question, the lenses selected and why, the four layers kept separate, any disagreement between lenses shown rather than resolved, and one reversible experiment with its success and revision rules.
+- Use when: Apply or compare registered frameworks, books, and models against a real case while keeping source claims separate from evidence and inference. Use to explain or apply named knowledge, compare interpretations, or register a supplied source; not to replace an evidence-based decision.
+- Result: The requested explanation or source record, or a case interpretation with source claims, facts and inference distinguishable. Include disagreements and experiments only where they serve the request.
 - Do not use when: The source is not registered yet and the need is outside evidence about a claim -> `research-it`
   - Options must be compared and one recommended -> `give-me-solutions`
   - The problem layer itself is unclear -> `zoom-out`
@@ -127,9 +127,9 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Carry an already-agreed task all the way to a finished, verified outcome without stopping to ask. Use when the plan is settled and only execution remains; not when the plan still needs work and not for inspecting finished work.
-- Result: The working outcome, the evidence that it was exercised, the decisions taken under the agent's own authority, and the genuinely remaining gates with their owners.
-- Do not use when: The plan itself is not good enough yet and needs decomposition before building -> `proactive-dev`
+- Use when: Carry an already-agreed task all the way to a finished, verified outcome without stopping to ask. Use for a one-time instruction to finish an established outcome. Decide routine planning and implementation details yourself; active conversation modes remain in force.
+- Result: The working outcome and concise verification relevant to the request. Include material decisions or genuine remaining dependencies only when useful; keep an artifact-only response artifact-only. Completing this task ends this workflow, not an active conversation mode.
+- Do not use when: The user asks to design a strategy rather than execute an established outcome -> `proactive-dev` can guide engineering planning. Missing implementation details alone do not block execution.
   - The work is finished and its diligence is what is in doubt -> `are-you-sure`
   - Delivered code needs a layered sweep and boundary check -> `dev-are-you-sure`
 - Canonical instructions: [`plugins/james-core/skills/done-for-me/SKILL.md`](../plugins/james-core/skills/done-for-me/SKILL.md)
@@ -140,11 +140,9 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-software`
 - Kind: `mode`
 - Lifecycle: `promoted`
-- Use when: Work as one person holding the analyst, product, architect, build, and quality roles, planning rigorously before writing code and splitting the work across sub-agents. Use when the plan is not good enough yet; not for executing an accepted plan.
+- Use when: Keep engineering work proactive from understanding the goal through implementation, testing and delivery. A conversation mode that scales planning and delegation to the task and stays active alongside individual workflows.
 - Result: The usable plan or implementation, with the decisions, scope, rollback and acceptance evidence needed to assess it. State actual progress and remaining dependencies once; do not repeat the same plan as analyst, architect and handback summaries.
-- Do not use when: A plan is already accepted and the job is to execute it to a usable outcome -> `done-for-me`
-  - Delivered code needs a five-layer sweep and repair -> `dev-are-you-sure`
-  - The decision posture, not the engineering method, is what needs to change -> `proactive-habits`
+- Do not use when: Not a replacement for the task workflow. Composes with active workflows and standards.
 - Canonical instructions: [`plugins/james-software/skills/proactive-dev/SKILL.md`](../plugins/james-software/skills/proactive-dev/SKILL.md)
 
 
@@ -156,8 +154,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Re-inspect a business or productivity deliverable across five layers and repair what it finds inside a declared surface. Use when work looks finished but the diligence behind it is in doubt; not for code, and not for making good work better.
-- Result: The repaired artifact, or the requested clean-result confirmation. When an inspection report is requested, include the surface and actual findings, with clean, repaired, escalated, not-applicable or unverified status as warranted. Name only the decisions genuinely needed to finish.
+- Use when: Re-inspect a business or productivity deliverable with checks matched to its risks and repair evidenced defects inside the requested surface. Use when work looks finished but the diligence behind it is in doubt; not for code, and not for making good work better.
+- Result: The repaired artifact, or the requested clean-result confirmation. A request to return the corrected artifact gets that artifact alone; keep surface, layer labels and repair bookkeeping internal unless the user asks for the inspection report. When an inspection report is requested, include the surface and actual findings, with clean, repaired, escalated, not-applicable or unverified status as warranted. Name only the decisions genuinely needed to finish.
 - Do not use when: The artifact is code, schema, data, or a deployment -> `dev-are-you-sure`
   - The doubt is about an outside claim rather than work produced here -> `research-it`
   - The work is correct and clean but unambitious, and needs a higher ceiling -> `is-that-the-best-you-can-do`
@@ -169,8 +167,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-software`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Re-inspect delivered software across five layers plus the deployment boundary and repair what it finds inside a declared surface. Use when code looks done but the diligence is in doubt; not for business artifacts and not for external claims.
-- Result: The declared surface, five layers and four boundary links each marked, the repaired code, and every remaining gap with its owner and the exact evidence still missing.
+- Use when: Re-inspect delivered software with checks matched to its risks and repair findings inside a declared surface. Use when code looks done but the diligence is in doubt; not for business artifacts and not for external claims.
+- Result: The repaired outcome, checks actually performed, and material unresolved findings with the evidence still needed. Include the complete layer/boundary inventory when a full audit was requested; keep inspection notes internal for a code-only response.
 - Do not use when: The artifact is a plan, document, model, or business decision -> `are-you-sure`
   - The doubt is whether an outside approach or library claim is sound -> `research-it`
   - The code is correct and clean but the solution is mediocre -> `is-that-the-best-you-can-do`
@@ -182,8 +180,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Measure how far a correct but unambitious result sits below its ceiling, then spend parallel effort closing that gap. Use when the work is not wrong but not good enough; not for defects and not for unfinished work.
-- Result: The named ceiling, the measured gap, the raised work itself, what was kept from the original and why, and anything still below ceiling with its cost.
+- Use when: Measure how far a correct but unambitious result sits below its ceiling, then close the material gap with proportionate effort. Use when the work is not wrong but not good enough; not for defects and not for unfinished work.
+- Result: The improved work in the requested format. State material remaining limits when needed; ceiling, gap analysis and change commentary stay internal for artifact-only requests.
 - Do not use when: The work contains actual defects, shortcuts, or residue -> `are-you-sure`
   - The defects are in delivered code -> `dev-are-you-sure`
   - The work is unfinished rather than unambitious -> `done-for-me`
@@ -195,7 +193,7 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Turn one rejected output into a written lesson that every future agent is forced to read before working in this repository. Use when a mistake should never recur; not for fixing the one bad output and not for routine quality sweeps.
+- Use when: Repair a recurring failure mechanism with a narrow, discoverable lesson or an update to an existing rule. Use when a mistake should never recur; not for fixing the one bad output and not for routine quality sweeps.
 - Result: For executed work: the verified lesson entry and contract pointer, three regressions, repaired outputs and scope. For draft-only work: the proposed entry and cases, with an explicit statement that no file was changed. Never describe proposed persistence as completed.
 - Do not use when: The single bad output needs repairing and nothing durable is at stake -> `are-you-sure`
   - The defect is in delivered code and the sweep is what is wanted -> `dev-are-you-sure`
@@ -211,8 +209,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-productivity`
 - Kind: `output`
 - Lifecycle: `promoted`
-- Use when: Build one auditable meeting record holding every agenda in a single file, with evidence kept separate from interpretation. Use for minutes and detailed meeting records; not when each topic must become its own page.
-- Result: One rendered A4 portrait file covering every agenda, the source coverage account, the evidence ledger with locators, everything left explicitly unknown or disputed, and the inspection result for every print page.
+- Use when: Build one auditable meeting record holding every agenda in a single file, with evidence kept separate from interpretation. Use for minutes or meeting summaries at the requested depth; full records retain every agenda, while a requested short summary stays short.
+- Result: The requested short summary, or the full rendered meeting record with source coverage and traceability. Keep verification bookkeeping internal unless requested or material; show unknown or disputed facts where relevant.
 - Do not use when: Each agenda must become its own separate page -> `one-page-pls`
   - The artifact is not a meeting record and the format is open -> `final-it`
   - Project state must be reconstructed from the repository rather than a transcript -> `catchup`
@@ -225,8 +223,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-productivity`
 - Kind: `output`
 - Lifecycle: `promoted`
-- Use when: Turn each independent topic into its own self-contained single-page brief. Use when material must stay on one page per topic; not for meeting records that must hold every agenda in one file.
-- Result: One rendered file per topic, or separate topic briefs when chat was requested, with its name, the coverage account showing every material item placed, the inspection result for each page, and any topic returned as unsuitable for one page with the reason.
+- Use when: Turn material into a self-contained single-page brief, with one page per topic by default. Use when material must stay on one page per topic; not for meeting records that must hold every agenda in one file.
+- Result: The requested page or chat brief. Keep coverage and inspection bookkeeping internal unless requested; disclose any material omission, linked appendix or delivery limitation the reader needs.
 - Do not use when: Every agenda must live in one record together -> `sum-meet`
   - The artifact is not page-bound and the format is still open -> `final-it`
   - Current project state must be reconstructed rather than summarised -> `catchup`
@@ -256,10 +254,8 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `mode`
 - Lifecycle: `promoted`
 - Use when: Shape every reply so it can be acted on immediately without holding state in memory. Use to change how answers are presented; not to change what the agent is allowed to decide and not to shorten by removing needed information.
-- Result: Every reply for the rest of the conversation, shaped so the first line says what to do and the last line says where things stand.
-- Do not use when: What needs to change is decision authority rather than presentation -> `proactive-habits`
-  - The user is blocked by hesitation rather than by information shape -> `coach-me`
-  - The user wants to be questioned until their own requirement is sharp -> `grill-me`
+- Result: A reply that is easy to understand and act on, with progress only when relevant. Preserve the requested artifact format; no mandatory action or status footer.
+- Do not use when: Not a replacement for the task workflow. Composes with active workflows and standards.
 - Canonical instructions: [`plugins/james-core/skills/i-have-adhd/SKILL.md`](../plugins/james-core/skills/i-have-adhd/SKILL.md)
 
 ### `/proactive-habits`
@@ -268,11 +264,9 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `mode`
 - Lifecycle: `promoted`
-- Use when: Work as an effective professional who decides what is theirs to decide and batches the rest into one question at the end. Use to stop subordinate behavior; not for finishing one named task and not for how replies are formatted.
+- Use when: Work as an effective professional who decides what is theirs to decide and asks only for unresolved decisions required by the user outcome. Activate once to work proactively throughout this conversation, including planning, execution, correction and verification; composes with one-task workflows and presentation modes.
 - Result: The requested deliverable. Add a question only for a remaining decision required to complete that deliverable; otherwise stop.
-- Do not use when: One named task must be carried to a finished, verified outcome -> `done-for-me`
-  - The need is about reply length, ordering, and interruption shape rather than decision authority -> `i-have-adhd`
-  - The work is software and needs role decomposition and a plan before code -> `proactive-dev`
+- Do not use when: Not a replacement for the task workflow. Composes with active workflows and standards.
 - Canonical instructions: [`plugins/james-core/skills/proactive-habits/SKILL.md`](../plugins/james-core/skills/proactive-habits/SKILL.md)
 
 ### `/coach-me`
@@ -281,8 +275,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-productivity`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Move a person toward their own goal using questions only, always positively, working beneath the behavior to what is driving it. Use when someone is stuck in themselves; never to give advice and never to do the work for them.
-- Result: Their goal in their own words, what was found beneath the behavior, and the next action they named themselves with its timing and review point. No plan they did not author, no template, no work done on their behalf, and no label attached to them.
+- Use when: Move a person toward their own goal through questions and reflection at the depth they want. Use when someone wants coaching; respect an explicit switch to advice, a factual answer, or task execution.
+- Result: A reflection or question that serves the current coaching conversation, and their chosen next step when reached. If they changed the request, deliver the requested answer or work instead. Never attach an inferred psychological label.
 - Do not use when: The person wants the task done rather than to be moved -> `done-for-me`
   - What is unclear is the requirement rather than the person -> `grill-me`
   - The person wants options researched and compared -> `give-me-solutions`
@@ -295,10 +289,8 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `shared-standard`
 - Lifecycle: `promoted`
 - Use when: Enforce the wording law on anything a real person will read, so it reads as native writing rather than as translated or machine-generated text. Applies automatically to recipient-facing work; it does not choose the format or supply missing content.
-- Result: The reworded output plus the specific failures repaired, or the exact wording gate still open when a fact cannot be resolved without inventing it.
-- Do not use when: The question is which format the deliverable should take -> `final-it`
-  - The output is a screen, layout, or visual artifact and the rules needed are visual -> `make-it-james-ux`
-  - The text is wrong rather than badly worded -> `are-you-sure`
+- Result: The reworded output. Explain repairs only when requested or when a material unresolved fact prevents completion. Do not append editing commentary to an artifact-only request.
+- Do not use when: Not a replacement for the task workflow. Composes with active workflows and standards.
 - Canonical instructions: [`plugins/james-core/skills/make-it-james/SKILL.md`](../plugins/james-core/skills/make-it-james/SKILL.md)
 
 ### `/make-it-james-ux`
@@ -325,9 +317,10 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `internal-routing`
 - Lifecycle: `promoted`
 - Use when: Internal fallback that assigns one primary owner when no skill obviously matches. Never select it as the primary workflow, never let it produce a deliverable, and never use it when a direct owner is already clear.
-- Result: The named primary owner, any supporting skill with the distinct responsibility it holds, and nothing else. This router never returns a deliverable.
+- Result: No separate user-facing routing report. The selected workflow delivers the requested outcome; name skills only if the user asked about routing.
 - Do not use when: One canonical owner already clearly matches -> load that owner, for example `done-for-me`
   - The request spans several responsibilities but one outcome is accountable -> give that owner the job, for example `project-standard`
+  - The user asked to be interrogated rather than routed -> `grill-me`
 - Aliases: `skill-router` (legacy compatibility call).
   - The user asked to be interrogated rather than routed -> `grill-me`
 - Canonical instructions: [`plugins/james-core/skills/hand-it-off/SKILL.md`](../plugins/james-core/skills/hand-it-off/SKILL.md)

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "finish-and-correct",
+    "skills": [
+      "proactive-habits",
+      "done-for-me",
+      "make-it-james"
+    ],
+    "files": {
+      "sales.csv": "item,amount\nA,120\nB,80\n",
+      "notes.txt": "keep this unchanged\n"
+    },
+    "turns": [
+      "เปิดโหมด proactive สำหรับห้องนี้ และใช้ done-for-me ครั้งนี้: อ่าน sales.csv แล้วสร้าง total.txt เป็นยอดรวมตัวเลขอย่างเดียว และ notice.txt ข้อความไทยแจ้งยอดให้ลูกค้า ไม่ต้องถามยืนยัน ทำให้เสร็จทั้งสองไฟล์",
+      "แก้ไข: B ต้องเป็น 95 ไม่ใช่ 80 แก้ข้อมูลและผลลัพธ์สองไฟล์ให้ตรงกันเลย ไม่ต้องอธิบายโหมดหรือแก้ skill และอย่าแตะ notes.txt"
+    ]
+  },
+  {
+    "id": "engineering-through-execution",
+    "skills": [
+      "proactive-habits",
+      "proactive-dev",
+      "done-for-me"
+    ],
+    "files": {
+      "calc.py": "def total(values):\n    return sum(values) + 1\n",
+      "notes.txt": "keep this unchanged\n"
+    },
+    "turns": [
+      "ใช้โหมด proactive-dev ตลอดงาน และ done-for-me ครั้งนี้: แก้ total ใน calc.py ให้บวกค่าถูกต้อง แล้วสร้าง examples.txt ระบุผลของ [2,3] และ [] อย่างละบรรทัด ห้ามเพิ่ม dependency ไม่ต้องถามแผนใหม่",
+      "ขอเพิ่มอีกตัวอย่าง [-2,5] ใน examples.txt และ docstring สั้นในฟังก์ชัน ทำต่อให้ครบ ไม่ต้องแยกบทบาทหรือสร้างเอกสารแผน"
+    ]
+  },
+  {
+    "id": "draft-boundary-persists",
+    "skills": [
+      "proactive-habits",
+      "done-for-me",
+      "final-it"
+    ],
+    "files": {
+      "notes.txt": "keep this unchanged\n"
+    },
+    "turns": [
+      "เปิด proactive mode แล้วร่างประกาศในแชทเท่านั้น: ร้านปิดวันที่ 18 เมษายนเพื่อตรวจสต็อก อย่าเพิ่มวันเปิดใหม่ อย่าสร้างไฟล์หรือส่งข้อความ",
+      "เปลี่ยนวันเป็น 20 เมษายน ร่างในแชทเหมือนเดิม ให้เฉพาะประกาศฉบับใหม่"
+    ]
+  }
+]

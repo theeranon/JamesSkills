@@ -2,7 +2,7 @@
 name: catchup
 kind: workflow
 license: CC-BY-NC-4.0
-description: Reconstruct one project's verified current state after a gap and deliver it as the standard catchup page. Use for where-are-we-now after a handoff or stale status; not for progress inside active work and not for repairing anything.
+description: Reconstruct one project's verified current state after a gap and deliver it as the standard catchup page. Use for where-are-we-now after a handoff or stale status; not for ordinary progress inside active work. A request to continue work uses this reconstruction as its starting point.
 ---
 
 # Catchup
@@ -13,7 +13,7 @@ Work out what is actually true right now, and hand back one page that says so.
 
 - Kind: workflow
 - Owns: the verified current state of one project or workstream after a continuity gap, rendered into the standard catchup page.
-- Boundary: read-only on the project, and never activated for ordinary progress inside an active task. Never repairs files, cleans, stashes, resets, continues implementation, updates external systems, or rewrites a stale status document. It writes only its own report.
+- Boundary: read-only on the project, and never activated for ordinary progress inside an active task. Never repairs files, cleans, stashes, resets, continues implementation, updates external systems, or rewrites a stale status document. It writes only its own report during reconstruction. If the same request also authorizes repair or continuation, preserve the findings and continue that work under its workflow; this read-only boundary does not cancel the user's execution instruction.
 
 ## Do not use this when
 
@@ -47,13 +47,15 @@ On Windows invoke the same helper with `python` when `python3` is not on PATH.
 
 **Evidence outranks the status document** — Trust git, runtime, and provider receipts over any file claiming readiness, because a stale label is the failure mode this skill exists to catch. Source: standing rule in this library
 **Separate intended from actual** — Report the gap between what should exist and what does, rather than resolving it in either direction. Source: standing rule in this library
-**Read-only until authorised** — Reconstruction never repairs; touching the workspace destroys the evidence the next decision depends on. Source: forensic soundness principle, ACPO digital evidence guidelines, 1999
+**Read-only until authorised** — Preserve the evidence while reconstructing state. Once reconstruction is sufficient, separately authorized implementation may proceed without asking again. Source: forensic soundness principle, ACPO digital evidence guidelines, 1999
 **One target at a time** — Reconstruct a single project per report, because blending two workstreams produces a state that describes neither. Source: standing rule in this library
 
 ## Counter-case
 
 - The user asks how the current build is going while the agent is mid-task. The active workflow reports its own progress; `done-for-me` owns it and reconstruction would be noise.
 - The user asks whether yesterday's deployment actually went live. That is one claim at one boundary, so `dev-are-you-sure` owns it rather than a whole-project reconstruction.
+
+- The user asks to catch up and finish the remaining task. Reconstruct enough current state, then proceed with `done-for-me` in the same turn; a status report alone does not complete the request.
 
 ## Hand back
 

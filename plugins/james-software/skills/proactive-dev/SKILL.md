@@ -2,12 +2,12 @@
 name: proactive-dev
 kind: mode
 license: CC-BY-NC-4.0
-description: Work as one person holding the analyst, product, architect, build, and quality roles, planning rigorously before writing code and splitting the work across sub-agents. Use when the plan is not good enough yet; not for executing an accepted plan.
+description: Keep engineering work proactive from understanding the goal through implementation, testing and delivery. A conversation mode that scales planning and delegation to the task and stays active alongside individual workflows.
 ---
 
 # Proactive Dev
 
-Make the plan good enough to be worth building, then build it and watch it.
+Understand the outcome, make the necessary engineering decisions, and carry the work through implementation and verification.
 
 ## Scope
 
@@ -15,13 +15,9 @@ Make the plan good enough to be worth building, then build it and watch it.
 - Owns: how engineering work is decomposed, planned, sequenced, delegated, and monitored for the remainder of the session.
 - Boundary: reads the project contract and architecture before proposing. Writes code and plans inside the accepted scope. Never introduces a new store, identity path, or external dependency without a recorded decision and a rollback.
 
-## Do not use this when
+## Composition
 
-- A plan is already accepted and the job is to execute it to a usable outcome -> `done-for-me`
-- Delivered code needs a five-layer sweep and repair -> `dev-are-you-sure`
-- The decision posture, not the engineering method, is what needs to change -> `proactive-habits`
-- Which layer of the system is failing is still unclear -> `zoom-out`
-- The project has no contract yet and truth is scattered -> `project-standard`
+This mode stays active while `done-for-me` completes a named task, `dev-are-you-sure` reviews a delivered surface, or `project-standard` repairs missing project truth. `proactive-habits` supplies the broader working posture; neither mode replaces the other. Use `zoom-out` when the implementation needs reconnecting to project goals and strategy. Loading a workflow does not suspend this mode or create another approval step.
 
 ## Behavior
 
@@ -41,20 +37,21 @@ Rollback must preserve the accepted invariant. If reverting would permit invalid
 
 ## Stays active until
 
-The user turns it off or the engineering work ends. It does not carry into unrelated conversation or into non-engineering work.
+The user turns it off or the conversation ends. It applies whenever engineering work resumes in this conversation; unrelated conversation needs no engineering ceremony.
 
 ## Principles
 
 **Begin with the end in mind** — Write the done-criteria before the design, and let them decide what is built rather than discovering scope while coding. Source: Stephen R. Covey, The 7 Habits of Highly Effective People, 1989
-**Single source of truth** — Every fact lives in exactly one place; any second copy is a defect with a migration attached, not a convenience. Source: standard data-modelling principle; specific attribution uncertain
-**Make the change easy, then make the easy change** — When a change is hard, first restructure until it is easy, and keep the two steps in separate commits. Source: Kent Beck, 2012
+**Single source of truth** — Keep one authoritative owner for each fact. Derived views and caches may exist with explicit synchronization and freshness rules. Source: standard data-modelling principle; specific attribution uncertain
+**Make the change easy, then make the easy change** — Use preparatory refactoring when it reduces the risk or effort of the requested change; keep it bounded and reviewable. Source: Kent Beck, 2012
 **Yellow-stage mastery** — Produce work a master would sign without supervision, and treat any point where everything routes through you as the defect to remove next. Source: Wealth Spectrum, registered in this library's knowledge pack
-**Blast radius before execution** — Before any mutating action, state what else it touches, what it costs if wrong, and how it is undone. Source: uncertain attribution; standing rule in this library
+**Blast radius before execution** — Assess consequences and recovery before significant mutations; expose material risks or decisions rather than narrating every file edit. Source: uncertain attribution; standing rule in this library
 
 ## Counter-case
 
-- The user approved a plan last week and asks to finish building it. Nothing needs replanning, so `done-for-me` owns it and this mode's planning gate would only add delay.
-- A single component renders wrong and the fix is a two-line CSS change. Full role decomposition is waste; `dev-are-you-sure` or direct work owns it.
+- The user approved a plan last week and asks to finish building it. Keep this mode active, inspect current facts, and execute with `done-for-me`; do not restart planning or ask for the same approval.
+- A single component needs a two-line CSS fix. Make the bounded change and verify it directly; no role report, sub-agent or architecture plan is required.
+- A data migration changes external side effects. Plan invariants, failure handling and recovery before mutation; proportionality does not remove these checks.
 
 ## Hand back
 
