@@ -72,25 +72,25 @@ def plan(root, home, catalog):
         gemini = target in (home/'.gemini/config/skills', home/'.gemini/antigravity/custom/skills')
         if gemini and any(s['status'] != 'promoted' for s in catalog['skills']):
             raise RuntimeError('Cannot expose whole Gemini plugin links containing pilot skills')
-        if gemini:
-            for category in sorted({s['category'] for s in promoted}):
-                links[target.parent/'plugins'/category] = root/'plugins'/category
         for item in promoted:
             source = root/'plugins'/item['category']/'skills'/item['name']
             destination = target/item['name']
-            if gemini:
-                if owned(destination, root): removals.add(destination)
-            elif target == claude_target and item['category'] in pillars and (pillars[item['category']]/'skills'/item['name']/'SKILL.md').is_file():
+            if target == claude_target and item['category'] in pillars and (pillars[item['category']]/'skills'/item['name']/'SKILL.md').is_file():
                 if owned(destination, root): removals.add(destination)
                 elif destination.exists() or destination.is_symlink():
                     raise RuntimeError(f'Collision with native plugin; preserved: {destination}')
             else:
-                # Codex canonical paths are deduplicated by its own configuration below.
+                # Codex and Gemini canonical paths are deduplicated by their own configuration below.
                 links[destination] = source
             for alias in item.get('aliases', []): links[target/alias] = root/'aliases'/alias
         if target.is_dir():
             for existing in target.iterdir():
                 if owned(existing, root) and existing not in links: removals.add(existing)
+            if gemini:
+                plugins_parent = target.parent / 'plugins'
+                if plugins_parent.is_dir():
+                    for existing in plugins_parent.iterdir():
+                        if owned(existing, root): removals.add(existing)
     for dst, src in links.items(): check_link(src, dst, root)
     return links, removals
 
