@@ -17,7 +17,7 @@ class BenchmarkTests(unittest.TestCase):
     def test_coverage_and_countercases(self):
         manifest, cases = b.validate()
         self.assertEqual(len(manifest['skills']), 22)
-        self.assertEqual(len(cases), 15)
+        self.assertEqual(len(cases), 66)
 
     def test_wrong_owner_fails_and_json_order_does_not_matter(self):
         check = [{'type': 'json_value', 'id': 'owner', 'key': 'owner', 'allowed': ['make-it-james']}]

@@ -1,14 +1,16 @@
 # Public development probes
 
-Coverage: 22 canonical skills referenced from the catalog; 15 response probes for
-five approved pilot skills. The other 17 have benchmark cards, not executable
-performance coverage. These synthetic fixtures contain no client records.
+Coverage: all 22 canonical skills have three executable public response probes
+(66 total). The original five-skill pilot remains 15 probes; 51 additional probes
+cover the other 17. Empty deterministic checks mean semantic review is required,
+not that a response passed. These synthetic fixtures contain no client records.
 
 Run fixture validation and an unscored schedule without calling any model:
 
 ```sh
 python3 scripts/benchmark.py --validate
 python3 scripts/benchmark.py --skill pilot --output /tmp/james-benchmark-dry-run
+python3 scripts/benchmark.py --skill all --output /tmp/james-full-portfolio-dry-run
 python3 -m unittest discover -s tests -p 'test_benchmark*.py'
 ```
 
@@ -16,7 +18,7 @@ Use a new output path each time. Default A/B: no tested instruction versus froze
 canonical instruction. `--candidates candidate-map.json` adds C, with JSON mapping
 each selected skill to its candidate file path. All bodies freeze before execution.
 `--trials` is bounded to 1–3; `--case proactive-habits-1` selects one paired probe.
-A/B order is reproducibly randomized. All attempted failures stay in the fixed
+Use `--skill all` for all 22, `--skill pilot` for the original five, or a canonical skill name. A/B order is reproducibly randomized. All attempted failures stay in the fixed
 planned denominator; interrupted runs expose missing attempts through run.json.
 
 ## Real text-only model route

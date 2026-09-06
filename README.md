@@ -831,3 +831,10 @@ Skill names are phrases people naturally say when they need the capability. Work
 Discovery comes before packaging. A new skill remains a pilot until its Candidate Card shows repeated cross-project need, non-duplication, source confidence, representative failures, legitimate counter-cases, and James approves the exact name and scope. General permission to improve this repository does not approve a candidate's name or ontology.
 
 The current cross-history portfolio audit selected and promoted `catchup` after clean, dirty, stale-status, scoped-workstream, Git-error, and already-clear forward tests. `learn-this`, `audit-this`, and `systemize-it` remain Candidate Cards, not installed skills.
+
+
+### Project-local export
+
+`./scripts/export /path/to/project research-it are-you-sure` copies selected promoted skills into the project's `.agents/skills` as plain files. Omit names to copy all promoted skills. Review changes before committing them in the destination repository.
+
+The complete request is checked before writing. Identical copies are left alone; differing existing directories, user files and discovery-root symlinks are preserved and produce an error. This command does not update or remove existing copies. It includes declared shared dependencies: `.agents/packs` and `.agents/research` for pack-backed skills, plus `james-software/skills/make-it-james-ux/scripts` for the unchanged relative font-helper references. Include these directories when committing the export. Font files remain an external prerequisite. Export does not prove every host discovers `.agents/skills` or eliminate coexistence with global/native skills.

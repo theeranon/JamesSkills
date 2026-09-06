@@ -27,7 +27,7 @@ def load(path):
 def validate():
     skills = {s['name']: s for s in load(ROOT / 'catalog.json')['skills'] if s['status'] == 'promoted'}
     manifest = load(DATA / 'manifest.json')
-    cases = load(DATA / 'development.json')
+    cases = load(DATA / 'development.json') + load(DATA / 'remaining-development.json')
     assert set(manifest['skills']) == set(skills), 'catalog coverage differs'
     assert len({c['id'] for c in cases}) == len(cases), 'duplicate case id'
     for name, item in manifest['skills'].items():
@@ -37,10 +37,11 @@ def validate():
         own = [c for c in cases if c['skill'] == name]
         assert item['state'] == ('public-development' if own else 'card-only')
         if own:
-            assert {c['role'] for c in own} == {'rejected-mechanism', 'transfer-mechanism', 'legitimate-countercase'}
+            assert {c['role'] for c in own} in ({'rejected-mechanism', 'transfer-mechanism', 'legitimate-countercase'}, {'responsibility', 'transfer-mechanism', 'legitimate-countercase'})
     for case in cases:
         assert case['skill'] in skills
-        assert all(case[k] for k in ('goal', 'prompt', 'family', 'rubric', 'checks'))
+        assert isinstance(case['checks'], list)
+        assert all(case[k] for k in ('goal', 'prompt', 'family', 'rubric', 'proof_limit'))
         assert case['split'] == 'public-development'
         assert {'goal_alignment', 'proportionality', 'truth_and_authority'} <= set(case['rubric'])
     return manifest, cases
@@ -95,7 +96,8 @@ def invoke(command, payload, timeout):
 
 def run(args):
     manifest, cases = validate()
-    selected = cases if args.skill == 'pilot' else [c for c in cases if c['skill'] == args.skill]
+    pilot = {'proactive-habits', 'done-for-me', 'make-it-james', 'sum-meet', 'hand-it-off'}
+    selected = cases if args.skill == 'all' else [c for c in cases if c['skill'] in pilot] if args.skill == 'pilot' else [c for c in cases if c['skill'] == args.skill]
     if args.case:
         selected = [c for c in selected if c['id'] == args.case]
     if not selected:
