@@ -55,8 +55,6 @@ On Windows invoke the same helper with `python` when `python3` is not on PATH.
 - The user asks how the current build is going while the agent is mid-task. The active workflow reports its own progress; `done-for-me` owns it and reconstruction would be noise.
 - The user asks whether yesterday's deployment actually went live. That is one claim at one boundary, so `dev-are-you-sure` owns it rather than a whole-project reconstruction.
 
-- The user asks to catch up and finish the remaining task. Reconstruct enough current state, then proceed with `done-for-me` in the same turn; a status report alone does not complete the request.
-
 ## Hand back
 
 The requested chat report or rendered page: target and comparison point, current evidence, material conflict or blocker, and one safe next action. Include history, checklist and last-task state only where established and useful; do not repeat current facts under multiple headings.

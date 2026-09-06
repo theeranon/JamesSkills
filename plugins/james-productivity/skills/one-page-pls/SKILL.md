@@ -17,7 +17,7 @@ One useful page at the requested scope, without hiding material omissions.
 
 ## Do not use this when
 
-- Every agenda must live in one record together -> `sum-meet`
+- The requirement is a full auditable meeting record rather than a compressed decision brief, even when it covers one combined page -> `sum-meet`
 - The artifact is not page-bound and the format is still open -> `final-it`
 - Current project state must be reconstructed rather than summarised -> `catchup`
 - The source is unfinished rather than uncompressed -> `done-for-me`
