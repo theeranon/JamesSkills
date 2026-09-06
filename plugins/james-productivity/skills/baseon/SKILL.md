@@ -13,7 +13,7 @@ Use the model as a lens on the evidence, never as a verdict about the person.
 
 - Kind: knowledge-lens
 - Owns: explaining, applying or comparing registered lenses against a real question, and registering new sources when requested.
-- Boundary: reads registered packs and case evidence, and writes source and lens records. Never promotes an inference to an official result, never blends two frameworks into one label, and never becomes a sole hiring, pay, investment, or clinical rule.
+- Boundary: reads registered packs and case evidence, and writes source and lens records. Never promotes an inference to an official result, never blends two frameworks into one label, and never becomes a sole hiring, firing, pay, credit, investment, or clinical/medical rule.
 
 ## Do not use this when
 
@@ -28,12 +28,12 @@ Use the model as a lens on the evidence, never as a verdict about the person.
 1. Identify whether the request is to explain a concept, apply a lens, compare interpretations, or register a source. Use only the steps that serve that request. For an application, establish case facts before framework labels; a concept explanation needs no invented case or decision.
 2. List the library with `python3 scripts/knowledge_library.py list` from this skill directory and select the smallest relevant lens set. A lens is not invoked merely because its name appeared in the request. Never select a `draft` or `retired` pack for a real decision.
 3. Resolve each selected pack with `python3 scripts/knowledge_library.py show <lens-id>` and read its entrypoint, concepts, applications, limitations, manifest, and source cards. Read [references/pack-contract.md](references/pack-contract.md) before changing any pack. `wealth-dynamics` and `talent-dynamics` resolve to one shared Dynamics lens, Talent Dynamics being its team adaptation; `wealth-spectrum` is a separate stage model whose shared creator lineage never permits blending the two.
-4. When interpreting a personal profile, establish the subject input state honestly as `official_user_declared` when the user supplied or confirmed an official result, `working_hypothesis` when it is an inference carrying confidence, alternatives, and disconfirming evidence, or `unknown` when the evidence is insufficient. A stored profile label without a user-confirmed official report remains a prior interpretation: downgrade it to `working_hypothesis` with its date, confidence, alternatives, and review triggers, even when an older profile file states it as fact.
+4. When interpreting a personal profile, establish the subject input state honestly as `official_user_declared` when the user supplied or confirmed an official result, `working_hypothesis` when it is an inference carrying confidence, alternatives, and disconfirming evidence, or `unknown` when the evidence is insufficient. Never infer an official assessment result from chat, tone, job title, or a short quiz. A stored profile label without a user-confirmed official report remains a prior interpretation: downgrade it to `working_hypothesis` with its date, confidence, alternatives, and review triggers, even when an older profile file states it as fact. Never move private subject data into a portable knowledge pack; keep it in the subject's profile or project context and join it only at runtime.
 5. For case applications, distinguish four layers without requiring four output sections. **Case fact** is a verified observation, result, constraint, or current metric. **Source claim** is what the framework or author says, with its source identifier and locator. **Inference** is how the lens may explain this case, with confidence and a competing explanation. **Action** is a reversible experiment or decision implication with a success and a revision rule.
 6. When lenses disagree, show the disagreement. Never average several frameworks into one synthetic type.
 7. For an application that calls for action, propose a reversible experiment with success and revision rules. For an explanation, answer the concept question directly. Drop any unnecessary lens.
 
-To register new knowledge, treat the work as a source first. Record creator, edition, date, locator or identifier, lawful-access context, rights posture, and a hash when a local file exists. It becomes a lens only when it has a reusable model and a recurring use case. Copyrighted originals stay outside the repository. Never reproduce proprietary test items, scoring keys, official reports, or diagrams in Git.
+To register new knowledge, use `new-source` to register a source without inventing a new lens; use `new-lens` only when the model deserves an independent application surface. Treat the work as a source first. Record creator, edition, date, locator or identifier, lawful-access context, rights posture, and a hash when a local file exists. Create original, paraphrased knowledge cards with stable claim IDs and a page, chapter, or URL locator; add counterevidence, limitations, version differences, outdated examples, and prohibited uses. Name the framework when attribution matters, but never imply affiliation, accreditation, or endorsement. It becomes a lens only when it has a reusable model and a recurring use case. Copyrighted originals stay outside the repository. Never reproduce proprietary test items, scoring keys, certification language, branded visual systems, official reports, or diagrams in Git. Validate before promotion with `python3 scripts/knowledge_library.py validate`.
 
 ## Stop when
 
@@ -56,7 +56,7 @@ On Windows invoke the same helper with `python` when `python3` is not on PATH.
 
 ## Hand back
 
-The requested explanation or source record, or a case interpretation with source claims, facts and inference distinguishable. Include disagreements and experiments only where they serve the request.
+The requested explanation or source record, or a case interpretation with source claims, facts and inference distinguishable. Give the useful conclusion first, then what the case evidence shows now, what the lens adds, what does not fit, and what would change the read; compress this structure but preserve all five meanings for a short request. When the result will be reused, include the lens version, source IDs, locators, and confidence. Include disagreements and experiments only where they serve the request.
 
 ## Sources
 

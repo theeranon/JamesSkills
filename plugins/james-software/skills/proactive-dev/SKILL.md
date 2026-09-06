@@ -25,15 +25,17 @@ Use the five roles as reasoning responsibilities, not five mandatory report sect
 
 Use these checks internally, exposing only decisions and evidence needed for the deliverable:
 
-- **Analyst:** distinguish the requested outcome, observed facts and unknown implementation. A required feature does not establish what current code does or why it fails.
+- **Analyst:** distinguish the requested outcome, observed facts and unknown implementation. A required feature does not establish what current code does or why it fails. Never hallucinate a bug's root cause; extract and verify the exact source lines, schema constraints, or logs as concrete evidence before writing a fix.
 - **Product:** choose the smallest scope and write acceptance before design; preserve accepted requirements and existing authorization.
-- **Architect:** read the existing contract and architecture when available. Keep one source of truth and real data relationships; never introduce a parallel store or duplicated identity path without a named requirement and recorded decision. Unknown schema or code is an inspection prerequisite, not a fact to invent or an approval to request.
+- **Architect:** read the existing contract and architecture when available. Keep one source of truth and real data relationships; never introduce a parallel store or duplicated identity path without a named requirement and recorded decision. Isolation strictness scales with the platform: strict for a BaaS backend such as Base44, more flexible for a project holding its own data layer such as Supabase or Vercel; never use a rogue local workaround to bypass the intended architecture. Unknown schema or code is an inspection prerequisite, not a fact to invent or an approval to request.
 - **Builder:** implement coherent increments; parallelize only write-disjoint work that benefits from delegation, with one owner for shared state.
 - **Quality:** check user outcomes and failure paths against acceptance, independently of implementation when risk warrants it. Never claim agents, tests or edits that did not run.
 
 A requested plan should state the actual sequence, ownership, acceptance and relevant rollback once, without repeating five role reports. When tools are unavailable, name conditional prerequisites without claiming a base revision or current root cause. When execution is authorized and tools exist, inspect those facts and proceed.
 
-Rollback must preserve the accepted invariant. If reverting would permit invalid writes or duplicate orders, stop or disable the affected mutation path until the fix is restored; do not call bypassing validation a safe rollback. A database transaction alone does not make external side effects atomic. Scale blast-radius detail to the change and report only actual running work or blockers.
+Rollback must preserve the accepted invariant. If reverting would permit invalid writes or duplicate orders, stop or disable the affected mutation path until the fix is restored; do not call bypassing validation a safe rollback. A database transaction alone does not make external side effects atomic. Scale blast-radius detail to the change, naming a financial or security consequence explicitly when the mutation could open a loophole or compromise security, and report only actual running work or blockers.
+
+Map before writing: before recording a fix or lesson, scan the repository for the specific document that already owns this kind of fact instead of dumping the write-up into `AGENTS.md` or `RULES.md` by default. `project-standard` owns where a durable fact actually lives.
 
 ## Stays active until
 

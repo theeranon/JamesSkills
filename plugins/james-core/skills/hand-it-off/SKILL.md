@@ -5,7 +5,7 @@ license: CC-BY-NC-4.0
 description: Internal fallback that assigns one primary owner when no skill obviously matches. Never select it as the primary workflow, never let it produce a deliverable, and never use it when a direct owner is already clear.
 ---
 
-# Skill Router
+# Hand It Off
 
 Find the one owner, hand over, and get out of the way.
 
@@ -24,7 +24,7 @@ Find the one owner, hand over, and get out of the way.
 
 ## Procedure
 
-Route by accountable outcome, never by keyword or product name. Choose the workflow that serves the current outcome; compose relevant modes and standards without routing them away.
+Route by accountable outcome, never by keyword or product name. Choose the workflow that serves the current outcome; compose relevant modes and standards without routing them away. Prefer an explicit project instruction over this router whenever it expresses a more specific accepted decision.
 
 Use the available skill descriptions and load the matching canonical body. Do not maintain a second behavior catalog here. Modes stay active across workflows; standards constrain outputs without competing to own the task.
 
@@ -49,13 +49,6 @@ Do not load a live personal-context adapter merely because the owner is personal
 
 Internal selection is complete. Resume the user's task immediately with the selected workflow and active modes; completing routing is not completing the task.
 
-## Principles
-
-**Route by outcome, not vocabulary** — Assign the owner from what must become true, because a product name in the request is a candidate rather than a requirement. Source: standing rule in this library
-**Most specific owner wins** — Prefer the narrowest skill that fully covers the job, so the general fallback never competes with a specialist. Source: standard dispatch principle; specific attribution uncertain
-**One accountable owner** — Keep responsibility for completing the user outcome clear; modes and standards support the workflow rather than displace it. Source: single responsible individual practice; specific attribution uncertain
-**Naming is an owner decision** — Never create, rename, or promote a skill without an approved Candidate Card, because a name silently reshapes the whole portfolio. Source: standing rule in this library
-
 ## Counter-case
 
 - The user asks to finish a task whose plan is already agreed. A direct owner is obvious, so `done-for-me` loads immediately and this router is never selected.
@@ -64,7 +57,3 @@ Internal selection is complete. Resume the user's task immediately with the sele
 ## Hand back
 
 No separate user-facing routing report. The selected workflow delivers the requested outcome; name skills only if the user asked about routing.
-
-## Sources
-
-No external work is paraphrased above; the principles are standing rules of this library except where marked uncertain.

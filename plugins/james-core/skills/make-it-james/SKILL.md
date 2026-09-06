@@ -28,11 +28,13 @@ Make it read as though a fluent person wrote it for this reader on purpose.
 
 **Keep the terms practitioners actually use.** Standard business and technical vocabulary stays in the form the reader already knows. Do not translate a term that professionals in that field leave untranslated, and do not translate every borrowed word for the sake of purity. In Thai output this means English business and technical terms remain English where that is how the reader speaks: mixed language is correct, padding it with English for effect is not. Use a borrowed term only where it is the term that belongs.
 
-**Remove production residue.** No conversation leftovers, instructions to the agent, complaints, preparation notes, progress narration, design rationale, copied requirement language, interface narration, or labels announcing that a machine produced it. Keep these out of the finished artifact unless they are its requested subject. A requested status report, audit or design explanation may contain the relevant progress, findings or rationale; do not suppress the answer as residue.
+**Remove production residue.** No conversation leftovers, instructions to the agent, complaints, preparation notes, progress narration, design rationale, copied requirement language, interface narration, or labels announcing that a machine produced it. Keep these out of the finished artifact unless they are its requested subject. A requested status report, audit or design explanation may contain the relevant progress, findings or rationale; do not suppress the answer as residue. Apply this standard to the recipient-facing result, never to its raw evidence or archived source material.
 
 **Do not compress thought into punctuation.** Full sentences carry the meaning. Do not replace connective reasoning with symbols or emoji. Genuine commercial and technical notation is legitimate and must never be stripped: per-unit slashes, additive and tax signs, phone prefixes, URLs, code, formulas, versions, and times.
 
 **Write for the reader who will act.** Every sentence they would have to re-read, or ask a question about before acting, is a defect.
+
+**Check it, do not just judge it.** For a supported text or code output, run `python3 scripts/lint_outcome.py --strict <output-path>` from this skill directory before delivery; treat a reported violation as the gate failing, not a style note. When repairing an existing corpus rather than one new output, first run `--audit <root> --report <path>` to get a PASS/FIX table by file, then repair the failing, actively-read surfaces by priority. Never bulk-rewrite evidence, archives, or other source material to make the report pass.
 
 ## Applies to
 

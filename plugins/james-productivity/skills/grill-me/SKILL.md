@@ -28,10 +28,10 @@ Keep asking until the requirement is sharp enough to build from.
 1. Build a private decision tree. Some decisions unlock others; most do not matter yet.
 2. Find every fact yourself first. Never ask for something a file, a repository, or a tool already answers.
 3. Ask only the current frontier: unresolved decisions whose prerequisites are already settled. Ask one at a time when the answer changes the next question; ask up to three together only when they are genuinely independent.
-4. Offer a specific recommendation and reason when evidence supports one. For goals or preferences only the user can choose, ask neutrally. Do not infer implementation complexity, cost or expected impact solely from frequency or urgency. When the evidence supports only a provisional preference, name the material uncertainty rather than inventing a stronger rationale. Never invent a recommendation to satisfy the question format.
-5. Use the host's structured input control whenever one exists, so answers are chosen rather than typed, with the recommendation placed first and a free-text field available for anything the options miss. When no such control exists, ask in plain chat with lettered options and wait for the reply. Never ask for numeric replies to questions that could have been clickable.
+4. Offer a specific recommendation and reason when evidence supports one, labelled `(แนะนำ)` in a structured control. For goals or preferences only the user can choose, ask neutrally. Do not infer implementation complexity, cost or expected impact solely from frequency or urgency. When the evidence supports only a provisional preference, name the material uncertainty rather than inventing a stronger rationale. Never invent a recommendation to satisfy the question format. Treat a free-text detail field as an override or qualification of the chosen option, not a separate answer. For a multi-select question, distinguish every option selected intentionally from no selection at all.
+5. Use the host's structured input control whenever one exists, so answers are chosen rather than typed, with the recommendation placed first and a free-text field available for anything the options miss. Keep 2-3 mutually exclusive choices per question; a question needing more options or a multi-select belongs in the HTML control instead. When no such control exists, ask in plain chat with lettered options and wait for the reply; do not generate an HTML form or artifact merely because the host lacks a native control. Never ask for numeric replies to questions that could have been clickable.
 6. After each answer, update the tree, state any conflict with an earlier decision explicitly, and continue with whatever is newly unlocked. Preserve unanswered branches; never fill one from the recommendation.
-7. Report progress when it helps the ongoing interview, using only decisions and rounds actually established. If the user asks for the next question only, return only that question, with a recommendation if supported; keep the dependency tree private.
+7. Report progress when it helps the ongoing interview, using only decisions and rounds actually established, for example `รอบ 2 · ตัดสินใจแล้ว 3 · เหลือ 2 สาขา`. If the user asks for the next question only, return only that question, with a recommendation if supported; keep the dependency tree private.
 
 There is no fixed number of questions and no fixed number of rounds. Continue for as long as the user is still discovering what they want.
 
@@ -53,7 +53,7 @@ The decisions needed for the requested work are clear, or the user tells you to 
 
 ## Hand back
 
-The useful decisions and remaining material questions, or the requested work when the user has instructed you to proceed. Keep routine interview bookkeeping internal.
+The useful decisions and remaining material questions, or the requested work when the user has instructed you to proceed. Present each settled decision with its chosen answer, reason or detail, downstream consequence, and any unresolved risk. Keep routine interview bookkeeping internal.
 
 ## Sources
 

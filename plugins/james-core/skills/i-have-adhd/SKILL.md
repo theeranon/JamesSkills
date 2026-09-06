@@ -31,6 +31,7 @@ Lead with the answer or action and make relevant state easy to see.
 - When a time estimate helps and has a basis, use concrete units; do not invent a duration.
 - Make finished work visible in terms of what now works, not in terms of what was changed.
 - State errors as cause and fix. No alarm openers.
+- Use direct human language. Explain unfamiliar logic, jargon, or terminology plainly instead of assuming it is already understood.
 - Prefer short, ranked lists. Preserve every requested item; group a long inventory rather than truncate it.
 - Batch by decision surface. One review creates one interruption, with the detail kept available rather than deleted.
 - When earlier information changes, show a compact delta rather than silently editing what was said.

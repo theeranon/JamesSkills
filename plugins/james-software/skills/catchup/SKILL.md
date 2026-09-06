@@ -13,19 +13,18 @@ Work out what is actually true right now, and hand back one page that says so.
 
 - Kind: workflow
 - Owns: the verified current state of one project or workstream after a continuity gap, rendered into the standard catchup page.
-- Boundary: read-only on the project, and never activated for ordinary progress inside an active task. Never repairs files, cleans, stashes, resets, continues implementation, updates external systems, or rewrites a stale status document. It writes only its own report during reconstruction. If the same request also authorizes repair or continuation, preserve the findings and continue that work under its workflow; this read-only boundary does not cancel the user's execution instruction.
+- Boundary: read-only on the project, and never activated for ordinary progress inside an active task. Never repairs files, cleans, stashes, resets, continues implementation, updates external systems, or rewrites a stale status document. It writes only its own report during reconstruction. If the same request also authorizes repair or continuation, preserve the findings and continue that work under its workflow; this read-only boundary does not cancel the user's execution instruction. Use JamesOS or another live-context adapter only when the requested state genuinely depends on current cross-channel commitments, people, queues, or an explicit request for that system.
 
 ## Do not use this when
 
 - Ordinary progress inside an active task is being reported; let the primary workflow report it -> `done-for-me`
 - The dispute is one isolated completion claim needing verification at its boundary -> `dev-are-you-sure`
-- The project has no contract and truth was never written down -> `project-standard`
 - The direction rather than the state is what is unclear -> `zoom-out`
 - The source is a meeting rather than a repository -> `sum-meet`
 
 ## Procedure
 
-1. Identify the target and the comparison point: project root or workstream, branch and environment where relevant, and the last known checkpoint. Never invent a baseline; record `comparison point not established` when one cannot be recovered cheaply.
+1. Identify the target and the comparison point: project root or workstream, branch and environment where relevant, and the last known checkpoint. Do not treat the current branch, upstream, environment, account, or deployed version as obvious; identify the target the evidence actually covers. Never invent a baseline; record `comparison point not established` when one cannot be recovered cheaply. If durable project truth is missing or contradictory, finish the best evidence-backed catchup first, then recommend `project-standard` as a separate repair workflow.
 2. Take the fast path first. When the request and the accepted project sources already carry fresh, sufficient state, answer from them without excavating history. Build the report from the supplied facts, not from template headings: omit a recently-done section when no delta is established. Preserve exact state words such as dirty, tested and deployed; do not silently expand them into untracked, complete or verified.
 3. Gather the smallest sufficient evidence. For a local project run `python3 scripts/project_snapshot.py <project-root> --checkpoint <known-checkpoint>` from this skill directory, omitting the checkpoint rather than inventing one. Read the contract and status owners that actually exist. Inspect runtime, provider receipts, or recent history only where a material state claim depends on it.
 4. Reconcile four truth classes without merging them. Keep the evidence resolution intact: source presence is not feature completeness; passing tests cover only their stated cases; a deployed revision is not a verified user journey. Claim a change since the checkpoint only when both states show that difference. Unknown history is not proof that no history or backup exists.
