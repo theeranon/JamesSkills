@@ -1,0 +1,108 @@
+{
+  "case": {
+    "id": "core-forward-done-for-me-2",
+    "skill": "done-for-me",
+    "role": "transfer",
+    "prompt": "In the current disposable workspace, repair report.md: source inventory.csv says bolts,8 and washers,12; report currently says bolts 8; washers 21; total 29. Write correct report and read it back. Preserve notes.txt exactly.",
+    "rubric": "Real repair washers12 total20; bolts8; notes unchanged; no unrelated file changes."
+  },
+  "before": {
+    "notes.txt": "KEEP EXACTLY\n",
+    "report.md": "bolts 8; washers 21; total 29\n",
+    "data.csv": "item,value,status\nA,10,active\nB,40,canceled\n",
+    "draft.txt": "Proposal draft\n",
+    "AGENTS.md": "# Fixture contract\nPreserve unrelated files.\n",
+    "inventory.csv": "item,qty\nbolts,8\nwashers,12\n",
+    "sales.csv": "item,qty,price\npen,3,20\nbook,2,90\n",
+    "ai-context/LESSONS.md": "# Lessons\nExisting lesson: preserve facts.\n"
+  },
+  "after": {
+    "notes.txt": "KEEP EXACTLY\n",
+    "report.md": "bolts 8; washers 12; total 20\n",
+    "data.csv": "item,value,status\nA,10,active\nB,40,canceled\n",
+    "draft.txt": "Proposal draft\n",
+    "AGENTS.md": "# Fixture contract\nPreserve unrelated files.\n",
+    "inventory.csv": "item,qty\nbolts,8\nwashers,12\n",
+    "sales.csv": "item,qty,price\npen,3,20\nbook,2,90\n",
+    "ai-context/LESSONS.md": "# Lessons\nExisting lesson: preserve facts.\n"
+  },
+  "response": {
+    "is_error": false,
+    "duration_api_ms": 7624,
+    "num_turns": 4,
+    "stop_reason": "end_turn",
+    "session_id": "4a866eb7-e09a-48d3-8a60-44a205d68061",
+    "total_cost_usd": 0.0419992,
+    "usage": {
+      "input_tokens": 6,
+      "cache_creation_input_tokens": 5226,
+      "cache_read_input_tokens": 9364,
+      "output_tokens": 473,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 5226,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "not_available",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 55,
+          "cache_read_input_tokens": 4869,
+          "cache_creation_input_tokens": 357,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 357
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 636,
+        "outputTokens": 17,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000721,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 6,
+        "outputTokens": 473,
+        "cacheReadInputTokens": 9364,
+        "cacheCreationInputTokens": 5226,
+        "webSearchRequests": 0,
+        "costUSD": 0.0412782,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "report.md now correctly reads: \"bolts 8; washers 12; total 20\" (matches inventory.csv). notes.txt was not touched, preserved exactly.",
+    "ttft_ms": 2366,
+    "ttft_stream_ms": 1216,
+    "time_to_request_ms": 13,
+    "type": "result",
+    "duration_ms": 6386,
+    "uuid": "a69bc0a2-c4d9-4e9b-af04-4e99e493f9cc"
+  },
+  "error": null,
+  "skill_sha256": "681d340e86b710f7ca404a77d2d08361a2a88a431eef66a0ce7c7554a9161717"
+}

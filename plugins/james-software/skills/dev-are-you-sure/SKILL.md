@@ -26,19 +26,19 @@ Go back through what you touched and find the defect no test will ever catch.
 
 ## Procedure
 
-Declare the surface, then consider all five layers and the boundary chain. Repair inside the surface; escalate only decisions required for it. For a bounded source-only verdict, return that verdict and execution limit directly; do not print five empty or non-applicable sections. Keep non-applicable checks internal or group them briefly; a clean arithmetic helper does not need a deployment checklist. A requested full delivery review still requires every applicable boundary.
+Declare the surface, then sweep all five layers and the boundary chain. Repair inside the surface; escalate what needs a decision.
 
-1. **Integrity.** Simulate sequential use, not just the happy path: navigate away and back, act twice, act while loading, act after failure. For each transition name the exact line that resets the state. If the stated transition requires a reset and none exists, that is the defect. Pure functions or components without that transition need no invented state machinery. Preserve error propagation unless the task requires changing it.
+1. **Integrity.** Simulate sequential use, not just the happy path: navigate away and back, act twice, act while loading, act after failure. For each transition name the exact line that resets the state. If no such line exists, that is the defect.
 2. **Architecture.** Find hardcoded values, secrets, magic numbers, credentials in source, and logic sitting in the wrong layer. Convert missing configuration into an explicit input contract rather than a plausible default.
 3. **Hygiene.** Remove debug output, commented-out blocks, dead branches, unused imports, orphaned variables, and scratch filenames that would be read as intentional by whoever inherits this.
 4. **Interface.** Apply the installed visual and interaction standard rather than restating it here. Report anything that standard forbids and cannot be fixed inside the surface.
 5. **Longevity.** Name what breaks on the next dependency or platform update, and rename anything whose meaning depends on knowing this conversation.
 
-Then walk the boundary chain and mark each link passed, failed, not tested, or not applicable: local source and stored state; provider or API boundary with an authenticated receipt; the real user journey including permissions and persistence; and the deployed identity, version, and recipient-visible result. Evidence from one target never transfers to another. Also preserve coverage within a target: an authenticated staging receipt proves only the observed route/action, not all API behavior or persistence. A missing test is untested, not a demonstrated product failure. Source reasoning is not an executed simulation; never invent lines, receipts, or future breakage to fill a checklist.
+Then walk the boundary chain and mark each link passed, failed, not tested, or not applicable: local source and stored state; provider or API boundary with an authenticated receipt; the real user journey including permissions and persistence; and the deployed identity, version, and recipient-visible result. Evidence from one target never transfers to another.
 
 ## Stop when
 
-Every applicable layer and boundary has an evidence-backed result against the declared surface; non-applicable checks may be grouped rather than expanded, every repairable finding is repaired, and every remaining gap names its exact owner. Untested is reported as untested and never collapsed into done.
+Five layers and four boundary links are each marked with a result against the declared surface, every repairable finding is repaired, and every remaining gap names its exact owner. Untested is reported as untested and never collapsed into done.
 
 ## Principles
 
@@ -54,7 +54,7 @@ Every applicable layer and boundary has an evidence-backed result against the de
 
 ## Hand back
 
-The declared surface, repaired code or clean verdict, material findings and verification limits. For a full delivery review include all applicable boundary results; for a supplied snippet return the requested correction and its execution limit without unrelated deployment work.
+The declared surface, five layers and four boundary links each marked, the repaired code, and every remaining gap with its owner and the exact evidence still missing.
 
 ## Sources
 

@@ -1,0 +1,8 @@
+--- a/plugins/james-productivity/skills/grill-me/SKILL.md
++++ b/plugins/james-productivity/skills/grill-me/SKILL.md
+@@ -31 +31 @@
+-4. Put a specific recommendation and its reason inside every question. A question without a recommendation transfers work to the user instead of removing it.
++4. Put a specific recommendation and its evidence-based reason inside every question. Do not infer implementation complexity, cost or expected impact solely from frequency or urgency. When the evidence supports only a provisional preference, name the material uncertainty rather than inventing a stronger rationale. A question without a recommendation transfers work to the user instead of removing it.
+@@ -34 +34 @@
+-7. Report progress each round as rounds taken, decisions settled, and branches remaining.
++7. Report progress when it helps the ongoing interview, using only decisions and rounds actually established. If the user asks for the next question only, return that question with its recommendation and reason; keep the dependency tree private.

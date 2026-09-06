@@ -1,0 +1,8 @@
+--- a/plugins/james-core/skills/hand-it-off/SKILL.md
++++ b/plugins/james-core/skills/hand-it-off/SKILL.md
+@@ -31 +31 @@
+-- `proactive-habits` — mode: decide what is yours, batch the rest to one question.
++- `proactive-habits` — mode: act on relevant authorized work and ask only for necessary unresolved decisions.
+@@ -61 +61 @@
+-6. When nothing fits, do the work directly. Repeated uncovered work is discovery evidence, not permission to package.
++6. Routing is internal coordination, not a reason to return only a skill name when the user requested an outcome. Continue the requested work with the selected owner; when an unavailable sibling cannot be loaded, complete the bounded task directly where possible and disclose any actual capability limit. When nothing fits, do the work directly. Repeated uncovered work is discovery evidence, not permission to package.

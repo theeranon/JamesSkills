@@ -1,0 +1,11 @@
+--- a/plugins/james-software/skills/make-it-james-ux/SKILL.md
++++ b/plugins/james-software/skills/make-it-james-ux/SKILL.md
+@@ -30,0 +31,2 @@
++**Preserve the requested content and action.** Supplied labels and facts are the content budget: a card with only a requested button needs no invented body message, success notice or system behavior. Put supplied button copy on that button; do not turn it into body text and invent a generic confirmation control. Add a control only when its action belongs to the requested flow. Required confirmations for destructive or externally binding actions remain; optimistic undo applies only where reversal is real and authorized.
++
+@@ -37 +39 @@
+-**Verify by rendering.** Run `python3 scripts/lint_outcome.py --strict <output-path>` from this skill directory for supported outputs. For an offline portable single file, run `python3 scripts/embed_ibm_plex_thai.py <input.html> --output <portable.html>` and confirm no remote font links remain. A CSS font declaration is never proof that the font loaded.
++**Verify by rendering.** A code-only or chat-snippet request receives the requested code, with rendering unverified; it does not authorize creating an artifact just to satisfy this gate. For a rendered deliverable, run `python3 scripts/lint_outcome.py --strict <output-path>` from this skill directory for supported outputs. For an offline portable single file, run `python3 scripts/embed_ibm_plex_thai.py <input.html> --output <portable.html>` and confirm no remote font links remain. A CSS font declaration is never proof that the font loaded.
+@@ -60 +62 @@
+-The rendered artifact, which system was followed and why, the strict lint result, the rendered inspection covering typography, density, radius, and interface copy, and any visual gate that remains open.
++The requested code or rendered artifact. For a rendered deliverable, report the system followed, actual lint/render evidence and material open gates. For code-only output, do not append process narration or claim fonts loaded.

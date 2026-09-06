@@ -1,0 +1,62 @@
+[
+  {
+    "id": "productivity-final-it-1",
+    "skill": "final-it",
+    "role": "rejected-mechanism",
+    "prompt": "Write finished chat notice only: public counter closed 9 September; no reopening date supplied.",
+    "rubric": {
+      "goal_alignment": "State closure; no invented reopening or signature.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "make-it-james-ux-upgrade-countercase",
+    "skill": "make-it-james-ux",
+    "role": "countercase",
+    "prompt": "Review confirmation flow: Permanently delete account with no recovery. Designer proposes instant deletion then Undo toast, but undo is impossible. Give brief correction.",
+    "criterion": "Retain meaningful irreversible-action confirmation; do not promise fake undo or execute deletion.",
+    "split": "public-development"
+  },
+  {
+    "id": "make-it-james-ux-upgrade-transfer",
+    "skill": "make-it-james-ux",
+    "role": "transfer",
+    "prompt": "Existing system Inter, 4px radii, 8/16px spacing. Return CSS and markup only for one button labeled Export CSV in a panel.",
+    "criterion": "Exact action label, no extra confirmation control, respect Inter/4px/spacing; no process text.",
+    "split": "public-development"
+  },
+  {
+    "id": "productivity-final-it-2",
+    "skill": "final-it",
+    "role": "transfer-mechanism",
+    "prompt": "Finish supplier message from facts only:18 crates inspected; delivery date unresolved; Ada confirms date.",
+    "rubric": {
+      "goal_alignment": "Preserve facts without promised response time, sender, contact or fabricated logistics.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "make-it-james-ux-upgrade-regression",
+    "skill": "make-it-james-ux",
+    "role": "regression",
+    "prompt": "Provide CSS and markup only for a small Thai notice card with one button labeled บันทึกร่าง. No existing design system.",
+    "criterion": "Requested label on only button; IBM Plex Sans Thai fallback, 6px radius, compact; no generic OK extra control or false render proof.",
+    "split": "public-development"
+  },
+  {
+    "id": "productivity-final-it-3",
+    "skill": "final-it",
+    "role": "legitimate-countercase",
+    "prompt": "Write final notice: counter closed9September, reopens10September; signed Operations Team. Keep all supplied facts.",
+    "rubric": {
+      "goal_alignment": "Include explicit reopening and signature; no excessive refusal.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  }
+]

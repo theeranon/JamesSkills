@@ -1,0 +1,16 @@
+--- a/plugins/james-software/skills/catchup/SKILL.md
++++ b/plugins/james-software/skills/catchup/SKILL.md
+@@ -29 +29 @@
+-2. Take the fast path first. When the request and the accepted project sources already carry fresh, sufficient state, answer from them without excavating history.
++2. Take the fast path first. When the request and the accepted project sources already carry fresh, sufficient state, answer from them without excavating history. Build the report from the supplied facts, not from template headings: omit a recently-done section when no delta is established. Preserve exact state words such as dirty, tested and deployed; do not silently expand them into untracked, complete or verified.
+@@ -31 +31 @@
+-4. Reconcile four truth classes without merging them.
++4. Reconcile four truth classes without merging them. Keep the evidence resolution intact: source presence is not feature completeness; passing tests cover only their stated cases; a deployed revision is not a verified user journey. Claim a change since the checkpoint only when both states show that difference. Unknown history is not proof that no history or backup exists.
+@@ -37,2 +37,2 @@
+-6. Render the report by duplicating [assets/catchup-report.html](assets/catchup-report.html) and replacing every token. The template is fixed so that every project's catchup page looks identical and can be read at a glance; adapt content, never the shape.
+-7. Inspect the rendered page in print emulation before delivering. Deliver HTML; produce a PDF only when it is explicitly requested.
++6. Follow an explicit chat-only or text-only request directly; keep the same factual coverage without creating a file or claiming rendering. Otherwise render the report by duplicating [assets/catchup-report.html](assets/catchup-report.html) and replacing every token. The template is fixed so that every project's catchup page looks identical and can be read at a glance; adapt content, never the shape.
++7. When delivering a page, inspect the rendered page in print emulation before delivering. Deliver HTML; produce a PDF only when it is explicitly requested.
+@@ -60 +60 @@
+-One rendered catchup page naming the target, the current situation, what was recently done, the live checklist, what is open with owners, visible conflicts and unknowns, the state of the last task, and the single next action.
++The requested chat report or rendered page: target and comparison point, current evidence, material conflict or blocker, and one safe next action. Include history, checklist and last-task state only where established and useful; do not repeat current facts under multiple headings.

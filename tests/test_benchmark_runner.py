@@ -19,6 +19,23 @@ class BenchmarkTests(unittest.TestCase):
         self.assertEqual(len(manifest['skills']), 22)
         self.assertEqual(len(cases), 66)
 
+    def test_alternate_suite_replays_and_rejects_duplicate_cases(self):
+        source = ROOT / 'tests/benchmarks/portfolio-upgrade.json'
+        _, cases = b.validate(source)
+        self.assertEqual(len({c['skill'] for c in cases}), 22)
+        with tempfile.TemporaryDirectory() as temp:
+            args = Namespace(skill='all', case=cases[0]['id'], case_file=str(source),
+                             trials=1, timeout=2, adapter=None, candidates=None,
+                             seed=17, output=str(Path(temp) / 'out'))
+            b.run(args)
+            attempts = [json.loads(line) for line in (Path(args.output) / 'attempts.jsonl').read_text().splitlines()]
+            self.assertEqual(len(attempts), 2)
+            self.assertEqual({a['task_hash'] for a in attempts}, {b.digest(cases[0]['prompt'])})
+            duplicate = Path(temp) / 'duplicate.json'
+            duplicate.write_text(json.dumps(cases + [cases[0]]))
+            with self.assertRaisesRegex(AssertionError, 'duplicate case id'):
+                b.validate(duplicate)
+
     def test_wrong_owner_fails_and_json_order_does_not_matter(self):
         check = [{'type': 'json_value', 'id': 'owner', 'key': 'owner', 'allowed': ['make-it-james']}]
         self.assertFalse(b.check_response('{"owner":"zoom-out"}', check)[0]['passed'])

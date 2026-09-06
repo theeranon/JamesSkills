@@ -24,10 +24,10 @@ def load(path):
     return json.loads(Path(path).read_text())
 
 
-def validate():
+def validate(case_file=None):
     skills = {s['name']: s for s in load(ROOT / 'catalog.json')['skills'] if s['status'] == 'promoted'}
     manifest = load(DATA / 'manifest.json')
-    cases = load(DATA / 'development.json') + load(DATA / 'remaining-development.json')
+    cases = load(case_file) if case_file else load(DATA / 'development.json') + load(DATA / 'remaining-development.json')
     assert set(manifest['skills']) == set(skills), 'catalog coverage differs'
     assert len({c['id'] for c in cases}) == len(cases), 'duplicate case id'
     for name, item in manifest['skills'].items():
@@ -35,7 +35,8 @@ def validate():
         expected = f"plugins/{skills[name]['category']}/skills/{name}/SKILL.md"
         assert item['canonical'] == expected and (ROOT / expected).is_file()
         own = [c for c in cases if c['skill'] == name]
-        assert item['state'] == ('public-development' if own else 'card-only')
+        if not case_file:
+            assert item['state'] == ('public-development' if own else 'card-only')
         if own:
             assert {c['role'] for c in own} in ({'rejected-mechanism', 'transfer-mechanism', 'legitimate-countercase'}, {'responsibility', 'transfer-mechanism', 'legitimate-countercase'})
     for case in cases:
@@ -95,7 +96,7 @@ def invoke(command, payload, timeout):
 
 
 def run(args):
-    manifest, cases = validate()
+    manifest, cases = validate(getattr(args, 'case_file', None))
     pilot = {'proactive-habits', 'done-for-me', 'make-it-james', 'sum-meet', 'hand-it-off'}
     selected = cases if args.skill == 'all' else [c for c in cases if c['skill'] in pilot] if args.skill == 'pilot' else [c for c in cases if c['skill'] == args.skill]
     if args.case:
@@ -172,6 +173,7 @@ def main():
     parser.add_argument('--validate', action='store_true')
     parser.add_argument('--skill', default='pilot')
     parser.add_argument('--case', help='One public probe ID for a bounded A/B smoke run')
+    parser.add_argument('--case-file', help='Alternate public development suite with the same case schema')
     parser.add_argument('--adapter', help='JSON config for explicitly selected model subprocess; absent means dry-run')
     parser.add_argument('--candidates', help='JSON map skill name to candidate SKILL.md path; enables C')
     parser.add_argument('--output', help='New output directory outside the repository recommended')
@@ -181,7 +183,7 @@ def main():
     args = parser.parse_args()
     try:
         if args.validate:
-            manifest, cases = validate()
+            manifest, cases = validate(args.case_file)
             print(f"Structural fixture validation: {len(manifest['skills'])} skills, {len(cases)} public probes. No model score.")
         else:
             if not args.output:

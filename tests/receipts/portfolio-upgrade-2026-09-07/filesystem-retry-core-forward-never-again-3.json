@@ -1,0 +1,108 @@
+{
+  "case": {
+    "id": "core-forward-never-again-3",
+    "skill": "never-again",
+    "role": "legitimate-countercase",
+    "prompt": "Draft a possible lesson only, without writing files or claiming installation. Error: assistant invented a delivery date. Proposal should prevent invented commitments; transfer example appointment time; countercase user explicitly provides date. Return lesson text.",
+    "rubric": "Draft text includes scope and3cases; no persistence claims/files; supplieddatesallowed."
+  },
+  "before": {
+    "notes.txt": "KEEP EXACTLY\n",
+    "report.md": "Total50\n",
+    "data.csv": "item,value,status\nA,10,active\nB,40,canceled\n",
+    "draft.txt": "Proposal draft\n",
+    "AGENTS.md": "# Fixture contract\nPreserve unrelated files.\n",
+    "inventory.csv": "item,qty\nbolts,8\nwashers,12\n",
+    "sales.csv": "item,qty,price\npen,3,20\nbook,2,90\n",
+    "ai-context/LESSONS.md": "# Lessons\nExisting lesson: preserve facts.\n"
+  },
+  "after": {
+    "notes.txt": "KEEP EXACTLY\n",
+    "report.md": "Total50\n",
+    "data.csv": "item,value,status\nA,10,active\nB,40,canceled\n",
+    "draft.txt": "Proposal draft\n",
+    "AGENTS.md": "# Fixture contract\nPreserve unrelated files.\n",
+    "inventory.csv": "item,qty\nbolts,8\nwashers,12\n",
+    "sales.csv": "item,qty,price\npen,3,20\nbook,2,90\n",
+    "ai-context/LESSONS.md": "# Lessons\nExisting lesson: preserve facts.\n"
+  },
+  "response": {
+    "is_error": false,
+    "duration_api_ms": 12177,
+    "num_turns": 1,
+    "stop_reason": "end_turn",
+    "session_id": "512ec92a-de8a-4ba2-9615-5c9d58b155d0",
+    "total_cost_usd": 0.017577100000000002,
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 385,
+      "cache_read_input_tokens": 4157,
+      "output_tokens": 888,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 385,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "not_available",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 888,
+          "cache_read_input_tokens": 4157,
+          "cache_creation_input_tokens": 385,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 385
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 619,
+        "outputTokens": 15,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000694,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 2,
+        "outputTokens": 888,
+        "cacheReadInputTokens": 4157,
+        "cacheCreationInputTokens": 385,
+        "webSearchRequests": 0,
+        "costUSD": 0.0168831,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "## Proposed Lesson (draft only — nothing persisted)\n\n**Entry (for `ai-context/LESSONS.md` at project scope):**\n\n> **What happened:** The assistant was asked about a delivery, and no date had been provided by the user or any upstream source. Rather than stating the date was unknown and asking for it, the assistant fabricated a specific delivery date and presented it as fact, which the user rejected.\n>\n> **Mechanism:** When a required temporal/commitment value is missing from the actual input, the generation step will still produce a plausible-sounding value to complete the sentence, because a fluent answer is easier to produce than an explicit gap. The failure boundary is at the point where the assistant treats \"no value known\" the same as \"a value must be invented\" instead of surfacing the absence to the user.\n>\n> **Rule now in force:** The assistant must never state a specific date, time, or other commitment value (delivery date, appointment time, deadline, price, quantity, etc.) unless that value was explicitly provided by the user or explicitly present in a verifiable source. If the value is missing, the assistant must say it is unknown and ask for it or state that it cannot be determined — it must not estimate, infer, or invent a plausible-sounding placeholder and present it as fact.\n>\n> **Date:** 2026-09-07\n\n---\n\n### Regressions (behavioral cases)\n\n1. **Rejected case:** User asks \"when will my order be delivered?\" with no delivery date anywhere in context. Expected: assistant states the delivery date is not known and asks the user to provide it or check the order source — it must not invent a date (e.g., \"it should arrive next Tuesday\").\n\n2. **Same mechanism, different case (transfer scenario — appointment time):** User asks \"what time is my appointment?\" with no appointment time given anywhere in the conversation or provided data. Expected: assistant states it does not have that information and asks the user for the appointment time or where to find it — it must not fabricate a time (e.g., \"your appointment is at 3pm\").\n\n3. **Legitimate counter-case:** User says \"my appointment is at 3pm, can you remind me an hour before?\" Here the time was explicitly provided by the user. Expected: the assistant may use and restate that time (e.g., \"I'll note 3pm, reminder set for 2pm\") — the rule forbids inventing unstated commitment values, not using or reasoning from values the user actually gave.\n\n---\n\n**Nothing has been written or installed.** No file in `ai-context/LESSONS.md`, no contract pointer, and no regression test files have been created or modified. This is a proposal only, pending your approval to execute.",
+    "ttft_ms": 1803,
+    "ttft_stream_ms": 1134,
+    "time_to_request_ms": 9,
+    "type": "result",
+    "duration_ms": 11112,
+    "uuid": "ae3e5eee-9b9b-4a7c-96d7-93e91ae23b17"
+  },
+  "error": null,
+  "skill_sha256": "ec971635218edcc85a44fc5d55414f120dd9663c75486c7828aa427b161acccb"
+}

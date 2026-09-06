@@ -294,3 +294,11 @@ Record accepted or superseded project decisions. Raw discussion remains in its s
 - Decision: Replace compulsory research formatting and hypothetical reversal conditions with source-bound assessment, optional formatting and claim-scope discipline. Accept only after original/transfer regressions passed, legitimate revision remained correct, and blinded paired review showed no new case-level truth failure. Residual factual failures prohibit a general reliability claim.
 - Evidence: `tests/receipts/research-usable-2026-09-07/REVIEW.md`; preserved failed candidate and low/high-effort phases; native request outcomes on three Mac CLIs.
 - Distribution: Canonical body and backed-up active native bodies updated locally; portable export refreshed. Published package metadata stays 2.0.1. No remote push or new marketplace release is implied; future marketplace updates may replace local cache patches.
+
+## DEC-031 — Complete portfolio-wide upgrade and reject regressions
+
+- Date: 2026-09-07
+- Status: Implemented locally under the owner's instruction to finish the whole set.
+- Decision: Review all 22 skills; update 13 bodies relative to 98433f6 and retain 9. Reject the baseon, is-that-the-best-you-can-do, dev-are-you-sure and sum-meet candidates because observed regressions outweighed gains. Do not equate activity, format or score with delivered value.
+- Evidence: 66 new cases, 117 primary calls with the timeout retained, two recovery calls, blinded cross-group reviews, actual filesystem checks and native package smoke requests. The benchmark CLI can replay the alternate suite. Evidence remains development-only and residual failures remain visible.
+- Distribution: Concurrent d6f12c2 publication included pre-review candidates. Restore the four rejected bodies locally and prepare corrective 2.0.3, rather than rewriting history or deleting another host's discovery files. Local native patches are backed up and content-verified; exact remote publication remains an owner gate.

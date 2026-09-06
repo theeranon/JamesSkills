@@ -1,0 +1,374 @@
+{
+  "w1-0": {
+    "id": "make-it-james-ux-upgrade-transfer",
+    "skill": "make-it-james-ux",
+    "arm": "B",
+    "schedule_index": 33
+  },
+  "w1-1": {
+    "id": "core-forward-proactive-habits-2",
+    "skill": "proactive-habits",
+    "arm": "C",
+    "schedule_index": 44
+  },
+  "w1-2": {
+    "id": "core-forward-is-that-the-best-you-can-do-3",
+    "skill": "is-that-the-best-you-can-do",
+    "arm": "C",
+    "schedule_index": 31
+  },
+  "w1-3": {
+    "id": "dev-are-you-sure-upgrade-countercase",
+    "skill": "dev-are-you-sure",
+    "arm": "B",
+    "schedule_index": 42
+  },
+  "w1-4": {
+    "id": "core-forward-is-that-the-best-you-can-do-1",
+    "skill": "is-that-the-best-you-can-do",
+    "arm": "C",
+    "schedule_index": 11
+  },
+  "w1-5": {
+    "id": "productivity-coach-me-2",
+    "skill": "coach-me",
+    "arm": "C",
+    "schedule_index": 28
+  },
+  "w1-6": {
+    "id": "core-forward-never-again-1",
+    "skill": "never-again",
+    "arm": "B",
+    "schedule_index": 17
+  },
+  "w1-7": {
+    "id": "productivity-sum-meet-2",
+    "skill": "sum-meet",
+    "arm": "C",
+    "schedule_index": 13
+  },
+  "w1-8": {
+    "id": "proactive-dev-upgrade-regression",
+    "skill": "proactive-dev",
+    "arm": "C",
+    "schedule_index": 58
+  },
+  "w1-9": {
+    "id": "productivity-one-page-pls-1",
+    "skill": "one-page-pls",
+    "arm": "C",
+    "schedule_index": 15
+  },
+  "w1-10": {
+    "id": "productivity-zoom-out-3",
+    "skill": "zoom-out",
+    "arm": "C",
+    "schedule_index": 30
+  },
+  "w1-11": {
+    "id": "catchup-upgrade-countercase",
+    "skill": "catchup",
+    "arm": "B",
+    "schedule_index": 52
+  },
+  "w1-12": {
+    "id": "proactive-dev-upgrade-transfer",
+    "skill": "proactive-dev",
+    "arm": "C",
+    "schedule_index": 37
+  },
+  "w1-13": {
+    "id": "dev-are-you-sure-upgrade-regression",
+    "skill": "dev-are-you-sure",
+    "arm": "B",
+    "schedule_index": 46
+  },
+  "w1-14": {
+    "id": "catchup-upgrade-transfer",
+    "skill": "catchup",
+    "arm": "B",
+    "schedule_index": 50
+  },
+  "w1-15": {
+    "id": "make-it-james-ux-upgrade-countercase",
+    "skill": "make-it-james-ux",
+    "arm": "B",
+    "schedule_index": 21
+  },
+  "w1-16": {
+    "id": "core-forward-are-you-sure-3",
+    "skill": "are-you-sure",
+    "arm": "B",
+    "schedule_index": 24
+  },
+  "w1-17": {
+    "id": "core-forward-proactive-habits-1",
+    "skill": "proactive-habits",
+    "arm": "C",
+    "schedule_index": 2
+  },
+  "w1-18": {
+    "id": "project-standard-upgrade-transfer",
+    "skill": "project-standard",
+    "arm": "B",
+    "schedule_index": 48
+  },
+  "w1-19": {
+    "id": "core-forward-i-have-adhd-1",
+    "skill": "i-have-adhd",
+    "arm": "C",
+    "schedule_index": 59
+  },
+  "w1-20": {
+    "id": "productivity-zoom-out-3",
+    "skill": "zoom-out",
+    "arm": "B",
+    "schedule_index": 29
+  },
+  "w1-21": {
+    "id": "proactive-dev-upgrade-countercase",
+    "skill": "proactive-dev",
+    "arm": "C",
+    "schedule_index": 55
+  },
+  "w1-22": {
+    "id": "proactive-dev-upgrade-countercase",
+    "skill": "proactive-dev",
+    "arm": "B",
+    "schedule_index": 56
+  },
+  "w1-23": {
+    "id": "core-forward-never-again-1",
+    "skill": "never-again",
+    "arm": "C",
+    "schedule_index": 18
+  },
+  "w1-24": {
+    "id": "catchup-upgrade-countercase",
+    "skill": "catchup",
+    "arm": "C",
+    "schedule_index": 51
+  },
+  "w1-25": {
+    "id": "proactive-dev-upgrade-regression",
+    "skill": "proactive-dev",
+    "arm": "B",
+    "schedule_index": 57
+  },
+  "w1-26": {
+    "id": "productivity-baseon-3",
+    "skill": "baseon",
+    "arm": "B",
+    "schedule_index": 8
+  },
+  "w1-27": {
+    "id": "core-forward-is-that-the-best-you-can-do-2",
+    "skill": "is-that-the-best-you-can-do",
+    "arm": "C",
+    "schedule_index": 5
+  },
+  "w1-28": {
+    "id": "productivity-zoom-out-1",
+    "skill": "zoom-out",
+    "arm": "B",
+    "schedule_index": 7
+  },
+  "w1-29": {
+    "id": "productivity-grill-me-2",
+    "skill": "grill-me",
+    "arm": "B",
+    "schedule_index": 26
+  },
+  "w1-30": {
+    "id": "productivity-sum-meet-2",
+    "skill": "sum-meet",
+    "arm": "B",
+    "schedule_index": 12
+  },
+  "w1-31": {
+    "id": "productivity-baseon-3",
+    "skill": "baseon",
+    "arm": "C",
+    "schedule_index": 9
+  },
+  "w1-32": {
+    "id": "project-standard-upgrade-transfer",
+    "skill": "project-standard",
+    "arm": "C",
+    "schedule_index": 47
+  },
+  "w1-33": {
+    "id": "core-forward-i-have-adhd-3",
+    "skill": "i-have-adhd",
+    "arm": "C",
+    "schedule_index": 25
+  },
+  "w1-34": {
+    "id": "core-forward-is-that-the-best-you-can-do-1",
+    "skill": "is-that-the-best-you-can-do",
+    "arm": "B",
+    "schedule_index": 10
+  },
+  "w1-35": {
+    "id": "productivity-baseon-2",
+    "skill": "baseon",
+    "arm": "C",
+    "schedule_index": 60
+  },
+  "w1-36": {
+    "id": "productivity-final-it-1",
+    "skill": "final-it",
+    "arm": "C",
+    "schedule_index": 0
+  },
+  "w1-37": {
+    "id": "productivity-baseon-1",
+    "skill": "baseon",
+    "arm": "B",
+    "schedule_index": 40
+  },
+  "w1-38": {
+    "id": "dev-are-you-sure-upgrade-countercase",
+    "skill": "dev-are-you-sure",
+    "arm": "C",
+    "schedule_index": 43
+  },
+  "w1-39": {
+    "id": "productivity-final-it-1",
+    "skill": "final-it",
+    "arm": "B",
+    "schedule_index": 1
+  },
+  "w1-40": {
+    "id": "productivity-one-page-pls-1",
+    "skill": "one-page-pls",
+    "arm": "B",
+    "schedule_index": 14
+  },
+  "w1-41": {
+    "id": "core-forward-proactive-habits-3",
+    "skill": "proactive-habits",
+    "arm": "C",
+    "schedule_index": 39
+  },
+  "w1-42": {
+    "id": "core-forward-done-for-me-2",
+    "skill": "done-for-me",
+    "arm": "C",
+    "schedule_index": 19
+  },
+  "w1-43": {
+    "id": "core-forward-are-you-sure-2",
+    "skill": "are-you-sure",
+    "arm": "B",
+    "schedule_index": 54
+  },
+  "w1-44": {
+    "id": "core-forward-are-you-sure-3",
+    "skill": "are-you-sure",
+    "arm": "C",
+    "schedule_index": 23
+  },
+  "w1-45": {
+    "id": "core-forward-is-that-the-best-you-can-do-2",
+    "skill": "is-that-the-best-you-can-do",
+    "arm": "B",
+    "schedule_index": 4
+  },
+  "w1-46": {
+    "id": "proactive-dev-upgrade-transfer",
+    "skill": "proactive-dev",
+    "arm": "B",
+    "schedule_index": 38
+  },
+  "w1-47": {
+    "id": "make-it-james-ux-upgrade-countercase",
+    "skill": "make-it-james-ux",
+    "arm": "C",
+    "schedule_index": 22
+  },
+  "w1-48": {
+    "id": "productivity-zoom-out-1",
+    "skill": "zoom-out",
+    "arm": "C",
+    "schedule_index": 6
+  },
+  "w1-49": {
+    "id": "core-forward-research-it-2",
+    "skill": "research-it",
+    "arm": "C",
+    "schedule_index": 16
+  },
+  "w1-50": {
+    "id": "dev-are-you-sure-upgrade-regression",
+    "skill": "dev-are-you-sure",
+    "arm": "C",
+    "schedule_index": 45
+  },
+  "w1-51": {
+    "id": "productivity-grill-me-2",
+    "skill": "grill-me",
+    "arm": "C",
+    "schedule_index": 27
+  },
+  "w1-52": {
+    "id": "productivity-sum-meet-3",
+    "skill": "sum-meet",
+    "arm": "C",
+    "schedule_index": 35
+  },
+  "w1-53": {
+    "id": "catchup-upgrade-transfer",
+    "skill": "catchup",
+    "arm": "C",
+    "schedule_index": 49
+  },
+  "w1-54": {
+    "id": "core-forward-done-for-me-2",
+    "skill": "done-for-me",
+    "arm": "B",
+    "schedule_index": 20
+  },
+  "w1-55": {
+    "id": "make-it-james-ux-upgrade-transfer",
+    "skill": "make-it-james-ux",
+    "arm": "C",
+    "schedule_index": 34
+  },
+  "w1-56": {
+    "id": "productivity-baseon-1",
+    "skill": "baseon",
+    "arm": "C",
+    "schedule_index": 41
+  },
+  "w1-57": {
+    "id": "core-forward-is-that-the-best-you-can-do-3",
+    "skill": "is-that-the-best-you-can-do",
+    "arm": "B",
+    "schedule_index": 32
+  },
+  "w1-58": {
+    "id": "productivity-coach-me-1",
+    "skill": "coach-me",
+    "arm": "C",
+    "schedule_index": 3
+  },
+  "w1-59": {
+    "id": "productivity-sum-meet-3",
+    "skill": "sum-meet",
+    "arm": "B",
+    "schedule_index": 36
+  },
+  "w1-60": {
+    "id": "core-forward-are-you-sure-2",
+    "skill": "are-you-sure",
+    "arm": "C",
+    "schedule_index": 53
+  },
+  "w1-61": {
+    "id": "productivity-baseon-2",
+    "skill": "baseon",
+    "arm": "B",
+    "schedule_index": 61
+  }
+}

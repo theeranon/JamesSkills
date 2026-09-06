@@ -1,0 +1,79 @@
+[
+  {
+    "phase": "initial",
+    "host": "Codex CLI",
+    "skill": "final-it",
+    "exit_code": 0,
+    "response": "The store will be closed on 18 April for stock count."
+  },
+  {
+    "phase": "initial",
+    "host": "Antigravity CLI",
+    "skill": "final-it",
+    "exit_code": 0,
+    "response": "### Finished Customer Notice\n\n> **Notice: Store Closure**\n> \n> Please be advised that the store will be closed on 18 April for stock count.\n\n---\n\n### Delivery Details\n\n- **Chosen Format:** Plain markdown text / single notice card. It is the simplest and clearest form for a direct customer notice.\n- **Verification:** Verified strictly against the provided source statement (`Store closed on 18 April for stock count.`). No reopening dates, contact details, sender names, placeholders, or unstated facts were introduced. Temporal scope is strictly limited to 18 April.\n- **Content Gates:** None.\n"
+  },
+  {
+    "phase": "initial",
+    "host": "Codex CLI",
+    "skill": "make-it-james-ux",
+    "exit_code": 0,
+    "response": "<button type=\"button\" style=\"font-family: Arial, sans-serif; border-radius: 4px;\">Save draft</button>"
+  },
+  {
+    "phase": "initial",
+    "host": "Codex CLI",
+    "skill": "are-you-sure",
+    "exit_code": 0,
+    "response": "Total: 400\nOutstanding: 250"
+  },
+  {
+    "phase": "initial",
+    "host": "Antigravity CLI",
+    "skill": "are-you-sure",
+    "exit_code": 0,
+    "response": "Total: 400\nOutstanding: 250\n"
+  },
+  {
+    "phase": "initial",
+    "host": "Antigravity CLI",
+    "skill": "make-it-james-ux",
+    "exit_code": 0,
+    "response": "```html\n<button type=\"button\" style=\"font-family: Arial, sans-serif; border-radius: 4px; padding: 8px 16px; font-size: 14px; line-height: 1.4; border: 1px solid #ccc; background-color: #fff; color: #333; cursor: pointer;\">Save draft</button>\n```\n"
+  },
+  {
+    "phase": "initial",
+    "host": "Claude Code",
+    "skill": "make-it-james-ux",
+    "exit_code": 0,
+    "response": "```html\n<button style=\"font-family: Arial, sans-serif; border-radius: 4px;\">Save draft</button>\n```\n\nCode only, not rendered."
+  },
+  {
+    "phase": "initial",
+    "host": "Claude Code",
+    "skill": "final-it",
+    "exit_code": 0,
+    "response": "Store closed on 18 April for stock count."
+  },
+  {
+    "phase": "initial",
+    "host": "Claude Code",
+    "skill": "are-you-sure",
+    "exit_code": 0,
+    "response": "Total: 400\nOutstanding: 250"
+  },
+  {
+    "phase": "followup",
+    "host": "Antigravity CLI",
+    "skill": "final-it",
+    "exit_code": 0,
+    "response": "**Customer Notice**\n\nThis store will be closed on 18 April for stock count.\n"
+  },
+  {
+    "phase": "followup",
+    "host": "Claude Code",
+    "skill": "make-it-james-ux",
+    "exit_code": 0,
+    "response": "```html\n<button style=\"font-family: Arial, sans-serif; border-radius: 4px;\">Save draft</button>\n```\n\nCode only, not rendered."
+  }
+]

@@ -1,0 +1,10 @@
+--- a/plugins/james-productivity/skills/baseon/SKILL.md
++++ b/plugins/james-productivity/skills/baseon/SKILL.md
+@@ -29 +29 @@
+-2. List the library with `python3 scripts/knowledge_library.py list` from this skill directory and select the smallest relevant lens set. A lens is not invoked merely because its name appeared in the request. Never select a `draft` or `retired` pack for a real decision.
++2. For a bounded analysis of supplied lens excerpts, use those excerpts without claiming full-pack review. Otherwise list the library with `python3 scripts/knowledge_library.py list` from this skill directory and select the smallest relevant lens set. A lens is not invoked merely because its name appeared in the request. Never select a `draft` or `retired` pack for a real decision.
+@@ -33,2 +33,2 @@
+-6. When lenses disagree, show the disagreement. Never average several frameworks into one synthetic type.
+-7. End with a reversible experiment carrying a success rule and a revision rule. Drop any lens that did not change the question, the options, or the action.
++6. Before interpreting, identify exactly what each supplied excerpt asserts. A value named by a lens is not evidence for additional mechanisms, causal effects or prescriptions. Keep the source layer to that actual assertion; mark applications as your inference and omit unsupported elaboration. Apply only claims supported by the selected source. Do not invent a lens's mechanisms, predictions or opposition to another lens to fill the four layers. When lenses disagree, show the actual disagreement; when they address different outcomes compatibly, say so. Never average several frameworks into one synthetic type.
++7. End with a reversible experiment carrying a success rule and a revision rule. Check the proposed measurement against the actual constraints: an outcome still expected under the hypothesis cannot refute it. Distinguish a proposal from an action taken; do not invent resources or authority. Drop any lens that did not change the question, the options, or the action.

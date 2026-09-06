@@ -59,7 +59,7 @@ On Windows invoke the same helper with `python` when `python3` is not on PATH.
 
 ## Hand back
 
-The requested code or rendered artifact. For a rendered deliverable, report the system followed, actual lint/render evidence and material open gates. For code-only output, do not append process narration or claim fonts loaded.
+The requested code or rendered artifact. For a rendered deliverable, report the system followed, actual lint/render evidence and material open gates. For code-only output, return exclusively code; keep verification notes internal.
 
 ## Sources
 

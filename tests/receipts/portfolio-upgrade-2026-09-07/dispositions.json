@@ -1,0 +1,244 @@
+[
+  {
+    "skill": "proactive-habits",
+    "disposition": "retained; forward checked",
+    "reason": "",
+    "final_sha256": "079e5da65b8876c63ac4ff55f207bc444bf75d17779dddd6b162cddf41b200ec",
+    "case_ids": [
+      "core-forward-proactive-habits-1",
+      "core-forward-proactive-habits-3",
+      "core-forward-proactive-habits-2"
+    ]
+  },
+  {
+    "skill": "done-for-me",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "681d340e86b710f7ca404a77d2d08361a2a88a431eef66a0ce7c7554a9161717",
+    "case_ids": [
+      "core-forward-done-for-me-2",
+      "core-forward-done-for-me-1",
+      "core-forward-done-for-me-3"
+    ]
+  },
+  {
+    "skill": "i-have-adhd",
+    "disposition": "retained; forward checked",
+    "reason": "",
+    "final_sha256": "4489fce66da6df401cdd9b08b7ff55ea5b5c5e5d317dec9f334d7f607ea07b82",
+    "case_ids": [
+      "core-forward-i-have-adhd-3",
+      "core-forward-i-have-adhd-1",
+      "core-forward-i-have-adhd-2"
+    ]
+  },
+  {
+    "skill": "is-that-the-best-you-can-do",
+    "disposition": "retained; candidate rejected",
+    "reason": "New failure on a factual 30-word request; current passed all three cases.",
+    "final_sha256": "a2ec9238e499367f76f64cd0f62eef73b43ad9c34a28ee64d69f7216b5e78a83",
+    "case_ids": [
+      "core-forward-is-that-the-best-you-can-do-2",
+      "core-forward-is-that-the-best-you-can-do-1",
+      "core-forward-is-that-the-best-you-can-do-3"
+    ]
+  },
+  {
+    "skill": "make-it-james",
+    "disposition": "retained; forward checked",
+    "reason": "",
+    "final_sha256": "c8a33915776e9a81b89dbd324d45791c6fa465c1feeea5f9944a49870b1f3210",
+    "case_ids": [
+      "core-forward-make-it-james-1",
+      "core-forward-make-it-james-2",
+      "core-forward-make-it-james-3"
+    ]
+  },
+  {
+    "skill": "never-again",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "ec971635218edcc85a44fc5d55414f120dd9663c75486c7828aa427b161acccb",
+    "case_ids": [
+      "core-forward-never-again-1",
+      "core-forward-never-again-2",
+      "core-forward-never-again-3"
+    ]
+  },
+  {
+    "skill": "research-it",
+    "disposition": "retained; forward checked",
+    "reason": "",
+    "final_sha256": "7562b55ed161c1edb865672c414fa71c75eed7dd1f208659a9bb2a3c9b61f581",
+    "case_ids": [
+      "core-forward-research-it-2",
+      "core-forward-research-it-1",
+      "core-forward-research-it-3"
+    ]
+  },
+  {
+    "skill": "are-you-sure",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "16fef64bfc7f4c03f22fb385e605fd51659ee93d8b8f88ba4184ba3e046ec8fe",
+    "case_ids": [
+      "core-forward-are-you-sure-3",
+      "core-forward-are-you-sure-2",
+      "core-forward-are-you-sure-1"
+    ]
+  },
+  {
+    "skill": "hand-it-off",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "f7d5ce605fc6f5a9f52eb61dead68024216042a8d15958a08f081f6d70d15d31",
+    "case_ids": [
+      "core-forward-hand-it-off-3",
+      "core-forward-hand-it-off-1",
+      "core-forward-hand-it-off-2"
+    ]
+  },
+  {
+    "skill": "baseon",
+    "disposition": "retained; candidate rejected",
+    "reason": "No goal improvement and more procedural output in paired cases.",
+    "final_sha256": "9e40476a6a494f140e4261e2b9eaa16d5cd8ea8fe7bc975d088b2dbb795b13c4",
+    "case_ids": [
+      "productivity-baseon-3",
+      "productivity-baseon-1",
+      "productivity-baseon-2"
+    ]
+  },
+  {
+    "skill": "coach-me",
+    "disposition": "retained; forward checked",
+    "reason": "",
+    "final_sha256": "d9f814a9be48acd7b8ff65816a18552e5f6555ec0ba02d24102626d76b3fa0da",
+    "case_ids": [
+      "productivity-coach-me-1",
+      "productivity-coach-me-2",
+      "productivity-coach-me-3"
+    ]
+  },
+  {
+    "skill": "final-it",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "1706eaf457a9bcdc3ad4f6776cd037713c32a944282782c2f874e942bfa6eb13",
+    "case_ids": [
+      "productivity-final-it-1",
+      "productivity-final-it-2",
+      "productivity-final-it-3"
+    ]
+  },
+  {
+    "skill": "give-me-solutions",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "0cd0f32e5019304feb266c4b9c533a100fb5bbcb3a3fb7f6470ab09fbd6f29de",
+    "case_ids": [
+      "productivity-give-me-solutions-3",
+      "productivity-give-me-solutions-2",
+      "productivity-give-me-solutions-1"
+    ]
+  },
+  {
+    "skill": "grill-me",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "c1ee7c88a5eec52c06da4e80f22a2002e4ed81b9dc07ba63a2f62b5b2b023292",
+    "case_ids": [
+      "productivity-grill-me-2",
+      "productivity-grill-me-3",
+      "productivity-grill-me-1"
+    ]
+  },
+  {
+    "skill": "one-page-pls",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "abc205dd62f686592e3d81b3b24cb7031b1c580967f76564dd9f76d6e07b32ce",
+    "case_ids": [
+      "productivity-one-page-pls-1",
+      "productivity-one-page-pls-2",
+      "productivity-one-page-pls-3"
+    ]
+  },
+  {
+    "skill": "sum-meet",
+    "disposition": "retained; candidate rejected",
+    "reason": "New explicit Not started status unsupported by notes; retain previous body.",
+    "final_sha256": "012504304dece723900dd03b584063a768421b0efbd0df5870bcdc1b02857fa8",
+    "case_ids": [
+      "productivity-sum-meet-2",
+      "productivity-sum-meet-3",
+      "productivity-sum-meet-1"
+    ]
+  },
+  {
+    "skill": "zoom-out",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "1c646cd2e6da878e8f97be88c08e2cc6cf6e21fb1bb10b3f57589ec21e961ab6",
+    "case_ids": [
+      "productivity-zoom-out-1",
+      "productivity-zoom-out-3",
+      "productivity-zoom-out-2"
+    ]
+  },
+  {
+    "skill": "catchup",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "d5412591475df4d8c6d9b9a9633499c78830a7e8a45290b6306655807855d076",
+    "case_ids": [
+      "catchup-upgrade-transfer",
+      "catchup-upgrade-countercase",
+      "catchup-upgrade-regression"
+    ]
+  },
+  {
+    "skill": "dev-are-you-sure",
+    "disposition": "retained; candidate rejected",
+    "reason": "New source-to-API proof overclaim in transfer case outweighs brevity gains.",
+    "final_sha256": "a15a275bc9c8b559ebac4c8ccb84a4b838ec2cb8a25d1f519772d2039ac09597",
+    "case_ids": [
+      "dev-are-you-sure-upgrade-countercase",
+      "dev-are-you-sure-upgrade-regression",
+      "dev-are-you-sure-upgrade-transfer"
+    ]
+  },
+  {
+    "skill": "make-it-james-ux",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "e8fec1c0df452fcf36a31ae310f84d303ad049ca8fd9a0988d26a9c3039e2831",
+    "case_ids": [
+      "make-it-james-ux-upgrade-countercase",
+      "make-it-james-ux-upgrade-transfer",
+      "make-it-james-ux-upgrade-regression"
+    ]
+  },
+  {
+    "skill": "proactive-dev",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "1795e103d5c4c9cf51deb42d7675ff2a67a5728ca6435531caf0460395b2c2b6",
+    "case_ids": [
+      "proactive-dev-upgrade-transfer",
+      "proactive-dev-upgrade-countercase",
+      "proactive-dev-upgrade-regression"
+    ]
+  },
+  {
+    "skill": "project-standard",
+    "disposition": "updated",
+    "reason": "",
+    "final_sha256": "097f3b3ce2211361cc068353f404985e567d7f364d26b24bbc60a8064f5209cd",
+    "case_ids": [
+      "project-standard-upgrade-transfer",
+      "project-standard-upgrade-regression",
+      "project-standard-upgrade-countercase"
+    ]
+  }
+]

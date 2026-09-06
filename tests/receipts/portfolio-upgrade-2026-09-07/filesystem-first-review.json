@@ -1,0 +1,239 @@
+{
+  "scope": "Independent forward tests; no baseline comparator. Model outputs and actual filesystem snapshots examined. Readback was requested and final answers claim verification; intermediate tool calls not retained, so agent readback behavior not independently established.",
+  "results": [
+    {
+      "id": "core-forward-done-for-me-1",
+      "overall_pass": true,
+      "persistence_boundary_pass": true,
+      "unrelated_notes_preserved": true,
+      "changed_files": [
+        "totals.csv"
+      ],
+      "issue": null,
+      "skill_sha256": "681d340e86b710f7ca404a77d2d08361a2a88a431eef66a0ce7c7554a9161717",
+      "attempt_completed": true,
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 642,
+          "outputTokens": 18,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000732,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 8,
+          "outputTokens": 550,
+          "cacheReadInputTokens": 14478,
+          "cacheCreationInputTokens": 5339,
+          "webSearchRequests": 0,
+          "costUSD": 0.04465140000000001,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "evidence": "/var/folders/k1/djf0tj2d0mz4w7ss3x7smtkm0000gn/T/core-forward-vbtbkrsn/core-forward-done-for-me-1.json"
+    },
+    {
+      "id": "core-forward-done-for-me-2",
+      "overall_pass": true,
+      "persistence_boundary_pass": true,
+      "unrelated_notes_preserved": true,
+      "changed_files": [
+        "report.md"
+      ],
+      "issue": null,
+      "skill_sha256": "681d340e86b710f7ca404a77d2d08361a2a88a431eef66a0ce7c7554a9161717",
+      "attempt_completed": true,
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 636,
+          "outputTokens": 17,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000721,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 6,
+          "outputTokens": 473,
+          "cacheReadInputTokens": 9364,
+          "cacheCreationInputTokens": 5226,
+          "webSearchRequests": 0,
+          "costUSD": 0.0412782,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "evidence": "/var/folders/k1/djf0tj2d0mz4w7ss3x7smtkm0000gn/T/core-forward-vbtbkrsn/core-forward-done-for-me-2.json"
+    },
+    {
+      "id": "core-forward-done-for-me-3",
+      "overall_pass": true,
+      "persistence_boundary_pass": true,
+      "unrelated_notes_preserved": true,
+      "changed_files": [],
+      "issue": null,
+      "skill_sha256": "681d340e86b710f7ca404a77d2d08361a2a88a431eef66a0ce7c7554a9161717",
+      "attempt_completed": true,
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 616,
+          "outputTokens": 15,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000691,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 14,
+          "cacheReadInputTokens": 4109,
+          "cacheCreationInputTokens": 358,
+          "webSearchRequests": 0,
+          "costUSD": 0.0035966999999999996,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "evidence": "/var/folders/k1/djf0tj2d0mz4w7ss3x7smtkm0000gn/T/core-forward-vbtbkrsn/core-forward-done-for-me-3.json"
+    },
+    {
+      "id": "core-forward-never-again-1",
+      "overall_pass": true,
+      "persistence_boundary_pass": true,
+      "unrelated_notes_preserved": true,
+      "changed_files": [
+        "report.md",
+        "AGENTS.md",
+        "ai-context/LESSONS.md"
+      ],
+      "issue": null,
+      "skill_sha256": "40b3ab58ae972089bf171640407ad092305c7078d613456ad755c091423d64de",
+      "attempt_completed": true,
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 679,
+          "outputTokens": 16,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000759,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 12,
+          "outputTokens": 2532,
+          "cacheReadInputTokens": 29599,
+          "cacheCreationInputTokens": 5201,
+          "webSearchRequests": 0,
+          "costUSD": 0.07810170000000001,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "evidence": "/var/folders/k1/djf0tj2d0mz4w7ss3x7smtkm0000gn/T/core-forward-vbtbkrsn/core-forward-never-again-1.json"
+    },
+    {
+      "id": "core-forward-never-again-2",
+      "overall_pass": false,
+      "persistence_boundary_pass": true,
+      "unrelated_notes_preserved": true,
+      "changed_files": [
+        "report.md",
+        "AGENTS.md",
+        "ai-context/LESSONS.md"
+      ],
+      "issue": "Unrequested rule expansion: treats refunded and voided as equivalent to canceled.",
+      "skill_sha256": "40b3ab58ae972089bf171640407ad092305c7078d613456ad755c091423d64de",
+      "attempt_completed": true,
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 666,
+          "outputTokens": 15,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000741,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 6,
+          "outputTokens": 2012,
+          "cacheReadInputTokens": 13741,
+          "cacheCreationInputTokens": 2789,
+          "webSearchRequests": 0,
+          "costUSD": 0.0510543,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "evidence": "/var/folders/k1/djf0tj2d0mz4w7ss3x7smtkm0000gn/T/core-forward-vbtbkrsn/core-forward-never-again-2.json"
+    },
+    {
+      "id": "core-forward-never-again-3",
+      "overall_pass": false,
+      "persistence_boundary_pass": true,
+      "unrelated_notes_preserved": true,
+      "changed_files": [],
+      "issue": "Requested appointment-time transfer example replaced by account-balance example.",
+      "skill_sha256": "40b3ab58ae972089bf171640407ad092305c7078d613456ad755c091423d64de",
+      "attempt_completed": true,
+      "model_usage": {
+        "claude-haiku-4-5-20251001": {
+          "inputTokens": 619,
+          "outputTokens": 15,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.000694,
+          "contextWindow": 200000,
+          "maxOutputTokens": 32000,
+          "canonicalModel": "claude-haiku-4-5",
+          "provider": "firstParty"
+        },
+        "claude-sonnet-5": {
+          "inputTokens": 2,
+          "outputTokens": 749,
+          "cacheReadInputTokens": 4056,
+          "cacheCreationInputTokens": 384,
+          "webSearchRequests": 0,
+          "costUSD": 0.014761800000000002,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 64000,
+          "canonicalModel": "claude-sonnet-5",
+          "provider": "firstParty"
+        }
+      },
+      "evidence": "/var/folders/k1/djf0tj2d0mz4w7ss3x7smtkm0000gn/T/core-forward-vbtbkrsn/core-forward-never-again-3.json"
+    }
+  ]
+}

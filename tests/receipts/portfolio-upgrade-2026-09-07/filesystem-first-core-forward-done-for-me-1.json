@@ -1,0 +1,109 @@
+{
+  "case": {
+    "id": "core-forward-done-for-me-1",
+    "skill": "done-for-me",
+    "role": "responsibility",
+    "prompt": "In the current disposable workspace, create totals.csv from sales.csv with columns item,total, preserving item order. sales.csv contains item,qty,price then pen,3,20 and book,2,90. Read back the created file and verify arithmetic. Task approved; no external actions.",
+    "rubric": "Real file totals.csv exists; pen60/book180; actual readback; no permission question."
+  },
+  "before": {
+    "notes.txt": "KEEP EXACTLY\n",
+    "report.md": "bolts 8; washers 21; total 29\n",
+    "data.csv": "item,value,status\nA,10,active\nB,40,canceled\n",
+    "draft.txt": "Proposal draft\n",
+    "AGENTS.md": "# Fixture contract\nPreserve unrelated files.\n",
+    "inventory.csv": "item,qty\nbolts,8\nwashers,12\n",
+    "sales.csv": "item,qty,price\npen,3,20\nbook,2,90\n",
+    "ai-context/LESSONS.md": "# Lessons\nExisting lesson: preserve facts.\n"
+  },
+  "after": {
+    "notes.txt": "KEEP EXACTLY\n",
+    "report.md": "bolts 8; washers 21; total 29\n",
+    "data.csv": "item,value,status\nA,10,active\nB,40,canceled\n",
+    "draft.txt": "Proposal draft\n",
+    "totals.csv": "item,total\npen,60\nbook,180\n",
+    "AGENTS.md": "# Fixture contract\nPreserve unrelated files.\n",
+    "inventory.csv": "item,qty\nbolts,8\nwashers,12\n",
+    "sales.csv": "item,qty,price\npen,3,20\nbook,2,90\n",
+    "ai-context/LESSONS.md": "# Lessons\nExisting lesson: preserve facts.\n"
+  },
+  "response": {
+    "is_error": false,
+    "duration_api_ms": 12805,
+    "num_turns": 4,
+    "stop_reason": "end_turn",
+    "session_id": "44de02a4-3e73-4124-8cff-6a29f96c98db",
+    "total_cost_usd": 0.04538340000000001,
+    "usage": {
+      "input_tokens": 8,
+      "cache_creation_input_tokens": 5339,
+      "cache_read_input_tokens": 14478,
+      "output_tokens": 550,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 5339,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "not_available",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 88,
+          "cache_read_input_tokens": 5145,
+          "cache_creation_input_tokens": 194,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 194
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 642,
+        "outputTokens": 18,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000732,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 8,
+        "outputTokens": 550,
+        "cacheReadInputTokens": 14478,
+        "cacheCreationInputTokens": 5339,
+        "webSearchRequests": 0,
+        "costUSD": 0.04465140000000001,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "Done. `totals.csv` created and verified:\n\n```\nitem,total\npen,60\nbook,180\n```\n\nArithmetic check: pen 3×20=60 ✓, book 2×90=180 ✓. Order preserved matching sales.csv. No external actions taken.",
+    "ttft_ms": 3894,
+    "ttft_stream_ms": 3299,
+    "time_to_request_ms": 7,
+    "type": "result",
+    "duration_ms": 11740,
+    "uuid": "4312dfeb-f897-4df7-be3f-2f5767813d24"
+  },
+  "error": null,
+  "skill_sha256": "681d340e86b710f7ca404a77d2d08361a2a88a431eef66a0ce7c7554a9161717"
+}

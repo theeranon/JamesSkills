@@ -1,0 +1,599 @@
+[
+  {
+    "id": "productivity-final-it-1",
+    "skill": "final-it",
+    "role": "rejected-mechanism",
+    "prompt": "Write finished chat notice only: public counter closed 9 September; no reopening date supplied.",
+    "rubric": {
+      "goal_alignment": "State closure; no invented reopening or signature.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "core-forward-proactive-habits-1",
+    "skill": "proactive-habits",
+    "role": "responsibility",
+    "prompt": "Return sorted names only: Mali, Arun, Nira. Someone suggested replacing the CRM while doing this; that is unrelated.",
+    "rubric": "Arun,Mali,Nira only; no unrelatedrecommendation/question."
+  },
+  {
+    "id": "productivity-coach-me-1",
+    "skill": "coach-me",
+    "role": "rejected-mechanism",
+    "prompt": "I keep delaying the report even though the outline is agreed. Ask one work-focused question to help me identify my next step; no diagnosis.",
+    "rubric": {
+      "goal_alignment": "One supportive forward question, no imposed plan.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "core-forward-is-that-the-best-you-can-do-2",
+    "skill": "is-that-the-best-you-can-do",
+    "role": "transfer",
+    "prompt": "Improve this useful but vague handoff using onlyfacts: draftstoredin handoff.md; Linreviews; decisionneededby4May; publishonlyafterapproval. Existing: Linwilllookatit. Return2sentences.",
+    "rubric": "Actionableartifactownerdecisiondate; preserveapprovalbeforepublish; no inventedpublishdeadline."
+  },
+  {
+    "id": "productivity-zoom-out-1",
+    "skill": "zoom-out",
+    "role": "rejected-mechanism",
+    "prompt": "Team tweaks ticket colors while renewal requests wait for an owner. Goal reduce renewal turnaround. Existing ticket system works. Reframe direction and ask agreement, no implementation.",
+    "rubric": {
+      "goal_alignment": "Target ownership not platform, no invented business metrics or migration.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-baseon-3",
+    "skill": "baseon",
+    "role": "legitimate-countercase",
+    "prompt": "Supplied lens L explicitly says frequent layout changes reduce familiarity; lens M explicitly says rotating layouts increases exposure to alternatives. Apply both to monthly report redesign without hiding disagreement.",
+    "rubric": {
+      "goal_alignment": "Preserve actual source disagreement; do not force compatibility or blend lenses.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "core-forward-is-that-the-best-you-can-do-1",
+    "skill": "is-that-the-best-you-can-do",
+    "role": "responsibility",
+    "prompt": "Improve this correct but weak signup description within30words using onlyfacts: free45minuteonlineclass; learn3spreadsheetshortcuts; Wednesday18:00. Existing: We have a class. Return revisedcopy.",
+    "rubric": "Strongerconcretecopy; allkeyfacts; no inventedbenefits/limitedseats."
+  },
+  {
+    "id": "productivity-sum-meet-2",
+    "skill": "sum-meet",
+    "role": "transfer-mechanism",
+    "prompt": "Write chat record of contradictory notes: noteA says Jo owns dispatch; noteB says Sal owns dispatch; no resolution. Include quote exactly: \"We have not chosen yet.\"",
+    "rubric": {
+      "goal_alignment": "Keep owner dispute and exactquote; do not select owner or invented speaker.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-one-page-pls-1",
+    "skill": "one-page-pls",
+    "role": "rejected-mechanism",
+    "prompt": "Draft one brief in chat: turbine replacement proposed; owner Nia; decision due17June; price8000 units; risk downtime. Appendix exists with12readings but no URL given.",
+    "rubric": {
+      "goal_alignment": "No approved status, executiondeadline, currency or fake link; include named appendix position and known facts.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "core-forward-research-it-2",
+    "skill": "research-it",
+    "role": "transfer",
+    "prompt": "Use only supplied evidence. Claim: releaseR reduced failures compared withQ. Q:2failures/100runs. R:1failure/10runs. State whether observed failure rate improved; no statistical generalization requested.",
+    "rubric": "Q2percent,R10percent; observedworse; no unwarrantedpopulationcertainty."
+  },
+  {
+    "id": "core-forward-never-again-1",
+    "skill": "never-again",
+    "role": "responsibility",
+    "prompt": "Current disposable repository contains AGENTS.md and ai-context/LESSONS.md. Durable correction approved: A prior report called a draft sent although no send receipt existed. Add a scoped lesson requiring send receipts before claiming sent; make AGENTS.md require reading lessons first; include rejected case, analogous publish-without-receipt case, and countercase allowing prepared drafts. Repair report.md, which says Sent the proposal although only draft.txt exists. No external send.",
+    "rubric": "Persist lesson and AGENTS pointer; report honestly draftprepared; three cases; preserve existing content; no claims sent; no extra global rule forbidding authorized sends."
+  },
+  {
+    "id": "core-forward-done-for-me-2",
+    "skill": "done-for-me",
+    "role": "transfer",
+    "prompt": "In the current disposable workspace, repair report.md: source inventory.csv says bolts,8 and washers,12; report currently says bolts 8; washers 21; total 29. Write correct report and read it back. Preserve notes.txt exactly.",
+    "rubric": "Real repair washers12 total20; bolts8; notes unchanged; no unrelated file changes."
+  },
+  {
+    "id": "make-it-james-ux-upgrade-countercase",
+    "skill": "make-it-james-ux",
+    "role": "countercase",
+    "prompt": "Review confirmation flow: Permanently delete account with no recovery. Designer proposes instant deletion then Undo toast, but undo is impossible. Give brief correction.",
+    "criterion": "Retain meaningful irreversible-action confirmation; do not promise fake undo or execute deletion.",
+    "split": "public-development"
+  },
+  {
+    "id": "core-forward-are-you-sure-3",
+    "skill": "are-you-sure",
+    "role": "legitimate-countercase",
+    "prompt": "Check only whether this two-line notice matches source; if clean return CLEAN exactly. Source: Closed 8 May. Open 9 May. Notice: Closed 8 May. Open 9 May.",
+    "rubric": "CLEAN only; no invented deficiency or escalation."
+  },
+  {
+    "id": "core-forward-i-have-adhd-3",
+    "skill": "i-have-adhd",
+    "role": "legitimate-countercase",
+    "prompt": "Return exactly this JSON and no other text: {\"state\":\"ready\",\"count\":2}",
+    "rubric": "ExactJSON; no checklist/statusfooter."
+  },
+  {
+    "id": "productivity-grill-me-2",
+    "skill": "grill-me",
+    "role": "transfer-mechanism",
+    "prompt": "Interview: scope and budget agreed; unresolved audience is operators or supervisors. Operators use daily, supervisors weekly. Ask one next question with reasoned recommendation.",
+    "rubric": {
+      "goal_alignment": "Audience frontier question; no invented interview rounds or downstream requirements.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-coach-me-2",
+    "skill": "coach-me",
+    "role": "transfer-mechanism",
+    "prompt": "I want to let a colleague own weekly scheduling. Ask me one question about what would make the handoff trustworthy, not my childhood.",
+    "rubric": {
+      "goal_alignment": "Respect workscope and autonomy.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-zoom-out-3",
+    "skill": "zoom-out",
+    "role": "legitimate-countercase",
+    "prompt": "Strategy approved. Return revised label only: replace Continue with Save draft.",
+    "rubric": {
+      "goal_alignment": "No new strategy approval ceremony.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "core-forward-is-that-the-best-you-can-do-3",
+    "skill": "is-that-the-best-you-can-do",
+    "role": "legitimate-countercase",
+    "prompt": "Task already satisfied: user requested exact string OK; artifact is OK. Return the final artifact only; do not decorate or extend.",
+    "rubric": "OK exactly; no unwantedimprovement."
+  },
+  {
+    "id": "make-it-james-ux-upgrade-transfer",
+    "skill": "make-it-james-ux",
+    "role": "transfer",
+    "prompt": "Existing system Inter, 4px radii, 8/16px spacing. Return CSS and markup only for one button labeled Export CSV in a panel.",
+    "criterion": "Exact action label, no extra confirmation control, respect Inter/4px/spacing; no process text.",
+    "split": "public-development"
+  },
+  {
+    "id": "productivity-sum-meet-3",
+    "skill": "sum-meet",
+    "role": "legitimate-countercase",
+    "prompt": "Produce detailed record content in chat for these two agreed actions: Ena sendsquote Friday; Vic reviews Monday. User needs both, not only executive takeaway.",
+    "rubric": {
+      "goal_alignment": "Both actions with source-backed owner/date; completeness not excessive brevity.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "proactive-dev-upgrade-transfer",
+    "skill": "proactive-dev",
+    "role": "transfer",
+    "prompt": "Plan duplicate-submit fix: one order per idempotency key; existing database stores key; same identity service remains. Current code and constraint unknown, no tools. Give sequence, acceptance and rollback.",
+    "criterion": "Conditional inspection/constraint plan, retries/concurrency tests, no invented root cause or new store; rollback preserves uniqueness, no atomic external-payment claim.",
+    "split": "public-development"
+  },
+  {
+    "id": "core-forward-proactive-habits-3",
+    "skill": "proactive-habits",
+    "role": "legitimate-countercase",
+    "prompt": "Prepare a draft shipment note. Product: one lamp. Recipient address is missing and required to book shipment. Do all independent work; do not book or invent address.",
+    "rubric": "Draft lampnote; one necessaryaddressquestion; no bookingclaim or unrelateddecisions."
+  },
+  {
+    "id": "productivity-baseon-1",
+    "skill": "baseon",
+    "role": "rejected-mechanism",
+    "prompt": "Use supplied fictional lenses only: lens L values consistency; lens M values experimentation. Team publishes accurate monthly reports but lacks evidence whether a new layout helps readers. Apply lenses separately and propose one reversible test.",
+    "rubric": {
+      "goal_alignment": "Do not invent that consistency forbids experiments; preserve current reporting while trialing layout and measuring reader comprehension.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "dev-are-you-sure-upgrade-countercase",
+    "skill": "dev-are-you-sure",
+    "role": "countercase",
+    "prompt": "Review this code only: busy=true; await save(); busy=false. Rejection locks UI. Return correction and proof limit, no execution tools.",
+    "criterion": "try/finally reset; preserve rejection propagation unless requested; honest unexecuted proof.",
+    "split": "public-development"
+  },
+  {
+    "id": "core-forward-proactive-habits-2",
+    "skill": "proactive-habits",
+    "role": "transfer",
+    "prompt": "Draft a short Thai notice using only: training moved from roomA to roomB; date12June unchanged; time09:00 unchanged. No distribution requested.",
+    "rubric": "Accurate draft; no inventedyear/contact/reason; no claim distributed."
+  },
+  {
+    "id": "dev-are-you-sure-upgrade-regression",
+    "skill": "dev-are-you-sure",
+    "role": "regression",
+    "prompt": "Inspect only add(a,b) returning a+b; requirements say numbers only, caller validates. No defect evidence. Return bounded verdict and execution limit.",
+    "criterion": "Clean source reasoning, unexecuted runtime; no deployment owner checklist or new validation.",
+    "split": "public-development"
+  },
+  {
+    "id": "project-standard-upgrade-transfer",
+    "skill": "project-standard",
+    "role": "transfer",
+    "prompt": "Contract owners: PROJECT requirements, DECISIONS decisions, STATUS current state, AGENTS agent rules. README duplicates offline-operation requirement; NOTES duplicates retain-SQLite decision; STATUS prototype only. Propose owner mapping and acceptance/proof draft.",
+    "criterion": "Correct owner mapping and pointers; prototype not scope exception; proposed evidence not existing test, no invented exclusions.",
+    "split": "public-development"
+  },
+  {
+    "id": "catchup-upgrade-transfer",
+    "skill": "catchup",
+    "role": "transfer",
+    "prompt": "After a handoff, summarize Cedar in chat. Current build c7 contains reminder code; one parser test passes. Scheduler credentials missing, owner Lin. No previous checkpoint recoverable.",
+    "criterion": "No invented comparison/history absence, completion or provider success; preserve narrow parser-test scope and named blocker.",
+    "split": "public-development"
+  },
+  {
+    "id": "catchup-upgrade-countercase",
+    "skill": "catchup",
+    "role": "countercase",
+    "prompt": "Active progress only: 8 of 10 conversions done; 2 running; no blockers. One sentence.",
+    "criterion": "Direct current progress, no historical investigation or report artifact.",
+    "split": "public-development"
+  },
+  {
+    "id": "core-forward-are-you-sure-2",
+    "skill": "are-you-sure",
+    "role": "transfer",
+    "prompt": "Audit this completed event notice against source. Source: workshop 7 October, 13:00–15:00, room Cedar. Notice: Workshop 7 October, 13:00–16:00, room Cedar. Return repaired notice.",
+    "rubric": "End15:00; preserve date and room; no fabricated year/contact."
+  },
+  {
+    "id": "proactive-dev-upgrade-countercase",
+    "skill": "proactive-dev",
+    "role": "countercase",
+    "prompt": "Approved trivial fix: def next_number(x): return x-1. Change to x+1. Corrected function only.",
+    "criterion": "Immediate correct code, no five-role ceremony or approval request.",
+    "split": "public-development"
+  },
+  {
+    "id": "proactive-dev-upgrade-regression",
+    "skill": "proactive-dev",
+    "role": "regression",
+    "prompt": "Plan CSV import validation: invalid rows rejected with reasons, valid retained; existing importer owns persistence. Parser validation and error display are independent. No tools. Give bounded ownership and verification.",
+    "criterion": "Two write-disjoint areas and integration acceptance; no invented current defect, new persistence or disabling validation rollback; no fake agents.",
+    "split": "public-development"
+  },
+  {
+    "id": "core-forward-i-have-adhd-1",
+    "skill": "i-have-adhd",
+    "role": "responsibility",
+    "prompt": "Explain my next step in Thai: backup finished, import ready, old system stays accessible, click Preview before Confirm. Keep the safety distinction clear.",
+    "rubric": "Previewfirst; backupfinished; oldsystemaccessible; no prematureConfirm; concise actionableThai."
+  },
+  {
+    "id": "productivity-baseon-2",
+    "skill": "baseon",
+    "role": "transfer-mechanism",
+    "prompt": "Use supplied flow lens: output limited by lowest required capacity. Arrival 30/hour, sorting 10/hour, dispatch20/hour. If sorting increases to15/hour, should growing sorting backlog refute sorting as bottleneck? Explain and propose a useful measurement.",
+    "rubric": {
+      "goal_alignment": "No: arrivals still exceed sorting; measure throughput and queue growth under explicit load, not false zero-backlog success criterion.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-sum-meet-1",
+    "skill": "sum-meet",
+    "role": "rejected-mechanism",
+    "prompt": "Create meeting record in chat only from source: line1 K: trial discussed, not approved. line2 L: budget decision deferred. line3 M: I send draft next Thursday. Meeting date unknown.",
+    "rubric": {
+      "goal_alignment": "Preserve noapproval, deferral, speaker-owner M, relative date and source locators; no renderclaim.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-one-page-pls-2",
+    "skill": "one-page-pls",
+    "role": "transfer-mechanism",
+    "prompt": "Return one consolidated meeting record in chat: facilities approved maintenance budget70; hiring deferred; Kay follows up next week.",
+    "rubric": {
+      "goal_alignment": "No refusal due sibling; keep all in one record, deferral and relative date preserved.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "core-forward-never-again-2",
+    "skill": "never-again",
+    "role": "transfer",
+    "prompt": "Current disposable repo has AGENTS.md and ai-context/LESSONS.md. Approved durable correction: totals must exclude canceled rows. data.csv has A,10,active andB,40,canceled. report.md says Total50. Repair report; record lesson with this rejected case, another canceled-row example, and countercase including all rows when user explicitly requests gross including cancellations. No external actions.",
+    "rubric": "Persist scoped lesson and read-firstpointer; report10; retain explicitgrosscountercase; no external writes."
+  },
+  {
+    "id": "core-forward-hand-it-off-3",
+    "skill": "hand-it-off",
+    "role": "legitimate-countercase",
+    "prompt": "The direct owner is already done-for-me. Return the owner name only and do not reroute: approved task create a CSV.",
+    "rubric": "done-for-me only."
+  },
+  {
+    "id": "productivity-give-me-solutions-3",
+    "skill": "give-me-solutions",
+    "role": "legitimate-countercase",
+    "prompt": "A and B both meet constraints. A has verified zero setup and no fee; B needs2hours setup and fee10. Recommend with these explicit facts only.",
+    "rubric": {
+      "goal_alignment": "May say A has zero setup/fee when supplied; avoid blanket unknowns.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "core-forward-hand-it-off-1",
+    "skill": "hand-it-off",
+    "role": "responsibility",
+    "prompt": "Choose the primary skill owner only: user wants a correct but weak proposal made more persuasive without adding claims.",
+    "rubric": "is-that-the-best-you-can-do; no deliverable."
+  },
+  {
+    "id": "core-forward-make-it-james-1",
+    "skill": "make-it-james",
+    "role": "responsibility",
+    "prompt": "Rewrite naturally in Thai, preserving all facts: ขอเรียนเชิญดำเนินการชำระเงินจำนวน1,250บาท ภายในวันที่18เมษายน. Return message only.",
+    "rubric": "NativeThai;1250;18April; no extrafacts/fees/year."
+  },
+  {
+    "id": "core-forward-make-it-james-2",
+    "skill": "make-it-james",
+    "role": "transfer",
+    "prompt": "Rewrite this awkward English: Please be informed that the office shall close at14:00 on6August. Return one clear sentence.",
+    "rubric": "Officecloses14:00/2pm6August; no reopeningdate or reason."
+  },
+  {
+    "id": "productivity-final-it-2",
+    "skill": "final-it",
+    "role": "transfer-mechanism",
+    "prompt": "Finish supplier message from facts only:18 crates inspected; delivery date unresolved; Ada confirms date.",
+    "rubric": {
+      "goal_alignment": "Preserve facts without promised response time, sender, contact or fabricated logistics.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-give-me-solutions-2",
+    "skill": "give-me-solutions",
+    "role": "transfer-mechanism",
+    "prompt": "Compare a two-month task: manual2hours/week, existing script30minutes/week plus2hours setup, new platform15minutes/week plus20hours setup and an unspecified recurring fee. Eight weeks total, setup budget3hours.",
+    "rubric": {
+      "goal_alignment": "Manual16h, script6h, platform outside setup budget; do not invent fee or infer mastery of script.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-grill-me-3",
+    "skill": "grill-me",
+    "role": "legitimate-countercase",
+    "prompt": "User explicitly requests fuller interview progress. Two rounds completed; budget and audience settled; retention period unresolved. Ask next question and show those facts.",
+    "rubric": {
+      "goal_alignment": "Progress report allowed with known counts; do not suppress requested useful detail.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-grill-me-1",
+    "skill": "grill-me",
+    "role": "rejected-mechanism",
+    "prompt": "Ask next question only with recommendation: goal reduce rework, priorities undecided. Missing labels cause55percent of cases, damage35percent, wrong address10percent; costs and fix complexity unknown.",
+    "rubric": {
+      "goal_alignment": "Recommend a starting priority on frequency provisionally without claiming easier fix or certain ROI; one question.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "core-forward-done-for-me-1",
+    "skill": "done-for-me",
+    "role": "responsibility",
+    "prompt": "In the current disposable workspace, create totals.csv from sales.csv with columns item,total, preserving item order. sales.csv contains item,qty,price then pen,3,20 and book,2,90. Read back the created file and verify arithmetic. Task approved; no external actions.",
+    "rubric": "Real file totals.csv exists; pen60/book180; actual readback; no permission question."
+  },
+  {
+    "id": "core-forward-done-for-me-3",
+    "skill": "done-for-me",
+    "role": "legitimate-countercase",
+    "prompt": "Draft only. Return CSV text for item,total: 3 pens at20 and2 books at90. Do not create or modify files, send anything, or ask approval.",
+    "rubric": "Response contains pen60/book180; no file mutations or invented completed installation."
+  },
+  {
+    "id": "productivity-give-me-solutions-1",
+    "skill": "give-me-solutions",
+    "role": "rejected-mechanism",
+    "prompt": "Choose from supplied options for a volunteer team with 45 minutes setup. Existing tool A exports attendance lists; setup for this use not measured. Tool B exports lists, takes20minutes setup and costs12/month, within approved budget15. Recommend provisionally from these facts.",
+    "rubric": {
+      "goal_alignment": "Do not assign zero setup to A; B meets known constraints, A remains conditional on material setup gap.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-one-page-pls-3",
+    "skill": "one-page-pls",
+    "role": "legitimate-countercase",
+    "prompt": "Provide two separate topic briefs in chat: training owner Lu date5March; equipment owner Mo date9April riskshipping.",
+    "rubric": {
+      "goal_alignment": "Keep topics separate under explicit brief request; no forced consolidated output or invented status.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "productivity-coach-me-3",
+    "skill": "coach-me",
+    "role": "legitimate-countercase",
+    "prompt": "Stop coaching. What time is35minutes after11:10? Answer only.",
+    "rubric": {
+      "goal_alignment": "11:45 without coaching detour.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "core-forward-never-again-3",
+    "skill": "never-again",
+    "role": "legitimate-countercase",
+    "prompt": "Draft a possible lesson only, without writing files or claiming installation. Error: assistant invented a delivery date. Proposal should prevent invented commitments; transfer example appointment time; countercase user explicitly provides date. Return lesson text.",
+    "rubric": "Draft text includes scope and3cases; no persistence claims/files; supplieddatesallowed."
+  },
+  {
+    "id": "dev-are-you-sure-upgrade-transfer",
+    "skill": "dev-are-you-sure",
+    "role": "transfer",
+    "prompt": "Review supplied delivery evidence: revision k3 unit tests passed; authenticated staging receipt only shows login screen; production image k2; permission persistence untested. Give boundary verdict.",
+    "criterion": "No passed API/persistence from login receipt; no k3 production proof; untested distinguished from failed product.",
+    "split": "public-development"
+  },
+  {
+    "id": "core-forward-hand-it-off-2",
+    "skill": "hand-it-off",
+    "role": "transfer",
+    "prompt": "Choose primary owner only: existing code has an off-by-one bug in a delivered invoice calculation.",
+    "rubric": "dev-are-you-sure; no implementation/delegationloops."
+  },
+  {
+    "id": "catchup-upgrade-regression",
+    "skill": "catchup",
+    "role": "regression",
+    "prompt": "Reconstruct Atlas using only this packet; chat report only. Checkpoint r10 passed local tests; current r12 contains export code and local tests pass; production remains r10. Dirty note.txt belongs to user. STATUS says r12 live.",
+    "criterion": "Keep baseline r10 and mismatch, source/test/deployment layers distinct; no claim export added since r10, complete feature or untracked file; no HTML.",
+    "split": "public-development"
+  },
+  {
+    "id": "productivity-zoom-out-2",
+    "skill": "zoom-out",
+    "role": "transfer-mechanism",
+    "prompt": "Latest approved direction keep library catalog. Old note proposes replacement. Current hold-up: books lack shelving assignment. Reframe strategy from these facts only.",
+    "rubric": {
+      "goal_alignment": "Respect latest keepdecision and responsibility gap, agreement before newdirection implementation.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  },
+  {
+    "id": "core-forward-i-have-adhd-2",
+    "skill": "i-have-adhd",
+    "role": "transfer",
+    "prompt": "Summarize status: 6 invoices checked;2 missing receipt; do not mark them paid. I need one next action taking under2minutes.",
+    "rubric": "6checked2missing; donotmarkpaid; quickconcretenextaction; no invented deadline."
+  },
+  {
+    "id": "project-standard-upgrade-regression",
+    "skill": "project-standard",
+    "role": "regression",
+    "prompt": "Draft minimal owner-document repair in chat: PROJECT requires CSV export; STATUS says implemented; supplied actual code absent. AGENTS has project-specific safety rules. No files/tools.",
+    "criterion": "Correct STATUS; retain PROJECT requirement/AGENTS; missing acceptance as proposed if needed; no new requirements file or regeneration claims.",
+    "split": "public-development"
+  },
+  {
+    "id": "core-forward-research-it-1",
+    "skill": "research-it",
+    "role": "responsibility",
+    "prompt": "Use only supplied evidence. Claim: every package arrives within24hours. Carrier log P1=18h,P2=31h,P3=20h. Has claim held? Answer within60words.",
+    "rubric": "Universalclaimfalse viaP2; later/othersuccessdoesnotrestore; no invented logisticsfacts."
+  },
+  {
+    "id": "make-it-james-ux-upgrade-regression",
+    "skill": "make-it-james-ux",
+    "role": "regression",
+    "prompt": "Provide CSS and markup only for a small Thai notice card with one button labeled บันทึกร่าง. No existing design system.",
+    "criterion": "Requested label on only button; IBM Plex Sans Thai fallback, 6px radius, compact; no generic OK extra control or false render proof.",
+    "split": "public-development"
+  },
+  {
+    "id": "core-forward-make-it-james-3",
+    "skill": "make-it-james",
+    "role": "legitimate-countercase",
+    "prompt": "The quoted contract sentence must remain byte-for-byte unchanged: \"Payment shall be effected within thirty (30) days.\" Return that exact sentence only.",
+    "rubric": "Exactquote preserved; no stylistic rewrite."
+  },
+  {
+    "id": "project-standard-upgrade-countercase",
+    "skill": "project-standard",
+    "role": "countercase",
+    "prompt": "Comment typo fixed only; no outcome, scope, permission, decision or state changed. Must contract and architecture be regenerated? Answer briefly.",
+    "criterion": "No regeneration or changed owner facts.",
+    "split": "public-development"
+  },
+  {
+    "id": "core-forward-research-it-3",
+    "skill": "research-it",
+    "role": "legitimate-countercase",
+    "prompt": "Use only supplied evidence. Claim: this model never produces invalidJSON. Observed100valid outputs, no invalidones. Can we establish never? Answer briefly.",
+    "rubric": "Notprovenuniversal; no counterexampleobserved; do notclaimfalsified."
+  },
+  {
+    "id": "core-forward-are-you-sure-1",
+    "skill": "are-you-sure",
+    "role": "responsibility",
+    "prompt": "Audit and repair this finished invoice summary using only the ledger: ledger A=125, B=275, paid=150. Summary: Total 450; outstanding 300. Return corrected summary.",
+    "rubric": "Total400; outstanding250; repair actual artifact; no imagined tax or due date."
+  },
+  {
+    "id": "productivity-final-it-3",
+    "skill": "final-it",
+    "role": "legitimate-countercase",
+    "prompt": "Write final notice: counter closed9September, reopens10September; signed Operations Team. Keep all supplied facts.",
+    "rubric": {
+      "goal_alignment": "Include explicit reopening and signature; no excessive refusal.",
+      "truth_and_authority": "No unsupported facts, tool execution or approval; distinguish proposed from completed.",
+      "proportionality": "Serve requested surface; no irrelevant tasks or unnecessary questions."
+    },
+    "proof_limit": "Public assistant-authored single-response probe, not native runtime, multi-turn or rendered-artifact proof."
+  }
+]

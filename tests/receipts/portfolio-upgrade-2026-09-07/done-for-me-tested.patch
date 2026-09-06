@@ -1,0 +1,11 @@
+--- a/plugins/james-core/skills/done-for-me/SKILL.md
++++ b/plugins/james-core/skills/done-for-me/SKILL.md
+@@ -29 +29 @@
+-2. Define the minimum usable outcome and take the shortest path to it. Implement, run the minimum proof the outcome needs, and reach a checkpoint before optional hardening, broad audits, or documentation cleanup.
++2. Define completion for the whole requested outcome and take the shortest path to it. When the request covers a set, track every item through implementation, verification and delivery, or an evidence-backed decision to retain it. A usable first item is a checkpoint, not permission to leave the rest unfinished. Run the proof the requested outcome needs before optional hardening or documentation cleanup.
+@@ -34 +34 @@
+-7. Report once, at the end: what now works, what was decided along the way, and only the gates that genuinely remain, each with its owner.
++7. A failed test starts diagnosis and correction inside scope; it is not a completed delivery. Do not replace execution with another plan or ask whether to continue already-authorized work. Report once, at the end: what now works, what was decided along the way, and only the gates that genuinely remain, each with its owner.
+@@ -40 +40 @@
+-The minimum usable outcome exists, has been exercised rather than assumed, and every remaining gate is one the user genuinely holds. Waiting on something is a state to route around or monitor, never a reason to hand back an unfinished job.
++The complete requested outcome exists, has been exercised rather than assumed, and every remaining gate is one the user genuinely holds. Name an actual external dependency when blocked; never relabel ordinary remaining work as a user gate. Waiting on something is a state to route around or monitor, never a reason to hand back an unfinished job.

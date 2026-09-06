@@ -31,11 +31,11 @@ Name the ceiling, measure the gap, then spend real effort closing it.
 3. Decide the effort the gap justifies. A small gap gets one focused pass. A large gap gets parallel work, with each agent given a distinct angle rather than the same instruction repeated, and each returning something that can be compared.
 4. Gather what is genuinely missing. When the gap is evidence, go and get the evidence rather than writing more confidently around the hole.
 5. Rebuild from the strongest parts of the current draft. Keep what already earns its place and say what you kept.
-6. Complete the agreed scope before returning the raised work itself. For a collection, account for every item: improve the weak ones and retain the strong ones with evidence. A higher benchmark score does not compensate for an unfinished requested outcome. If inspection reveals unfinished work or defects, continue through the owning workflow under the existing authorization; do not stop at routing or a diagnosis. Then give a short account of what changed.
+6. Return the raised work itself, plus a short account of what was below ceiling and what changed.
 
 ## Stop when
 
-The agreed deliverable is complete and another attempt no longer changes a material outcome. A remaining in-scope implementation or verification task is still work to finish, not merely a gap to list. Stop at an actual external dependency only after completing independent work and naming the dependency. Effort stops at the goal that was actually set; pushing past it into unrequested scope is a failure of this skill, not a success.
+Another parallel attempt no longer changes the result, or the remaining gap is named along with what it would cost to close. Effort stops at the goal that was actually set; pushing past it into unrequested scope is a failure of this skill, not a success.
 
 ## Principles
 

@@ -1,0 +1,108 @@
+{
+  "case": {
+    "id": "core-forward-never-again-3",
+    "skill": "never-again",
+    "role": "legitimate-countercase",
+    "prompt": "Draft a possible lesson only, without writing files or claiming installation. Error: assistant invented a delivery date. Proposal should prevent invented commitments; transfer example appointment time; countercase user explicitly provides date. Return lesson text.",
+    "rubric": "Draft text includes scope and3cases; no persistence claims/files; supplieddatesallowed."
+  },
+  "before": {
+    "notes.txt": "KEEP EXACTLY\n",
+    "report.md": "Total50\n",
+    "data.csv": "item,value,status\nA,10,active\nB,40,canceled\n",
+    "draft.txt": "Proposal draft\n",
+    "AGENTS.md": "# Fixture contract\nPreserve unrelated files.\n",
+    "inventory.csv": "item,qty\nbolts,8\nwashers,12\n",
+    "sales.csv": "item,qty,price\npen,3,20\nbook,2,90\n",
+    "ai-context/LESSONS.md": "# Lessons\nExisting lesson: preserve facts.\n"
+  },
+  "after": {
+    "notes.txt": "KEEP EXACTLY\n",
+    "report.md": "Total50\n",
+    "data.csv": "item,value,status\nA,10,active\nB,40,canceled\n",
+    "draft.txt": "Proposal draft\n",
+    "AGENTS.md": "# Fixture contract\nPreserve unrelated files.\n",
+    "inventory.csv": "item,qty\nbolts,8\nwashers,12\n",
+    "sales.csv": "item,qty,price\npen,3,20\nbook,2,90\n",
+    "ai-context/LESSONS.md": "# Lessons\nExisting lesson: preserve facts.\n"
+  },
+  "response": {
+    "is_error": false,
+    "duration_api_ms": 10889,
+    "num_turns": 1,
+    "stop_reason": "end_turn",
+    "session_id": "f146a27b-a62e-43f9-a03b-0836db52ab85",
+    "total_cost_usd": 0.015455800000000002,
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 384,
+      "cache_read_input_tokens": 4056,
+      "output_tokens": 749,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 384,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "not_available",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 749,
+          "cache_read_input_tokens": 4056,
+          "cache_creation_input_tokens": 384,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 384
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 619,
+        "outputTokens": 15,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000694,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 2,
+        "outputTokens": 749,
+        "cacheReadInputTokens": 4056,
+        "cacheCreationInputTokens": 384,
+        "webSearchRequests": 0,
+        "costUSD": 0.014761800000000002,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "Since this is a draft-only request (no persistence), here is the proposed lesson and the three required regressions. Nothing has been written to disk — no lesson file, no contract pointer, no repairs were made.\n\n## Proposed Lesson Entry (for `ai-context/LESSONS.md`)\n\n**What happened:** The assistant stated a specific delivery date to the user without that date being provided by the user, a system, or any verified source. The date was fabricated to fill a gap in the response and presented as if it were a real commitment.\n\n**Mechanism that allowed it:** When a response requires a concrete fact (a date, time, price, identifier) that is not present in the available context, the generation process filled the gap with a plausible-sounding value rather than flagging the absence. Nothing in the interpretation or delivery step distinguished \"known fact\" from \"plausible completion\" before the value was surfaced as fact to the user.\n\n**Rule now in force:** The assistant must never state a specific date, time, or other concrete commitment value unless it was explicitly supplied by the user, retrieved from a verified source (tool output, document, system record), or clearly marked as an example/placeholder. If a commitment value is required but unknown, the assistant must say it is unknown or ask the user for it — it must not invent one.\n\n**Date:** 2026-09-07\n\n## Three Regressions\n\n1. **Rejected case:** User asks \"When will my order arrive?\" with no date available in context. Assistant must not answer with an invented date (e.g., \"It will arrive on September 15th\"). Correct behavior: state the date is unknown and ask for or seek the actual source.\n\n2. **Same-mechanism, different case:** User asks \"What's my account balance?\" with no balance data available. Assistant must not invent a number (e.g., \"$342.17\"). Correct behavior: state the balance is unknown and that it must be looked up or provided.\n\n3. **Legitimate counter-case:** User says \"My appointment is on October 3rd — can you confirm the delivery will arrive before then?\" Here the date (October 3rd) was explicitly provided by the user, so the assistant may use and reason about it freely — e.g., \"Based on the October 3rd appointment you gave me, delivery should be scheduled before then.\" The rule restricts *inventing* commitment values, not *using* ones the user supplies.",
+    "ttft_ms": 9592,
+    "ttft_stream_ms": 991,
+    "time_to_request_ms": 13,
+    "type": "result",
+    "duration_ms": 9647,
+    "uuid": "5264d3a4-911b-436c-bbfd-80fb8148820d"
+  },
+  "error": null,
+  "skill_sha256": "40b3ab58ae972089bf171640407ad092305c7078d613456ad755c091423d64de"
+}

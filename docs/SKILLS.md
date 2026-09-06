@@ -170,7 +170,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Re-inspect delivered software across five layers plus the deployment boundary and repair what it finds inside a declared surface. Use when code looks done but the diligence is in doubt; not for business artifacts and not for external claims.
-- Result: The declared surface, repaired code or clean verdict, material findings and verification limits. For a full delivery review include all applicable boundary results; for a supplied snippet return the requested correction and its execution limit without unrelated deployment work.
+- Result: The declared surface, five layers and four boundary links each marked, the repaired code, and every remaining gap with its owner and the exact evidence still missing.
 - Do not use when: The artifact is a plan, document, model, or business decision -> `are-you-sure`
   - The doubt is whether an outside approach or library claim is sound -> `research-it`
   - The code is correct and clean but the solution is mediocre -> `is-that-the-best-you-can-do`
@@ -212,7 +212,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `output`
 - Lifecycle: `promoted`
 - Use when: Build one auditable meeting record holding every agenda in a single file, with evidence kept separate from interpretation. Use for minutes and detailed meeting records; not when each topic must become its own page.
-- Result: One record covering every supplied agenda on the requested surface; A4 portrait HTML by default. Include source coverage, locators, unknown or disputed facts, and inspection results only for print pages actually rendered.
+- Result: One rendered A4 portrait file covering every agenda, the source coverage account, the evidence ledger with locators, everything left explicitly unknown or disputed, and the inspection result for every print page.
 - Do not use when: Each agenda must become its own separate page -> `one-page-pls`
   - The artifact is not a meeting record and the format is open -> `final-it`
   - Project state must be reconstructed from the repository rather than a transcript -> `catchup`
@@ -240,7 +240,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `output`
 - Lifecycle: `promoted`
 - Use when: Choose the format that actually serves the recipient and finish the work in it. Use when no narrower output skill owns the artifact; not for meeting records, not for one-page briefs, and not for supplying missing content.
-- Result: The finished artifact in the chosen format, the reason that format was chosen, the verification actually performed, and any content gate that remains genuinely open.
+- Result: The finished deliverable. If the user requests the artifact only, return only that artifact; keep format rationale and verification bookkeeping internal. Otherwise include only a material delivery limit or decision still needed, without repeating the finished content.
 - Do not use when: The source is a meeting and the record must hold every agenda -> `sum-meet`
   - Each topic must become its own single page -> `one-page-pls`
   - A project contract, not a deliverable, is what is needed -> `project-standard`
@@ -308,7 +308,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `shared-standard`
 - Lifecycle: `promoted`
 - Use when: Enforce visual and interaction law on anything rendered, following the project's existing design system first and this house style only as fallback. Applies automatically to visual work; it does not choose the format or write the content.
-- Result: The requested code or rendered artifact. For a rendered deliverable, report the system followed, actual lint/render evidence and material open gates. For code-only output, do not append process narration or claim fonts loaded.
+- Result: The requested code or rendered artifact. For a rendered deliverable, report the system followed, actual lint/render evidence and material open gates. For code-only output, return exclusively code; keep verification notes internal.
 - Do not use when: The rules needed are about wording rather than presentation -> `make-it-james`
   - The question is which format the deliverable should take -> `final-it`
   - The interface is defective rather than inconsistent -> `dev-are-you-sure`

@@ -50,7 +50,7 @@ The artifact exists in its chosen format, its native checks pass, every rendered
 
 ## Hand back
 
-The finished artifact in the chosen format, the reason that format was chosen, the verification actually performed, and any content gate that remains genuinely open.
+The finished deliverable. If the user requests the artifact only, return only that artifact; keep format rationale and verification bookkeeping internal. Otherwise include only a material delivery limit or decision still needed, without repeating the finished content.
 
 ## Sources
 

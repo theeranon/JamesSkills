@@ -1,0 +1,17 @@
+--- a/plugins/james-software/skills/dev-are-you-sure/SKILL.md
++++ b/plugins/james-software/skills/dev-are-you-sure/SKILL.md
+@@ -29 +29 @@
+-Declare the surface, then sweep all five layers and the boundary chain. Repair inside the surface; escalate what needs a decision.
++Declare the surface, then consider all five layers and the boundary chain. Repair inside the surface; escalate only decisions required for it. For a bounded source-only verdict, return that verdict and execution limit directly; do not print five empty or non-applicable sections. Keep non-applicable checks internal or group them briefly; a clean arithmetic helper does not need a deployment checklist. A requested full delivery review still requires every applicable boundary.
+@@ -31 +31 @@
+-1. **Integrity.** Simulate sequential use, not just the happy path: navigate away and back, act twice, act while loading, act after failure. For each transition name the exact line that resets the state. If no such line exists, that is the defect.
++1. **Integrity.** Simulate sequential use, not just the happy path: navigate away and back, act twice, act while loading, act after failure. For each transition name the exact line that resets the state. If the stated transition requires a reset and none exists, that is the defect. Pure functions or components without that transition need no invented state machinery. Preserve error propagation unless the task requires changing it.
+@@ -37 +37 @@
+-Then walk the boundary chain and mark each link passed, failed, not tested, or not applicable: local source and stored state; provider or API boundary with an authenticated receipt; the real user journey including permissions and persistence; and the deployed identity, version, and recipient-visible result. Evidence from one target never transfers to another.
++Then walk the boundary chain and mark each link passed, failed, not tested, or not applicable: local source and stored state; provider or API boundary with an authenticated receipt; the real user journey including permissions and persistence; and the deployed identity, version, and recipient-visible result. Evidence from one target never transfers to another. Also preserve coverage within a target: an authenticated staging receipt proves only the observed route/action, not all API behavior or persistence. A missing test is untested, not a demonstrated product failure. Source reasoning is not an executed simulation; never invent lines, receipts, or future breakage to fill a checklist.
+@@ -41 +41 @@
+-Five layers and four boundary links are each marked with a result against the declared surface, every repairable finding is repaired, and every remaining gap names its exact owner. Untested is reported as untested and never collapsed into done.
++Every applicable layer and boundary has an evidence-backed result against the declared surface; non-applicable checks may be grouped rather than expanded, every repairable finding is repaired, and every remaining gap names its exact owner. Untested is reported as untested and never collapsed into done.
+@@ -57 +57 @@
+-The declared surface, five layers and four boundary links each marked, the repaired code, and every remaining gap with its owner and the exact evidence still missing.
++The declared surface, repaired code or clean verdict, material findings and verification limits. For a full delivery review include all applicable boundary results; for a supplied snippet return the requested correction and its execution limit without unrelated deployment work.

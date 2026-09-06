@@ -1,0 +1,108 @@
+{
+  "case": {
+    "id": "core-forward-never-again-2",
+    "skill": "never-again",
+    "role": "transfer",
+    "prompt": "Current disposable repo has AGENTS.md and ai-context/LESSONS.md. Approved durable correction: totals must exclude canceled rows. data.csv has A,10,active andB,40,canceled. report.md says Total50. Repair report; record lesson with this rejected case, another canceled-row example, and countercase including all rows when user explicitly requests gross including cancellations. No external actions.",
+    "rubric": "Persist scoped lesson and read-firstpointer; report10; retain explicitgrosscountercase; no external writes."
+  },
+  "before": {
+    "notes.txt": "KEEP EXACTLY\n",
+    "report.md": "Total50\n",
+    "data.csv": "item,value,status\nA,10,active\nB,40,canceled\n",
+    "draft.txt": "Proposal draft\n",
+    "AGENTS.md": "# Fixture contract\nPreserve unrelated files.\n",
+    "inventory.csv": "item,qty\nbolts,8\nwashers,12\n",
+    "sales.csv": "item,qty,price\npen,3,20\nbook,2,90\n",
+    "ai-context/LESSONS.md": "# Lessons\nExisting lesson: preserve facts.\n"
+  },
+  "after": {
+    "notes.txt": "KEEP EXACTLY\n",
+    "report.md": "Total10\n",
+    "data.csv": "item,value,status\nA,10,active\nB,40,canceled\n",
+    "draft.txt": "Proposal draft\n",
+    "AGENTS.md": "# Fixture contract\nPreserve unrelated files.\n\nRequired reading: ai-context/LESSONS.md must be read before working on totals/reports in this repo.\n",
+    "inventory.csv": "item,qty\nbolts,8\nwashers,12\n",
+    "sales.csv": "item,qty,price\npen,3,20\nbook,2,90\n",
+    "ai-context/LESSONS.md": "# Lessons\nExisting lesson: preserve facts.\n\n## Lesson: Totals must exclude canceled rows (2026-09-07)\n\n**What happened:** report.md summed all rows in data.csv (A=10 active, B=40 canceled) and reported \"Total50\", including the canceled row's value in a headline total.\n\n**Mechanism that allowed it:** The summation step treated every row in the source data as in-scope for \"total\" without checking a status/state column, conflating \"all rows present\" with \"all rows that count.\" Any report-generation step that aggregates a value column without filtering on lifecycle status (canceled, voided, refunded, etc.) is vulnerable to the same error, regardless of the specific dataset or label used.\n\n**Rule now in force:** When computing a \"total\" (or equivalent headline aggregate) over row-based data that has a status/state field, canceled (or equivalently voided/refunded) rows MUST be excluded by default. An aggregate that intentionally includes canceled rows MUST be labeled explicitly (e.g., \"Gross total including cancellations\") and MUST only be produced when the user explicitly requests a gross/including-cancellations figure.\n\n**Regressions:**\n1. Rejected case: data.csv has A,10,active and B,40,canceled → Total must be 10, not 50.\n2. Same mechanism, different data: rows C,20,active / D,5,canceled / E,15,active → Total must be 35 (20+15), excluding the canceled 5.\n3. Counter-case (must still be allowed): user explicitly asks for \"gross total including cancellations\" over A,10,active and B,40,canceled → output 50, labeled explicitly as gross/including cancellations, is correct and must not be suppressed.\n"
+  },
+  "response": {
+    "is_error": false,
+    "duration_api_ms": 21850,
+    "num_turns": 8,
+    "stop_reason": "end_turn",
+    "session_id": "de80509b-f277-458f-85a7-255b4a11f2a9",
+    "total_cost_usd": 0.051795299999999996,
+    "usage": {
+      "input_tokens": 6,
+      "cache_creation_input_tokens": 2789,
+      "cache_read_input_tokens": 13741,
+      "output_tokens": 2012,
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 2789,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "not_available",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 382,
+          "cache_read_input_tokens": 5194,
+          "cache_creation_input_tokens": 1651,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 1651
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard"
+    },
+    "modelUsage": {
+      "claude-haiku-4-5-20251001": {
+        "inputTokens": 666,
+        "outputTokens": 15,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 0,
+        "webSearchRequests": 0,
+        "costUSD": 0.000741,
+        "contextWindow": 200000,
+        "maxOutputTokens": 32000,
+        "canonicalModel": "claude-haiku-4-5",
+        "provider": "firstParty"
+      },
+      "claude-sonnet-5": {
+        "inputTokens": 6,
+        "outputTokens": 2012,
+        "cacheReadInputTokens": 13741,
+        "cacheCreationInputTokens": 2789,
+        "webSearchRequests": 0,
+        "costUSD": 0.0510543,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 64000,
+        "canonicalModel": "claude-sonnet-5",
+        "provider": "firstParty"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "Done. Summary:\n\n- **Repair**: `report.md` corrected from `Total50` to `Total10` (excluding canceled row B).\n- **Lesson entry** added to `ai-context/LESSONS.md` — \"Totals must exclude canceled rows (2026-09-07)\": what happened, the mechanism (aggregation without status filtering), and the durable rule (exclude canceled/voided/refunded rows by default; gross figures require explicit request + explicit labeling).\n- **Contract pointer**: `AGENTS.md` now has a required-reading pointer to `ai-context/LESSONS.md` for totals/report work.\n- **Three regressions** recorded:\n  1. Rejected case (A/active=10, B/canceled=40) → Total10\n  2. Same-mechanism case (C/active=20, D/canceled=5, E/active=15) → Total35\n  3. Counter-case: explicit \"gross including cancellations\" request → 50, explicitly labeled as gross\n- **Scope**: this project only (`AGENTS.md` + `ai-context/LESSONS.md` at repo root); no unrelated files touched, no external actions taken.",
+    "ttft_ms": 1955,
+    "ttft_stream_ms": 1371,
+    "time_to_request_ms": 8,
+    "type": "result",
+    "duration_ms": 20690,
+    "uuid": "216b558b-f91d-4dab-aeb0-f37db1ed178e"
+  },
+  "error": null,
+  "skill_sha256": "40b3ab58ae972089bf171640407ad092305c7078d613456ad755c091423d64de"
+}

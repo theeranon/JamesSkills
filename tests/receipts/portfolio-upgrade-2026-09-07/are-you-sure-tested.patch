@@ -1,0 +1,17 @@
+--- a/plugins/james-core/skills/are-you-sure/SKILL.md
++++ b/plugins/james-core/skills/are-you-sure/SKILL.md
+@@ -29 +29 @@
+-Declare the surface first: the exact artifact or set of artifacts under inspection. Then sweep all five layers in order. Repair each finding immediately, or escalate it when repair needs a decision you do not hold.
++Define the surface first: the exact artifact or set of artifacts under inspection. Keep this planning internal when the user requests only the repaired artifact. Then sweep all five layers in order. Repair each evidenced finding immediately, or escalate it when the requested outcome needs a decision you do not hold. A possible risk is not an observed defect. Preserve explicit unknowns rather than inventing facts, owners or deadlines to make the artifact look complete.
+@@ -34 +34 @@
+-4. **Recipient.** Read it as the person who receives it. Every question they would have to ask before acting is a defect. Apply the installed wording standard rather than restating it here.
++4. **Recipient.** Read it as the person who receives it. Identify missing information that actually prevents the intended recipient from acting; do not invent additional decisions or expand a complete notice into a process design. Apply the installed wording standard rather than restating it here.
+@@ -37 +37 @@
+-Report every layer as repaired, escalated, or clean. Never report a layer you did not run.
++Consider every layer, but allow not applicable for a layer the artifact does not need and unverified when evidence is unavailable. Report repaired, escalated or clean only for checks actually performed. A clean artifact stays unchanged. Keep the inspection account proportional and outside an artifact-only response.
+@@ -41 +41 @@
+-All five layers have been run against the declared surface, every finding is repaired or escalated with a named owner, and the report states the surface inspected. A layer with nothing to fix is reported as clean, which is a result, not a skip.
++All five layers have been considered against the declared surface, every evidenced defect is repaired or escalated to a known decision holder, and material verification limits are explicit. A layer with nothing to fix is reported as clean, which is a result, not a skip.
+@@ -57 +57 @@
+-The declared inspection surface, each of the five layers marked repaired, escalated, or clean, the repaired artifact itself, and any escalation with the decision it needs and who holds it.
++The repaired artifact, or the requested clean-result confirmation. When an inspection report is requested, include the surface and actual findings, with clean, repaired, escalated, not-applicable or unverified status as warranted. Name only the decisions genuinely needed to finish.

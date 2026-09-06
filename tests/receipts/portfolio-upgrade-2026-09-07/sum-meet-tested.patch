@@ -1,0 +1,14 @@
+--- a/plugins/james-productivity/skills/sum-meet/SKILL.md
++++ b/plugins/james-productivity/skills/sum-meet/SKILL.md
+@@ -27 +27 @@
+-1. Inventory every transcript, note, attachment, and relevant part of the current conversation before drafting. Read each completely; when a source must be processed in chunks, keep a coverage ledger so the middle is not silently lost.
++1. The user's supplied notes or statements are valid sources for the requested record; a transcript is not mandatory. Bound completeness to the material and scope supplied, not an imagined larger meeting. Missing metadata remains unknown without blocking a useful record, and a source locator may identify the supplied message or numbered note. If the user requests a chat record, deliver it in chat with the same evidence discipline rather than forcing HTML or claiming rendering. Inventory every transcript, note, attachment, and relevant part of the current conversation before drafting. Read each completely; when a source must be processed in chunks, keep a coverage ledger so the middle is not silently lost.
+@@ -32 +32 @@
+-6. Write one self-contained A4 portrait HTML file containing every topic as its own zone inside the same file. Duplicate [assets/meeting-record.html](assets/meeting-record.html) and replace every token.
++6. Unless the user requests a different surface such as chat, write one self-contained A4 portrait HTML file containing every topic as its own zone inside the same file. Duplicate [assets/meeting-record.html](assets/meeting-record.html) and replace every token.
+@@ -38 +38 @@
+-Every source segment is accounted for as substantive content, duplicate content, or non-substantive conversation; every decision, action, owner, date, and open loop points to source evidence or is explicitly marked unknown; and every print page has been inspected. A partial record is never labelled complete.
++Every source segment is accounted for as substantive content, duplicate content, or non-substantive conversation; every decision, action, owner, date, and open loop points to source evidence or is explicitly marked unknown; and every print page has been inspected when a rendered file was requested. State completeness against the supplied sources; do not imply coverage of material never provided. A partial record is never labelled complete.
+@@ -54 +54 @@
+-One rendered A4 portrait file covering every agenda, the source coverage account, the evidence ledger with locators, everything left explicitly unknown or disputed, and the inspection result for every print page.
++One record covering every supplied agenda on the requested surface; A4 portrait HTML by default. Include source coverage, locators, unknown or disputed facts, and inspection results only for print pages actually rendered.

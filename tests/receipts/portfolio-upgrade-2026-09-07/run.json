@@ -1,0 +1,595 @@
+{
+  "base_revision": "98433f6",
+  "seed": 90722,
+  "planned_attempts": 117,
+  "changed": [
+    "done-for-me",
+    "is-that-the-best-you-can-do",
+    "never-again",
+    "are-you-sure",
+    "hand-it-off",
+    "baseon",
+    "final-it",
+    "give-me-solutions",
+    "grill-me",
+    "one-page-pls",
+    "sum-meet",
+    "zoom-out",
+    "catchup",
+    "dev-are-you-sure",
+    "make-it-james-ux",
+    "proactive-dev",
+    "project-standard"
+  ],
+  "unchanged": [
+    "proactive-habits",
+    "i-have-adhd",
+    "make-it-james",
+    "research-it",
+    "coach-me"
+  ],
+  "body_hashes": {
+    "proactive-habits": {
+      "B": "93a882721689d2efe18c616fdad5b7764a694da34e1c3aa239ffbb3bc6d9f93f",
+      "C": "93a882721689d2efe18c616fdad5b7764a694da34e1c3aa239ffbb3bc6d9f93f"
+    },
+    "done-for-me": {
+      "B": "e02c4b1479211a5420c3dab6e4fe3f4fdcb049a33130eef75a49f84fc4b6c5a2",
+      "C": "d8e65fd9de50ef8bf7d6a58470b81c21aa978d7e23e55f07685cb6b4e49ce10b"
+    },
+    "i-have-adhd": {
+      "B": "9ccd8e3add67b9e88d81dddac151eb8a09fcb1d3d7b27cf9a5e7acf34df61fcb",
+      "C": "9ccd8e3add67b9e88d81dddac151eb8a09fcb1d3d7b27cf9a5e7acf34df61fcb"
+    },
+    "is-that-the-best-you-can-do": {
+      "B": "699893710e6649d770dd636a050ac08ee9e7e788e7af1da21c34f8db390b09cc",
+      "C": "089f1fc41d2baafcc9dca135c4ba6986253bed6c8476bb5a1d1fb413b9c644b6"
+    },
+    "make-it-james": {
+      "B": "fe69567da59a9d2f65f10160649cfa7bceeae120731c4524c07a095fbf70ba58",
+      "C": "fe69567da59a9d2f65f10160649cfa7bceeae120731c4524c07a095fbf70ba58"
+    },
+    "never-again": {
+      "B": "152f3671fa3fb734985f4e1fff7da6da8d83e444c9128003afb39ded6eec2dd7",
+      "C": "a6d513ec4c9a4a413d22366c889d24427f5329879b57204378b874af4fd35fc7"
+    },
+    "research-it": {
+      "B": "cbc883400f5d4405e51b9472937a5f24f6a4435a7adadb6a40440c32fa43d885",
+      "C": "cbc883400f5d4405e51b9472937a5f24f6a4435a7adadb6a40440c32fa43d885"
+    },
+    "are-you-sure": {
+      "B": "63ff16ab0806370dc454792ad80129b6442ab3bbf6ce086db41cd8ea1af1a7b8",
+      "C": "28df81e6a2e4924254463d1c25b7befe009c7cfac3a931cf7b2256e9c2d49f4d"
+    },
+    "hand-it-off": {
+      "B": "4e11d47e702af1b5530a0bb6d15a630b0240ead0bd61d9013c239d303f42d664",
+      "C": "4a008ad859d8bec93699bbaef689312a44884a0573b149f74903edaa2c2d2566"
+    },
+    "baseon": {
+      "B": "e359e943249f6934627e4e2a04a3ada9d51ff394876a54f1bea208222727d573",
+      "C": "ccd5cd8686c9ea7541ca443a814ff8e01a5ca1f9efb61b5f10d8d31d9b38a501"
+    },
+    "coach-me": {
+      "B": "a7b573b9e9c9eb19f9737fd6cfd9066cd26cb6dcb4fe9a182d276c4d0b086bfa",
+      "C": "a7b573b9e9c9eb19f9737fd6cfd9066cd26cb6dcb4fe9a182d276c4d0b086bfa"
+    },
+    "final-it": {
+      "B": "4acd695a1d5a697c0dc3a0222b69478f3e6824be7302c8c2a1c08ec21b1f808c",
+      "C": "b915317bad64577d3c863e914065698a0a0b028bd79e6980c121f34dc386c189"
+    },
+    "give-me-solutions": {
+      "B": "4e335737a8ca15876b5ce613d74de1e35b735ca8e13d9f2f31bc84d37e6fcc27",
+      "C": "6c369e8405dc17c4596db6d311c6c3eb904b4b8eb65dfd625d7873256f3805ef"
+    },
+    "grill-me": {
+      "B": "048ace122c4f2ba34097bda81b7cc32650389b2139d0bb2c1d42e99fb549face",
+      "C": "b0d85593937d3bbc276a4ab6f33f59b6b59617d231ad6efd505c67d52508e859"
+    },
+    "one-page-pls": {
+      "B": "2a65c843584d1e9a412012dbf3078c290dee5add58f5fe42a2d40e9de9802255",
+      "C": "9246a403d815f7576b3f8a569e69908438120c194334acde5420dc98ab40f508"
+    },
+    "sum-meet": {
+      "B": "ae163268c0ae450311359e9b346412a71251e0573198be7fece3de7443cdbbcf",
+      "C": "f9058bce62659aa253d9dbc83df779c8d922dfc3c29930dff7bd3d6447d1a248"
+    },
+    "zoom-out": {
+      "B": "6e84735308985dd3e4b51fea92c159836495e68aa6a8b38256019b0e6cd968fb",
+      "C": "4529d03b7a05e50eaa2795e0d7a688d2c596cbae1c3cab09c702e3bf70b5be69"
+    },
+    "catchup": {
+      "B": "5dbf68ea29fb3bcd42718d5d65dcf96494f1ff9509aa35cb346ea15018607cdb",
+      "C": "f45f7c7c179d7de76ad102a2ec85fde11b0b5b5c9d6c0673335d30ac9b1690fc"
+    },
+    "dev-are-you-sure": {
+      "B": "dca76ba2af7a92825c680678c24685a06b6a9233583611cbeff8cdd00ef5e559",
+      "C": "bacacc800fcd977e7063abc894c47c4b75feeae7f632a6df39c604d61638570f"
+    },
+    "make-it-james-ux": {
+      "B": "d124913d416c4fb1afa982a40d9279c4db11ebfbcbdad0f4b1e73e52a551d601",
+      "C": "fe52d8e24b2e043f6bf098c49d7cea0e478122703dd80fef89d875d079e97615"
+    },
+    "proactive-dev": {
+      "B": "581e7fc134d6264e1ab2d185803eba408fa6381378f934c15a9cc60169db0e4c",
+      "C": "756dc53d348fb2acd30084d0fee23534f87f8ab6747c8292303e66bdd9a66616"
+    },
+    "project-standard": {
+      "B": "1adbf8a589558d94a5a0451f426094aab2c1535bad6d77db54f075ae3915d257",
+      "C": "c108df6beccab91d1c37f1a02d2e2af0ad9b344f4e1a71212229ccb137eb76bb"
+    }
+  },
+  "cases_hash": "21230ba6dccce434b0dfc0b850560083c43457ed79293f5f087eec4eed939d2c",
+  "workers": 4,
+  "acceptance": "Per-skill responsibility outcome, original mechanism and legitimate countercase; preserve failed attempts; no new material scope/authority regression; no aggregate portfolio uplift claim. Retain unchanged skills with forward coverage. One declared paired retry only for provider failure.",
+  "schedule": [
+    [
+      "productivity-final-it-1",
+      "C"
+    ],
+    [
+      "productivity-final-it-1",
+      "B"
+    ],
+    [
+      "core-forward-proactive-habits-1",
+      "C"
+    ],
+    [
+      "productivity-coach-me-1",
+      "C"
+    ],
+    [
+      "core-forward-is-that-the-best-you-can-do-2",
+      "B"
+    ],
+    [
+      "core-forward-is-that-the-best-you-can-do-2",
+      "C"
+    ],
+    [
+      "productivity-zoom-out-1",
+      "C"
+    ],
+    [
+      "productivity-zoom-out-1",
+      "B"
+    ],
+    [
+      "productivity-baseon-3",
+      "B"
+    ],
+    [
+      "productivity-baseon-3",
+      "C"
+    ],
+    [
+      "core-forward-is-that-the-best-you-can-do-1",
+      "B"
+    ],
+    [
+      "core-forward-is-that-the-best-you-can-do-1",
+      "C"
+    ],
+    [
+      "productivity-sum-meet-2",
+      "B"
+    ],
+    [
+      "productivity-sum-meet-2",
+      "C"
+    ],
+    [
+      "productivity-one-page-pls-1",
+      "B"
+    ],
+    [
+      "productivity-one-page-pls-1",
+      "C"
+    ],
+    [
+      "core-forward-research-it-2",
+      "C"
+    ],
+    [
+      "core-forward-never-again-1",
+      "B"
+    ],
+    [
+      "core-forward-never-again-1",
+      "C"
+    ],
+    [
+      "core-forward-done-for-me-2",
+      "C"
+    ],
+    [
+      "core-forward-done-for-me-2",
+      "B"
+    ],
+    [
+      "make-it-james-ux-upgrade-countercase",
+      "B"
+    ],
+    [
+      "make-it-james-ux-upgrade-countercase",
+      "C"
+    ],
+    [
+      "core-forward-are-you-sure-3",
+      "C"
+    ],
+    [
+      "core-forward-are-you-sure-3",
+      "B"
+    ],
+    [
+      "core-forward-i-have-adhd-3",
+      "C"
+    ],
+    [
+      "productivity-grill-me-2",
+      "B"
+    ],
+    [
+      "productivity-grill-me-2",
+      "C"
+    ],
+    [
+      "productivity-coach-me-2",
+      "C"
+    ],
+    [
+      "productivity-zoom-out-3",
+      "B"
+    ],
+    [
+      "productivity-zoom-out-3",
+      "C"
+    ],
+    [
+      "core-forward-is-that-the-best-you-can-do-3",
+      "C"
+    ],
+    [
+      "core-forward-is-that-the-best-you-can-do-3",
+      "B"
+    ],
+    [
+      "make-it-james-ux-upgrade-transfer",
+      "B"
+    ],
+    [
+      "make-it-james-ux-upgrade-transfer",
+      "C"
+    ],
+    [
+      "productivity-sum-meet-3",
+      "C"
+    ],
+    [
+      "productivity-sum-meet-3",
+      "B"
+    ],
+    [
+      "proactive-dev-upgrade-transfer",
+      "C"
+    ],
+    [
+      "proactive-dev-upgrade-transfer",
+      "B"
+    ],
+    [
+      "core-forward-proactive-habits-3",
+      "C"
+    ],
+    [
+      "productivity-baseon-1",
+      "B"
+    ],
+    [
+      "productivity-baseon-1",
+      "C"
+    ],
+    [
+      "dev-are-you-sure-upgrade-countercase",
+      "B"
+    ],
+    [
+      "dev-are-you-sure-upgrade-countercase",
+      "C"
+    ],
+    [
+      "core-forward-proactive-habits-2",
+      "C"
+    ],
+    [
+      "dev-are-you-sure-upgrade-regression",
+      "C"
+    ],
+    [
+      "dev-are-you-sure-upgrade-regression",
+      "B"
+    ],
+    [
+      "project-standard-upgrade-transfer",
+      "C"
+    ],
+    [
+      "project-standard-upgrade-transfer",
+      "B"
+    ],
+    [
+      "catchup-upgrade-transfer",
+      "C"
+    ],
+    [
+      "catchup-upgrade-transfer",
+      "B"
+    ],
+    [
+      "catchup-upgrade-countercase",
+      "C"
+    ],
+    [
+      "catchup-upgrade-countercase",
+      "B"
+    ],
+    [
+      "core-forward-are-you-sure-2",
+      "C"
+    ],
+    [
+      "core-forward-are-you-sure-2",
+      "B"
+    ],
+    [
+      "proactive-dev-upgrade-countercase",
+      "C"
+    ],
+    [
+      "proactive-dev-upgrade-countercase",
+      "B"
+    ],
+    [
+      "proactive-dev-upgrade-regression",
+      "B"
+    ],
+    [
+      "proactive-dev-upgrade-regression",
+      "C"
+    ],
+    [
+      "core-forward-i-have-adhd-1",
+      "C"
+    ],
+    [
+      "productivity-baseon-2",
+      "C"
+    ],
+    [
+      "productivity-baseon-2",
+      "B"
+    ],
+    [
+      "productivity-sum-meet-1",
+      "C"
+    ],
+    [
+      "productivity-sum-meet-1",
+      "B"
+    ],
+    [
+      "productivity-one-page-pls-2",
+      "B"
+    ],
+    [
+      "productivity-one-page-pls-2",
+      "C"
+    ],
+    [
+      "core-forward-never-again-2",
+      "C"
+    ],
+    [
+      "core-forward-never-again-2",
+      "B"
+    ],
+    [
+      "core-forward-hand-it-off-3",
+      "B"
+    ],
+    [
+      "core-forward-hand-it-off-3",
+      "C"
+    ],
+    [
+      "productivity-give-me-solutions-3",
+      "C"
+    ],
+    [
+      "productivity-give-me-solutions-3",
+      "B"
+    ],
+    [
+      "core-forward-hand-it-off-1",
+      "B"
+    ],
+    [
+      "core-forward-hand-it-off-1",
+      "C"
+    ],
+    [
+      "core-forward-make-it-james-1",
+      "C"
+    ],
+    [
+      "core-forward-make-it-james-2",
+      "C"
+    ],
+    [
+      "productivity-final-it-2",
+      "C"
+    ],
+    [
+      "productivity-final-it-2",
+      "B"
+    ],
+    [
+      "productivity-give-me-solutions-2",
+      "B"
+    ],
+    [
+      "productivity-give-me-solutions-2",
+      "C"
+    ],
+    [
+      "productivity-grill-me-3",
+      "B"
+    ],
+    [
+      "productivity-grill-me-3",
+      "C"
+    ],
+    [
+      "productivity-grill-me-1",
+      "C"
+    ],
+    [
+      "productivity-grill-me-1",
+      "B"
+    ],
+    [
+      "core-forward-done-for-me-1",
+      "C"
+    ],
+    [
+      "core-forward-done-for-me-1",
+      "B"
+    ],
+    [
+      "core-forward-done-for-me-3",
+      "B"
+    ],
+    [
+      "core-forward-done-for-me-3",
+      "C"
+    ],
+    [
+      "productivity-give-me-solutions-1",
+      "C"
+    ],
+    [
+      "productivity-give-me-solutions-1",
+      "B"
+    ],
+    [
+      "productivity-one-page-pls-3",
+      "B"
+    ],
+    [
+      "productivity-one-page-pls-3",
+      "C"
+    ],
+    [
+      "productivity-coach-me-3",
+      "C"
+    ],
+    [
+      "core-forward-never-again-3",
+      "C"
+    ],
+    [
+      "core-forward-never-again-3",
+      "B"
+    ],
+    [
+      "dev-are-you-sure-upgrade-transfer",
+      "B"
+    ],
+    [
+      "dev-are-you-sure-upgrade-transfer",
+      "C"
+    ],
+    [
+      "core-forward-hand-it-off-2",
+      "B"
+    ],
+    [
+      "core-forward-hand-it-off-2",
+      "C"
+    ],
+    [
+      "catchup-upgrade-regression",
+      "C"
+    ],
+    [
+      "catchup-upgrade-regression",
+      "B"
+    ],
+    [
+      "productivity-zoom-out-2",
+      "C"
+    ],
+    [
+      "productivity-zoom-out-2",
+      "B"
+    ],
+    [
+      "core-forward-i-have-adhd-2",
+      "C"
+    ],
+    [
+      "project-standard-upgrade-regression",
+      "B"
+    ],
+    [
+      "project-standard-upgrade-regression",
+      "C"
+    ],
+    [
+      "core-forward-research-it-1",
+      "C"
+    ],
+    [
+      "make-it-james-ux-upgrade-regression",
+      "B"
+    ],
+    [
+      "make-it-james-ux-upgrade-regression",
+      "C"
+    ],
+    [
+      "core-forward-make-it-james-3",
+      "C"
+    ],
+    [
+      "project-standard-upgrade-countercase",
+      "C"
+    ],
+    [
+      "project-standard-upgrade-countercase",
+      "B"
+    ],
+    [
+      "core-forward-research-it-3",
+      "C"
+    ],
+    [
+      "core-forward-are-you-sure-1",
+      "C"
+    ],
+    [
+      "core-forward-are-you-sure-1",
+      "B"
+    ],
+    [
+      "productivity-final-it-3",
+      "C"
+    ],
+    [
+      "productivity-final-it-3",
+      "B"
+    ]
+  ],
+  "proof_limit": "public development, assistant authored; response-only; no sealed holdout or whole runtime proof"
+}

@@ -1,0 +1,8 @@
+--- a/plugins/james-productivity/skills/give-me-solutions/SKILL.md
++++ b/plugins/james-productivity/skills/give-me-solutions/SKILL.md
+@@ -31 +31 @@
+-4. Keep a source ledger for each candidate, gathering evidence the way `research-it` does: the official position, then independent practitioner accounts with their dates and stated stakes. Delegate that pass to `research-it` when the evidence load is heavy.
++4. Gather evidence the way `research-it` does, using supplied sources first and outside research where needed. Keep a ledger when it helps the choice; never invent dates, commercial independence or missing observations to fill it. Delegate that pass to `research-it` when the evidence load is heavy.
+@@ -33 +33 @@
+-6. Compare every survivor against the same requirement set, including setup cost, recurring cost, migration effort, lock-in, reliability, security, and the ongoing operating burden on this specific team.
++6. Compare every survivor against the same relevant requirements, including setup cost, recurring cost, migration effort, lock-in, reliability, security, and operating burden where they affect this choice. Missing cost, setup time or capability is unknown, never zero or satisfied; do not add a guessed value in parentheses or use it later to rank the options. Existing ownership does not prove readiness or team competence. Compute total effort over the stated horizon; keep unknown fees separate from time savings and make recommendations conditional on material gaps.

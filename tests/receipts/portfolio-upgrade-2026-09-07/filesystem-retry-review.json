@@ -1,0 +1,29 @@
+{
+  "scope": "Two previously failed forward cases retried once after targeted correction. Original results retained. No comparator uplift claim.",
+  "results": [
+    {
+      "id": "core-forward-never-again-2",
+      "targeted_previous_failure_repaired": true,
+      "persistence_boundary_pass": true,
+      "overall_pass": true,
+      "remaining_issue": null,
+      "changed_files": [
+        "report.md",
+        "AGENTS.md",
+        "ai-context/LESSONS.md"
+      ],
+      "skill_sha256": "ec971635218edcc85a44fc5d55414f120dd9663c75486c7828aa427b161acccb",
+      "evidence": "/var/folders/k1/djf0tj2d0mz4w7ss3x7smtkm0000gn/T/core-forward-retry-gyngeud5/core-forward-never-again-2.json"
+    },
+    {
+      "id": "core-forward-never-again-3",
+      "targeted_previous_failure_repaired": true,
+      "persistence_boundary_pass": true,
+      "overall_pass": false,
+      "remaining_issue": "Draft countercase permits saying reminder set without execution evidence; expands temporal commitment examples to price/quantity.",
+      "changed_files": [],
+      "skill_sha256": "ec971635218edcc85a44fc5d55414f120dd9663c75486c7828aa427b161acccb",
+      "evidence": "/var/folders/k1/djf0tj2d0mz4w7ss3x7smtkm0000gn/T/core-forward-retry-gyngeud5/core-forward-never-again-3.json"
+    }
+  ]
+}
