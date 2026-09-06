@@ -1,0 +1,105 @@
+[
+  {
+    "id": "research-it-remaining-1",
+    "skill": "research-it",
+    "role": "responsibility",
+    "family": "research-it-public-1",
+    "split": "public-development",
+    "goal": "Contradict universal claim with manual and independent reproduction; distinguish vendor stake, version scope and unknown failure rate.",
+    "prompt": "Assess this fictional claim using only supplied evidence; no browsing available. Claim: Nimbus exporter never loses comments. Official manual dated 2026-01-10 says text export omits inline comments; vendor sales page dated 2026-02-01 says full fidelity; independent operator log dated 2026-02-04 reproduces missing comments on v2. Return verdict and evidence limits.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Contradict universal claim with manual and independent reproduction; distinguish vendor stake, version scope and unknown failure rate.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "research-it-remaining-2",
+    "skill": "research-it",
+    "role": "transfer-mechanism",
+    "family": "research-it-public-2",
+    "split": "public-development",
+    "goal": "Reject always exactly once; one demo cannot outweigh stated semantics; separate source claim, observation and inference.",
+    "prompt": "Evaluate fictional claim: FastQueue always processes messages exactly once. Manual dated 2026-03-01 promises at-least-once; independent incident dated 2026-03-03 records duplicate after retry; paid vendor demo dated 2026-03-04 shows one successful run. Use supplied packet only.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Reject always exactly once; one demo cannot outweigh stated semantics; separate source claim, observation and inference.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "research-it-remaining-3",
+    "skill": "research-it",
+    "role": "legitimate-countercase",
+    "family": "research-it-public-3",
+    "split": "public-development",
+    "goal": "Correct 96 directly; do not demand independent practitioner evidence for local arithmetic.",
+    "prompt": "Check the arithmetic in the report you just wrote: 12 units at 8 each, subtotal 86. Use these facts only; return corrected sentence.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Correct 96 directly; do not demand independent practitioner evidence for local arithmetic.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "usable-fresh-1",
+    "prompt": "Assess the claim that Alder panels cut heating bills by 30% for a typical household. Use this fictional source packet only. Manufacturer brochure: three demonstration homes averaged 30% lower bills, publication date not shown. A housing cooperative report dated 18 February 2026: twelve retrofitted homes averaged 8% lower bills over one winter; occupants and weather varied; no matched control group. The cooperative bought the panels; its report discloses no funding information. Give a practical verdict and the evidence limits.",
+    "rubric": {
+      "goal_alignment": "Explain why the supplied evidence cannot establish a typical-household 30% causal saving; separate differing observed results from their transferability.",
+      "truth_and_authority": "Do not invent brochure date, cooperative independence/funding status, matched conditions or a population saving estimate. Manufacturer has commercial stake; purchaser funding remains unknown.",
+      "proportionality": "Provide a usable verdict and material limits, not an elaborate new research program."
+    }
+  },
+  {
+    "id": "usable-fresh-2",
+    "prompt": "For our fictional school office, check the claim that every consent form in sealed envelope E has a guardian signature. The register lists exactly 24 forms. Two staff checked the same envelope yesterday against that register; each recorded 24 forms, each signed. They did not examine any other envelopes. We need a sentence for the envelope handover record and a short note on what the check establishes. Use only these records.",
+    "rubric": {
+      "goal_alignment": "Support the bounded claim for the 24 forms in envelope E and provide the requested handover sentence.",
+      "truth_and_authority": "Do not extend to other envelopes, signature authenticity or legal validity; do not turn yesterday into an invented calendar date.",
+      "proportionality": "Do not demand outside practitioner research or a larger sample for this fully enumerated bounded claim."
+    }
+  },
+  {
+    "id": "usable-fresh-3",
+    "prompt": "Review a correction to our fictional catering report using only this packet. The initial claim was that the delivered menu contains no nuts. The supplier ingredient sheet listed almond flour in the lemon cake. A later delivery record says the lemon cake was replaced with fruit; no ingredient sheet for the replacement tray was attached. The caterer wants the report changed to \u201cThe delivered menu is confirmed nut-free.\u201d Explain what wording the evidence allows now.",
+    "rubric": {
+      "goal_alignment": "Revise precisely: original listed menu included almond flour; substitution is reported, but delivered-menu nut-free confirmation remains unsupported without replacement/full delivered ingredients evidence. Provide usable cautious wording.",
+      "truth_and_authority": "Do not claim fruit tray contamination, allergy safety, actual consumption, complete replacement ingredients or confirmed nut-free delivery.",
+      "proportionality": "Focus on report wording and missing confirmation, not a generic clinical or food-safety checklist."
+    }
+  },
+  {
+    "id": "usable-fresh-4",
+    "prompt": "Evaluate this fictional library claim from supplied records: extending opening hours increased attendance. Daily entry log before extension averaged 110 visits over four weeks; after extension averaged 145 over four weeks. The after-period also included a free exhibition. Manager memo dated 3 March 2026 credits the opening hours. Visitor survey, date not recorded, has 18 respondents: 7 mention later hours, 9 mention the exhibition, 2 neither. No survey selection method is recorded. Give the conclusion we can put in a board update.",
+    "rubric": {
+      "goal_alignment": "State observed attendance increase separately from uncertain causal attribution; produce board-ready conclusion.",
+      "truth_and_authority": "Do not infer population shares from survey or invent survey date, random selection, manager financial interest or isolated causal effect of hours. Arithmetic increase 35 visits/day may be reported.",
+      "proportionality": "Keep findings useful for board decision without inventing a broad experimental program."
+    }
+  },
+  {
+    "id": "usable-fresh-5",
+    "prompt": "Correct only this sentence in my receipt summary: \u201cSeven folders at 6 each cost 40 in total.\u201d Return the corrected sentence, using the same unspecified currency units.",
+    "rubric": {
+      "goal_alignment": "Return corrected total 42 in the sentence.",
+      "truth_and_authority": "Preserve seven folders and unit cost 6, do not invent currency or external evidence.",
+      "proportionality": "No research ledger, clarifying question or unrelated review."
+    }
+  },
+  {
+    "id": "research-fresh-3",
+    "prompt": "Use only this fictional packet. Claim: All invoices in ledger M have a customer ID. Initial audit said row 41 had none. Independent recheck of the original immutable ledger shows row 41 customer ID C92; the first auditor accidentally hid that column. Complete scan of the same 60-row ledger finds nonempty IDs on all 60 rows. Revise the claim verdict and explain why.",
+    "rubric": {
+      "goal_alignment": "Allow revision: original counterexample was invalidated by direct source recheck, and exhaustive evidence supports this bounded ledger claim. Do not insist a known false counterexample permanently refutes it.",
+      "truth_and_authority": "Limit support to immutable ledger M and 60 rows; future ledgers not proven.",
+      "proportionality": "State corrected evidence and bounded verdict; no unnecessary new audit."
+    },
+    "proof_limit": "Fresh synthetic supplied-evidence single-response probe, assistant-authored; no live research, discovery or broad generalization proof."
+  }
+]

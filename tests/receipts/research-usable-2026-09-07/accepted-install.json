@@ -1,0 +1,10 @@
+{
+  "canonical_sha256": "7562b55ed161c1edb865672c414fa71c75eed7dd1f208659a9bb2a3c9b61f581",
+  "native_files_updated": 2,
+  "native_body_matches": [
+    true,
+    true
+  ],
+  "package_version": "2.0.1",
+  "distribution": "local body patch; no marketplace publication"
+}

@@ -286,3 +286,11 @@ Record accepted or superseded project decisions. Raw discussion remains in its s
 - Status: Implemented within approved export scope.
 - Decision: Export promoted instruction bodies once into .agents/skills, carry declared shared packs/research and helper scripts at compatible relative paths, and fail before overwriting different files. Keep fonts as declared external prerequisites. Verify relocation with a real exported helper.
 - Boundary: This command does not replace native host adapters or guarantee duplicate-free discovery across all apps. No new skill or alias was created.
+
+## DEC-030 — Deliver bounded research-it correction locally
+
+- Date: 2026-09-07
+- Status: Implemented under the owner's request for a usable installed result.
+- Decision: Replace compulsory research formatting and hypothetical reversal conditions with source-bound assessment, optional formatting and claim-scope discipline. Accept only after original/transfer regressions passed, legitimate revision remained correct, and blinded paired review showed no new case-level truth failure. Residual factual failures prohibit a general reliability claim.
+- Evidence: `tests/receipts/research-usable-2026-09-07/REVIEW.md`; preserved failed candidate and low/high-effort phases; native request outcomes on three Mac CLIs.
+- Distribution: Canonical body and backed-up active native bodies updated locally; portable export refreshed. Published package metadata stays 2.0.1. No remote push or new marketplace release is implied; future marketplace updates may replace local cache patches.

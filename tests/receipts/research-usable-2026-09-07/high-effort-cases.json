@@ -1,0 +1,64 @@
+[
+  {
+    "id": "research-it-remaining-1",
+    "skill": "research-it",
+    "role": "responsibility",
+    "family": "research-it-public-1",
+    "split": "public-development",
+    "goal": "Contradict universal claim with manual and independent reproduction; distinguish vendor stake, version scope and unknown failure rate.",
+    "prompt": "Assess this fictional claim using only supplied evidence; no browsing available. Claim: Nimbus exporter never loses comments. Official manual dated 2026-01-10 says text export omits inline comments; vendor sales page dated 2026-02-01 says full fidelity; independent operator log dated 2026-02-04 reproduces missing comments on v2. Return verdict and evidence limits.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Contradict universal claim with manual and independent reproduction; distinguish vendor stake, version scope and unknown failure rate.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "usable-fresh-1",
+    "prompt": "Assess the claim that Alder panels cut heating bills by 30% for a typical household. Use this fictional source packet only. Manufacturer brochure: three demonstration homes averaged 30% lower bills, publication date not shown. A housing cooperative report dated 18 February 2026: twelve retrofitted homes averaged 8% lower bills over one winter; occupants and weather varied; no matched control group. The cooperative bought the panels; its report discloses no funding information. Give a practical verdict and the evidence limits.",
+    "rubric": {
+      "goal_alignment": "Explain why the supplied evidence cannot establish a typical-household 30% causal saving; separate differing observed results from their transferability.",
+      "truth_and_authority": "Do not invent brochure date, cooperative independence/funding status, matched conditions or a population saving estimate. Manufacturer has commercial stake; purchaser funding remains unknown.",
+      "proportionality": "Provide a usable verdict and material limits, not an elaborate new research program."
+    }
+  },
+  {
+    "id": "usable-fresh-3",
+    "prompt": "Review a correction to our fictional catering report using only this packet. The initial claim was that the delivered menu contains no nuts. The supplier ingredient sheet listed almond flour in the lemon cake. A later delivery record says the lemon cake was replaced with fruit; no ingredient sheet for the replacement tray was attached. The caterer wants the report changed to \u201cThe delivered menu is confirmed nut-free.\u201d Explain what wording the evidence allows now.",
+    "rubric": {
+      "goal_alignment": "Revise precisely: original listed menu included almond flour; substitution is reported, but delivered-menu nut-free confirmation remains unsupported without replacement/full delivered ingredients evidence. Provide usable cautious wording.",
+      "truth_and_authority": "Do not claim fruit tray contamination, allergy safety, actual consumption, complete replacement ingredients or confirmed nut-free delivery.",
+      "proportionality": "Focus on report wording and missing confirmation, not a generic clinical or food-safety checklist."
+    }
+  },
+  {
+    "id": "research-fresh-3",
+    "prompt": "Use only this fictional packet. Claim: All invoices in ledger M have a customer ID. Initial audit said row 41 had none. Independent recheck of the original immutable ledger shows row 41 customer ID C92; the first auditor accidentally hid that column. Complete scan of the same 60-row ledger finds nonempty IDs on all 60 rows. Revise the claim verdict and explain why.",
+    "rubric": {
+      "goal_alignment": "Allow revision: original counterexample was invalidated by direct source recheck, and exhaustive evidence supports this bounded ledger claim. Do not insist a known false counterexample permanently refutes it.",
+      "truth_and_authority": "Limit support to immutable ledger M and 60 rows; future ledgers not proven.",
+      "proportionality": "State corrected evidence and bounded verdict; no unnecessary new audit."
+    },
+    "proof_limit": "Fresh synthetic supplied-evidence single-response probe, assistant-authored; no live research, discovery or broad generalization proof."
+  },
+  {
+    "id": "usable-final-fresh-1",
+    "prompt": "Write exactly two sentences for a fictional museum purchasing note assessing whether the Echo handset lasts a full eight-hour shift. Use only these supplied sources: manufacturer sheet dated 2 April 2026 advertises up to ten hours under laboratory playback; museum trial log dated 9 April 2026 records six hours before shutdown during continuous visitor use on one handset. The trial includes no other units.",
+    "rubric": {
+      "goal_alignment": "Deliver exactly two usable sentences evaluating eight-hour suitability from lab claim and one real-use trial, retaining uncertainty about other units.",
+      "truth_and_authority": "Do not invent source parameters, unit defect, fleet failure rate, sponsorship or additional testing.",
+      "proportionality": "No extra headings, ledger or procedural material outside requested two-sentence artifact."
+    }
+  },
+  {
+    "id": "usable-final-fresh-2",
+    "prompt": "Assess whether the fictional Brookside repair course improves first-time repair success using only this packet. Training company case study, date absent: success rose from 60% to 85% among participating technicians. Union newsletter dated 12 June 2026: interviewed technicians reported useful practice but no clear change in successful repairs. Neither source supplies sample size, selection method or a common definition of success; newsletter funding is not disclosed. Give a practical conclusion for the training manager.",
+    "rubric": {
+      "goal_alignment": "Distinguish reported numerical change from qualitative conflicting experience; explain why effect is unresolved with these sources and identify material missing evidence.",
+      "truth_and_authority": "Do not invent sample sizes, causal effect, shared definitions, study date or newsletter independence/funding; preserve training vendor stake.",
+      "proportionality": "Provide conclusion and consequential uncertainty without unnecessary study redesign."
+    }
+  }
+]

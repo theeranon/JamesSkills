@@ -1,0 +1,20 @@
+[
+  {
+    "host": "Codex CLI",
+    "exit_code": 0,
+    "response": "The vendor\u2019s \u201cpreserves every page\u201d claim is refuted by export R, which omitted page 6 from a six-page source. Later export S preserved all six pages, but proves success only for S; it neither erases R\u2019s failure nor establishes preservation in every export.",
+    "evidence": "explicit native skill request and returned outcome; body installation checked separately, not automatic routing proof"
+  },
+  {
+    "host": "Antigravity CLI",
+    "exit_code": 0,
+    "response": "The vendor's absolute claim that its scanner preserves every page is contradicted by the audit of export R, where a page was missing. While export S preserved all six pages, a single subsequent success only demonstrates that full preservation is possible in that specific instance, not that the scanner reliably preserves every page across all exports.\n",
+    "evidence": "explicit native skill request and returned outcome; body installation checked separately, not automatic routing proof"
+  },
+  {
+    "host": "Claude Code",
+    "exit_code": 0,
+    "response": "The audit of export R stands as a confirmed counterexample: the vendor's \"preserves every page\" claim is false for at least that scanner/export instance, since a valid single failure refutes an absolute claim regardless of later results. Export S's all-six-pages result only shows the scanner can succeed under some conditions\u2014it doesn't retest or resolve why R failed, so it can't restore the every-page claim.",
+    "evidence": "explicit native skill request and returned outcome; body installation checked separately, not automatic routing proof"
+  }
+]

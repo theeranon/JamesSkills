@@ -1,0 +1,29 @@
+{
+  "seed": 709,
+  "planned_attempts": 4,
+  "base_revision": "dbdbea6",
+  "body_hashes": {
+    "B": "d034b542ca6f631d3a102e00fd35a5027d9435cd541001ba5e9fa2af4f6b9b49",
+    "C": "cbc883400f5d4405e51b9472937a5f24f6a4435a7adadb6a40440c32fa43d885"
+  },
+  "cases_hash": "a0762ce047f8c634c3dade0c6205a7917c0fd0ed1ad4e8926d0be477a2bb67af",
+  "scope": "public response-only, fixed B/C pairs, no sealed holdout, no native invocation",
+  "schedule": [
+    [
+      "usable-final-fresh-1",
+      "B"
+    ],
+    [
+      "usable-final-fresh-1",
+      "C"
+    ],
+    [
+      "usable-final-fresh-2",
+      "C"
+    ],
+    [
+      "usable-final-fresh-2",
+      "B"
+    ]
+  ]
+}

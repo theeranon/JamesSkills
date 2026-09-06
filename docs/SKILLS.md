@@ -84,7 +84,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Settle a doubt about one claim, approach, or requirement with outside evidence from official sources and real users. Use when confidence is missing, not when choosing between options or checking your own work.
-- Result: The claim as stated, the evidence ledger with dates and stakes, the four layers kept separate, the verdict with its condition, and the named remaining unknown. The reader decides what to do about it.
+- Result: The claim and verdict, decisive source evidence with available locators, and material limits. Separate facts, source assertions and inference without mandatory empty sections or hypothetical reversal conditions.
 - Do not use when: Several candidates must be compared and one recommended -> `give-me-solutions`
   - The doubt is about work produced in this conversation rather than an outside claim -> `are-you-sure`
   - The doubt is about whether shipped code, data, or a deployment behaves correctly -> `dev-are-you-sure`

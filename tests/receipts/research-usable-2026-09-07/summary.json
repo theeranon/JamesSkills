@@ -1,0 +1,39 @@
+{
+  "decision": "accept bounded correction",
+  "counts": {
+    "B": {
+      "goal_alignment": {
+        "fail": 4,
+        "pass": 7
+      },
+      "truth_and_authority": {
+        "fail": 6,
+        "pass": 3,
+        "uncertain": 2
+      },
+      "proportionality": {
+        "pass": 6,
+        "fail": 5
+      }
+    },
+    "C": {
+      "goal_alignment": {
+        "pass": 10,
+        "fail": 1
+      },
+      "truth_and_authority": {
+        "pass": 6,
+        "uncertain": 1,
+        "fail": 4
+      },
+      "proportionality": {
+        "pass": 10,
+        "uncertain": 1
+      }
+    }
+  },
+  "returned_low_effort_pairs": 11,
+  "original_and_transfer_regressions": "pass",
+  "new_case_level_truth_failures": 0,
+  "scope": "local installed patch on published 2.0.1; no external publication"
+}

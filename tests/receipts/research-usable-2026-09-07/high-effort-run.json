@@ -1,0 +1,62 @@
+{
+  "effort": "high",
+  "seed": 709,
+  "planned_attempts": 12,
+  "base_revision": "dbdbea6",
+  "body_hashes": {
+    "B": "d034b542ca6f631d3a102e00fd35a5027d9435cd541001ba5e9fa2af4f6b9b49",
+    "C": "cbc883400f5d4405e51b9472937a5f24f6a4435a7adadb6a40440c32fa43d885"
+  },
+  "cases_hash": "78770d2614d4671f41420cf64754557bfb1f84c7afe74327955078bd6767c302",
+  "scope": "public response-only, fixed B/C pairs, no sealed holdout, no native invocation",
+  "schedule": [
+    [
+      "research-it-remaining-1",
+      "B"
+    ],
+    [
+      "research-it-remaining-1",
+      "C"
+    ],
+    [
+      "usable-fresh-1",
+      "C"
+    ],
+    [
+      "usable-fresh-1",
+      "B"
+    ],
+    [
+      "usable-fresh-3",
+      "C"
+    ],
+    [
+      "usable-fresh-3",
+      "B"
+    ],
+    [
+      "research-fresh-3",
+      "C"
+    ],
+    [
+      "research-fresh-3",
+      "B"
+    ],
+    [
+      "usable-final-fresh-1",
+      "C"
+    ],
+    [
+      "usable-final-fresh-1",
+      "B"
+    ],
+    [
+      "usable-final-fresh-2",
+      "C"
+    ],
+    [
+      "usable-final-fresh-2",
+      "B"
+    ]
+  ]
+}

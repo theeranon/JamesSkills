@@ -13,7 +13,9 @@ Improvement iteration delivered: 22 canonical skills have 66 executable public
 response probes. proactive-habits now filters irrelevant work and asks only for
 necessary decisions; the bounded mechanism passed independent blinded diagnostic
 review. Residual truth errors remain, so no overall quality guarantee is claimed.
-The other 21 canonical bodies are unchanged.
+research-it also has an accepted local correction: optional evidence formatting,
+source-bound factual checks and valid claim revision. The other 20 canonical
+bodies are unchanged. This does not mean all 22 skills are improved.
 
 Project-local export includes declared shared dependencies and preserves existing
 user files. A verified 22-skill ZIP was produced. Claude Code, Codex CLI and
@@ -31,7 +33,7 @@ Antigravity CLI explicit smoke requests succeeded on this Mac. Codex inventory:
 ## In progress
 
 - No local delivery blocker for this iteration. Further per-skill optimization remains an evidence-led backlog; do not call all 22 improved.
-- Follow-up research-it candidate was not promoted: 16/16 responses returned and logic improved from 4/8 to 7/8 passes, but the original rejected case still failed. The whole improvement program remains incomplete; the delivered 2.0.1 iteration is one bounded improvement, not completion of all skills.
+- The earlier research-it candidate remained rejected. Its replacement passes the original and transfer cases; 11 paired responses show goal passes 10 candidate versus 7 current, with no new case-level truth failure. Four candidate truth failures remain, so acceptance is bounded. Installed local native bodies match; no new marketplace release was published.
 - Full multi-turn/artifact evaluation and non-Mac/cloud parity are not established by response probes or native smoke tests.
 
 ## Requirement state
@@ -49,7 +51,7 @@ Antigravity CLI explicit smoke requests succeeded on this Mac. Codex inventory:
 
 ## Next
 
-- Use the installed 2.0.1 behavior in fresh sessions. Select subsequent improvements from repeated real failures rather than rewrite the portfolio at once.
+- Use the installed local research-it correction in fresh sessions. Select subsequent improvements from repeated real failures rather than rewrite the portfolio at once; marketplace updates can replace local cache patches until this correction is published.
 
 ## Blockers
 
@@ -64,5 +66,6 @@ Antigravity CLI explicit smoke requests succeeded on this Mac. Codex inventory:
 
 - Current behavioral/export report: `tests/receipts/improvement-2026-09-07/REVIEW.md`.
 - Further candidate decision and evaluation limits: `tests/receipts/research-it-2026-09-07/REVIEW.md`.
+- Installed research-it replacement: `tests/receipts/research-usable-2026-09-07/REVIEW.md` supersedes the earlier candidate's unresolved delivery state, not its historical results.
 - Earlier receipts retain historical baseline and installer evidence; their pre-login and pre-improvement statuses are superseded here.
 - Full validation includes benchmark and export regressions. Structural checks do not prove model quality.

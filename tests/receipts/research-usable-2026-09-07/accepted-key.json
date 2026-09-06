@@ -1,0 +1,90 @@
+{
+  "item-1": {
+    "case": "research-it-remaining-1",
+    "arm": "B"
+  },
+  "item-2": {
+    "case": "usable-fresh-1",
+    "arm": "B"
+  },
+  "item-3": {
+    "case": "usable-final-fresh-1",
+    "arm": "C"
+  },
+  "item-4": {
+    "case": "research-fresh-3",
+    "arm": "C"
+  },
+  "item-5": {
+    "case": "usable-fresh-5",
+    "arm": "B"
+  },
+  "item-6": {
+    "case": "research-it-remaining-2",
+    "arm": "B"
+  },
+  "item-7": {
+    "case": "usable-fresh-2",
+    "arm": "B"
+  },
+  "item-8": {
+    "case": "research-it-remaining-3",
+    "arm": "C"
+  },
+  "item-9": {
+    "case": "usable-fresh-2",
+    "arm": "C"
+  },
+  "item-10": {
+    "case": "usable-final-fresh-2",
+    "arm": "C"
+  },
+  "item-11": {
+    "case": "usable-fresh-3",
+    "arm": "B"
+  },
+  "item-12": {
+    "case": "usable-fresh-4",
+    "arm": "B"
+  },
+  "item-13": {
+    "case": "usable-fresh-4",
+    "arm": "C"
+  },
+  "item-14": {
+    "case": "research-it-remaining-1",
+    "arm": "C"
+  },
+  "item-15": {
+    "case": "usable-fresh-1",
+    "arm": "C"
+  },
+  "item-16": {
+    "case": "research-fresh-3",
+    "arm": "B"
+  },
+  "item-17": {
+    "case": "usable-fresh-3",
+    "arm": "C"
+  },
+  "item-18": {
+    "case": "usable-final-fresh-2",
+    "arm": "B"
+  },
+  "item-19": {
+    "case": "usable-final-fresh-1",
+    "arm": "B"
+  },
+  "item-20": {
+    "case": "research-it-remaining-3",
+    "arm": "B"
+  },
+  "item-21": {
+    "case": "usable-fresh-5",
+    "arm": "C"
+  },
+  "item-22": {
+    "case": "research-it-remaining-2",
+    "arm": "C"
+  }
+}

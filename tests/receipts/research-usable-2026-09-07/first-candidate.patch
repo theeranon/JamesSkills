@@ -1,0 +1,39 @@
+--- a/plugins/james-core/skills/research-it/SKILL.md
++++ b/plugins/james-core/skills/research-it/SKILL.md
+@@ -10 +10 @@
+-Go find out whether the claim survives contact with people who already tried it.
++Resolve one outside claim with evidence the reader can audit.
+@@ -28,7 +28,5 @@
+-1. Write the claim as one falsifiable sentence, then name what evidence would prove it wrong. A claim nothing could refute is reformulated before any search begins.
+-2. Establish the context that makes evidence transferable or not: scale, stack, budget, jurisdiction, team size, and time horizon of the current situation. Evidence from a different context is labelled, never silently applied.
+-3. Read the official position first: vendor documentation, standards bodies, primary research, the author of the method. Record what it claims and what it stays silent about.
+-4. Then seek the disconfirming side deliberately. Look for practitioners who ran it long enough to be disappointed: post-mortems, migration write-ups, long-running issue threads, dated reviews, community answers with the failure conditions attached.
+-5. Keep a ledger. Each item records source identity, date, whether the author had a commercial stake, the context it applied to, and what it actually demonstrates rather than what it asserts.
+-6. Separate four layers explicitly: verified fact, source claim, independent corroboration, and your own inference.
+-7. Return a verdict of supported, contradicted, conditional, or unsettled, plus the condition that would change it.
++1. Preserve the actual claim and its scope: who or what, version, population, conditions and time period, where supplied. Distinguish an absolute claim from a frequency estimate. Do not silently narrow the claim to make it true.
++2. Use the supplied evidence first. If outside research is needed and available, seek primary documentation and independent experience, including evidence against the claim. Report the sources actually read and searches actually performed. A supplied-source task does not require inventing a search or refusing an answer because a preferred source type is absent.
++3. Keep source assertions, observed results, independent corroboration and your inference distinguishable. Record useful source identity, date, scope and stake only when known; mark material missing information unknown. Independence, lack of sponsorship, publication date and test coverage cannot be inferred from a document's label. An interested source can contain real observations; assess their methods and limits rather than discard them automatically.
++4. Decide what the evidence establishes. A valid counterexample refutes an absolute claim within its original scope; successful cases or a later fix do not erase that result. Revising it requires resolving every decisive contrary item, not merely explaining away one. A changed version or narrower scope is a separate claim. An exhaustive check can support a bounded finite claim. Selected anecdotes cannot establish a population rate without a suitable denominator and sampling method.
++5. Return supported, contradicted, conditional or unsettled, with the decisive evidence and only the uncertainty that matters to that verdict. State a reversal condition only when useful and logically valid for the same claim; otherwise omit it. Do not speculate to fill a template. Respect the user's requested length and format; use a ledger when it makes several sources easier to compare, not as mandatory ceremony.
+@@ -38 +36 @@
+-Both the official position and at least one independent practitioner account have been read, the disconfirming search has been attempted and its result stated even when it found nothing, and one more source is no longer changing the verdict or revealing a new failure condition. Name the unknown rather than filling it.
++The question is answered as far as the available evidence permits and another source is unlikely to change the decision. If an important source or tool is unavailable, state the specific limit and give the bounded answer already supported. Do not prolong research to fill fields or obtain a source that cannot affect the verdict.
+@@ -42,4 +40,4 @@
+-**Falsification** — Search for what would refute the claim before collecting anything that supports it, and report the refuting search even when it comes back empty. Source: Karl Popper, The Logic of Scientific Discovery, 1934
+-**Sponsorship bias** — Treat any source with a commercial stake in the answer as an argument rather than as evidence, and require an independent account before accepting its claim. Source: extensively documented in research on industry-funded studies; see Lundh and colleagues, Cochrane Methodology Review, 2017
+-**Base rate over vivid case** — One dramatic failure story is a data point, not a rate; state how common the outcome is or say the rate is unknown. Source: Daniel Kahneman and Amos Tversky, work on representativeness and base-rate neglect, 1973
+-**Evidence decay** — Record the date of every claim and treat undated material as unusable, because the answer to a technology question expires. Source: Samuel Arbesman, The Half-Life of Facts, 2012
++**Falsification** — Seek evidence that could refute the claim, and keep the claim's scope stable while evaluating it. Source: Karl Popper, The Logic of Scientific Discovery, 1934
++**Sponsorship bias** — Commercial interests call for scrutiny of methods and corroboration, not automatic dismissal of observations or assumed neutrality of technical documentation. Source: Lundh and colleagues, Industry sponsorship and research outcome, Cochrane Methodology Review, 2017
++**Base rate over vivid case** — An incident establishes occurrence, not frequency; distinguish a counterexample to an absolute from evidence about a rate. Source: Daniel Kahneman and Amos Tversky, work on representativeness and base-rate neglect, 1973
++**Evidence decay** — Check freshness when changing conditions could affect applicability. An unknown date is a limitation where time matters, not a reason to invent a date or discard evidence about a fixed historical dataset. Source: Samuel Arbesman, The Half-Life of Facts, 2012
+@@ -49,2 +47,3 @@
+-- The user asks which of four database options fits their workload. This needs the same evidence discipline but ends in a recommendation, so `give-me-solutions` owns it and calls this skill for the evidence pass.
+-- The user asks whether the report just written contains an error. Nothing outside the conversation is in question, so `are-you-sure` owns it.
++- A verified failure refutes an all-cases claim; later successful trials do not restore it. If a recheck proves the failure record erroneous and an exhaustive check covers the bounded population, revising the verdict is justified.
++- The user asks which of four database options fits their workload -> `give-me-solutions` owns the recommendation and may use this skill for evidence.
++- The user asks whether the report just written contains an error -> `are-you-sure` owns inspection of that work.
+@@ -54 +53 @@
+-The claim as stated, the evidence ledger with dates and stakes, the four layers kept separate, the verdict with its condition, and the named remaining unknown. The reader decides what to do about it.
++The claim and verdict, the decisive source evidence with locators when available, and the material limits. Keep fact, source assertion and inference clear without requiring separate sections for empty categories. The reader decides what to do about it.
