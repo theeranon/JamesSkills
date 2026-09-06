@@ -1,0 +1,313 @@
+{
+  "release_commit": "195eb67",
+  "native_bodies": [
+    {
+      "host": "codex",
+      "skill": "are-you-sure",
+      "version": "2.0.3",
+      "sha256": "16fef64bfc7f4c03f22fb385e605fd51659ee93d8b8f88ba4184ba3e046ec8fe",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "are-you-sure",
+      "version": "2.0.3",
+      "sha256": "16fef64bfc7f4c03f22fb385e605fd51659ee93d8b8f88ba4184ba3e046ec8fe",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "done-for-me",
+      "version": "2.0.3",
+      "sha256": "681d340e86b710f7ca404a77d2d08361a2a88a431eef66a0ce7c7554a9161717",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "done-for-me",
+      "version": "2.0.3",
+      "sha256": "681d340e86b710f7ca404a77d2d08361a2a88a431eef66a0ce7c7554a9161717",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "hand-it-off",
+      "version": "2.0.3",
+      "sha256": "f7d5ce605fc6f5a9f52eb61dead68024216042a8d15958a08f081f6d70d15d31",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "hand-it-off",
+      "version": "2.0.3",
+      "sha256": "f7d5ce605fc6f5a9f52eb61dead68024216042a8d15958a08f081f6d70d15d31",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "i-have-adhd",
+      "version": "2.0.3",
+      "sha256": "4489fce66da6df401cdd9b08b7ff55ea5b5c5e5d317dec9f334d7f607ea07b82",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "i-have-adhd",
+      "version": "2.0.3",
+      "sha256": "4489fce66da6df401cdd9b08b7ff55ea5b5c5e5d317dec9f334d7f607ea07b82",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "is-that-the-best-you-can-do",
+      "version": "2.0.3",
+      "sha256": "a2ec9238e499367f76f64cd0f62eef73b43ad9c34a28ee64d69f7216b5e78a83",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "is-that-the-best-you-can-do",
+      "version": "2.0.3",
+      "sha256": "a2ec9238e499367f76f64cd0f62eef73b43ad9c34a28ee64d69f7216b5e78a83",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "make-it-james",
+      "version": "2.0.3",
+      "sha256": "c8a33915776e9a81b89dbd324d45791c6fa465c1feeea5f9944a49870b1f3210",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "make-it-james",
+      "version": "2.0.3",
+      "sha256": "c8a33915776e9a81b89dbd324d45791c6fa465c1feeea5f9944a49870b1f3210",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "never-again",
+      "version": "2.0.3",
+      "sha256": "ec971635218edcc85a44fc5d55414f120dd9663c75486c7828aa427b161acccb",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "never-again",
+      "version": "2.0.3",
+      "sha256": "ec971635218edcc85a44fc5d55414f120dd9663c75486c7828aa427b161acccb",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "proactive-habits",
+      "version": "2.0.3",
+      "sha256": "079e5da65b8876c63ac4ff55f207bc444bf75d17779dddd6b162cddf41b200ec",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "proactive-habits",
+      "version": "2.0.3",
+      "sha256": "079e5da65b8876c63ac4ff55f207bc444bf75d17779dddd6b162cddf41b200ec",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "research-it",
+      "version": "2.0.3",
+      "sha256": "7562b55ed161c1edb865672c414fa71c75eed7dd1f208659a9bb2a3c9b61f581",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "research-it",
+      "version": "2.0.3",
+      "sha256": "7562b55ed161c1edb865672c414fa71c75eed7dd1f208659a9bb2a3c9b61f581",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "baseon",
+      "version": "2.0.3",
+      "sha256": "9e40476a6a494f140e4261e2b9eaa16d5cd8ea8fe7bc975d088b2dbb795b13c4",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "baseon",
+      "version": "2.0.3",
+      "sha256": "9e40476a6a494f140e4261e2b9eaa16d5cd8ea8fe7bc975d088b2dbb795b13c4",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "coach-me",
+      "version": "2.0.3",
+      "sha256": "d9f814a9be48acd7b8ff65816a18552e5f6555ec0ba02d24102626d76b3fa0da",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "coach-me",
+      "version": "2.0.3",
+      "sha256": "d9f814a9be48acd7b8ff65816a18552e5f6555ec0ba02d24102626d76b3fa0da",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "final-it",
+      "version": "2.0.3",
+      "sha256": "1706eaf457a9bcdc3ad4f6776cd037713c32a944282782c2f874e942bfa6eb13",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "final-it",
+      "version": "2.0.3",
+      "sha256": "1706eaf457a9bcdc3ad4f6776cd037713c32a944282782c2f874e942bfa6eb13",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "give-me-solutions",
+      "version": "2.0.3",
+      "sha256": "0cd0f32e5019304feb266c4b9c533a100fb5bbcb3a3fb7f6470ab09fbd6f29de",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "give-me-solutions",
+      "version": "2.0.3",
+      "sha256": "0cd0f32e5019304feb266c4b9c533a100fb5bbcb3a3fb7f6470ab09fbd6f29de",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "grill-me",
+      "version": "2.0.3",
+      "sha256": "c1ee7c88a5eec52c06da4e80f22a2002e4ed81b9dc07ba63a2f62b5b2b023292",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "grill-me",
+      "version": "2.0.3",
+      "sha256": "c1ee7c88a5eec52c06da4e80f22a2002e4ed81b9dc07ba63a2f62b5b2b023292",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "one-page-pls",
+      "version": "2.0.3",
+      "sha256": "abc205dd62f686592e3d81b3b24cb7031b1c580967f76564dd9f76d6e07b32ce",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "one-page-pls",
+      "version": "2.0.3",
+      "sha256": "abc205dd62f686592e3d81b3b24cb7031b1c580967f76564dd9f76d6e07b32ce",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "sum-meet",
+      "version": "2.0.3",
+      "sha256": "012504304dece723900dd03b584063a768421b0efbd0df5870bcdc1b02857fa8",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "sum-meet",
+      "version": "2.0.3",
+      "sha256": "012504304dece723900dd03b584063a768421b0efbd0df5870bcdc1b02857fa8",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "zoom-out",
+      "version": "2.0.3",
+      "sha256": "1c646cd2e6da878e8f97be88c08e2cc6cf6e21fb1bb10b3f57589ec21e961ab6",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "zoom-out",
+      "version": "2.0.3",
+      "sha256": "1c646cd2e6da878e8f97be88c08e2cc6cf6e21fb1bb10b3f57589ec21e961ab6",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "catchup",
+      "version": "2.0.3",
+      "sha256": "d5412591475df4d8c6d9b9a9633499c78830a7e8a45290b6306655807855d076",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "catchup",
+      "version": "2.0.3",
+      "sha256": "d5412591475df4d8c6d9b9a9633499c78830a7e8a45290b6306655807855d076",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "dev-are-you-sure",
+      "version": "2.0.3",
+      "sha256": "a15a275bc9c8b559ebac4c8ccb84a4b838ec2cb8a25d1f519772d2039ac09597",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "dev-are-you-sure",
+      "version": "2.0.3",
+      "sha256": "a15a275bc9c8b559ebac4c8ccb84a4b838ec2cb8a25d1f519772d2039ac09597",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "make-it-james-ux",
+      "version": "2.0.3",
+      "sha256": "e8fec1c0df452fcf36a31ae310f84d303ad049ca8fd9a0988d26a9c3039e2831",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "make-it-james-ux",
+      "version": "2.0.3",
+      "sha256": "e8fec1c0df452fcf36a31ae310f84d303ad049ca8fd9a0988d26a9c3039e2831",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "proactive-dev",
+      "version": "2.0.3",
+      "sha256": "1795e103d5c4c9cf51deb42d7675ff2a67a5728ca6435531caf0460395b2c2b6",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "proactive-dev",
+      "version": "2.0.3",
+      "sha256": "1795e103d5c4c9cf51deb42d7675ff2a67a5728ca6435531caf0460395b2c2b6",
+      "matches": true
+    },
+    {
+      "host": "codex",
+      "skill": "project-standard",
+      "version": "2.0.3",
+      "sha256": "097f3b3ce2211361cc068353f404985e567d7f364d26b24bbc60a8064f5209cd",
+      "matches": true
+    },
+    {
+      "host": "claude",
+      "skill": "project-standard",
+      "version": "2.0.3",
+      "sha256": "097f3b3ce2211361cc068353f404985e567d7f364d26b24bbc60a8064f5209cd",
+      "matches": true
+    }
+  ]
+}

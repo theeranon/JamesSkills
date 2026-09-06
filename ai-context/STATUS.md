@@ -3,24 +3,26 @@
 Last verified: 2026-09-07
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.0.3 candidate
+Current version: 2.0.3
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
 
-The whole 22-skill upgrade pass is complete and release candidate 2.0.3 is ready.
+The whole 22-skill upgrade pass is complete and release 2.0.3 is published and installed locally.
 Compared with 98433f6, 13 instruction bodies were updated; 9 were retained,
 including 4 candidates rejected after comparison. Every skill has three new
 responsibility/transfer/countercase probes and a recorded disposition. Retained
 does not mean every response is flawless; improvements are bounded by evidence.
 
 All 44 local Claude/Codex native bodies match the selected canonical bodies.
-Native package metadata is 2.0.2 pending publication/update of 2.0.3. Three Mac
+All three native packages on both hosts report version 2.0.3. Three Mac
 CLIs returned all nine package smoke requests; one Claude code-only response
 still appends a short verification note. No universal formatting parity is claimed.
 
 ## Done
+
+- Published release commit 195eb67 to the existing GitHub main branch; refreshed Claude from its marketplace and Codex from its configured local marketplace. All 44 native bodies match canonical version 2.0.3; receipt: `tests/receipts/portfolio-upgrade-2026-09-07/release-install.json`.
 
 - 66 new probes across all 22 skills; 117 primary calls, 116 responses and 1 timeout retained. The declared paired recovery returned 2/2.
 - Independent cross-group blinded review of all primary responses; per-skill acceptance/rejection decisions retained. No overall efficacy percentage.
@@ -30,8 +32,7 @@ still appends a short verification note. No universal formatting parity is claim
 
 ## In progress
 
-- Canonical 2.0.3, validated package and export are prepared locally. Exact GitHub publication authorization for the corrective release is the remaining owner gate.
-- Existing shared discovery links use the canonical bodies. A remote marketplace update can overwrite local native patches until 2.0.3 is published and installed normally.
+- No release implementation work remains. Existing long-running Claude sessions need restart to load the updated package.
 
 ## Requirement state
 
@@ -48,15 +49,15 @@ still appends a short verification note. No universal formatting parity is claim
 
 ## Next
 
-- Publish the reviewed 2.0.3 corrective release to the existing GitHub repository when authorized, refresh native packages, and verify exact remote/local revision and body hashes.
+- Use version 2.0.3; retain recorded behavioral limitations when interpreting benchmark results.
 
 ## Blockers
 
-- No local implementation blocker. Publication and normal marketplace refresh await the target-specific owner decision below.
+- None for publication or installation.
 
 ## Need decision
 
-- Publish corrective 2.0.3 to the existing theeranon/JamesSkills GitHub main branch, then refresh native packages.
+- None for this release; owner authorized publication and installation in this conversation.
 
 ## Verification limits
 
