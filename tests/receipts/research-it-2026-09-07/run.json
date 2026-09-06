@@ -1,0 +1,77 @@
+{
+  "seed": 709,
+  "planned_attempts": 16,
+  "base_revision": "0ce2f74",
+  "body_hashes": {
+    "B": "d034b542ca6f631d3a102e00fd35a5027d9435cd541001ba5e9fa2af4f6b9b49",
+    "C": "bb28b290685d1a2937e6e0fc2699c5bcbd75639c99426510707701f95272cddb"
+  },
+  "cases_hash": "dbb67eb1d59f4b61ee4e623d233d30ac28a52589324603fb7ab08d0b9479605c",
+  "scope": "public response-only, fixed B/C pairs, no sealed holdout, no native invocation",
+  "schedule": [
+    [
+      "research-it-remaining-1",
+      "B"
+    ],
+    [
+      "research-it-remaining-1",
+      "C"
+    ],
+    [
+      "research-it-remaining-2",
+      "C"
+    ],
+    [
+      "research-it-remaining-2",
+      "B"
+    ],
+    [
+      "research-it-remaining-3",
+      "C"
+    ],
+    [
+      "research-it-remaining-3",
+      "B"
+    ],
+    [
+      "research-fresh-1",
+      "C"
+    ],
+    [
+      "research-fresh-1",
+      "B"
+    ],
+    [
+      "research-fresh-2",
+      "C"
+    ],
+    [
+      "research-fresh-2",
+      "B"
+    ],
+    [
+      "research-fresh-3",
+      "C"
+    ],
+    [
+      "research-fresh-3",
+      "B"
+    ],
+    [
+      "research-fresh-4",
+      "B"
+    ],
+    [
+      "research-fresh-4",
+      "C"
+    ],
+    [
+      "research-fresh-5",
+      "B"
+    ],
+    [
+      "research-fresh-5",
+      "C"
+    ]
+  ]
+}

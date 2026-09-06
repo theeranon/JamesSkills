@@ -31,6 +31,7 @@ Antigravity CLI explicit smoke requests succeeded on this Mac. Codex inventory:
 ## In progress
 
 - No local delivery blocker for this iteration. Further per-skill optimization remains an evidence-led backlog; do not call all 22 improved.
+- Follow-up research-it candidate was not promoted: 16/16 responses returned and logic improved from 4/8 to 7/8 passes, but the original rejected case still failed. The whole improvement program remains incomplete; the delivered 2.0.1 iteration is one bounded improvement, not completion of all skills.
 - Full multi-turn/artifact evaluation and non-Mac/cloud parity are not established by response probes or native smoke tests.
 
 ## Requirement state
@@ -62,5 +63,6 @@ Antigravity CLI explicit smoke requests succeeded on this Mac. Codex inventory:
 ## Verification
 
 - Current behavioral/export report: `tests/receipts/improvement-2026-09-07/REVIEW.md`.
+- Further candidate decision and evaluation limits: `tests/receipts/research-it-2026-09-07/REVIEW.md`.
 - Earlier receipts retain historical baseline and installer evidence; their pre-login and pre-improvement statuses are superseded here.
 - Full validation includes benchmark and export regressions. Structural checks do not prove model quality.

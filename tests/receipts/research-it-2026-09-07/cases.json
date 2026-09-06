@@ -1,0 +1,100 @@
+[
+  {
+    "id": "research-it-remaining-1",
+    "skill": "research-it",
+    "role": "responsibility",
+    "family": "research-it-public-1",
+    "split": "public-development",
+    "goal": "Contradict universal claim with manual and independent reproduction; distinguish vendor stake, version scope and unknown failure rate.",
+    "prompt": "Assess this fictional claim using only supplied evidence; no browsing available. Claim: Nimbus exporter never loses comments. Official manual dated 2026-01-10 says text export omits inline comments; vendor sales page dated 2026-02-01 says full fidelity; independent operator log dated 2026-02-04 reproduces missing comments on v2. Return verdict and evidence limits.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Contradict universal claim with manual and independent reproduction; distinguish vendor stake, version scope and unknown failure rate.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "research-it-remaining-2",
+    "skill": "research-it",
+    "role": "transfer-mechanism",
+    "family": "research-it-public-2",
+    "split": "public-development",
+    "goal": "Reject always exactly once; one demo cannot outweigh stated semantics; separate source claim, observation and inference.",
+    "prompt": "Evaluate fictional claim: FastQueue always processes messages exactly once. Manual dated 2026-03-01 promises at-least-once; independent incident dated 2026-03-03 records duplicate after retry; paid vendor demo dated 2026-03-04 shows one successful run. Use supplied packet only.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Reject always exactly once; one demo cannot outweigh stated semantics; separate source claim, observation and inference.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "research-it-remaining-3",
+    "skill": "research-it",
+    "role": "legitimate-countercase",
+    "family": "research-it-public-3",
+    "split": "public-development",
+    "goal": "Correct 96 directly; do not demand independent practitioner evidence for local arithmetic.",
+    "prompt": "Check the arithmetic in the report you just wrote: 12 units at 8 each, subtotal 86. Use these facts only; return corrected sentence.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Correct 96 directly; do not demand independent practitioner evidence for local arithmetic.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "research-fresh-1",
+    "prompt": "Use only this fictional evidence packet. Claim: Every sealed jar from batch Q weighs at least 200 g. Calibrated audit record J17 from batch Q weighs 193 g; audit confirmed the seal and scale. Later samples J18 and J19 weigh 202 g and 204 g. Give verdict, remaining uncertainty and what could legitimately change the verdict.",
+    "rubric": {
+      "goal_alignment": "Reject universal batch Q minimum because validated J17 counterexample exists. Later heavier jars cannot cancel it. Verdict can change only if counterexample applicability/measurement is invalidated or claim scope changes.",
+      "truth_and_authority": "Use supplied scale/seal evidence; do not invent error rates or claim whole batch is underweight.",
+      "proportionality": "Brief evidence reasoning; no invented inspection program needed."
+    },
+    "proof_limit": "Fresh synthetic supplied-evidence single-response probe, assistant-authored; no live research, discovery or broad generalization proof."
+  },
+  {
+    "id": "research-fresh-2",
+    "prompt": "Evaluate fictional claim using supplied records only: Every user action in release R is reversible. Audit: permanently erasing an account in R cannot be undone; storage trace confirms deletion and no recovery copy. Later demonstration successfully undoes five display-name edits in R. Does this change the universal verdict? State limits.",
+    "rubric": {
+      "goal_alignment": "Universal claim remains contradicted by irreversible account erasure. Successful undo of other actions does not remove counterexample.",
+      "truth_and_authority": "Do not infer failure frequency across actions or versions; avoid pretending to run software.",
+      "proportionality": "Explain differing action types and decisive counterexample without broader redesign."
+    },
+    "proof_limit": "Fresh synthetic supplied-evidence single-response probe, assistant-authored; no live research, discovery or broad generalization proof."
+  },
+  {
+    "id": "research-fresh-3",
+    "prompt": "Use only this fictional packet. Claim: All invoices in ledger M have a customer ID. Initial audit said row 41 had none. Independent recheck of the original immutable ledger shows row 41 customer ID C92; the first auditor accidentally hid that column. Complete scan of the same 60-row ledger finds nonempty IDs on all 60 rows. Revise the claim verdict and explain why.",
+    "rubric": {
+      "goal_alignment": "Allow revision: original counterexample was invalidated by direct source recheck, and exhaustive evidence supports this bounded ledger claim. Do not insist a known false counterexample permanently refutes it.",
+      "truth_and_authority": "Limit support to immutable ledger M and 60 rows; future ledgers not proven.",
+      "proportionality": "State corrected evidence and bounded verdict; no unnecessary new audit."
+    },
+    "proof_limit": "Fresh synthetic supplied-evidence single-response probe, assistant-authored; no live research, discovery or broad generalization proof."
+  },
+  {
+    "id": "research-fresh-4",
+    "prompt": "Use only fictional supplied evidence. Earlier claim: FormatBox v3 preserves hyperlinks in every export. Verified v3 PDF export lost a hyperlink. New claim: FormatBox v4 preserves hyperlinks in text-only exports. v4 specification promises preservation; independent tester confirms 8 successful text-only exports but has not covered all inputs. Compare verdicts without merging the claims.",
+    "rubric": {
+      "goal_alignment": "Keep old v3 universal refuted. Treat v4 text-only claim as new scope/version, supported on tested examples but universal not established; old counterexample neither disproves new claim automatically nor is erased.",
+      "truth_and_authority": "Eight successes are bounded observations, not proof for all inputs or known population failure rate.",
+      "proportionality": "Separate two verdicts and relevant remaining evidence gap."
+    },
+    "proof_limit": "Fresh synthetic supplied-evidence single-response probe, assistant-authored; no live research, discovery or broad generalization proof."
+  },
+  {
+    "id": "research-fresh-5",
+    "prompt": "Evaluate this fictional frequency claim using only supplied evidence: Fewer than 2 percent of parcel deliveries arrive late. One verified late parcel is documented. Total deliveries, sampling method and reporting completeness are unknown. A sales representative shows three on-time deliveries. State whether the rate claim is supported, contradicted or unsettled.",
+    "rubric": {
+      "goal_alignment": "Rate claim unsettled: one late parcel does not contradict fewer than 2 percent without denominator/representative sampling; three selected successes cannot establish rate either.",
+      "truth_and_authority": "Do not calculate 25 percent from selected anecdotes or change rate claim into zero-failure universal.",
+      "proportionality": "Name denominator and sampling gaps succinctly; no invented rate."
+    },
+    "proof_limit": "Fresh synthetic supplied-evidence single-response probe, assistant-authored; no live research, discovery or broad generalization proof."
+  }
+]

@@ -1,0 +1,114 @@
+[
+  {
+    "label": "item-1",
+    "logic": "pass",
+    "truth": "pass",
+    "proportionality": "pass",
+    "reason": "Universal remains contradicted; five display-name reversals do not erase irreversible erasure. Observations and unknown other-action coverage stay bounded."
+  },
+  {
+    "label": "item-2",
+    "logic": "fail",
+    "truth": "uncertain",
+    "proportionality": "pass",
+    "reason": "Present contradiction is correct, but revised documentation plus later success is offered to change the original verdict without invalidating the duplicate or separating a revised-version claim. At-least-once guarantee alone does not logically deny stronger actual behavior; duplicate observation is decisive."
+  },
+  {
+    "label": "item-3",
+    "logic": "pass",
+    "truth": "pass",
+    "proportionality": "pass",
+    "reason": "Keeps universal contradicted and separates narrower display-name claim. Reversal examples explicitly require invalidating the counterexample or finding an original exclusion; speculative scope caveat is conditional, not an asserted exclusion."
+  },
+  {
+    "label": "item-4",
+    "logic": "pass",
+    "truth": "pass",
+    "proportionality": "pass",
+    "reason": "Exact arithmetic correction only."
+  },
+  {
+    "label": "item-5",
+    "logic": "pass",
+    "truth": "uncertain",
+    "proportionality": "pass",
+    "reason": "Preserves counterexample and allows only invalidity/original-scope reconsideration; distinguishes occurrence from rate. Treats commercial demo as not evidence at all, although it still records supplied successful trial; commercial stake limits inference rather than erasing observation."
+  },
+  {
+    "label": "item-6",
+    "logic": "fail",
+    "truth": "fail",
+    "proportionality": "fail",
+    "reason": "Correct immediate refutation but says verdict cannot become supported and only rescoping could permit support; invalidating J17 followed by exhaustive valid batch evidence could support same bounded claim. Invents contemporaneity and absence of any second audit from merely unsupplied records; date/second-audit detour obscures simple requested limits."
+  },
+  {
+    "label": "item-7",
+    "logic": "pass",
+    "truth": "uncertain",
+    "proportionality": "pass",
+    "reason": "Correctly invalidates hidden-column counterexample and supports exhaustive immutable ledger scope. Full scan is called independent corroboration though its provenance is not specified; future-append caveat remains hypothetical."
+  },
+  {
+    "label": "item-8",
+    "logic": "pass",
+    "truth": "uncertain",
+    "proportionality": "pass",
+    "reason": "Correct bounded support after exhaustive recheck. Calls scan independent without supplied provenance; hypothetical alteration/additional-row caveats are not claims these events occurred."
+  },
+  {
+    "label": "item-9",
+    "logic": "fail",
+    "truth": "fail",
+    "proportionality": "pass",
+    "reason": "Correct present contradiction, but post-fix success is offered to reverse old never claim without separating changed version/time scope. Labels manual neutral and independent operator non-commercial without stake evidence; documented limitation not-a-bug is an unsupported classification."
+  },
+  {
+    "label": "item-10",
+    "logic": "pass",
+    "truth": "fail",
+    "proportionality": "pass",
+    "reason": "Separates v3 refutation and limited v4 support, with valid reversal logic. Invents that listed edge cases were none tested per record and calls tester non-commercial despite only independence supplied; common-condition likelihood is not justified by unspecified eight examples."
+  },
+  {
+    "label": "item-11",
+    "logic": "pass",
+    "truth": "fail",
+    "proportionality": "pass",
+    "reason": "Correct unsettled rate; 25 percent appears only as explicitly rejected naive calculation, not estimated population rate. Asserts rep hand-picked/nonrandom examples and near-certain cherry-picking although sampling is unknown; also says no denominator exists instead of unknown."
+  },
+  {
+    "label": "item-12",
+    "logic": "pass",
+    "truth": "fail",
+    "proportionality": "fail",
+    "reason": "Correct refutation and distinct new-scope claim; invalidation reopens rather than later successes. Explicitly treats undated audit as current without support. Repeated freshness/second-auditor discussion introduces unnecessary doubt into supplied calibrated sealed-batch evidence despite acknowledging no present scope objection."
+  },
+  {
+    "label": "item-13",
+    "logic": "uncertain",
+    "truth": "fail",
+    "proportionality": "pass",
+    "reason": "Main v3/v4 comparison correct. Absolute no-condition closed-case wording leaves unclear whether invalid counterevidence could ever reopen it. Invents specification release date and untested particular edge-case categories; eight unspecified successes do not justify inferred common reliability."
+  },
+  {
+    "label": "item-14",
+    "logic": "pass",
+    "truth": "pass",
+    "proportionality": "pass",
+    "reason": "Unsettled percentage correctly follows unknown denominator/sampling/completeness; no invented population rate or independent test claim. Commercial interest recognized without claiming a specific sampling method."
+  },
+  {
+    "label": "item-15",
+    "logic": "pass",
+    "truth": "pass",
+    "proportionality": "pass",
+    "reason": "Exact arithmetic correction only."
+  },
+  {
+    "label": "item-16",
+    "logic": "fail",
+    "truth": "fail",
+    "proportionality": "pass",
+    "reason": "Present contradiction correct, but reversing based on operator mode/version does not resolve manual omission and substitutes sales-page narrower scope for universal claim. Calls operator text-export evidence although prompt gives only v2; vendor-neutral stake characterization unsupported. Speculative marketing explanations alone are not treated as asserted facts."
+  }
+]

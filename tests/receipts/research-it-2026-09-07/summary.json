@@ -1,0 +1,38 @@
+{
+  "decision": "do not promote; original rejected case still fails",
+  "counts": {
+    "B": {
+      "logic": {
+        "pass": 4,
+        "fail": 3,
+        "uncertain": 1
+      },
+      "truth": {
+        "pass": 2,
+        "uncertain": 2,
+        "fail": 4
+      },
+      "proportionality": {
+        "pass": 7,
+        "fail": 1
+      }
+    },
+    "C": {
+      "logic": {
+        "pass": 7,
+        "fail": 1
+      },
+      "truth": {
+        "pass": 3,
+        "uncertain": 2,
+        "fail": 3
+      },
+      "proportionality": {
+        "pass": 7,
+        "fail": 1
+      }
+    }
+  },
+  "returned": 16,
+  "planned": 16
+}

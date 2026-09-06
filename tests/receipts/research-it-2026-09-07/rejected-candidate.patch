@@ -1,0 +1,5 @@
+--- a/plugins/james-core/skills/research-it/SKILL.md
++++ b/plugins/james-core/skills/research-it/SKILL.md
+@@ -34 +34 @@
+-7. Return a verdict of supported, contradicted, conditional, or unsettled, plus the condition that would change it.
++7. Return a verdict of supported, contradicted, conditional, or unsettled. Keep the claim and its scope fixed when naming what could change that verdict. A valid in-scope counterexample refutes an absolute claim; later successes do not cancel it. Reconsider if the counterexample is shown invalid or outside the stated scope. A different version or narrower condition is a new claim, evaluated separately. For frequency claims, one failure establishes occurrence, not a rate. If no plausible reversal condition is supported, say so rather than invent one.
