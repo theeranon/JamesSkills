@@ -81,7 +81,7 @@ def invoke(command, payload, timeout):
             obj = json.loads(result.stdout)
             if not isinstance(obj, dict):
                 raise ValueError('adapter response must be an object')
-            if obj.get('error_category') in {'auth_unavailable'}:
+            if obj.get('error_category') in {'auth_unavailable', 'timeout'}:
                 return {'status': obj['error_category'], 'elapsed_seconds': time.monotonic() - started}
             if not isinstance(obj['response'], str) or not obj['response'].strip():
                 raise ValueError('empty response')

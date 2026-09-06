@@ -1,10 +1,10 @@
 # Benchmark cards: 22 canonical skills
 
-วันที่ 2026-09-05 · สถานะ: proposed benchmark specifications, not measured results
+วันที่ 2026-09-07 · สถานะ: มี public response probes และผลทดลองครบ 22 skill; ไม่ใช่ใบรับรองคุณภาพทั้งหมด
 
 อ่าน [ทิศทางและวิธีทดลอง](skill-benchmark-strategy.md) ก่อนใช้ cards เหล่านี้เป็นข้อกำหนดผลที่ตรวจได้ซึ่งอ้างอิง canonical เดิม ไม่ได้เปลี่ยนหน้าที่หรือเพิ่ม skill แต่ละใบมีตัววัด success, variant, counter-case และวิธีตรวจ ชุดตัวอย่างที่เปิดอ่านแล้วเป็น development seeds ไม่ใช่ sealed holdout
 
-ฐานอ้างอิง: `fb6643aedd167349ad70d8b6e5db50b31a26fb8f` อ่าน canonical SKILL.md ครบทั้ง 22 ก่อนออกแบบ ยังไม่มีผลรัน A/B/C หรือคะแนนที่ใช้รับรองความสามารถ
+ฐานอ้างอิง: `fb6643aedd167349ad70d8b6e5db50b31a26fb8f` อ่าน canonical SKILL.md ครบทั้ง 22 ก่อนออกแบบ ผลรันปัจจุบันอยู่ที่ tests/receipts/improvement-2026-09-07/REVIEW.md โดยยังไม่ใช้รับรองความสามารถทั่วไป
 
 ## อ่านเร็วตามหน้าที่
 
@@ -290,7 +290,7 @@ Proposed optimization order after agreement: instrument the existing outcomes fi
 
 ## Approved first five: user-visible changes to test
 
-Approved 2026-09-06; these are candidate directions, not measured improvements or rewritten canonical instructions.
+Approved 2026-09-06. These were the initial candidate directions; the 2026-09-07 receipt records the accepted proactive-habits change and unchanged remaining bodies.
 
 | Skill | Proposed change | Reject if | Legitimate complexity |
 |---|---|---|---|

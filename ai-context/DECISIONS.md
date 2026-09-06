@@ -271,3 +271,18 @@ Record accepted or superseded project decisions. Raw discussion remains in its s
 - Why: A zero-entry runtime could pass the old duplicate-only check; an obsolete whole-plugin pilot guard blocked unrelated promoted skills; refresh claimed local content while fetching a marketplace copy.
 - Evidence: Installer behavioral regressions and `tests/receipts/install-discovery-2026-09-06.md`. Claude Desktop discovery now directly observed; this supersedes only the older claim that its UI was inaccessible, not the distinction from CLI authentication.
 - Limits: Cross-platform invocation and cloud account installation remain separate proofs. No push, store submission or public release is implied.
+
+## DEC-028 — Accept bounded decision-posture improvement and complete portfolio probes
+
+- Date: 2026-09-07
+- Status: Implemented under owner-requested done-for-me scope.
+- Decision: Replace unconditional final-question/queue wording in proactive-habits with relevance filtering, conditional necessary questions and explicit factual/draft boundaries. Preserve the other 21 bodies. Independent blinded assistant review found target mechanism success in 10/10 completed candidate pairs versus 6/10 current; one additional candidate succeeded while current was unavailable. Truth failures remain and are disclosed.
+- Evidence: `tests/receipts/improvement-2026-09-07/REVIEW.md` and retained blinded results. All 22 skills now have three public response probes; no sealed-holdout, artifact or universal runtime claim follows.
+- Distribution: Concurrent owner-directed Claude session published code at e83e942 version 2.0.1. Root verified active Claude Code installed body against the tested candidate and tested explicit requests in three Mac CLIs. Separate cloud account libraries are not assumed synchronized.
+
+## DEC-029 — Plain export includes dependencies and preserves existing work
+
+- Date: 2026-09-07
+- Status: Implemented within approved export scope.
+- Decision: Export promoted instruction bodies once into .agents/skills, carry declared shared packs/research and helper scripts at compatible relative paths, and fail before overwriting different files. Keep fonts as declared external prerequisites. Verify relocation with a real exported helper.
+- Boundary: This command does not replace native host adapters or guarantee duplicate-free discovery across all apps. No new skill or alias was created.

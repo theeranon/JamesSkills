@@ -46,6 +46,8 @@ def main():
 if __name__ == '__main__':
     try:
         main()
+    except subprocess.TimeoutExpired:
+        print(json.dumps({'error_category': 'timeout'}))
     except Exception:
         # Provider diagnostics can contain account paths or credentials; never echo them.
         print('Claude adapter failed; no provider diagnostics recorded.', file=sys.stderr)

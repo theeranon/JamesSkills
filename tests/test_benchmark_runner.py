@@ -39,6 +39,10 @@ class BenchmarkTests(unittest.TestCase):
         exact = [{'type': 'literal', 'id': 'quote', 'value': '30 November'}]
         self.assertFalse(b.check_response('November 30', exact)[0]['passed'])
 
+    def test_adapter_deadline_is_reported_as_timeout(self):
+        command = [sys.executable, '-c', 'import json; print(json.dumps({"error_category":"timeout"}))']
+        self.assertEqual(b.invoke(command, {}, 2)['status'], 'timeout')
+
     def test_protocol_failures_and_timeout(self):
         for command, status in [([sys.executable, '-c', 'print("not JSON")'], 'adapter_protocol_failure'),
                                 ([sys.executable, '-c', 'print("[]")'], 'adapter_protocol_failure'),

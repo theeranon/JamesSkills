@@ -1,0 +1,29 @@
+{
+  "Claude Code": {
+    "exit_code": 0,
+    "expected_order": [
+      "Arun",
+      "Mali",
+      "Nira"
+    ],
+    "scope": "Explicit installed-skill request returned sorted names without unrelated follow-up; no automatic-routing or all-skill parity claim"
+  },
+  "Codex CLI": {
+    "exit_code": 0,
+    "expected_order": [
+      "Arun",
+      "Mali",
+      "Nira"
+    ],
+    "scope": "Explicit installed-skill request returned sorted names without unrelated follow-up; no automatic-routing or all-skill parity claim"
+  },
+  "Antigravity CLI": {
+    "exit_code": 0,
+    "expected_order": [
+      "Arun",
+      "Mali",
+      "Nira"
+    ],
+    "scope": "Explicit installed-skill request returned sorted names without unrelated follow-up; no automatic-routing or all-skill parity claim"
+  }
+}

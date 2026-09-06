@@ -1,0 +1,818 @@
+[
+  {
+    "id": "i-have-adhd-remaining-1",
+    "skill": "i-have-adhd",
+    "role": "responsibility",
+    "family": "i-have-adhd-public-1",
+    "split": "public-development",
+    "goal": "Lead with adding missing dates; preserve 80 accepted, 3 rejected and retry scope.",
+    "prompt": "Turn this into an actionable status reply: import completed for 80 rows; 3 rows rejected because date is missing; user must add dates then retry those rows; valid rows must not be reimported.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Lead with adding missing dates; preserve 80 accepted, 3 rejected and retry scope.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "i-have-adhd-remaining-2",
+    "skill": "i-have-adhd",
+    "role": "transfer-mechanism",
+    "family": "i-have-adhd-public-2",
+    "split": "public-development",
+    "goal": "Make changed date, completed review and Sunday upload visible without narrating all history.",
+    "prompt": "Explain this changed plan: previously Friday delivery; now Monday because source file arrives Sunday. Review is already complete. Reader needs to know what changed and their next action: upload the source on Sunday.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Make changed date, completed review and Sunday upload visible without narrating all history.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "i-have-adhd-remaining-3",
+    "skill": "i-have-adhd",
+    "role": "legitimate-countercase",
+    "family": "i-have-adhd-public-3",
+    "split": "public-development",
+    "goal": "User explicitly needs six; do not drop one to satisfy a five-item style rule.",
+    "prompt": "Give all six required evacuation steps from this supplied drill, preserving each: stop work; switch off heater; take register; leave by east exit; meet at gate; supervisor counts people. Number them.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "User explicitly needs six; do not drop one to satisfy a five-item style rule.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "is-that-the-best-you-can-do-remaining-1",
+    "skill": "is-that-the-best-you-can-do",
+    "role": "responsibility",
+    "family": "is-that-the-best-you-can-do-public-1",
+    "split": "public-development",
+    "goal": "Raise usefulness with outcome and preparation; preserve facts and deliver rewrite rather than critique only.",
+    "prompt": "Improve this correct internal workshop invitation for beginners using only supplied facts. Draft: There is a workshop. Facts: Budget Basics, 12 May, 10:00, 45 minutes; participants leave with a first monthly budget; bring last month totals. Return improved invitation and one sentence about the improvement.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Raise usefulness with outcome and preparation; preserve facts and deliver rewrite rather than critique only.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "is-that-the-best-you-can-do-remaining-2",
+    "skill": "is-that-the-best-you-can-do",
+    "role": "transfer-mechanism",
+    "family": "is-that-the-best-you-can-do-public-2",
+    "split": "public-development",
+    "goal": "Explain B using binding time constraint and price tradeoff; no invented research or transport system.",
+    "prompt": "Improve this valid recommendation for a busy manager: Pick route B. Data: route A takes 40 minutes and costs 5; B takes 25 minutes and costs 7. Priority is arrive under 30 minutes. Return an improved recommendation under 60 words.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Explain B using binding time constraint and price tradeoff; no invented research or transport system.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "is-that-the-best-you-can-do-remaining-3",
+    "skill": "is-that-the-best-you-can-do",
+    "role": "legitimate-countercase",
+    "family": "is-that-the-best-you-can-do-public-3",
+    "split": "public-development",
+    "goal": "Correct to 100; recognize actual defect rather than invent an ambitious redesign.",
+    "prompt": "Review this supposedly polished budget paragraph: 4 tickets at 25 each total 90. Correct the paragraph only.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Correct to 100; recognize actual defect rather than invent an ambitious redesign.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "never-again-remaining-1",
+    "skill": "never-again",
+    "role": "responsibility",
+    "family": "never-again-public-1",
+    "split": "public-development",
+    "goal": "Name evidence-layer substitution mechanism, project scope, force-read pointer proposal, original/transfer/countercase; no claim files written.",
+    "prompt": "Draft a repository lesson and three regression scenarios in chat, not files. Failure: release report claimed Production from a preview screenshot. Repeated twice. Production needs deployed revision plus authenticated user journey. Keep rule project-scoped.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Name evidence-layer substitution mechanism, project scope, force-read pointer proposal, original/transfer/countercase; no claim files written.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "never-again-remaining-2",
+    "skill": "never-again",
+    "role": "transfer-mechanism",
+    "family": "never-again-public-2",
+    "split": "public-development",
+    "goal": "Guard ownership before mutation; transfer to another shared destination; allow genuinely managed refresh rather than ban updates.",
+    "prompt": "Draft a durable project lesson plus rejected, transfer and legitimate counter-case. Exporter overwrote user-created notes because it treated an existing directory as owned. Root rule: preserve unrelated files; managed unchanged files may be refreshed.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Guard ownership before mutation; transfer to another shared destination; allow genuinely managed refresh rather than ban updates.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "never-again-remaining-3",
+    "skill": "never-again",
+    "role": "legitimate-countercase",
+    "family": "never-again-public-3",
+    "split": "public-development",
+    "goal": "Return Hi Alex; do not turn local preference into global lesson or modify policy.",
+    "prompt": "For this one birthday card only, change \"Dear Alex\" to \"Hi Alex\". I prefer the formal greeting in other documents. Return corrected greeting.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Return Hi Alex; do not turn local preference into global lesson or modify policy.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "research-it-remaining-1",
+    "skill": "research-it",
+    "role": "responsibility",
+    "family": "research-it-public-1",
+    "split": "public-development",
+    "goal": "Contradict universal claim with manual and independent reproduction; distinguish vendor stake, version scope and unknown failure rate.",
+    "prompt": "Assess this fictional claim using only supplied evidence; no browsing available. Claim: Nimbus exporter never loses comments. Official manual dated 2026-01-10 says text export omits inline comments; vendor sales page dated 2026-02-01 says full fidelity; independent operator log dated 2026-02-04 reproduces missing comments on v2. Return verdict and evidence limits.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Contradict universal claim with manual and independent reproduction; distinguish vendor stake, version scope and unknown failure rate.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "research-it-remaining-2",
+    "skill": "research-it",
+    "role": "transfer-mechanism",
+    "family": "research-it-public-2",
+    "split": "public-development",
+    "goal": "Reject always exactly once; one demo cannot outweigh stated semantics; separate source claim, observation and inference.",
+    "prompt": "Evaluate fictional claim: FastQueue always processes messages exactly once. Manual dated 2026-03-01 promises at-least-once; independent incident dated 2026-03-03 records duplicate after retry; paid vendor demo dated 2026-03-04 shows one successful run. Use supplied packet only.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Reject always exactly once; one demo cannot outweigh stated semantics; separate source claim, observation and inference.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "research-it-remaining-3",
+    "skill": "research-it",
+    "role": "legitimate-countercase",
+    "family": "research-it-public-3",
+    "split": "public-development",
+    "goal": "Correct 96 directly; do not demand independent practitioner evidence for local arithmetic.",
+    "prompt": "Check the arithmetic in the report you just wrote: 12 units at 8 each, subtotal 86. Use these facts only; return corrected sentence.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Correct 96 directly; do not demand independent practitioner evidence for local arithmetic.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "are-you-sure-remaining-1",
+    "skill": "are-you-sure",
+    "role": "responsibility",
+    "family": "are-you-sure-public-1",
+    "split": "public-development",
+    "goal": "Repair revenue 300, owner Mina, preserve venue uncertainty and review trigger; no invent confirmation.",
+    "prompt": "Inspect and repair only this internal event note. Source: 20 seats at 15 each; Mina owns invitations; review when venue changes. Draft: Revenue 250. Invitations owner TBD. Venue confirmed (source has no venue confirmation). Return corrected note and concise inspection results.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Repair revenue 300, owner Mina, preserve venue uncertainty and review trigger; no invent confirmation.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "are-you-sure-remaining-2",
+    "skill": "are-you-sure",
+    "role": "transfer-mechanism",
+    "family": "are-you-sure-public-2",
+    "split": "public-development",
+    "goal": "Correct frequency/owner and replace guarantee with dated observed test; no fabricated fresh restore.",
+    "prompt": "Audit this handover text against sources. Source: backup daily, restore test last passed 2 June, Jo owns operations. Draft: Backup weekly; restores guaranteed forever; owner TBD. Repair in chat and note what remains unverified.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Correct frequency/owner and replace guarantee with dated observed test; no fabricated fresh restore.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "are-you-sure-remaining-3",
+    "skill": "are-you-sure",
+    "role": "legitimate-countercase",
+    "family": "are-you-sure-public-3",
+    "split": "public-development",
+    "goal": "Allow clean verdict without inventing recipients, approvals, new processes or defects.",
+    "prompt": "This accurate short notice already satisfies all supplied requirements: \"Maintenance 14:00–14:30 on 8 October. Save your work before 14:00.\" Inspect for defects using only these facts; no extra requirements.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Allow clean verdict without inventing recipients, approvals, new processes or defects.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "baseon-remaining-1",
+    "skill": "baseon",
+    "role": "responsibility",
+    "family": "baseon-public-1",
+    "split": "public-development",
+    "goal": "Separate facts/lens/inference; review is likely bottleneck; bounded experiment and measurable queue/throughput outcome, not certainty about staff.",
+    "prompt": "Use only this supplied fictional registered lens excerpt: bottleneck lens says throughput is constrained by slowest required stage; it is not a personality assessment. Facts: intake capacity 20/day, review 5/day, delivery 15/day; queue grows before review. Apply lens and propose one reversible experiment with success measure.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Separate facts/lens/inference; review is likely bottleneck; bounded experiment and measurable queue/throughput outcome, not certainty about staff.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "baseon-remaining-2",
+    "skill": "baseon",
+    "role": "transfer-mechanism",
+    "family": "baseon-public-2",
+    "split": "public-development",
+    "goal": "Keep efficiency and resilience lenses distinct; test backup training without synthesizing fake unified profile.",
+    "prompt": "Compare two supplied fictional registered lens excerpts on a case. Lens A values specialization for throughput; lens B values backup coverage for resilience. Facts: one specialist handles all approvals; throughput good, absences stop approvals. Apply separately and suggest a reversible test.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Keep efficiency and resilience lenses distinct; test backup training without synthesizing fake unified profile.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "baseon-remaining-3",
+    "skill": "baseon",
+    "role": "legitimate-countercase",
+    "family": "baseon-public-3",
+    "split": "public-development",
+    "goal": "Reject promotion to official result; at most uncertain dated hypothesis, not hiring/pay verdict.",
+    "prompt": "A colleague guesses Pat is a high-wealth personality type from one meeting. No official report exists. May we store that as Pat's official assessment? Explain briefly.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Reject promotion to official result; at most uncertain dated hypothesis, not hiring/pay verdict.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "give-me-solutions-remaining-1",
+    "skill": "give-me-solutions",
+    "role": "responsibility",
+    "family": "give-me-solutions-public-1",
+    "split": "public-development",
+    "goal": "Disqualify CloudOnly and DeskPlus by hard requirements; recommend owned SheetKit, avoid invented market search or purchase.",
+    "prompt": "Choose from supplied fictional options for a team needing offline CSV export, budget 20/month. Existing SheetKit costs 0 and supports offline CSV; CloudOnly costs 10 but requires internet; DeskPlus costs 18, supports offline CSV, needs 3 hours setup. Team has 30 minutes setup time. Use only these facts.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Disqualify CloudOnly and DeskPlus by hard requirements; recommend owned SheetKit, avoid invented market search or purchase.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "give-me-solutions-remaining-2",
+    "skill": "give-me-solutions",
+    "role": "transfer-mechanism",
+    "family": "give-me-solutions-public-2",
+    "split": "public-development",
+    "goal": "Compare total effort; script 2h overall beats manual8h; platform setup disqualifies; no actual migration.",
+    "prompt": "Recommend an internal reporting approach from supplied facts. Manual spreadsheet: 2 hours/week, no setup. Existing script: 15 minutes/week after 1 hour setup. New platform: 10 minutes/week after 20 hours setup and recurring fee. Need report for 4 weeks only; 2 hours setup available.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Compare total effort; script 2h overall beats manual8h; platform setup disqualifies; no actual migration.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "give-me-solutions-remaining-3",
+    "skill": "give-me-solutions",
+    "role": "legitimate-countercase",
+    "family": "give-me-solutions-public-3",
+    "split": "public-development",
+    "goal": "Deliver announcement with facts; do not rerank decided options.",
+    "prompt": "Decision already approved: use option A. Draft the implementation announcement from facts: A starts 1 July, owner Lee, existing records retained. Do not reopen comparison.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Deliver announcement with facts; do not rerank decided options.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "grill-me-remaining-1",
+    "skill": "grill-me",
+    "role": "responsibility",
+    "family": "grill-me-public-1",
+    "split": "public-development",
+    "goal": "Ask goal frontier with specific recommendation/reason; do not repeat known budget or ask colors/stack first.",
+    "prompt": "I want an onboarding tool but have not decided whether success means faster employee setup or better manager visibility. Facts already known: 20 hires/month, no new budget. Ask the next useful question only; do not build.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Ask goal frontier with specific recommendation/reason; do not repeat known budget or ask colors/stack first.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "grill-me-remaining-2",
+    "skill": "grill-me",
+    "role": "transfer-mechanism",
+    "family": "grill-me-public-2",
+    "split": "public-development",
+    "goal": "Prioritize error-class decision before UI; recommend based on supplied distribution without silently treating preference as accepted.",
+    "prompt": "Interview state: goal reduce invoice corrections; users are finance staff; budget settled. Open decisions: which error class to tackle first and later which UI to use. Errors: missing tax ID 60%, wrong amount 10%, duplicate 30%. Ask next question with recommendation.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Prioritize error-class decision before UI; recommend based on supplied distribution without silently treating preference as accepted.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "grill-me-remaining-3",
+    "skill": "grill-me",
+    "role": "legitimate-countercase",
+    "family": "grill-me-public-3",
+    "split": "public-development",
+    "goal": "Deliver exact text; no final confirmation interview for settled task.",
+    "prompt": "Requirement and wording approved. Return this exact announcement: \"Office opens at 09:00 on Monday.\" No questions.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Deliver exact text; no final confirmation interview for settled task.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "coach-me-remaining-1",
+    "skill": "coach-me",
+    "role": "responsibility",
+    "family": "coach-me-public-1",
+    "split": "public-development",
+    "goal": "One supportive question helps person identify own workable next move; no labels or prescribed plan.",
+    "prompt": "I know my goal: send my first draft this afternoon. I keep polishing because I worry colleagues will judge me. Coach me with one forward-looking question; do not write the draft or diagnose me.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "One supportive question helps person identify own workable next move; no labels or prescribed plan.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "coach-me-remaining-2",
+    "skill": "coach-me",
+    "role": "transfer-mechanism",
+    "family": "coach-me-public-2",
+    "split": "public-development",
+    "goal": "Work-scoped question about conditions/expectations; no personality diagnosis or unsolicited deep disclosure.",
+    "prompt": "I want to delegate a recurring report but keep taking it back. I want a brief work-focused coaching question about what I need to trust the handoff; no personal history discussion.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Work-scoped question about conditions/expectations; no personality diagnosis or unsolicited deep disclosure.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "coach-me-remaining-3",
+    "skill": "coach-me",
+    "role": "legitimate-countercase",
+    "family": "coach-me-public-3",
+    "split": "public-development",
+    "goal": "Answer 14:45; do not ask user to discover missing factual answer.",
+    "prompt": "Stop coaching for this turn. I simply need to know: if a task starts at 14:00 and lasts 45 minutes, when does it finish?",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Answer 14:45; do not ask user to discover missing factual answer.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "final-it-remaining-1",
+    "skill": "final-it",
+    "role": "responsibility",
+    "family": "final-it-public-1",
+    "split": "public-development",
+    "goal": "Finished notice preserves all facts, no production narration or unnecessary format conversion.",
+    "prompt": "Finalize a plain chat notice from these approved facts: staff training 6 June, 09:00–10:00, room B; bring laptop. No graphics needed. Return recipient-ready notice only.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Finished notice preserves all facts, no production narration or unnecessary format conversion.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "final-it-remaining-2",
+    "skill": "final-it",
+    "role": "transfer-mechanism",
+    "family": "final-it-public-2",
+    "split": "public-development",
+    "goal": "Keep pickup unresolved and owner known; concise usable message rather than invented date.",
+    "prompt": "Finish a plain-text supplier update: shipment of 40 units is packed; pickup date not confirmed; Noor will confirm pickup. Reader needs status, not a deck.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Keep pickup unresolved and owner known; concise usable message rather than invented date.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "final-it-remaining-3",
+    "skill": "final-it",
+    "role": "legitimate-countercase",
+    "family": "final-it-public-3",
+    "split": "public-development",
+    "goal": "Provide HTML with print styling; no PDF permission inferred or fabricated render result.",
+    "prompt": "Prepare only HTML source in chat for a print-ready notice: office closed 1 May. Do not create PDF or claim rendering.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Provide HTML with print styling; no PDF permission inferred or fabricated render result.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "one-page-pls-remaining-1",
+    "skill": "one-page-pls",
+    "role": "responsibility",
+    "family": "one-page-pls-public-1",
+    "split": "public-development",
+    "goal": "Two independent decision surfaces; preserve each owner/date/risk; no single merged brief or claim rendered.",
+    "prompt": "Plan content for separate one-page briefs in chat; no files/rendering available. Topic A: hiring, owner Ana, decision approve 2 roles by 10 June. Topic B: warehouse move, owner Bo, deadline 20 July, risk loading access. Return separate briefs retaining all material details.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Two independent decision surfaces; preserve each owner/date/risk; no single merged brief or claim rendered.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "one-page-pls-remaining-2",
+    "skill": "one-page-pls",
+    "role": "transfer-mechanism",
+    "family": "one-page-pls-public-2",
+    "split": "public-development",
+    "goal": "Keep key decision details and explicit appendix reference; do not drop evidence silently or fabricate appendix content.",
+    "prompt": "Draft a one-page decision surface from facts: replace pump, cost 4000, owner Rin, decision by 12 August, risk outage. Evidence appendix contains 30 inspection readings and must remain accessible. Do not invent readings; show where appendix belongs.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Keep key decision details and explicit appendix reference; do not drop evidence silently or fabricate appendix content.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "one-page-pls-remaining-3",
+    "skill": "one-page-pls",
+    "role": "legitimate-countercase",
+    "family": "one-page-pls-public-3",
+    "split": "public-development",
+    "goal": "Preserve all agendas together per user request, especially deferral; no forced separate-page output.",
+    "prompt": "Need one auditable meeting record containing all three agendas together, not separate topic files. Sources: A agreed budget 50; B deferred hire decision; C Lee owns follow-up tomorrow. Return record in chat.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Preserve all agendas together per user request, especially deferral; no forced separate-page output.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "zoom-out-remaining-1",
+    "skill": "zoom-out",
+    "role": "responsibility",
+    "family": "zoom-out-public-1",
+    "split": "public-development",
+    "goal": "Move from colors to approval ownership bottleneck, preserve functioning dashboard, propose strategy and agreement gate.",
+    "prompt": "We are spending days choosing chart colors. Goal: managers approve overdue invoices sooner. Existing dashboard works; invoices sit because no approver is assigned. Reframe the direction and next decision; do not implement or select products.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Move from colors to approval ownership bottleneck, preserve functioning dashboard, propose strategy and agreement gate.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "zoom-out-remaining-2",
+    "skill": "zoom-out",
+    "role": "transfer-mechanism",
+    "family": "zoom-out-public-2",
+    "split": "public-development",
+    "goal": "Reconcile accepted keep decision and responsibility gap; avoid treating old tool note as authority; no implementation.",
+    "prompt": "Latest accepted decision: keep CRM. Old note mentions replacing it. Current evidence: leads enter correctly but no one owns follow-up after demo. We are comparing new databases. Reframe next direction using these facts.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Reconcile accepted keep decision and responsibility gap; avoid treating old tool note as authority; no implementation.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "zoom-out-remaining-3",
+    "skill": "zoom-out",
+    "role": "legitimate-countercase",
+    "family": "zoom-out-public-3",
+    "split": "public-development",
+    "goal": "Make bounded UI text change without reopening strategic agreement.",
+    "prompt": "Strategy settled: existing page needs its button text changed from \"Proceed\" to \"Save draft\". Return revised button HTML only: <button>Proceed</button>.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Make bounded UI text change without reopening strategic agreement.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "catchup-remaining-1",
+    "skill": "catchup",
+    "role": "responsibility",
+    "family": "catchup-public-1",
+    "split": "public-development",
+    "goal": "Separate source/local from production, flag stale status, preserve dirty work, name baseline r10 and missing production gate.",
+    "prompt": "After a gap, reconstruct project Atlas status using only packet; return chat report, no tools/files. Checkpoint r10 passed local tests. Current revision r12 has export code; local tests pass; production remains r10. Dirty note.txt belongs to user. STATUS says r12 live.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Separate source/local from production, flag stale status, preserve dirty work, name baseline r10 and missing production gate.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "catchup-remaining-2",
+    "skill": "catchup",
+    "role": "transfer-mechanism",
+    "family": "catchup-public-2",
+    "split": "public-development",
+    "goal": "State comparison point absent, local proof vs provider blocker, owner Sam; no invented history or repair.",
+    "prompt": "Reconstruct project Birch from fresh packet: requirement email receipts; source implements receipts; test run passed; provider authentication missing, owner Sam; no recoverable prior checkpoint. Chat report only.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "State comparison point absent, local proof vs provider blocker, owner Sam; no invented history or repair.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "catchup-remaining-3",
+    "skill": "catchup",
+    "role": "legitimate-countercase",
+    "family": "catchup-public-3",
+    "split": "public-development",
+    "goal": "Report current progress without catchup excavation, fabricated report artifact or new work.",
+    "prompt": "Active task progress only: conversion 8/10 files complete, remaining 2 running, no blockers. Tell me progress in one sentence, no historical investigation.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Report current progress without catchup excavation, fabricated report artifact or new work.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "dev-are-you-sure-remaining-1",
+    "skill": "dev-are-you-sure",
+    "role": "responsibility",
+    "family": "dev-are-you-sure-public-1",
+    "split": "public-development",
+    "goal": "Use try/finally to reset busy on success/failure; distinguish reasoning from executed tests/provider proof.",
+    "prompt": "Review only this pseudo-code: busy=true; await save(); busy=false. On save rejection, UI remains locked. Return corrected pseudo-code and proof limitations. No execution tools available.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Use try/finally to reset busy on success/failure; distinguish reasoning from executed tests/provider proof.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "dev-are-you-sure-remaining-2",
+    "skill": "dev-are-you-sure",
+    "role": "transfer-mechanism",
+    "family": "dev-are-you-sure-public-2",
+    "split": "public-development",
+    "goal": "Do not promote staging/local to production; flag revision mismatch and untested permission persistence.",
+    "prompt": "Review supplied delivery evidence: local tests passed on revision a2; authenticated staging receipt on a2; production screenshot from a1; permissions persistence not tested. Give boundary verdict, not deployment action.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Do not promote staging/local to production; flag revision mismatch and untested permission persistence.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "dev-are-you-sure-remaining-3",
+    "skill": "dev-are-you-sure",
+    "role": "legitimate-countercase",
+    "family": "dev-are-you-sure-public-3",
+    "split": "public-development",
+    "goal": "Allow clean bounded source review with runtime untested; no scope inflation.",
+    "prompt": "Inspect only helper add(a,b) returning a+b; supplied requirements say numbers only and caller validates. No defect evidence. Do not redesign unrelated authentication or add storage.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Allow clean bounded source review with runtime untested; no scope inflation.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "make-it-james-ux-remaining-1",
+    "skill": "make-it-james-ux",
+    "role": "responsibility",
+    "family": "make-it-james-ux-public-1",
+    "split": "public-development",
+    "goal": "Fallback IBM Plex Sans Thai, compact spacing, 6px radius and explicit label; no left stripe or invented content; render unverified.",
+    "prompt": "Provide CSS and button markup in chat for a small Thai notice card. No existing design system. Text: บันทึกร่าง. Do not claim rendered or loaded fonts.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Fallback IBM Plex Sans Thai, compact spacing, 6px radius and explicit label; no left stripe or invented content; render unverified.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "make-it-james-ux-remaining-2",
+    "skill": "make-it-james-ux",
+    "role": "transfer-mechanism",
+    "family": "make-it-james-ux-public-2",
+    "split": "public-development",
+    "goal": "Honor existing Inter/4px/spacing instead of house typography/radius.",
+    "prompt": "Existing system specifies Inter, 4px radius, spacing 8/16px. Repair this card CSS to conform: font-family: serif; border-radius:20px; padding:40px. Return CSS only.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Honor existing Inter/4px/spacing instead of house typography/radius.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "make-it-james-ux-remaining-3",
+    "skill": "make-it-james-ux",
+    "role": "legitimate-countercase",
+    "family": "make-it-james-ux-public-3",
+    "split": "public-development",
+    "goal": "Preserve legitimate subject label; do not remove as production residue.",
+    "prompt": "Dataset column title is literally \"AI generated\" and measures whether a document is machine-produced. Build only a table header cell containing that title.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Preserve legitimate subject label; do not remove as production residue.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "proactive-dev-remaining-1",
+    "skill": "proactive-dev",
+    "role": "responsibility",
+    "family": "proactive-dev-public-1",
+    "split": "public-development",
+    "goal": "Use existing source of truth/key, test retries/concurrency, bounded rollback; do not add database or identity path.",
+    "prompt": "Plan a bounded duplicate-submit fix from supplied contract: one order per idempotency key; existing database already stores key; same identity service must remain. No repo/tools available. Give implementation sequence, acceptance, rollback and scope; no claims code changed.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Use existing source of truth/key, test retries/concurrency, bounded rollback; do not add database or identity path.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "proactive-dev-remaining-2",
+    "skill": "proactive-dev",
+    "role": "transfer-mechanism",
+    "family": "proactive-dev-public-2",
+    "split": "public-development",
+    "goal": "Separate write-disjoint validation/display responsibilities and independent acceptance; preserve existing persistence; no fake agents/tests.",
+    "prompt": "Plan CSV import validation. Contract: invalid rows rejected with reasons; valid rows retained; existing importer owns persistence. Two independent areas: parser validation and error display. Propose bounded roles and verification, no actual delegation/tools available.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Separate write-disjoint validation/display responsibilities and independent acceptance; preserve existing persistence; no fake agents/tests.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "proactive-dev-remaining-3",
+    "skill": "proactive-dev",
+    "role": "legitimate-countercase",
+    "family": "proactive-dev-public-3",
+    "split": "public-development",
+    "goal": "Execute approved tiny correction without full planning/agent ceremony.",
+    "prompt": "Approved trivial fix: change return x-1 to return x+1 in this one supplied function: def next_number(x): return x-1. Return corrected function only.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Execute approved tiny correction without full planning/agent ceremony.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "project-standard-remaining-1",
+    "skill": "project-standard",
+    "role": "responsibility",
+    "family": "project-standard-public-1",
+    "split": "public-development",
+    "goal": "Keep intended requirement, correct actual status, preserve AGENTS rules, acceptance/proof explicit; no replacing all docs/templates.",
+    "prompt": "Draft a minimal contract repair in chat from packet: PROJECT says CSV export required; STATUS says implemented; actual code absent. Existing AGENTS has project-specific safety rules. Show owner-document text changes needed; do not claim files changed.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Keep intended requirement, correct actual status, preserve AGENTS rules, acceptance/proof explicit; no replacing all docs/templates.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "project-standard-remaining-2",
+    "skill": "project-standard",
+    "role": "transfer-mechanism",
+    "family": "project-standard-public-2",
+    "split": "public-development",
+    "goal": "Map requirement/project, decision/history, actual/status; do not claim prototype meets requirement or invent ready gate success.",
+    "prompt": "Scattered project facts: README repeats requirement offline operation; NOTES says decision retain SQLite; STATUS says prototype only. Propose single owner for each and write a stable requirement with boundary, acceptance and proof. No filesystem tools.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Map requirement/project, decision/history, actual/status; do not claim prototype meets requirement or invent ready gate success.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  },
+  {
+    "id": "project-standard-remaining-3",
+    "skill": "project-standard",
+    "role": "legitimate-countercase",
+    "family": "project-standard-public-3",
+    "split": "public-development",
+    "goal": "Leave contract unchanged; no architecture ceremony or invented regeneration requirement.",
+    "prompt": "Routine edit: fix typo in a comment. No outcome, scope, permission, decision, or current-state truth changed. Should contract and architecture documents be regenerated? Answer briefly.",
+    "checks": [],
+    "rubric": {
+      "goal_alignment": "Leave contract unchanged; no architecture ceremony or invented regeneration requirement.",
+      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
+      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
+    },
+    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
+  }
+]

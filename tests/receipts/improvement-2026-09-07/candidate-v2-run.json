@@ -1,0 +1,1 @@
+{"planned": 18, "conditions": {"B": "f6c14089f85f93cdb00bff98b6cf8d7c1044ac63a572117e9db6bed822037371", "C": "8e6d3ce249c41c62341c97fd15542419817d01b011983b284790688c8e727616"}, "cases_hash": "ef164119ff6b122610d5344ab9d33d1705372984468857409ef3f9e6d33b706d", "review": "independent case author; condition-blinded diagnostic review; not sealed holdout"}

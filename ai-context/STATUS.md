@@ -1,31 +1,37 @@
 # Status
 
-Last verified: 2026-09-06
+Last verified: 2026-09-07
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.0.0
+Current version: 2.0.1
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
 
-22 promoted canonical skills and 9 aliases. Local install passes with 164 managed
-links and 22 enabled Codex skills without duplicates. Coverage now rejects missing
-inventories; owned changes roll back on tested failure paths. Claude Desktop shows
-all 22 JamesSkills. Antigravity Customizations shows JamesSkills entries; full
-invocation remains unverified.
+Improvement iteration delivered: 22 canonical skills have 66 executable public
+response probes. proactive-habits now filters irrelevant work and asks only for
+necessary decisions; the bounded mechanism passed independent blinded diagnostic
+review. Residual truth errors remain, so no overall quality guarantee is claimed.
+The other 21 canonical bodies are unchanged.
+
+Project-local export includes declared shared dependencies and preserves existing
+user files. A verified 22-skill ZIP was produced. Claude Code, Codex CLI and
+Antigravity CLI explicit smoke requests succeeded on this Mac. Codex inventory:
+22 enabled, no duplicates; 164 managed links. Other host parity remains open.
 
 ## Done
 
-- Added read-only installer plan, expected-skill coverage, transactional owned-link and Codex-override recovery, and per-skill pilot exclusion.
-- Changed Claude marketplace refresh to update without uninstall-first; corrected its local-content claim.
-- Added 22 benchmark cards and an A/B/C runner with 15 public probes for the five approved skills; 8 mechanics tests and 22 installer regressions pass.
-- Added goal-alignment and proportionality criteria, including legitimate-complexity counter-cases. No canonical skill behavior changed.
+- Published code version 2.0.1 independently verified at e83e942 (publication performed by the concurrent owner-directed Claude session).
+- All three active Claude Code packs report 2.0.1; proactive-habits content matches the tested candidate. Codex local native content updated with backup.
+- 66 public probes; primary A/B baseline 132 attempts, including 23 probable deadline failures. One paired recovery run returned 28/28; original failures retained.
+- Independent blinded assistant review for the new 17-skill baseline and proactive-habits candidates; no calibrated-human or sealed-holdout claim.
+- Export dependency, collision and relocation regressions pass. Future adapter deadlines report timeout distinctly.
 
 ## In progress
 
-- Claude CLI authenticated. First real run returned 41/41 responses: 30 baseline, 9 candidate, 2 smoke. Candidate failed the targeted irrelevant-question mechanism and was rejected; canonical skills unchanged. Review is an unblinded assistant diagnosis, not calibrated human scoring or generalization proof.
-- Cross-host invocation and cold-start proof beyond the existing Codex receipt remain open.
+- No local delivery blocker for this iteration. Further per-skill optimization remains an evidence-led backlog; do not call all 22 improved.
+- Full multi-turn/artifact evaluation and non-Mac/cloud parity are not established by response probes or native smoke tests.
 
 ## Requirement state
 
@@ -42,21 +48,19 @@ invocation remains unverified.
 
 ## Next
 
-- Refine the proactive-habits decision-queue hypothesis and test on new task families; retain genuine approval questions. Current candidate was rejected.
-- Verify explicit invocation in Antigravity and Claude Desktop; inspect Codex Desktop picker when accessible.
+- Use the installed 2.0.1 behavior in fresh sessions. Select subsequent improvements from repeated real failures rather than rewrite the portfolio at once.
 
 ## Blockers
 
-- No authentication blocker remains. Independent scoring and unseen-family evaluation remain open.
-- Computer Use cannot access Codex Desktop. Other OS/runtime parity remains unverified.
+- No authentication blocker remains. Codex Desktop UI access is blocked by Computer Use; CLI/app-server evidence is separate.
+- Windows, cloud-account body synchronization, automatic routing and full runtime parity remain unverified.
 
 ## Need decision
 
-- Vendor-run store listing remains a separate decision.
-- Whether the schema contract needs a numbered requirement beyond its existing non-functional requirement.
+- Vendor store listings or new platform distribution remain separate target-specific decisions.
 
 ## Verification
 
-- Current receipt: `tests/receipts/install-discovery-2026-09-06.md`; earlier explicit Codex invocation: `tests/receipts/install-discovery-2026-09-05.md`.
-- First model evidence: `tests/receipts/benchmark-2026-09-06/REVIEW.md`. Date-check correction has 9 passing mechanics tests. Full validation runs benchmark mechanics and installer regressions automatically. Structural tests do not prove model quality.
-- DEC-026 records approved benchmark direction; DEC-027 records local installation repair. No publication is claimed.
+- Current behavioral/export report: `tests/receipts/improvement-2026-09-07/REVIEW.md`.
+- Earlier receipts retain historical baseline and installer evidence; their pre-login and pre-improvement statuses are superseded here.
+- Full validation includes benchmark and export regressions. Structural checks do not prove model quality.
