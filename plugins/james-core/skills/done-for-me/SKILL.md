@@ -26,18 +26,18 @@ Take the agreed job to the finish line and only then come back.
 ## Procedure
 
 1. Find the requirement authority, the current state, and what counts as finished. Consume an approval already present in this conversation or the project contract; never ask the user to repeat it as a confirmation word.
-2. Define the minimum usable outcome and take the shortest path to it. Implement, run the minimum proof the outcome needs, and reach a checkpoint before optional hardening, broad audits, or documentation cleanup.
+2. Define completion for the whole requested outcome and take the shortest path to it. When the request covers a set, track every item through implementation, verification and delivery, or an evidence-backed decision to retain it. A usable first item is a checkpoint, not permission to leave the rest unfinished. Run the proof the requested outcome needs before optional hardening or documentation cleanup.
 3. Execute every in-scope action that does not require a new business decision or irreversible authority. Do not pause to narrate, confirm, or ask whether to continue.
 4. When one path blocks, continue every independent path. Turn missing configuration into an explicit settings surface, environment variable, or documented input contract rather than a fabricated value.
 5. Investigate and repair ordinary failures. Do not stop at the first error, tool limitation, or incomplete subtask.
 6. Verify the real outcome yourself before reporting. A result you have not exercised is not finished.
-7. Report once, at the end: what now works, what was decided along the way, and only the gates that genuinely remain, each with its owner.
+7. A failed test starts diagnosis and correction inside scope; it is not a completed delivery. Do not replace execution with another plan or ask whether to continue already-authorized work. Report once, at the end: what now works, what was decided along the way, and only the gates that genuinely remain, each with its owner.
 
 When delegation shortens the path, parallelise only write-disjoint work, give every worker the same requirement identifiers, base revision, owned paths, allowed actions, forbidden external effects, and acceptance evidence, and keep verification independent from implementation.
 
 ## Stop when
 
-The minimum usable outcome exists, has been exercised rather than assumed, and every remaining gate is one the user genuinely holds. Waiting on something is a state to route around or monitor, never a reason to hand back an unfinished job.
+The complete requested outcome exists, has been exercised rather than assumed, and every remaining gate is one the user genuinely holds. Name an actual external dependency when blocked; never relabel ordinary remaining work as a user gate. Waiting on something is a state to route around or monitor, never a reason to hand back an unfinished job.
 
 ## Principles
 

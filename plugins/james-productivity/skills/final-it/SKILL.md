@@ -28,9 +28,9 @@ Pick the simplest form that serves the reader, then finish it properly.
 1. Identify the real recipient and what they will do with this. The format follows that, not the impressiveness of the request.
 2. Choose the simplest form that serves the use. Plain Markdown is correct whenever visual design adds nothing. A request for HTML stays HTML-only; never infer authorisation for a fixed print file from words like final, A4, print-ready, shareable, or client-facing.
 3. Transform instructions, complaints, drafts, and discussion into finished wording. Remove production narration, design rationale, progress notes, and copied requirement language.
-4. Preserve source truth exactly while changing presentation. Anything unresolved stays visibly unresolved, or comes back as the one remaining content gate.
+4. Preserve source truth exactly while changing presentation. Check every factual clause against the supplied source: do not add an author, contact, reopening date, response promise, workflow or technical implication merely because it sounds conventional. Preserve temporal scope too: a closure on one date does not establish an ongoing closure starting that date. Missing details remain unknown; omit nonessential fields instead of shipping placeholders. Anything unresolved stays visibly unresolved, or comes back as the one remaining content gate.
 5. Apply the installed wording and visual standards. Do not force visual treatment onto an artifact that is not visual.
-6. Run the native checks the format has, and inspect every rendered page, slide, viewport, or state when rendering exists.
+6. Run the native checks the format has, and inspect every rendered page, slide, viewport, or state when rendering exists. When only source or chat text is requested, deliver that surface without claiming rendering or adding an unrequested conversion workflow.
 
 ## Stop when
 

@@ -28,7 +28,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Create or repair one vendor-neutral project contract so any agent or person can work without prior chat, stamped with the standard version it follows. Use when project truth is missing or drifting; not for routine edits that change nothing durable.
-- Result: The owner documents actually changed, the requirement identifiers with their acceptance and proof, the regenerated SRS with its contract version, the visible drift between intended and actual, and the `check --ready` result.
+- Result: The owner-document changes, requirement identifiers with acceptance/proof, visible intended-versus-actual drift, and checks actually performed. Include regenerated SRS/version only when applicable; for a requested draft, clearly identify proposed text and unverified facts instead of reporting edits or readiness.
 - Do not use when: The contract exists and current state after a gap is what is unknown -> `catchup`
   - The contract exists and the work is to build against it -> `done-for-me`
   - Engineering work needs role decomposition rather than a contract -> `proactive-dev`
@@ -42,7 +42,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Reconstruct one project's verified current state after a gap and deliver it as the standard catchup page. Use for where-are-we-now after a handoff or stale status; not for progress inside active work and not for repairing anything.
-- Result: One rendered catchup page naming the target, the current situation, what was recently done, the live checklist, what is open with owners, visible conflicts and unknowns, the state of the last task, and the single next action.
+- Result: The requested chat report or rendered page: target and comparison point, current evidence, material conflict or blocker, and one safe next action. Include history, checklist and last-task state only where established and useful; do not repeat current facts under multiple headings.
 - Do not use when: Ordinary progress inside an active task is being reported; let the primary workflow report it -> `done-for-me`
   - The dispute is one isolated completion claim needing verification at its boundary -> `dev-are-you-sure`
   - The project has no contract and truth was never written down -> `project-standard`
@@ -55,7 +55,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Step back at least three levels from the detail to the strategy, then agree the direction before any action resumes. Use when work has gone too deep too early; strategy only, never for interface or visual questions.
-- Result: The outcome in human terms, the responsibility that is actually failing, what already works and must stay untouched, the strategy with its exclusions, and the agreed direction with the next action it unlocks.
+- Result: For reframing: the outcome in human terms, the failing responsibility, what already works, the strategy and its exclusions, and the direction awaiting or holding actual agreement. For an excluded bounded task, its owning workflow returns the requested result.
 - Do not use when: The question is about layout, interaction, or visual design -> `make-it-james-ux`
   - The direction is settled and options must now be compared -> `give-me-solutions`
   - The direction is settled and the job is to build it -> `done-for-me`
@@ -84,7 +84,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Settle a doubt about one claim, approach, or requirement with outside evidence from official sources and real users. Use when confidence is missing, not when choosing between options or checking your own work.
-- Result: The claim and verdict, decisive source evidence with available locators, and material limits. Separate facts, source assertions and inference without mandatory empty sections or hypothetical reversal conditions.
+- Result: The claim and verdict, the decisive source evidence with locators when available, and the material limits. Keep fact, source assertion and inference clear without requiring separate sections for empty categories. The reader decides what to do about it.
 - Do not use when: Several candidates must be compared and one recommended -> `give-me-solutions`
   - The doubt is about work produced in this conversation rather than an outside claim -> `are-you-sure`
   - The doubt is about whether shipped code, data, or a deployment behaves correctly -> `dev-are-you-sure`
@@ -141,7 +141,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `mode`
 - Lifecycle: `promoted`
 - Use when: Work as one person holding the analyst, product, architect, build, and quality roles, planning rigorously before writing code and splitting the work across sub-agents. Use when the plan is not good enough yet; not for executing an accepted plan.
-- Result: The restated requirement, the scope with its explicit exclusions, the architecture decision and its rollback, the increments built, the quality result against the done-criteria, and the current state of anything still running or blocked.
+- Result: The usable plan or implementation, with the decisions, scope, rollback and acceptance evidence needed to assess it. State actual progress and remaining dependencies once; do not repeat the same plan as analyst, architect and handback summaries.
 - Do not use when: A plan is already accepted and the job is to execute it to a usable outcome -> `done-for-me`
   - Delivered code needs a five-layer sweep and repair -> `dev-are-you-sure`
   - The decision posture, not the engineering method, is what needs to change -> `proactive-habits`
@@ -157,7 +157,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Re-inspect a business or productivity deliverable across five layers and repair what it finds inside a declared surface. Use when work looks finished but the diligence behind it is in doubt; not for code, and not for making good work better.
-- Result: The declared inspection surface, each of the five layers marked repaired, escalated, or clean, the repaired artifact itself, and any escalation with the decision it needs and who holds it.
+- Result: The repaired artifact, or the requested clean-result confirmation. When an inspection report is requested, include the surface and actual findings, with clean, repaired, escalated, not-applicable or unverified status as warranted. Name only the decisions genuinely needed to finish.
 - Do not use when: The artifact is code, schema, data, or a deployment -> `dev-are-you-sure`
   - The doubt is about an outside claim rather than work produced here -> `research-it`
   - The work is correct and clean but unambitious, and needs a higher ceiling -> `is-that-the-best-you-can-do`
@@ -170,7 +170,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Re-inspect delivered software across five layers plus the deployment boundary and repair what it finds inside a declared surface. Use when code looks done but the diligence is in doubt; not for business artifacts and not for external claims.
-- Result: The declared surface, five layers and four boundary links each marked, the repaired code, and every remaining gap with its owner and the exact evidence still missing.
+- Result: The declared surface, repaired code or clean verdict, material findings and verification limits. For a full delivery review include all applicable boundary results; for a supplied snippet return the requested correction and its execution limit without unrelated deployment work.
 - Do not use when: The artifact is a plan, document, model, or business decision -> `are-you-sure`
   - The doubt is whether an outside approach or library claim is sound -> `research-it`
   - The code is correct and clean but the solution is mediocre -> `is-that-the-best-you-can-do`
@@ -196,7 +196,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Turn one rejected output into a written lesson that every future agent is forced to read before working in this repository. Use when a mistake should never recur; not for fixing the one bad output and not for routine quality sweeps.
-- Result: The lesson entry, the contract file that now forces it to be read, the three regressions, the list of outputs repaired, and the exact scope the rule covers.
+- Result: For executed work: the verified lesson entry and contract pointer, three regressions, repaired outputs and scope. For draft-only work: the proposed entry and cases, with an explicit statement that no file was changed. Never describe proposed persistence as completed.
 - Do not use when: The single bad output needs repairing and nothing durable is at stake -> `are-you-sure`
   - The defect is in delivered code and the sweep is what is wanted -> `dev-are-you-sure`
   - The project has no contract yet and truth is scattered rather than wrong -> `project-standard`
@@ -212,7 +212,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `output`
 - Lifecycle: `promoted`
 - Use when: Build one auditable meeting record holding every agenda in a single file, with evidence kept separate from interpretation. Use for minutes and detailed meeting records; not when each topic must become its own page.
-- Result: One rendered A4 portrait file covering every agenda, the source coverage account, the evidence ledger with locators, everything left explicitly unknown or disputed, and the inspection result for every print page.
+- Result: One record covering every supplied agenda on the requested surface; A4 portrait HTML by default. Include source coverage, locators, unknown or disputed facts, and inspection results only for print pages actually rendered.
 - Do not use when: Each agenda must become its own separate page -> `one-page-pls`
   - The artifact is not a meeting record and the format is open -> `final-it`
   - Project state must be reconstructed from the repository rather than a transcript -> `catchup`
@@ -226,7 +226,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `output`
 - Lifecycle: `promoted`
 - Use when: Turn each independent topic into its own self-contained single-page brief. Use when material must stay on one page per topic; not for meeting records that must hold every agenda in one file.
-- Result: One rendered file per topic with its name, the coverage account showing every material item placed, the inspection result for each page, and any topic returned as unsuitable for one page with the reason.
+- Result: One rendered file per topic, or separate topic briefs when chat was requested, with its name, the coverage account showing every material item placed, the inspection result for each page, and any topic returned as unsuitable for one page with the reason.
 - Do not use when: Every agenda must live in one record together -> `sum-meet`
   - The artifact is not page-bound and the format is still open -> `final-it`
   - Current project state must be reconstructed rather than summarised -> `catchup`
@@ -269,7 +269,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `mode`
 - Lifecycle: `promoted`
 - Use when: Work as an effective professional who decides what is theirs to decide and batches the rest into one question at the end. Use to stop subordinate behavior; not for finishing one named task and not for how replies are formatted.
-- Result: Work already done under the agent's own authority, stated plainly, plus one batched set of decisions that genuinely need the user, each with a recommendation and its reason.
+- Result: The requested deliverable. Add a question only for a remaining decision required to complete that deliverable; otherwise stop.
 - Do not use when: One named task must be carried to a finished, verified outcome -> `done-for-me`
   - The need is about reply length, ordering, and interruption shape rather than decision authority -> `i-have-adhd`
   - The work is software and needs role decomposition and a plan before code -> `proactive-dev`
@@ -282,7 +282,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `workflow`
 - Lifecycle: `promoted`
 - Use when: Move a person toward their own goal using questions only, always positively, working beneath the behavior to what is driving it. Use when someone is stuck in themselves; never to give advice and never to do the work for them.
-- Result: Their goal in their own words, what was found beneath the behavior, and the next action they named themselves with its timing. No plan they did not author, no template, and no work done on their behalf.
+- Result: Their goal in their own words, what was found beneath the behavior, and the next action they named themselves with its timing and review point. No plan they did not author, no template, no work done on their behalf, and no label attached to them.
 - Do not use when: The person wants the task done rather than to be moved -> `done-for-me`
   - What is unclear is the requirement rather than the person -> `grill-me`
   - The person wants options researched and compared -> `give-me-solutions`
@@ -308,7 +308,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `shared-standard`
 - Lifecycle: `promoted`
 - Use when: Enforce visual and interaction law on anything rendered, following the project's existing design system first and this house style only as fallback. Applies automatically to visual work; it does not choose the format or write the content.
-- Result: The rendered artifact, which system was followed and why, the strict lint result, the rendered inspection covering typography, density, radius, and interface copy, and any visual gate that remains open.
+- Result: The requested code or rendered artifact. For a rendered deliverable, report the system followed, actual lint/render evidence and material open gates. For code-only output, do not append process narration or claim fonts loaded.
 - Do not use when: The rules needed are about wording rather than presentation -> `make-it-james`
   - The question is which format the deliverable should take -> `final-it`
   - The interface is defective rather than inconsistent -> `dev-are-you-sure`

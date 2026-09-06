@@ -26,19 +26,19 @@ Go back over what was just delivered and find what nobody would ever fail it on.
 
 ## Procedure
 
-Declare the surface first: the exact artifact or set of artifacts under inspection. Then sweep all five layers in order. Repair each finding immediately, or escalate it when repair needs a decision you do not hold.
+Define the surface first: the exact artifact or set of artifacts under inspection. Keep this planning internal when the user requests only the repaired artifact. Then sweep all five layers in order. Repair each evidenced finding immediately, or escalate it when the requested outcome needs a decision you do not hold. A possible risk is not an observed defect. Preserve explicit unknowns rather than inventing facts, owners or deadlines to make the artifact look complete.
 
 1. **Integrity.** Trace the logic end to end. Reconcile every number to a named source. Name the assumption that, if wrong, collapses the rest, and state what happens then. Find the cascading failure, not the typo.
 2. **Structure.** Find what is one-off that should be repeatable, what sits at the wrong altitude, what commitment has no owner, and what decision is being made by a document instead of a person.
 3. **Residue.** Remove placeholders, stale dates, draft figures, unresolved TBDs, copied requirement language, and contradictions between two sections that were written at different times.
-4. **Recipient.** Read it as the person who receives it. Every question they would have to ask before acting is a defect. Apply the installed wording standard rather than restating it here.
+4. **Recipient.** Read it as the person who receives it. Identify missing information that actually prevents the intended recipient from acting; do not invent additional decisions or expand a complete notice into a process design. Apply the installed wording standard rather than restating it here.
 5. **Longevity.** State what makes this expire, who owns it after handover, and what event should trigger a review.
 
-Report every layer as repaired, escalated, or clean. Never report a layer you did not run.
+Consider every layer, but allow not applicable for a layer the artifact does not need and unverified when evidence is unavailable. Report repaired, escalated or clean only for checks actually performed. A clean artifact stays unchanged. Keep the inspection account proportional and outside an artifact-only response.
 
 ## Stop when
 
-All five layers have been run against the declared surface, every finding is repaired or escalated with a named owner, and the report states the surface inspected. A layer with nothing to fix is reported as clean, which is a result, not a skip.
+All five layers have been considered against the declared surface, every evidenced defect is repaired or escalated to a known decision holder, and material verification limits are explicit. A layer with nothing to fix is reported as clean, which is a result, not a skip.
 
 ## Principles
 
@@ -54,7 +54,7 @@ All five layers have been run against the declared surface, every finding is rep
 
 ## Hand back
 
-The declared inspection surface, each of the five layers marked repaired, escalated, or clean, the repaired artifact itself, and any escalation with the decision it needs and who holds it.
+The repaired artifact, or the requested clean-result confirmation. When an inspection report is requested, include the surface and actual findings, with clean, repaired, escalated, not-applicable or unverified status as warranted. Name only the decisions genuinely needed to finish.
 
 ## Sources
 

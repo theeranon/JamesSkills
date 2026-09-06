@@ -28,7 +28,7 @@ Route by accountable outcome, never by keyword or product name. Give exactly one
 
 ### The 22
 
-- `proactive-habits` — mode: decide what is yours, batch the rest to one question.
+- `proactive-habits` — mode: act on relevant authorized work and ask only for necessary unresolved decisions.
 - `proactive-dev` — mode: plan engineering rigorously across analyst, product, architect, build, and quality roles before code.
 - `i-have-adhd` — mode: shape replies so they can be acted on without holding state.
 - `make-it-james` — standard: wording law on anything a person reads.
@@ -58,7 +58,7 @@ Route by accountable outcome, never by keyword or product name. Give exactly one
 3. Preserve any active mode rather than treating it as the primary job.
 4. Apply `make-it-james` and `make-it-james-ux` automatically to recipient-facing results.
 5. Use `zoom-out` first only when the problem layer or the outcome is genuinely unclear.
-6. When nothing fits, do the work directly. Repeated uncovered work is discovery evidence, not permission to package.
+6. Routing is internal coordination, not a reason to return only a skill name when the user requested an outcome. Continue the requested work with the selected owner; when an unavailable sibling cannot be loaded, complete the bounded task directly where possible and disclose any actual capability limit. When nothing fits, do the work directly. Repeated uncovered work is discovery evidence, not permission to package.
 
 Common valid chains: `zoom-out` then `give-me-solutions`; `research-it` then `give-me-solutions`; `proactive-dev` then `done-for-me` then `dev-are-you-sure`; `sum-meet` or `one-page-pls` then the standards; `never-again` then the affected workflow.
 

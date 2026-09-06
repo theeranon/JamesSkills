@@ -29,14 +29,14 @@ Run every command from this skill directory as `python3 scripts/project_standard
 
 1. Inspect the repository itself: existing instructions, git state, executable configuration, entrypoints, tests, and runtime evidence. Classify each source as intended truth, current state, history, adapter, or evidence.
 2. Choose the smallest mode that fits. `bootstrap` for a project with no contract, `migrate` for one with scattered instructions, targeted repair for one with drift. Preserve every accepted project fact and all project-specific knowledge.
-3. Give each durable fact exactly one owner document, and replace every duplicate with a pointer. Mark unsupported claims as not confirmed; record unresolved conflicts under the decision heading rather than choosing.
-4. Write requirements as stable identifiers. Each names the observable outcome, its boundary, how it is accepted, and where the proof lives. An agent reporting that it implemented something is not acceptance.
-5. Keep intended requirements and current implementation separate, and let the drift between them stay visible. Never rewrite current code as the desired architecture, and never describe the desired architecture as already built.
+3. Give each durable fact exactly one owner document, following the project contract: normally requirements in `PROJECT.md`, current evidence in `STATUS.md`, agent rules in `AGENTS.md`, and decisions in `DECISIONS.md`. Preserve accepted alternative owner names; do not invent a new requirements file or move requirements into agent rules. Replace actual duplicates with pointers. Mark unsupported claims as not confirmed; record genuinely unresolved decisions without reopening a state contradiction already settled by evidence.
+4. Write requirements as stable identifiers. Each names the observable outcome, its boundary, how it is accepted, and where the proof lives. An agent reporting that it implemented something is not acceptance. Preserve approved scope: prototype status does not weaken an offline requirement. Mark missing boundaries or proof as unspecified, and label new acceptance text as proposed; never fabricate test paths as existing evidence.
+5. Keep intended requirements and current implementation separate, and let the drift between them stay visible. A false implemented status with code absent normally needs a status correction, not a requirements migration, new standing rule or architecture document. Never rewrite current code as the desired architecture, and never describe the desired architecture as already built.
 6. Create `ARCHITECTURE.md` and `DATA_MODEL.md` only when real complexity earns them. Never add empty ceremony.
 7. Keep provider adapters thin. `CLAUDE.md`, `GEMINI.md`, and any other adapter add provider mechanics only; shared truth stays in `AGENTS.md` and the contract files.
 8. Never introduce a parallel store, table, or identity path without a named requirement and a recorded decision. A persistent-data change updates the canonical model, the migration and rollback path, and the current-state evidence together.
 9. Whenever the requirements or data model changed, regenerate the specification view with `render-srs`. Every project gets the same generated SRS from the same renderer, so the standard reads identically across projects. The generated file carries the contract version and a source hash and is never hand-edited.
-10. Verify with `check <project-root> --ready`, which reports the contract version it validated against.
+10. Verify with `check <project-root> --ready`, which reports the contract version it validated against. For an explicit chat-only draft, return the minimal changed text, its owner and one verification caveat. Omit repeated scope, contradiction, unchanged-files, not-done and handback sections. Do not run commands, claim inspection beyond the supplied packet, or require generated files for that draft.
 
 ## Stop when
 
@@ -58,7 +58,7 @@ On Windows invoke the same helper with `python` when `python3` is not on PATH.
 
 ## Hand back
 
-The owner documents actually changed, the requirement identifiers with their acceptance and proof, the regenerated SRS with its contract version, the visible drift between intended and actual, and the `check --ready` result.
+The owner-document changes, requirement identifiers with acceptance/proof, visible intended-versus-actual drift, and checks actually performed. Include regenerated SRS/version only when applicable; for a requested draft, clearly identify proposed text and unverified facts instead of reporting edits or readiness.
 
 ## Sources
 

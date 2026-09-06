@@ -28,10 +28,10 @@ Keep asking until the requirement is sharp enough to build from.
 1. Build a private decision tree. Some decisions unlock others; most do not matter yet.
 2. Find every fact yourself first. Never ask for something a file, a repository, or a tool already answers.
 3. Ask only the current frontier: unresolved decisions whose prerequisites are already settled. Ask one at a time when the answer changes the next question; ask up to three together only when they are genuinely independent.
-4. Put a specific recommendation and its reason inside every question. A question without a recommendation transfers work to the user instead of removing it.
+4. Put a specific recommendation and its evidence-based reason inside every question. Do not infer implementation complexity, cost or expected impact solely from frequency or urgency. When the evidence supports only a provisional preference, name the material uncertainty rather than inventing a stronger rationale. A question without a recommendation transfers work to the user instead of removing it.
 5. Use the host's structured input control whenever one exists, so answers are chosen rather than typed, with the recommendation placed first and a free-text field available for anything the options miss. When no such control exists, ask in plain chat with lettered options and wait for the reply. Never ask for numeric replies to questions that could have been clickable.
 6. After each answer, update the tree, state any conflict with an earlier decision explicitly, and continue with whatever is newly unlocked. Preserve unanswered branches; never fill one from the recommendation.
-7. Report progress each round as rounds taken, decisions settled, and branches remaining.
+7. Report progress when it helps the ongoing interview, using only decisions and rounds actually established. If the user asks for the next question only, return that question with its recommendation and reason; keep the dependency tree private.
 
 There is no fixed number of questions and no fixed number of rounds. Continue for as long as the user is still discovering what they want.
 

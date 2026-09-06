@@ -28,13 +28,15 @@ Follow the system that is already there, and where there is none, be compact and
 
 **House fallback, only where no system exists.** `IBM Plex Sans Thai` as the typeface for Thai, Latin, and numerals. Minimal, white, quiet. Compact and information-dense composition with restrained padding. Body line-height between 1.35 and 1.45. A 6px radius on every rectangular surface; genuinely circular objects stay circular. Never attach a thick or coloured vertical stripe to the left edge of a card, panel, alert, or list item.
 
+**Preserve the requested content and action.** Supplied labels and facts are the content budget: a card with only a requested button needs no invented body message, success notice or system behavior. Put supplied button copy on that button; do not turn it into body text and invent a generic confirmation control. Add a control only when its action belongs to the requested flow. Required confirmations for destructive or externally binding actions remain; optimistic undo applies only where reversal is real and authorized.
+
 **Interface copy carries no production residue.** No meta copy, no progress narration, no labels announcing that a machine produced this, no placeholder text shipped as content. Nothing that belongs to the making of the artifact appears inside the artifact.
 
 **Reduce friction before adding explanation.** Ask for nothing before the user has received value. Remove controls irrelevant to the immediate intent. Replace blocking confirmations with optimistic execution plus undo. Break intimidating forms into disclosed steps. Give every control explicit copy rather than an unlabelled icon.
 
 **Format boundary.** An HTML request defaults to HTML-only delivery. Print-ready means working print CSS that passes browser print emulation; it does not authorise PDF export. Create a PDF only when it is explicitly requested or a recipient constraint is directly confirmed. Never infer that constraint from A4, print-ready, final, shareable, or client-facing. Never generate a PDF merely to prove that HTML renders.
 
-**Verify by rendering.** Run `python3 scripts/lint_outcome.py --strict <output-path>` from this skill directory for supported outputs. For an offline portable single file, run `python3 scripts/embed_ibm_plex_thai.py <input.html> --output <portable.html>` and confirm no remote font links remain. A CSS font declaration is never proof that the font loaded.
+**Verify by rendering.** A code-only or chat-snippet request receives the requested code, with rendering unverified; it does not authorize creating an artifact just to satisfy this gate. For a rendered deliverable, run `python3 scripts/lint_outcome.py --strict <output-path>` from this skill directory for supported outputs. For an offline portable single file, run `python3 scripts/embed_ibm_plex_thai.py <input.html> --output <portable.html>` and confirm no remote font links remain. A CSS font declaration is never proof that the font loaded.
 
 ## Applies to
 
@@ -57,7 +59,7 @@ On Windows invoke the same helper with `python` when `python3` is not on PATH.
 
 ## Hand back
 
-The rendered artifact, which system was followed and why, the strict lint result, the rendered inspection covering typography, density, radius, and interface copy, and any visual gate that remains open.
+The requested code or rendered artifact. For a rendered deliverable, report the system followed, actual lint/render evidence and material open gates. For code-only output, do not append process narration or claim fonts loaded.
 
 ## Sources
 

@@ -25,17 +25,19 @@ Make the plan good enough to be worth building, then build it and watch it.
 
 ## Behavior
 
-Hold five roles in sequence and hand off between them explicitly. Split a role into its own sub-agent whenever its work is large enough to be checked independently, and give every sub-agent the same requirement identifiers, base revision, owned paths, allowed actions, forbidden external effects, and acceptance evidence.
+Use the five roles as reasoning responsibilities, not five mandatory report sections. Make ownership handoffs explicit when work is actually split. Delegate only when independent parallel work shortens delivery and delegation tools are available, and give every sub-agent the same requirement identifiers, base revision, owned paths, allowed actions, forbidden external effects, and acceptance evidence.
 
-1. **Analyst.** Restate what is actually being asked, separately from what was said. Name the real user, the failing responsibility, and the fact that must become true.
-2. **Product.** Fix scope, order, and done-criteria before design. Cut what does not change the outcome. State what is deliberately not being built.
-3. **Architect.** Read `ARCHITECTURE.md` and the project contract before proposing structure. New work conforms to the recorded architecture or arrives with an explicit decision to change it. Verify three things every time: each fact has exactly one source of truth, the schema expresses the real relationships rather than a convenient shape, and no parallel store or duplicated identity path is being introduced.
-4. **Builder.** Implement in the smallest coherent increments. Parallelise only write-disjoint work; use one implementer for shared state.
-5. **Quality.** Check against the done-criteria written in step two, not against the code just written. Keep this role independent from the builder when the risk justifies it.
+Use these checks internally, exposing only decisions and evidence needed for the deliverable:
 
-Then monitor. State what is finished, what is running, and what is blocked, without being asked.
+- **Analyst:** distinguish the requested outcome, observed facts and unknown implementation. A required feature does not establish what current code does or why it fails.
+- **Product:** choose the smallest scope and write acceptance before design; preserve accepted requirements and existing authorization.
+- **Architect:** read the existing contract and architecture when available. Keep one source of truth and real data relationships; never introduce a parallel store or duplicated identity path without a named requirement and recorded decision. Unknown schema or code is an inspection prerequisite, not a fact to invent or an approval to request.
+- **Builder:** implement coherent increments; parallelize only write-disjoint work that benefits from delegation, with one owner for shared state.
+- **Quality:** check user outcomes and failure paths against acceptance, independently of implementation when risk warrants it. Never claim agents, tests or edits that did not run.
 
-Plan rigorously, then act. A plan that has not named its failure mode, its rollback, and its blast radius is not finished being planned.
+A requested plan should state the actual sequence, ownership, acceptance and relevant rollback once, without repeating five role reports. When tools are unavailable, name conditional prerequisites without claiming a base revision or current root cause. When execution is authorized and tools exist, inspect those facts and proceed.
+
+Rollback must preserve the accepted invariant. If reverting would permit invalid writes or duplicate orders, stop or disable the affected mutation path until the fix is restored; do not call bypassing validation a safe rollback. A database transaction alone does not make external side effects atomic. Scale blast-radius detail to the change and report only actual running work or blockers.
 
 ## Stays active until
 
@@ -56,7 +58,7 @@ The user turns it off or the engineering work ends. It does not carry into unrel
 
 ## Hand back
 
-The restated requirement, the scope with its explicit exclusions, the architecture decision and its rollback, the increments built, the quality result against the done-criteria, and the current state of anything still running or blocked.
+The usable plan or implementation, with the decisions, scope, rollback and acceptance evidence needed to assess it. State actual progress and remaining dependencies once; do not repeat the same plan as analyst, architect and handback summaries.
 
 ## Sources
 

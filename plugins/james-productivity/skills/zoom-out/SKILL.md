@@ -26,6 +26,8 @@ Climb back up until the strategy is visible, then agree it before anyone moves a
 
 ## Procedure
 
+Check whether reframing is needed before opening the strategy workflow. When the direction is already settled and the request is a bounded task, use its owning workflow and complete the authorized work; a sibling name alone is not the deliverable. Do not ask for a new strategic agreement or refuse a simple answer merely because that sibling is not loaded. The agreement gate below applies to a new or changed direction.
+
 Climb at least three levels above wherever the conversation currently sits, then come back down deliberately.
 
 1. **Top view.** What is this project for, and who is it for? State the outcome in business or human terms, not in features.
@@ -41,7 +43,7 @@ Then stop and agree. State the direction in one paragraph and get explicit agree
 
 ## Stop when
 
-The outcome, the failing responsibility, the strategy, and the deliberate exclusions are all stated, and the user has explicitly agreed to the direction. Agreement is the exit condition; without it the skill has not finished.
+For a reframing task, the outcome, the failing responsibility, the strategy, and the deliberate exclusions are all stated, and the user has explicitly agreed to the direction. Agreement is the exit condition; without it the skill has not finished.
 
 ## Principles
 
@@ -57,7 +59,7 @@ The outcome, the failing responsibility, the strategy, and the deliberate exclus
 
 ## Hand back
 
-The outcome in human terms, the responsibility that is actually failing, what already works and must stay untouched, the strategy with its exclusions, and the agreed direction with the next action it unlocks.
+For reframing: the outcome in human terms, the failing responsibility, what already works, the strategy and its exclusions, and the direction awaiting or holding actual agreement. For an excluded bounded task, its owning workflow returns the requested result.
 
 ## Sources
 

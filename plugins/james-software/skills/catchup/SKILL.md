@@ -26,16 +26,16 @@ Work out what is actually true right now, and hand back one page that says so.
 ## Procedure
 
 1. Identify the target and the comparison point: project root or workstream, branch and environment where relevant, and the last known checkpoint. Never invent a baseline; record `comparison point not established` when one cannot be recovered cheaply.
-2. Take the fast path first. When the request and the accepted project sources already carry fresh, sufficient state, answer from them without excavating history.
+2. Take the fast path first. When the request and the accepted project sources already carry fresh, sufficient state, answer from them without excavating history. Build the report from the supplied facts, not from template headings: omit a recently-done section when no delta is established. Preserve exact state words such as dirty, tested and deployed; do not silently expand them into untracked, complete or verified.
 3. Gather the smallest sufficient evidence. For a local project run `python3 scripts/project_snapshot.py <project-root> --checkpoint <known-checkpoint>` from this skill directory, omitting the checkpoint rather than inventing one. Read the contract and status owners that actually exist. Inspect runtime, provider receipts, or recent history only where a material state claim depends on it.
-4. Reconcile four truth classes without merging them.
+4. Reconcile four truth classes without merging them. Keep the evidence resolution intact: source presence is not feature completeness; passing tests cover only their stated cases; a deployed revision is not a verified user journey. Claim a change since the checkpoint only when both states show that difference. Unknown history is not proof that no history or backup exists.
    - **Intended:** accepted requirements and decisions say what should exist.
    - **Actual:** source, git, tests, runtime, and provider evidence say what currently exists.
    - **Active:** dirty work, running tasks, blockers, and current owner state say what is moving now.
    - **Historical:** prior chat and old reports explain a delta only when current sources cannot.
 5. Preserve dirty and untracked user work exactly as found. When a status document is stale, report it as stale rather than correcting it; correcting it is a separate authorised job. Do not widen a bounded status question into a full audit when the supplied evidence already answers it.
-6. Render the report by duplicating [assets/catchup-report.html](assets/catchup-report.html) and replacing every token. The template is fixed so that every project's catchup page looks identical and can be read at a glance; adapt content, never the shape.
-7. Inspect the rendered page in print emulation before delivering. Deliver HTML; produce a PDF only when it is explicitly requested.
+6. Follow an explicit chat-only or text-only request directly; keep the same factual coverage without creating a file or claiming rendering. Otherwise render the report by duplicating [assets/catchup-report.html](assets/catchup-report.html) and replacing every token. The template is fixed so that every project's catchup page looks identical and can be read at a glance; adapt content, never the shape.
+7. When delivering a page, inspect the rendered page in print emulation before delivering. Deliver HTML; produce a PDF only when it is explicitly requested.
 
 ## Stop when
 
@@ -57,7 +57,7 @@ On Windows invoke the same helper with `python` when `python3` is not on PATH.
 
 ## Hand back
 
-One rendered catchup page naming the target, the current situation, what was recently done, the live checklist, what is open with owners, visible conflicts and unknowns, the state of the last task, and the single next action.
+The requested chat report or rendered page: target and comparison point, current evidence, material conflict or blocker, and one safe next action. Include history, checklist and last-task state only where established and useful; do not repeat current facts under multiple headings.
 
 ## Sources
 
