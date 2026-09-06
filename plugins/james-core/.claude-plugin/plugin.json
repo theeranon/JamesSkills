@@ -1,7 +1,7 @@
 {
   "name": "james-core",
   "displayName": "James Core",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Decision posture, execution ownership, and the quality gates that run before work is accepted.",
   "author": {
     "name": "James Theeranon"
