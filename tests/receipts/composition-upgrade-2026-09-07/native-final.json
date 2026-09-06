@@ -1,0 +1,7 @@
+{
+  "host": "Claude Code",
+  "version": "2.0.4",
+  "result": "ประกาศ: ร้านปิดวันที่ 20 เมษายน เพื่อตรวจสต็อกสินค้า ขออภัยในความไม่สะดวก และขอบคุณที่เข้าใจครับ/ค่ะ",
+  "is_error": false,
+  "limit": "one explicit native composed request, not automatic routing parity"
+}

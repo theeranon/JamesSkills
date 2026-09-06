@@ -3,7 +3,7 @@
 Last verified: 2026-09-07
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.0.4 candidate
+Current version: 2.0.4
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
@@ -19,11 +19,12 @@ No new skill names or lifecycle changes.
 - All 22 audit findings addressed in their instruction contracts; schema no longer requires routing in-degree or minimum principle counts.
 - Real two-turn artifact scenarios executed with baseline, candidate and no-skill arms. Completion and draft boundaries verified; no measured completion uplift claimed.
 - 66 response-only forward probes reviewed, plus strategic and output followups. Residual factual/formatting failures retained, not labeled passes.
-- Evidence: `tests/receipts/composition-upgrade-2026-09-07/REVIEW.md`.
+- Published 801902a to the approved GitHub main branch. Claude and Codex all three packages report 2.0.4; 44 native bodies and four reference copies match canonical.
+- Evidence: `tests/receipts/composition-upgrade-2026-09-07/REVIEW.md` and `installation.json`.
 
 ## In progress
 
-- Final release validation, publication and native package refresh for 2.0.4.
+- No publication or installation work remains. Existing long-running sessions must reload to use the updated native packages.
 
 ## Requirement state
 
@@ -40,7 +41,7 @@ No new skill names or lifecycle changes.
 
 ## Next
 
-- Finish 2.0.4 publication and verify native package versions/body hashes.
+- Use 2.0.4 with the documented model-output limitations; collect real failures without adding speculative rules.
 
 ## Blockers
 
