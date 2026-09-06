@@ -60,7 +60,7 @@ responses and selected adapter metadata; review before sharing or committing.
 ## What the results mean
 
 There is deliberately no automatic performance score. A failed necessary check
-rejects the response; passing it yields `awaiting_human_review`. Exact literal
+rejects the response; passing it yields `awaiting_human_review`. Exact literal and declared equivalent-form
 checks only verify preserved facts/quotes, and JSON routing checks only verify
 an owner decision. They cannot assess whether prose is useful or whether a
 response falsely claims work. Review every response against its case rubric,
@@ -82,3 +82,8 @@ multi-turn tests; router probes provide candidates explicitly and do not prove
 natural skill selection. Full artifact, mode, composition, and independent
 family evaluation remain necessary before changing/promoting a skill based on
 these results. Do not use a successful smoke run as proof of improvement.
+
+Date checks accept declared equivalent orderings; exact quoted text remains exact.
+This correction was identified after the 2026-09-06 baseline. Original run counts
+and hashes remain unchanged; any revised check result is a post-hoc recheck, not
+a new model run or evidence of improved model behavior.

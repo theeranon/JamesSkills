@@ -62,7 +62,7 @@ Last verified: 2026-08-29
 - Permissions: repository-local edits and tests are ordinary work; install changes managed discovery links and this checkout's local Git hook configuration; external publication follows the accepted repository release authority.
 - Integrations: public GitHub origin, the Claude Code plugin marketplace declared at `.claude-plugin/marketplace.json`, and local skill discovery directories for Codex, Claude Code, Cursor, Gemini, and Google Antigravity.
 - External actions: the installer may create or refresh managed symlinks and local Git hooks; it must not overwrite unrelated real files or directories.
-- Failure behavior: dirty work, non-fast-forward ancestry, or failed candidate validation stops update before the checkout moves. Validation failures stop install before managed links change. Doctor reports post-install link failures but does not roll back the checkout or links automatically.
+- Failure behavior: dirty work, non-fast-forward ancestry, or failed candidate validation stops update before the checkout moves. Validation failures stop install before managed links change. Installer restores owned links and Codex overrides on tested application/reconciliation failures; incomplete recovery is an error. Doctor is read-only and does not roll back the checkout or links.
 
 ## Need decision
 

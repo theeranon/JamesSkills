@@ -30,6 +30,15 @@ class BenchmarkTests(unittest.TestCase):
         self.assertFalse(b.check_response('AI generated ยังไม่เหมาะสม', check)[0]['passed'])
         self.assertTrue(b.check_response('ผู้ร่วมประชุมกล่าวว่า "AI generated มันก็แบบยังไม่ใช่อะ"', check)[0]['passed'])
 
+    def test_equivalent_dates_pass_but_wrong_dates_fail(self):
+        for values in [['30 November', 'November 30'], ['9 October', 'October 9']]:
+            check = [{'type': 'literal_any', 'id': 'date', 'values': values}]
+            for value in values:
+                self.assertTrue(b.check_response('Available until ' + value, check)[0]['passed'])
+            self.assertFalse(b.check_response('Available until November 29', check)[0]['passed'])
+        exact = [{'type': 'literal', 'id': 'quote', 'value': '30 November'}]
+        self.assertFalse(b.check_response('November 30', exact)[0]['passed'])
+
     def test_protocol_failures_and_timeout(self):
         for command, status in [([sys.executable, '-c', 'print("not JSON")'], 'adapter_protocol_failure'),
                                 ([sys.executable, '-c', 'print("[]")'], 'adapter_protocol_failure'),

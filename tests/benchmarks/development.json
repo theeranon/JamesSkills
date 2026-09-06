@@ -189,8 +189,11 @@
       },
       {
         "id": "deadline",
-        "type": "literal",
-        "value": "30 November"
+        "type": "literal_any",
+        "values": [
+          "30 November",
+          "November 30"
+        ]
       }
     ],
     "rubric": {

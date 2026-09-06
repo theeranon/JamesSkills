@@ -29,3 +29,11 @@ Scope: owner-approved local repair and research. Base revision cbd1a62. macOS on
 ## Recovery limit
 
 Owned symlink and Codex override changes roll back on tested failures. A concurrently modified path is preserved and reported; an unreachable API can prevent full recovery. No claim of guaranteed rollback under arbitrary process termination or external service failure.
+
+## Follow-up: authenticated Codex alternative
+
+Codex 0.153.4 returned BENCHMARK_READY with exit 0 using existing ChatGPT authentication, ephemeral fresh cwd, read-only sandbox, ignored user config, disabled apps/plugins/shell_tool, and the advertised skip_host_skill_discovery feature. However, the same event stream reported that skills remained visible and descriptions were shortened to fit the context budget; input usage was 17,153 tokens. This route is authenticated but not demonstrated clean for a no-skill baseline. No A/B scores were collected or inferred, and global user skills/configuration were not changed. Claude CLI authentication still reports unavailable.
+
+## Authentication blocker resolved
+
+After owner email verification, Claude CLI authenticated successfully. Subsequent 41 calls all returned model responses. See `benchmark-2026-09-06/REVIEW.md` for findings and limitations. Earlier unauthenticated attempts above remain historical evidence, not current blockers.

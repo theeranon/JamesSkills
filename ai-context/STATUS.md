@@ -24,7 +24,7 @@ invocation remains unverified.
 
 ## In progress
 
-- Model benchmarking: Claude CLI authentication unavailable; two attempted calls returned no response. Public probes do not establish generalization.
+- Claude CLI authenticated. First real run returned 41/41 responses: 30 baseline, 9 candidate, 2 smoke. Candidate failed the targeted irrelevant-question mechanism and was rejected; canonical skills unchanged. Review is an unblinded assistant diagnosis, not calibrated human scoring or generalization proof.
 - Cross-host invocation and cold-start proof beyond the existing Codex receipt remain open.
 
 ## Requirement state
@@ -42,12 +42,12 @@ invocation remains unverified.
 
 ## Next
 
-- Authenticate the Claude CLI benchmark route, run paired baseline, review outputs and diagnose one mechanism before a candidate rewrite.
+- Refine the proactive-habits decision-queue hypothesis and test on new task families; retain genuine approval questions. Current candidate was rejected.
 - Verify explicit invocation in Antigravity and Claude Desktop; inspect Codex Desktop picker when accessible.
 
 ## Blockers
 
-- Claude CLI is not authenticated; Desktop login does not supply its credentials.
+- No authentication blocker remains. Independent scoring and unseen-family evaluation remain open.
 - Computer Use cannot access Codex Desktop. Other OS/runtime parity remains unverified.
 
 ## Need decision
@@ -58,5 +58,5 @@ invocation remains unverified.
 ## Verification
 
 - Current receipt: `tests/receipts/install-discovery-2026-09-06.md`; earlier explicit Codex invocation: `tests/receipts/install-discovery-2026-09-05.md`.
-- Full validation runs benchmark mechanics and installer regressions automatically. Structural tests do not prove model quality.
+- First model evidence: `tests/receipts/benchmark-2026-09-06/REVIEW.md`. Date-check correction has 9 passing mechanics tests. Full validation runs benchmark mechanics and installer regressions automatically. Structural tests do not prove model quality.
 - DEC-026 records approved benchmark direction; DEC-027 records local installation repair. No publication is claimed.

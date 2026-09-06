@@ -1,0 +1,361 @@
+{
+  "smoke": {
+    "attempts": 2,
+    "returned": 2,
+    "cost_usd_reported": 0.022108,
+    "elapsed_seconds_sum": 14.283409501,
+    "attempts_sha256": "27e84918bc36f2534001bf0ce115a22656d5e47f39b063c78947bd3922ecbee5",
+    "original_summary": {
+      "planned_attempts": 2,
+      "recorded_attempts": 2,
+      "counts": {
+        "unscored_dry_run": 0,
+        "auth_unavailable": 0,
+        "adapter_failure": 0,
+        "timeout": 0,
+        "adapter_protocol_failure": 0,
+        "necessary_checks_failed": 0,
+        "awaiting_human_review": 2
+      },
+      "performance_score": null,
+      "reason": "Public response probes require human rubric review; no promotion verdict."
+    },
+    "case_results": [
+      {
+        "case_id": "proactive-habits-1",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "edc6d54fa8c1a0cca82372623e1b6814e8b81186e67479ea859b77393b1ee05b",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "proactive-habits-1",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "88f3ff74ae8cf1c7489dbbb14f300007d92e34b22149c96d95abffd6d5040a17",
+        "instruction_hash": "f6c14089f85f93cdb00bff98b6cf8d7c1044ac63a572117e9db6bed822037371"
+      }
+    ]
+  },
+  "baseline": {
+    "attempts": 30,
+    "returned": 30,
+    "cost_usd_reported": 0.18666929999999998,
+    "elapsed_seconds_sum": 157.45366879499997,
+    "attempts_sha256": "804000cd9a2225c161ee0bf5ab90b824b1540b6ebf2abb04a03545656f87829d",
+    "original_summary": {
+      "planned_attempts": 30,
+      "recorded_attempts": 30,
+      "counts": {
+        "unscored_dry_run": 0,
+        "auth_unavailable": 0,
+        "adapter_failure": 0,
+        "timeout": 0,
+        "adapter_protocol_failure": 0,
+        "necessary_checks_failed": 2,
+        "awaiting_human_review": 28
+      },
+      "performance_score": null,
+      "reason": "Public response probes require human rubric review; no promotion verdict."
+    },
+    "case_results": [
+      {
+        "case_id": "proactive-habits-1",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "bea51153b24c962e1ac3960581a4487f74e168a8bf3b1f56783ab31844e9b1b1",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "proactive-habits-1",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "b44c4cf85c1d2988c2553f6e0d83166fb3a7e91a834ffc05bea3330799b39fe9",
+        "instruction_hash": "f6c14089f85f93cdb00bff98b6cf8d7c1044ac63a572117e9db6bed822037371"
+      },
+      {
+        "case_id": "proactive-habits-2",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "a7e419606326d98a7f3687d112151d638d3ee0d0194df537664c2821ffc74cee",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "proactive-habits-2",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "2cb9de5a3d9655cfa2d53b269bb49ec2fe46c29bc9741e8d124ca9a8d83f6f90",
+        "instruction_hash": "f6c14089f85f93cdb00bff98b6cf8d7c1044ac63a572117e9db6bed822037371"
+      },
+      {
+        "case_id": "proactive-habits-3",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "138730602528d268b48268ffbeb895b152cffba5662aa7b0f72cd413449adb00",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "proactive-habits-3",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "83f6550d6e9c6c0adc5049599695b875ff09301ecb97fc3c3fce11862bdf7668",
+        "instruction_hash": "f6c14089f85f93cdb00bff98b6cf8d7c1044ac63a572117e9db6bed822037371"
+      },
+      {
+        "case_id": "done-for-me-1",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "91c7302bbdc2e7483d6d16f096c5e852e04556d8b6a76c997dcc697f8fdd3c8a",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "done-for-me-1",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "91c7302bbdc2e7483d6d16f096c5e852e04556d8b6a76c997dcc697f8fdd3c8a",
+        "instruction_hash": "e02c4b1479211a5420c3dab6e4fe3f4fdcb049a33130eef75a49f84fc4b6c5a2"
+      },
+      {
+        "case_id": "done-for-me-2",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "31c888244eefd30137205feef0f40f703c738439b9c5c2533fa063e54ed67a47",
+        "instruction_hash": "e02c4b1479211a5420c3dab6e4fe3f4fdcb049a33130eef75a49f84fc4b6c5a2"
+      },
+      {
+        "case_id": "done-for-me-2",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "8eb4190f4e9236017e50aa126d9635153091eaa0f33b7c7e788e37bf6c06f9d0",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "done-for-me-3",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "ad28c46a017b2bb182c99a6e9a13bf3734debf9a3774adc54d81a1b1c998fabf",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "done-for-me-3",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "063bb03825df6963711289493614d06abe37f35d89025df45d94b845ce6a198d",
+        "instruction_hash": "e02c4b1479211a5420c3dab6e4fe3f4fdcb049a33130eef75a49f84fc4b6c5a2"
+      },
+      {
+        "case_id": "make-it-james-1",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "d5c753cd655a8cd70052a1a4cfca656d26bee6738a649f1e1e587ad45ce3fdc5",
+        "instruction_hash": "fe69567da59a9d2f65f10160649cfa7bceeae120731c4524c07a095fbf70ba58"
+      },
+      {
+        "case_id": "make-it-james-1",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "7d907721e7483fc9ba0622952a2d181f2588f189ed5b6362d8949ca48a998dc2",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "make-it-james-2",
+        "condition": "B",
+        "status": "necessary_checks_failed",
+        "response_hash": "bd2fca9e6ec7d4ea33d5ea403236ef15357cd609ab6baf974d4e705973740668",
+        "instruction_hash": "fe69567da59a9d2f65f10160649cfa7bceeae120731c4524c07a095fbf70ba58"
+      },
+      {
+        "case_id": "make-it-james-2",
+        "condition": "A",
+        "status": "necessary_checks_failed",
+        "response_hash": "90086e1974aedac61a8ecdcfd6e3ff85dee378545c43006bc6eeb1b5a660e27b",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "make-it-james-3",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "73d2e5bbedfb189df8b0379bb4f25a66353747ea71db8f42050c411dae01bd01",
+        "instruction_hash": "fe69567da59a9d2f65f10160649cfa7bceeae120731c4524c07a095fbf70ba58"
+      },
+      {
+        "case_id": "make-it-james-3",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "89a2bb418eee67af23e1c96daf34718cf1b341058a7b4d612d4f0cd0e332fca4",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "sum-meet-1",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "aa59c08441ff3da65703b7aa7ce869b9dca30780271fcd149e3315ef3029b555",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "sum-meet-1",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "27e67213fdcfbb938a081d29d113f82bafb5836a3f4d1e888cb7055c978c499a",
+        "instruction_hash": "ae163268c0ae450311359e9b346412a71251e0573198be7fece3de7443cdbbcf"
+      },
+      {
+        "case_id": "sum-meet-2",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "8bd691c0fd1bdaf554a7b93b6cee0661bd692a81d43cc4fbf7c2d53f4f670fe0",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "sum-meet-2",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "b83802fed18d43081f01c6c06a5b1402debdf7df2448460311fa700a6dc445a8",
+        "instruction_hash": "ae163268c0ae450311359e9b346412a71251e0573198be7fece3de7443cdbbcf"
+      },
+      {
+        "case_id": "sum-meet-3",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "b381b07ee9a5254f68a56b322282879ced688fc1543b6d5c1a4d55e7a3917c34",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "sum-meet-3",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "0ffb52c2f224b19de982c2d8e203647fd165fd118597e65d64e8fc686db519bb",
+        "instruction_hash": "ae163268c0ae450311359e9b346412a71251e0573198be7fece3de7443cdbbcf"
+      },
+      {
+        "case_id": "hand-it-off-1",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "b938695e419616286b18f97398138f8cef6acaf8dacb8d622a8322d29ed2df66",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "hand-it-off-1",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "82965c5bc7384ee9b9f4ce452053905019e8d82807bbf40b3e366b01a81567a1",
+        "instruction_hash": "4e11d47e702af1b5530a0bb6d15a630b0240ead0bd61d9013c239d303f42d664"
+      },
+      {
+        "case_id": "hand-it-off-2",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "1e9d605d37d2eeedc7bab3fa20d2327bf2febf679265f3e4032b9fb9880d383a",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "hand-it-off-2",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "30bb0ed0639b809900bb94aef9aeca42606ba235fdee9b437e478f8de97d02e6",
+        "instruction_hash": "4e11d47e702af1b5530a0bb6d15a630b0240ead0bd61d9013c239d303f42d664"
+      },
+      {
+        "case_id": "hand-it-off-3",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "ce64639de4311429a43106b61246ad9b09d6ff2be4a517e63da4d62c0b349435",
+        "instruction_hash": "4e11d47e702af1b5530a0bb6d15a630b0240ead0bd61d9013c239d303f42d664"
+      },
+      {
+        "case_id": "hand-it-off-3",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "be924f081fa20ffec5c6a9847e86bb7723437a335636a6e137245b62f9673cbb",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      }
+    ]
+  },
+  "candidate": {
+    "attempts": 9,
+    "returned": 9,
+    "cost_usd_reported": 0.06504739999999999,
+    "elapsed_seconds_sum": 62.783501668,
+    "attempts_sha256": "566667dae284a289344fbe88f83ea23cdc79086439394343acaf308663ca8216",
+    "original_summary": {
+      "planned_attempts": 9,
+      "recorded_attempts": 9,
+      "counts": {
+        "unscored_dry_run": 0,
+        "auth_unavailable": 0,
+        "adapter_failure": 0,
+        "timeout": 0,
+        "adapter_protocol_failure": 0,
+        "necessary_checks_failed": 0,
+        "awaiting_human_review": 9
+      },
+      "performance_score": null,
+      "reason": "Public response probes require human rubric review; no promotion verdict."
+    },
+    "case_results": [
+      {
+        "case_id": "proactive-habits-1",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "d3dd1490292ec28433e3161f7a341568eafb1b0542bf86d262b1fb19773e84d3",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "proactive-habits-1",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "f975b578559fdbd1fead3cae58ce5c582147696a6cae62590382e88855ba48e6",
+        "instruction_hash": "f6c14089f85f93cdb00bff98b6cf8d7c1044ac63a572117e9db6bed822037371"
+      },
+      {
+        "case_id": "proactive-habits-1",
+        "condition": "C",
+        "status": "awaiting_human_review",
+        "response_hash": "35ff051e050e9a8845bfb36fbaae235da2db553036b1d9323763265c5b4f84a8",
+        "instruction_hash": "6db0bcbad62a2285b79152ad2cdc1c4d0ae9be3fac10e5cee14a22dcf397b8ef"
+      },
+      {
+        "case_id": "proactive-habits-2",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "ba6fc04917aa68e4978cae3e99b6e55e0ea200a07593c942a5f8b123b82267fd",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "proactive-habits-2",
+        "condition": "C",
+        "status": "awaiting_human_review",
+        "response_hash": "cb58c0c89144081a06f92ebbef7acb30140397b7cf4ecd8a97e000d30de056d4",
+        "instruction_hash": "6db0bcbad62a2285b79152ad2cdc1c4d0ae9be3fac10e5cee14a22dcf397b8ef"
+      },
+      {
+        "case_id": "proactive-habits-2",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "42267eaa024fd16de91092f229f643509b406b786000998c0e5e92bd42a8f8c0",
+        "instruction_hash": "f6c14089f85f93cdb00bff98b6cf8d7c1044ac63a572117e9db6bed822037371"
+      },
+      {
+        "case_id": "proactive-habits-3",
+        "condition": "C",
+        "status": "awaiting_human_review",
+        "response_hash": "e3af375b5126a7c45fab1773118b4863b344e1187bd96f8a7cd54e64ffdc1dbb",
+        "instruction_hash": "6db0bcbad62a2285b79152ad2cdc1c4d0ae9be3fac10e5cee14a22dcf397b8ef"
+      },
+      {
+        "case_id": "proactive-habits-3",
+        "condition": "A",
+        "status": "awaiting_human_review",
+        "response_hash": "1999e0bd52deff325746f05301d24456ff412a0e0cb68000dd12f966ff23e964",
+        "instruction_hash": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126"
+      },
+      {
+        "case_id": "proactive-habits-3",
+        "condition": "B",
+        "status": "awaiting_human_review",
+        "response_hash": "c30e2d90e90ee3bd10510e2631f361e13d465c6bd5c1a882d3a24d136146e4c4",
+        "instruction_hash": "f6c14089f85f93cdb00bff98b6cf8d7c1044ac63a572117e9db6bed822037371"
+      }
+    ]
+  }
+}

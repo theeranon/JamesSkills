@@ -52,6 +52,8 @@ def check_response(response, checks):
     for rule in checks:
         if rule['type'] == 'literal':
             passed = rule['value'] in response
+        elif rule['type'] == 'literal_any':
+            passed = any(value in response for value in rule['values'])
         elif rule['type'] == 'json_value':
             try:
                 parsed = json.loads(response)

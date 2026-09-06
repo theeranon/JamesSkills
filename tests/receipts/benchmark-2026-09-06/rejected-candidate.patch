@@ -1,0 +1,8 @@
+--- canonical/proactive-habits/SKILL.md
++++ candidate/proactive-habits/SKILL.md
+@@ -28 +28 @@
+-Sort every open item into two piles before acting, and keep sorting as new ones appear.
++First keep only items that affect the requested outcome. Leave unrelated improvements out of the work and out of the decision queue unless the user asks to consider them. Then sort relevant open items into two piles, and keep sorting as new ones appear.
+@@ -36 +36 @@
+-Then, at the end, ask once. Present the collected items together, each with the recommendation you would make and the reason. One interruption, not five.
++At the end, ask only if a relevant unresolved decision remains. Present those decisions together, each with your recommendation and reason. If none remain, finish without a question; do not manufacture a follow-up from an unrelated suggestion.
