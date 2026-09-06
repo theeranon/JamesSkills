@@ -255,3 +255,19 @@ Record accepted or superseded project decisions. Raw discussion remains in its s
 - Proof: `tests/receipts/install-discovery-2026-09-05.md`; behavioral filesystem tests in `tests/test_installer_contracts.py`; full validate and doctor. Codex explicit installed-skill invocation passed. Desktop picker confirmation and non-macOS runtime evidence remain open.
 - Authority: local repair and candidate verification only. No external publication or vendor-store submission is implied by this decision.
 - Supersedes: DEC-024's claim that removing only Codex-specific links prevents duplicate discovery; the installer's Windows validation bypass and destructive replacement behavior.
+
+## DEC-026 — Responsibility benchmarks and goal alignment
+
+- Date: 2026-09-06
+- Status: Owner approved implementation direction.
+- Decision: Give all 22 skills responsibility-specific benchmark cards. Start public development probes with proactive-habits, done-for-me, make-it-james, sum-meet and hand-it-off. Keep no-skill/current/candidate comparisons, fixed denominators and independent holdouts. Add goal alignment and proportionality to address overengineering and wrong-objective optimization.
+- Boundary: The runner and 15 probes are infrastructure, not behavioral-improvement proof. No new skill names, promotions or wholesale rewrites authorized by this decision. Actual model comparison is pending authenticated execution and reviewed outputs.
+
+## DEC-027 — Preserve cross-host discovery and reject missing inventories
+
+- Date: 2026-09-06
+- Status: Accepted within owner-requested local installation repair.
+- Decision: Keep canonical bodies and host adapters. Add read-only install planning, rollback for owned link changes and Codex overrides, expected-skill coverage checks, and per-skill pilot exclusion. Preserve shared files and unrelated publishers. Change Claude marketplace refresh to supported update without uninstall-first.
+- Why: A zero-entry runtime could pass the old duplicate-only check; an obsolete whole-plugin pilot guard blocked unrelated promoted skills; refresh claimed local content while fetching a marketplace copy.
+- Evidence: Installer behavioral regressions and `tests/receipts/install-discovery-2026-09-06.md`. Claude Desktop discovery now directly observed; this supersedes only the older claim that its UI was inaccessible, not the distinction from CLI authentication.
+- Limits: Cross-platform invocation and cloud account installation remain separate proofs. No push, store submission or public release is implied.

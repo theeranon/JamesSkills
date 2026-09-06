@@ -694,19 +694,21 @@ codex plugin add james-software@james-skills
 
 Codex reads both its own skill directory and the shared `~/.agents/skills` directory. Removing links only from `~/.codex/skills` leaves a second copy beside each native plugin skill.
 
-The installer asks the installed Codex app-server for its actual skill inventory. For each enabled native JamesSkills skill, it disables only the corresponding local `SKILL.md` path through `skills/config/write`. Shared links stay available to other agents. A missing, disabled, or partially installed native plugin does not hide the remaining local skills. When a native plugin is removed, rerun the installer to restore overrides it owns. It preserves pre-existing user disables and backs up Codex configuration before changing it. If Codex is not on PATH, the result explicitly excludes Codex runtime verification.
+Use `./scripts/install --plan` to preview link changes. Link changes roll back if application or the Codex postcheck fails; incomplete recovery is an error.
+
+The installer asks the installed Codex app-server for its actual skill inventory. Missing expected skills and duplicates both fail; an empty inventory cannot pass. For each enabled native JamesSkills skill, it disables only the corresponding local `SKILL.md` path through `skills/config/write`. Shared links stay available to other agents. A missing, disabled, or partially installed native plugin does not hide the remaining local skills. When a native plugin is removed, rerun the installer to restore overrides it owns. It preserves pre-existing user disables and backs up Codex configuration before changing it. If Codex is not on PATH, the result explicitly excludes Codex runtime verification.
 
 Claude Code is checked per pillar against its installed manifest, cache paths, and disabled-plugin settings. An unrelated real file, directory, or foreign link stops installation before managed links change. Only promoted catalog entries are installed. Both launchers use the same Python implementation.
 
 `./scripts/doctor` runs full validation, checks expected managed links, and asks Codex for its native/shared skill inventory. It fails if an enabled duplicate remains. This is an app-server result; the Desktop picker still needs a UI check if it retains cached entries.
 
-**After editing a skill, Claude Code needs the plugin refreshed** — the installed plugin is a copy, not a link:
+**To check Claude Code plugins for marketplace updates** — installed plugins are cached copies:
 
 ```bash
 ./scripts/refresh-claude-plugins
 ```
 
-Do not reach for `claude plugin update`. It compares version numbers rather than content, so after an ordinary edit it reports that the plugin is already at the latest version and copies nothing. The script reinstalls each pillar, which is what actually re-copies the files, and it is a no-op on a machine using live links.
+This uses `claude plugin update` without uninstalling working plugins first. It updates from the configured marketplace, not uncommitted edits in this checkout. Same-version local edits require separate development loading and verification.
 
 To go back to live links for Claude, uninstall the pillars and run the installer again:
 
@@ -722,7 +724,8 @@ for p in james-core james-productivity james-software; do claude plugin uninstal
 | Codex CLI | native plugins; local/shared copies disabled by exact path when native skill is enabled | macOS app-server inventory tested; Desktop UI confirmation separate |
 | Claude Code | native plugins; per-pillar local fallback | Previous macOS runtime receipt; fresh distribution checks are recorded separately |
 | Cursor | `~/.cursor/skills` links | Filesystem only; runtime unverified |
-| Gemini / Antigravity | existing whole-plugin links and alias links | Filesystem only; loader and invocation unverified |
+| Antigravity 2.12.2 | individual skill links under `~/.gemini/config/skills`; existing legacy links preserved | Filesystem checked; Customizations shows JamesSkills entries; invocation unverified |
+| Gemini CLI | separate host from Antigravity | Runtime unverified |
 | Shared agents | `~/.agents/skills` links | Filesystem only outside the tested Codex runtime |
 | Windows | same local installer, full Bash validation, symlinks | Not tested on a Windows host; no universal-install guarantee |
 

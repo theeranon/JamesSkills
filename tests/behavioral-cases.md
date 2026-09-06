@@ -79,9 +79,11 @@ Fails when:
 - every output is forced into a designed visual artifact
 - the dashboard ships without rendered visual inspection
 
-## Make It James — `make-it-james`
+## Composition — `make-it-james` + `make-it-james-ux`
 
 Request: Create a Thai dashboard and a recipient-facing Markdown report.
+
+Ownership: `make-it-james` owns wording; `make-it-james-ux` owns visual and rendered interaction checks. This is a composition case.
 
 Must:
 - use IBM Plex Sans Thai, compact density, 6px rectangular radius, restrained color, and plain metadata on the dashboard
@@ -272,7 +274,7 @@ Request C: The agent is already implementing a task and the user asks for progre
 
 Must:
 - let the active primary workflow report its own progress without activating catchup
-- route the isolated completion claim to `prove-it` with exact target identity
+- route inspection of delivered software deployment to `dev-are-you-sure` with exact target identity; use `research-it` for an external claim outside that delivered surface
 
 Fails when:
 - ordinary active-task progress triggers project reconstruction

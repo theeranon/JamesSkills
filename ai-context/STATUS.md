@@ -1,6 +1,6 @@
 # Status
 
-Last verified: 2026-09-05
+Last verified: 2026-09-06
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
 Current version: 2.0.0
@@ -9,23 +9,23 @@ Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
 
-22 promoted canonical skills and 9 aliases. The local installer repair resolves
-Codex native/shared duplicate loading and preserves existing unrelated files.
-Full validation passes. The local Codex app-server now reports 22 enabled canonical
-skills with no repeated names. Desktop picker confirmation remains open.
+22 promoted canonical skills and 9 aliases. Local install passes with 164 managed
+links and 22 enabled Codex skills without duplicates. Coverage now rejects missing
+inventories; owned changes roll back on tested failure paths. Claude Desktop shows
+all 22 JamesSkills. Antigravity Customizations shows JamesSkills entries; full
+invocation remains unverified.
 
 ## Done
 
-- Reproduced 44 enabled skills after combining the published installer with native Codex plugins in an isolated user configuration.
-- Repaired exact-path local overrides while preserving shared links for other agents; repeated candidate installation returns 22 enabled entries.
-- Unified installer and doctor planning; collision preflight, promoted-only selection, per-skill Claude fallback, and mandatory validation replace unsafe behaviors.
-- Fresh GitHub native installation succeeded in Codex CLI and Claude Code. Codex explicit installed-skill invocation and packaged knowledge helper passed.
-- Updated install guidance to separate tested macOS outcomes from unverified platform claims.
+- Added read-only installer plan, expected-skill coverage, transactional owned-link and Codex-override recovery, and per-skill pilot exclusion.
+- Changed Claude marketplace refresh to update without uninstall-first; corrected its local-content claim.
+- Added 22 benchmark cards and an A/B/C runner with 15 public probes for the five approved skills; 8 mechanics tests and 22 installer regressions pass.
+- Added goal-alignment and proportionality criteria, including legitimate-complexity counter-cases. No canonical skill behavior changed.
 
 ## In progress
 
-- Installer repair `f8dbccc` was authorized by the owner and pushed to GitHub `main`; the pre-push validation gate passed.
-- Codex Desktop picker must be checked after reopening/restart; Computer Use cannot access this app.
+- Model benchmarking: Claude CLI authentication unavailable; two attempted calls returned no response. Public probes do not establish generalization.
+- Cross-host invocation and cold-start proof beyond the existing Codex receipt remain open.
 
 ## Requirement state
 
@@ -42,13 +42,13 @@ skills with no repeated names. Desktop picker confirmation remains open.
 
 ## Next
 
-- Owner: confirm the Codex Desktop picker no longer repeats the two reported names.
-- New installations from GitHub `main` now receive the installer repair.
+- Authenticate the Claude CLI benchmark route, run paired baseline, review outputs and diagnose one mechanism before a candidate rewrite.
+- Verify explicit invocation in Antigravity and Claude Desktop; inspect Codex Desktop picker when accessible.
 
 ## Blockers
 
-- Desktop UI proof cannot be collected through the available Computer Use tool.
-- Windows, Cursor, Gemini, Antigravity and Claude Desktop runtimes were not verified in this repair. Filesystem checks are not substitutes.
+- Claude CLI is not authenticated; Desktop login does not supply its credentials.
+- Computer Use cannot access Codex Desktop. Other OS/runtime parity remains unverified.
 
 ## Need decision
 
@@ -57,7 +57,6 @@ skills with no repeated names. Desktop picker confirmation remains open.
 
 ## Verification
 
-- Current receipt: `tests/receipts/install-discovery-2026-09-05.md`.
-- Full validator passes for 31 packages; doctor checks managed links and actual Codex skill inventory.
-- Earlier runtime evidence stays in `tests/receipts/runtime-routing-v0.9.0.md`; it is historical and does not establish current cross-platform parity.
-- DEC-025 supersedes the incomplete duplicate fix in DEC-024. No release commit or publication is predicted by this status file.
+- Current receipt: `tests/receipts/install-discovery-2026-09-06.md`; earlier explicit Codex invocation: `tests/receipts/install-discovery-2026-09-05.md`.
+- Full validation runs benchmark mechanics and installer regressions automatically. Structural tests do not prove model quality.
+- DEC-026 records approved benchmark direction; DEC-027 records local installation repair. No publication is claimed.

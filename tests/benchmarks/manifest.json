@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "skills": {
+    "proactive-habits": {
+      "canonical": "plugins/james-core/skills/proactive-habits/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "public-development"
+    },
+    "done-for-me": {
+      "canonical": "plugins/james-core/skills/done-for-me/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "public-development"
+    },
+    "i-have-adhd": {
+      "canonical": "plugins/james-core/skills/i-have-adhd/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "is-that-the-best-you-can-do": {
+      "canonical": "plugins/james-core/skills/is-that-the-best-you-can-do/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "make-it-james": {
+      "canonical": "plugins/james-core/skills/make-it-james/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "public-development"
+    },
+    "never-again": {
+      "canonical": "plugins/james-core/skills/never-again/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "research-it": {
+      "canonical": "plugins/james-core/skills/research-it/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "are-you-sure": {
+      "canonical": "plugins/james-core/skills/are-you-sure/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "hand-it-off": {
+      "canonical": "plugins/james-core/skills/hand-it-off/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "public-development"
+    },
+    "baseon": {
+      "canonical": "plugins/james-productivity/skills/baseon/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "coach-me": {
+      "canonical": "plugins/james-productivity/skills/coach-me/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "final-it": {
+      "canonical": "plugins/james-productivity/skills/final-it/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "give-me-solutions": {
+      "canonical": "plugins/james-productivity/skills/give-me-solutions/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "grill-me": {
+      "canonical": "plugins/james-productivity/skills/grill-me/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "one-page-pls": {
+      "canonical": "plugins/james-productivity/skills/one-page-pls/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "sum-meet": {
+      "canonical": "plugins/james-productivity/skills/sum-meet/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "public-development"
+    },
+    "zoom-out": {
+      "canonical": "plugins/james-productivity/skills/zoom-out/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "catchup": {
+      "canonical": "plugins/james-software/skills/catchup/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "dev-are-you-sure": {
+      "canonical": "plugins/james-software/skills/dev-are-you-sure/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "make-it-james-ux": {
+      "canonical": "plugins/james-software/skills/make-it-james-ux/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "proactive-dev": {
+      "canonical": "plugins/james-software/skills/proactive-dev/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
+    "project-standard": {
+      "canonical": "plugins/james-software/skills/project-standard/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    }
+  }
+}

@@ -62,3 +62,13 @@ and exact local path. Test a second package plus the legitimate no-plugin case.
 `tests/receipts/install-discovery-2026-09-05.md`. LESSON-001's historical claim that
 Codex lacks a marketplace command was itself corrected by DEC-024; its requirement
 for direct evidence remains in force.
+
+## LESSON-003 — Optimize the user's outcome, not a proxy
+
+**What happened:** The owner clarified that overfit includes focusing on irrelevant work and AI overengineering, as well as memorizing practice tasks.
+
+**Mechanism:** A local metric such as completeness, style, test count or speed can improve while the main deliverable becomes less useful or remains unfinished.
+
+**Rule:** Every behavioral benchmark names the user outcome and separately reviews goal alignment and proportionality. A primary-task failure cannot be rescued by formatting scores. More detail is justified when it resolves a real dependency or risk. Each correction needs a rejected case, a transfer case and a counter-case where complexity is necessary. Do not turn this into a rule to always produce less.
+
+**Date:** 2026-09-06. Public development cases in `tests/benchmarks/development.json`; measured improvement remains unproven.

@@ -43,6 +43,49 @@ def link(src, dst, root):
         if temporary.is_symlink(): temporary.unlink()
 
 
+def apply_plan(links, removals, root, postcheck=None):
+    """Roll back this batch of owned links if another host or postcheck fails."""
+    for dst, src in links.items(): check_link(src, dst, root)
+    for dst in removals:
+        if not owned(dst, root): raise RuntimeError(f'Unowned removal refused: {dst}')
+    previous = {dst: os.readlink(dst) if dst.is_symlink() else None
+                for dst in set(links) | set(removals)}
+    applied = {}
+    try:
+        for dst, src in links.items():
+            if dst.is_symlink() and dst.resolve() == src.resolve(): continue
+            link(src, dst, root)
+            applied[dst] = os.readlink(dst)
+        for dst in sorted(removals):
+            if not owned(dst, root): raise RuntimeError(f'Changed removal target: {dst}')
+            dst.unlink()
+            applied[dst] = None
+        if postcheck: postcheck()
+    except Exception as error:
+        failures = []
+        for dst, written in reversed(list(applied.items())):
+            try:
+                # Never replace a concurrent, unrelated edit during recovery.
+                current = os.readlink(dst) if dst.is_symlink() else None
+                if current != written or (written is None and dst.exists()):
+                    raise RuntimeError('path changed outside this installation')
+                old = previous[dst]
+                if old is None:
+                    if dst.is_symlink(): dst.unlink()
+                else:
+                    tmp = dst.with_name('.'+dst.name+'.rollback-'+uuid.uuid4().hex)
+                    try:
+                        tmp.symlink_to(old, target_is_directory=True)
+                        tmp.replace(dst)
+                    finally:
+                        if tmp.is_symlink(): tmp.unlink()
+            except (OSError, RuntimeError) as rollback_error:
+                failures.append(f'{dst}: {rollback_error}')
+        if failures:
+            raise RuntimeError(f'{error}; rollback incomplete: '+ '; '.join(failures)) from error
+        raise
+
+
 def claude_pillars(home):
     claude_home = Path(os.environ.get('CLAUDE_CONFIG_DIR', str(home/'.claude')))
     manifest = claude_home/'plugins/installed_plugins.json'
@@ -70,8 +113,6 @@ def plan(root, home, catalog):
     promoted = [s for s in catalog['skills'] if s['status']=='promoted']
     for target in targets:
         gemini = target in (home/'.gemini/config/skills', home/'.gemini/antigravity/custom/skills')
-        if gemini and any(s['status'] != 'promoted' for s in catalog['skills']):
-            raise RuntimeError('Cannot expose whole Gemini plugin links containing pilot skills')
         for item in promoted:
             source = root/'plugins'/item['category']/'skills'/item['name']
             destination = target/item['name']
@@ -80,7 +121,7 @@ def plan(root, home, catalog):
                 elif destination.exists() or destination.is_symlink():
                     raise RuntimeError(f'Collision with native plugin; preserved: {destination}')
             else:
-                # Codex and Gemini canonical paths are deduplicated by their own configuration below.
+                # Per-skill links keep pilot packages out of every host.
                 links[destination] = source
             for alias in item.get('aliases', []): links[target/alias] = root/'aliases'/alias
         if target.is_dir():
@@ -98,6 +139,7 @@ def plan(root, home, catalog):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--check', action='store_true')
+    parser.add_argument('--plan', action='store_true', help='Show planned link changes without writing')
     args = parser.parse_args()
     root = Path(__file__).resolve().parent.parent
     home = Path.home()
@@ -106,17 +148,25 @@ def main():
     subprocess.run([bash, str(root/'scripts/validate')], check=True)
     catalog = json.loads((root/'catalog.json').read_text())
     links, removals = plan(root, home, catalog)
+    if args.plan:
+        for target in sorted({dst.parent for dst in links} | {dst.parent for dst in removals}):
+            selected = {dst: src for dst, src in links.items() if dst.parent == target}
+            changed = sum(not dst.is_symlink() or dst.resolve() != src.resolve()
+                          for dst, src in selected.items())
+            print(f'PLAN {target}: expected={len(selected)} change={changed} remove={sum(dst.parent == target for dst in removals)}')
+        print('PLAN ONLY: no links, hooks, or runtime configuration changed')
+        return 0
     if args.check:
         wrong = [str(dst) for dst, src in links.items() if not dst.is_symlink() or dst.resolve()!=src.resolve()]
         if wrong or removals: raise RuntimeError(f'Discovery mismatch: missing/wrong={len(wrong)} stale={len(removals)}')
     else:
-        for dst, src in links.items(): link(src, dst, root)
-        for dst in sorted(removals): dst.unlink()
+        apply_plan(links, removals, root,
+                   postcheck=lambda: reconcile(root, home, catalog, repair=True))
         subprocess.run([bash, str(root/'scripts/install-hooks')], check=True)
     if args.check and (root/'.git').exists():
         hooks = subprocess.run(['git', '-C', str(root), 'config', '--get', 'core.hooksPath'], capture_output=True, text=True)
         if hooks.stdout.strip() != '.githooks': raise RuntimeError('Git validation hooks are not installed')
-    reconcile(root, home, catalog, repair=not args.check)
+    if args.check: reconcile(root, home, catalog, repair=False)
     print(f'PASS managed links={len(links)}; filesystem proof only for hosts not runtime-tested')
     return 0
 

@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Filesystem outcomes and the native/shared duplicate regression (DEC-025)."""
 import json
+import io
+from contextlib import redirect_stdout
 import os
 import shutil
 import subprocess
@@ -114,10 +116,10 @@ class InstallerTests(unittest.TestCase):
         self.assertEqual(desired_overrides(self.root,self.catalog,[local],{local['path']})[0],[(local['path'],True)])
 
     def test_reconcile_roundtrip_and_check_detects_regression(self):
-        local=self.local_skill();native=self.native()
+        local=self.local_skill();native=self.native();beta=self.local_skill('beta')
         class Client:
             def call(self,method,params):
-                if method=='skills/list':return {'data':[{'skills':[local,native]}]}
+                if method=='skills/list':return {'data':[{'skills':[local,native,beta]}]}
                 if method=='skills/config/write':
                     assert params['path']==local['path']
                     local['enabled']=params['enabled'];return {}
@@ -130,6 +132,44 @@ class InstallerTests(unittest.TestCase):
         native['enabled']=False
         reconcile(self.root,self.home,self.catalog,repair=True,client=Client())
         self.assertTrue(local['enabled'])
+
+    def test_override_uncertain_second_write_restores_runtime_and_existing_state(self):
+        local=self.local_skill();beta=self.local_skill('beta')
+        skills=[local,beta,self.native(),self.native('beta')]
+        state=self.home/'.codex/james-skills-local-overrides.json'
+        state.parent.mkdir(parents=True)
+        original=json.dumps({'paths':['unrelated-user-owned-entry']})+'\n'
+        state.write_text(original)
+        calls=[]
+        class Client:
+            def call(self,method,params):
+                if method=='skills/list':return {'data':[{'skills':skills}]}
+                if method=='skills/config/write':
+                    calls.append(dict(params))
+                    target=next(x for x in [local,beta] if x['path']==params['path'])
+                    target['enabled']=params['enabled']
+                    if target is beta and not params['enabled']:
+                        raise RuntimeError('response lost after write')
+                    return {}
+                raise AssertionError(method)
+        with self.assertRaisesRegex(RuntimeError,'response lost'):
+            reconcile(self.root,self.home,self.catalog,repair=True,client=Client())
+        self.assertTrue(local['enabled']);self.assertTrue(beta['enabled'])
+        self.assertEqual(state.read_text(),original)
+        self.assertEqual([c['enabled'] for c in calls],[False,False,True,True])
+
+    def test_override_postcheck_failure_restores_runtime_and_removes_new_state(self):
+        local=self.local_skill();native=self.native()
+        class Client:
+            def call(self,method,params):
+                if method=='skills/list':return {'data':[{'skills':[local,native]}]}
+                if method=='skills/config/write':
+                    local['enabled']=params['enabled'];return {}
+                raise AssertionError(method)
+        with self.assertRaisesRegex(RuntimeError,'coverage'):
+            reconcile(self.root,self.home,self.catalog,repair=True,client=Client())
+        self.assertTrue(local['enabled']);self.assertTrue(native['enabled'])
+        self.assertFalse((self.home/'.codex/james-skills-local-overrides.json').exists())
 
     def test_failed_validator_stops_before_creating_discovery_links(self):
         scripts=self.root/'scripts';scripts.mkdir()
@@ -152,11 +192,105 @@ class InstallerTests(unittest.TestCase):
         self.assertEqual(os.readlink(dst),previous)
         self.assertEqual((dst/'SKILL.md').read_text(),'alpha')
 
-    def test_whole_plugin_links_cannot_expose_pilot(self):
-        (self.home/'.gemini/config').mkdir(parents=True)
-        with self.assertRaisesRegex(RuntimeError,'pilot'):
-            install.plan(self.root,self.home,self.catalog)
-        self.assertFalse((self.home/'.agents/skills').exists())
+    def test_gemini_flat_links_exclude_pilot_and_preserve_other_hosts(self):
+        for directory in ['.gemini/config', '.gemini/antigravity/custom']:
+            (self.home/directory).mkdir(parents=True)
+        first=self.apply()
+        self.assertEqual(first,self.apply())
+        for directory in ['.gemini/config', '.gemini/antigravity/custom', '.agents', '.codex', '.claude']:
+            skills=self.home/directory/'skills'
+            self.assertTrue((skills/'alpha').is_symlink())
+            self.assertTrue((skills/'beta').is_symlink())
+            self.assertTrue((skills/'old-alpha').is_symlink())
+            self.assertFalse((skills/'pilot').exists())
+
+    def reconcile_inventory(self,skills):
+        class Client:
+            def call(self,method,params):
+                if method=='skills/list':return {'data':[{'skills':skills}]}
+                raise AssertionError('Read-only inventory unexpectedly mutated: '+method)
+        output=io.StringIO()
+        with redirect_stdout(output):
+            reconcile(self.root,self.home,self.catalog,client=Client())
+        return output.getvalue()
+
+    def test_empty_and_partial_inventory_fail_coverage(self):
+        for skills in [[],[self.local_skill()]]:
+            with self.subTest(count=len(skills)):
+                with self.assertRaisesRegex(RuntimeError,'(?i)missing|coverage'):
+                    self.reconcile_inventory(skills)
+
+    def test_plain_name_local_only_inventory_passes(self):
+        skills=[dict(self.local_skill(name),name=name) for name in ['alpha','beta']]
+        self.reconcile_inventory(skills)
+
+    def test_native_and_disabled_local_inventory_passes(self):
+        self.reconcile_inventory([self.native(),self.local_skill(enabled=False),self.local_skill('beta')])
+
+    def test_preexisting_user_disable_is_reported_and_preserved(self):
+        disabled=self.local_skill(enabled=False)
+        output=self.reconcile_inventory([disabled,self.local_skill('beta')])
+        self.assertFalse(disabled['enabled'])
+        self.assertRegex(output.lower(),'user.disabled|disabled.by.user|explicit.*disabled')
+
+    def test_foreign_same_name_plugin_does_not_supply_missing_skill(self):
+        foreign=dict(self.native(),pluginId='james-core@unrelated')
+        with self.assertRaisesRegex(RuntimeError,'(?i)missing|coverage'):
+            self.reconcile_inventory([foreign,self.local_skill('beta')])
+
+    def test_transaction_late_link_failure_restores_prior_links(self):
+        self.apply()
+        first=self.home/'.agents/skills/alpha'
+        second=self.home/'.codex/skills/alpha'
+        old_first=os.readlink(first);old_second=os.readlink(second)
+        replacement=self.root/'plugins/james-software/skills/beta'
+        original=install.link
+        def failing_link(src,dst,root):
+            if dst==second:raise OSError('late link failure')
+            return original(src,dst,root)
+        with patch.object(install,'link',side_effect=failing_link):
+            with self.assertRaises(OSError):
+                install.apply_plan({first:replacement,second:replacement},set(),self.root,postcheck=lambda:None)
+        self.assertEqual(os.readlink(first),old_first)
+        self.assertEqual(os.readlink(second),old_second)
+
+    def test_transaction_postcheck_failure_restores_removed_and_replaced_links(self):
+        self.apply()
+        replaced=self.home/'.agents/skills/alpha'
+        removed=self.home/'.codex/skills/old-alpha'
+        added=self.home/'.agents/skills/new-beta'
+        unrelated=self.home/'.agents/skills/user-note'
+        unrelated.write_text('keep me')
+        before={p:os.readlink(p) for p in [replaced,removed]}
+        replacement=self.root/'plugins/james-software/skills/beta'
+        def reject():raise RuntimeError('postcheck failed')
+        with self.assertRaisesRegex(RuntimeError,'postcheck failed'):
+            install.apply_plan({replaced:replacement,added:replacement},{removed},self.root,postcheck=reject)
+        for path,target in before.items():self.assertEqual(os.readlink(path),target)
+        self.assertFalse(added.exists());self.assertFalse(added.is_symlink())
+        self.assertEqual(unrelated.read_text(),'keep me')
+
+    def test_claude_refresh_update_failure_never_uninstalls_or_reinstalls(self):
+        scripts=self.root/'scripts';scripts.mkdir()
+        shutil.copy2(ROOT/'scripts/refresh-claude-plugins',scripts/'refresh-claude-plugins')
+        validator=scripts/'validate';validator.write_text('#!/bin/sh\nexit 0\n');validator.chmod(0o755)
+        manifest=self.home/'.claude/plugins/installed_plugins.json'
+        manifest.parent.mkdir(parents=True)
+        manifest.write_text(json.dumps({'plugins':{'james-core@james-skills':[]}}))
+        fake_bin=self.root/'fake-bin';fake_bin.mkdir()
+        executable=fake_bin/'claude'
+        executable.write_text('#!/bin/sh\nprintf "%s\\n" "$*" >> "$CALL_LOG"\n'
+                              'if [ "$1 $2" = "plugin update" ]; then exit 42; fi\nexit 0\n')
+        executable.chmod(0o755)
+        log=self.root/'claude-calls.txt'
+        result=subprocess.run(['bash',str(scripts/'refresh-claude-plugins')],
+            env=dict(os.environ,HOME=str(self.home),PATH=str(fake_bin)+os.pathsep+os.environ['PATH'],CALL_LOG=str(log)),
+            capture_output=True,text=True)
+        self.assertEqual(result.returncode,42)
+        self.assertEqual(log.read_text().splitlines(),[
+            'plugin marketplace update james-skills',
+            'plugin update james-core@james-skills --scope user'])
+        self.assertTrue(manifest.exists())
 
     def test_plugin_manifest_layout(self):
         for p in (ROOT/'plugins').iterdir():
