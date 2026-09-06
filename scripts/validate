@@ -5,6 +5,25 @@ repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 errors=0
 count=0
 
+# LESSON-005/010: a plugin content edit is invisible until VERSION and every
+# plugin manifest are bumped together and the app is reinstalled. This recurred
+# across 2.0.1, 2.0.2, and 2.0.6 because nothing enforced it automatically.
+# Check staged changes (pre-commit) so a content-only change without a version
+# bump fails the commit instead of shipping silently.
+if git -C "$repo_dir" rev-parse --git-dir >/dev/null 2>&1; then
+  staged_files="$(git -C "$repo_dir" diff --cached --name-only 2>/dev/null || true)"
+  if [[ -n "$staged_files" ]]; then
+    content_changed="$(echo "$staged_files" | grep -E '^plugins/[^/]+/(skills|packs|research)/' || true)"
+    version_files_changed="$(echo "$staged_files" | grep -E '^(VERSION|plugins/[^/]+/\.claude-plugin/plugin\.json|\.claude-plugin/marketplace\.json)$' || true)"
+    if [[ -n "$content_changed" && -z "$version_files_changed" ]]; then
+      echo "FAIL plugin content changed but VERSION was not bumped:"
+      echo "$content_changed" | sed 's/^/  /'
+      echo "  Bump VERSION and every plugins/*/.claude-plugin/plugin.json and .claude-plugin/marketplace.json together — see LESSON-005/010."
+      errors=$((errors + 1))
+    fi
+  fi
+fi
+
 while IFS= read -r skill_file; do
   count=$((count + 1))
   skill_dir="$(dirname "$skill_file")"

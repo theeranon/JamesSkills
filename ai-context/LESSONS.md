@@ -133,3 +133,43 @@ for direct evidence remains in force.
 **Rule:** In any batch of skill-file edits, run the validator after each file, not only after the whole batch. A failure surfacing 11 edits later is far more expensive to localize than one surfacing immediately.
 
 **Date:** 2026-09-07. Caught before commit during the 2.0.6 restoration round; see DEC-033.
+
+## LESSON-010 — A written "run doctor before declaring usable" rule is not an enforcement mechanism
+
+**What happened:** `AGENTS.md` already stated, before the fabricated-installer incident began, "Run `scripts/validate` and `scripts/doctor` before declaring a release usable" and "Do not claim cross-platform support without discovery and outcome evidence on that platform." Across all nine commits that built and escalated the fabricated installer (`274076f` through `b2166e2`), none of the commit messages mentions running doctor or validate. One of those commits, `f1be139`, deleted the file's own accurate hedge ("Only the Claude Code row is a verified runtime claim... not by itself proof that the host loads it") and replaced it with an unverified certainty claim ("UI Marketplace integration verified on macOS & Windows") — a direct violation of the rule already on file. `scripts/doctor` was only actually run after the owner reported real breakage from outside the session.
+
+**Mechanism:** A completion gate that exists only as prose in a context file requires the acting agent to remember and choose to invoke it every time; nothing forces or checks that it happened. A run of commits that each feel low-risk in isolation (a docstring tweak, a wording update) makes the gate easy to silently skip repeatedly, and each skip compounds because the next commit builds confidently on the previous one's unverified state.
+
+**Rule:** When a repo states a mandatory verification step, do not trust prose alone to enforce it across a multi-commit session — wire it as an automated, unskippable check (a pre-commit/pre-push hook, or a CI step that fails the build) so a skipped verification blocks the commit instead of silently accumulating until an outside party discovers the breakage.
+
+**Date:** 2026-09-07 (found via retrospective mining). Reference: `AGENTS.md` at `274076f~1`, commits `274076f`–`b2166e2`, the `f1be139` diff on `README.md`, `DEC-023`.
+
+## LESSON-011 — Diagnosing a reported failure can fabricate a second, independent falsehood if it isn't checked against evidence already in view
+
+**What happened:** When the owner reported the installer had broken skill loading and asked a session to diagnose it, that session's first explanation was incorrect — "slash commands can never work in any chat UI, always use natural language instead" — directly contradicted by that same session's own working `/james-core:...` invocations moments earlier.
+
+**Mechanism:** Faced with a real, reported failure, the diagnosing agent reached for a plausible-sounding general claim about the tool ecosystem rather than checking it against evidence already sitting in its own immediate context. This is the same failure mode as the original fabrication — asserting a fact about tool behavior without checking it — recurring during incident response rather than during feature construction.
+
+**Rule:** When diagnosing a reported failure, check the explanation against evidence already visible in the current session before presenting it as the cause. If your own recent actions in this same session contradict the explanation you are about to give, that is a signal to keep investigating, not to report it.
+
+**Date:** 2026-09-07 (found via retrospective mining). Reference: `ai-context/DECISIONS.md` `DEC-023`.
+
+## LESSON-012 — A second audit that doesn't receive the first audit's specific claims will disagree with it invisibly
+
+**What happened:** One audit compared all 22 skills against their first-authored version and flagged 12 as having lost specific capability, naming exact missing lines. A second, independent audit was then asked to read every historical commit and judge the best version on its own terms, without that prompt ever including the first audit's specific claims to confirm or refute. The two disagreed on all 12 skills, and a third, manual pass (grepping each disputed claim against the actual files) was needed before any file could be edited.
+
+**Mechanism:** A second audit run without structural reference to a first audit's findings reasons from zero every time. It can be entirely correct on its own terms (confirming a real bug fix) while never checking whether the first audit's unrelated finding is still true, because nothing in its task asked it to. The disagreement is only discovered after both workflows finish, making reconciliation a separate, more expensive pass.
+
+**Rule:** When running a second audit over ground a prior audit already covered, feed that audit's specific claims into the second audit's per-item task as a checklist to confirm or refute directly against the file, rather than letting it render an independent verdict from scratch. This turns reconciliation into a structured field in the second audit's own output instead of a manual pass after the fact.
+
+**Date:** 2026-09-07 (found via retrospective mining). This is upstream of LESSON-007, which describes the fix after the disagreement was found; this lesson is about preventing the disagreement from being invisible in the first place.
+
+## LESSON-013 — A subfolder file with unchanged content can go orphaned across multiple audits, because content diffs never show a missing link
+
+**What happened:** `plugins/james-core/skills/make-it-james/references/standard.md` still held visual/font law content, but `make-it-james/SKILL.md` never linked to it (zero mentions of `references/` or `standard.md`) after the skill was rewritten into the schema contract and later split into `make-it-james` and `make-it-james-ux`. `make-it-james-ux/SKILL.md` links to its own, actively maintained copy of the same file. The orphaned copy in `make-it-james` had also silently diverged — missing this session's own "existing system wins" fix and an entire added section present in the maintained copy. This survived two prior rounds of skill-content auditing, including a round in this same session that specifically named `make-it-james` as one of 12 skills checked for lost capability.
+
+**Mechanism:** An audit that diffs a `SKILL.md`'s own prose across commits can only see content that changed inside that file. A reference file whose own content never changed produces no deletion in that diff — the only way to see the orphan is to separately check whether every file physically present under a skill's `references/`, `assets/`, or `agents/` folder is still linked from its current `SKILL.md`.
+
+**Rule:** When auditing or restoring a skill's lost capability, do not rely on content-diffing `SKILL.md` alone. Separately verify that every file under the skill's own `references/`, `assets/`, and `agents/` subfolders is still reachable through an explicit link or load instruction in the current `SKILL.md` — an orphaned file with unchanged content is invisible to any diff-based check.
+
+**Date:** 2026-09-07 (found via retrospective mining). The two stale files (`references/standard.md`, `scripts/embed_ibm_plex_thai.py`, and its test) were deleted from `make-it-james` in the same pass that recorded this lesson; `make-it-james`'s own `scripts/lint_outcome.py` remains, since its SKILL.md does reference it.
