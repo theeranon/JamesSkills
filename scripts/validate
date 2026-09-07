@@ -13,7 +13,7 @@ count=0
 if git -C "$repo_dir" rev-parse --git-dir >/dev/null 2>&1; then
   staged_files="$(git -C "$repo_dir" diff --cached --name-only 2>/dev/null || true)"
   if [[ -n "$staged_files" ]]; then
-    content_changed="$(echo "$staged_files" | grep -E '^plugins/[^/]+/(skills|packs|research)/' || true)"
+    content_changed="$(echo "$staged_files" | grep -E '^plugins/[^/]+/(skills|packs|research|commands)/' || true)"
     version_files_changed="$(echo "$staged_files" | grep -E '^(VERSION|plugins/[^/]+/\.claude-plugin/plugin\.json|\.claude-plugin/marketplace\.json)$' || true)"
     if [[ -n "$content_changed" && -z "$version_files_changed" ]]; then
       echo "FAIL plugin content changed but VERSION was not bumped:"

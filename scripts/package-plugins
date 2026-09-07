@@ -23,6 +23,9 @@ for plugin in "$repo_dir/plugins/"*; do
 
   cp -R "$plugin/.claude-plugin" "$stage/"
   cp -R "$plugin/skills" "$stage/"
+  # Commands are how a skill actually appears in the "/" picker; without this,
+  # the plugin installs correctly but is invisible to slash-command discovery.
+  [[ -d "$plugin/commands" ]] && cp -R "$plugin/commands" "$stage/"
   # Knowledge packs and their cited sources must travel, or /baseon and its
   # lens aliases fail at runtime with "registry missing".
   [[ -d "$plugin/packs" ]] && cp -R "$plugin/packs" "$stage/"
