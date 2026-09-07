@@ -658,7 +658,7 @@ claude plugin install james-productivity@james-skills
 claude plugin install james-software@james-skills
 ```
 
-Skills arrive namespaced, so `/james-core:are-you-sure` always resolves to this library even if another source defines the same name. The installed copy is a **snapshot**, not a link — pull new versions with:
+Invoke a skill by its bare name — `/are-you-sure`, `/proactive-habits` — not with a plugin prefix; Claude Code resolves skills directly by name. The installed copy is a **snapshot**, not a link — pull new versions with:
 
 ```bash
 claude plugin marketplace update james-skills && claude plugin update james-core@james-skills

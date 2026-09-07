@@ -173,3 +173,13 @@ for direct evidence remains in force.
 **Rule:** When auditing or restoring a skill's lost capability, do not rely on content-diffing `SKILL.md` alone. Separately verify that every file under the skill's own `references/`, `assets/`, and `agents/` subfolders is still reachable through an explicit link or load instruction in the current `SKILL.md` — an orphaned file with unchanged content is invisible to any diff-based check.
 
 **Date:** 2026-09-07 (found via retrospective mining). The two stale files (`references/standard.md`, `scripts/embed_ibm_plex_thai.py`, and its test) were deleted from `make-it-james` in the same pass that recorded this lesson; `make-it-james`'s own `scripts/lint_outcome.py` remains, since its SKILL.md does reference it.
+
+## LESSON-014 — A third-party plugin's own reference documentation is not the same as this CLI's actual shipped behavior
+
+**What happened:** `README.md` stated "Skills arrive namespaced, so `/james-core:are-you-sure` always resolves to this library" — a claim that was never true. The real invocation syntax, confirmed live, is the bare skill name (`/proactive-habits`) with no plugin prefix. Separately, when `/are-you-sure` and `/proactive-habits` did not appear in the "/" picker after typing a partial name, the investigation reached for an official Anthropic reference plugin's (`plugin-dev`) documentation of a `commands/` folder mechanism and built 22 command files against it (DEC-035) — real, correct, harmless work, but it turned out the installed CLI's own `--help` output already stated the actual mechanism directly ("Skills still resolve via /skill-name"; "`--disable-slash-commands` — Disable all skills"), which was never checked first.
+
+**Mechanism:** A bundled reference/documentation plugin describes a real, supported mechanism, but it is not necessarily the *only* mechanism, nor is it guaranteed to match the exact behavior of the specific CLI build installed right now. `claude --help` is a direct, zero-assumption source for what the installed binary actually does; a reference plugin's own docs are one level removed from that ground truth.
+
+**Rule:** When investigating what a specific installed CLI or tool actually supports, check that tool's own `--help` (or equivalent direct introspection) before reaching for bundled reference documentation or official example plugins — the latter can be accurate about a feature that exists without being a complete account of every way that feature can be reached.
+
+**Date:** 2026-09-07. `/proactive-habits` confirmed working live by the owner after checking `claude --help`; see DEC-036. Whether the `commands/` files from DEC-035 were ever actually necessary remains unresolved and is stated as such in DEC-036, not assumed.

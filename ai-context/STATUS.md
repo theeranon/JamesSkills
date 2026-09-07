@@ -56,7 +56,7 @@ not in `research-it` itself).
 
 ## Next
 
-- Owner must restart Claude Code Desktop and confirm the 22 new slash commands (e.g. `/are-you-sure`, `/grill-me`) actually appear in the "/" picker and work — this is the one thing 2.1.0 has not been verified live, only at the file/cache level (DEC-035).
+- Resolved: `/proactive-habits` confirmed working live in Claude Code by the owner (see DEC-036). Real syntax is the bare skill name (`/are-you-sure`, `/proactive-habits`), never a plugin-prefixed form — README corrected. `/help` does not list Skills at all in this CLI version, so it is not a valid way to check installation; only direct invocation is.
 - Use 2.1.0 with the documented model-output limitations; collect real failures without adding speculative rules.
 - Optional: write a dated receipt for the 2.0.6 capability-restoration audit (git log --follow evidence, before/after quotes) matching the format of earlier receipts, if this decision needs to be replayed without this conversation's history.
 
