@@ -25,6 +25,16 @@ def run_lint(path: Path) -> subprocess.CompletedProcess[str]:
 def main() -> int:
     with tempfile.TemporaryDirectory() as temporary:
         root = Path(temporary)
+        for index, (value, passes) in enumerate([
+            ("อ้างอิง event_log:entry_0123456789abcdef", True),
+            ("ใช้รหัส source_record:abcdef0123456789", True),
+            ("อ้างอิง event_log:entry_0123456789abcdef แล้วทำต่อ→ส่งงาน", False),
+            ("หัวข้อ: รายละเอียดที่ต้องทำ", False),
+        ]):
+            probe = root / f"identifier-{index}.txt"
+            probe.write_text(value, encoding="utf-8")
+            assert (run_lint(probe).returncode == 0) == passes, value
+
         valid = root / "valid.html"
         valid.write_text(
             """<style>

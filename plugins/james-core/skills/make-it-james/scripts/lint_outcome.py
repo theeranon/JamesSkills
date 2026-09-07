@@ -51,6 +51,7 @@ FORBIDDEN_THAI_SYMBOL = re.compile(r"[:—–→/+|]|[\U0001F300-\U0001FAFF]")
 QUOTED = re.compile(r"(['\"])(.*?)(?<!\\)\1")
 MARKUP_TEXT = re.compile(r">([^<>]+)<")
 EXACT_DATA = re.compile(
+    r"\b[a-z][a-z0-9]*(?:_[a-z0-9]+)+:[A-Za-z0-9][A-Za-z0-9_.-]{15,}\b|"
     r"https?://\S+|"
     r"\b\d{1,2}:\d{2}(?:\s|$)|"
     r"\b\d+(?:\.\d+)?:\d+(?:\.\d+)?\b|"

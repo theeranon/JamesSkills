@@ -737,6 +737,38 @@ Check any machine at any time:
 ./scripts/doctor
 ```
 
+### Troubleshooting: a skill installs but never actually loads (Claude Desktop)
+
+**Symptom:** `claude plugin install` succeeds, `installed_plugins.json` shows the plugin, but no skill ever triggers — the `/` picker shows nothing, `/help` lists nothing from this marketplace, and every slash form ("`/are-you-sure`", "`/james-core:are-you-sure`") answers "Unknown command."
+
+**Real cause, found and fixed on a live machine:** the Claude Desktop app (the one with a "Code" tab) bundles its **own separate Claude Code binary**, at a different path than whatever `claude` resolves to in your terminal — for example `~/Library/Application Support/Claude/claude-code/<version>/claude.app/Contents/MacOS/claude` on macOS, versus a Homebrew-installed `claude` on `PATH`. These can be different versions and **maintain separate marketplace registrations**, even though they may share the same `~/.claude/settings.json` and `installed_plugins.json`. Running `claude plugin marketplace add` and `claude plugin install` against the terminal's `claude` does not necessarily register the marketplace for the binary the Desktop app actually runs.
+
+**Diagnose it directly** — this is the one command that tells the truth:
+
+```bash
+claude plugin list
+```
+
+If a plugin from this marketplace shows `✘ failed to load: Marketplace james-skills not found` (rather than `✔ enabled`), that plugin's metadata exists but its content was never actually loaded — this explains every symptom above.
+
+**Fix — run the marketplace add and install against the exact binary Claude Desktop uses**, not just whatever `claude` your shell finds first:
+
+```bash
+# Find the binary the Desktop app is actually running (while it's open):
+ps aux | grep -i "claude-code.*claude$" | grep -v grep
+
+# Then, using that exact path in place of `claude` below:
+"<that-exact-path>" plugin marketplace add theeranon/JamesSkills
+"<that-exact-path>" plugin install james-core@james-skills
+"<that-exact-path>" plugin install james-productivity@james-skills
+"<that-exact-path>" plugin install james-software@james-skills
+
+# Confirm the fix:
+"<that-exact-path>" plugin list   # every james-* entry should read "✔ enabled"
+```
+
+Fully quit and reopen Claude Desktop afterward — its plugin list loads once per launch, not live.
+
 ## 🔄 Update
 
 **Plugin route**

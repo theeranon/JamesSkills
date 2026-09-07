@@ -9,6 +9,8 @@ Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
 
+Local wording-linter correction: technical namespace identifiers (snake_case namespace with a long ASCII token) no longer trigger Thai punctuation violations. Only the identifier token is exempt; adjacent prose punctuation remains checked. Synthetic same-mechanism and counter-case CLI probes plus scripts/validate passed. No installation, package publication or cross-platform behavior claimed.
+
 Version 2.0.4 corrected composition and proportionality across all 22 skill bodies
 (persistent modes survive one-task workflows; schema no longer forces routing
 in-degree or minimum principle counts). 2.0.5 fixed two residual gaps from that
@@ -56,7 +58,8 @@ not in `research-it` itself).
 
 ## Next
 
-- Resolved: `/proactive-habits` confirmed working live in Claude Code by the owner (see DEC-036). Real syntax is the bare skill name (`/are-you-sure`, `/proactive-habits`), never a plugin-prefixed form — README corrected. `/help` does not list Skills at all in this CLI version, so it is not a valid way to check installation; only direct invocation is.
+- Owner must fully quit and reopen Claude Desktop, then retry a skill (e.g. `/are-you-sure` or a plain-language request), to confirm the real fix from DEC-037/LESSON-015: Claude Desktop's own bundled Claude Code binary had never registered the `james-skills` marketplace (`plugin list` showed "failed to load"), separate from the Homebrew CLI this session had been managing all along. Fixed live via `plugin marketplace add`/`plugin install` against that exact binary; `plugin list` now shows `✔ enabled` for all three. DEC-036's earlier "confirmed working" claim was a false positive (the model improvising from request text, not a loaded skill) — retracted, do not cite it as resolved.
+- The bare-skill-name syntax fact itself (`/are-you-sure`, no plugin prefix) remains correct per `claude --help`, independent of the DEC-037 fix — README documents both.
 - Use 2.1.0 with the documented model-output limitations; collect real failures without adding speculative rules.
 - Optional: write a dated receipt for the 2.0.6 capability-restoration audit (git log --follow evidence, before/after quotes) matching the format of earlier receipts, if this decision needs to be replayed without this conversation's history.
 
