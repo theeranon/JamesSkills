@@ -3,13 +3,13 @@
 Last verified: 2026-09-10
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.2 (published; local install verified)
+Current version: 2.1.3 (native-question correction)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
 
-Grill Me conversational correction published at 2.1.2, commit `bc86e3f`, to origin/main on explicit owner push/install authorization. Remote ref matched the local commit. `scripts/install` and post-install `scripts/doctor` passed: 22 enabled Codex entries, 124 managed links. Fresh Codex skills/list resolved `james-productivity:grill-me` to the canonical file with the new invocation text. Claude uses a managed source link on this machine; no Claude runtime behavior is claimed. Synthetic response probes cover immediate entry, answer-dependent followup, authorized drafting and trial-needed uncertainty. Invocation metadata and examples now match the canonical behavior. Evidence: `tests/receipts/grill-me-2026-09-10.md`. The separate skill shown in the owner's screenshot has not been inspected or replaced; historical distribution notes below do not establish this version's availability there.
+Grill Me 2.1.3 restores the owner's required in-app popup: one question with choices, then wait for input. This corrects 2.1.2's text-first regression. Independent synthetic probes cover native-tool selection, followup, unavailable-tool fallback, explicit text-only preference, pending answers and execution. A real current-host native question call returned accepted=true; user-visible rendering and a fresh installed-skill end-to-end run are not yet confirmed. Evidence: `tests/receipts/grill-me-popup-2026-09-10.md`. Prior distribution and discovery evidence does not prove the UI behavior.
 
 Local wording-linter correction: technical namespace identifiers (snake_case namespace with a long ASCII token) no longer trigger Thai punctuation violations. Only the identifier token is exempt; adjacent prose punctuation remains checked. Synthetic same-mechanism and counter-case CLI probes plus scripts/validate passed. No installation, package publication or cross-platform behavior claimed.
 

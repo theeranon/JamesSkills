@@ -6,7 +6,7 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 
 ### 🎯 `/grill-me` (Interactive Stress-Test)
 - **EN:** Clarify an idea through focused questions that build on your answers before execution.
-- **TH:** ให้ AI เริ่มถามทีละข้อเพื่อขุดเป้าหมาย ต่อจากคำตอบของคุณจนตัดสินใจได้ชัด
+- **TH:** ให้ AI เปิดคำถามในแอปทีละข้อพร้อมตัวเลือกให้กด เพื่อขุดเป้าหมายและถามต่อจากคำตอบของคุณ
 
 ### 💡 `/give-me-solutions` (Options & Trade-offs)
 - **EN:** Research external options. Present objective tradeoffs and evidence matrices without making the final choice for the user.
@@ -314,7 +314,8 @@ To improve communication with your co-founder, you should practice active listen
 
 ก่อนเลือกวิธีขายคอร์ส ผมอยากเข้าใจผลลัพธ์ที่ผู้เรียนต้องการก่อนครับ<br><br>
 <b>หลังจบคอร์ส ผู้บริหารควรทำอะไรได้ด้วยตัวเองที่วันนี้ยังทำไม่ได้?</b><br><br>
-<i>ตัวอย่างคำถามเปิดการสนทนา คำถามถัดไปขึ้นอยู่กับคำตอบจริงของคุณ</i>
+ตัวเลือก: ตัดสินใจเลือกงานที่เหมาะกับ AI / ลงมือทำงานด้วย AI เอง / วางแผนให้ทีมใช้ AI<br><br>
+<i>ตัวอย่างเนื้อหาในป๊อปอัปคำถาม มีช่องพิมพ์เพิ่มเติม คำถามถัดไปขึ้นอยู่กับคำตอบจริงของคุณ</i>
 
 </td>
 </tr>

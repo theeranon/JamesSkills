@@ -455,7 +455,8 @@ Must:
 - begin with a self-contained question that advances the user's unresolved goal
 - use relevant existing context and facts without requiring the user to repeat them
 - ask one focused question by default; batch only independent questions when useful
-- invite free text for discovery and offer choices when a real decision is ready
+- call the permitted native question tool with one question and 2-3 choices, including goal discovery; retain free text
+- wait for an actual submitted answer before the next popup; do not treat async return or a default as an answer
 - recommend only with evidence; keep unknown preferences and unanswered branches open
 - build follow-up questions from the user's answers, including implications and trade-offs
 - distinguish user decisions from the assistant's tentative interpretation
@@ -463,20 +464,23 @@ Must:
 
 Rejected-case regression (synthetic):
 - After a long earlier message asks for a future vision, pain points and scope, the user says "Grill Me กัน" about replacing a generic hosted system.
-- Pass: asks one concrete question about the unresolved reason or desired change now.
-- Fail: only acknowledges, points back to earlier options, requests a full summary, or assumes replacement is the goal.
+- Pass: calls the native tool with one concrete question about the unresolved reason or desired change, plus choices.
+- Fail: only acknowledges, points back to earlier options, requests a full summary, assumes replacement is the goal, or emits a text-only question despite an available permitted native tool.
 
 Same-mechanism transfer (synthetic):
 - A workshop designer asks to be grilled but cannot articulate what is wrong. They then explain that learners copy examples but cannot handle a changed task.
-- Pass: starts with an answerable concrete prompt, then uses that answer to explore transfer or a meaningful success criterion without inventing a cause.
+- Pass: starts with one native popup with choices, then uses the submitted answer in the next popup to explore transfer or a meaningful success criterion without inventing a cause.
 - Fail: requests a complete vision, repeats the opening question, imposes a predefined diagnostic menu, or declares motivation the cause.
 
 Legitimate counter-cases:
 - Goal, success and scope are already settled; user says "start the agreed draft, no more questions". Produce the draft, without restarting discovery or requiring approval.
 - The user cannot judge two interface layouts without seeing them. Identify a small comparison trial rather than pressuring them into an unsupported preference; do not silently expand build authority.
+- A host has no permitted native question tool: state the limitation and use one lettered-choice chat question. Never fabricate a successful tool call.
+- The user explicitly requests text-only: honor that preference.
+- An async popup is pending: wait; do not send another question or adopt the default.
 - An evidence-backed technical choice is ready. Offer a reasoned recommendation and alternatives rather than forcing open discovery again.
 
-Evidence: `tests/receipts/grill-me-2026-09-10.md`. Written expectations are not runtime proof.
+Evidence: `tests/receipts/grill-me-2026-09-10.md` (text-only coverage, insufficient for popup behavior) and `tests/receipts/grill-me-popup-2026-09-10.md`. Written expectations are not runtime proof.
 
 ## Make It James UX — `make-it-james-ux`
 

@@ -368,3 +368,13 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Owner request: improve existing Grill Me using the AIHero reference and the reported failure to begin asking useful questions.
 - Decision: preserve name, bounded job and promoted lifecycle. Require a concrete first question on invocation, open discovery for unclear goals, answer-dependent followups, evidence-backed recommendations only, and execution when already authorized. Align invocation metadata and usage examples; retain optional user-requested HTML tooling. Do not adopt the source's full-round cadence or require a fresh conversation.
 - Evidence: tests/receipts/grill-me-2026-09-10.md; synthetic rejected-case, transfer and legitimate counter-case response probes. These do not establish the loaded instructions of the separate app shown by the owner.
+
+
+## DEC-039 — Restore required native question interaction for Grill Me
+
+- Date: 2026-09-10
+- Owner correction: Grill Me must open one in-app question with choices, not merely ask in chat. This supersedes DEC-038's open-text-first interaction, while retaining immediate entry and answer-dependent inquiry.
+- Mechanism: response-only probes scored question quality while omitting the interaction tool. The author also weakened choice-based discovery in the invocation metadata.
+- Decision: use a permitted native question API for every interview turn, one question plus choices and free text, then wait for actual input. Resolve tool availability in the current mode. Use chat choices only when no native tool is usable or the user explicitly requests text-only. Do not pretend prose is a popup.
+- Source verification: upstream grill-me delegates to grilling; the current implementation specifies text rounds with recommendations. Native single-question popups are the owner's James adaptation.
+- Evidence: tests/receipts/grill-me-popup-2026-09-10.md. Tool-selection simulations and actual current-host invocation must be distinguished from a fresh installed-skill end-to-end run.
