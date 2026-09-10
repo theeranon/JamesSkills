@@ -5,8 +5,8 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 ## 🚀 Highlights
 
 ### 🎯 `/grill-me` (Interactive Stress-Test)
-- **EN:** Challenge an idea. The AI asks sequential frontier questions to expose flaws and resolve dependencies before execution.
-- **TH:** สั่งให้ AI ต้อนและซักถามจุดอ่อนในแผนงานทีละข้อ เพื่ออุดรอยรั่วก่อนลงมือทำจริง
+- **EN:** Clarify an idea through focused questions that build on your answers before execution.
+- **TH:** ให้ AI เริ่มถามทีละข้อเพื่อขุดเป้าหมาย ต่อจากคำตอบของคุณจนตัดสินใจได้ชัด
 
 ### 💡 `/give-me-solutions` (Options & Trade-offs)
 - **EN:** Research external options. Present objective tradeoffs and evidence matrices without making the final choice for the user.
@@ -295,7 +295,7 @@ To improve communication with your co-founder, you should practice active listen
 <br>
 
 #### ⚡️ `/grill-me`
-*Interactive decision-tree stress-test asking one sequential question at a time along the decision frontier to expose vulnerabilities.*
+*Clarify goals and decisions through a conversation that builds on each answer.*
 
 <p align="center"><img src="assets/grill-me-preview.png" width="100%" alt="grill-me decision tree"></p>
 
@@ -312,13 +312,9 @@ To improve communication with your co-founder, you should practice active listen
 </td>
 <td valign="top">
 
-<b>[Grill Me: Round 1 / Frontier: Customer Acquisition]</b><br><br>
-ผู้บริหารระดับสูงแทบไม่ซื้อคอร์สราคาสูงผ่าน Facebook Cold Ads โดยตรงเพราะขาด Trust Barrier<br><br>
-<b>Frontier Question 1:</b> อะไรคือ Acquisition Funnel ที่แท้จริงของคุณ?<br>
-1. <b>(แนะนำ)</b> เปลี่ยนเป็น Exclusive Half-Day Workshop ผ่าน Direct Referral<br>
-2. แจก Executive Playbook ฟรีเพื่อคัดกรอง Lead ก่อนโทรนัด Advisory Call<br>
-3. ยิง Ads ต่อไปโดยเพิ่ม Video Social Proof จากศิษย์เก่าระดับ C-Level<br><br>
-<i>(ตอบตัวเลือกเพื่อไปยัง Frontier ข้อถัดไป)</i>
+ก่อนเลือกวิธีขายคอร์ส ผมอยากเข้าใจผลลัพธ์ที่ผู้เรียนต้องการก่อนครับ<br><br>
+<b>หลังจบคอร์ส ผู้บริหารควรทำอะไรได้ด้วยตัวเองที่วันนี้ยังทำไม่ได้?</b><br><br>
+<i>ตัวอย่างคำถามเปิดการสนทนา คำถามถัดไปขึ้นอยู่กับคำตอบจริงของคุณ</i>
 
 </td>
 </tr>

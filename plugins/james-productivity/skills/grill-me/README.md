@@ -1,16 +1,9 @@
-# Grill Me — James Edition (Public Release)
+# Grill Me — James Edition
 
-This is a stress-testing decision framework. You can install and use it in any AI assistant (ChatGPT, Claude, Gemini, Cursor).
+เริ่มจากไอเดียที่ยังไม่ชัดได้เลย เช่น `Grill Me กัน อยากทบทวนแผนนี้` สกิลจะเริ่มถามจากบริบทที่มี แล้วต่อยอดจากคำตอบของคุณ
 
-## How to Install & Use (For General Users)
-**You DO NOT need any complex setup or MCP servers.** 
-1. Open the `SKILL.md` file in this folder.
-2. Copy all the text inside.
-3. Paste it into your AI's **"Custom Instructions"**, **"System Prompt"**, or Claude's **"Projects"** knowledge base.
-4. To start using it, just type: `Grill me on my new marketing plan.`
+คำสั่งหลักอยู่ใน [SKILL.md](SKILL.md) ไฟล์เดียว การติดตั้งผ่าน repository ดู [คู่มือหลัก](../../../../README.md) หากนำข้อความไปใช้กับผู้ช่วยอื่น ให้ใช้ช่องคำสั่งที่ระบบนั้นรองรับ การคัดลอกหรือแนบไฟล์ยังไม่ใช่หลักฐานว่าระบบโหลดสกิลแล้ว
 
-The AI will automatically use **Text-Chat Mode** to ask you one concise question at a time until the decision tree is resolved.
+เลือกตอบเมื่อมีทางเลือกที่ชัดเจนได้ แต่ตอนค้นหาเป้าหมายสามารถเล่าสั้น ๆ หรือบอกว่ายังไม่รู้ได้ ไม่ต้องเตรียม requirement มาก่อน
 
-## Advanced Users (Interactive UI on Claude Desktop)
-If you are a power user using **Claude Desktop** and want native, clickable interactive pop-ups instead of typing in chat:
-You can run the included `mcp-server` in this repository to unlock the `interactive_grill_me` UI. The skill prompt is already smart enough to detect the server and switch to Native UI automatically. If the server is offline, it gracefully falls back to text chat.
+ไม่มีข้อกำหนดให้ติดตั้ง MCP เพิ่ม สำหรับแบบฟอร์ม HTML ที่ผู้ใช้ร้องขอโดยเฉพาะ ดู [ข้อกำหนดแบบฟอร์ม](references/interactive-html.md)

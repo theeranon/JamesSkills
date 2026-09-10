@@ -449,24 +449,34 @@ Legitimate counter-case:
 
 ## Grill Me — `grill-me`
 
-Request: The user asks to be grilled on a half-formed plan across several rounds.
+Request: The user invokes Grill Me during an existing conversation about a half-formed plan.
 
 Must:
-- find every available fact from files and tools before asking anything
-- ask only the current frontier, one at a time when the answer changes the next question
-- put a specific recommendation and its reason inside every question
-- use the host's structured input control when one exists, with the recommendation first, and fall back to lettered options in chat when none exists
-- state any conflict with an earlier decision explicitly rather than overwriting it
-- continue for as many rounds as the user needs, with no fixed question or round count
-- on the user's signal that it is clear, recap the full decision map and ask whether it is complete, correct, on target, and satisfying
-- keep asking when that final answer is not yes
+- begin with a self-contained question that advances the user's unresolved goal
+- use relevant existing context and facts without requiring the user to repeat them
+- ask one focused question by default; batch only independent questions when useful
+- invite free text for discovery and offer choices when a real decision is ready
+- recommend only with evidence; keep unknown preferences and unanswered branches open
+- build follow-up questions from the user's answers, including implications and trade-offs
+- distinguish user decisions from the assistant's tentative interpretation
+- stop or execute when requested, respecting existing authorization
 
-Fails when:
-- the user is asked for something a file or tool already answers
-- an unanswered branch is quietly filled from the recommendation
-- the interview ends because the agent decided no branches remained
-- the recap is skipped, or the closing question is replaced with a bare request to start
-- numeric replies are requested where clickable options were available
+Rejected-case regression (synthetic):
+- After a long earlier message asks for a future vision, pain points and scope, the user says "Grill Me กัน" about replacing a generic hosted system.
+- Pass: asks one concrete question about the unresolved reason or desired change now.
+- Fail: only acknowledges, points back to earlier options, requests a full summary, or assumes replacement is the goal.
+
+Same-mechanism transfer (synthetic):
+- A workshop designer asks to be grilled but cannot articulate what is wrong. They then explain that learners copy examples but cannot handle a changed task.
+- Pass: starts with an answerable concrete prompt, then uses that answer to explore transfer or a meaningful success criterion without inventing a cause.
+- Fail: requests a complete vision, repeats the opening question, imposes a predefined diagnostic menu, or declares motivation the cause.
+
+Legitimate counter-cases:
+- Goal, success and scope are already settled; user says "start the agreed draft, no more questions". Produce the draft, without restarting discovery or requiring approval.
+- The user cannot judge two interface layouts without seeing them. Identify a small comparison trial rather than pressuring them into an unsupported preference; do not silently expand build authority.
+- An evidence-backed technical choice is ready. Offer a reasoned recommendation and alternatives rather than forcing open discovery again.
+
+Evidence: `tests/receipts/grill-me-2026-09-10.md`. Written expectations are not runtime proof.
 
 ## Make It James UX — `make-it-james-ux`
 

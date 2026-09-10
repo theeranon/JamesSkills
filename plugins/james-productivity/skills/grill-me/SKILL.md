@@ -25,19 +25,22 @@ Keep asking until the requirement is sharp enough to build from.
 
 ## Procedure
 
-1. Build a private decision tree. Some decisions unlock others; most do not matter yet.
-2. Find every fact yourself first. Never ask for something a file, a repository, or a tool already answers.
-3. Ask only the current frontier: unresolved decisions whose prerequisites are already settled. Ask one at a time when the answer changes the next question; ask up to three together only when they are genuinely independent.
-4. Offer a specific recommendation and reason when evidence supports one, labelled `(แนะนำ)` in a structured control. For goals or preferences only the user can choose, ask neutrally. Do not infer implementation complexity, cost or expected impact solely from frequency or urgency. When the evidence supports only a provisional preference, name the material uncertainty rather than inventing a stronger rationale. Never invent a recommendation to satisfy the question format. Treat a free-text detail field as an override or qualification of the chosen option, not a separate answer. For a multi-select question, distinguish every option selected intentionally from no selection at all.
-5. Use the host's structured input control whenever one exists, so answers are chosen rather than typed, with the recommendation placed first and a free-text field available for anything the options miss. Keep 2-3 mutually exclusive choices per question; a question needing more options or a multi-select belongs in the HTML control instead. When no such control exists, ask in plain chat with lettered options and wait for the reply; do not generate an HTML form or artifact merely because the host lacks a native control. Never ask for numeric replies to questions that could have been clickable.
-6. After each answer, update the tree, state any conflict with an earlier decision explicitly, and continue with whatever is newly unlocked. Preserve unanswered branches; never fill one from the recommendation.
-7. Report progress when it helps the ongoing interview, using only decisions and rounds actually established, for example `รอบ 2 · ตัดสินใจแล้ว 3 · เหลือ 2 สาขา`. If the user asks for the next question only, return only that question, with a recommendation if supported; keep the dependency tree private.
+1. Start the interview in this reply. Use the existing conversation to identify the first unresolved goal or decision, then ask an actual, self-contained question. An invocation such as "Grill Me กัน" is a request to begin, not an answer to earlier questions. Never respond only with acknowledgement, instructions to answer above, or a promise to ask later. If a previous question was broad or compound, narrow it instead of repeating the burden.
+2. Separate the desired outcome from the proposed solution. When the goal is unclear, ask what needs to change, why it matters now, or for a concrete recent incident. Do not require a polished vision, complete requirements, or a list of pain points to begin. If the user has already established the goal, start at the unresolved decision rather than reopening it. A named solution is not proof that its underlying goal is clear; an explicitly settled choice is not an invitation to relitigate it.
+3. Keep a private decision tree of goals, evidence, user decisions and unresolved assumptions. Read relevant available files and tools for factual answers; do not make the user repeat them or perform an exhaustive audit before the first useful question. A fact about the current system does not establish what the user wants next.
+4. Ask one focused question at a time by default, chosen for how much its answer changes what comes next. Ask up to three together only when independent and easier to answer together, or follow the user's requested pace. Do not hide several dependent questions inside one sentence. Keep routine rounds, branch counts and method explanations internal unless helpful or requested.
+5. Match the answer format to the thinking needed. For an undiscovered goal, lived example or unclear concern, invite a short free-text answer; do not force it into invented choices. For a concrete choice, use the host's structured input control when available and permitted, with 2-3 distinct options and free text. Otherwise ask directly in chat, using lettered choices only when they help. Do not generate an HTML form merely because there is no control. Never ask for numeric replies where clickable choices are available.
+6. Offer a specific recommendation and reason only when evidence supports one, labelled `(แนะนำ)` in a structured control. Ask neutrally about goals or preferences only the user can choose. Do not infer complexity, cost or impact solely from frequency or urgency. Name material uncertainty in a provisional recommendation. A free-text detail qualifies or overrides a selected option; intentional multi-selection is different from no selection. Never treat a default, silence or agreement with your wording as a decision the user has not made.
+7. Follow the answer, not a questionnaire. Briefly reflect the part that changes your understanding, then probe its consequence, a concrete example, a trade-off, a success criterion or an apparent contradiction, whichever unlocks the next decision. Use the user's words and make a possible insight a hypothesis they can correct. Challenge unsupported assumptions with a reason; do not manufacture disagreement, psychological labels or adversarial pressure. State conflicts with earlier decisions explicitly and preserve unresolved branches.
+8. When the user says "I don't know", reduce the abstraction: ask about one recent event or offer a small contrast grounded in what they said. If talking cannot establish the answer, identify the missing evidence or smallest useful trial instead of repeatedly rephrasing. Preserve that uncertainty; carry out a trial only within existing authorization. Do not turn an interview into an unsolicited research project or prototype build.
 
-There is no fixed number of questions and no fixed number of rounds. Continue for as long as the user is still discovering what they want.
+For an explicitly requested HTML questionnaire only, read [the optional rendering contract](references/interactive-html.md).
+
+There is no question quota or fixed sequence of topics. Depth comes from what each answer reveals, not from exhausting every imaginable branch. Keep going while a material uncertainty can usefully be resolved through conversation.
 
 ## Stop when
 
-The decisions needed for the requested work are clear, or the user tells you to stop or start. A request to start is authorization already given, not a reason to ask for a confirmation word. Summarize material decisions only when useful; proceed with authorized work. Ask further only for an unresolved decision that materially changes the outcome, authority or commitment.
+The goal, meaningful success criteria and decisions needed for the next authorized step are clear, or the user tells you to stop or start. Do not demand implementation details that do not affect that step. A request to start is authorization already given, not a reason to ask for a confirmation word. Summarize material decisions only when useful; proceed with authorized work. Ask further only for an unresolved decision that materially changes the outcome, authority or commitment.
 
 ## Principles
 
@@ -49,12 +52,15 @@ The decisions needed for the requested work are clear, or the user tells you to 
 ## Counter-case
 
 - The user says they know exactly what they want but cannot start. The requirement is already sharp and the obstacle is personal, so `coach-me` owns it.
+- The user has already settled the goal and says "start building the agreed draft". Proceed within that scope; do not restart discovery or demand another confirmation.
 - The user asks to be challenged on whether a claimed best practice is real. That needs outside evidence rather than their own preferences, so `research-it` owns it.
 
 ## Hand back
 
-The useful decisions and remaining material questions, or the requested work when the user has instructed you to proceed. Present each settled decision with its chosen answer, reason or detail, downstream consequence, and any unresolved risk. Keep routine interview bookkeeping internal.
+During the interview, return the next answerable question with only the reflection or context needed to answer it. At a useful stopping point, briefly capture the goal, settled choices and reasons, and material unknowns or risks; allow correction without requiring a ritual approval round. When instructed to proceed, deliver the authorized work. Keep routine interview bookkeeping internal.
 
 ## Sources
 
 Plato, Socratic dialogues. Nielsen 1994, Ten Usability Heuristics. Howard 1966, Information Value Theory.
+
+Design reference: Matt Pocock, [The /grill-me Skill](https://www.aihero.dev/skills-grill-me), updated 2026-08-24, reviewed 2026-09-10. Used for dependency-aware inquiry and recognizing questions that need a trial. This James adaptation uses original wording: immediate conversational entry, one-question default, open discovery before choices, and existing execution authority. The article is a design source, not an instruction to install its package or adopt its full workflow.

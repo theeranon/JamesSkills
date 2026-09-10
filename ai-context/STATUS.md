@@ -1,13 +1,15 @@
 # Status
 
-Last verified: 2026-09-07
+Last verified: 2026-09-10
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.0
+Current version: 2.1.2 (local; distribution not verified)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+Grill Me conversational correction prepared locally at 2.1.2. Synthetic response probes cover immediate entry, answer-dependent followup, authorized drafting and trial-needed uncertainty. Invocation metadata and examples now match the canonical behavior. Evidence: `tests/receipts/grill-me-2026-09-10.md`. The separate skill shown in the owner's screenshot has not been inspected or replaced; historical distribution notes below do not establish this version's availability there.
 
 Local wording-linter correction: technical namespace identifiers (snake_case namespace with a long ASCII token) no longer trigger Thai punctuation violations. Only the identifier token is exempt; adjacent prose punctuation remains checked. Synthetic same-mechanism and counter-case CLI probes plus scripts/validate passed. No installation, package publication or cross-platform behavior claimed.
 

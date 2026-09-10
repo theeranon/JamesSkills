@@ -359,3 +359,12 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Also learned and discarded as a dead end: `--print` (non-interactive) mode returns "Unknown command" for plugin-provided slash commands universally, including a verified-real official Anthropic plugin command (`/feature-dev`) tested as a baseline — so `-p` mode cannot be used to distinguish a broken plugin from a print-mode limitation. Do not use `-p` alone to diagnose plugin command availability; `plugin list`'s status line is the reliable signal.
 - Documentation: added a "Troubleshooting: a skill installs but never actually loads (Claude Desktop)" section to `README.md`'s Installation section, generalized for any user of this public repo who runs Claude Desktop — the two-binary/marketplace-mismatch failure mode is a Claude Code product behavior, not specific to this machine or this plugin.
 - Not verified: live confirmation in the actual Claude Desktop UI that a skill now invokes correctly post-fix — the owner has not yet restarted and retested at the time of this entry. See `ai-context/STATUS.md` Next.
+
+
+## DEC-038 — Grill Me begins and follows a goal-discovery conversation
+
+- Date: 2026-09-10
+- Status: Local correction, version 2.1.2 prepared; no external publication claimed.
+- Owner request: improve existing Grill Me using the AIHero reference and the reported failure to begin asking useful questions.
+- Decision: preserve name, bounded job and promoted lifecycle. Require a concrete first question on invocation, open discovery for unclear goals, answer-dependent followups, evidence-backed recommendations only, and execution when already authorized. Align invocation metadata and usage examples; retain optional user-requested HTML tooling. Do not adopt the source's full-round cadence or require a fresh conversation.
+- Evidence: tests/receipts/grill-me-2026-09-10.md; synthetic rejected-case, transfer and legitimate counter-case response probes. These do not establish the loaded instructions of the separate app shown by the owner.

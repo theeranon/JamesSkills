@@ -1,6 +1,6 @@
 # Interactive HTML contract
 
-Use HTML when the frontier needs multi-select, Select All, more than three independent questions, or detailed answers without repeated chat turns.
+Use this optional reference only when the user explicitly requests an HTML questionnaire. Ordinary interviews stay in chat or an available native input control. This reference specifies rendering, not a separate interview procedure.
 
 ## Question JSON
 
@@ -25,10 +25,10 @@ Use HTML when the frontier needs multi-select, Select All, more than three indep
 }
 ```
 
-`type`: `single`, `multi`, or `text`. Use stable short IDs. `recommended` is always an array. Options must have distinct consequences, not synonyms. `detailPrompt` is optional.
+`type`: `single`, `multi`, or `text`. Use stable short IDs. `recommended` is always an array, empty when there is no evidence-backed recommendation. Options must have distinct consequences, not synonyms. `detailPrompt` is optional.
 
 ## Delivery
 
 Generate into the current task workspace or a temporary output folder, never inside the skill. Open it in the app. The page is offline and sends nothing remotely. The user clicks `คัดลอกคำตอบ` and pastes once into chat, or attaches the downloaded JSON.
 
-Apply `make-it-james-ux`: IBM Plex Sans Thai, dense hierarchy, 6px radius, one blue accent, semantic colors only, no decorative rails, gradients, or card soup.
+Use `scripts/build_session.py` with `assets/session-template.html` (paths relative to the skill folder) to render the question JSON. Apply the available `make-it-james-ux` shared standard; preserve the existing design system first.
