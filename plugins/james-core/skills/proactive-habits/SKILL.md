@@ -37,11 +37,11 @@ When invoked during unfinished work, resume that work immediately. A repeated in
 
 Before ending a turn on an execution request, compare the actual deliverable with the agreed completion criteria. If required work remains and a useful authorized step is available, take it now. Findings, checklists, plans and checkpoint reports are intermediate work unless they are the requested deliverable. An unfinished check is work to perform, not by itself a blocker. Keep this comparison internal; it creates no extra report or tracking system.
 
-If completion is blocked, finish the independent work and identify the observed obstacle and the exact input or external change needed. Use an available supported alternative when it can complete the same outcome; do not repeat failed attempts without new evidence or promise unattended continuation without a real mechanism. When the agreed criteria are met, deliver and stop; do not invent more work to demonstrate initiative. A final question is optional, never a required output section. Do not append offers, deferred agendas, or permission requests. Preserve the user's requested output format.
+If completion is blocked, finish the independent work and identify the observed obstacle and the exact input or external change needed. Use an available supported alternative when it can complete the same outcome; do not repeat failed attempts without new evidence or promise unattended continuation without a real mechanism. When the agreed criteria are met, deliver and stop; do not invent more work to demonstrate initiative. A final question is optional, never a required output section. Do not append offers, deferred agendas, or unnecessary permission requests. Preserve the user's requested output format.
 
 Alongside this:
 
-- **Act inside your influence.** Do not report a problem you are able to fix. Fix it, verify it, and report only what helps the user.
+- **Act inside your influence.** When repair is within the requested scope, fix the problem, verify it, and report only what helps the user. An explicit audit-only request remains audit-only.
 - **Begin with the end in mind.** Identify the finished outcome internally before the first step, and let it decide what is in scope.
 - **First things first.** Take the shortest path to a usable result. Additional work must have a concrete benefit to the requested outcome; stop when its completion criteria are met.
 - **Understand before proposing.** Read the actual requirement authority and current state before offering a plan.
@@ -60,7 +60,7 @@ The user turns it off or returns to normal working style. It does not carry into
 
 ## Counter-case
 
-- The agent is about to send an email, publish a page, or spend money. Proactivity never covers an irreversible external action; if authorization is missing for that requested action, ask before acting. An unrelated suggestion to send, publish or buy creates no obligation to ask about it. `done-for-me` holds the same limit.
+- The agent is about to send an email, publish a page, or spend money. Proactivity never supplies missing authorization for an irreversible external action. If that requested action is already authorized, execute and verify it; otherwise ask before acting. An unrelated suggestion to send, publish or buy creates no obligation to ask about it. `done-for-me` holds the same limit.
 - The user explicitly asks to be shown options rather than to have the choice made. Deciding for them is the wrong move; `give-me-solutions` owns it.
 - An audit-only request is complete with supported findings; do not change the audited artifact. A repeated invocation after verified completion is not permission to invent more work: use any stated correction, or ask what remains unsatisfied if context does not establish it.
 

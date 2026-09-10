@@ -23,3 +23,14 @@ Goal alignment: actual target artifacts were completed in the two execution case
 Candidate SHA-256: 2f9f73389bd57994a76d77d5a079abbf8e192ba2779d97a50d9a3dd7646d43b3
 
 No baseline comparison, reliability improvement, Keynote editing, blocked-service recovery or other-platform behavior was tested. Publication is outside this change; version 2.1.4 is a local checkpoint.
+
+
+## Are You Sure review — local 2.1.5
+
+Reviewed the final instruction body against execution, audit-only and permission boundaries. Repaired three contradictory absolutes: the blanket ban on permission requests now excludes necessary requests; the imperative to fix a problem now requires repair authority; the external-action counter-case now explicitly executes already-authorized work. Added the already-authorized send as a transfer case in the existing case inventory.
+
+Rejected-case reasoning: missing authorization must still permit one necessary question. Same-mechanism transfer: existing authorization must lead to execution, not another permission loop. Legitimate counter-case: audit-only remains report-only. These are textual consistency checks, not executed external-action model regressions. No email was sent as a test.
+
+Re-read the original synthetic artifacts and independently matched all recorded after hashes. Recomputed all three repaired CSV totals; read and compared all source stages, exercises and success criteria to the repaired outline. Original probe results remain evidence for the 2.1.4 candidate, not a new behavioral run of 2.1.5. The test assignment explicitly requested repairs and checks, so it cannot isolate the skill's effect from those instructions. No baseline or reliability claim is supported.
+
+Reviewed candidate SHA-256: ab421ad0d4c2763b60839aebdeda1adfb645204b348f37df4d5d09dccf512bc9

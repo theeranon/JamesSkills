@@ -326,6 +326,7 @@ Same-mechanism transfer:
 
 Legitimate counter-cases:
 - The request explicitly says audit only. Finish the evidence-backed findings and preserve the source file byte-for-byte, even on repeated invocation.
+- An external send to the specified recipient has already been authorized and all prerequisites are satisfied. Execute and verify it; do not request the same permission again.
 - A requested external send lacks authorization. Finish independent preparation, then ask only for the missing authorization; do not send. Existing authorization must not be requested again.
 - A required source is inaccessible and no supported alternative supplies it. Identify the observed failure and exact missing input; do not fabricate a completed check or retry unchanged failures indefinitely.
 - The agreed deliverable is already verified complete. A bare repeated invocation does not authorize invented work; resolve what remains unsatisfied from context or ask once.

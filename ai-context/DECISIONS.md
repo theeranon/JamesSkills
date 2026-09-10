@@ -387,3 +387,5 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Decision: strengthen the existing mode's resumption and turn-ending criteria; perform the comparison internally and continue available authorized work. Keep audit-only, completed-task and observed-blocker counter-cases. No new skill, framework, tracking system or authorization boundary.
 - Evidence: tests/receipts/proactive-completion-2026-09-10.md and companion JSON. Directed synthetic artifact probes passed; no comparative reliability uplift claimed.
 - Distribution: version 2.1.4 prepared locally, canonical source discovered enabled by Codex. No external publication or other-platform behavior claimed.
+
+- Review correction (local 2.1.5): reconcile absolute permission, repair and external-action wording with the existing authority boundary. Missing authorization permits a necessary question; existing authorization permits execution; audit-only prohibits repair. No scope or lifecycle change. Receipt includes textual case review and independent artifact verification, not new model-effect evidence.
