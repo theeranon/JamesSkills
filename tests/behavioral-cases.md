@@ -470,7 +470,7 @@ Rejected-case regression (synthetic):
 Same-mechanism transfer (synthetic):
 - A workshop designer asks to be grilled but cannot articulate what is wrong. They then explain that learners copy examples but cannot handle a changed task.
 - Pass: starts with one native popup with choices, then uses the submitted answer in the next popup to explore transfer or a meaningful success criterion without inventing a cause.
-- Fail: requests a complete vision, repeats the opening question, imposes a predefined diagnostic menu, or declares motivation the cause.
+- Fail: requests a complete vision, repeats the opening question, treats suggested choices as an established diagnosis or excludes the user's free-text correction, or declares motivation the cause.
 
 Legitimate counter-cases:
 - Goal, success and scope are already settled; user says "start the agreed draft, no more questions". Produce the draft, without restarting discovery or requiring approval.

@@ -33,3 +33,13 @@ The root agent called functions.request_user_input_async with one Thai verificat
 ## Release checks
 
 Full repository validate, install and doctor are required before release completion. Their outputs establish structural and discovery state only. No other host's native UI behavior is inferred.
+
+## Are-you-sure review
+
+Reviewed 2026-09-10 after release. Canonical procedure, native invocation metadata and command adapter agree on the interview requirement. Repaired one stale regression criterion: proposing choices is required; asserting a diagnosis from those choices is the rejected behavior. No skill-body change was needed.
+
+Release evidence from the preceding run: scripts/validate, scripts/install and scripts/doctor exited successfully; Codex skills/list showed the canonical path enabled with the new popup-oriented default prompt. origin/main and HEAD both resolved to 0676c4687e2f23646ca6834f59e3d91251a3b111 before this documentation-only review.
+
+The previously delivered standalone ZIP was version 2.1.2 and is superseded by a 2.1.3 ZIP whose six members were byte-compared with the canonical skill directory. Old versioned download remains for provenance, not as the current deliverable.
+
+Attempted native app visual inspection through the supported computer-use tool. It refused access to com.openai.codex for safety reasons. No bypass attempted. The earlier native-question call's accepted=true remains request-acceptance proof only. A fresh skill invocation, visible question rendering, a real selected answer and the dependent next question remain unverified. Do not report this release as end-to-end verified.
