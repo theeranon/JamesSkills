@@ -3,11 +3,13 @@
 Last verified: 2026-09-10
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.5 (local checkpoint; not published)
+Current version: 2.1.5 (published; local install verified)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+Owner-authorized push and install completed for 2.1.5 at `63148fe`. Remote main matched that commit. `scripts/install` passed; fresh Codex skills/list returned enabled `james-core:proactive-habits` with bytes matching the canonical source (SHA-256 `ab421ad0d4c2763b60839aebdeda1adfb645204b348f37df4d5d09dccf512bc9`). This is installation/discovery evidence; user trial of completion behavior remains unverified.
 
 Local Proactive Habits completion correction (DEC-040), reviewed at 2.1.5 to remove conflicting permission and repair absolutes: repeated invocation during unfinished work resumes action; ending an execution turn requires the agreed deliverable or an observed dependency after independent work is finished. Directed synthetic outline repair, CSV repair and audit-only probes passed. `scripts/validate`, `scripts/doctor` and fresh enabled Codex discovery at the canonical file passed. Existing managed link already exposes the edited source. No measured reliability uplift or external publication claimed. Evidence: `tests/receipts/proactive-completion-2026-09-10.md`.
 
