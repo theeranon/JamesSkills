@@ -378,3 +378,12 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Decision: use a permitted native question API for every interview turn, one question plus choices and free text, then wait for actual input. Resolve tool availability in the current mode. Use chat choices only when no native tool is usable or the user explicitly requests text-only. Do not pretend prose is a popup.
 - Source verification: upstream grill-me delegates to grilling; the current implementation specifies text rounds with recommendations. Native single-question popups are the owner's James adaptation.
 - Evidence: tests/receipts/grill-me-popup-2026-09-10.md. Tool-selection simulations and actual current-host invocation must be distinguished from a fresh installed-skill end-to-end run.
+
+
+## DEC-040 — Resume execution on repeated Proactive Habits invocation
+
+- Date: 2026-09-10
+- Owner clarification: the goal is finished work, not a list, report or avoidable wait; repeated invocation during unfinished work signals stalled execution. Preserve proportionality.
+- Decision: strengthen the existing mode's resumption and turn-ending criteria; perform the comparison internally and continue available authorized work. Keep audit-only, completed-task and observed-blocker counter-cases. No new skill, framework, tracking system or authorization boundary.
+- Evidence: tests/receipts/proactive-completion-2026-09-10.md and companion JSON. Directed synthetic artifact probes passed; no comparative reliability uplift claimed.
+- Distribution: version 2.1.4 prepared locally, canonical source discovered enabled by Codex. No external publication or other-platform behavior claimed.

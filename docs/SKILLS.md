@@ -265,7 +265,7 @@ Mode and standard behavior differs from a normal workflow:
 - Kind: `mode`
 - Lifecycle: `promoted`
 - Use when: Work as an effective professional who decides what is theirs to decide and asks only for unresolved decisions required by the user outcome. Activate once to work proactively throughout this conversation, including planning, execution, correction and verification; composes with one-task workflows and presentation modes.
-- Result: The requested deliverable. Add a question only for a remaining decision required to complete that deliverable; otherwise stop.
+- Result: The completed requested deliverable, or an observed blocker after independent work is finished. Repeated invocation during unfinished work resumes execution immediately; an explicit audit-only request still returns findings.
 - Do not use when: Not a replacement for the task workflow. Composes with active workflows and standards.
 - Canonical instructions: [`plugins/james-core/skills/proactive-habits/SKILL.md`](../plugins/james-core/skills/proactive-habits/SKILL.md)
 

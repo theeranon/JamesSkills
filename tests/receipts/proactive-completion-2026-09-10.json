@@ -1,0 +1,54 @@
+[
+  {
+    "scenario": "authorized workshop repair after repeat invocation",
+    "before": {
+      "workshop-outline.md": "0a14a63925e988d284b82ee966ffe846cbcea377177f4d543141276a248710c0",
+      "source.md": "83df160c96eef502085ca24d9ce0832f22a56eeb8d0415fdc504edcbc495e678",
+      "audit.md": "b4008ac33b36b97ed7247efacd131d7247042c2c5f6328e409d4022e82ac98b6"
+    },
+    "after": {
+      "workshop-outline.md": "479fcf6fba2bfa8fc2fa0c457f95e211bc27c597b1b9d2266a3db295f9f1a774",
+      "source.md": "83df160c96eef502085ca24d9ce0832f22a56eeb8d0415fdc504edcbc495e678",
+      "audit.md": "b4008ac33b36b97ed7247efacd131d7247042c2c5f6328e409d4022e82ac98b6"
+    },
+    "checks": [
+      "all three stages in source order",
+      "three source exercises and criteria preserved exactly",
+      "source unchanged"
+    ],
+    "final_response": "Updated workshop-outline.md to include Observe, Try and Adapt, each with its source exercise and success criterion. Verified all three sections against source.md."
+  },
+  {
+    "scenario": "csv-repair",
+    "before": {
+      "audit.md": "ef1d4fd6e6d874d0c50bdbacdae04b13605ab02bb73acad663df5e252588bfb5",
+      "totals.csv": "63b3160e5261730e272c81dfbab1b90fb079dce0793a11b4f08a0428d86e88f9"
+    },
+    "after": {
+      "audit.md": "ef1d4fd6e6d874d0c50bdbacdae04b13605ab02bb73acad663df5e252588bfb5",
+      "totals.csv": "8b1d9d6da305ab090936c85e8ec13f251471affc76a13cb1bae4340455ca3436"
+    },
+    "checks": [
+      "all three totals recomputed and verified",
+      "item, quantity and price unchanged"
+    ],
+    "final_response": "Corrected all three CSV totals: A 20, B 21, C 20. Verified each against quantity \u00d7 price."
+  },
+  {
+    "scenario": "csv-audit-only",
+    "before": {
+      "audit.md": "ef1d4fd6e6d874d0c50bdbacdae04b13605ab02bb73acad663df5e252588bfb5",
+      "totals.csv": "63b3160e5261730e272c81dfbab1b90fb079dce0793a11b4f08a0428d86e88f9"
+    },
+    "after": {
+      "audit.md": "f5781587399ca0388f2ba0bbe8b788ce8fa9f09c463bf324b15fbffa459a6651",
+      "totals.csv": "63b3160e5261730e272c81dfbab1b90fb079dce0793a11b4f08a0428d86e88f9"
+    },
+    "checks": [
+      "all three rows audited",
+      "CSV hash unchanged",
+      "requested audit completed"
+    ],
+    "final_response": "Audit complete: A records 19 instead of 20; B records 20 instead of 21; C records 21 instead of 20. The CSV remains unchanged."
+  }
+]

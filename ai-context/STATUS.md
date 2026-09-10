@@ -3,11 +3,13 @@
 Last verified: 2026-09-10
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.3 (native-question correction)
+Current version: 2.1.4 (local checkpoint; not published)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+Local Proactive Habits completion correction (DEC-040): repeated invocation during unfinished work resumes action; ending an execution turn requires the agreed deliverable or an observed dependency after independent work is finished. Directed synthetic outline repair, CSV repair and audit-only probes passed. `scripts/validate`, `scripts/doctor` and fresh enabled Codex discovery at the canonical file passed. Existing managed link already exposes the edited source. No measured reliability uplift or external publication claimed. Evidence: `tests/receipts/proactive-completion-2026-09-10.md`.
 
 Grill Me 2.1.3 restores the owner's required in-app popup: one question with choices, then wait for input. This corrects 2.1.2's text-first regression. Independent synthetic probes cover native-tool selection, followup, unavailable-tool fallback, explicit text-only preference, pending answers and execution. Publication of 2.1.3 and local installation were verified at commit `0676c46`; validate and doctor passed. A real current-host native question call returned accepted=true; user-visible rendering and a fresh installed-skill end-to-end run are not yet confirmed. The are-you-sure review could not inspect the app UI because the supported computer-use tool denied access to this app. Standalone download updated to 2.1.3; the earlier 2.1.2 ZIP is superseded. Evidence: `tests/receipts/grill-me-popup-2026-09-10.md`. Prior distribution and discovery evidence does not prove the UI behavior.
 
