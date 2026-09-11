@@ -1,13 +1,15 @@
 # Status
 
-Last verified: 2026-09-11
+Last verified: 2026-09-12
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.7 (context continuity and choice repair)
+Current version: 2.1.8 (async waiting and delivery recovery)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+Grill Me 2.1.8 corrects observed async lifecycle failures: successful question dispatch followed immediately by final prose, then a second question on a status challenge without an intervening answer. Native acceptance does not establish visible delivery. Candidate now requires supported interruptible waiting and recovery of the same pending decision. Exact app rendering cause remains unverified. Evidence: `tests/receipts/grill-me-pending-2026-09-12.md`.
 
 Grill Me 2.1.7 repairs context continuity, overlapping choices and tentative-answer interpretation after inspecting a real failed turn. That turn had received the exact 2.1.6 body; it was not an old-install explanation. Six context-rich synthetic next-response probes passed. Original task's complete native tool inventory and live popup/answer round trip remain unverified; higher-priority restrictions cannot be overridden by a skill. Evidence: `tests/receipts/grill-me-context-2026-09-11.md`. No edits or messages were made in the diagnosed business task.
 

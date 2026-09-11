@@ -406,3 +406,11 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Evidence: failing turn's injected body matched 2.1.6 exactly. Choices overlapped, tentative answers became assertions, and a side-task interruption displaced the current branch. Tool failure and higher-priority fallback restrictions are separate from installation.
 - Decision: recover goal/accepted choices/last unresolved branch before asking; resume after authorized side work; bridge topic changes; compare one decision dimension; preserve qualifications; repair confusing choices rather than expand architecture. Same name, scope and lifecycle.
 - Validation: tests/receipts/grill-me-context-2026-09-11.md. Synthetic context-rich response probes are not proof of native UI operation in the original task. No business-project edits or messages sent.
+
+
+## DEC-043 — Async acceptance is not waiting or visible delivery
+
+- Date: 2026-09-12
+- Observed: two reported turns really called request_user_input_async with choices and received accepted=true, then immediately ended with final prose. No user answer intervened; the follow-up sent another question rather than recovering pending delivery. The exact UI reason the question was absent remains unverified.
+- Decision: keep async input pending using supported interruptible waiting; do not finish with status prose while waiting. Distinguish accepted, visible and answered. On a status challenge, preserve and inspect the pending decision; recover only within available capabilities. Explicit stop and substantive answers release the wait. No fabricated cancellation or scheduling workaround.
+- Evidence: tests/receipts/grill-me-pending-2026-09-12.md. Original task read only, no business project changes.

@@ -483,7 +483,10 @@ Legitimate counter-cases:
 - A native question tool fails but a second permitted route exists: try that route rather than generalizing the error to the host.
 - A host has no permitted native question tool: state the limitation and use one lettered-choice chat question. Never fabricate a successful tool call.
 - The user explicitly requests text-only: honor that preference.
-- An async popup is pending: wait; do not send another question or adopt the default.
+- An async popup is pending: use a supported interruptible wait; accepted=true is not an answer and an immediate final response is not waiting. Do not send another question or adopt the default.
+- A user asks whether the interview ended while a question is pending: inspect available pending state and preserve that decision; do not generate a differently worded second question merely to look active.
+- User reports the popup missing: recover the same question through supported capabilities; do not claim unobserved visibility or cancellation.
+- A user submits an answer or explicitly stops: leave the waiting state and honor that input.
 - An evidence-backed technical choice is ready. Offer a reasoned recommendation and alternatives rather than forcing open discovery again.
 
 Evidence: `tests/receipts/grill-me-2026-09-10.md` (text-only coverage, insufficient for popup behavior) and `tests/receipts/grill-me-popup-2026-09-10.md`. Written expectations are not runtime proof.
