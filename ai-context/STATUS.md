@@ -1,13 +1,15 @@
 # Status
 
-Last verified: 2026-09-10
+Last verified: 2026-09-11
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.5 (published; local install verified)
+Current version: 2.1.6 (Grill Me native-route correction)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+Grill Me now checks remaining permitted native question routes after one tool failure instead of prematurely falling back to chat. A current-turn async preference question was accepted; no user answer has been recorded yet. Receipt: `tests/receipts/grill-me-routes-2026-09-11.md`. Existing UI and full-round-trip verification limits remain.
 
 Owner-authorized push and install completed for 2.1.5 at `63148fe`. Remote main matched that commit. `scripts/install` passed; fresh Codex skills/list returned enabled `james-core:proactive-habits` with bytes matching the canonical source (SHA-256 `ab421ad0d4c2763b60839aebdeda1adfb645204b348f37df4d5d09dccf512bc9`). This is installation/discovery evidence; user trial of completion behavior remains unverified.
 

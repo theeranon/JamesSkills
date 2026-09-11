@@ -479,6 +479,8 @@ Same-mechanism transfer (synthetic):
 Legitimate counter-cases:
 - Goal, success and scope are already settled; user says "start the agreed draft, no more questions". Produce the draft, without restarting discovery or requiring approval.
 - The user cannot judge two interface layouts without seeing them. Identify a small comparison trial rather than pressuring them into an unsupported preference; do not silently expand build authority.
+- A Plan-only question call fails in Default mode while an asynchronous question tool is available: use the asynchronous tool, without asking for a mode switch.
+- A native question tool fails but a second permitted route exists: try that route rather than generalizing the error to the host.
 - A host has no permitted native question tool: state the limitation and use one lettered-choice chat question. Never fabricate a successful tool call.
 - The user explicitly requests text-only: honor that preference.
 - An async popup is pending: wait; do not send another question or adopt the default.

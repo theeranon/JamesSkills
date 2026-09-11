@@ -389,3 +389,11 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Distribution: version 2.1.4 prepared locally, canonical source discovered enabled by Codex. No external publication or other-platform behavior claimed.
 
 - Review correction (local 2.1.5): reconcile absolute permission, repair and external-action wording with the existing authority boundary. Missing authorization permits a necessary question; existing authorization permits execution; audit-only prohibits repair. No scope or lifecycle change. Receipt includes textual case review and independent artifact verification, not new model-effect evidence.
+
+
+## DEC-041 — Exhaust permitted native question routes before chat fallback
+
+- Date: 2026-09-11
+- Owner contract: one tool failure does not establish a host-wide limitation; inspect current inventory and prefer a permitted asynchronous route in Default mode.
+- Decision: tighten Grill Me's fallback clause accordingly. Preserve single-question choices, user answer ownership and existing text-only override. No new skill or broader interview scope.
+- Evidence: tests/receipts/grill-me-routes-2026-09-11.md. Simulated tool selection remains separate from actual popup rendering and user answer ingestion.

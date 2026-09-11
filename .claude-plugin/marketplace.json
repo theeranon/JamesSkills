@@ -5,14 +5,14 @@
     "url": "https://github.com/theeranon"
   },
   "description": "Agent skill library. 22 skills across three pillars, each satisfying one enforced structural contract with named principles and declared exclusions.",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "plugins": [
     {
       "name": "james-core",
       "displayName": "James Core",
       "source": "./plugins/james-core",
       "description": "Decision posture, execution ownership, and the quality gates that run before work is accepted. 9 skills.",
-      "version": "2.1.5",
+      "version": "2.1.6",
       "author": {
         "name": "James Theeranon"
       },
@@ -23,7 +23,7 @@
       "displayName": "James Productivity",
       "source": "./plugins/james-productivity",
       "description": "Thinking, research, coaching, and executive deliverables. 8 skills.",
-      "version": "2.1.5",
+      "version": "2.1.6",
       "author": {
         "name": "James Theeranon"
       },
@@ -34,7 +34,7 @@
       "displayName": "James Software",
       "source": "./plugins/james-software",
       "description": "Engineering method, project contracts, and interface law. 5 skills.",
-      "version": "2.1.5",
+      "version": "2.1.6",
       "author": {
         "name": "James Theeranon"
       },
