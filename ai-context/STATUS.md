@@ -3,11 +3,13 @@
 Last verified: 2026-09-11
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.6 (Grill Me native-route correction)
+Current version: 2.1.7 (context continuity and choice repair)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+Grill Me 2.1.7 repairs context continuity, overlapping choices and tentative-answer interpretation after inspecting a real failed turn. That turn had received the exact 2.1.6 body; it was not an old-install explanation. Six context-rich synthetic next-response probes passed. Original task's complete native tool inventory and live popup/answer round trip remain unverified; higher-priority restrictions cannot be overridden by a skill. Evidence: `tests/receipts/grill-me-context-2026-09-11.md`. No edits or messages were made in the diagnosed business task.
 
 Grill Me 2.1.6 published and installed: remote main and local HEAD both matched `66fd9b2` during the 2026-09-11 dual audit. Fresh Codex discovery returned exactly one enabled Grill Me entry whose source matched the canonical body (SHA-256 `7635dc270d3fd1b91d80272d45c35176fc36c731a412141bce8557f44998e63c`). Claude, shared-agent and Codex skill links byte-match that body; this is not Claude runtime evidence. Standalone 2.1.6 ZIP verified across all six files, superseding the earlier 2.1.3 download. Native-route correction evidence: `tests/receipts/grill-me-routes-2026-09-11.md`. Current-host async request acceptance is proven; user-visible rendering, answer submission, dependent next popup and a fresh installed-skill end-to-end run remain unverified. No user preference was inferred from unanswered questions.
 

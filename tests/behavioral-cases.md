@@ -488,6 +488,14 @@ Legitimate counter-cases:
 
 Evidence: `tests/receipts/grill-me-2026-09-10.md` (text-only coverage, insufficient for popup behavior) and `tests/receipts/grill-me-popup-2026-09-10.md`. Written expectations are not runtime proof.
 
+Context-continuity regressions (synthetic, 2026-09-11):
+- After authorized note-saving, repeated invocation resumes the unresolved customer-attribution decision before later project-access rules. The question carries a short bridge, not a generic restart. Saving notes alone does not end discovery.
+- Choices "central person with roles" and "central person with role profiles" overlap. Repair the single unresolved dimension rather than forcing either/or or producing an architecture lecture.
+- An established workshop goal is independent transfer. A subsequent question must investigate that gap rather than ask the user to choose transfer versus satisfaction again.
+- "B, because accounting probably requires it, but unsure" leaves the premise and commitment unresolved. Do not record unconditional approval or affirm an unverified accounting rule.
+- Explicit stop returns only settled decisions. A missing native tool plus a higher-priority text-choice prohibition uses one concise question; do not claim the skill can override host restrictions.
+Evidence: `tests/receipts/grill-me-context-2026-09-11.md`.
+
 ## Make It James UX — `make-it-james-ux`
 
 Request: Style a dashboard inside a project that already uses a component library with its own typeface and 4px radii, then style a second one in a project with no design system.

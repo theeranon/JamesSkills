@@ -2,6 +2,6 @@ interface:
   display_name: "Grill Me — James Edition"
   short_description: "ถามผ่านป๊อปอัปทีละข้อ พร้อมตัวเลือกให้กดตอบ"
   brand_color: "#2563EB"
-  default_prompt: "ใช้ $grill-me ขุดเป้าหมายของเรื่องที่คุยอยู่ เปิดคำถามในแอปทีละข้อพร้อมตัวเลือกให้กด แล้วถามต่อจากคำตอบ"
+  default_prompt: "ใช้ $grill-me ต่อจากบริบทและข้อสรุปที่คุยไว้ เปิดคำถามในแอปทีละข้อพร้อมตัวเลือกที่ไม่ซ้อนกัน และขุดต่อจากคำตอบ"
 policy:
   allow_implicit_invocation: false

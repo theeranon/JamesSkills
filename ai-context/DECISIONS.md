@@ -397,3 +397,12 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Owner contract: one tool failure does not establish a host-wide limitation; inspect current inventory and prefer a permitted asynchronous route in Default mode.
 - Decision: tighten Grill Me's fallback clause accordingly. Preserve single-question choices, user answer ownership and existing text-only override. No new skill or broader interview scope.
 - Evidence: tests/receipts/grill-me-routes-2026-09-11.md. Simulated tool selection remains separate from actual popup rendering and user answer ingestion.
+
+
+## DEC-042 — Preserve interview context and compare genuine alternatives
+
+- Date: 2026-09-11
+- Owner request: repair Grill Me itself after a live failure, using the other task only as diagnostic evidence.
+- Evidence: failing turn's injected body matched 2.1.6 exactly. Choices overlapped, tentative answers became assertions, and a side-task interruption displaced the current branch. Tool failure and higher-priority fallback restrictions are separate from installation.
+- Decision: recover goal/accepted choices/last unresolved branch before asking; resume after authorized side work; bridge topic changes; compare one decision dimension; preserve qualifications; repair confusing choices rather than expand architecture. Same name, scope and lifecycle.
+- Validation: tests/receipts/grill-me-context-2026-09-11.md. Synthetic context-rich response probes are not proof of native UI operation in the original task. No business-project edits or messages sent.
