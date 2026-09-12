@@ -3,11 +3,13 @@
 Last verified: 2026-09-12
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.10 (local proactive correction; not published)
+Current version: 2.1.10 (published; local install verified)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+Owner-authorized 2.1.10 push and local install completed. Remote main matched `4fc5038`; installer passed. Fresh Codex discovery returned one enabled Proactive Habits entry matching the canonical tested body (`a98beece94ab1ebcbd6987ea94e6955f73da16e174dc67c4a4591b1c126d4511`). This verifies local discovery, not model reliability or other-host behavior.
 
 Proactive Habits 2.1.10 adds explicit same-turn action after correction without treating a token edit as completion. Three fresh-context short-challenge probes completed checklist and CSV repairs and preserved a review-only artifact. Parent verified the artifacts; validate, doctor and canonical Codex discovery passed. Evidence: `tests/receipts/proactive-same-turn-2026-09-12.md`. No reliability guarantee or external publication claimed.
 
