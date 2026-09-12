@@ -3,11 +3,13 @@
 Last verified: 2026-09-12
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.8 (async waiting and delivery recovery)
+Current version: 2.1.9 (local proactive correction; not published)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+Proactive Habits 2.1.9 preserves execution across questions about omissions and acts on available next steps. Three neutral-context synthetic cases produced a checked schema/handoff, completed facilitator plan, and findings-only audit preserving the plan. Validate, doctor and enabled canonical Codex discovery passed. No baseline improvement rate claimed. Evidence: `tests/receipts/proactive-correction-2026-09-12.md`.
 
 Grill Me 2.1.8 corrects observed async lifecycle failures: successful question dispatch followed immediately by final prose, then a second question on a status challenge without an intervening answer. Native acceptance does not establish visible delivery. Candidate now requires supported interruptible waiting and recovery of the same pending decision. Exact app rendering cause remains unverified. Evidence: `tests/receipts/grill-me-pending-2026-09-12.md`.
 

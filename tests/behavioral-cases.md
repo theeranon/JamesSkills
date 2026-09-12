@@ -333,6 +333,13 @@ Legitimate counter-cases:
 
 Evidence: `tests/receipts/proactive-completion-2026-09-10.md`. Written scenarios are specifications; distinguish executed artifact probes from model-reliability or platform claims.
 
+Correction-as-question regression (2026-09-12):
+- Existing execution request requires a developer handoff with relationships and executable schema. The assistant claims readiness with only requirements. User asks where the relationships are and how it is ready.
+- Must: inspect the existing requirements, produce the missing authorized artifacts, check the schema and correct the readiness claim. Do not treat the question as cancellation of the assignment.
+- Transfer: a facilitator plan omits an activity and criteria; a question about those omissions must lead to the completed authorized plan.
+- Counter-case: identical omissions under explicit findings-only instructions require a complete audit while preserving the plan. A direct request to explain the skill remains an explanation request.
+- Forward probes receive only these conversations and raw inputs, not this rubric or the intended repair. Inspect artifacts separately from final prose.
+
 ## Proactive Dev — `proactive-dev`
 
 Request: Build a new billing service in a project whose `ARCHITECTURE.md` records a single Postgres source of truth.

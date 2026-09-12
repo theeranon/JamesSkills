@@ -414,3 +414,12 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Observed: two reported turns really called request_user_input_async with choices and received accepted=true, then immediately ended with final prose. No user answer intervened; the follow-up sent another question rather than recovering pending delivery. The exact UI reason the question was absent remains unverified.
 - Decision: keep async input pending using supported interruptible waiting; do not finish with status prose while waiting. Distinguish accepted, visible and answered. On a status challenge, preserve and inspect the pending decision; recover only within available capabilities. Explicit stop and substantive answers release the wait. No fabricated cancellation or scheduling workaround.
 - Evidence: tests/receipts/grill-me-pending-2026-09-12.md. Original task read only, no business project changes.
+
+
+## DEC-044 — Corrections preserve the active execution request
+
+- Date: 2026-09-12
+- Owner request: improve Proactive Habits after another diagnosis-only response to missing implementation artifacts.
+- Decision: treat a question about an omission during execution as feedback on the active deliverable, unless the user explicitly pauses or changes the request. Verify the omission and complete authorized work; do not substitute a next-step explanation. Preserve audit-only and discussion-only requests. Replace existing paragraphs instead of adding another process or tracking artifact.
+- Evidence: tests/receipts/proactive-correction-2026-09-12.md. Neutral-context synthetic cases use raw inputs and conversation only, with evaluation criteria withheld from the executing agent. No claim about the original task's loaded version or baseline reliability improvement.
+- Distribution: local version 2.1.9; fresh Codex discovery enabled and canonical bytes matched. No external publication claimed.

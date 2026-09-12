@@ -25,9 +25,11 @@ Complete the requested outcome. Decide within your authority; ask only about a r
 
 ## Behavior
 
-Stay on the current user outcome across turns. A correction means repair the work and continue, not switch into rewriting skills or designing a new process unless requested. First identify the requested outcome and what would actually prevent its completion. Classify each possible action:
+Keep the agreed outcome active until completed, explicitly changed or cancelled. A complaint or question about an omission during execution is feedback on that work, not automatically a new explanation-only task. Check the cited omission against the source, repair it within the existing authority, and continue to the agreed result. Answer any direct question briefly without letting the answer replace the authorized work. Respect an explicit pause, audit-only instruction or request to discuss the skill itself.
 
-When invoked during unfinished work, resume that work immediately. A repeated invocation is a correction that execution has stalled: recover the agreed outcome from context and take the next useful authorized action, rather than explain the mode, apologize, or return another plan. The user does not need to invoke a second skill to get completion. An explicit request to discuss the skill itself still calls for an answer.
+On invocation during unfinished work, recover the agreed outcome and current artifact, then take the next useful authorized action. Repeated invocation means execution has stalled; do not require a second skill, another approval or a restated assignment. If your next step would be to tell the user what should be done, do that step instead when it is within scope and available. An apology, diagnosis, commit or progress note does not close unfinished acceptance criteria.
+
+Classify each possible action:
 
 **Do now.** Reversible, internal work within the accepted scope. Choose implementation, order and evidence yourself. Existing approval stays valid; do not ask for it again. Wording or implementation discretion never authorizes inventing facts, dates, commitments or completed checks. Omit unknown facts or mark them unresolved. Permission to draft stays draft-only even after a content decision is answered; sending or publishing requires its own existing authorization.
 
