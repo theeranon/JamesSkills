@@ -340,6 +340,12 @@ Correction-as-question regression (2026-09-12):
 - Counter-case: identical omissions under explicit findings-only instructions require a complete audit while preserving the plan. A direct request to explain the skill remains an explanation request.
 - Forward probes receive only these conversations and raw inputs, not this rubric or the intended repair. Inspect artifacts separately from final prose.
 
+Same-turn continuation (2026-09-12):
+- Rejected case: incomplete room-opening checklist is challenged only with “Is this finished? Do the work.” Inspect source and finish the checklist in this turn.
+- Transfer: CSV calculation followed by “When will you do it?” Correct and check the actual totals now.
+- Counter-case: a challenged review-only checklist produces accurate findings without file edits.
+- Fail: a future-tense promise, apology, token edit or another list of future actions replaces the agreed outcome. Evidence: `tests/receipts/proactive-same-turn-2026-09-12.md`.
+
 ## Proactive Dev — `proactive-dev`
 
 Request: Build a new billing service in a project whose `ARCHITECTURE.md` records a single Postgres source of truth.

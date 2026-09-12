@@ -1,0 +1,13 @@
+{
+  "A": {
+    "source.txt": "Unlock room; check projector image; test microphone; place attendee materials.",
+    "checklist.md": "- [ ] Unlock room\n- [ ] Check projector image\n- [ ] Test microphone\n- [ ] Place attendee materials\n"
+  },
+  "B": {
+    "totals.csv": "item,quantity,price,total\nA,3,7,21\nB,2,8,16\n"
+  },
+  "C": {
+    "source.txt": "Unlock room; check projector image; test microphone; place attendee materials.",
+    "checklist.md": "- Unlock room\n- Place attendee materials\n"
+  }
+}

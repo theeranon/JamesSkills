@@ -3,11 +3,13 @@
 Last verified: 2026-09-12
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.9 (local proactive correction; not published)
+Current version: 2.1.10 (local proactive correction; not published)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+Proactive Habits 2.1.10 adds explicit same-turn action after correction without treating a token edit as completion. Three fresh-context short-challenge probes completed checklist and CSV repairs and preserved a review-only artifact. Parent verified the artifacts; validate, doctor and canonical Codex discovery passed. Evidence: `tests/receipts/proactive-same-turn-2026-09-12.md`. No reliability guarantee or external publication claimed.
 
 Proactive Habits 2.1.9 preserves execution across questions about omissions and acts on available next steps. Three neutral-context synthetic cases produced a checked schema/handoff, completed facilitator plan, and findings-only audit preserving the plan. Validate, doctor and enabled canonical Codex discovery passed. No baseline improvement rate claimed. Evidence: `tests/receipts/proactive-correction-2026-09-12.md`.
 
