@@ -1,5 +1,5 @@
 ---
-description: Step out from implementation detail through the project goal to the strategy that should achieve it. Use when work is optimizing the wrong layer or losing its purpose; not for an isolated implementation or visual fix.
+description: Step back from implementation detail through the project goal to the strategy that should achieve it. Use for zoom out, are we solving the right problem, big picture, ถอยมามองภาพรวม, หลงทางแล้ว, ทำไปเพื่ออะไร. Not for an isolated implementation or visual fix.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/zoom-out/SKILL.md

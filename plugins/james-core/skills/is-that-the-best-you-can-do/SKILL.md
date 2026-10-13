@@ -2,7 +2,7 @@
 name: is-that-the-best-you-can-do
 kind: workflow
 license: CC-BY-NC-4.0
-description: Measure how far a correct but unambitious result sits below its ceiling, then close the material gap with proportionate effort. Use when the work is not wrong but not good enough; not for defects and not for unfinished work.
+description: Raise a correct but ordinary result to its practical ceiling with proportionate effort. Use for is that the best you can do, make it better, level this up, ดีกว่านี้ได้ไหม, ยังไม่ว้าว, เอาให้สุด. Not for defects and not for unfinished work.
 ---
 
 # Is That The Best You Can Do

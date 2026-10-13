@@ -1,5 +1,5 @@
 ---
-description: Shape every reply so it can be acted on immediately without holding state in memory. Use to change how answers are presented; not to change what the agent is allowed to decide and not to shorten by removing needed information.
+description: Shape every reply so it can be acted on at once without holding state in memory, with the answer first and steps numbered. Use for I have ADHD, too long, keep it simple, สั้นๆ, ยาวไป, สรุปให้ทำตามได้เลย. Changes presentation only and never drops needed information.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/i-have-adhd/SKILL.md

@@ -2,7 +2,7 @@
 name: catchup
 kind: workflow
 license: CC-BY-NC-4.0
-description: Reconstruct one project's verified current state after a gap and deliver it as the standard catchup page. Use for where-are-we-now after a handoff or stale status; not for ordinary progress inside active work. A request to continue work uses this reconstruction as its starting point.
+description: Reconstruct one project's verified current state after a gap and deliver the standard catchup page. Use for where are we, catch me up, status after a handoff, ถึงไหนแล้ว, อัปเดตสถานะ, ทำต่อจากเดิม. Not for routine progress inside active work; continuing work starts from this reconstruction.
 ---
 
 # Catchup
@@ -38,7 +38,7 @@ Work out what is actually true right now, and hand back one page that says so.
 
 ## Stop when
 
-The report names the exact target, states current truth against a named comparison point or says none is established, lists what is open with its blocker and owner, keeps conflicts and unknowns visible, and ends in one safe next action or an explicit verdict that nothing remains in scope. Return `ไม่มี action เพิ่มใน scope นี้` when the bounded work is genuinely closed, rather than inventing a follow-up.
+The report names the exact target, states current truth against a named comparison point or says none is established, lists what is open with its blocker and owner, keeps conflicts and unknowns visible, and ends in one safe next action or an explicit verdict that nothing remains in scope. Return `ไม่มี action เพิ่มใน scope นี้` when the bounded work is genuinely closed, rather than inventing a follow-up; say the same thing in the user's language when the conversation is not in Thai.
 
 On Windows invoke the same helper with `python` when `python3` is not on PATH.
 

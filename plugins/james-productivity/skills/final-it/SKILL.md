@@ -2,7 +2,7 @@
 name: final-it
 kind: output
 license: CC-BY-NC-4.0
-description: Choose the format that actually serves the recipient and finish the work in it. Use when no narrower output skill owns the artifact; not for meeting records, not for one-page briefs, and not for supplying missing content.
+description: Choose the format that actually serves the recipient and finish the work in it. Use for finalize this, make it ready to send, ทำให้พร้อมส่ง, ทำเป็นฉบับจริง, when no narrower output skill owns the artifact. Not for meeting records, one-page briefs or supplying missing content.
 ---
 
 # Final It
@@ -34,7 +34,7 @@ Pick the simplest form that serves the reader, then finish it properly.
 
 ## Stop when
 
-The artifact exists in its chosen format, its native checks pass, the relevant rendered output has been inspected, and the only thing returned alongside it is uncertainty the recipient genuinely needs to know about.
+The artifact exists in its chosen format, its native checks pass, the relevant rendered output has been inspected, and the only thing returned alongside it is uncertainty the recipient genuinely needs to know about. For a requested source-only or chat-text deliverable, the text is complete and no rendering claim is made.
 
 ## Principles
 

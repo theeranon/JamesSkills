@@ -2,7 +2,7 @@
 name: hand-it-off
 kind: internal-routing
 license: CC-BY-NC-4.0
-description: Internal fallback that assigns one primary owner when no skill obviously matches. Never select it as the primary workflow, never let it produce a deliverable, and never use it when a direct owner is already clear.
+description: Internal fallback that assigns one primary owner when no skill obviously matches, and holds the Candidate Card gate before any new skill, name or alias. Never select it as the primary workflow, never let it produce a deliverable, and never use it when a direct owner is already clear.
 ---
 
 # Hand It Off

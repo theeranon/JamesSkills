@@ -2,7 +2,7 @@
 name: one-page-pls
 kind: output
 license: CC-BY-NC-4.0
-description: Turn material into a self-contained single-page brief, with one page per topic by default. Use when material must stay on one page per topic; not for meeting records that must hold every agenda in one file.
+description: Turn material into a self-contained single-page brief, one page per topic by default. Use for one page please, one-pager, executive brief, สรุปหน้าเดียว, ขอ one page. Not for a full meeting record that must hold every agenda in one file.
 ---
 
 # One Page Please
@@ -32,7 +32,7 @@ Confirm the requested output surface from the existing request. If the user asks
 4. For HTML delivery, duplicate [assets/a4-landscape-template.html](assets/a4-landscape-template.html) for each requested page and replace every token. Preserve the compact layout and visual invariants; adapt sections only where the topic genuinely requires it.
 5. If one topic cannot fit legibly, keep the one-page decision surface and link a clearly named appendix or full record, or return an explicit `one-page unsuitable` verdict. Never hide material or shrink it into unreadability.
 6. For rendered file delivery, render and inspect every output separately using [references/render-qa.md](references/render-qa.md). Deliver editable HTML only by default; produce a PDF only when it is explicitly requested.
-7. For portable HTML delivery, the shipped template alone is not self-contained proof. For a genuinely portable single file, run the font embedding helper at `../../../james-software/skills/make-it-james-ux/scripts/embed_ibm_plex_thai.py`, confirm no remote font links remain, and verify the rendered typeface. If the font files are unavailable, report that exact portability gate rather than claiming self-containment.
+7. For portable HTML delivery, the shipped template alone is not self-contained proof. For a genuinely portable single file, run the font embedding helper `scripts/embed_ibm_plex_thai.py` from the installed `make-it-james-ux` skill directory, confirm no remote font links remain, and verify the rendered typeface. Locate that directory by loading `make-it-james-ux`; never assume a relative path from this skill, because a linked install and a plugin install lay the folders out differently. If the helper or the font files are unavailable, report that exact portability gate rather than claiming self-containment.
 
 ## Stop when
 

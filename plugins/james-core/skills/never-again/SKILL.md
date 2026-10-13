@@ -2,7 +2,7 @@
 name: never-again
 kind: workflow
 license: CC-BY-NC-4.0
-description: Repair a recurring failure mechanism with a narrow, discoverable lesson or an update to an existing rule. Use when a mistake should never recur; not for fixing the one bad output and not for routine quality sweeps.
+description: Turn a recurring failure into a narrow, discoverable lesson or a repaired existing rule. Use for never again, stop making this mistake, อย่าให้เกิดอีก, พลาดซ้ำอีกแล้ว, จำไว้เลย. Not for fixing the one bad output and not for routine quality sweeps.
 ---
 
 # Never Again
@@ -29,7 +29,7 @@ Repair the mechanism and make the lesson discoverable at the right scope.
 2. Choose the narrowest durable scope the evidence supports: this output, this project, this workflow, or the shared library. Generalise no further: do not add affected statuses, domains or prohibitions merely because they sound related. Do not accumulate one-case keyword bans when the failure actually came from judgment, ownership, evidence, or architecture; fix the mechanism instead. Preserve any transfer scenario explicitly requested by the user; demonstrate the mechanism within it rather than substitute an easier example.
 3. Follow the requested action boundary: if asked for a draft or if writing tools are unavailable, return the proposed lesson and regressions and state that nothing was persisted. Never claim a pointer, test or repair was created without executing and verifying it. Otherwise update a relevant existing lesson or, if none covers the mechanism, write the lesson to `ai-context/LESSONS.md` in the project at that scope, as one entry: what happened, the mechanism that allowed it, the rule now in force, and the date.
 4. Make it discoverable through the existing automatically loaded contract. Reuse a valid required-reading pointer when present; add the missing pointer only to the actual host contract, without creating unrelated vendor files. A pointer requests reading; it does not prove every runtime read or obeyed it.
-5. Add three regressions to the behavioral cases: the rejected case, a different case with the same mechanism, and a legitimate counter-case the rule must still allow.
+5. Add three regressions where the project keeps its behavioral cases or tests: the rejected case, a different case with the same mechanism, and a legitimate counter-case the rule must still allow. When the project has no such place, record the three cases under the lesson entry itself rather than inventing a test system.
 6. Audit outputs already affected by the new rule and repair them inside scope.
 
 ## Stop when

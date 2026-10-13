@@ -2,7 +2,7 @@
 name: i-have-adhd
 kind: mode
 license: CC-BY-NC-4.0
-description: Shape every reply so it can be acted on immediately without holding state in memory. Use to change how answers are presented; not to change what the agent is allowed to decide and not to shorten by removing needed information.
+description: Shape every reply so it can be acted on at once without holding state in memory, with the answer first and steps numbered. Use for I have ADHD, too long, keep it simple, สั้นๆ, ยาวไป, สรุปให้ทำตามได้เลย. Changes presentation only and never drops needed information.
 ---
 
 # I Have ADHD
@@ -37,6 +37,8 @@ Lead with the answer or action and make relevant state easy to see.
 - When earlier information changes, show a compact delta rather than silently editing what was said.
 - Finish the current issue before raising the next one.
 - No preamble announcing what you are about to do, no recap of what was just done, no closing pleasantry.
+
+An explicit user instruction or host output setting about length or format takes precedence over these defaults; this mode shapes whatever room remains.
 
 Concise means low friction. It never means incomplete, cryptic, or intellectually flattened. When a rule would delete the answer itself, the answer wins and the shape stays.
 

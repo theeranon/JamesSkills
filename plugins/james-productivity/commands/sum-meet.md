@@ -1,5 +1,5 @@
 ---
-description: Build one auditable meeting record holding every agenda in a single file, with evidence kept separate from interpretation. Use for minutes or meeting summaries at the requested depth; full records retain every agenda, while a requested short summary stays short.
+description: Build one auditable meeting record holding every agenda in a single file, with evidence kept apart from interpretation. Use for meeting minutes, summarize this meeting or transcript, สรุปประชุม, ทำ minutes, at the requested depth; a requested short summary stays short.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/sum-meet/SKILL.md

@@ -1,5 +1,6 @@
 ---
 name: skill-router
+license: CC-BY-NC-4.0
 description: Compatibility name for hand-it-off. Use when an older instruction explicitly requests skill-router; new work uses hand-it-off.
 ---
 

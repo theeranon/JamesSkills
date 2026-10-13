@@ -2,7 +2,7 @@
 name: dev-are-you-sure
 kind: workflow
 license: CC-BY-NC-4.0
-description: Re-inspect delivered software with checks matched to its risks and repair findings inside a declared surface. Use when code looks done but the diligence is in doubt; not for business artifacts and not for external claims.
+description: Re-inspect delivered software with checks matched to its risks and repair findings inside a declared surface. Use when code looks done but may not be, as in are you sure it works, did you test it, โค้ดชัวร์ไหม, เทสแล้วเหรอ, เช็คโค้ดอีกรอบ. Not for business artifacts or outside claims.
 ---
 
 # Dev Are You Sure
@@ -26,10 +26,10 @@ Recheck the delivered behavior and its evidence, then repair the defects you can
 
 ## Procedure
 
-Establish the requested surface and choose checks that could reveal a material defect. For a full audit, cover all five layers and all boundary links, marking genuinely irrelevant checks not applicable. A small local change needs relevant checks, not nine mandatory report sections. Repair inside the surface; escalate what needs a decision.
+Establish the requested surface and choose checks that could reveal a material defect. Read the actual diff or files in that surface, and run the project's existing build, type check and tests that cover it before judging; a check that could not run is reported as not tested. For a full audit, cover all five layers and all boundary links, marking genuinely irrelevant checks not applicable. A small local change needs relevant checks, not nine mandatory report sections. Repair inside the surface; escalate what needs a decision.
 
 1. **Integrity.** For stateful flows, exercise sequential use: navigate away and back, act twice, act while loading, act after failure. Trace how each transition preserves its invariant through explicit state, derived values, framework lifecycle or stateless design. An absent reset statement is not evidence of a defect; establish an incorrect reachable behavior before prescribing a reset.
-2. **Architecture.** Find hardcoded values, secrets, magic numbers, credentials in source, and logic sitting in the wrong layer. Convert missing configuration into an explicit input contract rather than a plausible default.
+2. **Architecture.** Find hardcoded values, secrets, magic numbers, credentials in source, and logic sitting in the wrong layer. Convert missing configuration into an explicit input contract rather than a plausible default. Where the surface accepts outside input, guards data or changes a schema, check authorization, input validation, injection paths and the migration with its rollback.
 3. **Hygiene.** Remove debug output, commented-out blocks, dead branches, unused imports, orphaned variables, and scratch filenames that would be read as intentional by whoever inherits this.
 4. **Interface.** Apply the installed visual and interaction standard rather than restating it here. Report anything that standard forbids and cannot be fixed inside the surface.
 5. **Longevity.** Inspect plausible compatibility and maintenance risks exposed by this change. Distinguish demonstrated defects from uncertain future risks; use names understandable without this conversation.

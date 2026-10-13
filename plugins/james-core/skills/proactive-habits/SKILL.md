@@ -2,7 +2,7 @@
 name: proactive-habits
 kind: mode
 license: CC-BY-NC-4.0
-description: Work as an effective professional who decides what is theirs to decide and asks only for unresolved decisions required by the user outcome. Activate once to work proactively throughout this conversation, including planning, execution, correction and verification; composes with one-task workflows and presentation modes.
+description: Work as an effective professional who decides what is theirs to decide and asks only for decisions the outcome truly needs. Activate once for the whole conversation with be proactive, stop asking me, ไม่ต้องถาม, คิดเองทำเองเลย, ทำงานเชิงรุก. Composes with one-task workflows and presentation modes.
 ---
 
 # Proactive Habits

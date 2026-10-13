@@ -2,7 +2,7 @@
 name: done-for-me
 kind: workflow
 license: CC-BY-NC-4.0
-description: Carry an already-agreed task all the way to a finished, verified outcome without stopping to ask. Use for a one-time instruction to finish an established outcome. Decide routine planning and implementation details yourself; active conversation modes remain in force.
+description: Carry an already-agreed task to a finished, verified outcome without stopping to ask. Use for just finish it, do it all, ทำให้จบ, ทำให้เสร็จเลย, จัดการให้หมด. Decide routine planning and implementation details yourself; active conversation modes remain in force.
 ---
 
 # Done For Me
@@ -31,7 +31,7 @@ Take the agreed job to the finish line and only then come back.
 4. When one path blocks, continue every independent path. Use existing configuration mechanisms for missing inputs. Add a settings surface only when the requested product actually needs one; never fabricate a value.
 5. Investigate and repair ordinary failures. Do not stop at the first error, tool limitation, or incomplete subtask.
 6. Verify the real outcome yourself before reporting. A result you have not exercised is not finished.
-7. A failed test starts diagnosis and correction inside scope; it is not a completed delivery. Do not replace execution with another plan or ask whether to continue already-authorized work. Report once, at the end: what now works, what was decided along the way, and only the gates that genuinely remain, each with its owner.
+7. A failed test starts diagnosis and correction inside scope; it is not a completed delivery. Do not replace execution with another plan or ask whether to continue already-authorized work. Brief progress notes never replace this: give the final report once, at the end, covering what now works, what was decided along the way, and only the gates that genuinely remain, each with its owner.
 
 When delegation shortens the path, parallelise only write-disjoint work, give every worker the same requirement identifiers, base revision, owned paths, allowed actions, forbidden external effects, and acceptance evidence, and keep verification independent from implementation.
 

@@ -2,7 +2,7 @@
 name: research-it
 kind: workflow
 license: CC-BY-NC-4.0
-description: Settle a doubt about one claim, approach, or requirement with outside evidence from official sources and real users. Use when confidence is missing, not when choosing between options or checking your own work.
+description: Settle a doubt about one claim, approach or requirement with outside evidence from official sources and real users. Use for is that true, prove it, check the facts, จริงเหรอ, หาหลักฐานมา, เช็คข้อมูลก่อน. Not for choosing between options or checking your own work.
 ---
 
 # Research It
@@ -29,7 +29,12 @@ Resolve one outside claim with evidence the reader can audit.
 2. Use the supplied evidence first. If outside research is needed and available, seek primary documentation and independent experience, including evidence against the claim. Report the sources actually read and searches actually performed. A supplied-source task does not require inventing a search or refusing an answer because a preferred source type is absent.
 3. Keep source assertions, observed results, independent corroboration and your inference distinguishable. Record useful source identity, date, scope and stake only when known; mark material missing information unknown. Independence, lack of sponsorship, publication date and test coverage cannot be inferred from a document's label. A commercial stake does not erase observations; assess their methods and limits rather than discard them automatically.
 4. Decide what the evidence establishes. A valid counterexample refutes an absolute claim within its original scope; successful cases or a later fix do not erase that result. Revising it requires resolving every decisive contrary item, not merely explaining away one. A changed version or narrower scope is a separate claim. An exhaustive check can support a bounded finite claim. Selected anecdotes cannot establish a population rate without a suitable denominator and sampling method.
-5. Deliver the requested wording or answer first, with only the evidence and limits needed to support it. Before returning it, check each factual sentence against its source: do not move a date, test condition or observation from one source to another; turn missing information into unknown, not an assertion of absence. Preserve relative dates when no task reference date is supplied. Distinguish a listed or planned item from an observed delivery. Treat representativeness, independence and motives as unknown unless evidenced. For a causal or typical-population claim, an uncontrolled before/after observation does not establish an effect or a typical estimate. Remove unsupported details rather than soften them with likely or plausible. Use supported, contradicted, conditional or unsettled as appropriate. Do not append hypothetical reversal conditions unless the user asks; if asked, keep them valid for the original claim. A ledger is optional, and a one-sentence request gets one sentence.
+5. Deliver the requested wording or answer first, with only the evidence and limits needed to support it. Use supported, contradicted, conditional or unsettled as appropriate. A ledger is optional, and a one-sentence request gets one sentence. Before returning it, check each factual sentence against its source:
+   - Do not move a date, test condition or observation from one source to another; turn missing information into unknown, not an assertion of absence.
+   - Preserve relative dates when no task reference date is supplied. Distinguish a listed or planned item from an observed delivery.
+   - Treat representativeness, independence and motives as unknown unless evidenced. For a causal or typical-population claim, an uncontrolled before/after observation does not establish an effect or a typical estimate.
+   - Remove unsupported details rather than soften them with likely or plausible.
+   - Do not append hypothetical reversal conditions unless the user asks; if asked, keep them valid for the original claim.
 
 ## Stop when
 

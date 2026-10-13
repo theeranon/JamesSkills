@@ -2,7 +2,7 @@
 name: sum-meet
 kind: output
 license: CC-BY-NC-4.0
-description: Build one auditable meeting record holding every agenda in a single file, with evidence kept separate from interpretation. Use for minutes or meeting summaries at the requested depth; full records retain every agenda, while a requested short summary stays short.
+description: Build one auditable meeting record holding every agenda in a single file, with evidence kept apart from interpretation. Use for meeting minutes, summarize this meeting or transcript, สรุปประชุม, ทำ minutes, at the requested depth; a requested short summary stays short.
 ---
 
 # Sum Meet
@@ -33,7 +33,7 @@ Match the requested depth and surface first. A short chat summary returns that s
 5. Retain contradictions and disputed facts rather than choosing a version. Label every necessary interpretation as inference. Normalise a relative date only when the meeting date makes it unambiguous, and keep the original phrase beside it.
 6. For full HTML delivery, write one self-contained A4 portrait HTML file containing every topic as its own zone inside the same file, in this reading order: meeting identity, date, participants, purpose, and source coverage; an executive outcome covering every topic without replacing the detail below; the agenda map followed by one detailed zone per topic; the consolidated action and open-loop registers across all topics; and source notes, unresolved ambiguities, and a completeness statement. Duplicate [assets/meeting-record.html](assets/meeting-record.html) and replace every token. Remove unsupported or empty template components instead of inventing filler, and remove every placeholder before delivery. Write recipient-ready prose: transform rough conversation into final wording and remove production notes, complaints, prompt residue, and design commentary, without dropping evidence needed to understand a decision or action.
 7. For HTML delivery, render and inspect every print page using browser print emulation. Deliver the requested format; HTML is the full-record default only when unspecified. Do not create a PDF merely to prove the HTML renders. Never infer PDF need from A4, printable, print-ready, report, or meeting minutes; produce one only on an explicit request or a directly confirmed authoritative recipient constraint for one fixed print file. When both HTML and PDF exist, compare their content directly; a successful render command or file creation is not visual proof.
-8. For a genuinely portable HTML single file, run the font embedding helper at `../../../james-software/skills/make-it-james-ux/scripts/embed_ibm_plex_thai.py`, confirm no remote font links remain, and verify the rendered typeface. If the font files are unavailable, report that exact portability gate rather than calling the file self-contained.
+8. For a genuinely portable HTML single file, run the font embedding helper `scripts/embed_ibm_plex_thai.py` from the installed `make-it-james-ux` skill directory, confirm no remote font links remain, and verify the rendered typeface. Locate that directory by loading `make-it-james-ux`; never assume a relative path from this skill, because a linked install and a plugin install lay the folders out differently. If the helper or the font files are unavailable, report that exact portability gate rather than calling the file self-contained.
 
 ## Stop when
 

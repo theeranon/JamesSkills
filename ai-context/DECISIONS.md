@@ -425,3 +425,14 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Distribution: local version 2.1.9; fresh Codex discovery enabled and canonical bytes matched. No external publication claimed.
 
 - Same-turn refinement (2.1.10): make action after correction explicit for both file and chat outputs; a token edit cannot satisfy unfinished acceptance criteria. Neutral short-challenge probes passed across checklist, CSV and review-only cases. Evidence: tests/receipts/proactive-same-turn-2026-09-12.md. No new workflow or tool quota.
+
+
+## DEC-045 — Trigger descriptions carry natural phrases; cross-plugin helper is located by skill, not relative path
+
+- Date: 2026-10-13
+- Owner request: after a full read of all 22 canonical bodies, repair the reported weaknesses.
+- Observed: after installing the three pillars as Claude Code plugins, `one-page-pls` and `sum-meet` pointed at `../../../james-software/skills/make-it-james-ux/scripts/embed_ibm_plex_thai.py`, which does not exist in the plugin cache because a version directory sits between plugin and skills. Descriptions stated capability abstractly and held no phrase a person actually says, in either language.
+- Decision: descriptions keep capability, occasion and exclusion within the 320-character budget and add a few natural English and Thai request phrases. The font helper is located by loading `make-it-james-ux`, never by a relative path from a sibling. Narrow procedure repairs: premortem and target-number tracing in `are-you-sure`; diff, build, test and input-boundary checks in `dev-are-you-sure`; dominance elimination in `give-me-solutions`; missing-outcome fallback in `zoom-out`; regression location in `never-again`; chat exemption in `final-it` stop condition; final-report wording in `done-for-me`; output-setting precedence in `i-have-adhd`; single-model audit fallback in `project-standard`; user-language closing line in `catchup`; `research-it` step 5 and `grill-me` steps 1, 4 and 5 split into focused steps with their rules preserved. Same names, scope and lifecycle; `hand-it-off` description now names the Candidate Card gate it already held.
+- Deliberately unchanged: `proactive-habits` body, published as 2.1.10 with its own receipts; `grill-me` delivery rules, each tied to DEC-042 or DEC-043; Principles sections; platform names in `proactive-dev`; the unused Wealth Spectrum source line in `coach-me`.
+- Evidence: `scripts/validate` passed on the working tree. This is structural proof only. No fresh-context behavioral probe was run, so no claim is made about trigger rate or model behavior. Not committed, pushed or installed at the time of writing.
+

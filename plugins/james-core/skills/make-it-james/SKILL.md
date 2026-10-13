@@ -2,7 +2,7 @@
 name: make-it-james
 kind: shared-standard
 license: CC-BY-NC-4.0
-description: Enforce the wording law on anything a real person will read, so it reads as native writing rather than as translated or machine-generated text. Applies automatically to recipient-facing work; it does not choose the format or supply missing content.
+description: Enforce the wording law on anything a real person will read, so it reads as native writing rather than translated or machine-generated text. Applies automatically to recipient-facing work; also use for make it sound natural, ภาษาแข็ง, อ่านแล้วเหมือน AI, เกลาคำ. It does not choose the format or supply missing content.
 ---
 
 # Make It James

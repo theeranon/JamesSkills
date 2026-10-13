@@ -1,13 +1,15 @@
 # Status
 
-Last verified: 2026-09-12
+Last verified: 2026-10-13
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.10 (published; local install verified)
+Current version: 2.1.11 (local working tree only; not committed, not pushed, not installed)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+2.1.11 candidate (2026-10-13) is uncommitted in the working tree: natural-phrase trigger descriptions with Thai examples for all 22 skills, a layout-independent font-helper reference in `one-page-pls` and `sum-meet`, and narrow procedure repairs recorded in DEC-045. `scripts/validate` passed. No behavioral probe was run, so trigger rate and Grill Me delivery behavior after the step split are unverified. Claude Code plugins installed on this machine remain the published 2.1.10 snapshot.
 
 Owner-authorized 2.1.10 push and local install completed. Remote main matched `4fc5038`; installer passed. Fresh Codex discovery returned one enabled Proactive Habits entry matching the canonical tested body (`a98beece94ab1ebcbd6987ea94e6955f73da16e174dc67c4a4591b1c126d4511`). This verifies local discovery, not model reliability or other-host behavior.
 

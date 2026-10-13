@@ -2,7 +2,7 @@
 name: zoom-out
 kind: workflow
 license: CC-BY-NC-4.0
-description: Step out from implementation detail through the project goal to the strategy that should achieve it. Use when work is optimizing the wrong layer or losing its purpose; not for an isolated implementation or visual fix.
+description: Step back from implementation detail through the project goal to the strategy that should achieve it. Use for zoom out, are we solving the right problem, big picture, ถอยมามองภาพรวม, หลงทางแล้ว, ทำไปเพื่ออะไร. Not for an isolated implementation or visual fix.
 ---
 
 # Zoom Out
@@ -28,7 +28,7 @@ Recover the project goal and strategy before choosing the next implementation mo
 
 Start from the detail that has captured attention. Step out through roughly two or three **abstraction layers** until both the project goal and the strategy are visible. This is strategic distance, not a count of actions or headings. For example: a code optimization → the capability it serves → the project outcome and the strategic approach to achieving it. If the starting point is already strategic, do not invent extra layers.
 
-1. Recover the intended outcome and beneficiary from the accepted project decisions. What should change for them, and how would success be recognized? Do not substitute a feature or technical metric for that outcome.
+1. Recover the intended outcome and beneficiary from the accepted project decisions. What should change for them, and how would success be recognized? Do not substitute a feature or technical metric for that outcome. When no accepted decision records the outcome, say so and obtain it from the user or the project contract before reframing; `grill-me` sharpens an unstated goal and `project-standard` repairs a missing contract.
 2. Explain the strategic approach: why building this capability should achieve that outcome, which assumptions make it viable, and what is deliberately outside scope. Distinguish the accepted strategy from your proposed alternative. State only supplied or verified commitments and exclusions as established; mark inferred mechanisms and unknown performance as such.
 3. Relate the current detail to that strategy. Assess whether it is a binding constraint, useful supporting work, or a distraction, and distinguish evidence from hypothesis. A met technical target can make further tuning lower priority without proving zero benefit; a plausible bottleneck is not an observed one. Strategic misalignment does not establish that work was unauthorized. Check what already works before proposing replacement. A tool mentioned in a note is a candidate, not a requirement.
 4. Choose the next aligned move and the evidence that would show it helped. Research only a material uncertainty that affects this direction; map the smallest coherent architecture and its failure boundaries before comparing or selecting products, and compare products only after the strategic role is clear.

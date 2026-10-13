@@ -2,7 +2,7 @@
 name: are-you-sure
 kind: workflow
 license: CC-BY-NC-4.0
-description: Re-inspect a business or productivity deliverable with checks matched to its risks and repair evidenced defects inside the requested surface. Use when work looks finished but the diligence behind it is in doubt; not for code, and not for making good work better.
+description: Re-check a finished plan, document, deck, budget or analysis and repair the real defects found. Use when delivered work is in doubt, as in are you sure, double-check this, ตรวจอีกรอบ, แน่ใจนะ, เช็คให้ชัวร์. Not for code, and not for making good work better.
 ---
 
 # Are You Sure
@@ -26,9 +26,9 @@ Go back over what was just delivered and find defects that affect correctness or
 
 ## Procedure
 
-Define the surface first: the exact artifact or set of artifacts under inspection. Keep this planning internal when the user requests only the repaired artifact. Select the checks relevant to its purpose and risks. A full audit considers all five lenses below; a small check needs only the relevant ones. Repair each evidenced finding immediately, or escalate it when the requested outcome needs a decision you do not hold. A possible risk is not an observed defect. Preserve explicit unknowns rather than inventing facts, owners or deadlines to make the artifact look complete.
+Define the surface first: the exact artifact or set of artifacts under inspection. Keep this planning internal when the user requests only the repaired artifact. Select the checks relevant to its purpose and risks. For a consequential artifact, first assume it has already failed with its recipient and name the most likely cause; let that decide which lenses go deepest. A full audit considers all five lenses below; a small check needs only the relevant ones. Repair each evidenced finding immediately, or escalate it when the requested outcome needs a decision you do not hold. A possible risk is not an observed defect. Preserve explicit unknowns rather than inventing facts, owners or deadlines to make the artifact look complete.
 
-1. **Integrity.** Trace the logic end to end. Reconcile every number to a named source. Check material assumptions and downstream consequences where relevant; a simple calculation may need only arithmetic and source fidelity.
+1. **Integrity.** Trace the logic end to end. Reconcile every number to a named source, and trace any number that is also someone's target to how it was produced rather than accepting its label. Check material assumptions and downstream consequences where relevant; a simple calculation may need only arithmetic and source fidelity.
 2. **Structure.** Check whether the requested structure serves its use, without turning a one-off artifact into a system; find what sits at the wrong altitude, what commitment has no owner, and what decision is being made by a document instead of a person.
 3. **Residue.** Resolve obsolete placeholders, stale dates, superseded draft figures, and contradictions between two sections that were written at different times.
 4. **Recipient.** Read it as the person who receives it. Identify missing information that actually prevents the intended recipient from acting; do not invent additional decisions or expand a complete notice into a process design. Apply the installed wording standard rather than restating it here.

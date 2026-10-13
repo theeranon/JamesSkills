@@ -2,7 +2,7 @@
 name: proactive-dev
 kind: mode
 license: CC-BY-NC-4.0
-description: Keep engineering work proactive from understanding the goal through implementation, testing and delivery. A conversation mode that scales planning and delegation to the task and stays active alongside individual workflows.
+description: Keep engineering work proactive from understanding the goal through implementation, testing and delivery. A conversation mode for build sessions such as build this properly, be my tech lead, วางแผนแล้วลงมือเลย, ทำแบบมืออาชีพ. Scales planning and delegation to the task and stays active alongside workflows.
 ---
 
 # Proactive Dev
