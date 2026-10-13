@@ -531,3 +531,47 @@ Fails when:
 
 Legitimate counter-case:
 - the phrase describing machine authorship appears as the subject of a data label rather than as a byline; it stays
+
+## Make It James — `make-it-james` three wording laws
+
+Request: Turn an English brief and rough Thai notes into a Thai client message.
+
+Must:
+- compose the Thai from the meaning, with no `ทำการ`, `มีความ`, neutral `ถูก` passive or English-ordered noun chain left in
+- keep the English terms the client's field actually uses
+- open with the content, with no announcement of what the message will cover and no recap of what it said
+- sound like one person writing to this client, using specifics from the source
+
+Fails when:
+- every word is correct but the sentence shape is English
+- a line such as `ต่อไปนี้คือสรุป` or "here is the updated version" survives
+- an invented anecdote, feeling or slang is added to sound human
+
+Same mechanism, different case:
+- an English README section is rewritten from Thai notes; translated syntax and section announcements are removed the same way
+
+Legitimate counter-case:
+- a contract clause keeps its fixed formal wording, and a quoted speaker keeps their exact words
+
+## Make It James UX — `make-it-james-ux` flow, reading order and grid
+
+Request: Design a booking screen for a clinic's front-desk staff in a project with its own brand colour and typeface.
+
+Must:
+- establish who uses it, the real sequence of steps at the desk and the one primary action before any layout
+- place content in that sequence, left to right and top to bottom, with every control mapped to a step
+- hold one grid and one spacing scale, with equal elements exactly equal
+- keep the project's colour and typeface
+
+Fails when:
+- layout starts from a component gallery or the feature list instead of the flow
+- the eye must jump backward to continue, or an arrow is needed to explain the order
+- sibling cards differ in height or gap, or spacing is set by eye
+- a house default replaces the project's colour or font
+
+Same mechanism, different case:
+- a one-page printed report is ordered by the reader's decision path and set on one grid, in the project's style
+
+Legitimate counter-case:
+- a single overlapping button in an accepted flow is fixed and verified without a strategy pass, and a right-to-left project runs its sequence right to left
+

@@ -436,3 +436,11 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Deliberately unchanged: `proactive-habits` body, published as 2.1.10 with its own receipts; `grill-me` delivery rules, each tied to DEC-042 or DEC-043; Principles sections; platform names in `proactive-dev`; the unused Wealth Spectrum source line in `coach-me`.
 - Evidence: `scripts/validate` passed on the working tree. This is structural proof only. No fresh-context behavioral probe was run, so no claim is made about trigger rate or model behavior. Not committed, pushed or installed at the time of writing.
 
+
+## DEC-046 — Owner redefines the focus of `make-it-james` and `make-it-james-ux`
+
+- Date: 2026-10-13
+- Owner direction: `make-it-james` is about writing that is not translated, has its metacopy removed, and is humanized. `make-it-james-ux` is about design approach: strategy and the user's real flow understood before any work, layout left to right with emphasis top to bottom, meticulous alignment on a perfect grid. Colour, font and style are not its concern; they follow the project, and defaults may exist.
+- Decision: `make-it-james` is organised as three ordered laws (write it rather than translate it, take the metacopy out, humanize it) with named Thai translation marks; humanizing may never add invented anecdotes, feelings or slang. `make-it-james-ux` is organised as strategy and real flow, reading order, perfect grid, then style belonging to the project with the former house rules kept as fallback defaults. `references/standard.md` gains matching sections. Format boundary, lint, font helper and the left-stripe ban are unchanged. Same names, kind and lifecycle.
+- Evidence: `scripts/validate` passed. Cases added to `tests/behavioral-cases.md` describe intended behavior only; no behavioral probe was run. Lint still checks residue, symbol shorthand and house visual defaults; it cannot check translated syntax, voice, flow, reading order or grid alignment.
+

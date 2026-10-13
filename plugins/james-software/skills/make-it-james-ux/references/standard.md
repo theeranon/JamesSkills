@@ -2,7 +2,40 @@
 
 Authority: James's durable cross-project preference. Apply it across AI vendors, frameworks, and recipient-facing formats. Explicit user requirements and an established project design system take precedence over house defaults. Preserve usability and accessibility; report actual conflicts rather than silently overriding the selected system.
 
-## Visual direction
+## Strategy and real flow
+
+Design starts from use, not from a layout. Before any visual decision, write down for yourself:
+
+- **Who and why:** the person using this, the job they came to do, and what triggers the visit.
+- **The real flow:** the steps they actually take from arrival to done, in order, including where they come from and where they go next. Use the real product, real data and the project contract; a flow invented from the feature list is not the real flow.
+- **What they hold at each step:** the information and decisions already available to them, so nothing is asked before it can be answered and nothing needed is missing.
+- **Context:** how often they do this, on what device, under what time pressure.
+- **Success:** the single observable outcome that means it worked.
+
+Then set the strategy: one primary action per view, a short list of secondary ones, and an explicit list of what is left out. Map every screen, section and control to a step. Anything that maps to no step is removed or demoted. Include the states the flow really reaches: first use, empty, loading, error, partial data and returning.
+
+Proportion matters. A new product or screen gets the full pass. A local repair inside an accepted flow needs only the affected step confirmed.
+
+## Reading order
+
+- Importance descends from the top. Sequence runs left to right. The first thing needed sits top-left and the last action ends the path.
+- Steps appear in the order performed. Overview above detail, cause before effect, input before result, label before value.
+- One relationship, one placement. If a label sits left of its value in one place, it does everywhere.
+- The eye never has to travel backward or cross the page to continue. Needing an arrow, a number or a note to explain the order means the order is wrong.
+- In a right-to-left language, sequence follows that language's direction.
+
+## Perfect grid
+
+- Choose one grid and one spacing scale before placing anything. Every edge sits on a grid line and every gap is a value from the scale.
+- Equal things are exactly equal: width, height, padding, gap. Siblings share a baseline. A column has one alignment; numbers align so digits compare.
+- Same-level components share radius, border, shadow, icon size and type size.
+- No orphan element, no uneven last row, no value off by a pixel, no spacing set by eye.
+- Verify on the rendered output at each size it will be seen. A misalignment a careful reader can find is a defect, however small.
+
+## Visual defaults
+
+Colour, typeface and style belong to the project. The values below are house defaults for work with no design system; they never override one.
+
 
 - Use `IBM Plex Sans Thai` as the default and fallback typeface for Thai, English, and numbers. Do not introduce an arbitrary Latin display font. However, when a project, client spec sheet, or existing Design System locks a specific typeface (e.g., Sarabun, Inter, Roboto, SF Pro, or custom corporate fonts), strictly adhere to the project's Design System. Never overwrite or force IBM Plex Sans Thai over a locked project standard.
 - Prefer compact, calm, information-dense composition. Preserve Thai readability; compact must not become cramped or clipped.

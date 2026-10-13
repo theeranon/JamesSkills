@@ -3,11 +3,13 @@
 Last verified: 2026-10-13
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.11 (published; local Claude Code plugin install verified)
+Current version: 2.1.12 (local working tree only; not committed, not pushed, not installed)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+2.1.12 candidate (2026-10-13) is uncommitted in the working tree: owner-directed refocus of `make-it-james` (not translated, no metacopy, humanized) and `make-it-james-ux` (strategy and real flow first, reading order, perfect grid, style belonging to the project), recorded in DEC-046. `scripts/validate` passed; no behavioral probe was run. Installed Claude Code plugins remain 2.1.11.
 
 Owner-authorized 2.1.11 push and local install completed on 2026-10-13. Remote main matched `a437c30`. The Claude Desktop bundled binary (Claude Code 2.1.295) updated `james-core`, `james-productivity` and `james-software` to 2.1.11, all enabled, with `installed_plugins.json` recording `a437c30`. 2.1.11 adds natural-phrase trigger descriptions with Thai examples for all 22 skills, a layout-independent font-helper reference in `one-page-pls` and `sum-meet`, and the narrow procedure repairs in DEC-045. `scripts/validate` and `scripts/doctor` passed. No behavioral probe was run, so trigger rate and Grill Me delivery behavior after the step split are unverified, and the Desktop `/` picker has not been observed after restart.
 

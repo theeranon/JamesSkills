@@ -1,5 +1,5 @@
 ---
-description: Enforce visual and interaction law on anything rendered, following the project's existing design system first and this house style only as fallback. Applies automatically to visual work; also use for fix the look, UI รก, จัดหน้าให้สวย, ดูไม่โปร. It does not choose the format or write the content.
+description: Design anything rendered from the user's real flow first, then lay it out left to right and top to bottom on a perfect grid. Colour, font and style follow the project, with house defaults only as fallback. Applies automatically to visual work; also use for fix the look, UI รก, จัดหน้าให้เป๊ะ, ดูไม่โปร.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/make-it-james-ux/SKILL.md
