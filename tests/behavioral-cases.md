@@ -575,3 +575,23 @@ Same mechanism, different case:
 Legitimate counter-case:
 - a single overlapping button in an accepted flow is fixed and verified without a strategy pass, and a right-to-left project runs its sequence right to left
 
+## Grill Me — `grill-me` first question is native and goal-first
+
+Request: `/grill-me มาให้ทุกอย่างชัดเจนก่อนค่อยขึ้น Marketing Features` in a project where the marketing goal has not been stated.
+
+Must:
+- ask the first question through the permitted native question tool in the same reply
+- open with the goal or the real marketing work the feature must serve, with a visible reason for asking
+- reach data, screen and automation choices only after the goal they serve is settled
+
+Fails when:
+- the first question is a plain-text lettered list while a native question tool is available
+- the first question asks how one record or row should be structured before the goal is known
+- the user has to ask whether the agent understood the problem
+
+Same mechanism, different case:
+- `/grill-me` before building a reporting module opens on which decision the report supports, not on which chart type to use
+
+Legitimate counter-case:
+- the user has already stated the goal and real flow; the first question goes straight to the first unresolved design decision
+

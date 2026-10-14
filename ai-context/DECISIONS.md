@@ -444,3 +444,12 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Decision: `make-it-james` is organised as three ordered laws (write it rather than translate it, take the metacopy out, humanize it) with named Thai translation marks; humanizing may never add invented anecdotes, feelings or slang. `make-it-james-ux` is organised as strategy and real flow, reading order, perfect grid, then style belonging to the project with the former house rules kept as fallback defaults. `references/standard.md` gains matching sections. Format boundary, lint, font helper and the left-stripe ban are unchanged. Same names, kind and lifecycle.
 - Evidence: `scripts/validate` passed. Cases added to `tests/behavioral-cases.md` describe intended behavior only; no behavioral probe was run. Lint still checks residue, symbol shorthand and house visual defaults; it cannot check translated syntax, voice, flow, reading order or grid alignment.
 
+
+## DEC-047 — Restore the first-turn native-question rule and require a goal-first opening
+
+- Date: 2026-10-14
+- Observed (owner screenshot, session on another machine; transcript not inspected): `/grill-me` for Marketing Features first answered with a plain-text lettered question. After correction it used the native popup, but the question asked how one marketing job should be stored as a record, and the owner replied that the question was confusing and asked whether the agent understood the problem.
+- Mechanism: the 2.1.11 step split (DEC-045) moved the native-tool instruction out of the opening step into a later step and dropped the sentence that a plain-text question is no substitute, weakening the first-turn signal. Separately, nothing required the first question to establish the goal before design detail, or to show why it was asked.
+- Decision: the opening step again names the native question tool and the no-substitute rule; it requires a private one-sentence goal from evidence, a goal-level first question when that is missing, and a visible reason in every question. Same name, scope and lifecycle.
+- Evidence: rejected case, same-mechanism case and counter-case added to `tests/behavioral-cases.md`. `scripts/validate` passed. No behavioral probe run; which version the screenshot session had loaded is unverified.
+

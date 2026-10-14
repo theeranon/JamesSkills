@@ -3,7 +3,7 @@
 Last verified: 2026-10-13
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.12 (published; local Claude Code plugin install verified)
+Current version: 2.1.13 (Grill Me opening repair, DEC-047; publication pending)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
