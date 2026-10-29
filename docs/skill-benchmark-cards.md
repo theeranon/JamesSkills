@@ -1,6 +1,6 @@
-# Benchmark cards: 22 canonical skills
+# Benchmark cards: canonical skills
 
-วันที่ 2026-09-07 · สถานะ: มี public response probes และผลทดลองครบ 22 skill; ไม่ใช่ใบรับรองคุณภาพทั้งหมด
+วันที่ 2026-09-07 · สถานะ: มี public response probes และผลทดลองครบ 22 skill; ไม่ใช่ใบรับรองคุณภาพทั้งหมด. `insight-driven-mode` เป็น card-only และยังไม่มี probe ในชุด 66.
 
 อ่าน [ทิศทางและวิธีทดลอง](skill-benchmark-strategy.md) ก่อนใช้ cards เหล่านี้เป็นข้อกำหนดผลที่ตรวจได้ซึ่งอ้างอิง canonical เดิม ไม่ได้เปลี่ยนหน้าที่หรือเพิ่ม skill แต่ละใบมีตัววัด success, variant, counter-case และวิธีตรวจ ชุดตัวอย่างที่เปิดอ่านแล้วเป็น development seeds ไม่ใช่ sealed holdout
 
@@ -264,6 +264,18 @@ Canonical: `plugins/james-software/skills/project-standard/SKILL.md`.
 - **V:** A foreign-headed legacy document and a stale draft disagree with running code; preserve the unresolved authority conflict, avoid silent parser content loss, and generate a truthful versioned view.
 - **C:** A routine edit with no durable truth change leaves owner files untouched. A small library needs no empty architecture/data-model files. A passing structural checker does not establish source truth.
 - **Judge/proof and gaming risk:** Independent fact inventory, before/after preservation diff, SRS/source hash consistency, ready checker, and a cold-reader task. Do not reward template proliferation, copied facts in every document, invented implementation state, or passing the parser by deleting material.
+
+### 23. insight-driven-mode — insight before customer-facing copy
+
+Canonical: `plugins/james-core/skills/insight-driven-mode/SKILL.md`.
+
+Card only. This skill is not in the 66 public response probes. The lines below are the responsibility to test later, not a measured result.
+
+- **Job and metric:** Customer-facing marketing, brand, content and copy for each agreed target group traces to one written insight. Report pieces that cite a real insight line for one named group / customer-facing pieces; invented quotes, numbers or customer facts / factual claims; shared plans used where groups differ / groups.
+- **S:** Agreed groups already exist. Write one insight page per group from supplied quotes, then a headline and call to action that cite that group's insight line. Label inference. Leave a settled ban untouched.
+- **V:** The first headline is generic. Repair the insight and rebuild the line from it. Mark the earlier draft superseded rather than deleting the record of it.
+- **C:** The user explicitly asks for quick copy without insight work; non-customer-facing internal writing; an audit-only request. Deliver that request without forcing an insight page or rewriting the audited artifact.
+- **Judge/proof and gaming risk:** Compare each customer-facing line with its cited insight and the supplied source. A longer strategy document does not pass if the requested copy is missing, invented, or aimed at everyone.
 
 ## Composition and authority cases that must not be averaged away
 

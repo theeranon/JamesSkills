@@ -6,6 +6,11 @@
       "card": "docs/skill-benchmark-cards.md",
       "state": "public-development"
     },
+    "insight-driven-mode": {
+      "canonical": "plugins/james-core/skills/insight-driven-mode/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
+    },
     "done-for-me": {
       "canonical": "plugins/james-core/skills/done-for-me/SKILL.md",
       "card": "docs/skill-benchmark-cards.md",

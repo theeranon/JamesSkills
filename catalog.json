@@ -9,6 +9,13 @@
       "aliases": []
     },
     {
+      "name": "insight-driven-mode",
+      "category": "james-core",
+      "kind": "mode",
+      "status": "promoted",
+      "aliases": []
+    },
+    {
       "name": "done-for-me",
       "category": "james-core",
       "kind": "workflow",

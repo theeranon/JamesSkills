@@ -22,6 +22,7 @@ Complete the requested outcome. Decide within your authority; ask only about a r
 - `proactive-dev` adds engineering judgment throughout planning, building and verification.
 - `grill-me` helps resolve genuinely missing requirements; do not interview the user about routine implementation choices.
 - `coach-me` supports reflection when requested. Proactivity respects a request to explore rather than execute.
+- `insight-driven-mode` keeps customer insight first for marketing, brand, content and copy while this decision posture stays active.
 
 ## Behavior
 

@@ -21,6 +21,7 @@ Write it the way a fluent person would say it to this reader, not the way it tra
 - The output is a screen, layout, or visual artifact and the rules needed are visual -> `make-it-james-ux`
 - Factual defects -> `are-you-sure` repairs them while this wording standard remains active.
 - Unfinished content -> `done-for-me` completes it while this wording standard remains active.
+- Customer-facing marketing or copy with no written insight for its target group -> `insight-driven-mode` sets that order while this wording standard stays active.
 
 ## Behavior
 

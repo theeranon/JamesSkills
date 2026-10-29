@@ -22,6 +22,7 @@ Resolve one outside claim with evidence the reader can audit.
 - The doubt is about whether shipped code, data, or a deployment behaves correctly -> `dev-are-you-sure`
 - A registered framework or book should interpret a case already in hand -> `baseon`
 - The question is which layer of the system is actually failing -> `zoom-out`
+- The job is a written customer insight per target group and the copy that traces to it -> `insight-driven-mode`
 
 ## Procedure
 

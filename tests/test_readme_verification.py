@@ -17,7 +17,7 @@ import sys
 import unittest
 
 # Single place the roster size is asserted. Update when the catalog roster changes.
-EXPECTED_CANONICAL = 22
+EXPECTED_CANONICAL = 23
 
 ROOT = Path(__file__).resolve().parents[1]
 README_PATH = ROOT / "README.md"

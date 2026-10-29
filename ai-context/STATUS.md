@@ -1,13 +1,17 @@
 # Status
 
-Last verified: 2026-10-13
+Last verified: 2026-10-29
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.13 (published at `63a4512`; local Claude Code plugin install verified 2026-10-14)
+Current version: 2.1.14
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+2.1.14 adds the promoted mode `insight-driven-mode` in `james-core`. Customer-facing marketing, brand, content and copy trace to a written insight for each target group. `scripts/validate` passed. `scripts/doctor` passed after a local install on this checkout: 128 managed links, including this skill under `.agents`, `.codex`, `.claude` and `.cursor`. Codex was not on PATH, so that pass is filesystem proof only. Gemini and Antigravity skill directories were absent, so those hosts were not linked here. No behavioral probe was run.
+
+2.1.13 was published at `63a4512`; local Claude Code plugin install was verified 2026-10-14. That release restored Grill Me's first-turn native question and a goal-first opening, recorded in DEC-047.
 
 Owner-authorized 2.1.12 push and local install completed on 2026-10-13. Remote main matched `dd279b3`; the Claude Desktop bundled binary updated all three plugins to 2.1.12, enabled, with `installed_plugins.json` recording `dd279b3`. 2.1.12 is the owner-directed refocus of `make-it-james` (not translated, no metacopy, humanized) and `make-it-james-ux` (strategy and real flow first, reading order, perfect grid, style belonging to the project), recorded in DEC-046. `scripts/validate` and `scripts/doctor` passed; no behavioral probe was run and the Desktop app has not been observed after restart.
 

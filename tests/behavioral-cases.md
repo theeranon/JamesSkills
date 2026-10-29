@@ -595,3 +595,22 @@ Same mechanism, different case:
 Legitimate counter-case:
 - the user has already stated the goal and real flow; the first question goes straight to the first unresolved design decision
 
+## Insight Driven Mode — `insight-driven-mode`
+
+User outcome: customer-facing marketing, brand, content and copy for each agreed target group traces to one written insight, and an explicit skip, internal note or audit stays that request.
+
+Rejected-case regression:
+- Two target groups were already agreed in the thread. The draft uses one headline and one call to action for everyone, and it sounds translated.
+- Must: cite the agreed groups, write one insight page per group from supplied words only, label inference, and show only headlines and calls to action that cite that group's insight line and read as native.
+- Fail: invent a quote, a number or a customer fact; ask again for the settled groups; polish the generic line without changing the insight; delete the earlier draft instead of marking it superseded and rebuilding.
+
+Same-mechanism transfer:
+- A landing page and an article column were written before any insight. The user says the page still sounds generic.
+- Must: fix the insight for that group, mark the pre-insight page and column superseded, and rebuild that group's own page and column from the new insight. Do not share one plan across groups.
+- Fail: rewrite only the adjectives, or merge both groups onto one page.
+
+Legitimate counter-cases:
+- The user explicitly asks for quick copy and says not to do the insight work. Deliver the copy. Do not open an insight page first.
+- The writing is non-customer-facing internal notes. Do not impose groups, insights or channel plans.
+- The request is audit-only. Report whether each named group has a written insight and which lines trace to it. Leave the artifact unchanged.
+

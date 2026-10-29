@@ -1,8 +1,9 @@
 # Public development probes
 
-Coverage: all 22 canonical skills have three executable public response probes
-(66 total). The original five-skill pilot remains 15 probes; 51 additional probes
-cover the other 17. Empty deterministic checks mean semantic review is required,
+Coverage: 22 canonical skills have three executable public response probes
+(66 total). `insight-driven-mode` is card-only and has no executable probes yet.
+The original five-skill pilot remains 15 probes; 51 additional probes
+cover the other 17 skills that have probes. Empty deterministic checks mean semantic review is required,
 not that a response passed. These synthetic fixtures contain no client records.
 
 Run fixture validation and an unscored schedule without calling any model:
@@ -18,7 +19,7 @@ Use a new output path each time. Default A/B: no tested instruction versus froze
 canonical instruction. `--candidates candidate-map.json` adds C, with JSON mapping
 each selected skill to its candidate file path. All bodies freeze before execution.
 `--trials` is bounded to 1–3; `--case proactive-habits-1` selects one paired probe.
-Use `--skill all` for all 22, `--skill pilot` for the original five, or a canonical skill name. A/B order is reproducibly randomized. All attempted failures stay in the fixed
+Use `--skill all` for every public probe, `--skill pilot` for the original five, or a canonical skill name that has probes. `insight-driven-mode` has none yet. A/B order is reproducibly randomized. All attempted failures stay in the fixed
 planned denominator; interrupted runs expose missing attempts through run.json.
 
 ## Real text-only model route

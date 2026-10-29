@@ -22,6 +22,7 @@ Find the real options, judge them against this situation, and say which one wins
 - The choice is already made and the job is to build it -> `done-for-me`
 - A registered framework should interpret the situation -> `baseon`
 - The candidates are internal drafts of the same artifact -> `is-that-the-best-you-can-do`
+- Marketing, brand or copy must trace to a written insight for each target group -> `insight-driven-mode`
 
 ## Procedure
 

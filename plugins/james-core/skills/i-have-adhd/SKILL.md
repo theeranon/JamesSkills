@@ -22,6 +22,7 @@ Lead with the answer or action and make relevant state easy to see.
 - The user wants to be questioned until their own requirement is sharp -> `grill-me`
 - For recipient-facing wording alongside this presentation mode -> `make-it-james`
 - To finish the underlying work while keeping this mode active -> `done-for-me`
+- Customer-facing marketing must start from a written insight for each group -> `insight-driven-mode`
 
 ## Behavior
 

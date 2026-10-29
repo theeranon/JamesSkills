@@ -16,7 +16,7 @@ spec.loader.exec_module(b)
 class BenchmarkTests(unittest.TestCase):
     def test_coverage_and_countercases(self):
         manifest, cases = b.validate()
-        self.assertEqual(len(manifest['skills']), 22)
+        self.assertEqual(len(manifest['skills']), 23)
         self.assertEqual(len(cases), 66)
 
     def test_alternate_suite_replays_and_rejects_duplicate_cases(self):

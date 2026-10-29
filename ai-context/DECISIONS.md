@@ -453,3 +453,13 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Decision: the opening step again names the native question tool and the no-substitute rule; it requires a private one-sentence goal from evidence, a goal-level first question when that is missing, and a visible reason in every question. Same name, scope and lifecycle.
 - Evidence: rejected case, same-mechanism case and counter-case added to `tests/behavioral-cases.md`. `scripts/validate` passed. No behavioral probe run; which version the screenshot session had loaded is unverified.
 
+## DEC-048 — Promote `insight-driven-mode` as a conversation mode
+
+- Date: 2026-10-29
+- Status: Accepted
+- Decision: Add `insight-driven-mode` as a promoted `mode` in `james-core`. Nothing customer-facing in marketing, brand, content or copy is written until each target group has a written insight it traces to. The mode stays active until the user turns it off, including across task switches in the same project. Quick copy that explicitly skips insight work, non-customer-facing internal writing, and audit-only requests are legitimate yields. Neighbours that exist here — `proactive-habits`, `make-it-james`, `i-have-adhd`, `research-it` and `give-me-solutions` — stay composed or routed; there is no `brand-voice-copy` package to point at.
+- Why: the requesting instruction named this package, its job, its principles and its promotion into the indexes. That instruction is the naming and promotion authority for this package.
+- Source: the request that added the package, plus Christensen, Hall, Dillon and Duncan 2016, Competing Against Luck, and Kotler, Marketing Management, segmentation-targeting-positioning, paraphrased in the skill.
+- Affects: `plugins/james-core/skills/insight-driven-mode/`, `catalog.json`, `docs/SKILLS.md`, `README.md`, `VERSION`, plugin manifests, `tests/behavioral-cases.md`.
+- Evidence: written rejected case, same-mechanism case and counter-cases in `tests/behavioral-cases.md`. `scripts/validate` passed. `scripts/doctor` passed on this checkout after local link install (128 links; Codex not on PATH; Gemini and Antigravity directories absent). No behavioral probe was run. Not a claim that every model follows the mode, and not a claim about the owner's installed apps.
+

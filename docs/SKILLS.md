@@ -14,7 +14,7 @@ This handbook is the human navigation layer. `catalog.json` owns category, kind,
 
 Mode and standard behavior differs from a normal workflow:
 
-- `/i-have-adhd`, `/proactive-dev` and `/proactive-habits` stay active for the current conversation until explicitly disabled.
+- `/i-have-adhd`, `/proactive-dev`, `/proactive-habits` and `/insight-driven-mode` stay active for the current conversation until explicitly disabled.
 - `make-it-james` and `make-it-james-ux` apply automatically to recipient-facing outcomes; invoking one directly is useful for a wording or visual audit.
 - `hand-it-off` is installed agent support, not a recommended human command.
 
@@ -88,6 +88,7 @@ Mode and standard behavior differs from a normal workflow:
 - Do not use when: Several candidates must be compared and one recommended -> `give-me-solutions`
   - The doubt is about work produced in this conversation rather than an outside claim -> `are-you-sure`
   - The doubt is about whether shipped code, data, or a deployment behaves correctly -> `dev-are-you-sure`
+  - The job is a written customer insight per target group and the copy that traces to it -> `insight-driven-mode`
 - Aliases: `prove-it` (legacy compatibility calls).
 - Canonical instructions: [`plugins/james-core/skills/research-it/SKILL.md`](../plugins/james-core/skills/research-it/SKILL.md)
 
@@ -102,6 +103,7 @@ Mode and standard behavior differs from a normal workflow:
 - Do not use when: One claim or approach needs to be settled rather than several compared -> `research-it`
   - Which responsibility is actually failing is still unclear -> `zoom-out`
   - The choice is already made and the job is to build it -> `done-for-me`
+  - Marketing, brand or copy must trace to a written insight for each target group -> `insight-driven-mode`
 - Canonical instructions: [`plugins/james-productivity/skills/give-me-solutions/SKILL.md`](../plugins/james-productivity/skills/give-me-solutions/SKILL.md)
 
 ### `/baseon`
@@ -268,6 +270,20 @@ Mode and standard behavior differs from a normal workflow:
 - Result: The completed requested deliverable, or an observed blocker after independent work is finished. Repeated invocation during unfinished work resumes execution immediately; an explicit audit-only request still returns findings.
 - Do not use when: Not a replacement for the task workflow. Composes with active workflows and standards.
 - Canonical instructions: [`plugins/james-core/skills/proactive-habits/SKILL.md`](../plugins/james-core/skills/proactive-habits/SKILL.md)
+
+### `/insight-driven-mode`
+
+- Canonical package: `insight-driven-mode`
+- Category: `james-core`
+- Kind: `mode`
+- Lifecycle: `promoted`
+- Use when: Make customer insight the first step of marketing, brand, content and copy, so each group's strategy, pages, articles, headlines and CTAs trace to a written insight. Activate for the whole conversation with insight first, เริ่มจากอินไซต์, อินไซต์เป็นกระดูกเม็ดแรก, or when copy sounds generic or translated.
+- Result: The requested deliverable, with each customer-facing piece traced to one insight line for one named group. An explicit quick-copy or audit-only request returns only what that request asked for.
+- Do not use when: The only job is to settle one outside claim, with no customer-facing marketing or copy -> `research-it`
+  - The only job is to compare options and recommend one -> `give-me-solutions`
+  - The reader needs a shorter reply and no marketing, brand or copy sequence is in play -> `i-have-adhd`
+  - The missing piece is who decides the next action, not which insight the copy traces to -> `proactive-habits`
+- Canonical instructions: [`plugins/james-core/skills/insight-driven-mode/SKILL.md`](../plugins/james-core/skills/insight-driven-mode/SKILL.md)
 
 ### `/coach-me`
 

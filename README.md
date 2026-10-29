@@ -23,19 +23,19 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 ---
 
 
-## 🏛️ Architecture: 3 Pillars, 22 Skills
+## 🏛️ Architecture: 3 Pillars, 23 Skills
 
 The library ships as three Claude Code plugins, one per pillar. Each pillar owns one responsibility; no skill crosses pillar lines.
 
 ```mermaid
 graph TD
     Root["JamesSkills"]
-    Root --> Core["⚙️ james-core — 9 skills<br/>Decision posture, execution ownership,<br/>and the quality gates work must pass"]
+    Root --> Core["⚙️ james-core — 10 skills<br/>Decision posture, execution ownership,<br/>and the quality gates work must pass"]
     Root --> Prod["📊 james-productivity — 8 skills<br/>Thinking, research, coaching,<br/>and executive deliverables"]
     Root --> Soft["💻 james-software — 5 skills<br/>Engineering method, project contracts,<br/>and interface law"]
 ```
 
-**⚙️ `james-core`** decides what to do and whether it was done right. It holds the mode that sets decision posture for a conversation (`proactive-habits`, `i-have-adhd`), the workflow that carries an agreed task to a finished outcome (`done-for-me`), the wording standard every recipient-facing output passes through (`make-it-james`), and the gates nothing ships without: `are-you-sure`, `research-it`, `is-that-the-best-you-can-do`, `never-again`, `hand-it-off`.
+**⚙️ `james-core`** decides what to do and whether it was done right. It holds the modes that set decision posture and insight-first marketing for a conversation (`proactive-habits`, `i-have-adhd`, `insight-driven-mode`), the workflow that carries an agreed task to a finished outcome (`done-for-me`), the wording standard every recipient-facing output passes through (`make-it-james`), and the gates nothing ships without: `are-you-sure`, `research-it`, `is-that-the-best-you-can-do`, `never-again`, `hand-it-off`.
 
 **📊 `james-productivity`** thinks before it builds. It sharpens a vague requirement (`grill-me`), reframes a problem at the system level (`zoom-out`), applies a registered knowledge lens (`baseon`), settles an open question against outside evidence combined with a candidate comparison (`give-me-solutions`), coaches a person through their own stuck point (`coach-me`), and produces the two recipient-facing formats this library ships (`sum-meet`, `one-page-pls`, `final-it`).
 
@@ -43,7 +43,7 @@ graph TD
 
 Every skill in every pillar satisfies one structural contract, [`docs/SKILL-SCHEMA.md`](docs/SKILL-SCHEMA.md), enforced on every commit: what it owns, what it may change, the sibling that owns each case it refuses, when it stops, and the named principles it operates on.
 
-**The anti-overfit gate.** Every skill lists the cases it refuses and names the sibling that owns each one. The validator builds a graph from those refusals and fails when any skill has nobody pointing at it, because a skill no sibling ever excludes toward does not have a distinct job. The current roster passes with 109 refusal edges across 22 skills.
+**The anti-overfit gate.** Every skill names the cases it refuses or yields on, and a routing line names the sibling that owns that case. Modes and standards compose with the workflow that owns the task. The schema checks those declarations, counter-cases and authority boundaries. It does not treat an incoming reference as proof of a distinct job. The current roster is 23 skills.
 
 ## 📚 Full Skill Directory (Before vs After)
 
@@ -465,6 +465,37 @@ FROM orders GROUP BY customer_id;
 2. <b>Udemy:</b> ปริมาณคอร์สเยอะ / จุดอ่อนคือ อัตรา Completion Rate ต่ำเพราะไม่มี Live Mentor<br>
 3. <b>Skooldio:</b> แข็งแกร่งในตลาด B2B Corporate ไทย / จุดอ่อนคือ คอนเทนต์ฝั่ง Deep Tech สากลยังมีจำกัด<br><br>
 • <b>Action Taken:</b> ผมร่าง Value Proposition ชูจุดขาย <i>"AI Pair-Learning + Live Mentoring"</i> ไว้ในเอกสารแนบเรียบร้อยครับ
+
+</td>
+</tr>
+</table>
+
+<br>
+
+#### ⚡️ `/insight-driven-mode`
+*Persistent mode: customer insight is written for each target group before strategy, channels or copy.*
+
+
+<table width="100%">
+<tr>
+<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
+<th width="50%">✅ After (JamesSkills Outcome)</th>
+</tr>
+<tr>
+<td valign="top">
+
+หัวข้อ: เปลี่ยนชีวิตคุณวันนี้ด้วยโซลูชันที่ทุกคนต้องมี<br>
+CTA: เริ่มเลย<br><br>
+<i>(สำเนาเดียวสำหรับทุกคน ไม่มีอินไซต์ของกลุ่ม และอ่านเหมือนคำแปล)</i>
+
+</td>
+<td valign="top">
+
+<b>กลุ่มที่ตกลงแล้ว:</b> คนที่เคยลองเองแล้วยังไม่ขยับ<br>
+<b>อินไซต์:</b> พวกเขาไม่ขาดข้อมูล เขาไม่เชื่อว่าความพยายามครั้งต่อไปจะต่างจากครั้งที่ล้ม<br>
+<b>หัวข้อ:</b> ครั้งนี้ไม่ต้องเริ่มใหม่ทั้งก้อน<br>
+<b>CTA:</b> ดูขั้นตอนแรกของกลุ่มคุณ<br><br>
+<i>ทุกบรรทัดอ้างอินไซต์ของกลุ่มนั้น งานภายในและคำสั่ง audit-only ไม่ถูกบังคับให้เขียนอินไซต์</i>
 
 </td>
 </tr>
