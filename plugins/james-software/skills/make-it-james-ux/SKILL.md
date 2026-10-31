@@ -19,7 +19,6 @@ Design the real flow first, then a grid nothing jumps on; follow the project's s
 ## Do not use this when
 
 - The rules needed are about wording rather than presentation -> `make-it-james`
-- The question is which format the deliverable should take -> `final-it`
 - The interface is defective rather than inconsistent -> `dev-are-you-sure`
 - The design question is really a strategy question about the project itself -> `zoom-out`
 

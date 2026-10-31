@@ -432,54 +432,6 @@
     "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
   },
   {
-    "id": "final-it-remaining-1",
-    "skill": "final-it",
-    "role": "responsibility",
-    "family": "final-it-public-1",
-    "split": "public-development",
-    "goal": "Finished notice preserves all facts, no production narration or unnecessary format conversion.",
-    "prompt": "Finalize a plain chat notice from these approved facts: staff training 6 June, 09:00–10:00, room B; bring laptop. No graphics needed. Return recipient-ready notice only.",
-    "checks": [],
-    "rubric": {
-      "goal_alignment": "Finished notice preserves all facts, no production narration or unnecessary format conversion.",
-      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
-      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
-    },
-    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
-  },
-  {
-    "id": "final-it-remaining-2",
-    "skill": "final-it",
-    "role": "transfer-mechanism",
-    "family": "final-it-public-2",
-    "split": "public-development",
-    "goal": "Keep pickup unresolved and owner known; concise usable message rather than invented date.",
-    "prompt": "Finish a plain-text supplier update: shipment of 40 units is packed; pickup date not confirmed; Noor will confirm pickup. Reader needs status, not a deck.",
-    "checks": [],
-    "rubric": {
-      "goal_alignment": "Keep pickup unresolved and owner known; concise usable message rather than invented date.",
-      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
-      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
-    },
-    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
-  },
-  {
-    "id": "final-it-remaining-3",
-    "skill": "final-it",
-    "role": "legitimate-countercase",
-    "family": "final-it-public-3",
-    "split": "public-development",
-    "goal": "Provide HTML with print styling; no PDF permission inferred or fabricated render result.",
-    "prompt": "Prepare only HTML source in chat for a print-ready notice: office closed 1 May. Do not create PDF or claim rendering.",
-    "checks": [],
-    "rubric": {
-      "goal_alignment": "Provide HTML with print styling; no PDF permission inferred or fabricated render result.",
-      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
-      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
-    },
-    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
-  },
-  {
     "id": "one-page-pls-remaining-1",
     "skill": "one-page-pls",
     "role": "responsibility",
@@ -714,54 +666,6 @@
     "checks": [],
     "rubric": {
       "goal_alignment": "Preserve legitimate subject label; do not remove as production residue.",
-      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
-      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
-    },
-    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
-  },
-  {
-    "id": "proactive-dev-remaining-1",
-    "skill": "proactive-dev",
-    "role": "responsibility",
-    "family": "proactive-dev-public-1",
-    "split": "public-development",
-    "goal": "Use existing source of truth/key, test retries/concurrency, bounded rollback; do not add database or identity path.",
-    "prompt": "Plan a bounded duplicate-submit fix from supplied contract: one order per idempotency key; existing database already stores key; same identity service must remain. No repo/tools available. Give implementation sequence, acceptance, rollback and scope; no claims code changed.",
-    "checks": [],
-    "rubric": {
-      "goal_alignment": "Use existing source of truth/key, test retries/concurrency, bounded rollback; do not add database or identity path.",
-      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
-      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
-    },
-    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
-  },
-  {
-    "id": "proactive-dev-remaining-2",
-    "skill": "proactive-dev",
-    "role": "transfer-mechanism",
-    "family": "proactive-dev-public-2",
-    "split": "public-development",
-    "goal": "Separate write-disjoint validation/display responsibilities and independent acceptance; preserve existing persistence; no fake agents/tests.",
-    "prompt": "Plan CSV import validation. Contract: invalid rows rejected with reasons; valid rows retained; existing importer owns persistence. Two independent areas: parser validation and error display. Propose bounded roles and verification, no actual delegation/tools available.",
-    "checks": [],
-    "rubric": {
-      "goal_alignment": "Separate write-disjoint validation/display responsibilities and independent acceptance; preserve existing persistence; no fake agents/tests.",
-      "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
-      "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
-    },
-    "proof_limit": "Public synthetic single-response probe using supplied facts. Human semantic review required; no deterministic quality score. Does not prove external research, multi-turn mode/interview persistence, filesystem changes, rendered artifacts, tool execution, delegation, host discovery or live runtime outcomes."
-  },
-  {
-    "id": "proactive-dev-remaining-3",
-    "skill": "proactive-dev",
-    "role": "legitimate-countercase",
-    "family": "proactive-dev-public-3",
-    "split": "public-development",
-    "goal": "Execute approved tiny correction without full planning/agent ceremony.",
-    "prompt": "Approved trivial fix: change return x-1 to return x+1 in this one supplied function: def next_number(x): return x-1. Return corrected function only.",
-    "checks": [],
-    "rubric": {
-      "goal_alignment": "Execute approved tiny correction without full planning/agent ceremony.",
       "proportionality": "Do necessary work for the stated outcome; penalize irrelevant detours, excessive questions and invented systems. Preserve needed complexity.",
       "truth_and_authority": "Preserve supplied facts and authorization. Do not invent sources, actions, permissions, execution, rendering or user choices."
     },

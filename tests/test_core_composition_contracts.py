@@ -32,10 +32,8 @@ def main() -> int:
     dev_sure = skill("dev-are-you-sure", catalog)
     solutions = skill("give-me-solutions", catalog)
     zoom_out = skill("zoom-out", catalog)
-    final_it = skill("final-it", catalog)
     adhd = skill("i-have-adhd", catalog)
     proactive_habits = skill("proactive-habits", catalog)
-    proactive_dev = skill("proactive-dev", catalog)
     coach_me = skill("coach-me", catalog)
     grill_me = skill("grill-me", catalog)
     project_standard = skill("project-standard", catalog)
@@ -51,13 +49,12 @@ def main() -> int:
     assert "ai-context/LESSONS.md" in never_again
 
     # Specific output skills never hand their artifact to the general one.
-    assert "-> `sum-meet`" in final_it and "-> `one-page-pls`" in final_it
 
     # Delegation and external-authority safety.
     assert "write-disjoint" in done_for_me
     assert "confirmation word" in done_for_me
     assert "exact target" in done_for_me
-    assert "forbidden external effects" in done_for_me + project_standard + proactive_dev
+    assert "forbidden external effects" in done_for_me + project_standard
     assert "independent" in done_for_me + dev_sure
 
     # Mode safety: presentation and decision posture never widen authority.
@@ -68,7 +65,6 @@ def main() -> int:
 
     # Data and architecture guards.
     assert "parallel store, table, or identity path" in project_standard
-    assert "parallel store or duplicated identity path" in proactive_dev
     assert "not default to an app dashboard" in visual_standard
 
     # Evidence discipline.
@@ -78,7 +74,6 @@ def main() -> int:
     assert "boundary" in dev_sure and "never transfers" in dev_sure
     assert "accepted project decisions" in zoom_out
     assert "candidate, not a requirement" in zoom_out
-    assert "Never invents a fact" in final_it and "stays visibly unresolved" in final_it
 
     # Coaching and interrogation stay in their lanes.
     assert "question" in coach_me.lower()

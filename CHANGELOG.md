@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.0 — 2026-10-31
+
+Retires `final-it` and `proactive-dev` per the owner's DEC-051 statements; routes move to `done-for-me` under `proactive-habits`, the rollback-invariant rule moves into `dev-are-you-sure`. Roster 21 skills. First fresh-context probes of the DEC-051 rewrites recorded in `tests/receipts/dec-051-probes-2026-10-31.md`.
+
 ## 2.2.1 — 2026-10-31
 
 Portable frontmatter: `kind` moves to `metadata.kind` so every skill passes claude.ai, Cowork and Skills API validation; schema and tests enforce it. Codex coverage through the native plugin, with the ChatGPT-bundled Codex binary detected by doctor (23 enabled on the owner's machine). Installer drops the undocumented Antigravity path and ships the DEC-050 one-source-tree change. Owner machine: Claude marketplace added from the repository path so plugins load in place.

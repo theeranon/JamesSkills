@@ -19,7 +19,6 @@ Every agenda, every decision the room made and none it did not, in one file a re
 ## Do not use this when
 
 - Each agenda must become its own separate page -> `one-page-pls`
-- The artifact is not a meeting record and the format is open -> `final-it`
 - Project state must be reconstructed from the repository rather than a transcript -> `catchup`
 - The transcript is incomplete and the missing part must be obtained first -> `done-for-me`
 

@@ -21,7 +21,6 @@
 | hand-it-off | เลือก owner ถูกและส่งงานต่อได้ | โหลดทุก skill หรือยึดงานไว้ที่ router |
 | baseon | ใช้ lens โดยแยก fact, claim, inference, action | เรียกข้ออนุมานว่า official assessment |
 | coach-me | ผู้ใช้เลือกการกระทำของตนเองในขอบเขตที่ยินยอม | แนะนำแบบชี้นำหรือบังคับให้ตอบจนยอม |
-| final-it | ผู้รับใช้ artifact ใน format ที่เหมาะได้จริง | มีไฟล์แต่เปิดใช้ไม่ได้ หรือเติมเนื้อหาเอง |
 | give-me-solutions | ตัวเลือกที่แนะนำผ่านข้อจำกัดจริง | ชอบตัวเลือกเดิมแม้เงื่อนไขเปลี่ยน |
 | grill-me | requirement ที่ผู้ใช้ต้องเลือกถูกตอบและยืนยันครบ | เดาคำตอบแทนผู้ใช้ หรือถามสิ่งที่รู้แล้ว |
 | one-page-pls | หนึ่งหน้าต่อเรื่อง อ่านได้และข้อมูลสำคัญครบ | ย่อ font หรือตัดข้อมูลเพื่อให้พอดี |
@@ -30,7 +29,6 @@
 | catchup | สถานะปัจจุบันที่มีหลักฐานและไม่แก้สิ่งที่อ่าน | ทวน status เก่า หรือแก้ repo ใต้สิทธิ์ read-only |
 | dev-are-you-sure | defect ถูกแก้และ proof ตรงกับ target | local pass ถูกอ้างเป็น production proof |
 | make-it-james-ux | ใช้งานได้และตรง design system จริง | ผ่าน CSS string แต่ render ผิด |
-| proactive-dev | แผน build ได้และผลงานผ่าน acceptance เดิม | มี role/agent มากแต่ scope และงานหลุด |
 | project-standard | ข้อเท็จจริงคงเดิม มี owner เดียวและ contract ใช้ได้ | เติม template จนดูครบแต่ข้อมูลจริงหาย |
 
 ## Benchmark contract
@@ -155,16 +153,6 @@ Canonical: `plugins/james-productivity/skills/coach-me/SKILL.md`.
 - **C:** A missing factual answer should be supplied or researched; it cannot be elicited from the person. A request to complete a deployment routes to `done-for-me`. Clinical-risk fixtures test the existing referral boundary, not diagnosis or coaching efficacy; a withheld or withdrawn consent is a legitimate respected stop, not a failure to force commitment.
 - **Judge/proof and gaming risk:** Use scripted user responses for protocol testing and consenting human role-play for autonomy/relevance review. Do not claim psychological benefit from model simulations. Prevent forced agreement, repeated questions until the user gives in, leading advice with a question mark, or diagnostic labels.
 
-### 12. final-it — finish the appropriate artifact format
-
-Canonical: `plugins/james-productivity/skills/final-it/SKILL.md`.
-
-- **Job and metric:** Deliver existing content in a serving, verified format. Report recipient tasks successfully completed / intended recipient tasks; source propositions correctly retained / propositions; rendered required states inspected and usable / required states. Track unjustified format additions and invented content separately.
-- **S:** Finalize an operational handover whose best usable form is simple Markdown; preserve one unresolved owner visibly.
-- **V:** Finalize an existing HTML comparison for offline review; validate real rendering, links/assets, and unresolved assumptions.
-- **C:** A meeting record goes to `sum-meet`; per-topic pages go to `one-page-pls`. Explicit PDF instruction authorizes that format; “print-ready HTML” alone does not.
-- **Judge/proof and gaming risk:** Recipient-task fixture, native format checks, artifact open/render proof, and source diff. Avoid grading visual impressiveness, file existence, or template compliance as delivery.
-
 ### 13. give-me-solutions — recommend the best real option in context
 
 Canonical: `plugins/james-productivity/skills/give-me-solutions/SKILL.md`.
@@ -245,16 +233,6 @@ Canonical: `plugins/james-software/skills/make-it-james-ux/SKILL.md`.
 - **C:** An existing Material-style system legitimately differs from house values; keep it. A data label may discuss machine generation. A crashing component is a software defect, not a style violation.
 - **Judge/proof and gaming risk:** Rendered inspection, actual computed font/assets, relevant deterministic lint, and user task traces. Passing a 6px/string check while using the wrong project system, over-compressing content, or removing real authorization controls is failure.
 
-### 21. proactive-dev — persistent engineering planning and delivery posture
-
-Canonical: `plugins/james-software/skills/proactive-dev/SKILL.md`.
-
-- **Job and metric:** Make the engineering plan buildable, then deliver against it. Report independently verified accepted criteria / accepted criteria; architectural invariants preserved / applicable invariants; duplicated ownership or unauthorized dependencies / changes. Record time to first usable result and rework effort separately.
-- **S:** A moderately complex feature must conform to an existing single source of truth; derive done-criteria, allocate independent work, build, and verify against those original criteria.
-- **V:** A later task changes requirements and one delegated path blocks; update the plan, keep write ownership disjoint, preserve the authority boundary, and finish independent work.
-- **C:** A tiny patch or already accepted plan does not need fresh five-role ceremony. A simple source-only project may legitimately lack `ARCHITECTURE.md`; do not create empty architecture documents merely to satisfy a recital.
-- **Judge/proof and gaming risk:** Versioned done-criteria, actual artifact/tests, delegation traces, scope diff, and late-turn probes. Five named roles, a large plan, or many subagents do not prove competent decomposition. Test mode end at completion of engineering work.
-
 ### 22. project-standard — one owner per durable project fact
 
 Canonical: `plugins/james-software/skills/project-standard/SKILL.md`.
@@ -313,3 +291,6 @@ Approved 2026-09-06. These were the initial candidate directions; the 2026-09-07
 | hand-it-off | Choose one actual owner and hand over only required context | Chains several skills for a simple request or claims handoff as completion | Route a real strategic ambiguity to its owner |
 
 All 22 cards inherit separate goal-alignment and proportionality review. Main-task failure cannot be compensated by formatting, length, tool count, or checklist compliance. Public development probes cannot establish generalization; see tests/benchmarks/README.md for exact coverage limits.
+
+
+Retired 2026-10-31 (DEC-053): `final-it` and `proactive-dev`.

@@ -23,14 +23,14 @@ Recheck the delivered behavior and its evidence, then repair the defects you can
 - The code is correct and clean but the solution is mediocre -> `is-that-the-best-you-can-do`
 - One rejected output must become a permanent rule across the project -> `never-again`
 - The feature is simply unfinished -> `done-for-me`
-- Planning and role decomposition are needed before any code is written -> `proactive-dev`
+- Nothing has been built yet and the job is to plan and build it -> `done-for-me`
 
 ## Procedure
 
 Establish the requested surface and choose checks that could reveal a material defect. Read the actual diff or files in that surface, and run the project's existing build, type check and tests that cover it before judging; a check that could not run is reported as not tested. For a full audit, cover all five layers and all boundary links, marking genuinely irrelevant checks not applicable. A small local change needs relevant checks, not nine mandatory report sections. Repair inside the surface; escalate what needs a decision.
 
 1. **Integrity.** For stateful flows, exercise sequential use: navigate away and back, act twice, act while loading, act after failure. Trace how each transition preserves its invariant through explicit state, derived values, framework lifecycle or stateless design. An absent reset statement is not evidence of a defect; establish an incorrect reachable behavior before prescribing a reset.
-2. **Architecture.** Find hardcoded values, secrets, magic numbers, credentials in source, and logic sitting in the wrong layer. Convert missing configuration into an explicit input contract rather than a plausible default. Where the surface accepts outside input, guards data or changes a schema, check authorization, input validation, injection paths and the migration with its rollback.
+2. **Architecture.** Find hardcoded values, secrets, magic numbers, credentials in source, and logic sitting in the wrong layer. Convert missing configuration into an explicit input contract rather than a plausible default. A rollback must preserve the accepted invariant: if reverting would permit invalid writes or duplicate orders, disable the mutation path until the fix is restored rather than calling the bypass a safe rollback; a database transaction alone does not make external side effects atomic. Where the surface accepts outside input, guards data or changes a schema, check authorization, input validation, injection paths and the migration with its rollback.
 3. **Hygiene.** Remove debug output, commented-out blocks, dead branches, unused imports, orphaned variables, and scratch filenames that would be read as intentional by whoever inherits this.
 4. **Interface.** Apply the installed visual and interaction standard rather than restating it here. Report anything that standard forbids and cannot be fixed inside the surface.
 5. **Longevity.** Inspect plausible compatibility and maintenance risks exposed by this change. Distinguish demonstrated defects from uncertain future risks; use names understandable without this conversation.
@@ -51,7 +51,7 @@ The requested surface has received the relevant checks, every repairable finding
 ## Counter-case
 
 - The user asks whether a five-year business plan holds together. Same five-layer instinct, but the layers are business layers, so `are-you-sure` owns it.
-- The user asks the agent to plan and build a new service with proper role decomposition. Nothing exists to inspect yet, so `proactive-dev` owns it.
+- The user asks the agent to plan and build a new service. Nothing exists to inspect yet, so `done-for-me` owns it under the active decision posture.
 
 - A pure formatter has no state-reset statement and produces the correct result on repeated calls. Leave it stateless; do not manufacture a reset defect.
 - An asynchronous order action can run twice while pending. Exercise the duplicate request path and repair the violated order invariant rather than merely adding a visual reset.

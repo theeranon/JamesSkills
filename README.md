@@ -23,7 +23,7 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 ---
 
 
-## 🏛️ Architecture: 3 Pillars, 23 Skills
+## 🏛️ Architecture: 3 Pillars, 21 Skills
 
 The library ships as three Claude Code plugins, one per pillar. Each pillar owns one responsibility; no skill crosses pillar lines.
 
@@ -37,9 +37,9 @@ graph TD
 
 **⚙️ `james-core`** decides what to do and whether it was done right. It holds the modes that set decision posture and insight-first marketing for a conversation (`proactive-habits`, `i-have-adhd`, `insight-driven-mode`), the workflow that carries an agreed task to a finished outcome (`done-for-me`), the wording standard every recipient-facing output passes through (`make-it-james`), the gates nothing ships without: `are-you-sure`, `research-it`, `is-that-the-best-you-can-do`, and the two recording commands `never-again` and `hand-it-off`.
 
-**📊 `james-productivity`** thinks before it builds. It sharpens a vague requirement (`grill-me`), reframes a problem at the system level (`zoom-out`), applies a registered knowledge lens (`baseon`), settles an open question against outside evidence combined with a candidate comparison (`give-me-solutions`), coaches a person through their own stuck point (`coach-me`), and produces the two recipient-facing formats this library ships (`sum-meet`, `one-page-pls`, `final-it`).
+**📊 `james-productivity`** thinks before it builds. It sharpens a vague requirement (`grill-me`), reframes a problem at the system level (`zoom-out`), applies a registered knowledge lens (`baseon`), settles an open question against outside evidence combined with a candidate comparison (`give-me-solutions`), coaches a person through their own stuck point (`coach-me`), and produces the two recipient-facing formats this library ships (`sum-meet`, `one-page-pls`).
 
-**💻 `james-software`** is engineering-specific: it plans and builds with role discipline (`proactive-dev`), sweeps delivered code across five layers and the deployment boundary (`dev-are-you-sure`), recovers verified project state after a gap (`catchup`), keeps one project contract instead of scattered chat history (`project-standard`), and enforces the visual and interaction law every rendered surface follows (`make-it-james-ux`).
+**💻 `james-software`** is engineering-specific: sweeps delivered code across five layers and the deployment boundary (`dev-are-you-sure`), recovers verified project state after a gap (`catchup`), keeps one project contract instead of scattered chat history (`project-standard`), and enforces the visual and interaction law every rendered surface follows (`make-it-james-ux`).
 
 Every skill in every pillar satisfies one structural contract, [`docs/SKILL-SCHEMA.md`](docs/SKILL-SCHEMA.md), enforced on every commit: what it owns, what it may change, the sibling that owns each case it refuses, when it stops, and the named principles it operates on.
 
@@ -505,35 +505,6 @@ CTA: เริ่มเลย<br><br>
 
 ### 📦 Output Formats & Deliverables (การสร้างผลลัพธ์ส่งมอบระดับผู้บริหาร)
 
-#### ⚡️ `/final-it`
-*Select and finish recipient-ready deliverables without AI commentary, design rationale, or chat residue.*
-
-
-<table width="100%">
-<tr>
-<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
-<th width="50%">✅ After (JamesSkills Outcome)</th>
-</tr>
-<tr>
-<td valign="top">
-
-แน่นอนครับ! นี่คืออีเมลแจ้งปรับราคาสำหรับลูกค้าองค์กรที่ผมร่างให้ตามที่คุณขอครับ หวังว่าจะถูกใจนะครับ มีจุดไหนที่อยากให้ปรับแก้บอกผมได้ตลอดเลยนะครับ!<br><br><i>(AI พิมพ์บทสนทนาทักทายและคำขออนุญาตติดมากับเนื้อหา ทำให้ต้องมาคอยก๊อปปี้ตัดทิ้งก่อนส่ง)</i>
-
-</td>
-<td valign="top">
-
-<b>Subject: Notice of Enterprise Plan Annual Adjustment — Effective Oct 1</b><br><br>
-Dear [Client Executive Name],<br><br>
-To support our expanded 99.99% SLA guarantee and dedicated infrastructure, your enterprise subscription will adjust from $24,000 to $27,500 annually effective October 1, 2026. All feature entitlements remain uninterrupted.<br><br>
-Best regards,<br>
-James Theeranon
-
-</td>
-</tr>
-</table>
-
-<br>
-
 #### ⚡️ `/one-page-pls`
 *Turn complex source material into self-contained 1-page A4 landscape HTML executive briefs per topic (1 topic = 1 file).*
 
@@ -575,35 +546,6 @@ James Theeranon
 
 <p align="center"><img src="assets/make-it-james-ux-preview.png" width="100%" alt="make-it-james-ux UI Preview" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1px solid #313244;"></p>
 
-
-<br>
-
-#### ⚡️ `/proactive-dev`
-*Mandate safe, evidence-based software development: line-level log/source diagnosis, strict architectural boundaries, and blast-radius checks before code edits.*
-
-<p align="center"><img src="assets/proactive-dev-preview.png" width="100%" alt="proactive-dev preview"></p>
-
-<table width="100%">
-<tr>
-<th width="50%">❌ Before (ปล่อย AI ทำเอง)</th>
-<th width="50%">✅ After (JamesSkills Outcome)</th>
-</tr>
-<tr>
-<td valign="top">
-
-<i>(AI เดาสาเหตุบั๊กแบบสุ่มสี่สุ่มห้า แล้วแก้ไฟล์ <code>auth.ts</code> โดยไม่ตรวจสอบความเชื่อมโยง ส่งผลให้ระบบ Billing และ Profile พังทั้งระบบใน Production)</i>
-
-</td>
-<td valign="top">
-
-<b>[Evidence-Based Diagnosis & Blast-Radius Check]</b><br><br>
-• <b>Source Evidence:</b> <code>api/checkout.ts:42</code> ขาด Idempotency Key check ทำให้การกดย้ำสร้าง Charge ซ้ำ<br>
-• <b>Blast Radius:</b> ตรวจพบความเชื่อมโยงกับ <code>WebhookHandler</code>, <code>OrderService</code>, และ <code>InvoiceGenerator</code><br>
-• <b>Architecture Fix:</b> เพิ่ม Redis-backed Distributed Lock พร้อม Idempotency Token และแก้ไขไฟล์ที่เกี่ยวข้องพร้อมกันทั้งหมด
-
-</td>
-</tr>
-</table>
 
 <br>
 
@@ -659,7 +601,7 @@ James Theeranon
 <b>[Hand It Off: Single Accountable Outcome]</b><br><br>
 • <b>Phase 1:</b> <code>/sum-meet</code> ➔ บันทึกข้อตกลงและวาระการประชุมลงใน A4 HTML<br>
 • <b>Phase 2:</b> <code>/project-standard</code> ➔ สกัดข้อกำหนดลง <code>ai-context/</code> พร้อมล็อก Spec<br>
-• <b>Phase 3:</b> <code>/proactive-dev</code> + <code>/done-for-me</code> ➔ พัฒนาระบบและตรวจผ่าน <code>/dev-are-you-sure</code><br><br>
+• <b>Phase 3:</b> <code>/proactive-habits</code> + <code>/done-for-me</code> ➔ พัฒนาระบบและตรวจผ่าน <code>/dev-are-you-sure</code><br><br>
 <i>*มาตรฐาน <code>make-it-james</code> และ <code>make-it-james-ux</code> ถูกบังคับใช้อัตโนมัติในทุกขั้นตอน</i>
 
 </td>
@@ -867,7 +809,7 @@ The short rule:
 - use `/catchup` to return after a continuity gap;
 - use `/give-me-solutions` to research choices and `/done-for-me` after the owner decides;
 - use `/dev-are-you-sure` before accepting a completion claim, and `/research-it` when the doubt is about an outside claim;
-- use `/sum-meet`, `/one-page-pls`, or `/final-it` for recipient-facing outcomes; `make-it-james` and `make-it-james-ux` apply automatically.
+- use `/sum-meet` or `/one-page-pls` for recipient-facing outcomes; `make-it-james` and `make-it-james-ux` apply automatically.
 
 This release has no pilot packages. Compatibility aliases keep older calls working without creating another instruction body. `/hand-it-off` records the state and writes the handoff for the next agent; `skill-router` remains a compatibility alias that resolves to it.
 

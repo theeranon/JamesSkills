@@ -83,7 +83,7 @@ def export(target, names, catalog=None):
             plan.append((source, destination, True))
     # Preserve literal relative helper paths without duplicating instruction bodies.
     dependencies = []
-    if seen & {'baseon', 'coach-me', 'proactive-dev'}:
+    if seen & {'baseon', 'coach-me'}:
         dependencies.append((ROOT/'plugins/james-productivity/packs', target/'.agents/packs'))
         dependencies.append((ROOT/'plugins/james-productivity/research', target/'.agents/research'))
     if seen & {'sum-meet', 'one-page-pls'}:
@@ -141,7 +141,7 @@ def main():
     written = export(target, args.skills or None)
     for name in written:
         print(f'wrote {target}/.agents/skills/{name}/SKILL.md')
-    if set(written) & {'baseon', 'coach-me', 'proactive-dev'}:
+    if set(written) & {'baseon', 'coach-me'}:
         print(f'dependencies: {target}/.agents/packs and {target}/.agents/research')
     if set(written) & {'sum-meet', 'one-page-pls'}:
         print(f'font helper: {target}/james-software/skills/make-it-james-ux/scripts (font files not bundled)')

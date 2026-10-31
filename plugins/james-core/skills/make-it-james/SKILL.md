@@ -18,7 +18,6 @@ Rewrite it as a fluent person would say it to this reader: no AI slop, no transl
 
 ## Works with
 
-- The question is which format the deliverable should take -> `final-it`
 - The output is a screen, layout, or visual artifact and the rules needed are visual -> `make-it-james-ux`
 - Factual defects -> `are-you-sure` repairs them while this wording standard remains active.
 - Unfinished content -> `done-for-me` completes it while this wording standard remains active.

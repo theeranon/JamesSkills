@@ -24,7 +24,6 @@ def main() -> int:
     make_it_james = read("plugins/james-core/skills/make-it-james/SKILL.md")
     make_it_james_ux = read("plugins/james-software/skills/make-it-james-ux/SKILL.md")
     make_it_james_standard = read("plugins/james-software/skills/make-it-james-ux/references/standard.md")
-    final_it = read("plugins/james-productivity/skills/final-it/SKILL.md")
     behavior_cases = read("tests/behavioral-cases.md")
 
     for required in (
@@ -55,11 +54,10 @@ def main() -> int:
     assert "not self-contained proof" in sum_skill + one_skill
     assert "HTML-only delivery" in make_it_james_ux
     assert "Never generate a PDF merely to prove" in make_it_james_ux
-    assert "stays HTML-only" in final_it
     assert "HTML only by default" in one_skill
     assert "Do not create a PDF merely" in sum_skill
     assert "Never infer PDF need" in sum_skill
-    assert "directly confirmed" in make_it_james + make_it_james_ux + make_it_james_standard + final_it + sum_skill
+    assert "directly confirmed" in make_it_james + make_it_james_ux + make_it_james_standard + sum_skill
     assert "Never infer that constraint" in make_it_james_ux + make_it_james_standard
     assert "without exporting a PDF" in one_render_qa
     assert "If PDF was explicitly requested" in one_render_qa

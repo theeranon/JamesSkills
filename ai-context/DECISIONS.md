@@ -525,3 +525,14 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
   - DEC-050's installer change is committed with this release, with the Codex gap it opened closed as above.
 - Affects: all 23 `SKILL.md`, `docs/SKILL-SCHEMA.md`, `tests/test_skill_schema.py`, `tests/test_skill_schema_composition.py`, `scripts/install.py`, `scripts/codex_skills.py`, `tests/test_installer_contracts.py`, `README.md`, VERSION and manifests.
 - Evidence: `scripts/validate` and `scripts/doctor` pass; Codex app-server inventory 23 enabled; `claude plugin list` on the Desktop bundled binary shows version 2.2.0 read from the repository path. Cursor and Antigravity discovery after this change are not re-observed in a UI.
+
+## DEC-053 — Retire `final-it` and `proactive-dev`; first fresh-context probes of the rewrites (2.3.0)
+
+- Date: 2026-10-31
+- Status: Accepted. Owner statements in DEC-051 ("final-it: ไว้ทำอะไรนะ ลืม"; "proactive-dev ไม่จำเป็นถ้า proactive-habits ใช้ได้ทุกสายงาน") and the owner's instruction to finish every item previously reported as not done.
+- Decisions:
+  - `final-it` and `proactive-dev` are removed from the catalog, the plugins and the handbook. Roster is 21 canonical skills, 7 aliases. Routes that pointed at them now point at `done-for-me` (plan and build under `proactive-habits`) or are dropped (format choice belongs to the output skill that owns the artifact). The rollback-invariant rule from `proactive-dev` moves into `dev-are-you-sure`; the parallel-store rule already lives in `project-standard`.
+  - Fresh-context probes of `done-for-me`, `insight-driven-mode`, `coach-me` and `is-that-the-best-you-can-do` are recorded in `tests/receipts/dec-051-probes-2026-10-31.md`. They test the body text in isolation and are not host or trigger evidence.
+  - Discovery state on the owner's machine after 2.2.1 was checked on disk: no JamesSkills copy in `~/.claude/skills`, `~/.agents/skills`, `~/.codex/skills` or `~/.cursor/skills`, so Cursor and Claude see exactly one source (the plugin); Codex holds the native plugin; `~/.gemini/config/skills` holds 30 links (21 skills + 7 aliases after this release re-links, 23 + 7 before). No Antigravity application is installed on this machine, so its picker cannot be observed here; Cursor's picker was not opened.
+- Affects: `catalog.json`, two plugin directories and commands, `docs/SKILLS.md`, `README.md`, `tests/behavioral-cases.md`, `tests/benchmarks/*`, `docs/skill-benchmark-cards.md`, `tests/test_*`, `scripts/export.py`, VERSION and manifests.
+- Evidence: `scripts/validate` passes; receipt file above.

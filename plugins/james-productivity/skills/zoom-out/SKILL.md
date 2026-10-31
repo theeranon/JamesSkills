@@ -21,7 +21,7 @@ Recover the project goal and strategy before choosing the next implementation mo
 - Only layout, interaction, or visual design needs repair and the project strategy is not in question -> `make-it-james-ux`
 - The direction is settled and options must now be compared -> `give-me-solutions`
 - The direction is settled and the job is to build it -> `done-for-me`
-- Engineering work needs role decomposition and a build plan -> `proactive-dev`
+- The direction is settled and engineering work must be planned and built -> `done-for-me` under `proactive-habits`
 - The requirement itself is vague and must be extracted from the user -> `grill-me`
 - Current project state is unknown after a gap -> `catchup`
 

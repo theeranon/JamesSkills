@@ -20,7 +20,7 @@ Give the project one place where each durable fact lives, and say which version 
 
 - The contract exists and current state after a gap is what is unknown -> `catchup`
 - The contract exists and the work is to build against it -> `done-for-me`
-- Engineering work needs role decomposition rather than a contract -> `proactive-dev`
+- The contract exists and engineering work must be planned and built against it -> `done-for-me`
 - A rejected output needs to become a durable rule -> `never-again`
 - The direction itself is unsettled -> `zoom-out`
 

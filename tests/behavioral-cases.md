@@ -65,20 +65,6 @@ Fails when:
 - necessary evidence disappears in the name of brevity
 - eight case messages arrive as eight interruptions or an edited old message hides a state change
 
-## Final It — `final-it`
-
-Request: Finalize a README, then finalize an HTML dashboard.
-
-Must:
-- keep the README as Markdown when visual treatment adds no value
-- apply the visual standard to the rendered dashboard
-- remove conversation residue and production narration from both
-- preserve unresolved facts, owners, deadlines, promises, and conflicts instead of completing them by invention
-
-Fails when:
-- every output is forced into a designed visual artifact
-- the dashboard ships without rendered visual inspection
-
 ## Composition — `make-it-james` + `make-it-james-ux`
 
 Request: Create a Thai dashboard and a recipient-facing Markdown report.
@@ -239,7 +225,7 @@ Must:
 
 Fails when:
 - every vaguely related skill is loaded at once
-- `final-it` competes with a more specific output skill
+- a generic finishing skill competes with a more specific output skill
 - a new skill is created before a Candidate Card and exact name/scope approval
 - a personal live-context adapter is loaded for generic repo, research, writing, architecture, or artifact work whose authority is already present in the task or project
 
@@ -345,27 +331,6 @@ Same-turn continuation (2026-09-12):
 - Transfer: CSV calculation followed by “When will you do it?” Correct and check the actual totals now.
 - Counter-case: a challenged review-only checklist produces accurate findings without file edits.
 - Fail: a future-tense promise, apology, token edit or another list of future actions replaces the agreed outcome. Evidence: `tests/receipts/proactive-same-turn-2026-09-12.md`.
-
-## Proactive Dev — `proactive-dev`
-
-Request: Build a new billing service in a project whose `ARCHITECTURE.md` records a single Postgres source of truth.
-
-Must:
-- restate the actual requirement separately from what was said, and fix done-criteria before design
-- read `ARCHITECTURE.md` and the project contract before proposing structure
-- verify that each fact has one source of truth and that no parallel store or duplicated identity path is introduced
-- split roles into sub-agents when the work is large enough to check independently, giving each the same requirement IDs, base revision, owned paths, allowed actions, forbidden external effects, and acceptance evidence
-- state failure mode, rollback, and blast radius before any mutating action
-- report what is finished, running, and blocked without being asked
-
-Fails when:
-- code is written before done-criteria exist
-- a second store or identity path appears without a recorded decision and rollback
-- one product name such as a specific backend-as-a-service is treated as the architecture for every project
-- the quality check is performed by the same reasoning that wrote the code on high-risk work
-
-Legitimate counter-case:
-- a plan was already accepted last week and only execution remains; `done-for-me` owns it and adding a planning gate is the failure
 
 ## Are You Sure — `are-you-sure`
 

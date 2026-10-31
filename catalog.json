@@ -95,13 +95,6 @@
       "aliases": []
     },
     {
-      "name": "final-it",
-      "category": "james-productivity",
-      "kind": "output",
-      "status": "promoted",
-      "aliases": []
-    },
-    {
       "name": "give-me-solutions",
       "category": "james-productivity",
       "kind": "workflow",
@@ -154,13 +147,6 @@
       "name": "make-it-james-ux",
       "category": "james-software",
       "kind": "shared-standard",
-      "status": "promoted",
-      "aliases": []
-    },
-    {
-      "name": "proactive-dev",
-      "category": "james-software",
-      "kind": "mode",
       "status": "promoted",
       "aliases": []
     },

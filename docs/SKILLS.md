@@ -9,12 +9,12 @@ This handbook is the human navigation layer. `catalog.json` owns category, kind,
 1. Start or repair a project contract with `/project-standard`; return after a gap with `/catchup`.
 2. Sharpen a half-formed idea with `/grill-me`; climb to strategy with `/zoom-out`.
 3. Settle one doubt with `/research-it`; choose between candidates with `/give-me-solutions`.
-4. Use `/proactive-dev` throughout engineering; `/done-for-me` finishes one task within that mode.
+4. Keep `/proactive-habits` on throughout; `/done-for-me` is the wake-up call that finishes the task when questions pile up.
 5. Check business work with `/are-you-sure` and software with `/dev-are-you-sure`; raise a mediocre result with `/is-that-the-best-you-can-do`.
 
 Mode and standard behavior differs from a normal workflow:
 
-- `/i-have-adhd`, `/proactive-dev`, `/proactive-habits` and `/insight-driven-mode` stay active for the current conversation until explicitly disabled.
+- `/i-have-adhd`, `/proactive-habits`, `/insight-driven-mode` and `/coach-me` stay active for the current conversation until explicitly disabled.
 - `make-it-james` and `make-it-james-ux` apply automatically to recipient-facing outcomes; invoking one directly is useful for a wording or visual audit.
 - `/hand-it-off` writes the handoff another agent, account or machine needs and pushes the records first; `/never-again` is the wake-up call when recording lapsed.
 
@@ -31,7 +31,7 @@ Mode and standard behavior differs from a normal workflow:
 - Result: The owner-document changes, requirement identifiers with acceptance/proof, visible intended-versus-actual drift, and checks actually performed. Include regenerated SRS/version only when applicable; for a requested draft, clearly identify proposed text and unverified facts instead of reporting edits or readiness.
 - Do not use when: The contract exists and current state after a gap is what is unknown -> `catchup`
   - The contract exists and the work is to build against it -> `done-for-me`
-  - Engineering work needs role decomposition rather than a contract -> `proactive-dev`
+  - The contract exists and engineering work must be planned and built against it -> `done-for-me`
 - Aliases: `project-docs-standard` (legacy compatibility calls).
 - Canonical instructions: [`plugins/james-software/skills/project-standard/SKILL.md`](../plugins/james-software/skills/project-standard/SKILL.md)
 
@@ -131,22 +131,10 @@ Mode and standard behavior differs from a normal workflow:
 - Lifecycle: `promoted`
 - Use when: Wake-up call when the agent keeps asking after enough insight and decisions were given. Re-read the whole conversation and every settled decision, then act at once; build what is still ambiguous as a changeable setting or as three to five variants. Use for just do it, stop asking, ทำให้จบ, ทำสักที, พอแล้วถามอยู่นั่น.
 - Result: The finished, exercised outcome; every formerly open point turned into a changeable setting or three to five variants; only gates the user genuinely holds.
-- Do not use when: The user asks to design a strategy rather than execute an established outcome -> `proactive-dev` can guide engineering planning. Missing implementation details alone do not block execution.
+- Do not use when: The work is finished and its diligence is what is in doubt -> `are-you-sure`
   - The work is finished and its diligence is what is in doubt -> `are-you-sure`
   - Delivered code needs a layered sweep and boundary check -> `dev-are-you-sure`
 - Canonical instructions: [`plugins/james-core/skills/done-for-me/SKILL.md`](../plugins/james-core/skills/done-for-me/SKILL.md)
-
-### `/proactive-dev`
-
-- Canonical package: `proactive-dev`
-- Category: `james-software`
-- Kind: `mode`
-- Lifecycle: `promoted`
-- Use when: Keep engineering work proactive from understanding the goal through implementation, testing and delivery. A conversation mode for build sessions such as build this properly, be my tech lead, วางแผนแล้วลงมือเลย, ทำแบบมืออาชีพ. Scales planning and delegation to the task and stays active alongside workflows.
-- Result: The usable plan or implementation, with the decisions, scope, rollback and acceptance evidence needed to assess it. State actual progress and remaining dependencies once; do not repeat the same plan as analyst, architect and handback summaries.
-- Do not use when: Not a replacement for the task workflow. Composes with active workflows and standards.
-- Canonical instructions: [`plugins/james-software/skills/proactive-dev/SKILL.md`](../plugins/james-software/skills/proactive-dev/SKILL.md)
-
 
 ## Check the work
 
@@ -214,7 +202,6 @@ Mode and standard behavior differs from a normal workflow:
 - Use when: Summarize a meeting or long material completely (every point kept, not long): topics clearly separated in one HTML file ordered summary, table of contents, then each topic, evidence apart from interpretation, project design system with a quiet default, no metacopy. Use for สรุปประชุม, ทำ minutes, meeting minutes.
 - Result: The requested short summary, or the full rendered meeting record with source coverage and traceability. Keep verification bookkeeping internal unless requested or material; show unknown or disputed facts where relevant.
 - Do not use when: Each agenda must become its own separate page -> `one-page-pls`
-  - The artifact is not a meeting record and the format is open -> `final-it`
   - Project state must be reconstructed from the repository rather than a transcript -> `catchup`
 - Canonical instructions: [`plugins/james-productivity/skills/sum-meet/SKILL.md`](../plugins/james-productivity/skills/sum-meet/SKILL.md)
 
@@ -227,23 +214,8 @@ Mode and standard behavior differs from a normal workflow:
 - Use when: Summarize the essentials onto one page: choose what a decision-maker needs, in the project's design system with small user overrides accepted and a quiet default style, metacopy checked and removed. One page per topic by default. Use for one page please, one-pager, สรุปหน้าเดียว, ขอ one page.
 - Result: The requested page or chat brief. Keep coverage and inspection bookkeeping internal unless requested; disclose any material omission, linked appendix or delivery limitation the reader needs.
 - Do not use when: Every agenda must live in one record together -> `sum-meet`
-  - The artifact is not page-bound and the format is still open -> `final-it`
   - Current project state must be reconstructed rather than summarised -> `catchup`
 - Canonical instructions: [`plugins/james-productivity/skills/one-page-pls/SKILL.md`](../plugins/james-productivity/skills/one-page-pls/SKILL.md)
-
-### `/final-it`
-
-- Canonical package: `final-it`
-- Category: `james-productivity`
-- Kind: `output`
-- Lifecycle: `promoted`
-- Use when: Choose the format that actually serves the recipient and finish the work in it. Use for finalize this, make it ready to send, ทำให้พร้อมส่ง, ทำเป็นฉบับจริง, when no narrower output skill owns the artifact. Not for meeting records, one-page briefs or supplying missing content.
-- Result: The finished deliverable. If the user requests the artifact only, return only that artifact; keep format rationale and verification bookkeeping internal. Otherwise include only a material delivery limit or decision still needed, without repeating the finished content.
-- Do not use when: The source is a meeting and the record must hold every agenda -> `sum-meet`
-  - Each topic must become its own single page -> `one-page-pls`
-  - A project contract, not a deliverable, is what is needed -> `project-standard`
-- Canonical instructions: [`plugins/james-productivity/skills/final-it/SKILL.md`](../plugins/james-productivity/skills/final-it/SKILL.md)
-
 
 ## Modes and standards
 
@@ -316,7 +288,6 @@ Mode and standard behavior differs from a normal workflow:
 - Use when: No slop in UX, UI and web app design, as principles a user or project design system may override. UX: real flow of every user group, fewer steps, no needless modal, left to right, top to bottom, exact grid. UI: locked type and radius, no accent border, nothing jumps, fixed heights. Use for UI รก, จัดหน้าให้เป๊ะ.
 - Result: The requested code or rendered artifact. For a rendered deliverable, report the system followed, actual lint/render evidence and material open gates. For code-only output, return exclusively code; keep verification notes internal.
 - Do not use when: The rules needed are about wording rather than presentation -> `make-it-james`
-  - The question is which format the deliverable should take -> `final-it`
   - The interface is defective rather than inconsistent -> `dev-are-you-sure`
 - Canonical instructions: [`plugins/james-software/skills/make-it-james-ux/SKILL.md`](../plugins/james-software/skills/make-it-james-ux/SKILL.md)
 

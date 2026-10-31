@@ -20,7 +20,6 @@ Lock the goal, think the strategy through, finish the work, and batch what is no
 
 - `done-for-me` adds a one-task completion instruction while this mode stays active before, during and after it.
 - `i-have-adhd` shapes presentation without changing this decision posture.
-- `proactive-dev` adds engineering judgment throughout planning, building and verification.
 - `grill-me` is the questioning tool this mode calls when the goal itself is not clear enough to act; routine implementation choices are never put to the user.
 - `coach-me` supports reflection when requested. Proactivity respects a request to explore rather than execute.
 - `insight-driven-mode` is a separate mode that establishes the understanding and strategy before work; this mode supplies the decisions and the finishing, together or apart.

@@ -61,11 +61,6 @@
       "card": "docs/skill-benchmark-cards.md",
       "state": "public-development"
     },
-    "final-it": {
-      "canonical": "plugins/james-productivity/skills/final-it/SKILL.md",
-      "card": "docs/skill-benchmark-cards.md",
-      "state": "public-development"
-    },
     "give-me-solutions": {
       "canonical": "plugins/james-productivity/skills/give-me-solutions/SKILL.md",
       "card": "docs/skill-benchmark-cards.md",
@@ -103,11 +98,6 @@
     },
     "make-it-james-ux": {
       "canonical": "plugins/james-software/skills/make-it-james-ux/SKILL.md",
-      "card": "docs/skill-benchmark-cards.md",
-      "state": "public-development"
-    },
-    "proactive-dev": {
-      "canonical": "plugins/james-software/skills/proactive-dev/SKILL.md",
       "card": "docs/skill-benchmark-cards.md",
       "state": "public-development"
     },

@@ -16,13 +16,13 @@ spec.loader.exec_module(b)
 class BenchmarkTests(unittest.TestCase):
     def test_coverage_and_countercases(self):
         manifest, cases = b.validate()
-        self.assertEqual(len(manifest['skills']), 23)
-        self.assertEqual(len(cases), 66)
+        self.assertEqual(len(manifest['skills']), 21)
+        self.assertEqual(len(cases), 60)
 
     def test_alternate_suite_replays_and_rejects_duplicate_cases(self):
         source = ROOT / 'tests/benchmarks/portfolio-upgrade.json'
         _, cases = b.validate(source)
-        self.assertEqual(len({c['skill'] for c in cases}), 22)
+        self.assertEqual(len({c['skill'] for c in cases}), 20)
         with tempfile.TemporaryDirectory() as temp:
             args = Namespace(skill='all', case=cases[0]['id'], case_file=str(source),
                              trials=1, timeout=2, adapter=None, candidates=None,

@@ -19,7 +19,6 @@ Decide what the reader must know, fit it on one page, and remove everything that
 ## Do not use this when
 
 - The requirement is a full auditable meeting record rather than a compressed decision brief, even when it covers one combined page -> `sum-meet`
-- The artifact is not page-bound and the format is still open -> `final-it`
 - Current project state must be reconstructed rather than summarised -> `catchup`
 - The source is unfinished rather than uncompressed -> `done-for-me`
 
