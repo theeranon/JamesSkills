@@ -39,3 +39,5 @@
 - `footer_text` → `Researched by SolutionsIMPACT, Developed by James Theeranon` ทั้ง one-page-pls และ sum-meet
 
 บันทึกเป็น DEC-051 และ LESSON-017 ใน `ai-context/`
+
+คำตอบดิบทุกข้อความของ James (ทั้งรอบสัมภาษณ์และรอบ 2) อยู่ใน `skill-purpose-raw-answers-2026-10-31.md` ไฟล์นี้คือข้อสรุป ไฟล์นั้นคือต้นฉบับ

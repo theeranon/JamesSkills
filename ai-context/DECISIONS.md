@@ -511,6 +511,7 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
   - `proactive-dev`: unnecessary when `proactive-habits` works for every kind of work. Retire with the next release; move engineering-specific rules that still matter (rollback, invariants, test discipline) into `project-standard` and `dev-are-you-sure`.
 - Affects: every canonical `SKILL.md` body, `catalog.json` (kind of `coach-me`, removal of two aliases, later retirement of `final-it` and `proactive-dev`), `docs/SKILLS.md`, `README.md`, `tests/behavioral-cases.md`, `AGENTS.md` (Candidate Card gate), VERSION and manifests at release.
 - Evidence: owner statements in this conversation on 2026-10-31; questionnaire and answers in `docs/audits/grill-skill-goals-2026-10-31.md`. No body has been rewritten yet; no version bump yet. The uncommitted installer change for DEC-050 still awaits the Codex coverage repair named in the audit (C2) before it is committed.
+- Source record: the owner's verbatim statements behind this decision are kept in `docs/audits/skill-purpose-raw-answers-2026-10-31.md`; this entry is the paraphrase, that file is the authority when they differ.
 
 ## DEC-052 — Portable frontmatter, Codex native coverage, in-place Claude marketplace (2.2.1)
 
