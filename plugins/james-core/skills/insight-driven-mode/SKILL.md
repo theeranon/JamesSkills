@@ -1,7 +1,8 @@
 ---
 name: insight-driven-mode
-kind: mode
 license: CC-BY-NC-4.0
+metadata:
+  kind: mode
 description: Understand the real user and goal before any work starts, in every kind of task: dig, ask and research until clear, set strategy first, then check the result serves the need, not just that it is done. Marketing: one written insight per group. Activate with insight first, เริ่มจากอินไซต์, เข้าใจก่อนทำ, อย่าเพิ่งลงมือ.
 ---
 

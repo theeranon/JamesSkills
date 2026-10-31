@@ -1,7 +1,8 @@
 ---
 name: zoom-out
-kind: workflow
 license: CC-BY-NC-4.0
+metadata:
+  kind: workflow
 description: Step back from implementation detail through the project goal to the strategy that should achieve it. Use for zoom out, are we solving the right problem, big picture, ถอยมามองภาพรวม, หลงทางแล้ว, ทำไปเพื่ออะไร. Not for an isolated implementation or visual fix.
 ---
 

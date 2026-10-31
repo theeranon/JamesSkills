@@ -694,6 +694,8 @@ claude plugin marketplace update james-skills && claude plugin update james-core
 
 The repository is public, so no authentication is needed to add the marketplace or install.
 
+If you edit the skills on this machine, add the marketplace from your clone's path instead of GitHub (`claude plugin marketplace add /path/to/JamesSkills`). Claude Code then loads the three plugins in place from the repository, and an edit or `git pull` takes effect at the next session or `/reload-plugins` with no version bump and no cache copy to refresh.
+
 ### Route B — local install (recommended if you edit the skills)
 
 Links every skill straight into each platform's discovery directory, so an edit in this repository takes effect immediately with no update step.

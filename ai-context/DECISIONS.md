@@ -511,3 +511,17 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
   - `proactive-dev`: unnecessary when `proactive-habits` works for every kind of work. Retire with the next release; move engineering-specific rules that still matter (rollback, invariants, test discipline) into `project-standard` and `dev-are-you-sure`.
 - Affects: every canonical `SKILL.md` body, `catalog.json` (kind of `coach-me`, removal of two aliases, later retirement of `final-it` and `proactive-dev`), `docs/SKILLS.md`, `README.md`, `tests/behavioral-cases.md`, `AGENTS.md` (Candidate Card gate), VERSION and manifests at release.
 - Evidence: owner statements in this conversation on 2026-10-31; questionnaire and answers in `docs/audits/grill-skill-goals-2026-10-31.md`. No body has been rewritten yet; no version bump yet. The uncommitted installer change for DEC-050 still awaits the Codex coverage repair named in the audit (C2) before it is committed.
+
+## DEC-052 — Portable frontmatter, Codex native coverage, in-place Claude marketplace (2.2.1)
+
+- Date: 2026-10-31
+- Status: Accepted; owner instruction "ทำ P0 ต่อเลย" after DEC-051.
+- Decisions:
+  - Every canonical `SKILL.md` keeps only Agent Skills fields at the top level; the kind moves to `metadata.kind`. `docs/SKILL-SCHEMA.md` and `tests/test_skill_schema.py` enforce it and reject a top-level `kind`. Reason: claude.ai uploads, Cowork and the Skills API reject any other top-level key with a hard error (code.claude.com/docs/en/skills, "Using skill frontmatter outside Claude Code").
+  - Codex coverage comes from the Codex native plugin (`codex plugin marketplace add` of this repository plus `codex plugin add` per pillar), not from shared skill directories that Cursor also scans. `scripts/codex_skills.py` finds the Codex binary bundled inside the ChatGPT app when `codex` is not on PATH, so doctor can no longer pass by skipping Codex on this machine. Confirmed: app-server lists 23 enabled JamesSkills, 0 duplicates.
+  - The installer drops `~/.gemini/antigravity/custom/skills`, which no Antigravity document names; `~/.gemini/config/skills` is the documented global root.
+  - On the owner's machine the Claude marketplace is added from the repository path, so the three plugins load in place ("Read from" the repository per `claude plugin list`) and an edit or pull takes effect at the next session or `/reload-plugins` without a version bump. The manual cache symlinks and snapshot directories from DEC-050 are removed. GitHub remains the marketplace source for everyone else, where the `version` field still gates updates (LESSON-005).
+  - `skillListingBudgetFraction` is set to 0.03 in the owner's user settings because the listing of about 170 skills on this machine exceeded the default 1% budget and descriptions were being dropped.
+  - DEC-050's installer change is committed with this release, with the Codex gap it opened closed as above.
+- Affects: all 23 `SKILL.md`, `docs/SKILL-SCHEMA.md`, `tests/test_skill_schema.py`, `tests/test_skill_schema_composition.py`, `scripts/install.py`, `scripts/codex_skills.py`, `tests/test_installer_contracts.py`, `README.md`, VERSION and manifests.
+- Evidence: `scripts/validate` and `scripts/doctor` pass; Codex app-server inventory 23 enabled; `claude plugin list` on the Desktop bundled binary shows version 2.2.0 read from the repository path. Cursor and Antigravity discovery after this change are not re-observed in a UI.

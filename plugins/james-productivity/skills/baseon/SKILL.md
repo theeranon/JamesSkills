@@ -1,7 +1,8 @@
 ---
 name: baseon
-kind: knowledge-lens
 license: CC-BY-NC-4.0
+metadata:
+  kind: knowledge-lens
 description: Study a subject the user already has a keyword, hypothesis or insight for, wherever it lives (this chat, project, machine, connector, outside), and apply registered frameworks and books to the real case with source claims kept apart from evidence and inference. Use for อิงจากหนังสือเล่มนี้, ไปศึกษาเรื่องนี้มา.
 ---
 

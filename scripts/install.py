@@ -105,25 +105,40 @@ def claude_pillars(home):
 
 def plan(root, home, catalog):
     claude_target = Path(os.environ.get('CLAUDE_CONFIG_DIR', str(home/'.claude')))/'skills'
-    targets = [home/'.agents/skills', Path(os.environ.get('CODEX_HOME', str(home/'.codex')))/'skills', claude_target]
-    for base in (home/'.cursor', home/'.gemini/config', home/'.gemini/antigravity/custom'):
+    codex_target = Path(os.environ.get('CODEX_HOME', str(home/'.codex')))/'skills'
+    targets = [home/'.agents/skills', codex_target, claude_target]
+    # Antigravity's documented global skills root is ~/.gemini/config/skills (antigravity.google/docs/skills).
+    for base in (home/'.cursor', home/'.gemini/config'):
         if base.is_dir(): targets.append(base/'skills')
+    # Cursor third-party detection reads Claude, Codex, and shared-agent dirs.
+    # A native plugin plus any of these user-dir copies is the same skill twice.
+    plugin_covered_targets = {
+        claude_target,
+        home/'.agents/skills',
+        codex_target,
+        home/'.cursor/skills',
+    }
     pillars = claude_pillars(home)
     links, removals = {}, set()
     promoted = [s for s in catalog['skills'] if s['status']=='promoted']
     for target in targets:
-        gemini = target in (home/'.gemini/config/skills', home/'.gemini/antigravity/custom/skills')
+        gemini = target == home/'.gemini/config/skills'
         for item in promoted:
             source = root/'plugins'/item['category']/'skills'/item['name']
             destination = target/item['name']
-            if target == claude_target and item['category'] in pillars and (pillars[item['category']]/'skills'/item['name']/'SKILL.md').is_file():
+            plugin_owned = (
+                item['category'] in pillars
+                and (pillars[item['category']]/'skills'/item['name']/'SKILL.md').is_file()
+            )
+            if plugin_owned and target in plugin_covered_targets:
                 if owned(destination, root): removals.add(destination)
                 elif destination.exists() or destination.is_symlink():
                     raise RuntimeError(f'Collision with native plugin; preserved: {destination}')
             else:
                 # Per-skill links keep pilot packages out of every host.
                 links[destination] = source
-            for alias in item.get('aliases', []): links[target/alias] = root/'aliases'/alias
+                for alias in item.get('aliases', []):
+                    links[target/alias] = root/'aliases'/alias
         if target.is_dir():
             for existing in target.iterdir():
                 if owned(existing, root) and existing not in links: removals.add(existing)

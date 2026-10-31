@@ -59,6 +59,21 @@ class CodexClient:
             self.process.wait()
 
 
+BUNDLED_CODEX = (
+    # Codex desktop ships inside the ChatGPT app on macOS; it is not on PATH (LESSON-015 class).
+    Path('/Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex'),
+    Path.home()/'Applications/ChatGPT.app/Contents/Resources/codex-cli/bin/codex',
+)
+
+
+def find_codex():
+    found = shutil.which('codex')
+    if found: return found
+    for candidate in BUNDLED_CODEX:
+        if candidate.is_file() and os.access(candidate, os.X_OK): return str(candidate)
+    return None
+
+
 def list_skills(client, root):
     result = client.call('skills/list', {'cwds': [str(root)], 'forceReload': True})
     return [s for entry in result['data'] for s in entry['skills']]
@@ -112,9 +127,9 @@ def check_coverage(root, catalog, skills, managed):
 
 
 def reconcile(root, home, catalog, repair=False, client=None):
-    executable = shutil.which('codex')
+    executable = find_codex()
     if client is None and not executable:
-        print('SKIP Codex runtime check: codex not on PATH; no runtime claim')
+        print('SKIP Codex runtime check: codex not found on PATH or in a known app bundle; no runtime claim')
         return
     owns_client = client is None
     if owns_client: client = CodexClient(executable)

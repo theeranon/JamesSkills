@@ -12,10 +12,14 @@ and authority a skill's job does not require.
 ```yaml
 ---
 name: <matches the directory name and the catalog entry>
-kind: workflow | mode | shared-standard | output | knowledge-lens | internal-routing
+license: CC-BY-NC-4.0
+metadata:
+  kind: workflow | mode | shared-standard | output | knowledge-lens | internal-routing
 description: <capability> <trigger occasion> <optional meaningful exclusion>
 ---
 ```
+
+Only the six Agent Skills fields (`name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools`) may appear at the top level: claude.ai uploads, Cowork and the Skills API reject any other key with a hard error, and the spec defines `metadata` as a string-to-string map. The kind therefore lives at `metadata.kind` and never as a top-level `kind` key (DEC-052).
 
 `description` is the trigger surface. It is resident on every turn for every installed
 skill whether or not the skill fires, so keep it focused on:

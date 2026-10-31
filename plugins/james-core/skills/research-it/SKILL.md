@@ -1,7 +1,8 @@
 ---
 name: research-it
-kind: workflow
 license: CC-BY-NC-4.0
+metadata:
+  kind: workflow
 description: Stop guessing and go get the information first: settle one claim with evidence that goes beyond the official spec, which overclaims, to real users, real reviews, videos, communities or the thing itself, compared and summarized. Use for is that true, prove it, จริงเหรอ, อย่าตอแหล ไปหาข้อมูลมาก่อน, เช็คข้อมูลก่อน.
 ---
 

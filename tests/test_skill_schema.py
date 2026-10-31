@@ -58,7 +58,16 @@ def split_frontmatter(text: str) -> tuple[dict[str, str], str]:
     raw = text[4:end]
     body = text[end + 5 :]
     meta: dict[str, str] = {}
+    nested = None
     for line in raw.splitlines():
+        if line.startswith("  ") and nested and ": " in line:
+            key, value = line.strip().split(": ", 1)
+            meta[f"{nested}.{key}"] = value.strip()
+            continue
+        if line.endswith(":") and not line.startswith(" "):
+            nested = line[:-1].strip()
+            continue
+        nested = None
         if ": " in line and not line.startswith(" "):
             key, value = line.split(": ", 1)
             meta[key.strip()] = value.strip()
@@ -117,9 +126,11 @@ def main() -> int:
         # --- frontmatter ---
         if meta.get("name") != skill:
             fail(errors, skill, f"frontmatter name is {meta.get('name')!r}")
-        kind = meta.get("kind", "")
+        if "kind" in meta:
+            fail(errors, skill, "top-level kind is not portable; use metadata.kind (claude.ai and the Skills API accept only the six Agent Skills fields)")
+        kind = meta.get("metadata.kind", "")
         if kind not in KINDS:
-            fail(errors, skill, f"kind {kind!r} is not one of {sorted(KINDS)}")
+            fail(errors, skill, f"metadata.kind {kind!r} is not one of {sorted(KINDS)}")
             continue
         if entry.get("kind") != kind:
             fail(errors, skill, f"catalog kind {entry.get('kind')!r} != file kind {kind!r}")

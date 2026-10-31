@@ -88,10 +88,15 @@ class InstallerTests(unittest.TestCase):
         manifest.write_text(json.dumps({'plugins':{'james-core@james-skills':[{'scope':'user','installPath':str(d)}]}}))
         self.apply()
         self.assertFalse((self.home/'.claude/skills/alpha').exists())
+        self.assertFalse((self.home/'.claude/skills/old-alpha').exists())
+        self.assertFalse((self.home/'.agents/skills/alpha').exists())
+        self.assertFalse((self.home/'.codex/skills/alpha').exists())
         self.assertTrue((self.home/'.claude/skills/beta').is_symlink())
+        self.assertTrue((self.home/'.agents/skills/beta').is_symlink())
         settings=self.home/'.claude/settings.json';settings.write_text(json.dumps({'enabledPlugins':{'james-core@james-skills':False}}))
         self.apply()
         self.assertTrue((self.home/'.claude/skills/alpha').is_symlink())
+        self.assertTrue((self.home/'.agents/skills/alpha').is_symlink())
 
     def test_rejected_case_shared_root_plus_native_plugin(self):
         local=self.local_skill();native=self.native()
@@ -193,11 +198,11 @@ class InstallerTests(unittest.TestCase):
         self.assertEqual((dst/'SKILL.md').read_text(),'alpha')
 
     def test_gemini_flat_links_exclude_pilot_and_preserve_other_hosts(self):
-        for directory in ['.gemini/config', '.gemini/antigravity/custom']:
+        for directory in ['.gemini/config']:
             (self.home/directory).mkdir(parents=True)
         first=self.apply()
         self.assertEqual(first,self.apply())
-        for directory in ['.gemini/config', '.gemini/antigravity/custom', '.agents', '.codex', '.claude']:
+        for directory in ['.gemini/config', '.agents', '.codex', '.claude']:
             skills=self.home/directory/'skills'
             self.assertTrue((skills/'alpha').is_symlink())
             self.assertTrue((skills/'beta').is_symlink())

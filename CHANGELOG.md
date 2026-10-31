@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.2.1 — 2026-10-31
+
+Portable frontmatter: `kind` moves to `metadata.kind` so every skill passes claude.ai, Cowork and Skills API validation; schema and tests enforce it. Codex coverage through the native plugin, with the ChatGPT-bundled Codex binary detected by doctor (23 enabled on the owner's machine). Installer drops the undocumented Antigravity path and ships the DEC-050 one-source-tree change. Owner machine: Claude marketplace added from the repository path so plugins load in place.
+
 ## 2.2.0 — 2026-10-31
 
 Skill bodies rewritten to the owner-defined purposes recorded in DEC-051. `insight-driven-mode` is an understand-first mode for every kind of work; `proactive-habits` thinks strategy first, batches undecidable points into one question and gates to `grill-me`; `coach-me` becomes a questioning mode; `done-for-me`, `is-that-the-best-you-can-do` and `never-again` are written as the wake-up commands they are; `hand-it-off` becomes the handoff workflow and the Candidate Card gate moves to `AGENTS.md`; `research-it`, `give-me-solutions`, `baseon` and `catchup` adjusted; `one-page-pls` and `sum-meet` follow the project design system, check metacopy and carry the credit footer; `make-it-james` is the copywriting checklist and `make-it-james-ux` splits into UX and UI principles. Aliases `solutionsimpact-onepagesummary` and `solutionsimpact-meeting-summary-full` removed. Structural validation only; no behavioral probe.

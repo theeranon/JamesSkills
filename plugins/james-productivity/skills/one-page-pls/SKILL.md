@@ -1,7 +1,8 @@
 ---
 name: one-page-pls
-kind: output
 license: CC-BY-NC-4.0
+metadata:
+  kind: output
 description: Summarize the essentials onto one page: choose what a decision-maker needs, in the project's design system with small user overrides accepted and a quiet default style, metacopy checked and removed. One page per topic by default. Use for one page please, one-pager, สรุปหน้าเดียว, ขอ one page.
 ---
 

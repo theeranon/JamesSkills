@@ -213,3 +213,13 @@ for direct evidence remains in force.
 **Rule:** Whenever an insight, key learning, decision, important context, `SKILL.md` change or a new version of a deliverable appears, write it into the owner document that holds that kind of fact and commit and push it in the same work session, without waiting to be told. `never-again` and `hand-it-off` exist to be invoked when this lapses; their invocation means the rule has already been broken once.
 
 **Date:** 2026-10-31. DEC-051.
+
+## LESSON-018 — A host that is not on PATH is still installed
+
+**What happened:** `scripts/doctor` printed PASS for weeks while Codex had zero JamesSkills, because the Codex binary lives inside the ChatGPT app and `shutil.which('codex')` returned nothing, so the Codex check was skipped and reported as "no runtime claim".
+
+**Mechanism:** A skip that reads like a pass. The check keyed on PATH, not on whether the product exists on the machine; the same class as LESSON-015 for Claude Desktop.
+
+**Rule:** A host check looks for the product where the product actually installs itself (app bundle paths, running processes), not only on PATH, and a host that exists but cannot be verified is a FAIL or an explicit WARN with the missing evidence named, never a silent SKIP. Record the bundled path in the checker when it is learned.
+
+**Date:** 2026-10-31. DEC-052.

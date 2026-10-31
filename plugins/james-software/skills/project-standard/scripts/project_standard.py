@@ -389,13 +389,71 @@ def md_table_to_html(section_text: str) -> str:
     if not rows:
         return "<p><em>Not confirmed</em></p>"
     header, *body = rows
-    html = ["<table>", "<thead><tr>"]
-    html += [f"<th>{cell}</th>" for cell in header]
+    if header and header[0] == "ID" and len(header) == 5:
+        cards = ['<div class="requirements">']
+        for row in body:
+            if len(row) != 5:
+                continue
+            cards.append('<article class="requirement">')
+            cards.append(f'<div class="requirement-head"><span class="req-id">{html_escape(row[0])}</span><h3>{inline_md(row[1])}</h3></div>')
+            for label, value in zip(("ขอบเขต", "เกณฑ์ตรวจรับ", "หลักฐาน"), row[2:]):
+                cards.append(f'<div class="req-detail"><strong>{label}</strong><div>{inline_md(value)}</div></div>')
+            cards.append('</article>')
+        cards.append('</div>')
+        return "\n".join(cards)
+    html = ['<div class="table-scroll"><table>', "<thead><tr>"]
+    html += [f"<th>{inline_md(cell)}</th>" for cell in header]
     html.append("</tr></thead><tbody>")
     for row in body:
-        html.append("<tr>" + "".join(f"<td>{cell}</td>" for cell in row) + "</tr>")
-    html.append("</tbody></table>")
-    return "".join(html)
+        html.append("<tr>" + "".join(f"<td>{inline_md(cell)}</td>" for cell in row) + "</tr>")
+    html.append("</tbody></table></div>")
+    return "\n".join(html)
+
+
+def html_escape(value: str) -> str:
+    import html
+    return html.escape(value, quote=True)
+
+
+def inline_md(value: str) -> str:
+    """Escape source prose, then preserve simple links and inline code."""
+    import html
+    value = value.replace(" — ", ": ").replace(" → ", " ไปยัง ").replace("–", "-")
+    out = html.escape(value, quote=True)
+    out = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", lambda m: f'<a href="{m.group(2)}">{m.group(1)}</a>', out)
+    out = re.sub(r"`([^`]+)`", r"<code>\1</code>", out)
+    return out
+
+
+def prose_html(section_text: str) -> str:
+    parts: list[str] = []
+    lines = section_text.splitlines()
+    in_list = False
+    for raw in lines:
+        line = raw.strip()
+        if not line:
+            if in_list:
+                parts.append("</ul>")
+                in_list = False
+            continue
+        if line.startswith("### "):
+            if in_list:
+                parts.append("</ul>")
+                in_list = False
+            parts.append(f"<h3>{inline_md(line[4:])}</h3>")
+        elif line.startswith("- "):
+            if not in_list:
+                parts.append("<ul>")
+                in_list = True
+            parts.append(f"<li>{inline_md(line[2:])}</li>")
+        else:
+            if in_list:
+                parts.append("</ul>")
+                in_list = False
+            parts.append(f"<p>{inline_md(line)}</p>")
+    if in_list:
+        parts.append("</ul>")
+    return "".join(parts)
 
 
 def section_prose_or_table(section_text: str | None, heading: str, source_file: str) -> str:
@@ -409,24 +467,43 @@ def section_prose_or_table(section_text: str | None, heading: str, source_file: 
         return md_table_to_html(section_text)
     if not section_text:
         return "<p><em>Not confirmed</em></p>"
-    paragraphs = [p.strip() for p in section_text.split("\n\n") if p.strip()]
-    return "".join(f"<p>{p}</p>" for p in paragraphs)
+    return prose_html(section_text)
 
 
 SRS_CSS = """
-body { font-family: -apple-system, "Segoe UI", "Noto Sans Thai", sans-serif; max-width: 900px;
-  margin: 40px auto; padding: 0 24px; color: #17202a; line-height: 1.5; }
-h1 { font-size: 22px; margin-bottom: 4px; }
-h2 { font-size: 16px; margin-top: 32px; border-bottom: 1px solid #d8dee6; padding-bottom: 6px; }
-.meta { color: #52606d; font-size: 13px; margin-bottom: 24px; }
-.note { background: #f5f7f9; border: 1px solid #d8dee6; border-radius: 6px; padding: 12px 16px;
-  font-size: 13px; color: #52606d; margin-bottom: 24px; }
-table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0; }
-th, td { border-bottom: 1px solid #d8dee6; padding: 6px 8px; text-align: left; vertical-align: top; }
-th { background: #f5f7f9; }
-.warn { background: #fdf2e9; border: 1px solid #f0c896; border-radius: 6px; padding: 10px 14px;
-  color: #8a4b0a; font-size: 13px; }
-.warn code { font-size: 12px; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f8faf8; color: #17241d;
+  font-family: "IBM Plex Sans Thai", "Noto Sans Thai", system-ui, sans-serif; line-height: 1.42; }
+.document { max-width: 1120px; margin: 0 auto; padding: 32px 24px 64px; }
+.document-header { border-bottom: 1px solid #d9e2db; padding-bottom: 20px; margin-bottom: 20px; }
+.eyebrow { color: #176447; font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+h1 { font-size: clamp(24px,3vw,34px); line-height: 1.22; margin: 8px 0; letter-spacing: -.02em; }
+h2 { font-size: 21px; margin: 36px 0 14px; padding-bottom: 8px; border-bottom: 1px solid #d9e2db; }
+h3 { font-size: 16px; margin: 0; line-height: 1.38; }
+.meta { color: #57685c; font-size: 13px; margin: 0; }
+.note { background: #eef4ef; border: 1px solid #d9e2db; border-radius: 6px; padding: 12px 16px; font-size: 14px; margin: 16px 0 24px; }
+.note a, a { color: #135b43; text-underline-offset: 2px; }
+p { margin: 8px 0 12px; }
+ul { margin: 8px 0 16px; padding-left: 24px; }
+li { margin: 0 0 8px; }
+.requirements { display: grid; gap: 12px; }
+.requirement { background: #fff; border: 1px solid #d9e2db; border-radius: 6px; padding: 16px; min-width: 0; }
+.requirement-head { display: grid; grid-template-columns: 76px minmax(0,1fr); gap: 12px; align-items: start; margin-bottom: 12px; }
+.req-id { color: #176447; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.req-detail { display: grid; grid-template-columns: 76px minmax(0,1fr); gap: 12px; border-top: 1px solid #edf1ed; padding-top: 8px; margin-top: 8px; font-size: 14px; }
+.req-detail strong { color: #526557; font-weight: 600; }
+.table-scroll { max-width: 100%; overflow-x: auto; background: #fff; border: 1px solid #d9e2db; border-radius: 6px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { border-bottom: 1px solid #edf1ed; padding: 10px 12px; text-align: left; vertical-align: top; min-width: 130px; }
+th { background: #eef4ef; color: #2a5039; font-weight: 700; }
+tr:last-child td { border-bottom: 0; }
+.warn { background: #fff3e6; color: #674519; border-color: #e7cfae; }
+code { font-size: .9em; overflow-wrap: anywhere; }
+a:focus-visible { outline: 2px solid #176447; outline-offset: 2px; }
+@media (max-width: 600px) { .document { padding: 20px 16px 48px; } .requirement { padding: 12px; } .requirement-head,.req-detail { grid-template-columns: 1fr; gap: 4px; } h2 { margin-top: 28px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print { body { background: #fff; } .document { max-width: none; padding: 0; } .requirement { break-inside: avoid; } .table-scroll { overflow: visible; } a { color: inherit; } }
 """
 
 
@@ -454,11 +531,11 @@ def render_srs(root: Path) -> tuple[str, list[str]]:
     title = title_match.group(1).strip() if title_match else "Project"
 
     headings = (
-        ("Outcome", "## Outcome"),
-        ("Scope", "## Scope"),
-        ("Requirements", "## Requirements"),
-        ("Non-functional requirements", "## Non-functional requirements"),
-        ("System boundaries", "## System boundaries"),
+        ("เป้าหมาย", "## Outcome"),
+        ("ขอบเขต", "## Scope"),
+        ("ข้อกำหนด", "## Requirements"),
+        ("คุณภาพและข้อจำกัดของระบบ", "## Non-functional requirements"),
+        ("ขอบเขตการทำงานของระบบ", "## System boundaries"),
     )
 
     body = []
@@ -467,7 +544,7 @@ def render_srs(root: Path) -> tuple[str, list[str]]:
         if content is None:
             missing.append(f"PROJECT.md: {heading}")
         body.append(f"<h2>{label}</h2>{section_prose_or_table(content, heading, 'PROJECT.md')}")
-    body.append(f"<h2>Permissions</h2>{permissions_html}")
+    body.append(f"<h2>สิทธิ์การเข้าถึง</h2>{permissions_html}")
 
     banner = ""
     if missing:
@@ -480,18 +557,20 @@ def render_srs(root: Path) -> tuple[str, list[str]]:
 
     html = f"""<!doctype html>
 <!-- project-standard/{CONTRACT_VERSION} srs-source-hash: {source_hash(root)} — generated by project_standard.py render-srs; do not hand-edit -->
-<html lang="en">
+<html lang="th">
 <head>
 <meta charset="utf-8">
-<title>{title} — SRS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{html_escape(title.replace(' — ', ' '))}</title>
 <style>{SRS_CSS}</style>
 </head>
 <body>
-<h1>{title} — Software Requirement Spec</h1>
-<p class="meta">project-standard/{CONTRACT_VERSION} · generated {date.today().isoformat()} from <code>ai-context/PROJECT.md</code>{" and <code>ai-context/DATA_MODEL.md</code>" if data_model_path.is_file() else ""}.</p>
-<div class="note">This file is a generated view, not the source of truth. Edit <code>PROJECT.md</code> / <code>DATA_MODEL.md</code>, then re-run <code>project_standard.py render-srs</code> to refresh it.</div>
+<main class="document">
+<header class="document-header"><div class="eyebrow">ข้อกำหนดระบบ WRP</div><h1>{html_escape(title.replace(' — ', ' '))}</h1><p class="meta">ฉบับสร้างจากเอกสารโครงการ วันที่ {date.today().isoformat()} ใช้ project-standard/{CONTRACT_VERSION}</p></header>
+<div class="note">หน้านี้อธิบายสิ่งที่ระบบต้องทำ ยังไม่ใช่สถานะว่าสร้างเสร็จแล้ว ตรวจความคืบหน้าและผลทดสอบที่ <a href="STATUS.md">สถานะล่าสุด</a></div>
 {banner}
 {"".join(body)}
+</main>
 </body>
 </html>
 """

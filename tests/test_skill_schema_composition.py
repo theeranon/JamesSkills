@@ -13,7 +13,7 @@ class CompositionSchema(unittest.TestCase):
     def check_fixture(self, extra='', omit_scope=False):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp); body=root/'plugins/demo/skills/example/SKILL.md';body.parent.mkdir(parents=True)
-            body.write_text('---\nname: example\nkind: mode\nlicense: CC-BY-NC-4.0\ndescription: Maintain the selected working mode throughout the conversation.\n---\n# Example\n\nKeep the selected mode active.\n\n'+('' if omit_scope else '## Scope\n- Kind: mode\n- Owns: conversation behavior\n- Boundary: no new authority\n')+'## Behavior\nCompose with requested tasks.\n## Stays active until\nUser disables it.\n'+extra+'## Counter-case\n- A task finishes; this mode remains active.\n- User disables it; stop applying it.\n## Hand back\nThe requested task result.\n')
+            body.write_text('---\nname: example\nlicense: CC-BY-NC-4.0\nmetadata:\n  kind: mode\ndescription: Maintain the selected working mode throughout the conversation.\n---\n# Example\n\nKeep the selected mode active.\n\n'+('' if omit_scope else '## Scope\n- Kind: mode\n- Owns: conversation behavior\n- Boundary: no new authority\n')+'## Behavior\nCompose with requested tasks.\n## Stays active until\nUser disables it.\n'+extra+'## Counter-case\n- A task finishes; this mode remains active.\n- User disables it; stop applying it.\n## Hand back\nThe requested task result.\n')
             (root/'catalog.json').write_text(json.dumps({'skills':[{'name':'example','category':'demo','kind':'mode'}]}))
             (root/'tests').mkdir();(root/'tests/behavioral-cases.md').write_text('`example`')
             (root/'VERSION').write_text('1.0.0');(root/'.claude-plugin').mkdir()
