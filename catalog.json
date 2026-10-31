@@ -69,7 +69,7 @@
     {
       "name": "hand-it-off",
       "category": "james-core",
-      "kind": "internal-routing",
+      "kind": "workflow",
       "status": "promoted",
       "aliases": [
         "skill-router"
@@ -90,7 +90,7 @@
     {
       "name": "coach-me",
       "category": "james-productivity",
-      "kind": "workflow",
+      "kind": "mode",
       "status": "promoted",
       "aliases": []
     },
@@ -120,18 +120,14 @@
       "category": "james-productivity",
       "kind": "output",
       "status": "promoted",
-      "aliases": [
-        "solutionsimpact-onepagesummary"
-      ]
+      "aliases": []
     },
     {
       "name": "sum-meet",
       "category": "james-productivity",
       "kind": "output",
       "status": "promoted",
-      "aliases": [
-        "solutionsimpact-meeting-summary-full"
-      ]
+      "aliases": []
     },
     {
       "name": "zoom-out",

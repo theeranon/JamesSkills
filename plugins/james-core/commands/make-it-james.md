@@ -1,5 +1,5 @@
 ---
-description: Make anything a real person will read sound written rather than translated, with native phrasing, no metacopy and a human voice. Applies automatically to recipient-facing work; also use for humanize it, make it natural, ภาษาแข็ง, อ่านแล้วเหมือน AI, เกลาคำ. It does not choose the format or supply missing content.
+description: Copywriting pass on anything a person will read: human language against the checklist, no Thai AI slop, no translated syntax, no metacopy anywhere in the outcome. Applies automatically to recipient-facing work; also use for humanize it, ภาษาแข็ง, อ่านแล้วเหมือน AI, เกลาคำ. Does not choose format or supply content.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/make-it-james/SKILL.md

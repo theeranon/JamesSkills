@@ -2,12 +2,12 @@
 name: give-me-solutions
 kind: workflow
 license: CC-BY-NC-4.0
-description: Compare real options against this project's actual context and name the best one with its reasoning. Use for which should I pick, what are my options, compare these, มีทางเลือกอะไรบ้าง, ตัวไหนดีสุด, เทียบให้หน่อย. Not for settling a single claim and not for executing the choice.
+description: When the user is out of ideas, do the homework: understand the real problem and goal, then show the ways forward in one table on one axis with one vocabulary, enum-like values, and risk, time, cost and quality now and long term, so deciding is easy but stays theirs. Use for มีทางเลือกอะไรบ้าง, ตัวไหนดีสุด, เทียบให้ที.
 ---
 
 # Give Me Solutions
 
-Find the real options, judge them against this situation, and say which one wins.
+Do the homework, then make the choice easy to see in one honest table; the user decides.
 
 ## Scope
 
@@ -31,9 +31,9 @@ Find the real options, judge them against this situation, and say which one wins
 3. Use the requested candidate set. If the field is open, cover genuinely different classes of answer in one bounded pass; do not expand a closed comparison without a material reason.
 4. Gather evidence the way `research-it` does, using supplied sources first and outside research where needed. Keep a ledger when it helps the choice; never invent dates, commercial independence or missing observations to fill it. Delegate that pass to `research-it` when the evidence load is heavy. Mark each piece of evidence as a vendor claim, an independently confirmed fact, an inference, or an unknown. Popularity and polished demos are not outcome proof; weigh them accordingly against independent reviews, long-term user reports, and failure stories.
 5. Eliminate anything that fails a hard requirement, and anything another candidate matches or beats on every relevant requirement, and say why rather than leaving it in the table as filler.
-6. Compare every survivor against the same relevant requirements, including setup cost, recurring cost, migration effort, lock-in, reliability, security, and operating burden where they affect this choice. Missing cost, setup time or capability is unknown, never zero or satisfied; do not add a guessed value in parentheses or use it later to rank the options. Existing ownership does not prove readiness or team competence. Compute total effort over the stated horizon; keep unknown fees separate from time savings and make recommendations conditional on material gaps.
+6. Compare every survivor in one table on identical criteria with identical vocabulary: precise column headers chosen once, cell values from a fixed small set like an enum (for example yes / partial / no, low / medium / high, or a number with its unit), never a different phrase per row for the same meaning. Cover time, cost and quality both immediately and over the long term, plus setup cost, recurring cost, migration effort, lock-in, reliability, security, operating burden and the risks on every side, where they affect this choice. Missing cost, setup time or capability is unknown, never zero or satisfied; do not add a guessed value in parentheses or use it later to rank the options. Existing ownership does not prove readiness or team competence. Compute total effort over the stated horizon; keep unknown fees separate from time savings and make recommendations conditional on material gaps.
 7. Bind the comparison to this project and this conversation: the stack already in place, the accepted decisions, the constraints stated earlier, and the skills actually available to operate it. A generic ranking is not the deliverable.
-8. Present the strongest options first. For each, show why it fits, its advantages, disadvantages, hidden cost, operational risk, and who it suits. Name the best option and say exactly why it wins here. Keep the meaningful alternatives with the condition that would make each of them the right answer instead.
+8. Present the table first, strongest options first. Below it, for each, say why it fits, its hidden cost, its operational risk, and who it suits. Name the option the evidence favours and say exactly why, as a recommendation the user can overrule, never as a decision made for them. Keep the meaningful alternatives with the condition that would make each the right answer instead.
 
 ## Stop when
 

@@ -1,5 +1,5 @@
 ---
-description: Compare real options against this project's actual context and name the best one with its reasoning. Use for which should I pick, what are my options, compare these, มีทางเลือกอะไรบ้าง, ตัวไหนดีสุด, เทียบให้หน่อย. Not for settling a single claim and not for executing the choice.
+description: When the user is out of ideas, do the homework: understand the real problem and goal, then show the ways forward in one table on one axis with one vocabulary, enum-like values, and risk, time, cost and quality now and long term, so deciding is easy but stays theirs. Use for มีทางเลือกอะไรบ้าง, ตัวไหนดีสุด, เทียบให้ที.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/give-me-solutions/SKILL.md

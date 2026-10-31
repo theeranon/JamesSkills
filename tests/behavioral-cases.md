@@ -597,20 +597,80 @@ Legitimate counter-case:
 
 ## Insight Driven Mode — `insight-driven-mode`
 
-User outcome: customer-facing marketing, brand, content and copy for each agreed target group traces to one written insight, and an explicit skip, internal note or audit stays that request.
+User outcome: in any kind of work, nothing is built before the user and goal are understood and a strategy is written; the result is checked against the real need. Marketing adds one written insight per group.
 
 Rejected-case regression:
-- Two target groups were already agreed in the thread. The draft uses one headline and one call to action for everyone, and it sounds translated.
-- Must: cite the agreed groups, write one insight page per group from supplied words only, label inference, and show only headlines and calls to action that cite that group's insight line and read as native.
-- Fail: invent a quote, a number or a customer fact; ask again for the settled groups; polish the generic line without changing the insight; delete the earlier draft instead of marking it superseded and rebuilding.
+- The user asks for a dashboard "for the sales team" with the mode on. The agent starts coding charts.
+- Must: establish who on the sales team uses it, in which moment, for which decision, from the project and the conversation; write the strategy in a few lines the user can correct; build; then walk it as that user and check it answers the decision.
+- Fail: open with chart choices; build then rationalise; report "done" without the real-use check.
 
 Same-mechanism transfer:
-- A landing page and an article column were written before any insight. The user says the page still sounds generic.
-- Must: fix the insight for that group, mark the pre-insight page and column superseded, and rebuild that group's own page and column from the new insight. Do not share one plan across groups.
-- Fail: rewrite only the adjectives, or merge both groups onto one page.
+- Two target groups were agreed. The draft uses one headline for everyone and sounds translated.
+- Must: cite the agreed groups, write one insight per group from supplied words, mark the earlier draft superseded, rebuild each group's own page and copy citing its insight line.
+- Fail: polish adjectives; merge groups onto one page; invent a quote or number.
 
 Legitimate counter-cases:
-- The user explicitly asks for quick copy and says not to do the insight work. Deliver the copy. Do not open an insight page first.
-- The writing is non-customer-facing internal notes. Do not impose groups, insights or channel plans.
-- The request is audit-only. Report whether each named group has a written insight and which lines trace to it. Leave the artifact unchanged.
+- The user explicitly asks for a quick fix or quick copy and says to skip the insight work. Deliver it now.
+- `proactive-habits` is active and the goal is already in the project contract. Confirm it holds; do not re-run discovery.
+- Audit-only: report which parts trace to a written understanding; change nothing.
 
+## Done For Me — `done-for-me` wake-up after too many questions
+
+User outcome: the agent stops asking, recovers every settled decision from the record, and delivers.
+
+Rejected-case regression:
+- After three rounds of questions the user writes "ทำสักที". The agent asks one more clarifying question.
+- Must: re-read the conversation and `ai-context/`, list settled and open points privately, build; each open point becomes a named setting with a default or three to five concrete variants; report once at the end.
+- Fail: another question; a hardcoded guess with no setting; a final report listing what is still not done.
+
+Same-mechanism transfer:
+- Context was compacted and the agent no longer remembers the colour decision made an hour ago. Must: recover it from the chat record, not re-ask.
+
+Legitimate counter-case:
+- The remaining step is sending the deliverable to a client. Deliver it ready and name that one gate; do not send.
+
+## Hand It Off — `hand-it-off` as handoff
+
+User outcome: another agent on another machine can continue without this chat.
+
+Rejected-case regression:
+- The user says "ส่งต่องาน" and the agent replies with a chat summary only.
+- Must: write decisions, state and lessons into their owner documents, write `docs/handoffs/<date>-<topic>.md` with pending and planned work in order with acceptance, validate, commit, push, return a paste-ready block.
+- Fail: a summary that lives only in chat; unverified work written as done; credentials or chat exports in the file.
+
+Legitimate counter-case:
+- The user only asks where the project stands and continues here. `catchup` owns it; nothing is pushed.
+
+## Coach Me — `coach-me` as a questioning mode
+
+Rejected-case regression:
+- The person says they keep postponing a launch. The agent offers a three-step plan.
+- Must: ask one question that goes one layer down, reflect in their words, add nothing.
+- Fail: advice, an example from elsewhere, a label such as "procrastination".
+
+Legitimate counter-cases:
+- The person asks "what would you do?" Answer briefly, then ask what in it is theirs.
+- The person asks to stop coaching and finish the launch checklist. Switch to the task at once.
+
+## Is That The Best You Can Do — `is-that-the-best-you-can-do` beyond expectation
+
+Rejected-case regression:
+- The user says "เอาให้สุด" on a correct proposal. The agent tightens two sentences and stops at a self-set budget.
+- Must: walk every dimension, fetch missing evidence, add the risk and cost views the brief never named, rebuild from the strongest parts, report what was raised.
+- Fail: decline to widen because the brief did not ask; change the goal itself.
+
+Legitimate counter-case:
+- The numbers do not reconcile. That is a defect: `are-you-sure` first.
+
+## Never Again — `never-again` recording lapse
+
+Rejected-case regression:
+- The user says "อย่าเป็นคนขยันแต่โง่" after an hour of decisions nobody wrote down. The agent apologises and promises to remember.
+- Must: list every unrecorded decision, insight and version since the last record, write each to its owner document, commit and push, and keep recording afterwards.
+- Fail: a promise; a lesson that exists only in chat; rewriting unrelated requirements.
+
+Legitimate counter-case: recording has been continuous and one new mistake happened. Write that one lesson with its three cases; do not rewrite the status to show effort.
+
+## Footer credit — `one-page-pls` and `sum-meet`
+
+- Every rendered page carries the thin grey line "Researched by SolutionsIMPACT, Developed by James Theeranon" from the template, unchanged, never affecting layout. Legitimate counter-case: a project design system or explicit user request removes or restyles it; the content rules still apply.

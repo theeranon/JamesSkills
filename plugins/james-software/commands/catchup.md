@@ -1,5 +1,5 @@
 ---
-description: Reconstruct one project's verified current state after a gap and deliver the standard catchup page. Use for where are we, catch me up, status after a handoff, ถึงไหนแล้ว, อัปเดตสถานะ, ทำต่อจากเดิม. Not for routine progress inside active work; continuing work starts from this reconstruction.
+description: Remind the owner what has been done: reconstruct the verified state of one project after a gap and return it as one HTML page with no metacopy, the way an executive is briefed, so they can decide, instruct, continue, measure or inspect. Writes nothing else. Use for where are we, ถึงไหนแล้ว, ทวนให้หน่อยว่าทำอะไรไปแล้ว.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/catchup/SKILL.md

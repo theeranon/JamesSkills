@@ -1,5 +1,5 @@
 ---
-description: Apply or compare registered frameworks, books and models against a real case, keeping source claims separate from evidence and inference. Use for based on this book, apply this model, อิงจากหนังสือเล่มนี้, ใช้เฟรมเวิร์กนี้วิเคราะห์, or to register a supplied source. Not a substitute for an evidence-based decision.
+description: Study a subject the user already has a keyword, hypothesis or insight for, wherever it lives (this chat, project, machine, connector, outside), and apply registered frameworks and books to the real case with source claims kept apart from evidence and inference. Use for อิงจากหนังสือเล่มนี้, ไปศึกษาเรื่องนี้มา.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/baseon/SKILL.md

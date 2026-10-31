@@ -1,5 +1,5 @@
 ---
-description: Settle a doubt about one claim, approach or requirement with outside evidence from official sources and real users. Use for is that true, prove it, check the facts, จริงเหรอ, หาหลักฐานมา, เช็คข้อมูลก่อน. Not for choosing between options or checking your own work.
+description: Stop guessing and go get the information first: settle one claim with evidence that goes beyond the official spec, which overclaims, to real users, real reviews, videos, communities or the thing itself, compared and summarized. Use for is that true, prove it, จริงเหรอ, อย่าตอแหล ไปหาข้อมูลมาก่อน, เช็คข้อมูลก่อน.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/research-it/SKILL.md

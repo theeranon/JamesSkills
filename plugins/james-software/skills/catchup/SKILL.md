@@ -2,12 +2,12 @@
 name: catchup
 kind: workflow
 license: CC-BY-NC-4.0
-description: Reconstruct one project's verified current state after a gap and deliver the standard catchup page. Use for where are we, catch me up, status after a handoff, ถึงไหนแล้ว, อัปเดตสถานะ, ทำต่อจากเดิม. Not for routine progress inside active work; continuing work starts from this reconstruction.
+description: Remind the owner what has been done: reconstruct the verified state of one project after a gap and return it as one HTML page with no metacopy, the way an executive is briefed, so they can decide, instruct, continue, measure or inspect. Writes nothing else. Use for where are we, ถึงไหนแล้ว, ทวนให้หน่อยว่าทำอะไรไปแล้ว.
 ---
 
 # Catchup
 
-Work out what is actually true right now, and hand back one page that says so.
+Work out what is actually true right now and brief it on one page so the owner can decide.
 
 ## Scope
 
@@ -33,7 +33,7 @@ Work out what is actually true right now, and hand back one page that says so.
    - **Active:** dirty work, running tasks, blockers, and current owner state say what is moving now.
    - **Historical:** prior chat and old reports explain a delta only when current sources cannot.
 5. Preserve dirty and untracked user work exactly as found. When a status document is stale, report it as stale rather than correcting it; correcting it is a separate authorised job. Do not widen a bounded status question into a full audit when the supplied evidence already answers it.
-6. Follow an explicit chat-only or text-only request directly; keep the same factual coverage without creating a file or claiming rendering. Otherwise render the report by duplicating [assets/catchup-report.html](assets/catchup-report.html) and replacing every token. The template is fixed so that every project's catchup page looks identical and can be read at a glance; adapt content, never the shape.
+6. Follow an explicit chat-only or text-only request directly; keep the same factual coverage without creating a file or claiming rendering. Otherwise render the report by duplicating [assets/catchup-report.html](assets/catchup-report.html) and replacing every token. The template is fixed so that every project's catchup page looks identical and can be read at a glance; adapt content, never the shape. Write it as an executive is briefed: what was done, what is true now, what is open, what needs a decision, and the one next action; no narration of how the page was made, no progress notes, no placeholder left in.
 7. When delivering a page, inspect the rendered page in print emulation before delivering. Deliver HTML; produce a PDF only when it is explicitly requested.
 
 ## Stop when

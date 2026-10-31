@@ -16,7 +16,7 @@ Mode and standard behavior differs from a normal workflow:
 
 - `/i-have-adhd`, `/proactive-dev`, `/proactive-habits` and `/insight-driven-mode` stay active for the current conversation until explicitly disabled.
 - `make-it-james` and `make-it-james-ux` apply automatically to recipient-facing outcomes; invoking one directly is useful for a wording or visual audit.
-- `hand-it-off` is installed agent support, not a recommended human command.
+- `/hand-it-off` writes the handoff another agent, account or machine needs and pushes the records first; `/never-again` is the wake-up call when recording lapsed.
 
 
 ## Start or return to work
@@ -41,8 +41,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-software`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Reconstruct one project's verified current state after a gap and deliver the standard catchup page. Use for where are we, catch me up, status after a handoff, ถึงไหนแล้ว, อัปเดตสถานะ, ทำต่อจากเดิม. Not for routine progress inside active work; continuing work starts from this reconstruction.
-- Result: The requested chat report or rendered page: target and comparison point, current evidence, material conflict or blocker, and one safe next action. Include history, checklist and last-task state only where established and useful; do not repeat current facts under multiple headings.
+- Use when: Remind the owner what has been done: reconstruct the verified state of one project after a gap and return it as one HTML page with no metacopy, the way an executive is briefed, so they can decide, instruct, continue, measure or inspect. Writes nothing else. Use for where are we, ถึงไหนแล้ว, ทวนให้หน่อยว่าทำอะไรไปแล้ว.
+- Result: One HTML page briefed as to an executive: what was done, what is true now, what is open, what needs a decision, the next action; nothing else written.
 - Do not use when: Ordinary progress inside an active task is being reported; let the primary workflow report it -> `done-for-me`
   - The dispute is one isolated completion claim needing verification at its boundary -> `dev-are-you-sure`
   - The project has no contract and truth was never written down -> `project-standard`
@@ -83,8 +83,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Settle a doubt about one claim, approach or requirement with outside evidence from official sources and real users. Use for is that true, prove it, check the facts, จริงเหรอ, หาหลักฐานมา, เช็คข้อมูลก่อน. Not for choosing between options or checking your own work.
-- Result: The claim and verdict, the decisive source evidence with locators when available, and the material limits. Keep fact, source assertion and inference clear without requiring separate sections for empty categories. For a research-only request, stop at the verdict. For an authorized larger task, use the finding to continue that task.
+- Use when: Stop guessing and go get the information first: settle one claim with evidence that goes beyond the official spec, which overclaims, to real users, real reviews, videos, communities or the thing itself, compared and summarized. Use for is that true, prove it, จริงเหรอ, อย่าตอแหล ไปหาข้อมูลมาก่อน, เช็คข้อมูลก่อน.
+- Result: The claim and verdict with official and independent evidence compared side by side, locators where available, and the material limits.
 - Do not use when: Several candidates must be compared and one recommended -> `give-me-solutions`
   - The doubt is about work produced in this conversation rather than an outside claim -> `are-you-sure`
   - The doubt is about whether shipped code, data, or a deployment behaves correctly -> `dev-are-you-sure`
@@ -98,8 +98,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-productivity`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Compare real options against this project's actual context and name the best one with its reasoning. Use for which should I pick, what are my options, compare these, มีทางเลือกอะไรบ้าง, ตัวไหนดีสุด, เทียบให้หน่อย. Not for settling a single claim and not for executing the choice.
-- Result: The bounded role and its hard requirements, what was eliminated and why, the survivors compared on identical criteria against this project's real context, the named best option with its reasoning, and the condition that would flip the decision.
+- Use when: When the user is out of ideas, do the homework: understand the real problem and goal, then show the ways forward in one table on one axis with one vocabulary, enum-like values, and risk, time, cost and quality now and long term, so deciding is easy but stays theirs. Use for มีทางเลือกอะไรบ้าง, ตัวไหนดีสุด, เทียบให้ที.
+- Result: One comparison table on identical criteria with one vocabulary and enum-like values, the risks, time, cost and quality now and long term, and the evidence-favoured option as a recommendation the user can overrule.
 - Do not use when: One claim or approach needs to be settled rather than several compared -> `research-it`
   - Which responsibility is actually failing is still unclear -> `zoom-out`
   - The choice is already made and the job is to build it -> `done-for-me`
@@ -112,8 +112,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-productivity`
 - Kind: `knowledge-lens`
 - Lifecycle: `promoted`
-- Use when: Apply or compare registered frameworks, books and models against a real case, keeping source claims separate from evidence and inference. Use for based on this book, apply this model, อิงจากหนังสือเล่มนี้, ใช้เฟรมเวิร์กนี้วิเคราะห์, or to register a supplied source. Not a substitute for an evidence-based decision.
-- Result: The requested explanation or source record, or a case interpretation with source claims, facts and inference distinguishable. Include disagreements and experiments only where they serve the request.
+- Use when: Study a subject the user already has a keyword, hypothesis or insight for, wherever it lives (this chat, project, machine, connector, outside), and apply registered frameworks and books to the real case with source claims kept apart from evidence and inference. Use for อิงจากหนังสือเล่มนี้, ไปศึกษาเรื่องนี้มา.
+- Result: The named subject studied where it lives and the case interpretation with source claims, facts and inference distinguishable.
 - Do not use when: The source is not registered yet and the need is outside evidence about a claim -> `research-it`
   - Options must be compared and one recommended -> `give-me-solutions`
   - The problem layer itself is unclear -> `zoom-out`
@@ -129,8 +129,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Carry an already-agreed task to a finished, verified outcome without stopping to ask. Use for just finish it, do it all, ทำให้จบ, ทำให้เสร็จเลย, จัดการให้หมด. Decide routine planning and implementation details yourself; active conversation modes remain in force.
-- Result: The working outcome and concise verification relevant to the request. Include material decisions or genuine remaining dependencies only when useful; keep an artifact-only response artifact-only. Completing this task ends this workflow, not an active conversation mode.
+- Use when: Wake-up call when the agent keeps asking after enough insight and decisions were given. Re-read the whole conversation and every settled decision, then act at once; build what is still ambiguous as a changeable setting or as three to five variants. Use for just do it, stop asking, ทำให้จบ, ทำสักที, พอแล้วถามอยู่นั่น.
+- Result: The finished, exercised outcome; every formerly open point turned into a changeable setting or three to five variants; only gates the user genuinely holds.
 - Do not use when: The user asks to design a strategy rather than execute an established outcome -> `proactive-dev` can guide engineering planning. Missing implementation details alone do not block execution.
   - The work is finished and its diligence is what is in doubt -> `are-you-sure`
   - Delivered code needs a layered sweep and boundary check -> `dev-are-you-sure`
@@ -182,8 +182,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Raise a correct but ordinary result to its practical ceiling with proportionate effort. Use for is that the best you can do, make it better, level this up, ดีกว่านี้ได้ไหม, ยังไม่ว้าว, เอาให้สุด. Not for defects and not for unfinished work.
-- Result: The improved work in the requested format. State material remaining limits when needed; ceiling, gap analysis and change commentary stay internal for artifact-only requests.
+- Use when: Push a correct result beyond expectation: find what can still be polished in efficiency, evidence, depth, usefulness and dimensions the brief never named, and deliver that. Use for is that the best you can do, make it better, level this up, ดีกว่านี้ได้ไหม, ยังไม่ว้าว, เอาให้สุด, มีปัญญาแค่นี้เหรอ. Not for defects.
+- Result: The result raised beyond the brief across depth, evidence, efficiency, usefulness and unnamed dimensions, with a short account of what was raised and left alone.
 - Do not use when: The work contains actual defects, shortcuts, or residue -> `are-you-sure`
   - The defects are in delivered code -> `dev-are-you-sure`
   - The work is unfinished rather than unambitious -> `done-for-me`
@@ -195,8 +195,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Turn a recurring failure into a narrow, discoverable lesson or a repaired existing rule. Use for never again, stop making this mistake, อย่าให้เกิดอีก, พลาดซ้ำอีกแล้ว, จำไว้เลย. Not for fixing the one bad output and not for routine quality sweeps.
-- Result: For executed work: the verified lesson entry and contract pointer, three regressions, repaired outputs and scope. For draft-only work: the proposed entry and cases, with an explicit statement that no file was changed. Never describe proposed persistence as completed.
+- Use when: Wake-up call when the agent stopped recording and starts forgetting: write the missed lessons, decisions and context into ai-context and push, then keep recording every insight, decision, skill change and version unasked. Use for never again, จำไว้เลย, อย่าให้เกิดอีก, ลืมอีกแล้ว, อย่าเป็นคนขยันแต่โง่.
+- Result: The missed insights, decisions and lessons written to their owner documents and pushed; a lesson with three regressions for a repeated mistake; recording resumed.
 - Do not use when: The single bad output needs repairing and nothing durable is at stake -> `are-you-sure`
   - The defect is in delivered code and the sweep is what is wanted -> `dev-are-you-sure`
   - The project has no contract yet and truth is scattered rather than wrong -> `project-standard`
@@ -211,12 +211,11 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-productivity`
 - Kind: `output`
 - Lifecycle: `promoted`
-- Use when: Build one auditable meeting record holding every agenda in a single file, with evidence kept apart from interpretation. Use for meeting minutes, summarize this meeting or transcript, สรุปประชุม, ทำ minutes, at the requested depth; a requested short summary stays short.
+- Use when: Summarize a meeting or long material completely (every point kept, not long): topics clearly separated in one HTML file ordered summary, table of contents, then each topic, evidence apart from interpretation, project design system with a quiet default, no metacopy. Use for สรุปประชุม, ทำ minutes, meeting minutes.
 - Result: The requested short summary, or the full rendered meeting record with source coverage and traceability. Keep verification bookkeeping internal unless requested or material; show unknown or disputed facts where relevant.
 - Do not use when: Each agenda must become its own separate page -> `one-page-pls`
   - The artifact is not a meeting record and the format is open -> `final-it`
   - Project state must be reconstructed from the repository rather than a transcript -> `catchup`
-- Aliases: `solutionsimpact-meeting-summary-full` (legacy compatibility calls).
 - Canonical instructions: [`plugins/james-productivity/skills/sum-meet/SKILL.md`](../plugins/james-productivity/skills/sum-meet/SKILL.md)
 
 ### `/one-page-pls`
@@ -225,12 +224,11 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-productivity`
 - Kind: `output`
 - Lifecycle: `promoted`
-- Use when: Turn material into a self-contained single-page brief, one page per topic by default. Use for one page please, one-pager, executive brief, สรุปหน้าเดียว, ขอ one page. Not for a full meeting record that must hold every agenda in one file.
+- Use when: Summarize the essentials onto one page: choose what a decision-maker needs, in the project's design system with small user overrides accepted and a quiet default style, metacopy checked and removed. One page per topic by default. Use for one page please, one-pager, สรุปหน้าเดียว, ขอ one page.
 - Result: The requested page or chat brief. Keep coverage and inspection bookkeeping internal unless requested; disclose any material omission, linked appendix or delivery limitation the reader needs.
 - Do not use when: Every agenda must live in one record together -> `sum-meet`
   - The artifact is not page-bound and the format is still open -> `final-it`
   - Current project state must be reconstructed rather than summarised -> `catchup`
-- Aliases: `solutionsimpact-onepagesummary` (legacy compatibility calls).
 - Canonical instructions: [`plugins/james-productivity/skills/one-page-pls/SKILL.md`](../plugins/james-productivity/skills/one-page-pls/SKILL.md)
 
 ### `/final-it`
@@ -266,7 +264,7 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `mode`
 - Lifecycle: `promoted`
-- Use when: Work as an effective professional who decides what is theirs to decide and asks only for decisions the outcome truly needs. Activate once for the whole conversation with be proactive, stop asking me, ไม่ต้องถาม, คิดเองทำเองเลย, ทำงานเชิงรุก. Composes with one-task workflows and presentation modes.
+- Use when: Decide what is yours to decide, think strategically first, carry the work to completion, skip undecidable points and batch them into one question, and never report back that something is still undone. Activate once for the whole conversation with be proactive, stop asking me, ไม่ต้องถาม, คิดเองทำเองเลย, ทำงานเชิงรุก.
 - Result: The completed requested deliverable, or an observed blocker after independent work is finished. Repeated invocation during unfinished work resumes execution immediately; an explicit audit-only request still returns findings.
 - Do not use when: Not a replacement for the task workflow. Composes with active workflows and standards.
 - Canonical instructions: [`plugins/james-core/skills/proactive-habits/SKILL.md`](../plugins/james-core/skills/proactive-habits/SKILL.md)
@@ -277,8 +275,8 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `mode`
 - Lifecycle: `promoted`
-- Use when: Make customer insight the first step of marketing, brand, content and copy, so each group's strategy, pages, articles, headlines and CTAs trace to a written insight. Activate for the whole conversation with insight first, เริ่มจากอินไซต์, อินไซต์เป็นกระดูกเม็ดแรก, or when copy sounds generic or translated.
-- Result: The requested deliverable, with each customer-facing piece traced to one insight line for one named group. An explicit quick-copy or audit-only request returns only what that request asked for.
+- Use when: Understand the real user and goal before any work starts, in every kind of task: dig, ask and research until clear, set strategy first, then check the result serves the need, not just that it is done. Marketing: one written insight per group. Activate with insight first, เริ่มจากอินไซต์, เข้าใจก่อนทำ, อย่าเพิ่งลงมือ.
+- Result: The deliverable preceded by the understanding and strategy it rests on and followed by the check that it serves the real need; for marketing, every piece traces to one insight line per group.
 - Do not use when: The only job is to settle one outside claim, with no customer-facing marketing or copy -> `research-it`
   - The only job is to compare options and recommend one -> `give-me-solutions`
   - The reader needs a shorter reply and no marketing, brand or copy sequence is in play -> `i-have-adhd`
@@ -289,10 +287,10 @@ Mode and standard behavior differs from a normal workflow:
 
 - Canonical package: `coach-me`
 - Category: `james-productivity`
-- Kind: `workflow`
+- Kind: `mode`
 - Lifecycle: `promoted`
-- Use when: Move a person toward their own goal through questions and reflection at the depth they want. Use for coach me, I feel stuck, I keep putting it off, โค้ชหน่อย, ตันแล้ว, ไม่รู้จะเริ่มยังไง. Respect an explicit switch to advice, a factual answer or task execution.
-- Result: A reflection or question that serves the current coaching conversation, and their chosen next step when reached. If they changed the request, deliver the requested answer or work instead. Never attach an inferred psychological label.
+- Use when: Ask questions that dig to the core of what the person is working through, in performance, life or purpose, so they find their own answer; never think for them, add, complete or advise. Activate with coach me, I feel stuck, โค้ชหน่อย, ตันแล้ว, ไม่รู้จะเริ่มยังไง. Ends when they ask for an answer or a task.
+- Result: The next question or a reflection in the person's own words until they reach their own next step; notes if wanted; no advice.
 - Do not use when: The person wants the task done rather than to be moved -> `done-for-me`
   - What is unclear is the requirement rather than the person -> `grill-me`
   - The person wants options researched and compared -> `give-me-solutions`
@@ -304,7 +302,7 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-core`
 - Kind: `shared-standard`
 - Lifecycle: `promoted`
-- Use when: Make anything a real person will read sound written rather than translated, with native phrasing, no metacopy and a human voice. Applies automatically to recipient-facing work; also use for humanize it, make it natural, ภาษาแข็ง, อ่านแล้วเหมือน AI, เกลาคำ. It does not choose the format or supply missing content.
+- Use when: Copywriting pass on anything a person will read: human language against the checklist, no Thai AI slop, no translated syntax, no metacopy anywhere in the outcome. Applies automatically to recipient-facing work; also use for humanize it, ภาษาแข็ง, อ่านแล้วเหมือน AI, เกลาคำ. Does not choose format or supply content.
 - Result: The reworded output. Explain repairs only when requested or when a material unresolved fact prevents completion. Do not append editing commentary to an artifact-only request.
 - Do not use when: Not a replacement for the task workflow. Composes with active workflows and standards.
 - Canonical instructions: [`plugins/james-core/skills/make-it-james/SKILL.md`](../plugins/james-core/skills/make-it-james/SKILL.md)
@@ -315,7 +313,7 @@ Mode and standard behavior differs from a normal workflow:
 - Category: `james-software`
 - Kind: `shared-standard`
 - Lifecycle: `promoted`
-- Use when: Design anything rendered from the user's real flow first, then lay it out left to right and top to bottom on a perfect grid. Colour, font and style follow the project, with house defaults only as fallback. Applies automatically to visual work; also use for fix the look, UI รก, จัดหน้าให้เป๊ะ, ดูไม่โปร.
+- Use when: No slop in UX, UI and web app design, as principles a user or project design system may override. UX: real flow of every user group, fewer steps, no needless modal, left to right, top to bottom, exact grid. UI: locked type and radius, no accent border, nothing jumps, fixed heights. Use for UI รก, จัดหน้าให้เป๊ะ.
 - Result: The requested code or rendered artifact. For a rendered deliverable, report the system followed, actual lint/render evidence and material open gates. For code-only output, return exclusively code; keep verification notes internal.
 - Do not use when: The rules needed are about wording rather than presentation -> `make-it-james`
   - The question is which format the deliverable should take -> `final-it`
@@ -323,20 +321,17 @@ Mode and standard behavior differs from a normal workflow:
 - Canonical instructions: [`plugins/james-software/skills/make-it-james-ux/SKILL.md`](../plugins/james-software/skills/make-it-james-ux/SKILL.md)
 
 
-## Agent support
+## Hand over
 
-### `hand-it-off`
+### `/hand-it-off`
 
-- Internal support: installed for agents, never a human slash command.
 - Canonical package: `hand-it-off`
 - Category: `james-core`
-- Kind: `internal-routing`
+- Kind: `workflow`
 - Lifecycle: `promoted`
-- Use when: Internal fallback that assigns one primary owner when no skill obviously matches, and holds the Candidate Card gate before any new skill, name or alias. Never select it as the primary workflow, never let it produce a deliverable, and never use it when a direct owner is already clear.
-- Result: No separate user-facing routing report. The selected workflow delivers the requested outcome; name skills only if the user asked about routing.
-- Do not use when: One canonical owner already clearly matches -> load that owner, for example `done-for-me`
-  - The request spans several responsibilities but one outcome is accountable -> give that owner the job, for example `project-standard`
-  - The user asked to be interrogated rather than routed -> `grill-me`
+- Use when: Hand this conversation's work to another agent, vendor, account or machine: record every decision, skill and ai-context change in the repository, push it, and write instructions that let the next agent continue pending and planned work without this chat. Use for hand it off, ส่งต่องาน, ให้ AI ตัวอื่นทำต่อ, ย้ายเครื่อง.
+- Result: The paste-ready block for the next agent, the handoff file path under docs/handoffs/, and the commit carrying the recorded decisions, state and lessons.
+- Do not use when: The user wants to be reminded what has been done, with no transfer -> `catchup`
+  - Recording lapsed but the same agent continues -> `never-again`
 - Aliases: `skill-router` (legacy compatibility call).
-  - The user asked to be interrogated rather than routed -> `grill-me`
 - Canonical instructions: [`plugins/james-core/skills/hand-it-off/SKILL.md`](../plugins/james-core/skills/hand-it-off/SKILL.md)

@@ -1,5 +1,5 @@
 ---
-description: Move a person toward their own goal through questions and reflection at the depth they want. Use for coach me, I feel stuck, I keep putting it off, โค้ชหน่อย, ตันแล้ว, ไม่รู้จะเริ่มยังไง. Respect an explicit switch to advice, a factual answer or task execution.
+description: Ask questions that dig to the core of what the person is working through, in performance, life or purpose, so they find their own answer; never think for them, add, complete or advise. Activate with coach me, I feel stuck, โค้ชหน่อย, ตันแล้ว, ไม่รู้จะเริ่มยังไง. Ends when they ask for an answer or a task.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/coach-me/SKILL.md

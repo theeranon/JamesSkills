@@ -2,18 +2,18 @@
 name: one-page-pls
 kind: output
 license: CC-BY-NC-4.0
-description: Turn material into a self-contained single-page brief, one page per topic by default. Use for one page please, one-pager, executive brief, สรุปหน้าเดียว, ขอ one page. Not for a full meeting record that must hold every agenda in one file.
+description: Summarize the essentials onto one page: choose what a decision-maker needs, in the project's design system with small user overrides accepted and a quiet default style, metacopy checked and removed. One page per topic by default. Use for one page please, one-pager, สรุปหน้าเดียว, ขอ one page.
 ---
 
 # One Page Please
 
-One useful page at the requested scope, without hiding material omissions.
+Decide what the reader must know, fit it on one page, and remove everything that is about the page itself.
 
 ## Scope
 
 - Kind: output
 - Owns: producing a decision-ready one-page brief at the requested scope and surface; default to a self-contained A4 landscape HTML page per independent topic.
-- Boundary: compresses and renders existing material. Honors an explicit combined-page request, never silently drops material content to force a fit, and never invents a fact to fill the layout.
+- Boundary: compresses and renders existing material. Honors an explicit combined-page request, never silently drops material content to force a fit, and never invents a fact to fill the layout. Style follows the project's design system when one exists, then a small user override, then the shipped default.
 
 ## Do not use this when
 
@@ -29,10 +29,11 @@ Confirm the requested output surface from the existing request. If the user asks
 1. Read every supplied source completely before summarising. Detect independent topics from explicit headings, changed outcomes, different owners, separate decisions, or separate timelines.
 2. Use one topic per page by default. If the user explicitly requests one combined page, keep all requested topics on that page with clear sections; if they request separate pages, deliver separate pages. Do not convert a combined brief into several files.
 3. Before compressing, account for every material decision, action, owner, date, risk, constraint, number, and evidence item, using [references/content-contract.md](references/content-contract.md). Preserve each item's meaning: a decision deadline is not an execution deadline, an owner is not automatically the approver, and a risk does not establish current status. Do not add currency, approval, causality or progress absent from the source. A proposed appendix location is not an existing verified link.
-4. For HTML delivery, duplicate [assets/a4-landscape-template.html](assets/a4-landscape-template.html) for each requested page and replace every token. Preserve the compact layout and visual invariants; adapt sections only where the topic genuinely requires it.
-5. If one topic cannot fit legibly, keep the one-page decision surface and link a clearly named appendix or full record, or return an explicit `one-page unsuitable` verdict. Never hide material or shrink it into unreadability.
-6. For rendered file delivery, render and inspect every output separately using [references/render-qa.md](references/render-qa.md). Deliver editable HTML only by default; produce a PDF only when it is explicitly requested.
-7. For portable HTML delivery, the shipped template alone is not self-contained proof. For a genuinely portable single file, run the font embedding helper `scripts/embed_ibm_plex_thai.py` from the installed `make-it-james-ux` skill directory, confirm no remote font links remain, and verify the rendered typeface. Locate that directory by loading `make-it-james-ux`; never assume a relative path from this skill, because a linked install and a plugin install lay the folders out differently. If the helper or the font files are unavailable, report that exact portability gate rather than claiming self-containment.
+4. For HTML delivery, duplicate [assets/a4-landscape-template.html](assets/a4-landscape-template.html) for each requested page and replace every token. Preserve the compact layout and visual invariants; adapt sections only where the topic genuinely requires it. Apply the project's design system (colours, typeface, radius) when the project has one; accept a small explicit user override; otherwise keep the template's default style. Keep the thin grey credit line in the footer, `Researched by SolutionsIMPACT, Developed by James Theeranon`, exactly as the template carries it; it must never affect the layout.
+5. Before rendering, read the page as its recipient and remove every line that is about the page rather than the topic: no introductions of what a section covers, no notes on how it was made, no leftover instructions or placeholders.
+6. If one topic cannot fit legibly, keep the one-page decision surface and link a clearly named appendix or full record, or return an explicit `one-page unsuitable` verdict. Never hide material or shrink it into unreadability.
+7. For rendered file delivery, render and inspect every output separately using [references/render-qa.md](references/render-qa.md). Deliver editable HTML only by default; produce a PDF only when it is explicitly requested.
+8. For portable HTML delivery, the shipped template alone is not self-contained proof. For a genuinely portable single file, run the font embedding helper `scripts/embed_ibm_plex_thai.py` from the installed `make-it-james-ux` skill directory, confirm no remote font links remain, and verify the rendered typeface. Locate that directory by loading `make-it-james-ux`; never assume a relative path from this skill, because a linked install and a plugin install lay the folders out differently. If the helper or the font files are unavailable, report that exact portability gate rather than claiming self-containment.
 
 ## Stop when
 

@@ -25,10 +25,11 @@
 - Keep copyrighted originals outside Git by default. Commit source identity, rights posture, hash, locators, original paraphrase, applications, and limitations.
 - Separate source claims, independent evidence, James rules, and inference. Never promote an inferred profile to an official result.
 - A direct correction from James is evidence to investigate. Promote it to a global rule only when the intended scope is durable.
-- Authorization to build the library is not approval of a new skill name, domain boundary, framework hierarchy, alias, or promotion state. Keep a new candidate as `pilot` and uninstalled until James approves its Candidate Card.
+- Authorization to build the library is not approval of a new skill name, domain boundary, framework hierarchy, alias, or promotion state. Keep a new candidate as `pilot`, uninstalled and outside global installs until James approves its Candidate Card. The Candidate Card gate lives here, not in any skill.
 - A Candidate Card must show the working name options, bounded job, trigger and exclusions, overlap with current skills, source map and confidence, representative requests, failure cases, and recommended lifecycle state.
 - Promote only after cross-case evidence shows a reusable gap, nearby counter-cases show the rule is not overfit, and James approves the exact name and scope.
 - Every behavioral correction requires a rejected-case regression, another case with the same mechanism, and a legitimate counter-case.
+- Record continuously: every insight, key learning, decision, important context, `SKILL.md` change and deliverable version is written to its owner document and pushed in the same session, without waiting for an instruction (DEC-051, LESSON-017).
 - Release on the shortest critical path: usable package, minimum required proof, authorized install or delivery, then a local repository checkpoint. Push, deploy, publish, or send only when the request or accepted project contract authorizes that exact external target. Optional audits, documentation cleanup, and extra hardening must not delay the first usable outcome.
 - Run `scripts/validate` and `scripts/doctor` before declaring a release usable.
 - Do not claim cross-platform support without discovery and outcome evidence on that platform.

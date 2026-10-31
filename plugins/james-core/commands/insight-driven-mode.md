@@ -1,5 +1,5 @@
 ---
-description: Make customer insight the first step of marketing, brand, content and copy, so each group's strategy, pages, articles, headlines and CTAs trace to a written insight. Activate for the whole conversation with insight first, เริ่มจากอินไซต์, อินไซต์เป็นกระดูกเม็ดแรก, or when copy sounds generic or translated.
+description: Understand the real user and goal before any work starts, in every kind of task: dig, ask and research until clear, set strategy first, then check the result serves the need, not just that it is done. Marketing: one written insight per group. Activate with insight first, เริ่มจากอินไซต์, เข้าใจก่อนทำ, อย่าเพิ่งลงมือ.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/insight-driven-mode/SKILL.md

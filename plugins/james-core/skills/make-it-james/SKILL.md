@@ -2,12 +2,12 @@
 name: make-it-james
 kind: shared-standard
 license: CC-BY-NC-4.0
-description: Make anything a real person will read sound written rather than translated, with native phrasing, no metacopy and a human voice. Applies automatically to recipient-facing work; also use for humanize it, make it natural, ภาษาแข็ง, อ่านแล้วเหมือน AI, เกลาคำ. It does not choose the format or supply missing content.
+description: Copywriting pass on anything a person will read: human language against the checklist, no Thai AI slop, no translated syntax, no metacopy anywhere in the outcome. Applies automatically to recipient-facing work; also use for humanize it, ภาษาแข็ง, อ่านแล้วเหมือน AI, เกลาคำ. Does not choose format or supply content.
 ---
 
 # Make It James
 
-Write it the way a fluent person would say it to this reader, not the way it translates.
+Rewrite it as a fluent person would say it to this reader: no AI slop, no translation, no metacopy.
 
 ## Scope
 
@@ -33,7 +33,7 @@ Three laws, applied in this order. When they pull apart, the earlier one wins.
 
 **2. Take the metacopy out.** Metacopy is text about the text, or about how it was made, standing where the content should be. Remove announcements of what a section is about to do, recaps of what was just said, openers such as "here is" or `ต่อไปนี้คือ` and `ในส่วนนี้จะอธิบาย`, conversation leftovers, instructions to the agent, complaints, preparation notes, progress narration, design rationale, copied requirement language, interface narration, placeholders, and labels announcing that a machine produced it. Start with the content itself. Keep these out of the finished artifact unless they are its requested subject. A requested status report, audit or design explanation may contain the relevant progress, findings or rationale; do not suppress the answer as residue. Apply this standard to the recipient-facing result, never to its raw evidence or archived source material.
 
-**3. Humanize it.** The text sounds like one person who knows the subject speaking to one reader they respect. Prefer the specific noun, number and name already in the source over a general phrase. Commit to one word instead of stacking near-synonyms or hedges. Let sentence length follow the thought, and break reflex patterns such as lists of three, a contrast built only to be knocked down, and a summary line closing every paragraph. Drop empty intensifiers, filler openers and closing pleasantries. Match the register the reader uses, including the Thai particles and pronouns that fit the relationship. Humanizing removes what a person would not have written; it never adds an invented anecdote, feeling, slang or deliberate mistake.
+**3. Humanize it, and strip the AI slop.** Thai AI slop is any phrase a Thai writer would not produce for this reader: stacked synonyms, reflex lists of three, empty intensifiers, a moral or summary line closing every paragraph, hedges before every claim, and English-shaped sentences in Thai clothing. Remove them. The text sounds like one person who knows the subject speaking to one reader they respect. Prefer the specific noun, number and name already in the source over a general phrase. Commit to one word instead of stacking near-synonyms or hedges. Let sentence length follow the thought, and break reflex patterns such as lists of three, a contrast built only to be knocked down, and a summary line closing every paragraph. Drop empty intensifiers, filler openers and closing pleasantries. Match the register the reader uses, including the Thai particles and pronouns that fit the relationship. Humanizing removes what a person would not have written; it never adds an invented anecdote, feeling, slang or deliberate mistake.
 
 **Do not compress thought into punctuation.** Full sentences carry the meaning. Do not replace connective reasoning with symbols or emoji. Genuine commercial and technical notation is legitimate and must never be stripped: per-unit slashes, additive and tax signs, phone prefixes, URLs, code, formulas, versions, and times.
 

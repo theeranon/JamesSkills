@@ -2,59 +2,59 @@
 name: done-for-me
 kind: workflow
 license: CC-BY-NC-4.0
-description: Carry an already-agreed task to a finished, verified outcome without stopping to ask. Use for just finish it, do it all, ทำให้จบ, ทำให้เสร็จเลย, จัดการให้หมด. Decide routine planning and implementation details yourself; active conversation modes remain in force.
+description: Wake-up call when the agent keeps asking after enough insight and decisions were given. Re-read the whole conversation and every settled decision, then act at once; build what is still ambiguous as a changeable setting or as three to five variants. Use for just do it, stop asking, ทำให้จบ, ทำสักที, พอแล้วถามอยู่นั่น.
 ---
 
 # Done For Me
 
-Take the agreed job to the finish line and only then come back.
+Stop asking, re-read everything already decided, and build it now.
 
 ## Scope
 
 - Kind: workflow
-- Owns: one task whose intent is already established, carried through implementation and its own verification to a usable result.
-- Boundary: executes every safe action inside the accepted scope. Never pushes, deploys, sends, publishes, or spends unless the request or the accepted project contract authorises that exact target.
+- Owns: the turn in which the agent recovers every decision the conversation already holds and carries the work to a finished, verified result without another question.
+- Boundary: executes every safe action inside the accepted scope. Never pushes, deploys, sends, publishes, or spends unless the request or the accepted project contract authorises that exact target. Never fabricates a value, an approval or a test result to keep moving.
 
 ## Do not use this when
 
-- The user asks to design a strategy rather than execute an established outcome -> `proactive-dev` can guide engineering planning. Missing implementation details alone do not block execution.
 - The work is finished and its diligence is what is in doubt -> `are-you-sure`
 - Delivered code needs a layered sweep and boundary check -> `dev-are-you-sure`
-- The requested outcome is only an evidence verdict -> `research-it`. If research is needed to complete the agreed job, do it and continue that job.
-- The requirement itself is still vague and must be interrogated -> `grill-me`
+- The goal itself has never been stated and no file or message holds it -> `grill-me`, once, then return here
+- The requested outcome is only an evidence verdict -> `research-it`
 
 ## Procedure
 
-1. Find the requirement authority, the current state, and what counts as finished. Consume an approval already present in this conversation or the project contract; never ask the user to repeat it as a confirmation word.
-2. Define completion for the whole requested outcome and take the shortest path to it. When the request covers a set, track every item through implementation, verification and delivery, or an evidence-backed decision to retain it. A usable first item is a checkpoint, not permission to leave the rest unfinished. Run the proof the requested outcome needs before optional hardening or documentation cleanup.
-3. Execute every in-scope action that does not require an unresolved business decision or missing authorization. Keep useful progress updates brief without stopping work or asking whether to continue.
-4. When one path blocks, continue every independent path. Use existing configuration mechanisms for missing inputs. Add a settings surface only when the requested product actually needs one; never fabricate a value.
-5. Investigate and repair ordinary failures. Do not stop at the first error, tool limitation, or incomplete subtask.
-6. Verify the real outcome yourself before reporting. A result you have not exercised is not finished.
-7. A failed test starts diagnosis and correction inside scope; it is not a completed delivery. Do not replace execution with another plan or ask whether to continue already-authorized work. Brief progress notes never replace this: give the final report once, at the end, covering what now works, what was decided along the way, and only the gates that genuinely remain, each with its owner.
-
-When delegation shortens the path, parallelise only write-disjoint work, give every worker the same requirement identifiers, base revision, owned paths, allowed actions, forbidden external effects, and acceptance evidence, and keep verification independent from implementation.
+1. Treat the invocation as feedback that you asked once too often or lost the thread. Do not apologise and do not explain; recover.
+2. Re-read the whole conversation and the project's `ai-context/` from the start: the goal, every decision the user made in their own words, every correction, the insight already given, and the artifact as it stands. Context may have been lost; rebuild it from the record, not from memory. Write nothing new until this is done.
+3. List privately what is settled and what is still open. Settled points are never re-asked and never reversed.
+4. For each open point, decide anyway, in one of two ways, and say which you used:
+   - **Setting.** Build it so the choice can be changed later: a named configuration value, a constant in one place, a parameter with a sensible default. Never a hardcoded guess buried in the work.
+   - **Variants.** State plainly that the point is ambiguous and deliver three to five concrete versions that differ on that point, so the user picks instead of answering a question.
+5. Execute every in-scope action to the finish. Investigate and repair ordinary failures; a failed test starts diagnosis, not a report. When one path blocks, continue every independent path. When delegation shortens the path, parallelise only write-disjoint work and give every worker the same requirement identifiers, base revision, owned paths, allowed actions, forbidden external effects and acceptance evidence; keep verification independent from implementation.
+6. Verify the real outcome yourself, as the user would use it, before reporting. A result you have not exercised is not finished.
+7. Report once, at the end: what now works, which open points became settings or variants, and only the gates the user genuinely holds (an irreversible external action, missing credentials). Never ask the user to repeat an approval as a confirmation word, and never hand back a list of things still undone.
 
 ## Stop when
 
-The complete requested outcome exists, has been exercised rather than assumed, and every remaining gate is one the user genuinely holds. Name an actual external dependency when blocked; never relabel ordinary remaining work as a user gate. Waiting on something is a state to route around or monitor, never a reason to hand back an unfinished job.
+The complete requested outcome exists, has been exercised rather than assumed, every formerly open point is either a changeable setting or a set of variants, and the only remaining gates are ones the user genuinely holds. Waiting on something is a state to route around, never a reason to return unfinished work.
 
 ## Principles
 
-**Critical path first** — Reach the first usable result before any optional completeness, because work that improves nothing the user can yet use is not progress. Source: critical path method, DuPont and Remington Rand, 1957
 **Definition of done** — Fix what finished means before starting, so completion is a checked condition rather than a feeling. Source: Scrum practice, Schwaber and Sutherland
+**Reversibility decides authority** — Decide every reversible point yourself; a decision made as a setting costs nothing to change, while a question costs the user a turn. Source: Jeff Bezos, Amazon shareholder letter, 2015
 **Never fabricate to keep moving** — Invent no credential, no data, no approval, and no success; a blocked path is routed around, never simulated. Source: standing rule in this library
-**Reversibility decides authority** — Choose reversible implementation details inside scope; use existing authorization for consequential actions and ask only when necessary authority is missing. Source: Jeff Bezos, Amazon shareholder letter, 2015
+**Recognition over recall** — Show three to five concrete versions to pick from rather than asking the user to compose an answer. Source: Jakob Nielsen, usability heuristics, 1994
 
 ## Counter-case
 
-- The user says to finish an app but two incompatible business outcomes remain unresolved. Ask about that decision while doing independent work. A clear outcome with an unspecified implementation is different: inspect, choose a method and execute.
+- The user says to finish an app while two incompatible business outcomes remain unresolved and no record favours either. Build both as variants or behind one switch and deliver; do not stop to ask.
 - The user says to finish, and the work is already built but suspect. Nothing remains to execute, so `are-you-sure` or `dev-are-you-sure` owns it.
+- The next step is sending the result to a client. Finishing never supplies that authorization; deliver the ready artifact and name that one gate.
 
 ## Hand back
 
-The working outcome and concise verification relevant to the request. Include material decisions or genuine remaining dependencies only when useful; keep an artifact-only response artifact-only. Completing this task ends this workflow, not an active conversation mode.
+The working outcome and its verification. The list of open points turned into settings or variants, each in one line. Only genuine user-held gates, each with its owner. An artifact-only request gets the artifact alone.
 
 ## Sources
 
-Critical path method, 1957. Schwaber and Sutherland, Scrum Guide, definition of done. Bezos 2015, Amazon shareholder letter.
+Schwaber and Sutherland, Scrum Guide, definition of done. Bezos 2015, Amazon shareholder letter. Nielsen 1994, Ten Usability Heuristics.

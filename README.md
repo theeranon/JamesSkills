@@ -35,7 +35,7 @@ graph TD
     Root --> Soft["💻 james-software — 5 skills<br/>Engineering method, project contracts,<br/>and interface law"]
 ```
 
-**⚙️ `james-core`** decides what to do and whether it was done right. It holds the modes that set decision posture and insight-first marketing for a conversation (`proactive-habits`, `i-have-adhd`, `insight-driven-mode`), the workflow that carries an agreed task to a finished outcome (`done-for-me`), the wording standard every recipient-facing output passes through (`make-it-james`), and the gates nothing ships without: `are-you-sure`, `research-it`, `is-that-the-best-you-can-do`, `never-again`, `hand-it-off`.
+**⚙️ `james-core`** decides what to do and whether it was done right. It holds the modes that set decision posture and insight-first marketing for a conversation (`proactive-habits`, `i-have-adhd`, `insight-driven-mode`), the workflow that carries an agreed task to a finished outcome (`done-for-me`), the wording standard every recipient-facing output passes through (`make-it-james`), the gates nothing ships without: `are-you-sure`, `research-it`, `is-that-the-best-you-can-do`, and the two recording commands `never-again` and `hand-it-off`.
 
 **📊 `james-productivity`** thinks before it builds. It sharpens a vague requirement (`grill-me`), reframes a problem at the system level (`zoom-out`), applies a registered knowledge lens (`baseon`), settles an open question against outside evidence combined with a candidate comparison (`give-me-solutions`), coaches a person through their own stuck point (`coach-me`), and produces the two recipient-facing formats this library ships (`sum-meet`, `one-page-pls`, `final-it`).
 
@@ -639,7 +639,7 @@ James Theeranon
 ### ⚙️ Internal & Architecture (ระบบประมวลผลและการจัดเส้นทางภายใน)
 
 #### ⚡️ `/hand-it-off`
-*Internal responsibility-based routing matrix directing incoming tasks to their single accountable primary workflow, automatic standards, and verification boundary.*
+*Hands this conversation's work to another agent, vendor, account or machine: records every decision and state change in the repository, pushes it, and writes the instructions the next agent needs to continue.*
 
 <p align="center"><img src="assets/hand-it-off-architecture.png" width="100%" alt="hand-it-off architecture"></p>
 
@@ -867,7 +867,7 @@ The short rule:
 - use `/dev-are-you-sure` before accepting a completion claim, and `/research-it` when the doubt is about an outside claim;
 - use `/sum-meet`, `/one-page-pls`, or `/final-it` for recipient-facing outcomes; `make-it-james` and `make-it-james-ux` apply automatically.
 
-This release has no pilot packages. Compatibility aliases keep older calls working without creating another instruction body. `hand-it-off` is installed internal support, not a recommended human command. `skill-router` remains a compatibility alias.
+This release has no pilot packages. Compatibility aliases keep older calls working without creating another instruction body. `/hand-it-off` records the state and writes the handoff for the next agent; `skill-router` remains a compatibility alias that resolves to it.
 
 ## 🧠 Knowledge Library
 

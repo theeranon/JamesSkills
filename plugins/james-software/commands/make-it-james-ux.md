@@ -1,5 +1,5 @@
 ---
-description: Design anything rendered from the user's real flow first, then lay it out left to right and top to bottom on a perfect grid. Colour, font and style follow the project, with house defaults only as fallback. Applies automatically to visual work; also use for fix the look, UI รก, จัดหน้าให้เป๊ะ, ดูไม่โปร.
+description: No slop in UX, UI and web app design, as principles a user or project design system may override. UX: real flow of every user group, fewer steps, no needless modal, left to right, top to bottom, exact grid. UI: locked type and radius, no accent border, nothing jumps, fixed heights. Use for UI รก, จัดหน้าให้เป๊ะ.
 ---
 
 @${CLAUDE_PLUGIN_ROOT}/skills/make-it-james-ux/SKILL.md

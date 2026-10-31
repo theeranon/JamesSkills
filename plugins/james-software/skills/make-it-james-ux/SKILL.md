@@ -2,12 +2,12 @@
 name: make-it-james-ux
 kind: shared-standard
 license: CC-BY-NC-4.0
-description: Design anything rendered from the user's real flow first, then lay it out left to right and top to bottom on a perfect grid. Colour, font and style follow the project, with house defaults only as fallback. Applies automatically to visual work; also use for fix the look, UI รก, จัดหน้าให้เป๊ะ, ดูไม่โปร.
+description: No slop in UX, UI and web app design, as principles a user or project design system may override. UX: real flow of every user group, fewer steps, no needless modal, left to right, top to bottom, exact grid. UI: locked type and radius, no accent border, nothing jumps, fixed heights. Use for UI รก, จัดหน้าให้เป๊ะ.
 ---
 
 # Make It James UX
 
-Understand the real flow first, then lay it out in reading order on a grid with nothing out of line.
+Design the real flow first, then a grid nothing jumps on; follow the project's system, and never ship slop.
 
 ## Scope
 
@@ -24,23 +24,29 @@ Understand the real flow first, then lay it out in reading order on a grid with 
 
 ## Behavior
 
-Work in this order. Read [references/standard.md](references/standard.md) completely before deciding; it holds the detail behind each rule and the house defaults.
+These are principles, not fixed values: an explicit user design decision wins, then a project design system found in the repository or brief, then the defaults here. Read [references/standard.md](references/standard.md) for the detail behind each rule and the defaults.
 
-**1. Strategy and real flow before any layout.** Do not draw or code until the use is understood. Establish who uses this, the job they are doing, what brings them here, the actual sequence of steps they take from arrival to done, what they already know and hold at each step, how often and on what device, and the one outcome that means it worked. Take this from the project contract, the existing product, real data and the request; ask only when the flow cannot be established and a wrong guess would change the layout. Then decide the strategy: the single primary action of each view, what is secondary, and what does not belong. Every screen, section and control maps to a step of that flow; anything that serves no step is removed or demoted. Cover the states the real flow reaches, including empty, loading, error and returning. Scale this to the job: a local fix inside an accepted flow needs only the affected step confirmed.
+**UX: experience of use, checked by eye.**
+- Start from the real flow of every user group of this system: who they are, what brings them to this screen, the exact steps from arrival to done, and the one outcome that means it worked. Every screen, section and control maps to a step; what serves no step is removed or demoted. Cover empty, loading, error and returning states.
+- Don't make me think: fewer steps, the next action obvious, labels that say what happens. Defer nonessential questions; keep required inputs at the point of use.
+- No popup or modal unless the task truly needs interruption; no nesting of anything inside a modal.
+- Reading order is left to right, top to bottom: what the user needs first sits top-left, steps appear in the order performed, overview above detail, label before value, the same relationship placed the same way everywhere. A layout that needs an arrow to explain its order is in the wrong order.
+- Choose the component that fits what is shown: a table for comparable rows, a card for one thing, a list for a sequence, never a table inside a table.
+- Compact and consistent: low padding, one spacing scale, equal things exactly equal.
+- Verify by walking the rendered result as each user group, in order, at every size it will be seen.
 
-**2. Order follows reading: left to right, top to bottom.** Importance descends from the top and sequence runs from the left. What the user needs first sits top-left; what they do last ends the path. Steps appear in the order they are performed. Overview sits above detail, cause before effect, input before result, label before value, and the same relationship is placed the same way everywhere. The eye never travels backward or jumps across the page to continue. A layout that needs an arrow or a note to explain its order is in the wrong order.
-
-**3. Perfect grid, nothing out of line.** One grid and one spacing scale per artifact, chosen before the first element is placed. Every edge sits on a grid line. Equal things are exactly equal in width, height, padding and gap; siblings share one baseline; a column has one alignment, with numbers aligned so digits compare. Same-level components share radius, border, shadow, icon size and type size. No orphan element, no uneven last row, no value off by a pixel, no spacing chosen by eye. A misalignment a careful reader can find is a defect, however small. Check it on the rendered output at every size it will be seen, not in the source.
-
-**4. Style belongs to the project.** Inspect the project for a design system, component library, framework convention, brand guide, or spec sheet before any visual decision, and follow it for colour, typeface, radius, shadow and tone. One consistent system across the whole product outranks this house style. Only where no system exists, use the house defaults: `IBM Plex Sans Thai` for Thai, Latin, and numerals; minimal, white, quiet; compact density with body line-height between 1.35 and 1.45; a 6px radius on rectangular surfaces, with genuinely circular objects staying circular. Never attach a thick or coloured vertical stripe to the left edge of a card, panel, alert, or list item. Defaults and helper checks remain subordinate to explicit user requirements and the selected project system.
-
-**Preserve the requested content and action.** Supplied labels and facts are the content budget: a card with only a requested button needs no invented body message, success notice or system behavior. Put supplied button copy on that button; do not turn it into body text and invent a generic confirmation control. Add a control only when its action belongs to the requested flow. Interface copy carries no production residue: no meta copy, no progress narration, no machine-authorship label, no placeholder shipped as content.
-
-**Reduce friction before adding explanation.** Defer nonessential questions until they are useful; required authorization and inputs stay at the point they are needed. Remove controls irrelevant to the immediate intent. Use optimistic execution plus undo for safe actions only when reversal really works. Preserve required confirmation for destructive or externally binding actions. Break intimidating forms into disclosed steps. Give every control explicit copy rather than an unlabelled icon.
+**UI: front-end discipline that never ships slop.**
+- Lock the type scale, font weights and border radius once per artifact and never vary them by eye. Default when nothing is specified and the project has no system: white, clean, minimal; `IBM Plex Sans Thai` for Thai, Latin and numerals, no weight heavier than semi-bold; body line-height between 1.35 and 1.45; a 6px radius on rectangular surfaces.
+- Never attach a thick or coloured accent border or vertical stripe to the left edge of a card, panel, alert or list item.
+- Exact grid: every edge on a grid line; siblings share baseline, width, height and gap; numbers align so digits compare; no orphan element, no uneven last row, nothing off by a pixel.
+- Nothing jumps: changing page keeps the navigation and layout in place; expanding or collapsing anything moves nothing else; cards, rows and table rows keep fixed heights and never stretch with content, so choose what to show or truncate with an explicit control.
+- No nested designs: no modal inside a modal, no table inside a table, no card inside a card.
+- Design desktop and mobile both; never ship one locked page width and call it responsive, unless the user explicitly asks for a fixed width.
+- Interface copy carries no production residue: no meta copy, no progress narration, no machine-authorship label, no placeholder shipped as content. Supplied labels and facts are the content budget; invent nothing to fill a layout.
 
 **Format boundary.** An HTML request defaults to HTML-only delivery. Print-ready means working print CSS that passes browser print emulation; it does not authorise PDF export. Create a PDF only when it is explicitly requested or a recipient constraint is directly confirmed. Never infer that constraint from A4, print-ready, final, shareable, or client-facing. Never generate a PDF merely to prove that HTML renders.
 
-**Verify by rendering.** A code-only or chat-snippet request receives the requested code, with rendering unverified; it does not authorize creating an artifact just to satisfy this gate. For a rendered deliverable, walk the real flow from step 2 through the rendered result in order, then run `python3 scripts/lint_outcome.py --strict <output-path>` from this skill directory for supported outputs. Evaluate lint findings against the chosen system rather than changing valid project styling to satisfy a house default. For an offline portable single file, embed the selected typeface and confirm no remote font links remain. Use `python3 scripts/embed_ibm_plex_thai.py <input.html> --output <portable.html>` only when IBM Plex Sans Thai is the selected font; do not replace a project font merely to use this helper. A CSS font declaration is never proof that the font loaded.
+**Verify by rendering.** A code-only or chat-snippet request receives the requested code, with rendering unverified. For a rendered deliverable, walk the real flow through the rendered result, then run `python3 scripts/lint_outcome.py --strict <output-path>` from this skill directory for supported outputs, judging findings against the chosen system rather than changing valid project styling to satisfy a default. For an offline portable single file, embed the selected typeface and confirm no remote font links remain; use `python3 scripts/embed_ibm_plex_thai.py <input.html> --output <portable.html>` only when IBM Plex Sans Thai is the selected font. A CSS font declaration is never proof that the font loaded.
 
 ## Applies to
 

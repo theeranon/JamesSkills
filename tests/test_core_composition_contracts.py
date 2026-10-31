@@ -43,7 +43,7 @@ def main() -> int:
     cases = read("tests/behavioral-cases.md")
 
     # Canonical discovery belongs to catalog; the router need not duplicate it.
-    assert "Candidate Card" in router
+    assert "Candidate Card" in read("AGENTS.md")
 
     # Anti-overfit: a durable correction needs same-mechanism and counter-case evidence.
     assert "a different case with the same mechanism" in never_again

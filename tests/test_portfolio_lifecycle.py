@@ -17,10 +17,10 @@ def main() -> int:
     never_again = read("plugins/james-core/skills/never-again/SKILL.md")
 
     assert "Authorization to build the library is not approval" in maintainer
-    assert "Candidate Card" in maintainer and "Candidate Card" in router
+    assert "Candidate Card" in maintainer and "Candidate Card" in never_again
     assert "cross-case evidence" in maintainer
-    assert "legitimate counter-case" in maintainer + router + never_again
-    assert "outside global installs" in router
+    assert "legitimate counter-case" in maintainer + never_again
+    assert "outside global installs" in maintainer
     assert "Approval to repair the failure is not approval" in never_again
 
     print("PASS candidate approval, anti-overfit, and promotion lifecycle contracts")

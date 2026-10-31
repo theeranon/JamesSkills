@@ -2,12 +2,12 @@
 name: baseon
 kind: knowledge-lens
 license: CC-BY-NC-4.0
-description: Apply or compare registered frameworks, books and models against a real case, keeping source claims separate from evidence and inference. Use for based on this book, apply this model, อิงจากหนังสือเล่มนี้, ใช้เฟรมเวิร์กนี้วิเคราะห์, or to register a supplied source. Not a substitute for an evidence-based decision.
+description: Study a subject the user already has a keyword, hypothesis or insight for, wherever it lives (this chat, project, machine, connector, outside), and apply registered frameworks and books to the real case with source claims kept apart from evidence and inference. Use for อิงจากหนังสือเล่มนี้, ไปศึกษาเรื่องนี้มา.
 ---
 
 # Base On
 
-Use the model as a lens on the evidence, never as a verdict about the person.
+Study the named subject where it lives, then use the model as a lens on the evidence, never a verdict.
 
 ## Scope
 
@@ -25,7 +25,7 @@ Use the model as a lens on the evidence, never as a verdict about the person.
 
 ## Procedure
 
-1. Identify whether the request is to explain a concept, apply a lens, compare interpretations, or register a source. Use only the steps that serve that request. For an application, establish case facts before framework labels; a concept explanation needs no invented case or decision.
+1. Take the subject the user named as given: a keyword, a hypothesis or an insight they already hold. This is not a general research pass; go where that subject lives first: earlier in this conversation, the project's files and `ai-context/`, the machine, an available connector or tool, and only then outside sources. Then identify whether the request is to explain a concept, apply a lens, compare interpretations, or register a source. Use only the steps that serve that request. For an application, establish case facts before framework labels; a concept explanation needs no invented case or decision.
 2. List the library with `python3 scripts/knowledge_library.py list` from this skill directory and select the smallest relevant lens set. A lens is not invoked merely because its name appeared in the request. Never select a `draft` or `retired` pack for a real decision.
 3. Resolve each selected pack with `python3 scripts/knowledge_library.py show <lens-id>` and read its entrypoint, concepts, applications, limitations, manifest, and source cards. Read [references/pack-contract.md](references/pack-contract.md) before changing any pack. `wealth-dynamics` and `talent-dynamics` resolve to one shared Dynamics lens, Talent Dynamics being its team adaptation; `wealth-spectrum` is a separate stage model whose shared creator lineage never permits blending the two.
 4. When interpreting a personal profile, establish the subject input state honestly as `official_user_declared` when the user supplied or confirmed an official result, `working_hypothesis` when it is an inference carrying confidence, alternatives, and disconfirming evidence, or `unknown` when the evidence is insufficient. Never infer an official assessment result from chat, tone, job title, or a short quiz. A stored profile label without a user-confirmed official report remains a prior interpretation: downgrade it to `working_hypothesis` with its date, confidence, alternatives, and review triggers, even when an older profile file states it as fact. Never move private subject data into a portable knowledge pack; keep it in the subject's profile or project context and join it only at runtime.

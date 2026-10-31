@@ -1,59 +1,54 @@
 ---
 name: hand-it-off
-kind: internal-routing
+kind: workflow
 license: CC-BY-NC-4.0
-description: Internal fallback that assigns one primary owner when no skill obviously matches, and holds the Candidate Card gate before any new skill, name or alias. Never select it as the primary workflow, never let it produce a deliverable, and never use it when a direct owner is already clear.
+description: Hand this conversation's work to another agent, vendor, account or machine: record every decision, skill and ai-context change in the repository, push it, and write instructions that let the next agent continue pending and planned work without this chat. Use for hand it off, ส่งต่องาน, ให้ AI ตัวอื่นทำต่อ, ย้ายเครื่อง.
 ---
 
 # Hand It Off
 
-Find the one owner, hand over, and get out of the way.
+Write down everything the next agent needs, push it, and give them the order to continue.
 
 ## Scope
 
-- Kind: internal-routing
-- Owns: choosing the primary owner for a request when direct matching failed, and holding the Candidate Card gate for anything new.
-- Boundary: routes only. Produces no user deliverable, never owns the work, never creates or promotes a skill.
+- Kind: workflow
+- Owns: the handoff of this conversation's work: the recorded state in the repository and one instruction document a different agent can act on without reading this chat.
+- Boundary: writes to the project's `ai-context/` owner documents and a dated handoff file, commits and pushes under the project's standing rule. Never claims work is done that was not verified, never includes credentials, chat exports or client data, and never changes the work itself.
 
 ## Do not use this when
 
-- One canonical owner already clearly matches -> load that owner, for example `done-for-me`
-- The request spans several responsibilities but one outcome is accountable -> give that owner the job, for example `project-standard`
-- The user asked to be interrogated rather than routed -> `grill-me`
-- The problem layer itself is unclear -> `zoom-out`
+- The user wants to be reminded what has been done, with no transfer -> `catchup`
+- Recording lapsed and a lesson must be written, but the same agent continues -> `never-again`
+- The project has no contract and nothing durable has ever been written -> `project-standard`, then return here
 
 ## Procedure
 
-Route by accountable outcome, never by keyword or product name. Choose the workflow that serves the current outcome; compose relevant modes and standards without routing them away. Prefer an explicit project instruction over this router whenever it expresses a more specific accepted decision.
-
-Use the available skill descriptions and load the matching canonical body. Do not maintain a second behavior catalog here. Modes stay active across workflows; standards constrain outputs without competing to own the task.
-
-### Choosing
-
-1. Match the accountable outcome, then the evidence it requires, then the authority it needs. A skill that only reports is never chosen for work that must change something.
-2. Prefer the most specific owner. `final-it` is chosen only when no narrower output skill owns the artifact.
-3. Preserve any active mode rather than treating it as the primary job.
-4. Apply `make-it-james` and `make-it-james-ux` automatically to recipient-facing results.
-5. Use `zoom-out` first only when the problem layer or the outcome is genuinely unclear.
-6. Routing is internal coordination, not a reason to return only a skill name when the user requested an outcome. Continue the requested work with the selected owner; when an unavailable sibling cannot be loaded, complete the bounded task directly where possible and disclose any actual capability limit. When nothing fits, do the work directly. Repeated uncovered work is discovery evidence, not permission to package.
-
-Common valid chains: `zoom-out` then `give-me-solutions`; `research-it` then `give-me-solutions`; `done-for-me` with persistent `proactive-dev`, using `dev-are-you-sure` for an appropriate review; `sum-meet` or `one-page-pls` then the standards; `never-again` then the affected workflow.
-
-### Candidate Card
-
-Before any new skill, name, alias, or promotion, present one card: two or three natural name options; the bounded job, trigger, exclusions, and output contract; overlap with every nearby skill and why an upgrade or composition is insufficient; source map, recurrence, and confidence; representative requests, failure cases, and a legitimate counter-case; and a recommendation to upgrade, merge, create as pilot, or reject. Keep the candidate at pilot and outside global installs until the owner approves the exact name and scope. Authority to improve the repository is never naming approval.
-
-Do not load a live personal-context adapter merely because the owner is personal or the work is strategic. Activate one only when the outcome genuinely depends on current cross-channel state, and never let it become the primary workflow.
+1. Re-read the whole conversation and the project's `ai-context/`. Separate what is verified from what was only discussed.
+2. Record first, in the owner documents the project uses: decisions into `ai-context/DECISIONS.md`, current verified state and the next move into `ai-context/STATUS.md`, lessons into `ai-context/LESSONS.md`, changed skills into their `SKILL.md`. Nothing goes into the handoff file that is not also in its owner document.
+3. Write the handoff as `docs/handoffs/<date>-<topic>.md`, or the project's equivalent, with these parts in this order: what the goal is and for whom; what happened and what was verified, with commit references; pending work in execution order, each item with its acceptance; planned work the owner agreed but has not started; decisions the next agent must not reopen, in the owner's own words; blockers and the exact input each needs; the owner's working preferences that shape every step; which files to read first.
+4. Write every instruction so an agent from any vendor can run it: no tool names that exist only here, no paths outside the repository, no assumption that this chat is visible.
+5. Validate with the project's checks, commit, and push. State the commit and the remote branch in the handoff.
+6. Return a short paste-ready block the owner can give the next agent: the repository, the handoff file path, and the first command to run.
 
 ## Stop when
 
-Internal selection is complete. Resume the user's task immediately with the selected workflow and active modes; completing routing is not completing the task.
+The owner documents and the handoff file are pushed, the handoff names every pending and planned item with its acceptance, and the paste-ready block exists. Unverified items are marked unverified, never dropped.
+
+## Principles
+
+**Write for the stranger** — A record that needs this conversation to be understood is not a record. Source: standing rule in this library
+**One fact, one owner** — The handoff points at the owner document; it never becomes a second copy that drifts. Source: standing rule in this library
+**Verified, unverified, planned** — Keep the three apart; a plan written as a result is the most expensive lie a handoff can tell. Source: standing rule in this library
 
 ## Counter-case
 
-- The user asks to finish a task whose plan is already agreed. A direct owner is obvious, so `done-for-me` loads immediately and this router is never selected.
-- A request touches research, building, and delivery. It still gets one primary owner per stage rather than making this router the primary skill.
+- The owner asks where the project stands and intends to continue in this chat. That is a status read, so `catchup` owns it and nothing is pushed.
+- Everything is already recorded and pushed and only the paste-ready block is missing. Write the block; do not rewrite the records to show effort.
 
 ## Hand back
 
-No separate user-facing routing report. The selected workflow delivers the requested outcome; name skills only if the user asked about routing.
+The paste-ready block, the handoff file path, and the commit that carries the records. No summary of the chat beyond that.
+
+## Sources
+
+Standing rules of this library, recorded in `ai-context/DECISIONS.md` DEC-051 and `ai-context/LESSONS.md` LESSON-017.
