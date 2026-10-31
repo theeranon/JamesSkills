@@ -193,3 +193,23 @@ for direct evidence remains in force.
 **Rule:** When Claude Desktop is involved and a plugin behaves correctly by every terminal check yet never works live, do not trust that the terminal's `claude` and the Desktop app's `claude` are the same binary — find the Desktop app's actual running process (`ps aux | grep claude-code` while it is open) and re-run `plugin marketplace add`/`plugin install`/`plugin list` against that exact path. `claude plugin list`'s per-entry status line (`✔ enabled` vs `✘ failed to load: <reason>`) is the one command that reveals this class of fault directly; `installed_plugins.json` alone cannot, because it can be correct while the marketplace registration is not. Never declare a fix "confirmed working" from a single interactive response that could plausibly be the model improvising from the request text alone — use a deterministic reproduction (`-p` mode against a distinctive, non-improvisable skill behavior, or an explicit status check) before reporting success.
 
 **Date:** 2026-09-07. Fixed live: `claude plugin marketplace add "<local-repo-path>"` (matching the `git`+`path` source already declared in `settings.json`) then `plugin uninstall`/`plugin install` for all three plugins, run against the Desktop app's own bundled binary — confirmed via `plugin list` showing `✔ enabled` for all three. Not yet re-confirmed live in the Desktop app UI after this fix at the time of writing; see DEC-037.
+
+## LESSON-016 — Cursor lists every discovery path; a plugin plus user-dir copies is one skill twice
+
+**What happened:** After user-dir JamesSkills links were removed, the owner still saw two `/baseon` rows and asked for one copy on every platform, with updates landing everywhere together. Checking only three names (`proactive-dev`, `proactive-habits`, `project-standard`) had missed that Cursor third-party detection reads Claude plugins and also `~/.agents/skills`, `~/.codex/skills`, and `~/.claude/skills`. The installer still wrote those extra links whenever a Claude plugin existed.
+
+**Mechanism:** Doctor and install planned per directory. They never asked which paths one product loads together. Cursor's Use as Mode row is a second invocation surface for the same skill and is not a second file.
+
+**Rule:** When a native plugin already supplies a promoted skill, do not also write that skill into any directory Cursor third-party detection reads. Point the live plugin cache at the repository so an update is one source. Keep UI Mode rows separate from install counts.
+
+**Date:** 2026-10-26. DEC-050.
+
+## LESSON-017 — Recording is part of the work, not a step after it
+
+**What happened:** The owner had to say, during a long interview, that decisions, insights, skill changes and deliverable versions were being discussed but not written down, and that this is how the agent forgets and asks the same thing twice. His words: do not be the diligent fool.
+
+**Mechanism:** Recording was treated as a release activity that waits for an instruction. Context is lost between sessions and machines, so unrecorded decisions are re-asked or silently reversed.
+
+**Rule:** Whenever an insight, key learning, decision, important context, `SKILL.md` change or a new version of a deliverable appears, write it into the owner document that holds that kind of fact and commit and push it in the same work session, without waiting to be told. `never-again` and `hand-it-off` exist to be invoked when this lapses; their invocation means the rule has already been broken once.
+
+**Date:** 2026-10-31. DEC-051.

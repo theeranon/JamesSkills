@@ -1,13 +1,15 @@
 # Status
 
-Last verified: 2026-10-29
+Last verified: 2026-10-31
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.1.14
+Current version: 2.1.14 (local plugin cache on this machine symlinks to this repository per DEC-050; `installed_plugins.json` still records 2.1.13)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
 ## Current outcome
+
+On 2026-10-31 the owner redefined the purpose of every skill in DEC-051 after the audit `docs/audits/skill-portfolio-portability-2026-10-31.md`. No skill body has been rewritten yet. Next move: rewrite `insight-driven-mode`, `proactive-habits`, `done-for-me`, `is-that-the-best-you-can-do`, `hand-it-off`, `coach-me`, remove the two `solutionsimpact-*` aliases and add the footer to `one-page-pls` and `sum-meet`, then the technical P0 items (frontmatter `kind` to `metadata.kind`, Codex coverage, in-place marketplace), then retire `final-it` and `proactive-dev`. The DEC-050 installer change is still uncommitted pending the Codex repair.
 
 2.1.14 adds the promoted mode `insight-driven-mode` in `james-core`. Customer-facing marketing, brand, content and copy trace to a written insight for each target group. `scripts/validate` passed. `scripts/doctor` passed after a local install on this checkout: 128 managed links, including this skill under `.agents`, `.codex`, `.claude` and `.cursor`. Codex was not on PATH, so that pass is filesystem proof only. Gemini and Antigravity skill directories were absent, so those hosts were not linked here. No behavioral probe was run.
 
