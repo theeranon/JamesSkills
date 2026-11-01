@@ -182,6 +182,10 @@ def main():
         hooks = subprocess.run(['git', '-C', str(root), 'config', '--get', 'core.hooksPath'], capture_output=True, text=True)
         if hooks.stdout.strip() != '.githooks': raise RuntimeError('Git validation hooks are not installed')
     if args.check: reconcile(root, home, catalog, repair=False)
+    # Claude Code and Codex keep their own copies of the plugins (LESSON-020); refresh or verify them.
+    import host_refresh
+    if args.check: host_refresh.check(home)
+    else: host_refresh.refresh(home); host_refresh.check(home)
     print(f'PASS managed links={len(links)}; filesystem proof only for hosts not runtime-tested')
     return 0
 

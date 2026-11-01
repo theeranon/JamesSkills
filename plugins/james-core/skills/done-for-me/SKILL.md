@@ -3,6 +3,7 @@ name: done-for-me
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
+  version: 2.3.2
 description: Wake-up call when the agent keeps asking after enough insight and decisions were given. Re-read the whole conversation and every settled decision, then act at once; build what is still ambiguous as a changeable setting or as three to five variants. Use for just do it, stop asking, ทำให้จบ, ทำสักที, พอแล้วถามอยู่นั่น.
 ---
 

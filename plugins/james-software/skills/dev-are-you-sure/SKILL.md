@@ -3,6 +3,7 @@ name: dev-are-you-sure
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
+  version: 2.3.2
 description: Re-inspect delivered software with checks matched to its risks and repair findings inside a declared surface. Use when code looks done but may not be, as in are you sure it works, did you test it, โค้ดชัวร์ไหม, เทสแล้วเหรอ, เช็คโค้ดอีกรอบ. Not for business artifacts or outside claims.
 ---
 

@@ -231,3 +231,10 @@ for direct evidence remains in force.
 - Rule: on claude.ai settings pages, read the accessibility tree before any click on a detail page (the single control there is install or remove, no confirm), and drive marketplace menus inside one batch: open, act, verify, with the verification read from the page text or JavaScript rather than a screenshot, which lags. After any click near a plugin, re-read the Your plugins list before reporting.
 - Why it matters: the owner's Cowork install is account state with no file to restore from; an unnoticed removal would have surfaced as missing skills later with no trace in the repository.
 
+## LESSON-020 — A host that copies the plugin at install does not follow the repository, and a passing doctor said nothing about it
+
+- Date: 2026-11-01
+- What happened: three releases (2.2.1, 2.3.0, 2.3.1) shipped while this machine's Claude Code kept serving the 2.2.0 copy from `~/.claude/plugins/cache`, including the retired `proactive-dev`. The marketplace had been added from the local path, and DEC-052 recorded that as "loads in place", which was an inference from the marketplace config, not an observation of what the picker loaded. `scripts/doctor` compared symlinks only, so it passed. Codex's Git snapshot was one release behind for the same reason.
+- Rule: for every host, record which of the three mechanisms it uses — symlink into the repository, copy at install, or Git snapshot — and for the last two, the installer must run the host's own update command and doctor must compare the host's stored version to `VERSION`. "Marketplace points at the repo" is config proof, not load proof; the picker or `plugin list` output is. After any release, run `scripts/doctor` and restart the app before telling the owner it is live.
+- Why it matters: the owner saw a retired skill in the picker and could not tell whether the release had failed or the app had not updated; the same gap would have hidden a wrong body indefinitely.
+

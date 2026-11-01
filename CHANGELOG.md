@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.2 — 2026-11-01
+
+Every canonical `SKILL.md` now carries `metadata.version`, stamped from `VERSION` by `scripts/stamp_version.py` and checked by `scripts/validate`, so a loaded skill says which release it is. `scripts/host_refresh.py` refreshes the copies hosts keep for themselves (Claude Code's plugin cache through the Desktop-bundled CLI, Codex's marketplace snapshot through its bundled CLI); `scripts/install` runs it and `scripts/doctor` fails while either copy is behind `VERSION`. README no longer claims a local-path marketplace loads in place (DEC-055, LESSON-020).
+
 ## 2.3.1 — 2026-11-01
 
 Two sentences from the Karpathy coding guidelines land where the owner placed them (DEC-054): `done-for-me` step 5 turns each goal into a check that can fail before building (a bug gets a failing reproduction first); `dev-are-you-sure` Hygiene removes only what the change introduced or orphaned and reports pre-existing dead code instead of deleting it. `proactive-habits` is unchanged: its domain-neutral "Discard" rule already covers unrequested adjacent work, and code-specific wording does not belong in a mode used for every kind of work. No new skill; Karpathy's post is registered as a source in both Sources sections.

@@ -51,6 +51,7 @@ if [[ "$errors" -ne 0 ]]; then
 fi
 
 python3 "$repo_dir/scripts/check_repository_boundary.py" "$repo_dir"
+python3 "$repo_dir/scripts/stamp_version.py" --check
 
 python3 - "$repo_dir" <<'PY'
 import json
