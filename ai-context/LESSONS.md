@@ -223,3 +223,11 @@ for direct evidence remains in force.
 **Rule:** A host check looks for the product where the product actually installs itself (app bundle paths, running processes), not only on PATH, and a host that exists but cannot be verified is a FAIL or an explicit WARN with the missing evidence named, never a silent SKIP. Record the bundled path in the checker when it is learned.
 
 **Date:** 2026-10-31. DEC-052.
+
+## LESSON-019 — claude.ai plugin pages act on a single click, and menus close between browser batches
+
+- Date: 2026-11-01
+- What happened: while looking for a Sync control on `claude.ai/customize/plugins`, a click aimed at the Add dropdown landed on the plugin detail page's Add/Remove control and uninstalled James Core without confirmation. Separately, the marketplace ⋯ menu (Check for updates, Sync automatically, Remove) closes between browser tool batches, so a ref captured in one batch is stale in the next and coordinate clicks on the toggle did not register; `el.click()` through the page's own JavaScript did, confirmed by a 200 on the account-update request and by reopening the menu.
+- Rule: on claude.ai settings pages, read the accessibility tree before any click on a detail page (the single control there is install or remove, no confirm), and drive marketplace menus inside one batch: open, act, verify, with the verification read from the page text or JavaScript rather than a screenshot, which lags. After any click near a plugin, re-read the Your plugins list before reporting.
+- Why it matters: the owner's Cowork install is account state with no file to restore from; an unnoticed removal would have surfaced as missing skills later with no trace in the repository.
+
