@@ -185,3 +185,28 @@ Cowork ต้องเพิ่ม marketplace theeranon/JamesSkills >> ทำ�
 
 และจดด้วยใช่ไหมแบบ Raw Chat ว่าหน้าที่แต่ละ Skill จริงๆ คืออะไร จดลง md ไว้ใช่ไหม
 ```
+
+## 17. Message — 2026-11-01 (Karpathy guidelines)
+
+```text
+ฉันไปเจอสกิลนี้มาฉันว่าคอนเซปต์มันน่าสนใจกำลังมองว่าเอาคอนเซปต์ของเขามาประยุกต์เข้ากับสกิลของเราอันไหนได้ไหมหรือว่าจริงๆมันเหมือนกันอยู่แล้วไม่จำเป็นต้องเติมอีก https://github.com/multica-ai/andrej-karpathy-skills
+```
+
+## 18. Message — 2026-11-01 (placement of the two Karpathy sentences; purpose of `proactive-habits`)
+
+> _Context: the agent proposed adding a surgical-changes sentence to `proactive-habits` and a test-first sentence to `done-for-me` (DEC-054)._
+
+```text
+proactive-habits ใน Do now: โค้ดต้องตาม style เดิม ไม่แตะบรรทัดข้างๆ ลบแค่ orphan ที่ตัวเองสร้าง dead code เก่าให้รายงานไม่ลบ ทุกบรรทัดที่เปลี่ยนต้องโยงกลับคำสั่ง >> มันดูไม่ใช่งานของ proactive-habbit ไหมนะ? หรือใช่วะ มันดูไม่ใช่อ่ะ แล้ว proactive ในงานประเภทอื่นจะไม่งงรึถ้าเติมเรื่อง โค้ดต้องตาม style เดิม ... ทำไมฉันคุ้มว่ามันมีเรื่อง design system เดิมอยู่แล้วป่ะนะ make-it-james-ux ป่ะ ?
+
+proactive-habbit ควรเป็นโหมดหลักที่จะไปเรียก skill อื่นได้ตามเหมาะสม ก็จะครอบคลุมแล้วไหม
+
+---
+
+done-for-me step 5: แปลงเป้าเป็น check ที่ล้มได้ก่อนลงมือ bug ต้องมี reproduction ที่ล้มก่อนผ่านหลัง  >> น่าจะทำให้คมขึ้นนะ OK
+```
+
+```text
+dev-are-you-sure เอากลับมาไหมหละ
+```
+

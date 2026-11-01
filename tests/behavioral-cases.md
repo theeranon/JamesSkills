@@ -200,6 +200,7 @@ Must:
 Fails when:
 - a local page or green test suite is treated as production proof
 - an agent report substitutes for inspecting the claimed outcome
+- the repair reformats or "improves" lines outside the finding, or deletes dead code the change did not create instead of reporting it (DEC-054)
 
 ## Never Again — `never-again`
 
@@ -593,6 +594,10 @@ Same-mechanism transfer:
 
 Legitimate counter-case:
 - The remaining step is sending the deliverable to a client. Deliver it ready and name that one gate; do not send.
+
+Goal-driven execution (DEC-054):
+- Rejected: the user reports a booking overlap bug and the agent edits the comparison operator, runs the existing green suite and reports fixed. Must: write the reproduction that fails on the reported case first, then fix, then show it passing with the rest of the suite. Fail: a fix with no check that could have failed; "should work now".
+- Counter-case: a one-line copy change in a static page has no behaviour to check; render and look, do not invent a test harness.
 
 ## Hand It Off — `hand-it-off` as handoff
 

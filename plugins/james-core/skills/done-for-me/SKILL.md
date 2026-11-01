@@ -31,7 +31,7 @@ Stop asking, re-read everything already decided, and build it now.
 4. For each open point, decide anyway, in one of two ways, and say which you used:
    - **Setting.** Build it so the choice can be changed later: a named configuration value, a constant in one place, a parameter with a sensible default. Never a hardcoded guess buried in the work.
    - **Variants.** State plainly that the point is ambiguous and deliver three to five concrete versions that differ on that point, so the user picks instead of answering a question.
-5. Execute every in-scope action to the finish. Investigate and repair ordinary failures; a failed test starts diagnosis, not a report. When one path blocks, continue every independent path. When delegation shortens the path, parallelise only write-disjoint work and give every worker the same requirement identifiers, base revision, owned paths, allowed actions, forbidden external effects and acceptance evidence; keep verification independent from implementation.
+5. Before building each piece, turn its goal into a check that can fail: a bug gets a reproduction that fails first and passes after the fix, a feature gets the test or observable result that proves it. Then execute every in-scope action to the finish. Investigate and repair ordinary failures; a failed test starts diagnosis, not a report. When one path blocks, continue every independent path. When delegation shortens the path, parallelise only write-disjoint work and give every worker the same requirement identifiers, base revision, owned paths, allowed actions, forbidden external effects and acceptance evidence; keep verification independent from implementation.
 6. Verify the real outcome yourself, as the user would use it, before reporting. A result you have not exercised is not finished.
 7. Report once, at the end: what now works, which open points became settings or variants, and only the gates the user genuinely holds (an irreversible external action, missing credentials). Never ask the user to repeat an approval as a confirmation word, and never hand back a list of things still undone.
 
@@ -44,6 +44,7 @@ The complete requested outcome exists, has been exercised rather than assumed, e
 **Definition of done** — Fix what finished means before starting, so completion is a checked condition rather than a feeling. Source: Scrum practice, Schwaber and Sutherland
 **Reversibility decides authority** — Decide every reversible point yourself; a decision made as a setting costs nothing to change, while a question costs the user a turn. Source: Jeff Bezos, Amazon shareholder letter, 2015
 **Never fabricate to keep moving** — Invent no credential, no data, no approval, and no success; a blocked path is routed around, never simulated. Source: standing rule in this library
+**Goal-driven execution** — A goal stated as a check that can fail lets the work loop to completion on its own; "make it work" cannot be verified and invites another question. Source: Andrej Karpathy, post on LLM coding failures, 2026, via the karpathy-guidelines CLAUDE.md
 **Recognition over recall** — Show three to five concrete versions to pick from rather than asking the user to compose an answer. Source: Jakob Nielsen, usability heuristics, 1994
 
 ## Counter-case
@@ -58,4 +59,4 @@ The working outcome and its verification. The list of open points turned into se
 
 ## Sources
 
-Schwaber and Sutherland, Scrum Guide, definition of done. Bezos 2015, Amazon shareholder letter. Nielsen 1994, Ten Usability Heuristics.
+Karpathy 2026, post on LLM coding failures (x.com/karpathy/status/2015883857489522876), as paraphrased in multica-ai/andrej-karpathy-skills. Schwaber and Sutherland, Scrum Guide, definition of done. Bezos 2015, Amazon shareholder letter. Nielsen 1994, Ten Usability Heuristics.

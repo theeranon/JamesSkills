@@ -31,7 +31,7 @@ Establish the requested surface and choose checks that could reveal a material d
 
 1. **Integrity.** For stateful flows, exercise sequential use: navigate away and back, act twice, act while loading, act after failure. Trace how each transition preserves its invariant through explicit state, derived values, framework lifecycle or stateless design. An absent reset statement is not evidence of a defect; establish an incorrect reachable behavior before prescribing a reset.
 2. **Architecture.** Find hardcoded values, secrets, magic numbers, credentials in source, and logic sitting in the wrong layer. Convert missing configuration into an explicit input contract rather than a plausible default. A rollback must preserve the accepted invariant: if reverting would permit invalid writes or duplicate orders, disable the mutation path until the fix is restored rather than calling the bypass a safe rollback; a database transaction alone does not make external side effects atomic. Where the surface accepts outside input, guards data or changes a schema, check authorization, input validation, injection paths and the migration with its rollback.
-3. **Hygiene.** Remove debug output, commented-out blocks, dead branches, unused imports, orphaned variables, and scratch filenames that would be read as intentional by whoever inherits this.
+3. **Hygiene.** Remove debug output, commented-out blocks, dead branches, unused imports, orphaned variables, and scratch filenames that this change introduced or orphaned and that would be read as intentional by whoever inherits this. Pre-existing dead code and style the change did not touch are reported, not removed or reformatted; every line the repair changes traces to a finding inside the surface.
 4. **Interface.** Apply the installed visual and interaction standard rather than restating it here. Report anything that standard forbids and cannot be fixed inside the surface.
 5. **Longevity.** Inspect plausible compatibility and maintenance risks exposed by this change. Distinguish demonstrated defects from uncertain future risks; use names understandable without this conversation.
 
@@ -46,6 +46,7 @@ The requested surface has received the relevant checks, every repairable finding
 **Testing shows presence, not absence** — A passing suite is evidence that known cases work and is never evidence that the omission you are hunting is absent. Source: Edsger W. Dijkstra, Notes on Structured Programming, 1970
 **Swiss cheese model** — Use complementary checks for the risks in scope, because a clean result at one layer cannot establish correctness at another. Source: James Reason, Human Error, 1990
 **Poka-yoke** — When a defect can recur, prefer changing the design so it becomes impossible over adding another check that must be remembered. Source: Shigeo Shingo, Zero Quality Control, 1986
+**Surgical changes** — Touch only what the finding requires and clean up only the mess this change made; an unrelated improvement widens the diff and hides what was actually fixed. Source: Andrej Karpathy, post on LLM coding failures, 2026, via the karpathy-guidelines CLAUDE.md
 **Proof does not transfer across targets** — Bind every result to its repository, revision, environment, account, and route, and treat a result from any other target as absent. Source: uncertain attribution; standing rule in this library
 
 ## Counter-case
@@ -62,4 +63,4 @@ The repaired outcome, checks actually performed, and material unresolved finding
 
 ## Sources
 
-Dijkstra 1970, Notes on Structured Programming. Reason 1990, Human Error. Shingo 1986, Zero Quality Control: Source Inspection and the Poka-yoke System.
+Dijkstra 1970, Notes on Structured Programming. Karpathy 2026, post on LLM coding failures (x.com/karpathy/status/2015883857489522876), as paraphrased in multica-ai/andrej-karpathy-skills. Reason 1990, Human Error. Shingo 1986, Zero Quality Control: Source Inspection and the Poka-yoke System.

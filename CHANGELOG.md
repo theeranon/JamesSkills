@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.3.1 — 2026-11-01
+
+Two sentences from the Karpathy coding guidelines land where the owner placed them (DEC-054): `done-for-me` step 5 turns each goal into a check that can fail before building (a bug gets a failing reproduction first); `dev-are-you-sure` Hygiene removes only what the change introduced or orphaned and reports pre-existing dead code instead of deleting it. `proactive-habits` is unchanged: its domain-neutral "Discard" rule already covers unrequested adjacent work, and code-specific wording does not belong in a mode used for every kind of work. No new skill; Karpathy's post is registered as a source in both Sources sections.
+
 ## 2.3.0 — 2026-10-31
 
 Retires `final-it` and `proactive-dev` per the owner's DEC-051 statements; routes move to `done-for-me` under `proactive-habits`, the rollback-invariant rule moves into `dev-are-you-sure`. Roster 21 skills. First fresh-context probes of the DEC-051 rewrites recorded in `tests/receipts/dec-051-probes-2026-10-31.md`.
