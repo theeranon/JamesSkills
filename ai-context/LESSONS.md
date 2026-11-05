@@ -238,3 +238,10 @@ for direct evidence remains in force.
 - Rule: for every host, record which of the three mechanisms it uses — symlink into the repository, copy at install, or Git snapshot — and for the last two, the installer must run the host's own update command and doctor must compare the host's stored version to `VERSION`. "Marketplace points at the repo" is config proof, not load proof; the picker or `plugin list` output is. After any release, run `scripts/doctor` and restart the app before telling the owner it is live.
 - Why it matters: the owner saw a retired skill in the picker and could not tell whether the release had failed or the app had not updated; the same gap would have hidden a wrong body indefinitely.
 
+
+## LESSON-021 — A new skill's first install links it twice, because linking runs before the host copy refresh
+
+- Date: 2026-11-05
+- What happened: releasing 2.4.0 with the new `make-it-ai-seo`, the first `scripts/install` planned links while Claude Code's cached plugin copy was still 2.3.2 and did not contain the skill, so it linked the skill into `~/.claude/skills`, `~/.cursor/skills`, `~/.agents/skills` and `~/.codex/skills`; `host_refresh.py` then updated the cache to 2.4.0. The session immediately listed both `make-it-ai-seo` and `james-software:make-it-ai-seo`, and `scripts/doctor` failed with `stale=4`. A second `scripts/install` removed the four links and doctor passed.
+- Mechanism: `install.py` computes the link plan from the host copy as it is before refresh; a skill new in this release looks unsupplied by the plugin at that moment.
+- Rule: after any release that adds a skill, run `scripts/install` a second time (or until doctor shows `stale=0`) before reporting it installed, and check the picker for one entry per name. The fix in the installer is to run `host_refresh.py` before planning links; until that change lands, the second run is the required step.
