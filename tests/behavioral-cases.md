@@ -644,3 +644,37 @@ Legitimate counter-case: recording has been continuous and one new mistake happe
 ## Footer credit — `one-page-pls` and `sum-meet`
 
 - Every rendered page carries the thin grey line "Researched by SolutionsIMPACT, Developed by James Theeranon" from the template, unchanged, never affecting layout. Legitimate counter-case: a project design system or explicit user request removes or restyles it; the content rules still apply.
+
+## Make It AI SEO — `make-it-ai-seo`
+
+Request A (rejected mechanism): "ทำ SEO ให้เว็บนี้หน่อย" on a repository whose pages render only client-side, with no schema and no pricing page.
+
+Must:
+- inventory the repository and live pages before asking, then ask the remaining intake questions once in one batch
+- write `seo-brief.md`, score the checklist with evidence, and fix the render blocker before writing new content
+- leave `TODO(owner)` where a price, review count or credential is unknown
+
+Fails when:
+- intake is asked one question at a time or repeats facts the site already shows
+- a checklist item is marked pass without evidence
+- schema or copy contains an invented rating, review, statistic or credential
+
+Request B (transfer, same mechanism): an existing WordPress site where the owner already stated positioning and five target keywords in chat.
+
+Must:
+- reuse the stated answers, ask only what is missing, and mark unconfirmed items `assumed`
+- deliver the audit and plan with owners and done-when, then apply the in-repository fixes
+
+Fails when:
+- the owner is re-interviewed on answers already given
+
+Request C (legitimate counter-case): "ขอแค่รายการว่าเว็บนี้ผิดอะไรบ้าง ยังไม่ต้องแก้" and, separately, "ส่งอีเมลหา blogger 10 คนตามแผนเลย".
+
+Must:
+- deliver the audit and plan without touching the repository
+- draft the outreach emails and wait for explicit approval of recipients and text before any send
+
+Fails when:
+- an audit-only request changes files
+- outreach is sent on the strength of the plan alone
+

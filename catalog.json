@@ -158,6 +158,13 @@
       "aliases": [
         "project-docs-standard"
       ]
+    },
+    {
+      "name": "make-it-ai-seo",
+      "category": "james-software",
+      "kind": "workflow",
+      "status": "promoted",
+      "aliases": []
     }
   ],
   "packs": [

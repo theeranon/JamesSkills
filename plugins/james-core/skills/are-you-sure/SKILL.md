@@ -3,7 +3,7 @@ name: are-you-sure
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.3.2
+  version: 2.4.0
 description: Re-check a finished plan, document, deck, budget or analysis and repair the real defects found. Use when delivered work is in doubt, as in are you sure, double-check this, ตรวจอีกรอบ, แน่ใจนะ, เช็คให้ชัวร์. Not for code, and not for making good work better.
 ---
 

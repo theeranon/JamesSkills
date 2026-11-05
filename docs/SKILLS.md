@@ -291,6 +291,17 @@ Mode and standard behavior differs from a normal workflow:
   - The interface is defective rather than inconsistent -> `dev-are-you-sure`
 - Canonical instructions: [`plugins/james-software/skills/make-it-james-ux/SKILL.md`](../plugins/james-software/skills/make-it-james-ux/SKILL.md)
 
+### `/make-it-ai-seo`
+
+- Canonical package: `make-it-ai-seo`
+- Category: `james-software`
+- Kind: `workflow`
+- Lifecycle: `promoted`
+- Use when: Make a website rank on Google and get cited by ChatGPT, Perplexity, Gemini and AI Overviews. Ask positioning, brand and target keywords once, audit into a checklist, plan, then fix the site. Use for ทำ SEO, ติด SEO, ออดิตเว็บ, AI SEO, AEO, GEO, ติดคีย์เวิร์ด, ให้ AI รู้จักแบรนด์.
+- Result: `seo-brief.md`, `seo-audit.md` (evidence-backed checklist, top priorities, phased plan) and `seo-changelog.md` in the project, the verified in-repository fixes, and off-site drafts awaiting approval.
+- Do not use when: One shipped change needs verification at its boundary -> `dev-are-you-sure`
+- Canonical instructions: [`plugins/james-software/skills/make-it-ai-seo/SKILL.md`](../plugins/james-software/skills/make-it-ai-seo/SKILL.md)
+
 
 ## Hand over
 

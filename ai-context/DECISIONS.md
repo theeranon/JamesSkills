@@ -567,3 +567,20 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Affects: `scripts/host_refresh.py` (new), `scripts/stamp_version.py` (new), `scripts/install.py`, `scripts/validate`, every canonical `SKILL.md` frontmatter, `README.md`, VERSION and manifests.
 - Evidence: `claude plugin update` reported "updated from 2.2.0 to 2.3.1" for all three plugins and the manifest now points at the 2.3.1 directories at commit a15d18b; `codex plugin list` shows the three plugins at 2.3.1 after `marketplace upgrade`; `host_refresh.py --check` failed with the exact stale versions before refresh. Picker state after restart is not yet observed.
 
+## DEC-056 — Add `make-it-ai-seo` from AI SEO For Dummies (2.4.0)
+
+- Date: 2026-11-05
+- Status: Accepted. Owner request and exact name in chat: "ยัดลง jamesskills ได้ป่ะ make-it-ai-seo", following the same session's original brief to turn the book into a reusable RAG folder or skill that asks the owner's positioning, branding and keywords first, audits a website into a bullet checklist, produces an action plan and then carries it out.
+- Candidate Card (approved by that request):
+  - Name: `make-it-ai-seo` (owner's choice; earlier working name `ai-seo`).
+  - Bounded job: one website's AI-search visibility end to end: brief, audit with evidence, phased plan, in-repository fixes. Off-site actions are drafts only.
+  - Trigger and exclusions: ทำ SEO, ติด SEO, ออดิตเว็บ, AI SEO, AEO, GEO, ติดคีย์เวิร์ด; a single shipped-change dispute goes to `dev-are-you-sure`.
+  - Overlap: no catalog skill owns SEO. The owner's machine also has the third-party `seo-aeo-geo-ultimate` plugin, which can win a bare "ทำ SEO" trigger; `/make-it-ai-seo` is unambiguous.
+  - Source map and confidence: one practitioner book, registered as `gotch-ai-seo-for-dummies-2026` (hash, ISBN, part locators); evidence label practitioner claim, not platform documentation.
+  - Representative and failure cases: `tests/behavioral-cases.md` section Make It AI SEO; benchmark card 24 (card-only).
+  - Lifecycle: promoted, because the owner named it and asked for it to be in the library.
+- Why a workflow and not a lens: AGENTS.md says a book is a source before it is a lens. The job here is building and fixing websites, which `baseon` (report-only lens) cannot do; the book supplies the knowledge under `references/`.
+- Rights: the PDF stays outside Git. `references/knowledge/` is original paraphrase written chapter by chapter; a 10-word shingle check against the extracted text found only list items and table headers repeated, no prose.
+- Affects: new `plugins/james-software/skills/make-it-ai-seo/` (SKILL.md, references, scripts), `plugins/james-software/commands/make-it-ai-seo.md`, `catalog.json`, knowledge `registry.json` and source card, `docs/SKILLS.md`, `docs/skill-benchmark-cards.md`, `tests/behavioral-cases.md`, `tests/benchmarks/manifest.json`, roster-count tests, README, VERSION and manifests.
+- Evidence: `scripts/validate` passes. No behavioral probe or live-site run yet.
+

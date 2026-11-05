@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "id": "gotch-ai-seo-for-dummies-2026",
+  "title": "AI SEO For Dummies",
+  "creator": "Nathan Gotch",
+  "edition_or_version": "John Wiley & Sons, 2026, ISBN 978-1-394-41898-5 (pbk), 451-page PDF edition",
+  "source_type": "primary-book",
+  "status": "reviewed-private",
+  "source_access": "external-local",
+  "provenance": "Owner-supplied local PDF read in full on 2026-11-05 and distilled chapter by chapter into make-it-ai-seo references. The PDF is not stored in the repository.",
+  "reference_urls": [],
+  "acquired_at": "2026-11-05",
+  "rights_status": "in copyright, John Wiley & Sons",
+  "rights_basis": "citation_and_original_paraphrase_only",
+  "raw_source_in_repo": false,
+  "content_sha256": "f17f7db0b1f482e032d69a19d40e0df08e86d618cab0d9e2fa292051a416c72b",
+  "evidence_label": "practitioner claim",
+  "locators": [
+    {
+      "id": "part1",
+      "location": "Part 1, Chapters 1 to 4",
+      "scope": "What AI SEO is, how retrieval and citation work, the first 30 days, vocabulary"
+    },
+    {
+      "id": "part2",
+      "location": "Part 2, Chapters 5 to 8",
+      "scope": "Prompt protocols, coverage/position/share of voice, GA4 and Looker Studio dashboard, citation gap analysis, experiments"
+    },
+    {
+      "id": "part3",
+      "location": "Part 3, Chapters 9 to 15",
+      "scope": "Topic plan, AI-readiness crawl, foundations (HTML, architecture, schema, fact hubs), bottom-of-funnel pages, topical authority, underperformers, media"
+    },
+    {
+      "id": "part4",
+      "location": "Part 4, Chapters 16 to 21",
+      "scope": "Identity, reputation and authority signals, profiles, topic ownership, reviews, links and mentions, governance"
+    },
+    {
+      "id": "part5",
+      "location": "Part 5, Chapters 22 to 23",
+      "scope": "Ten myths, ten creative techniques"
+    }
+  ],
+  "scope": [
+    "AI search visibility audit",
+    "Google plus generative-engine optimization",
+    "content and site structure for retrieval and citation",
+    "off-site credibility signals"
+  ],
+  "not_for_use": [
+    "ranking or citation guarantees",
+    "reproduction of its text, tables or figures",
+    "platform-behavior claims without current verification"
+  ],
+  "isbn": "978-1-394-41898-5"
+}

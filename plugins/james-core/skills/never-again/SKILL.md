@@ -3,7 +3,7 @@ name: never-again
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.3.2
+  version: 2.4.0
 description: Wake-up call when the agent stopped recording and starts forgetting: write the missed lessons, decisions and context into ai-context and push, then keep recording every insight, decision, skill change and version unasked. Use for never again, จำไว้เลย, อย่าให้เกิดอีก, ลืมอีกแล้ว, อย่าเป็นคนขยันแต่โง่.
 ---
 

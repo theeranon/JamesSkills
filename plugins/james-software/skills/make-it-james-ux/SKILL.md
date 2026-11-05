@@ -3,7 +3,7 @@ name: make-it-james-ux
 license: CC-BY-NC-4.0
 metadata:
   kind: shared-standard
-  version: 2.3.2
+  version: 2.4.0
 description: No slop in UX, UI and web app design, as principles a user or project design system may override. UX: real flow of every user group, fewer steps, no needless modal, left to right, top to bottom, exact grid. UI: locked type and radius, no accent border, nothing jumps, fixed heights. Use for UI รก, จัดหน้าให้เป๊ะ.
 ---
 

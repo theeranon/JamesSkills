@@ -105,6 +105,11 @@
       "canonical": "plugins/james-software/skills/project-standard/SKILL.md",
       "card": "docs/skill-benchmark-cards.md",
       "state": "public-development"
+    },
+    "make-it-ai-seo": {
+      "canonical": "plugins/james-software/skills/make-it-ai-seo/SKILL.md",
+      "card": "docs/skill-benchmark-cards.md",
+      "state": "card-only"
     }
   }
 }

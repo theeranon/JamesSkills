@@ -3,7 +3,7 @@ name: give-me-solutions
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.3.2
+  version: 2.4.0
 description: When the user is out of ideas, do the homework: understand the real problem and goal, then show the ways forward in one table on one axis with one vocabulary, enum-like values, and risk, time, cost and quality now and long term, so deciding is easy but stays theirs. Use for มีทางเลือกอะไรบ้าง, ตัวไหนดีสุด, เทียบให้ที.
 ---
 

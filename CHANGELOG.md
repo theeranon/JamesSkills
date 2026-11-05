@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.0 — 2026-11-05
+
+New promoted workflow `make-it-ai-seo` in `james-software`, named and requested by the owner (DEC-056): asks positioning, branding and target keywords once, audits a website for Google and AI-answer visibility into an evidence-backed checklist (320 items, 13 areas), writes a phased action plan and applies the in-repository fixes; off-site work stays as drafts. Knowledge base: 24 chapter files of original paraphrase from Nathan Gotch, AI SEO For Dummies (2026), with an offline BM25 search script; the book is registered as source `gotch-ai-seo-for-dummies-2026` and the original stays outside Git. Roster 22 skills, 7 aliases. Structural validation only; no behavioral probe.
+
 ## 2.3.2 — 2026-11-01
 
 Every canonical `SKILL.md` now carries `metadata.version`, stamped from `VERSION` by `scripts/stamp_version.py` and checked by `scripts/validate`, so a loaded skill says which release it is. `scripts/host_refresh.py` refreshes the copies hosts keep for themselves (Claude Code's plugin cache through the Desktop-bundled CLI, Codex's marketplace snapshot through its bundled CLI); `scripts/install` runs it and `scripts/doctor` fails while either copy is behind `VERSION`. README no longer claims a local-path marketplace loads in place (DEC-055, LESSON-020).

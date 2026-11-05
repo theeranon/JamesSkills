@@ -23,7 +23,7 @@ Canonical workflows and prompts for AI collaboration. Designed for Claude, ChatG
 ---
 
 
-## 🏛️ Architecture: 3 Pillars, 21 Skills
+## 🏛️ Architecture: 3 Pillars, 22 Skills
 
 The library ships as three Claude Code plugins, one per pillar. Each pillar owns one responsibility; no skill crosses pillar lines.
 
@@ -39,7 +39,7 @@ graph TD
 
 **📊 `james-productivity`** thinks before it builds. It sharpens a vague requirement (`grill-me`), reframes a problem at the system level (`zoom-out`), applies a registered knowledge lens (`baseon`), settles an open question against outside evidence combined with a candidate comparison (`give-me-solutions`), coaches a person through their own stuck point (`coach-me`), and produces the two recipient-facing formats this library ships (`sum-meet`, `one-page-pls`).
 
-**💻 `james-software`** is engineering-specific: sweeps delivered code across five layers and the deployment boundary (`dev-are-you-sure`), recovers verified project state after a gap (`catchup`), keeps one project contract instead of scattered chat history (`project-standard`), and enforces the visual and interaction law every rendered surface follows (`make-it-james-ux`).
+**💻 `james-software`** is engineering-specific: sweeps delivered code across five layers and the deployment boundary (`dev-are-you-sure`), recovers verified project state after a gap (`catchup`), keeps one project contract instead of scattered chat history (`project-standard`), enforces the visual and interaction law every rendered surface follows (`make-it-james-ux`), and audits a website for Google and AI-answer visibility, then fixes it (`make-it-ai-seo`).
 
 Every skill in every pillar satisfies one structural contract, [`docs/SKILL-SCHEMA.md`](docs/SKILL-SCHEMA.md), enforced on every commit: what it owns, what it may change, the sibling that owns each case it refuses, when it stops, and the named principles it operates on.
 
@@ -546,6 +546,11 @@ CTA: เริ่มเลย<br><br>
 
 <p align="center"><img src="assets/make-it-james-ux-preview.png" width="100%" alt="make-it-james-ux UI Preview" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1px solid #313244;"></p>
 
+
+<br>
+
+#### ⚡️ `/make-it-ai-seo`
+*ทำเว็บให้ติด Google และถูก ChatGPT, Perplexity, Gemini, AI Overviews อ้างถึง: ถาม positioning, branding และคีย์เวิร์ดครั้งเดียว ออดิตเป็นเช็กลิสต์ 320 ข้อพร้อมหลักฐาน วางแผนตามลำดับความสำคัญ แล้วแก้ในโค้ดให้เลย Knowledge base distilled from Nathan Gotch, AI SEO For Dummies (2026), searchable offline with `scripts/search.py`.*
 
 <br>
 

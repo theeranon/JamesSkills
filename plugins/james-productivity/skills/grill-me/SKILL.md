@@ -3,7 +3,7 @@ name: grill-me
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.3.2
+  version: 2.4.0
 description: Interview the user one question at a time until their own goal and requirement are sharp, then proceed. Use before building, as in grill me, ask me questions first, ถามให้เคลียร์ก่อน, ซักมาเลย, ยังคิดไม่ตก. Not to coach the person and not to research the answer.
 ---
 

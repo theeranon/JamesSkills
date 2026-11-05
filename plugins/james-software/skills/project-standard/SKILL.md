@@ -3,7 +3,7 @@ name: project-standard
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.3.2
+  version: 2.4.0
 description: Create or repair one vendor-neutral project contract so any agent or person can work without prior chat, stamped with its standard version. Use for set up project docs, AGENTS.md, context files, วางมาตรฐานโปรเจกต์, เอกสารโปรเจกต์มั่ว. Not for routine edits that change nothing durable.
 ---
 
