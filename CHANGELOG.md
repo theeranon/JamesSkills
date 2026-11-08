@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.1 — 2026-11-08
+
+`make-it-james-ux` adds the owner's icon rule (DEC-057): an icon must be creative, unique and on point, drawn for the work under one idea that carries meaning, or left out. Standard controls keep the project's icon system. Structural validation only; no behavioral probe.
+
 ## 2.4.0 — 2026-11-05
 
 New promoted workflow `make-it-ai-seo` in `james-software`, named and requested by the owner (DEC-056): asks positioning, branding and target keywords once, audits a website for Google and AI-answer visibility into an evidence-backed checklist (320 items, 13 areas), writes a phased action plan and applies the in-repository fixes; off-site work stays as drafts. Knowledge base: 24 chapter files of original paraphrase from Nathan Gotch, AI SEO For Dummies (2026), with an offline BM25 search script; the book is registered as source `gotch-ai-seo-for-dummies-2026` and the original stays outside Git. Roster 22 skills, 7 aliases. Structural validation only; no behavioral probe.

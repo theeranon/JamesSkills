@@ -3,7 +3,7 @@ name: make-it-james-ux
 license: CC-BY-NC-4.0
 metadata:
   kind: shared-standard
-  version: 2.4.0
+  version: 2.4.1
 description: No slop in UX, UI and web app design, as principles a user or project design system may override. UX: real flow of every user group, fewer steps, no needless modal, left to right, top to bottom, exact grid. UI: locked type and radius, no accent border, nothing jumps, fixed heights. Use for UI รก, จัดหน้าให้เป๊ะ.
 ---
 
@@ -42,6 +42,7 @@ These are principles, not fixed values: an explicit user design decision wins, t
 - Exact grid: every edge on a grid line; siblings share baseline, width, height and gap; numbers align so digits compare; no orphan element, no uneven last row, nothing off by a pixel.
 - Nothing jumps: changing page keeps the navigation and layout in place; expanding or collapsing anything moves nothing else; cards, rows and table rows keep fixed heights and never stretch with content, so choose what to show or truncate with an explicit control.
 - No nested designs: no modal inside a modal, no table inside a table, no card inside a card.
+- Icons must be creative, unique and on point. Each one says the specific meaning of its item and could not move to another item or project unchanged. Draw the set for the work under one idea that carries meaning, and size it to the adjoining type. A stock glyph, a sparkle, or an icon decorating a tile or circle fails; when no icon clears this bar, use none.
 - Design desktop and mobile both; never ship one locked page width and call it responsive, unless the user explicitly asks for a fixed width.
 - Interface copy carries no production residue: no meta copy, no progress narration, no machine-authorship label, no placeholder shipped as content. Supplied labels and facts are the content budget; invent nothing to fill a layout.
 
@@ -69,6 +70,7 @@ On Windows invoke the same helper with `python` when `python3` is not on PATH.
 - A project uses Material Design with 4px radii, its own typeface and a brand colour. None of the house defaults apply; following the existing system is the standard, not an exception to it.
 - A project is written in Arabic or another right-to-left language. Sequence runs in that language's reading direction; the rule is reading order, not the left edge.
 - One button overlaps its neighbour in an accepted flow. Confirm the step it belongs to, fix the alignment and verify it; no strategy pass is required.
+- A toolbar needs search, close and menu controls in a product that already uses Lucide. Recognition is the job of a control, so the project's icon system is correct and nothing is drawn for it.
 - A page legitimately displays the phrase "AI generated" as the subject of a data label. The banned pattern is the content here, so it stays.
 
 ## Hand back

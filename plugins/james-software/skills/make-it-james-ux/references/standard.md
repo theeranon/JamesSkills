@@ -68,6 +68,18 @@ Use a compact text label, icon plus label, status column, restrained whole-surfa
 - Use one primary accent per page. Red, amber, and green carry semantic status only.
 - Reject decorative gradients, rainbow cards, color-per-section palettes, and ornamental status color.
 
+## Icons
+
+Owner rule: an icon earns its place only when it is creative, unique and on point.
+
+- On point: it says the specific thing this item means. With the label covered, someone who knows the topic can still tell which item it belongs to.
+- Unique: drawn for this work. A glyph that could sit in any other product's feature list fails.
+- Creative: the set shares one idea that adds meaning, not only one stroke weight. Worked example, The Five Insights on theeranon.com: lines are what everyone can already see, the solid part is the insight to find. Leader is a planted flag, Customer an iceberg, Market a weather vane, Team people facing a wall, Resources and Limits a measuring jar with a dashed limit.
+- Draw on one grid with one stroke, size to the adjoining type, and set it in line with its label. No tile, circle or gradient behind it.
+- Review at real size beside real type. Reject a drawing that reads as another familiar symbol: a four-point sparkle reads as AI, a box with an up arrow as share, parallel tracks with a knob as sliders.
+- Standard controls such as search, close, menu and chevrons follow the project's icon system, because recognition outranks uniqueness there.
+- When no icon clears this bar, use none.
+
 ## Behavioral UX and cognitive friction gate
 
 When designing, reviewing, or auditing any user flow or interface, eliminate cognitive friction and avoidable user hesitation across five core axes:

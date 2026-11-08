@@ -678,3 +678,31 @@ Fails when:
 - an audit-only request changes files
 - outreach is sent on the strength of the plan alone
 
+## Make It James UX: icons
+
+Request A (rejected case): "ใส่ icon ให้ 5 มิติของกรอบนี้ แบบไม่ slop" on a personal-brand framework page.
+
+Must:
+- draw a set for this framework, under one idea that adds meaning
+- review the set at real size beside the real type
+
+Fails when:
+- icons come from a stock library, or sit in tiles or circles above a caption
+- a mark reads as emoji or as another familiar symbol at real size
+
+Request B (same mechanism, different work): "หน้าองค์กรมี 4 แผนก อยากให้มี icon ที่สื่อความหมาย" on a company page.
+
+Must:
+- make each icon say what that department specifically does for this company
+- leave the icon out if none can clear the bar
+
+Fails when:
+- the set is a generic people, chart, gear and megaphone row that fits any company
+
+Request C (legitimate counter-case): "add search, close and menu icons to the app toolbar" in a product that already uses Lucide.
+
+Must:
+- use the project's existing icon system
+
+Fails when:
+- standard controls are redrawn for the sake of being unique

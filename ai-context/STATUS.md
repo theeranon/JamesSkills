@@ -1,9 +1,9 @@
 # Status
 
-Last verified: 2026-11-05
+Last verified: 2026-11-08
 Authority: `ai-context/PROJECT.md`
 Spec lock: Open
-Current version: 2.4.0 (Claude Code on this machine serves a cached copy of each plugin and Codex a Git snapshot; `scripts/install` refreshes both through the bundled CLIs and `scripts/doctor` fails while either is behind VERSION; Antigravity reads symlinks; see DEC-055)
+Current version: 2.4.1 (Claude Code on this machine serves a cached copy of each plugin and Codex a Git snapshot; `scripts/install` refreshes both through the bundled CLIs and `scripts/doctor` fails while either is behind VERSION; Antigravity reads symlinks; see DEC-055)
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 

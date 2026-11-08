@@ -584,3 +584,10 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Affects: new `plugins/james-software/skills/make-it-ai-seo/` (SKILL.md, references, scripts), `plugins/james-software/commands/make-it-ai-seo.md`, `catalog.json`, knowledge `registry.json` and source card, `docs/SKILLS.md`, `docs/skill-benchmark-cards.md`, `tests/behavioral-cases.md`, `tests/benchmarks/manifest.json`, roster-count tests, README, VERSION and manifests.
 - Evidence: `scripts/validate` passes. No behavioral probe or live-site run yet.
 
+## DEC-057 — Icons must be creative, unique and on point (2.4.1)
+
+- Date: 2026-11-08
+- Status: Accepted. Owner instruction in chat after seeing the Five Insights icons on theeranon.com: "กุชอบ icon มากมึงเอ๊ย love ยัดลงกฏที creative + unique + ตรงประเด็น จดไว้".
+- Decision: `make-it-james-ux` gains one icon rule in its UI section, with the detail and a worked example in `references/standard.md`. It applies under the existing order of authority, so a project icon system still wins for standard controls.
+- Evidence: on the same page the owner rejected a cartoon hand mark, small hand icons that read as emoji, and an icon-and-caption grid, then approved a hand-drawn set built on one idea (lines are visible, solid is the insight).
+- Regressions: `tests/behavioral-cases.md`, section Make It James UX: icons. Structural validation only; no behavioral probe.
