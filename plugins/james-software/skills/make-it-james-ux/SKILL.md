@@ -3,8 +3,8 @@ name: make-it-james-ux
 license: CC-BY-NC-4.0
 metadata:
   kind: shared-standard
-  version: 2.4.1
-description: No slop in UX, UI and web app design, as principles a user or project design system may override. UX: real flow of every user group, fewer steps, no needless modal, left to right, top to bottom, exact grid. UI: locked type and radius, no accent border, nothing jumps, fixed heights. Use for UI รก, จัดหน้าให้เป๊ะ.
+  version: 2.4.2
+description: No slop in UX, UI and web app design, as principles a user or project design system may override. UX: real flow of every user group, fewer steps, no needless modal, left to right, top to bottom, exact grid. UI: locked type and radius, no accent border, nothing jumps, holds at 130% text. Use for UI รก, จัดหน้าให้เป๊ะ.
 ---
 
 # Make It James UX
@@ -28,19 +28,22 @@ Design the real flow first, then a grid nothing jumps on; follow the project's s
 These are principles, not fixed values: an explicit user design decision wins, then a project design system found in the repository or brief, then the defaults here. Read [references/standard.md](references/standard.md) for the detail behind each rule and the defaults.
 
 **UX: experience of use, checked by eye.**
-- Start from the real flow of every user group of this system: who they are, what brings them to this screen, the exact steps from arrival to done, and the one outcome that means it worked. Every screen, section and control maps to a step; what serves no step is removed or demoted. Cover empty, loading, error and returning states.
+- Start from the real flow of every user group of this system: who they are, what brings them to this screen, the exact steps from arrival to done, and the one outcome that means it worked. Every screen, section and control maps to a step; what serves no step is removed or demoted. Cover empty, loading, error and returning states, and the twin of every create flow: the person who already exists sees what is stored, files included, and confirms or corrects it instead of skipping ahead. An empty state tells the truth: never yet differs from all done.
 - Don't make me think: fewer steps, the next action obvious, labels that say what happens. Defer nonessential questions; keep required inputs at the point of use.
-- No popup or modal unless the task truly needs interruption; no nesting of anything inside a modal.
+- No popup or modal unless the task truly needs interruption. The one allowed stack: the confirmation of an irreversible action may open on top of the window it confirms; nothing else nests inside a modal.
+- Nothing a person typed is ever lost: not on a refusal, an expired link or session, or a back press. A link or session lives longer than the real time to fill its form. After a success the form clears, so a second press cannot repeat the action.
+- A press is never silent: a refused action says why inside the window that is open, and a control that cannot act is visibly disabled with its reason.
 - Reading order is left to right, top to bottom: what the user needs first sits top-left, steps appear in the order performed, overview above detail, label before value, the same relationship placed the same way everywhere. A layout that needs an arrow to explain its order is in the wrong order.
 - Choose the component that fits what is shown: a table for comparable rows, a card for one thing, a list for a sequence, never a table inside a table.
 - Compact and consistent: low padding, one spacing scale, equal things exactly equal.
-- Verify by walking the rendered result as each user group, in order, at every size it will be seen.
+- Verify by walking the rendered result as each user group, in order, at every size it will be seen. Three proofs close a screen: renders at 1440, 390 and 390 with text at 130%; every state-changing control pressed as its real role; and, when people arrive from LINE, Facebook or Instagram, one pass on a real phone inside that app's browser, which hides 4xx pages behind its own error screen and blocks print and new windows.
 
 **UI: front-end discipline that never ships slop.**
 - Lock the type scale, font weights and border radius once per artifact and never vary them by eye. Default when nothing is specified and the project has no system: white, clean, minimal; `IBM Plex Sans Thai` for Thai, Latin and numerals, no weight heavier than semi-bold; body line-height between 1.35 and 1.45; a 6px radius on rectangular surfaces.
 - Never attach a thick or coloured accent border or vertical stripe to the left edge of a card, panel, alert or list item.
 - Exact grid: every edge on a grid line; siblings share baseline, width, height and gap; numbers align so digits compare; no orphan element, no uneven last row, nothing off by a pixel.
-- Nothing jumps: changing page keeps the navigation and layout in place; expanding or collapsing anything moves nothing else; cards, rows and table rows keep fixed heights and never stretch with content, so choose what to show or truncate with an explicit control.
+- Nothing jumps: changing page keeps the navigation and layout in place; expanding or collapsing anything moves nothing else; equal rows stay equal in height. Heights are set for the largest text size people use, never so tight that text at 130% is cut.
+- A label never repeats its row or section name and is never cut to an ellipsis: a long label wraps to a second line. One date format across the whole product, taken from the project system.
 - No nested designs: no modal inside a modal, no table inside a table, no card inside a card.
 - Icons must be creative, unique and on point. Each one says the specific meaning of its item and could not move to another item or project unchanged. Draw the set for the work under one idea that carries meaning, and size it to the adjoining type. A stock glyph, a sparkle, or an icon decorating a tile or circle fails; when no icon clears this bar, use none.
 - Design desktop and mobile both; never ship one locked page width and call it responsive, unless the user explicitly asks for a fixed width.

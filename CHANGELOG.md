@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.2 — 2026-11-14
+
+`make-it-james-ux` takes the lessons of a week of live ERP bugs (owner 2026-11-14 "แก้เลย"): every create flow has its existing-record twin that shows what is stored, files included; nothing typed is lost on a refusal, an expired link or a back press, and links outlive the form; a press is never silent; the form clears after success; empty states tell never-yet from all-done; labels wrap instead of cutting and never repeat their row; heights hold text at 130%; one date format. Loosened: "fixed heights" becomes equal rows that fit 130% text, and the confirmation of an irreversible action may stack on its own window. Verification is three proofs: renders at 1440, 390 and 390@130%, every state-changing control pressed as its real role, and a real-phone pass inside LINE/Facebook/Instagram when people arrive from there.
+
 ## 2.4.1 — 2026-11-08
 
 `make-it-james-ux` adds the owner's icon rule (DEC-057): an icon must be creative, unique and on point, drawn for the work under one idea that carries meaning, or left out. Standard controls keep the project's icon system. Structural validation only; no behavioral probe.
