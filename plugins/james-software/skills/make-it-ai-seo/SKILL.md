@@ -3,7 +3,7 @@ name: make-it-ai-seo
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.4.2
+  version: 2.4.3
 description: Make a website rank on Google and get cited by ChatGPT, Perplexity, Gemini and AI Overviews. Ask positioning, brand and target keywords once, audit into a checklist, plan, then fix the site. Use for ทำ SEO, ติด SEO, ออดิตเว็บ, AI SEO, AEO, GEO, ติดคีย์เวิร์ด, ให้ AI รู้จักแบรนด์.
 ---
 
@@ -23,10 +23,10 @@ Knowledge lives beside this file. Load only what the current step needs.
 
 | Path | Holds |
 |---|---|
-| `references/knowledge/00-index.md` | Map of 24 distilled chapter files and which question each answers |
+| `references/knowledge/00-index.md` | Map of 25 distilled chapter files and which question each answers |
 | `references/knowledge/chNN-*.md` | Frameworks, steps, Audit checks, Actions, Pitfalls per chapter |
 | `references/checklists/01-intake-questions.md` | Intake questions and the `seo-brief.md` template |
-| `references/checklists/02-master-audit-checklist.md` | 320 audit items in 13 areas (A-M), each tagged with its chapter |
+| `references/checklists/02-master-audit-checklist.md` | 352 audit items in 14 areas (A-N), each tagged with its chapter; area N is the Thai-market readiness pass |
 | `references/checklists/03-action-plan-template.md` | Scoring, report skeleton, action plan, execution rules |
 | `scripts/search.py` | Local BM25 retrieval: `python3 scripts/search.py "<english query>" -k 5` from this skill directory |
 
@@ -61,4 +61,4 @@ The three project files (brief, audit with plan, change log), the verified code 
 
 ## Sources
 
-Nathan Gotch, AI SEO For Dummies, John Wiley & Sons, 2026. Registered as `gotch-ai-seo-for-dummies-2026` in `plugins/james-productivity/packs/knowledge/sources/`. The original stays outside Git; `references/knowledge/` holds original paraphrase organized by chapter.
+Nathan Gotch, AI SEO For Dummies, John Wiley & Sons, 2026. Registered as `gotch-ai-seo-for-dummies-2026` in `plugins/james-productivity/packs/knowledge/sources/`. Siripong Klinkajorn, AI Search Strategy 2027 (The Missing Piece talk deck, Nov 2026), registered as `missing-piece-ai-search-strategy-2027` and distilled as ch24 for the Thai market. Originals stay outside Git; `references/knowledge/` holds original paraphrase organized by chapter.

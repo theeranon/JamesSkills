@@ -5,7 +5,7 @@ tags: [index, map, chapters, overview]
 use_when: First file to read; find which chapter answers a question.
 ---
 
-# AI SEO knowledge index (AI SEO For Dummies, Nathan Gotch — distilled)
+# AI SEO knowledge index (AI SEO For Dummies, Nathan Gotch; ch24 from AI Search Strategy 2027, The Missing Piece — distilled)
 
 Search: `python3 scripts/search.py "<english query>" -k 5` · Section dump: `--section "Audit checks"`
 
@@ -35,6 +35,7 @@ Search: `python3 scripts/search.py "<english query>" -k 5` · Section dump: `--s
 | ch21 | [ch21-governance-risk-compliance.md](ch21-governance-risk-compliance.md) | Reviewing content for legal/ethical risk, setting crawler and AI-use policies, or checking rights to published assets before and during AI SEO work. |
 | ch22 | [ch22-ten-common-ai-seo-myths.md](ch22-ten-common-ai-seo-myths.md) | Evaluating a claim, client belief, or strategy assumption about AI SEO; deciding whether advice is hype or sound. |
 | ch23 | [ch23-ten-creative-ai-seo-techniques.md](ch23-ten-creative-ai-seo-techniques.md) | Looking for advanced on-site and off-site assets that make a brand easier for AI systems to quote, verify, and trust, once technical basics are in place. |
+| ch24 | [ch24-ai-search-strategy-2027-thailand.md](ch24-ai-search-strategy-2027-thailand.md) | Auditing or planning AI-search work for a Thai-market site; deciding which engines and sources matter in Thailand, how many repeated asks a measurement needs, or running the 27-check Discover, Understand, Trust readiness pass. |
 
 ## Sections per chapter
 - **ch00 Introduction** — Core idea · Terminology to keep consistent · What the method promises (and does not) · Reader assumptions (useful when scoping an audit) · Book structure (map for choosing the next file) · Where to start by situation · Audit checks · Actions · Pitfalls · Related
@@ -61,3 +62,4 @@ Search: `python3 scripts/search.py "<english query>" -k 5` · Section dump: `--s
 - **ch21 Playing It Safe: Governance, Risk, and Compliance** — Core idea · Privacy and consent · Defamation and fact/opinion/allegation · Review trigger workflow · YMYL (Your Money or Your Life) standards · Accessibility (also helps machine understanding) · Bias review · Reviewing AI-assisted drafts · Crawler and AI signals · Content rights · Templates & prompts · Audit checks · Actions · Pitfalls · Related
 - **ch22 Ten Common AI SEO Myths** — Core idea · Myth 1: Google is dead · Myth 2: Traditional SEO is dead · Myth 3: AI SEO is just SEO · Myth 4: Blocking AI crawlers is always smart · Myth 5: You can "rank" in ChatGPT · Myth 6: Longer content is better for AI · Myth 7: AI-generated content gets penalized · Myth 8: Your website is the only asset that matters · Myth 9: Backlinks don't matter · Myth 10: One universal strategy works on every platform · Templates & prompts · Audit checks · Actions · Pitfalls · Related
 - **ch23 Ten Creative AI SEO Techniques** — Core idea · 1. Citation-worthy assets · 2. Fact hub · 3. Consensus kit · 4. Refresh assets faster · 5. Public datasets · 6. FAQs sprinkled across the site · 7. Public change log · 8. MCPs and approved context for automation · 9. Trust network · 10. Subject matter expertise · Templates & prompts · Audit checks · Actions · Pitfalls · Related
+- **ch24 AI Search Strategy 2027 for the Thai market (Discover, Understand, Trust)** — Core idea · Thai market facts (source claims, dated) · What AI engines cite in Thailand (tracker study, source claim) · Conference consensus (Chiang Mai SEO 2026, speaker-reported claims) · Strategy 2027 in five steps · Discover: can AI find and read the site? (6 checks) · Understand: can AI lift an answer from the page? (14 checks) · Trust: does AI believe you are who you say? (7 checks) · Audit checks · Actions · Pitfalls

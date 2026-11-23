@@ -32,6 +32,10 @@
     {
       "id": "wealth-spectrum-fullpack-2011",
       "path": "packs/knowledge/sources/wealth-spectrum-fullpack-2011.json"
+    },
+    {
+      "id": "missing-piece-ai-search-strategy-2027",
+      "path": "packs/knowledge/sources/missing-piece-ai-search-strategy-2027.json"
     }
   ],
   "lenses": [

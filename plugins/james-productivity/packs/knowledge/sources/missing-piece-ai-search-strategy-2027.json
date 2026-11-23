@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "missing-piece-ai-search-strategy-2027",
+  "title": "AI Search Strategy 2027: ทำไม AI แนะนำคู่แข่ง แต่ไม่แนะนำคุณ",
+  "creator": "Siripong Klinkajorn (ไอซ์ ศิริพงษ์ กลิ่นขจร), The Missing Piece",
+  "edition_or_version": "Talk deck, November 2026, 79 image-only slides (PDF 'SMEs-IMPACT-1122-AI-Search-Strategy-2027')",
+  "source_type": "practitioner-talk-deck",
+  "status": "reviewed-private",
+  "source_access": "external-local",
+  "provenance": "Owner-supplied local PDF read slide by slide on 2026-11-23 and distilled into make-it-ai-seo references/knowledge/ch24. The PDF is not stored in the repository.",
+  "reference_urls": [
+    "https://themissingpiece.co.th/frameworks/signal-to-strategy-loop/"
+  ],
+  "acquired_at": "2026-11-23",
+  "rights_status": "in copyright, The Missing Piece",
+  "rights_basis": "citation_and_original_paraphrase_only",
+  "raw_source_in_repo": false,
+  "content_sha256": "a32cd2540de13de33ae14871e49e65d56ebea32fafb3e8423193a1e1eecfac71",
+  "evidence_label": "practitioner claim; vendor's own tracker study (The Mention Lab) and speaker-reported conference figures, not independently verified",
+  "locators": [
+    {
+      "id": "situation",
+      "location": "Slides 1-16",
+      "scope": "Thai search and AI chatbot shares, Google AI Mode U.S. insights, journey from search to ask, keyword-ranking-click to prompt-mention-citation"
+    },
+    {
+      "id": "chiang-mai-seo",
+      "location": "Slides 17-24",
+      "scope": "Chiang Mai SEO 2026 consensus: mentions over links, unstable answers, first 50 words, comparison lists, many sources saying the same, make it true then repeated, SEO to revenue, Signal-to-Strategy loop"
+    },
+    {
+      "id": "research",
+      "location": "Slides 25-40",
+      "scope": "Tracker study: Google top-10 overlap per engine, brand-site share, industries, sources per engine, six-week stability, Thai versus foreign sites, first-brand repeat rate"
+    },
+    {
+      "id": "strategy-2027",
+      "location": "Slides 41-57",
+      "scope": "Five steps, Scenario-Topic-Prompt, daily tracking, Discover-Understand-Trust checks (6, 14, 7), Signal-to-Strategy Loop"
+    },
+    {
+      "id": "case-course-giveaways",
+      "location": "Slides 58-79",
+      "scope": "Own-site case over seven weeks, AI team and skills, course offer, free audit and checklist"
+    }
+  ],
+  "scope": [
+    "AI search strategy for the Thai market",
+    "Discover, Understand, Trust site readiness",
+    "measuring AI visibility by repeated sampling",
+    "which sources Thai AI answers cite"
+  ],
+  "not_for_use": [
+    "ranking or citation guarantees",
+    "reproduction of slides, tables or figures",
+    "quoting the tracker figures to clients as independent research without rechecking"
+  ]
+}

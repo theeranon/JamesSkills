@@ -591,3 +591,11 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Decision: `make-it-james-ux` gains one icon rule in its UI section, with the detail and a worked example in `references/standard.md`. It applies under the existing order of authority, so a project icon system still wins for standard controls.
 - Evidence: on the same page the owner rejected a cartoon hand mark, small hand icons that read as emoji, and an icon-and-caption grid, then approved a hand-drawn set built on one idea (lines are visible, solid is the insight).
 - Regressions: `tests/behavioral-cases.md`, section Make It James UX: icons. Structural validation only; no behavioral probe.
+
+## DEC-058 — make-it-ai-seo learns the Thai market from "AI Search Strategy 2027" (2026-11-23)
+
+- **Trigger:** owner, 23 Nov 2026: «เอา mindset ของสิ่งนี้ถอดลง Rag เพิ่มแล้วลองเช็ค และทำเลยให้เว็บ SolutionsIMPACT», with the talk deck PDF.
+- **Decision:** the deck is a source, not a new skill or lens. Its mindset becomes knowledge chapter ch24 of `make-it-ai-seo` (the retrieval base `scripts/search.py` reads), plus master-checklist area N (32 items) generated from the chapter's audit checks. Market and tracker figures are kept as dated source claims with the vendor's self-interest stated.
+- **Not taken:** the founder emphasis on About pages is recorded as a trust check a brand may decline for a company-first identity, because at least one owner project rules out personal branding.
+- **Affects:** `references/knowledge/ch24-ai-search-strategy-2027-thailand.md`, `references/knowledge/00-index.md`, `references/checklists/02-master-audit-checklist.md`, `scripts/build_index.py`, `SKILL.md` (counts, sources), `packs/knowledge/sources/missing-piece-ai-search-strategy-2027.json`, `packs/knowledge/registry.json`, release 2.4.3.
+

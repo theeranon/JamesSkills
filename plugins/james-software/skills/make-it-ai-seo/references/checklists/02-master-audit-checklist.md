@@ -6,7 +6,7 @@ use_when: Step 4 of the workflow — score every item against the real site with
 ---
 
 # Master AI SEO audit checklist
-Total items: 320. Sources: every chapter's `## Audit checks` section (regenerate with scripts/build_index.py).
+Total items: 352. Sources: every chapter's `## Audit checks` section (regenerate with scripts/build_index.py).
 
 
 Score each item ✅ / ⚠️ / ❌ / ❓ with evidence (see 03-action-plan-template.md). Open the source chapter for criteria and fixes. Items marked off-site may need the user's accounts.
@@ -356,3 +356,37 @@ Score each item ✅ / ⚠️ / ❌ / ❓ with evidence (see 03-action-plan-templ
 - [ ] Deliverables contain no guarantee language about rankings, citations or AI mentions. `ch00`
 - [ ] Traditional SEO health (crawl, index, content, links) is assessed alongside AI-specific checks. `ch00`
 - [ ] Findings are tied to evidence (screenshots, dated prompt logs, exports), not opinion. `ch00`
+
+## N. Thai market: Discover, Understand, Trust readiness and repeated measurement
+- [ ] Thai-market plan names Google AI surfaces and Gemini as first targets, with ChatGPT next and every engine covered `ch24`
+- [ ] Questions are built Scenario, Topic, Prompt from one niche and its core customers, and the first scenarios to win are chosen `ch24`
+- [ ] Each tracked question is asked repeatedly on every engine (at least several runs per engine per round) and visibility is reported as a share, never from a single answer `ch24`
+- [ ] Measurement records who is named, which domains are cited, and how AI describes the brand, per engine `ch24`
+- [ ] Discover: robots.txt admits Google, Bing, ChatGPT and Perplexity crawlers `ch24`
+- [ ] Discover: no firewall or CDN rule blocks AI crawlers `ch24`
+- [ ] Discover: H1 and the first sentence are in the raw HTML of every key page `ch24`
+- [ ] Discover: key pages are indexed in Google and Bing `ch24`
+- [ ] Discover: prices, conditions, ordering steps and contact are page text, not images or PDF `ch24`
+- [ ] Discover: key pages answer 200 directly, with no redirect chain and no noindex `ch24`
+- [ ] Understand: each key page states its job (question, audience, next step) in one sentence `ch24`
+- [ ] Understand: page type matches the type AI cites for the question `ch24`
+- [ ] Understand: the first two or three sentences answer the question (most cited text comes from the first 50 words) `ch24`
+- [ ] Understand: every buyer decision criterion is answered on the page `ch24`
+- [ ] Understand: subheadings are real buyer questions `ch24`
+- [ ] Understand: brand and product are named explicitly, without "here" or "this one" `ch24`
+- [ ] Understand: options are compared in a real HTML table `ch24`
+- [ ] Understand: each claim carries its evidence and source beside it `ch24`
+- [ ] Understand: FAQ uses buyers' questions with a first-sentence answer of at most three sentences `ch24`
+- [ ] Understand: facts are correct and consistent across the page `ch24`
+- [ ] Understand: pages show an updated date and current offers `ch24`
+- [ ] Understand: images are captioned or described and videos transcribed `ch24`
+- [ ] Understand: internal links lead to the next decision page `ch24`
+- [ ] Understand: the page holds first-hand data or experience `ch24`
+- [ ] Trust: name, description and category are identical on the site and every profile `ch24`
+- [ ] Trust: About page with matching structured data `ch24`
+- [ ] Trust: the brand is mentioned with the same story in decision sources (lists, media, communities) `ch24`
+- [ ] Trust: PR, social and site tell one story `ch24`
+- [ ] Trust: real reviews on Google, Facebook and, in Thailand, Pantip `ch24`
+- [ ] Trust: YouTube presence (own channel and third-party videos) `ch24`
+- [ ] Trust: verified business profiles match the site `ch24`
+- [ ] Off-site share is planned per industry: the lower the brand-site share in the industry, the more effort goes to media, reviews and social (Facebook first in Thailand) `ch24`

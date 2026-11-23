@@ -22,6 +22,7 @@ AREAS = [
     ("K. Links, mentions & digital PR", ["ch20"]),
     ("L. Governance, risk, crawler policy & compliance", ["ch21"]),
     ("M. Strategy sanity (myths) & vocabulary", ["ch22", "ch04", "ch00"]),
+    ("N. Thai market: Discover, Understand, Trust readiness and repeated measurement", ["ch24"]),
 ]
 
 
@@ -45,7 +46,7 @@ data = {cid: parse(f) for cid, f in files.items()}
 
 idx = ["---", "id: index", "title: Knowledge base index", "tags: [index, map, chapters, overview]",
        "use_when: First file to read; find which chapter answers a question.", "---", "",
-       "# AI SEO knowledge index (AI SEO For Dummies, Nathan Gotch — distilled)", "",
+       "# AI SEO knowledge index (AI SEO For Dummies, Nathan Gotch; ch24 from AI Search Strategy 2027, The Missing Piece — distilled)", "",
        "Search: `python3 scripts/search.py \"<english query>\" -k 5` · Section dump: `--section \"Audit checks\"`", "",
        "| id | file | use when |", "|---|---|---|"]
 for cid, f in files.items():

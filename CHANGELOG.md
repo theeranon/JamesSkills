@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.3 — 2026-11-23
+
+`make-it-ai-seo` gains a Thai-market knowledge chapter, ch24, distilled from the owner-supplied talk deck "AI Search Strategy 2027" (Siripong Klinkajorn, The Missing Piece, Nov 2026; registered as `missing-piece-ai-search-strategy-2027`, original outside Git): Thai search and chatbot shares (Gemini ahead of ChatGPT), which sources each engine cites in Thailand (brand sites 55 of 100 links, Google AI cites social, ChatGPT and Perplexity a third foreign-language), first-named brands repeating only 3 to 6 times in 10, the five-step 2027 strategy with Scenario, Topic, Prompt, and the 27 Discover, Understand, Trust checks. The master checklist adds area N (32 items, 352 in all); `scripts/search.py` retrieves the chapter. Source figures are labelled as the vendor's and speakers' claims.
+
 ## 2.4.2 — 2026-11-14
 
 `make-it-james-ux` takes the lessons of a week of live ERP bugs (owner 2026-11-14 "แก้เลย"): every create flow has its existing-record twin that shows what is stored, files included; nothing typed is lost on a refusal, an expired link or a back press, and links outlive the form; a press is never silent; the form clears after success; empty states tell never-yet from all-done; labels wrap instead of cutting and never repeat their row; heights hold text at 130%; one date format. Loosened: "fixed heights" becomes equal rows that fit 130% text, and the confirmation of an irreversible action may stack on its own window. Verification is three proofs: renders at 1440, 390 and 390@130%, every state-changing control pressed as its real role, and a real-phone pass inside LINE/Facebook/Instagram when people arrive from there.
