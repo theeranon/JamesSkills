@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.4.4 — 2026-11-24
+
+`make-it-ai-seo` ch14 gains field findings from a 328-article WordPress-to-CMS migration: what stood between the H1 and the answer and passed every per-page check (an imported second headline under a pasted head, writing-tool answer labels, FAQ and CTA blocks appended repeatedly by publishing scripts), invented or misquoted figures in AI-written articles and anonymous "client results", old-site aliases still pointing at stand-in pages, generated summaries leaking into feeds and llms.txt, and template schema filters that drop page-level nodes. Seven audit items join area G (359 in all); index rebuilt.
+
 ## 2.4.3 — 2026-11-23
 
 `make-it-ai-seo` gains a Thai-market knowledge chapter, ch24, distilled from the owner-supplied talk deck "AI Search Strategy 2027" (Siripong Klinkajorn, The Missing Piece, Nov 2026; registered as `missing-piece-ai-search-strategy-2027`, original outside Git): Thai search and chatbot shares (Gemini ahead of ChatGPT), which sources each engine cites in Thailand (brand sites 55 of 100 links, Google AI cites social, ChatGPT and Perplexity a third foreign-language), first-named brands repeating only 3 to 6 times in 10, the five-step 2027 strategy with Scenario, Topic, Prompt, and the 27 Discover, Understand, Trust checks. The master checklist adds area N (32 items, 352 in all); `scripts/search.py` retrieves the chapter. Source figures are labelled as the vendor's and speakers' claims.

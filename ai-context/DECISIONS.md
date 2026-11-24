@@ -599,3 +599,9 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - **Not taken:** the founder emphasis on About pages is recorded as a trust check a brand may decline for a company-first identity, because at least one owner project rules out personal branding.
 - **Affects:** `references/knowledge/ch24-ai-search-strategy-2027-thailand.md`, `references/knowledge/00-index.md`, `references/checklists/02-master-audit-checklist.md`, `scripts/build_index.py`, `SKILL.md` (counts, sources), `packs/knowledge/sources/missing-piece-ai-search-strategy-2027.json`, `packs/knowledge/registry.json`, release 2.4.3.
 
+### DEC-059 — make-it-ai-seo 2.4.4: migrated and AI-written article checks (2026-11-24)
+
+- Trigger: the owner's standing rule to record every insight and skill change in Git unasked; found while carrying out «ทำอะไรกับเว็บอีกได้บ้าง ทำเลย» on the SolutionsIMPACT site (its DEC-105).
+- Decision: ch14 gets a field-findings section and seven checks in area G, not a new chapter: the failures are page-quality defects of migrated and AI-written articles, and they generalise beyond one site.
+- Evidence: on the migrated site, 161 of 328 articles printed a second headline, 122 opened with a writing-tool label, 55 repeated blocks up to seven times; of 13 named outside sources in 12 buyer-question articles, 5 held, 4 were misquoted and 4 untraceable; 459 consulting anchors reached the training page through a stand-in alias.
+- Affects: `plugins/james-software/skills/make-it-ai-seo/references/knowledge/ch14-fixing-underperformers.md`, the rebuilt index and master checklist, SKILL.md count, VERSION and manifests.

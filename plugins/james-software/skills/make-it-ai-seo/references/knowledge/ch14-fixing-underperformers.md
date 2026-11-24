@@ -41,6 +41,16 @@ use_when: A page gets impressions but few clicks, ranks on page 2, does not conv
 - Isolated page: lacks internal links, hubs, FAQ, comparison, proof or cluster support. Sometimes needs backup, not a rewrite.
 - Post-click failure: unclear offer, weak next step, no hesitation reduction, insufficient proof.
 
+## Migrated and AI-written articles (field findings, Nov 2026)
+Extension, not from the book: what a read of every body in a 328-article WordPress-to-CMS migration found standing between the H1 and the answer, and in the figures. Each was invisible to per-page SEO checks (one H1 in the template, title present, schema valid).
+- Second headline: the imported body opens with its own `<h1>`, often a different wording of the page title, under empty paragraphs, `<br>` runs and a pasted `<title>`; the template prints the real H1 above it. Fix at render: drop the copy and the gap, keep containers, so the first text under the H1 is the answer.
+- Writing-tool labels: answers that start with "Direct answer:", "Short answer:" or the local-language equivalent. The answer itself should be the first sentence engines quote.
+- Script-appended blocks: the same FAQ section, CTA box or company FAQ pasted onto many articles, sometimes several times per page by repeated runs. Show each block once; a company FAQ pasted on unrelated articles is duplicate boilerplate.
+- Invented evidence: AI-written articles cite named sources for figures those sources never published, misquote real reports, add exact percentages with no source, or describe unnamed "client results". Check every figure against its named source; keep it only with the year it was measured; remove misquoted, untraceable or unsourced numbers rather than rewording them; never let anonymous examples read as the brand's own cases.
+- Stand-in aliases: an old-site redirect kept at cutover can point at a substitute page (a missing consulting page redirected to training), so hundreds of in-article anchors land on the wrong page. Recheck aliases and the anchors that use them once the real page exists.
+- Generated summaries leaking: lists, RSS, llms.txt and Blog schema reading a generated summary field while the page uses the editor's search description.
+- Schema filters: a template-level filter meant for one view can strip page-level nodes the builder returned; verify the served HTML.
+
 ## Diagnosis-to-fix map
 - Intent wrong -> change page type, angle or target query.
 - Basics weak -> fix keyword placement, headings, structure.
@@ -82,6 +92,13 @@ use_when: A page gets impressions but few clicks, ranks on page 2, does not conv
 - [ ] Changes are logged with date, reason and expected result.
 - [ ] Success metric and review window were set before editing.
 - [ ] Only one main fix was changed per test cycle where feasible.
+- [ ] Imported bodies do not print a second headline (inner H1, pasted `<title>`, empty paragraphs) between the page H1 and the answer.
+- [ ] No writing-tool labels ("Direct answer:", "Short answer:") precede the answer.
+- [ ] Each block appears once per page; no company FAQ or CTA pasted across unrelated articles.
+- [ ] Every figure credited to a named source appears in that source, with its year; untraceable, misquoted or unsourced figures are removed, and anonymous examples never read as the brand's cases.
+- [ ] Old-URL aliases and the anchors that use them lead to the page their words name, not a stand-in kept from the old site.
+- [ ] Lists, feeds, llms.txt and Blog schema use the editor's search description, not a generated summary.
+- [ ] Structured data is checked in the served HTML, after every template filter.
 
 ## Actions
 - Pull a priority list from Search Console (high impressions/low CTR, positions 8-20). [Quick win]

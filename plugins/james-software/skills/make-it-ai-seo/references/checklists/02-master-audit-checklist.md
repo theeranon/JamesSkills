@@ -6,7 +6,7 @@ use_when: Step 4 of the workflow — score every item against the real site with
 ---
 
 # Master AI SEO audit checklist
-Total items: 352. Sources: every chapter's `## Audit checks` section (regenerate with scripts/build_index.py).
+Total items: 359. Sources: every chapter's `## Audit checks` section (regenerate with scripts/build_index.py).
 
 
 Score each item ✅ / ⚠️ / ❌ / ❓ with evidence (see 03-action-plan-template.md). Open the source chapter for criteria and fixes. Items marked off-site may need the user's accounts.
@@ -223,6 +223,13 @@ Score each item ✅ / ⚠️ / ❌ / ❓ with evidence (see 03-action-plan-templ
 - [ ] Changes are logged with date, reason and expected result. `ch14`
 - [ ] Success metric and review window were set before editing. `ch14`
 - [ ] Only one main fix was changed per test cycle where feasible. `ch14`
+- [ ] Imported bodies do not print a second headline (inner H1, pasted `<title>`, empty paragraphs) between the page H1 and the answer. `ch14`
+- [ ] No writing-tool labels ("Direct answer:", "Short answer:") precede the answer. `ch14`
+- [ ] Each block appears once per page; no company FAQ or CTA pasted across unrelated articles. `ch14`
+- [ ] Every figure credited to a named source appears in that source, with its year; untraceable, misquoted or unsourced figures are removed, and anonymous examples never read as the brand's cases. `ch14`
+- [ ] Old-URL aliases and the anchors that use them lead to the page their words name, not a stand-in kept from the old site. `ch14`
+- [ ] Lists, feeds, llms.txt and Blog schema use the editor's search description, not a generated summary. `ch14`
+- [ ] Structured data is checked in the served HTML, after every template filter. `ch14`
 
 ## H. Media, schema, datasets & creative assets
 - [ ] Every meaningful image has descriptive, non-stuffed alt text. `ch15`

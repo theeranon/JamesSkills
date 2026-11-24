@@ -3,7 +3,7 @@ name: make-it-ai-seo
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.4.3
+  version: 2.4.4
 description: Make a website rank on Google and get cited by ChatGPT, Perplexity, Gemini and AI Overviews. Ask positioning, brand and target keywords once, audit into a checklist, plan, then fix the site. Use for ทำ SEO, ติด SEO, ออดิตเว็บ, AI SEO, AEO, GEO, ติดคีย์เวิร์ด, ให้ AI รู้จักแบรนด์.
 ---
 
@@ -26,7 +26,7 @@ Knowledge lives beside this file. Load only what the current step needs.
 | `references/knowledge/00-index.md` | Map of 25 distilled chapter files and which question each answers |
 | `references/knowledge/chNN-*.md` | Frameworks, steps, Audit checks, Actions, Pitfalls per chapter |
 | `references/checklists/01-intake-questions.md` | Intake questions and the `seo-brief.md` template |
-| `references/checklists/02-master-audit-checklist.md` | 352 audit items in 14 areas (A-N), each tagged with its chapter; area N is the Thai-market readiness pass |
+| `references/checklists/02-master-audit-checklist.md` | 359 audit items in 14 areas (A-N), each tagged with its chapter; area N is the Thai-market readiness pass, area G includes the migrated and AI-written article checks |
 | `references/checklists/03-action-plan-template.md` | Scoring, report skeleton, action plan, execution rules |
 | `scripts/search.py` | Local BM25 retrieval: `python3 scripts/search.py "<english query>" -k 5` from this skill directory |
 
