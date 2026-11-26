@@ -612,3 +612,4 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Decision: one skill with two profile documents (`references/profile-general.md`, `references/profile-software.md`) chosen automatically, rather than two skills. Software enforces `main` + `production` with `tools/release.sh`, a pre-push hook and a `check --ready` failure.
 - Agent interpretation, open to the owner's correction: «แยก 2 skillmd» read as two profile instruction files inside one skill, because the same message asks for the skill to know which one to use.
 - Affects: `plugins/james-software/skills/project-standard/` (SKILL.md, references, templates, script, tests), contract 1.1, release 2.5.0.
+- Owner confirmation, 26 Nov 2026: one skill with two forms is correct («เป็นสกิลเดียวที่มี2แบบถูกต้องแล้ว»).
