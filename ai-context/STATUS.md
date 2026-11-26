@@ -117,3 +117,7 @@ Contract1.2 adds explicit domain-root artifacts with required public_html/, fail
 ## Production command clarification — 2.5.2, 27 November 2026
 
 Software profile, generated agent rule and deployment template now define the exact “ขึ้น production” lifecycle and the separate child/aggregate publication path. This targeted documentation change preserves established target acceptance and permission gates; it makes no installation or model-runtime compliance claim. `scripts/validate` passed after this clarification, including actual template/bootstrap and release-payload checks. No installation or cross-vendor agent compliance was asserted.
+
+### Local copies after 2.5.2 publication
+
+The existing updater completed against the published release. Doctor reports three Claude plugin copies and the Codex snapshot at2.5.2,22 enabled Codex skills with no native/shared pairs, and29 valid managed links. Running applications were not restarted by the agent; changed plugin bodies load after their next restart. Repository instructions remain the project-level authority; this receipt does not establish cross-vendor behavioral compliance.
