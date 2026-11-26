@@ -112,4 +112,4 @@ not in `research-it` itself).
 
 ## 2.5.1 — project-standard domain-root deployment
 
-Contract1.2 adds explicit domain-root artifacts with required public_html/, fail-closed mappings/preservation, preview-by-default release, distinct artifact publication/runtime acceptance, and paired owner password handoff. Bootstrap fixtures and new Git deployment tests pass locally; full validate/doctor and native host refresh are being checked. Current application sessions do not hot-reload skill text.
+Contract1.2 adds explicit domain-root artifacts with required public_html/, fail-closed mappings/preservation, preview-by-default release, distinct artifact publication/runtime acceptance, and paired owner password handoff. Bootstrap fixtures and new Git deployment tests pass locally; full scripts/validate and scripts/doctor passed; scripts/install completed and verified host copies at 2.5.1 (Claude plugins3, Codex enabled22, managed links29). Current application sessions do not hot-reload skill text.
