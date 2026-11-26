@@ -10,3 +10,15 @@
 - Auto-deploy/rebuild: remain OFF until destination, checkout, preservation, migration and rollback accepted; actual live state Not confirmed.
 - Credentials: owner fills DA and paired GWM forms; a DA password rotation requires matching GWM update. No passwords in source/chat.
 - Server paths, backup/restore and packaged application acceptance: Not confirmed.
+
+## Meaning of “ขึ้น production”
+
+For a software project, `ai-context/DEPLOYMENT.md` must translate “ขึ้น production”, “ขึ้น production เลย”, “deploy production” and “เอาขึ้นเว็บจริง” into the actual project release route. `AGENTS.md` and provider adapters must point to it before release work.
+
+Record the real source branch (including approved legacy exceptions), the exact preview/publication commands, mapping/preserve authority, target manager/environment and health/version evidence. The route is: scoped changes and native checks → commit/push source → preview the generated domain-directory artifact → publish only `production` through the release entrypoint → wait for the accepted writer (or trigger its normal manual deploy) → verify intended SHA and live behavior. Do not hand-edit, force-push or merge the whole source branch into the artifact branch. Publishing a branch alone is not deployment completion.
+
+A named production request authorizes the existing target release within its established gates; do not reconfirm that same request. A docs/preview/source-push request does not authorize deployment, new credentials, destructive data changes or unrelated feature work. Auto-deploy can already be enabled for an accepted target; do not turn it off simply to apply this documentation standard. Preserve its existing acceptance and database gates.
+
+For a child app deployed through a domain aggregate, document BOTH publications: child artifact, then update only that child's exact source/artifact/tree pins in the aggregate, publish the aggregate and verify the aggregate manager SHA plus the child pin. No separate FTP account or second deployment writer for each subdirectory. Preserve unlisted siblings. An independent repository with its own accepted target remains a direct release; do not invent aggregation.
+
+Before first publication, replace unconfirmed commands/target coordinates with this project's actual route. Do not execute example coordinates.

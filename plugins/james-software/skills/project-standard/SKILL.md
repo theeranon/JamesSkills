@@ -3,7 +3,7 @@ name: project-standard
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.5.1
+  version: 2.5.2
 description: Create or repair one project contract, software or any other kind, so another agent can continue without the chat, and record every insight, decision and deliverable in Git unasked. Use for set up project docs, AGENTS.md, context files, วางมาตรฐานโปรเจกต์, เอกสารโปรเจกต์มั่ว.
 ---
 

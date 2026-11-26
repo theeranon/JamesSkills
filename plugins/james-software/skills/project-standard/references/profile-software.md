@@ -22,3 +22,13 @@ Everything in the core (`INSIGHTS.md`, `DELIVERABLES.md`, `HANDOFF.md` included)
 - DA Modify may require owner password entry; when rotated, update the paired GWM account with the same value. Agent prepares both pages and never asks for passwords in chat or handles new-password submission.
 - `check --ready` verifies configured mapping and any actual production tree. Repo inspection cannot certify live FTP permissions, password correctness, auto-deploy state or application acceptance.
 - Preserve existing extra branches until reviewed; deleting unmerged work needs owner confirmation. Hook setup remains `git config core.hooksPath tools/git-hooks`.
+
+## Production command contract
+
+For a software project, `ai-context/DEPLOYMENT.md` must translate “ขึ้น production”, “ขึ้น production เลย”, “deploy production” and “เอาขึ้นเว็บจริง” into the actual project release route. `AGENTS.md` and provider adapters must point to it before release work.
+
+Record the real source branch (including approved legacy exceptions), the exact preview/publication commands, mapping/preserve authority, target manager/environment and health/version evidence. The route is: scoped changes and native checks → commit/push source → preview the generated domain-directory artifact → publish only `production` through the release entrypoint → wait for the accepted writer (or trigger its normal manual deploy) → verify intended SHA and live behavior. Do not hand-edit, force-push or merge the whole source branch into the artifact branch. Publishing a branch alone is not deployment completion.
+
+A named production request authorizes the existing target release within its established gates; do not reconfirm that same request. A docs/preview/source-push request does not authorize deployment, new credentials, destructive data changes or unrelated feature work. Auto-deploy can already be enabled for an accepted target; do not turn it off simply to apply this documentation standard. Preserve its existing acceptance and database gates.
+
+For a child app deployed through a domain aggregate, document BOTH publications: child artifact, then update only that child's exact source/artifact/tree pins in the aggregate, publish the aggregate and verify the aggregate manager SHA plus the child pin. No separate FTP account or second deployment writer for each subdirectory. Preserve unlisted siblings. An independent repository with its own accepted target remains a direct release; do not invent aggregation.

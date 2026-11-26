@@ -113,3 +113,7 @@ not in `research-it` itself).
 ## 2.5.1 — project-standard domain-root deployment
 
 Contract1.2 adds explicit domain-root artifacts with required public_html/, fail-closed mappings/preservation, preview-by-default release, distinct artifact publication/runtime acceptance, and paired owner password handoff. Bootstrap fixtures and new Git deployment tests pass locally; full scripts/validate and scripts/doctor passed; scripts/install completed and verified host copies at 2.5.1 (Claude plugins3, Codex enabled22, managed links29). Current application sessions do not hot-reload skill text.
+
+## Production command clarification — 2.5.2, 27 November 2026
+
+Software profile, generated agent rule and deployment template now define the exact “ขึ้น production” lifecycle and the separate child/aggregate publication path. This targeted documentation change preserves established target acceptance and permission gates; it makes no installation or model-runtime compliance claim. `scripts/validate` passed after this clarification, including actual template/bootstrap and release-payload checks. No installation or cross-vendor agent compliance was asserted.

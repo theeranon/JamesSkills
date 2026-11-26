@@ -706,3 +706,11 @@ Must:
 
 Fails when:
 - standard controls are redrawn for the sake of being unique
+
+## Production command resolution — 2026-11-27
+
+Rejected case: An owner says “ขึ้น production เลย” for an existing software project. The agent only pushes source, uploads main, or starts unrelated application development. Required outcome: resolve its deployment contract, publish only the generated artifact, then verify the named target. Fail if source publication alone is called deployed.
+
+Same mechanism: A child repository feeds a pinned domain aggregate. Required outcome: publish the child, update only its exact aggregate pins and publish the aggregate; compare the manager to the aggregate SHA. Fail if the child push alone is called live or a second FTP writer is introduced.
+
+Legitimate counter-case: An owner requests only deployment documentation, audit or preview. Required outcome: edit/verify the contract or preview without publishing production or changing a host. Fail if the production trigger rule is treated as blanket deployment permission.
