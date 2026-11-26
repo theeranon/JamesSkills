@@ -109,3 +109,7 @@ not in `research-it` itself).
 - Residual generated factual and formatting errors are recorded per skill; discarded candidates are not shipped merely to increase a score or changed-file count.
 - The 2.0.6 restoration is a file-content audit (does the instruction exist and read coherently), not a behavioral benchmark; whether the restored instructions change real model behavior in a live conversation is unverified.
 - Current evidence: `tests/receipts/portfolio-upgrade-2026-09-07/REVIEW.md` and `dispositions.json`.
+
+## 2.5.1 — project-standard domain-root deployment
+
+Contract1.2 adds explicit domain-root artifacts with required public_html/, fail-closed mappings/preservation, preview-by-default release, distinct artifact publication/runtime acceptance, and paired owner password handoff. Bootstrap fixtures and new Git deployment tests pass locally; full validate/doctor and native host refresh are being checked. Current application sessions do not hot-reload skill text.

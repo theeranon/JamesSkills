@@ -613,3 +613,10 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Agent interpretation, open to the owner's correction: «แยก 2 skillmd» read as two profile instruction files inside one skill, because the same message asks for the skill to know which one to use.
 - Affects: `plugins/james-software/skills/project-standard/` (SKILL.md, references, templates, script, tests), contract 1.1, release 2.5.0.
 - Owner confirmation, 26 Nov 2026: one skill with two forms is correct («เป็นสกิลเดียวที่มี2แบบถูกต้องแล้ว»).
+
+### DEC-061 — Domain-root production artifacts (2.5.1, 2026-11-26)
+
+- Owner explicitly requires every applicable software production branch to mirror its hosting domain directory and contain public_html/. Extra private-directory names are project-specific, not a mandated app/storage tree.
+- Explicit release-layout mappings, server preservation, committed source and a publication-approval gate replace copying main minus exclusions. Preview by default, no source or live deployment push. Runtime acceptance remains a separate gate; publication of a disabled migration artifact is not deployment readiness.
+- FTP home is own-domain directory; GWM Remote Root /, FTP Local Path .; owner rotates password in DA and enters the same new value in the paired GWM form. Agent prepares both forms.
+- Software template/checker now validate this contract1.2. Independent audit gpt-6.1-terra reviewed the template and concrete builder; preservation enforcement, isolated builders, branch checks and stale-ref coverage were added from findings. Behavioral tests exercise real Git fixtures, arbitrary private directory naming and no-remote preview. Live host/app behavior is not implied.

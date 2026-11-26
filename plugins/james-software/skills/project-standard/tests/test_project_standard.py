@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import importlib.util
 import io
+import json
+import subprocess
 import tempfile
 from contextlib import redirect_stdout
 from pathlib import Path
@@ -41,8 +43,56 @@ def profiles() -> None:
         assert MODULE.check(app) == 1
 
 
+def deployment_layouts() -> None:
+    with tempfile.TemporaryDirectory() as temp:
+        root = Path(temp)
+        with redirect_stdout(io.StringIO()):
+            MODULE.bootstrap(root, "Release fixture", "software")
+        assert "release source mapping is not configured" in " ".join(MODULE.deployment_layout_failures(root, True))
+        subprocess.run(["git", "init", "-q", "-b", "main"], cwd=root, check=True)
+        subprocess.run(["git", "config", "user.name", "Fixture"], cwd=root, check=True)
+        subprocess.run(["git", "config", "user.email", "fixture@example.invalid"], cwd=root, check=True)
+        (root / "site").mkdir()
+        (root / "site/index.html").write_text("<h1>Actual public app</h1>")
+        (root / "site/keep.dat").write_text("server-owned fixture")
+        (root / "worker-code").mkdir()
+        (root / "worker-code/worker.py").write_text("print('worker')")
+        config = {"web_root": "public_html", "deployment_root": "domain-directory", "remote_root": "/", "local_path": ".", "mappings": [{"source": "site", "target": "public_html"}, {"source": "worker-code", "target": "private-engine"}], "preserve": ["private-state/", "public_html/keep.dat"]}
+        (root / ".release-layout.json").write_text(json.dumps(config))
+        subprocess.run(["git", "add", "."], cwd=root, check=True)
+        subprocess.run(["git", "commit", "-qm", "Fixture source"], cwd=root, check=True)
+        # The preview succeeds without any remote and leaves all branch refs unchanged.
+        before = subprocess.check_output(["git", "show-ref"], cwd=root)
+        payload = root / "preview"
+        result = subprocess.run(["bash", "tools/release.sh", "--out", str(payload)], cwd=root, capture_output=True, text=True)
+        assert result.returncode == 0, result.stderr
+        assert (payload / "public_html/index.html").is_file()
+        assert (payload / "private-engine/worker.py").is_file()
+        assert not (payload / "ai-context").exists()
+        assert not (payload / "public_html/keep.dat").exists()
+        refused = subprocess.run(["bash", "tools/release.sh", "--push"], cwd=root, capture_output=True, text=True)
+        assert refused.returncode != 0 and "publication is not approved" in refused.stderr
+        assert subprocess.check_output(["git", "show-ref"], cwd=root) == before
+        tree = json.loads(result.stdout)["tree"]
+        commit = subprocess.check_output(["git", "commit-tree", tree, "-m", "Artifact"], cwd=root, text=True).strip()
+        subprocess.run(["git", "update-ref", "refs/heads/production", commit], cwd=root, check=True)
+        assert MODULE.deployment_layout_failures(root, True) == []
+        # Stale compliant local production must not hide a bad origin tracking ref.
+        source_ref = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+        subprocess.run(["git", "update-ref", "refs/remotes/origin/production", source_ref], cwd=root, check=True)
+        assert any("refs/remotes/origin/production" in e for e in MODULE.deployment_layout_failures(root, True))
+        subprocess.run(["git", "update-ref", "-d", "refs/remotes/origin/production"], cwd=root, check=True)
+        # A source tree cannot be mislabeled as a valid production artifact.
+        source = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=root, text=True).strip()
+        subprocess.run(["git", "update-ref", "refs/heads/production", source], cwd=root, check=True)
+        errors = MODULE.deployment_layout_failures(root, True)
+        assert any("lacks substantive public_html" in x for x in errors)
+        assert any("forbidden source/context/secret" in x for x in errors)
+
+
 def main() -> int:
     profiles()
+    deployment_layouts()
     with tempfile.TemporaryDirectory() as temp:
         root = Path(temp)
         assert MODULE.bootstrap(root, "Example Project", "minimal") == 0
@@ -88,6 +138,7 @@ def main() -> int:
             ),
             encoding="utf-8",
         )
+        (root / ".release-layout.json").write_text(json.dumps({"web_root": "public_html", "deployment_root": "domain-directory", "remote_root": "/", "local_path": ".", "mappings": [{"source": "site", "target": "public_html"}]}))
         assert MODULE.check(root, ready=True) == 0
 
         # SRS.html: Open mode requires it to stay in sync once it exists.

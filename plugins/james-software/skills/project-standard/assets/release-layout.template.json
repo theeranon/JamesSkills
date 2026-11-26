@@ -1,0 +1,12 @@
+{
+  "web_root": "public_html",
+  "deployment_root": "domain-directory",
+  "remote_root": "/",
+  "local_path": ".",
+  "runtime_ready": false,
+  "mappings": [],
+  "exclude": [],
+  "preserve": [],
+  "source_branch": "main",
+  "publication_approved": false
+}

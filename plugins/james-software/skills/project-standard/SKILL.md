@@ -3,7 +3,7 @@ name: project-standard
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.5.0
+  version: 2.5.1
 description: Create or repair one project contract, software or any other kind, so another agent can continue without the chat, and record every insight, decision and deliverable in Git unasked. Use for set up project docs, AGENTS.md, context files, วางมาตรฐานโปรเจกต์, เอกสารโปรเจกต์มั่ว.
 ---
 
@@ -86,3 +86,7 @@ The owner-document changes, requirement identifiers with acceptance/proof, visib
 ## Sources
 
 Nygard 2011, Documenting Architecture Decisions. Bradner 1997, RFC 2119, Key words for use in RFCs to Indicate Requirement Levels.
+
+## Deployment amendment — contract 1.2, 2026-11-26
+
+Every software production artifact mirrors the hosting domain-directory root and contains substantive public_html/. Explicit .release-layout.json mappings govern assembly; never copy main wholesale. Use the updated software profile and release assets. FTP home is own-domain directory, GWM Remote Root / and Local Path .; private folder names are app-specific. Preserve runtime config/data and keep auto-deploy off until acceptance. DA password rotations require matching owner-entered GWM updates; prepare paired forms. Legacy projects need an explicit mapping migration, not a silently rewritten contract or a claim that running files moved. Independent deployment-contract audit: gpt-6.1-terra, 2026-11-26; findings applied to templates, builder and checks.

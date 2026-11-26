@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import hashlib
 import os
 import re
@@ -19,7 +20,7 @@ ASSETS = SKILL_ROOT / "assets"
 AI_CONTEXT = "ai-context"
 # The contract version a project was generated or repaired against. Stamped into every
 # generated SRS so a project states which standard it follows.
-CONTRACT_VERSION = "1.1"
+CONTRACT_VERSION = "1.2"
 
 BASE_FILES = {
     f"{AI_CONTEXT}/PROJECT.md": "PROJECT.template.md",
@@ -35,10 +36,12 @@ SOFTWARE_FILES = {
     f"{AI_CONTEXT}/DATA_MODEL.md": "DATA_MODEL.template.md",
     f"{AI_CONTEXT}/DEPLOYMENT.md": "DEPLOYMENT.template.md",
     "tools/release.sh": "release.sh",
+    "tools/release-domain.py": "release-domain.py",
+    ".release-layout.json": "release-layout.template.json",
     "tools/git-hooks/pre-push": "git-hooks/pre-push",
 }
 PROFILE_RULES = {
-    "software": "- Exactly two branches: `main` (working source) and `production` (deployed). Release only with `tools/release.sh`; see `ai-context/DEPLOYMENT.md`.",
+    "software": "- Use `main` (working source) and `production` (deployed); preserve owner-approved legacy source branches until a reviewed migration. Production mirrors the domain-directory root and must contain `public_html/`; private directory names are project-specific. Release only with `tools/release.sh`; see `ai-context/DEPLOYMENT.md`.",
     "general": "- One branch, `main`. Deliverables live in `deliverables/` and are listed in `ai-context/DELIVERABLES.md`.",
 }
 MANIFESTS = (
@@ -406,6 +409,7 @@ def check(root: Path, ready: bool = False) -> int:
         failures += [f"missing {relative}" for relative in required
                      if not (root / relative).is_file() and f"missing {relative}" not in failures]
         if profile == "software":
+            failures += deployment_layout_failures(root, ready)
             extra = extra_branches(root)
             if extra:
                 message = f"branches other than main and production: {', '.join(extra)}"
@@ -422,6 +426,34 @@ def check(root: Path, ready: bool = False) -> int:
     level = "ready" if ready else "structural"
     print(f"PASS project-standard/{CONTRACT_VERSION} {level} contract")
     return 0
+
+
+def deployment_layout_failures(root: Path, ready: bool = False) -> list[str]:
+    failures = []
+    manifest = root / ".release-layout.json"
+    if not manifest.is_file():
+        return ["missing .release-layout.json"]
+    try:
+        config = json.loads(manifest.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        return ["invalid .release-layout.json"]
+    if config.get("web_root") != "public_html" or config.get("deployment_root") != "domain-directory":
+        failures.append("release layout must declare domain-directory root and public_html web root")
+    if config.get("remote_root") != "/" or config.get("local_path") != ".":
+        failures.append("FTP GWM defaults must be Remote Root / and Local Path .")
+    if ready and not (config.get("mappings") or config.get("builder") or config.get("baseline_commit")):
+        failures.append("release source mapping is not configured; do not invent an empty public_html")
+    for ref in ["refs/heads/production", "refs/remotes/origin/production"]:
+        result = subprocess.run(["git", "rev-parse", "--verify", ref], cwd=root, capture_output=True, text=True)
+        if result.returncode:
+            continue
+        paths = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", result.stdout.strip()], cwd=root, text=True).splitlines()
+        if not any(x.startswith("public_html/") and Path(x).name not in {".keep", ".gitkeep"} for x in paths):
+            failures.append(ref + " lacks substantive public_html/ payload")
+        for path in paths:
+            if any(x in {"ai-context", ".github", ".claude", ".git", ".env"} or x.startswith(".env.") for x in Path(path).parts):
+                failures.append(ref + " contains forbidden source/context/secret path: " + path)
+    return failures
 
 
 def source_hash(root: Path) -> str:
