@@ -605,3 +605,10 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 - Decision: ch14 gets a field-findings section and seven checks in area G, not a new chapter: the failures are page-quality defects of migrated and AI-written articles, and they generalise beyond one site.
 - Evidence: on the migrated site, 161 of 328 articles printed a second headline, 122 opened with a writing-tool label, 55 repeated blocks up to seven times; of 13 named outside sources in 12 buyer-question articles, 5 held, 4 were misquoted and 4 untraceable; 459 consulting anchors reached the training page through a stand-in alias.
 - Affects: `plugins/james-software/skills/make-it-ai-seo/references/knowledge/ch14-fixing-underperformers.md`, the rebuilt index and master checklist, SKILL.md count, VERSION and manifests.
+
+### DEC-060 — project-standard serves software and non-software projects; software keeps only main and production (2.5.0, 2026-11-26)
+
+- Trigger: owner, 26 Nov 2026, while finishing work on the certificate system: the project format must work for any kind of project, keep all context, insight, HTML, handoff and chat knowledge so another AI can understand it, record to GitHub without being told, and for a software project force two branches into the deploy rules.
+- Decision: one skill with two profile documents (`references/profile-general.md`, `references/profile-software.md`) chosen automatically, rather than two skills. Software enforces `main` + `production` with `tools/release.sh`, a pre-push hook and a `check --ready` failure.
+- Agent interpretation, open to the owner's correction: «แยก 2 skillmd» read as two profile instruction files inside one skill, because the same message asks for the skill to know which one to use.
+- Affects: `plugins/james-software/skills/project-standard/` (SKILL.md, references, templates, script, tests), contract 1.1, release 2.5.0.

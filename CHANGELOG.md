@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.0 — 2026-11-26
+
+`project-standard` covers any project, not only software (contract 1.1, DEC-060). It picks a profile itself: `software` (build manifest or three or more source files) or `general`, each described in its own reference file. Both record insights, deliverable versions and a handoff, and must be committed and pushed unasked. The software profile adds a deployment document, a release script and a pre-push hook that keep exactly two branches, `main` and `production`; `check --ready` fails on any other. Projects without a `Contract profile:` line keep passing as before.
+
 ## 2.4.4 — 2026-11-24
 
 `make-it-ai-seo` ch14 gains field findings from a 328-article WordPress-to-CMS migration: what stood between the H1 and the answer and passed every per-page check (an imported second headline under a pasted head, writing-tool answer labels, FAQ and CTA blocks appended repeatedly by publishing scripts), invented or misquoted figures in AI-written articles and anonymous "client results", old-site aliases still pointing at stand-in pages, generated summaries leaking into feeds and llms.txt, and template schema filters that drop page-level nodes. Seven audit items join area G (359 in all); index rebuilt.

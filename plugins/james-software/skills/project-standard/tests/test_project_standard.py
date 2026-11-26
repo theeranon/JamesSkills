@@ -17,7 +17,32 @@ MODULE = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(MODULE)
 
 
+def profiles() -> None:
+    with tempfile.TemporaryDirectory() as temp, redirect_stdout(io.StringIO()):
+        plan = Path(temp) / "campaign"
+        (plan / "deliverables").mkdir(parents=True)
+        (plan / "deliverables" / "deck.html").write_text("<p>x</p>", encoding="utf-8")
+        assert MODULE.detect_profile(plan) == "general"
+        assert MODULE.bootstrap(plan, "Campaign", "auto") == 0
+        assert MODULE.declared_profile(plan) == "general"
+        assert (plan / "ai-context" / "INSIGHTS.md").is_file()
+        assert not (plan / "tools").exists()
+        assert MODULE.check(plan) == 0
+
+        app = Path(temp) / "app"
+        app.mkdir()
+        (app / "composer.json").write_text("{}", encoding="utf-8")
+        assert MODULE.bootstrap(app, "App", "auto") == 0
+        assert MODULE.declared_profile(app) == "software"
+        assert (app / "ai-context" / "DEPLOYMENT.md").is_file()
+        assert (app / "tools" / "git-hooks" / "pre-push").stat().st_mode & 0o111
+        assert MODULE.check(app) == 0
+        (app / "tools" / "release.sh").unlink()
+        assert MODULE.check(app) == 1
+
+
 def main() -> int:
+    profiles()
     with tempfile.TemporaryDirectory() as temp:
         root = Path(temp)
         assert MODULE.bootstrap(root, "Example Project", "minimal") == 0
@@ -192,8 +217,12 @@ def main() -> int:
         for name in ("PROJECT.md", "STATUS.md", "ARCHITECTURE.md", "DATA_MODEL.md"):
             (ac / name).rename(root / name)
         (ac / "DECISIONS.md").rename(root / "docs" / "DECISIONS.md")
+        # A v1 project predates the record files and the profile line.
+        for name in ("INSIGHTS.md", "DELIVERABLES.md", "HANDOFF.md", "DEPLOYMENT.md"):
+            (ac / name).unlink()
         ac.rmdir()
         agents = root / "AGENTS.md"
+        agents.write_text(agents.read_text(encoding="utf-8").replace("Contract profile: software\n", ""), encoding="utf-8")
         agents.write_text(
             agents.read_text(encoding="utf-8")
             .replace("ai-context/PROJECT.md", "PROJECT.md")
@@ -240,6 +269,8 @@ def main() -> int:
         (root / "ai-context" / "STATUS.md").rename(root / "STATUS.md")
         (root / "docs").mkdir()
         (root / "ai-context" / "DECISIONS.md").rename(root / "docs" / "DECISIONS.md")
+        for name in ("INSIGHTS.md", "DELIVERABLES.md", "HANDOFF.md"):
+            (root / "ai-context" / name).unlink()
         (root / "ai-context").rmdir()
         status = root / "STATUS.md"
         status.write_text(

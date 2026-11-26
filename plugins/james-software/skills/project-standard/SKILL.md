@@ -3,8 +3,8 @@ name: project-standard
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.4.4
-description: Create or repair one vendor-neutral project contract so any agent or person can work without prior chat, stamped with its standard version. Use for set up project docs, AGENTS.md, context files, วางมาตรฐานโปรเจกต์, เอกสารโปรเจกต์มั่ว. Not for routine edits that change nothing durable.
+  version: 2.5.0
+description: Create or repair one project contract, software or any other kind, so another agent can continue without the chat, and record every insight, decision and deliverable in Git unasked. Use for set up project docs, AGENTS.md, context files, วางมาตรฐานโปรเจกต์, เอกสารโปรเจกต์มั่ว.
 ---
 
 # Project Standard
@@ -25,6 +25,26 @@ Give the project one place where each durable fact lives, and say which version 
 - A rejected output needs to become a durable rule -> `never-again`
 - The direction itself is unsettled -> `zoom-out`
 
+## Profiles
+
+Every project takes the same core. The profile decides what is added on top, and the skill picks it itself:
+
+| Profile | Chosen when | Read |
+|---|---|---|
+| `software` | the repository has a build or package manifest, or three or more program source files | [references/profile-software.md](references/profile-software.md) |
+| `general` | anything else: marketing, management, business, research, an idea | [references/profile-general.md](references/profile-general.md) |
+
+Detection is `bootstrap` and `migrate` with no `--profile`; HTML, documents and one-off scripts do not make a project software. Read the chosen profile file before writing. `AGENTS.md` states it on a `Contract profile:` line, which then wins over detection. An owner's word wins over both.
+
+## Record as you go
+
+This applies in both profiles and without being asked. Whenever an insight, key learning, decision, important context, `SKILL.md` change or a new version of a deliverable (HTML included) appears in the conversation:
+
+1. Write it to its owner file: decision to `DECISIONS.md`, insight or learning to `INSIGHTS.md`, deliverable version to `DELIVERABLES.md` with the file itself in the repository, current state and next move to `STATUS.md`, what the next agent must know to continue to `HANDOFF.md`.
+2. Commit and push to the project's own remote in the same session. With no remote, commit and say that nothing has left this machine.
+
+Write it so an agent that never saw the chat understands it. Never commit secrets, credentials or personal data the project does not already hold.
+
 ## Procedure
 
 Run every command from this skill directory as `python3 scripts/project_standard.py <command> <project-root>`.
@@ -34,7 +54,7 @@ Run every command from this skill directory as `python3 scripts/project_standard
 3. Give each durable fact exactly one owner document, following the project contract: normally requirements in `PROJECT.md`, current evidence in `STATUS.md`, agent rules in `AGENTS.md`, and decisions in `DECISIONS.md`. Preserve accepted alternative owner names; do not invent a new requirements file or move requirements into agent rules. Replace independently maintained duplicates with pointers; generated views may repeat facts when their source and refresh mechanism are explicit. Mark unsupported claims as not confirmed; record genuinely unresolved decisions without reopening a state contradiction already settled by evidence.
 4. Write requirements as stable identifiers. Each names the observable outcome, its boundary, how it is accepted, and where the proof lives. An agent reporting that it implemented something is not acceptance. Preserve approved scope: prototype status does not weaken an offline requirement. Mark missing boundaries or proof as unspecified, and label new acceptance text as proposed; never fabricate test paths as existing evidence.
 5. Keep intended requirements and current implementation separate, and let the drift between them stay visible. A false implemented status with code absent normally needs a status correction, not a requirements migration, new standing rule or architecture document. Never rewrite current code as the desired architecture, and never describe the desired architecture as already built. When a project already has running or shipped code, do not trust that the written requirements describe what actually ships: have an AI read the implemented code, not the documentation, and generate a functional description of what it actually does, module by module; compare that against the requirement table and permission matrix, flag every mismatch as a Reality conflict in `STATUS.md`, and treat an unexpected permission grant (for example an external party able to approve its own request) as a boundary defect, not a cosmetic one. Run this reverse-audit with a different AI model or vendor than the one that wrote the code, and record which model produced the code and which model performed the audit in `DECISIONS.md`. When only one model is available, run the audit in a fresh session that has not seen the build conversation and record that single-model limit instead of claiming independence.
-6. Create `ARCHITECTURE.md` and `DATA_MODEL.md` only when real complexity earns them. Never add empty ceremony. For a project with more than a handful of functional requirements, do not keep every requirement in one flat table: create `ai-context/modules/<module-name>.md` per module, implement and verify one functional requirement at a time, and re-run the full existing test suite after each one before moving to the next.
+6. In the software profile, create `ARCHITECTURE.md` and `DATA_MODEL.md` only when real complexity earns them; the general profile does not use them. Never add empty ceremony. For a project with more than a handful of functional requirements, do not keep every requirement in one flat table: create `ai-context/modules/<module-name>.md` per module, implement and verify one functional requirement at a time, and re-run the full existing test suite after each one before moving to the next.
 7. Keep provider adapters thin. `CLAUDE.md`, `GEMINI.md`, and any other adapter add provider mechanics only; shared truth stays in `AGENTS.md` and the contract files.
 8. Never introduce a parallel store, table, or identity path without a named requirement and a recorded decision. A persistent-data change updates the canonical model, the migration and rollback path, and the current-state evidence together.
 9. For a bootstrap or migration adopting this contract, generate its specification view with `render-srs`. For targeted repair, regenerate only when an input consumed by the existing view changed; a status-only correction does not require creating an SRS or rerendering unrelated sources. The generated file carries the contract version and source hash and is never hand-edited.

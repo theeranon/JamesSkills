@@ -1,5 +1,7 @@
 # Project Agent Contract
 
+Contract profile: {{PROFILE}}
+
 ## Required context
 
 1. Read `ai-context/PROJECT.md` for outcome, scope, requirements, boundaries, and acceptance.
@@ -10,6 +12,8 @@
 ## Working rules
 
 - Preserve unrelated work and existing project conventions.
+- Without being asked, write every insight, decision, important context, skill change and deliverable version to its owner file (`ai-context/INSIGHTS.md`, `DECISIONS.md`, `DELIVERABLES.md`, `STATUS.md`, `HANDOFF.md`), then commit and push in the same session. Never commit secrets.
+{{PROFILE_RULES}}
 - Verify current source and runtime before changing a status claim.
 - Update the owner document only when the fact it owns changes.
 - Keep unsupported facts as `Not confirmed` and unresolved choices as `Need decision`.

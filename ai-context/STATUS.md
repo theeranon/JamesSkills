@@ -7,6 +7,8 @@ Current version: 2.4.1 (Claude Code on this machine serves a cached copy of each
 Current branch: main
 Repository: public `theeranon/JamesSkills`
 
+
+> 2026-11-26: 2.5.0 released from this machine: `project-standard` contract 1.1 with software and general profiles (DEC-060). Skill tests and `scripts/validate` pass. Behaviour on a real non-software project has not been observed yet.
 ## Current outcome
 
 2.4.0 (DEC-056) adds the owner-named workflow `make-it-ai-seo` in `james-software`: intake, evidence-backed AI-search audit, phased plan and in-repository fixes, with a 24-file knowledge base paraphrased from Nathan Gotch, AI SEO For Dummies (2026) and offline BM25 search. Roster 22 skills, 7 aliases. `scripts/validate` passed; no behavioral probe or live-site run yet. The earlier standalone copy at `~/Downloads/AIWorkspaceM1/ai-seo` is superseded and its `~/.claude/skills/ai-seo` link removed so hosts see one source.

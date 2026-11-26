@@ -5,7 +5,9 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import os
 import re
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -17,18 +19,69 @@ ASSETS = SKILL_ROOT / "assets"
 AI_CONTEXT = "ai-context"
 # The contract version a project was generated or repaired against. Stamped into every
 # generated SRS so a project states which standard it follows.
-CONTRACT_VERSION = "1.0"
+CONTRACT_VERSION = "1.1"
 
 BASE_FILES = {
     f"{AI_CONTEXT}/PROJECT.md": "PROJECT.template.md",
     f"{AI_CONTEXT}/STATUS.md": "STATUS.template.md",
     "AGENTS.md": "AGENTS.template.md",
     f"{AI_CONTEXT}/DECISIONS.md": "DECISIONS.template.md",
+    f"{AI_CONTEXT}/INSIGHTS.md": "INSIGHTS.template.md",
+    f"{AI_CONTEXT}/DELIVERABLES.md": "DELIVERABLES.template.md",
+    f"{AI_CONTEXT}/HANDOFF.md": "HANDOFF.template.md",
 }
 SOFTWARE_FILES = {
     f"{AI_CONTEXT}/ARCHITECTURE.md": "ARCHITECTURE.template.md",
     f"{AI_CONTEXT}/DATA_MODEL.md": "DATA_MODEL.template.md",
+    f"{AI_CONTEXT}/DEPLOYMENT.md": "DEPLOYMENT.template.md",
+    "tools/release.sh": "release.sh",
+    "tools/git-hooks/pre-push": "git-hooks/pre-push",
 }
+PROFILE_RULES = {
+    "software": "- Exactly two branches: `main` (working source) and `production` (deployed). Release only with `tools/release.sh`; see `ai-context/DEPLOYMENT.md`.",
+    "general": "- One branch, `main`. Deliverables live in `deliverables/` and are listed in `ai-context/DELIVERABLES.md`.",
+}
+MANIFESTS = (
+    "package.json", "composer.json", "requirements.txt", "pyproject.toml", "go.mod", "Cargo.toml",
+    "pom.xml", "build.gradle", "Gemfile", "Dockerfile", "pubspec.yaml", "Package.swift",
+)
+SOURCE_SUFFIXES = {
+    ".php", ".js", ".jsx", ".ts", ".tsx", ".py", ".rb", ".go", ".rs", ".java", ".kt", ".swift",
+    ".c", ".cpp", ".cs", ".vue", ".svelte", ".dart", ".sql",
+}
+SKIP_DIRS = {"node_modules", "vendor", "venv", AI_CONTEXT, "deliverables"}
+
+
+def detect_profile(root: Path) -> str:
+    """software when the folder holds a build manifest or three or more program source files."""
+    if any((root / name).is_file() for name in MANIFESTS):
+        return "software"
+    found = 0
+    for current, dirs, files in os.walk(root):
+        dirs[:] = [d for d in dirs if d not in SKIP_DIRS and not d.startswith(".")]
+        found += sum(1 for name in files if Path(name).suffix.lower() in SOURCE_SUFFIXES)
+        if found >= 3:
+            return "software"
+    return "general"
+
+
+def declared_profile(root: Path) -> str | None:
+    path = root / "AGENTS.md"
+    if not path.is_file():
+        return None
+    match = re.search(r"^Contract profile:\s*(software|general)\b", path.read_text(encoding="utf-8"), re.MULTILINE)
+    return match.group(1) if match else None
+
+
+def extra_branches(root: Path) -> list[str]:
+    if not (root / ".git").exists():
+        return []
+    result = subprocess.run(
+        ["git", "-C", str(root), "for-each-ref", "--format=%(refname)", "refs/heads", "refs/remotes/origin"],
+        capture_output=True, text=True,
+    )
+    names = [re.sub(r"^refs/(heads|remotes/origin)/", "", ref) for ref in result.stdout.split()]
+    return sorted(set(names) - {"main", "production", "HEAD"})
 
 REQUIRED_HEADINGS = {
     f"{AI_CONTEXT}/PROJECT.md": (
@@ -66,8 +119,17 @@ def render(template_name: str, project_name: str) -> str:
     )
 
 
+def fill_profile(text: str, profile: str) -> str:
+    return text.replace("{{PROFILE}}", profile).replace("{{PROFILE_RULES}}", PROFILE_RULES[profile])
+
+
 def bootstrap(root: Path, project_name: str, profile: str) -> int:
     root.mkdir(parents=True, exist_ok=True)
+    if profile == "auto":
+        profile = declared_profile(root) or detect_profile(root)
+    if profile == "minimal":
+        profile = "general"
+    print(f"PROFILE {profile}")
     selected = dict(BASE_FILES)
     if profile == "software":
         selected.update(SOFTWARE_FILES)
@@ -80,7 +142,9 @@ def bootstrap(root: Path, project_name: str, profile: str) -> int:
             preserved.append(relative)
             continue
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(render(template, project_name), encoding="utf-8")
+        target.write_text(fill_profile(render(template, project_name), profile), encoding="utf-8")
+        if template.endswith((".sh", "pre-push")):
+            target.chmod(0o755)
         created.append(relative)
 
     for relative in created:
@@ -331,6 +395,24 @@ def check(root: Path, ready: bool = False) -> int:
                         f"{AI_CONTEXT}/SRS.html is stale — PROJECT.md/DATA_MODEL.md changed since the last "
                         "render-srs; run render-srs before committing (Spec lock: Open keeps SRS.html in sync)"
                     )
+
+    profile = declared_profile(root)
+    if profile is None:
+        print(f"NOTE AGENTS.md has no 'Contract profile:' line; detected {detect_profile(root)}")
+    else:
+        required = [r for r in BASE_FILES if r.startswith(AI_CONTEXT)]
+        if profile == "software":
+            required += [f"{AI_CONTEXT}/DEPLOYMENT.md", "tools/release.sh", "tools/git-hooks/pre-push"]
+        failures += [f"missing {relative}" for relative in required
+                     if not (root / relative).is_file() and f"missing {relative}" not in failures]
+        if profile == "software":
+            extra = extra_branches(root)
+            if extra:
+                message = f"branches other than main and production: {', '.join(extra)}"
+                if ready:
+                    failures.append(message)
+                else:
+                    print(f"WARN {message}")
 
     if failures:
         for failure in failures:
@@ -620,7 +702,7 @@ def parse_args() -> argparse.Namespace:
     bootstrap_parser.add_argument("root", type=Path)
     bootstrap_parser.add_argument("--name", required=True)
     bootstrap_parser.add_argument(
-        "--profile", choices=("minimal", "software"), default="minimal"
+        "--profile", choices=("auto", "general", "minimal", "software"), default="auto"
     )
 
     check_parser = subparsers.add_parser(
@@ -654,7 +736,7 @@ def parse_args() -> argparse.Namespace:
     migrate_parser.add_argument("root", type=Path)
     migrate_parser.add_argument("--name", help="Used only when bootstrapping a project with no existing files.")
     migrate_parser.add_argument(
-        "--profile", choices=("minimal", "software"), default="minimal",
+        "--profile", choices=("auto", "general", "minimal", "software"), default="auto",
         help="Used only when bootstrapping a project with no existing files.",
     )
     return parser.parse_args()

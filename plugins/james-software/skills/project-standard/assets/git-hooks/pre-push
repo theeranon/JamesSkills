@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# A software project keeps exactly two branches: main and production.
+while read -r _ sha ref _; do
+  [[ "$sha" =~ ^0+$ ]] && continue   # deleting a branch is always allowed
+  case "$ref" in
+    refs/heads/main|refs/heads/production|refs/tags/*) ;;
+    *) echo "blocked: ${ref#refs/heads/} (only main and production)" >&2; exit 1 ;;
+  esac
+done

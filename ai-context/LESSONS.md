@@ -245,3 +245,10 @@ for direct evidence remains in force.
 - What happened: releasing 2.4.0 with the new `make-it-ai-seo`, the first `scripts/install` planned links while Claude Code's cached plugin copy was still 2.3.2 and did not contain the skill, so it linked the skill into `~/.claude/skills`, `~/.cursor/skills`, `~/.agents/skills` and `~/.codex/skills`; `host_refresh.py` then updated the cache to 2.4.0. The session immediately listed both `make-it-ai-seo` and `james-software:make-it-ai-seo`, and `scripts/doctor` failed with `stale=4`. A second `scripts/install` removed the four links and doctor passed.
 - Mechanism: `install.py` computes the link plan from the host copy as it is before refresh; a skill new in this release looks unsupplied by the plugin at that moment.
 - Rule: after any release that adds a skill, run `scripts/install` a second time (or until doctor shows `stale=0`) before reporting it installed, and check the picker for one entry per name. The fix in the installer is to run `host_refresh.py` before planning links; until that change lands, the second run is the required step.
+
+## LESSON-022 — A measured UI is not a looked-at UI
+
+- Date: 2026-11-26
+- What happened: a certificate system recorded as checked on every admin page (control sizes measured, no overflow) still had a floating count on the print toolbar, a phone action bar covering the participant list, an issue button that could be pressed twice, an auto-generated project code the owner had forbidden, and a "split PDF" step that asked the user to print, save and upload the file back.
+- Mechanism: verification measured properties instead of walking the user's task; the forbidden code was inherited from existing source and never compared with what the owner had asked for.
+- Rule: verify a UI by doing the user's task: look at each page at desktop and phone width, scroll, press every button twice, and open the file it produces. A step the system can do itself is not an instruction on screen. Never generate a business identifier the organisation already owns.
