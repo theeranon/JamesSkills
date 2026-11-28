@@ -126,3 +126,7 @@ The existing updater completed against the published release. Doctor reports thr
 
 `project-standard` `SKILL.md` replaces the compressed deployment amendment with a "Software: source and production branches" section. The software profile, deployment template, release script and builder, and the generated agent rule now say that publishing `production` is the live deployment wherever Git Manager auto-deploys it, and spell out the Git Manager FTP binding (DEC-063). Found while auditing solutionsimpact-wordpress: its `check --ready` passed only because its `AGENTS.md` had no `Contract profile:` line, so the software rules (core files, pre-push hook, two branches) had never been applied there; a ready PASS without that line is a grace pass, not compliance. New regression test `auto_deploy_wording`; `scripts/validate` passed (29 packages). Contract stays 1.2.
 
+### Local copies after 2.5.3 publication
+
+`scripts/update` completed against the pushed release and `scripts/doctor` passed: three Claude plugin copies and the Codex snapshot at 2.5.3, 22 enabled Codex skills with no native/shared pairs, 29 managed links. Running applications were not restarted by the agent; they load the new bodies after their next restart. solutionsimpact-wordpress now declares the software profile (its DEC-120); its ready gate fails only on old branches awaiting the owner.
+
