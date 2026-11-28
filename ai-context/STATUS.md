@@ -121,3 +121,8 @@ Software profile, generated agent rule and deployment template now define the ex
 ### Local copies after 2.5.2 publication
 
 The existing updater completed against the published release. Doctor reports three Claude plugin copies and the Codex snapshot at2.5.2,22 enabled Codex skills with no native/shared pairs, and29 valid managed links. Running applications were not restarted by the agent; changed plugin bodies load after their next restart. Repository instructions remain the project-level authority; this receipt does not establish cross-vendor behavioral compliance.
+
+## Auto-deploy wording — 2.5.3, 28 November 2026
+
+`project-standard` `SKILL.md` replaces the compressed deployment amendment with a "Software: source and production branches" section. The software profile, deployment template, release script and builder, and the generated agent rule now say that publishing `production` is the live deployment wherever Git Manager auto-deploys it, and spell out the Git Manager FTP binding (DEC-063). Found while auditing solutionsimpact-wordpress: its `check --ready` passed only because its `AGENTS.md` had no `Contract profile:` line, so the software rules (core files, pre-push hook, two branches) had never been applied there; a ready PASS without that line is a grace pass, not compliance. New regression test `auto_deploy_wording`; `scripts/validate` passed (29 packages). Contract stays 1.2.
+

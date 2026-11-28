@@ -3,7 +3,7 @@ name: project-standard
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.5.2
+  version: 2.5.3
 description: Create or repair one project contract, software or any other kind, so another agent can continue without the chat, and record every insight, decision and deliverable in Git unasked. Use for set up project docs, AGENTS.md, context files, วางมาตรฐานโปรเจกต์, เอกสารโปรเจกต์มั่ว.
 ---
 
@@ -87,6 +87,10 @@ The owner-document changes, requirement identifiers with acceptance/proof, visib
 
 Nygard 2011, Documenting Architecture Decisions. Bradner 1997, RFC 2119, Key words for use in RFCs to Indicate Requirement Levels.
 
-## Deployment amendment — contract 1.2, 2026-11-26
+## Software: source and production branches — contract 1.2
 
-Every software production artifact mirrors the hosting domain-directory root and contains substantive public_html/. Explicit .release-layout.json mappings govern assembly; never copy main wholesale. Use the updated software profile and release assets. FTP home is own-domain directory, GWM Remote Root / and Local Path .; private folder names are app-specific. Preserve runtime config/data and keep auto-deploy off until acceptance. DA password rotations require matching owner-entered GWM updates; prepare paired forms. Legacy projects need an explicit mapping migration, not a silently rewritten contract or a claim that running files moved. Independent deployment-contract audit: gpt-6.1-terra, 2026-11-26; findings applied to templates, builder and checks.
+A software project keeps two branches. `main` is the working source with its AI context and is never deployed. `production` is generated from the pushed `main` by `tools/release.sh --push` and changes no other way: it mirrors the hosting domain directory with a substantive `public_html/`, assembled only from the explicit mappings in `.release-layout.json`, never a copy or merge of `main`. Private folder names stay app-specific, and runtime config and data are preserved.
+
+Git Manager is the single writer that deploys `production`. Where the target's auto-deploy is on, publishing `production` is the live deployment: run it only under production authority, and call it done only when the manager shows the new production SHA and the live health or version check matches. Where auto-deploy is off, the manager's own Deploy action runs after its gates. A new target keeps auto-deploy off until destination, preservation, migration and rollback are accepted; an accepted one is never switched off just to apply this standard.
+
+An FTP target uses the site's own-domain account, whose home is the domain directory, with Git Manager Remote Root `/` and Local Path `.`; a reviewed same-host publisher may stand in for FTP. The owner types every password, and a DirectAdmin password rotation needs the same value in the paired Git Manager form, so prepare both forms and never ask for the password. `ai-context/DEPLOYMENT.md` records the real route, transport and checked auto-deploy state; [references/profile-software.md](references/profile-software.md) holds the full rules. Legacy projects need an explicit mapping migration, not a silently rewritten contract or a claim that running files moved. Independent deployment-contract audit: gpt-6.1-terra, 2026-11-26; findings applied to templates, builder and checks.

@@ -41,7 +41,7 @@ SOFTWARE_FILES = {
     "tools/git-hooks/pre-push": "git-hooks/pre-push",
 }
 PROFILE_RULES = {
-    "software": "- Use `main` (working source) and `production` (deployed); preserve owner-approved legacy source branches until a reviewed migration. Production mirrors the domain-directory root and must contain `public_html/`; private directory names are project-specific. Release only with `tools/release.sh`; see `ai-context/DEPLOYMENT.md`. When the owner says “ขึ้น production”, follow that contract through artifact publication and live verification; a source push alone is not deployment.",
+    "software": "- Use `main` (working source) and `production` (deployed); preserve owner-approved legacy source branches until a reviewed migration. Production mirrors the domain-directory root and must contain `public_html/`; private directory names are project-specific. Release only with `tools/release.sh`; see `ai-context/DEPLOYMENT.md`. Where Git Manager auto-deploys `production`, `tools/release.sh --push` is the live deployment and needs production authority. When the owner says “ขึ้น production”, follow that contract through artifact publication and live verification; a source push alone is not deployment.",
     "general": "- One branch, `main`. Deliverables live in `deliverables/` and are listed in `ai-context/DELIVERABLES.md`.",
 }
 MANIFESTS = (

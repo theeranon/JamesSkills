@@ -3,7 +3,7 @@ name: make-it-ai-seo
 license: CC-BY-NC-4.0
 metadata:
   kind: workflow
-  version: 2.5.2
+  version: 2.5.3
 description: Make a website rank on Google and get cited by ChatGPT, Perplexity, Gemini and AI Overviews. Ask positioning, brand and target keywords once, audit into a checklist, plan, then fix the site. Use for ทำ SEO, ติด SEO, ออดิตเว็บ, AI SEO, AEO, GEO, ติดคีย์เวิร์ด, ให้ AI รู้จักแบรนด์.
 ---
 

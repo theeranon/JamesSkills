@@ -90,9 +90,25 @@ def deployment_layouts() -> None:
         assert any("forbidden source/context/secret" in x for x in errors)
 
 
+def auto_deploy_wording() -> None:
+    """A production push is a live deployment wherever Git Manager auto-deploys it (DEC-063)."""
+    assets = SCRIPT.parents[1] / "assets"
+    texts = {
+        "DEPLOYMENT.template.md": (assets / "DEPLOYMENT.template.md").read_text(encoding="utf-8"),
+        "release.sh": (assets / "release.sh").read_text(encoding="utf-8"),
+        "PROFILE_RULES": MODULE.PROFILE_RULES["software"],
+        "SKILL.md": (SCRIPT.parents[1] / "SKILL.md").read_text(encoding="utf-8"),
+    }
+    for name, text in texts.items():
+        required = "publishing `production` is the live deployment" if name == "SKILL.md" else "auto-deploys"
+        assert required in text, name
+        assert "no live deploy" not in text and "never a live deployment" not in text, name
+
+
 def main() -> int:
     profiles()
     deployment_layouts()
+    auto_deploy_wording()
     with tempfile.TemporaryDirectory() as temp:
         root = Path(temp)
         assert MODULE.bootstrap(root, "Example Project", "minimal") == 0

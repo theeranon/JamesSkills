@@ -624,3 +624,8 @@ Owner requested all overengineering audit fixes and clarified that proactive-hab
 ### DEC-062 — Production requests resolve to each project's release contract (2026-11-27)
 
 The owner clarified that the task is reliable deployment instructions across repositories, not unrelated feature development. Software profile and deployment template now require the exact source → generated production → accepted writer → live verification route, including the second aggregate publication for subdirectory children. Provider adapters point to the shared contract; source-only/documentation requests never authorize a live release. Existing acceptance, database and credential gates remain. This is a targeted contract clarification, not a new runtime executor or a claim of universal agent compliance.
+
+### DEC-063 — Publishing production is a deployment wherever Git Manager auto-deploys (2026-11-28)
+
+The owner moved software deployments to Git Manager with automatic deploy from the `production` branch and asked whether project-standard explains the `main`/`production` split. The software profile did, but `SKILL.md` carried only a compressed amendment, and the deployment template and release script called `tools/release.sh --push` "artifact publication only, no live deploy". On an auto-deploy target that is false: the push is the release, so an agent asked only for a source push or preview could deploy while believing it had only published a branch. 2.5.3 states the branch model and the auto-deploy consequence in `SKILL.md`, the profile, the template, the release script and builder, and the generated agent rule, and spells out the Git Manager FTP binding. Existing acceptance, database and credential gates are unchanged; contract version stays 1.2.
+

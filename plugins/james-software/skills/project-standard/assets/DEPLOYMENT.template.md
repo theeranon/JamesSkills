@@ -5,9 +5,10 @@
 - Public web root: public_html; other private directory names follow the actual app, not a fixed app/storage example.
 - FTP home: own domain directory (actual host/domain Not confirmed).
 - Git Manager Remote Root: /; FTP-only Local Path: .
-- Release: tools/release.sh (preview); tools/release.sh --push (artifact publication only, no live deploy).
+- Git Manager project: URL Not confirmed; branch production; transport (own-domain FTP or reviewed same-host publisher) Not confirmed.
+- Release: tools/release.sh (preview, never deploys); tools/release.sh --push publishes `production`. If Git Manager auto-deploys this target, that push is the live deployment.
 - Mapping and server files to preserve: .release-layout.json; configure real mappings before release.
-- Auto-deploy/rebuild: remain OFF until destination, checkout, preservation, migration and rollback accepted; actual live state Not confirmed.
+- Auto-deploy/rebuild: remain OFF until destination, checkout, preservation, migration and rollback accepted; actual live state Not confirmed. Record the actual state with the date and evidence of the last check.
 - Credentials: owner fills DA and paired GWM forms; a DA password rotation requires matching GWM update. No passwords in source/chat.
 - Server paths, backup/restore and packaged application acceptance: Not confirmed.
 

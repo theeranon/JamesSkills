@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Assemble production as a hosting-domain tree. Never deploys or reads runtime secrets."""
-import argparse,fnmatch,json,os,subprocess,tempfile,re,tarfile,io
+import argparse,fnmatch,json,os,subprocess,sys,tempfile,re,tarfile,io
 from pathlib import Path,PurePosixPath
 
 def run(*args,cwd=None,env=None,raw=False):
@@ -101,6 +101,7 @@ def main():
                 commit=run(*argv,cwd=root)
                 subprocess.run(['git','push','origin',commit+':refs/heads/production'],cwd=root,check=True)
                 report['production']=commit;report['pushed']=True
+                print('production published; where Git Manager auto-deploys it, the live deployment has started: verify the manager SHA and live health',file=sys.stderr)
             report['published']=True
         print(json.dumps(report))
 if __name__=='__main__':main()
